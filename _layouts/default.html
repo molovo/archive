@@ -2,7 +2,7 @@
 
 {% if currentURL == 'index.html' %}
   {% assign bodyClass = 'home' %}
-{% else if currentURL == '404.html' %}
+{% elsif currentURL == '404.html' %}
   {% assign bodyClass = 'four-oh-four' %}
 {% else %}
   {% assign bodyClass = currentURL %}
@@ -62,14 +62,14 @@
       }(document));
     </script>
 
-    <link rel="shortcut icon" href="/assets/dist/img/favicon.png" />
+    <link rel="shortcut icon" href="/assets/dist/img/favicon.png" async defer />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/dist/css/main.min.css" />
+    <link rel="stylesheet" href="/assets/dist/css/main.min.css" async defer />
 
     <!-- Load font kits for case studies that use them -->
     {% if page.typography.uses_kit %}
-      <link rel="stylesheet" href="/assets/fonts/case-studies/{{ page.slug }}/kit.css" />
+      <link rel="stylesheet" href="/assets/fonts/case-studies/{{ page.slug }}/kit.css" async defer />
     {% endif %}
 
     {% if page.url == '/blog/index.html' %}
