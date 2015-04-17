@@ -1,0 +1,13 @@
+---
+---
+[
+  {% for study in site.categories.work %}
+  {
+    "title"    : "{{ study.title }}",
+    "intro"    : "{{ study.intro }}",
+    "slug"     : "{{ study.slug }}",
+    "client"   : "{{ study.client }}"
+  }
+  {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

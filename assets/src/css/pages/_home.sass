@@ -1,0 +1,235 @@
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+  50%
+    transform: rotate(180deg)
+  100%
+    transform: rotate(360deg)
+
+
+.top
+  background: $beige
+  padding: 12em 0 6em
+
+  h1
+    font-family: $secondary
+    letter-spacing: -.025em
+
+    line-height: .66666666666em
+    margin-bottom: .33333333333em
+
+    @media (min-width: 36em)
+      font-size: 4.5em
+
+  p
+    font-size: 1.5em
+
+.window
+  height: 100vh
+  width: 100vw
+  pointer-events: none
+
+.intro
+  // @extend .feature
+  background: $red
+  padding: 9em 0 6em
+  position: relative
+
+  @media (min-width: $bp_large)
+    .intro-container
+      max-width: $container_width + 4
+      transform: translate(2em, 0)
+
+  h2
+    color: white
+    font-weight: 300
+
+    @media (max-width: $bp_medium)
+      font-size: 1.5em
+
+.call-to-action
+  padding: 1.5em 0
+
+  p
+    margin-bottom: 0
+
+  &.position-fixed
+    position: fixed
+    top: 0
+    background: white
+    width: 100%
+    z-index: 998
+    transition: top .3s
+
+    & + .stories
+      margin-top: 4.5em
+
+  .button
+    padding: .5em 1.5em
+    margin-left: .5em
+
+
+.fixed:not(.scrolled) ~ .call-to-action.position-fixed
+  top: 3em
+
+.featured-case-study
+  padding: 6em 0
+  position: relative
+  z-index: 2
+  background:
+    position: center
+    repeat: no-repeat
+    size: cover
+
+  &:before
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    content: ''
+    background: rgba($dark,.3)
+
+  .testimonial
+    background: rgba($red, .9)
+    color: white
+    text-align: center
+    padding: 3em 3em 1.5em
+
+    blockquote
+      border: 0
+
+      p
+        font-style: normal
+        font-size: 1.5em
+        line-height: 1.3125em
+
+        &:before, &:after
+          // font-family: $secondary
+          font-size: 2.25em
+          vertical-align: middle
+          display: inline-block
+          height: .25em
+
+        &:before
+          content: '\201c'
+
+        &:after
+          content: '\201d'
+
+      cite
+        color: white
+        font-style: normal
+        font-size: 1em
+
+  h2, h4
+    color: white
+
+  @media (max-width: 40em)
+    h2
+      font-size: 1.5em
+
+.stories
+  background: $beige
+  padding: 6em 0
+
+  h1
+    text-align: center
+    color: $red
+    font-weight: 300
+
+    @media (min-width: 40em)
+      font-size: 4.5em
+
+.content
+  background: white
+  padding: 6em 0
+
+.home
+  // background: url(#{$site_url}/assets/dist/img/about-bg.jpg) top center no-repeat
+  //   size: 300%
+
+  // @media (min-width: 1024px)
+  //   background:
+  //     attachment: fixed
+  //     size: cover
+
+  .top, .content
+    position: relative
+    z-index: 1
+
+.about, .skills, .projects
+  padding: 6em 0
+
+.about
+  background: $beige
+
+  img
+    width: 9em
+    border-radius: 50%
+    margin: 0 auto 3em
+
+  @media (min-width: 36em)
+    p
+      font-size: 1.3125em
+      line-height: 1.5em
+
+  .button
+    @media (max-width: 24em)
+      margin-bottom: 1.5em
+
+.skills
+  background: rgba($red, .9)
+
+.projects
+  background: rgba($burgundy, .9)
+
+.skills, .projects
+
+  h1
+    font-family: $secondary
+    letter-spacing: -.025em
+
+    @media (min-width: 36em)
+      font-size: 4.5em
+
+  h1, h4, p
+    color: white
+
+  a
+    color: white
+    font-weight: 600
+
+  .button
+    background: rgba($burgundy, .85)
+
+  .tools, .structure
+    display: block
+    margin: 0 auto 1.5em
+    width: 4.5em
+    height: 4.5em
+
+    path
+      fill: white
+
+  .skills-list
+    width: 90%
+    max-width: 36em
+    margin: 0 auto
+    display: block
+    text-align: center
+
+  article
+
+    @media (min-width: 36em)
+      width: 50%
+      display: inline-block
+
+      vertical-align: top
+
+      &:nth-of-type(2n + 1)
+        padding-right: 1.5em
+
+      &:nth-of-type(2n)
+        padding-left: 1.5em
+        margin-left: -.3em

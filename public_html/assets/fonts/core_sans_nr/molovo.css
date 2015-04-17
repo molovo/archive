@@ -1,0 +1,33 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 2835508, 2014-06-26T11:23:14-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Core Sans NR 35 Light by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-nr/35-light/
+ *
+ * Webfont: Core Sans NR 55 Medium by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-nr/55-medium/
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2835508
+ * Licensed pageviews: 20,000
+ * Webfonts copyright: Copyright (c) 2013 by S-Core Co., Ltd.. All rights reserved.
+ *
+ * © 2014 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2b4434");
+
+
+@font-face {font-family: 'CoreSansNR';font-weight: normal;font-style: normal;src: url('webfonts/2B4434_0_0.eot');src: url('webfonts/2B4434_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2B4434_0_0.woff') format('woff'),url('webfonts/2B4434_0_0.ttf') format('truetype'),url('webfonts/2B4434_0_0.svg#wf') format('svg');}
+
+
+@font-face {font-family: 'CoreSansNR';font-weight: bold;font-style: normal;src: url('webfonts/2B4434_1_0.eot');src: url('webfonts/2B4434_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2B4434_1_0.woff') format('woff'),url('webfonts/2B4434_1_0.ttf') format('truetype'),url('webfonts/2B4434_1_0.svg#wf') format('svg');}

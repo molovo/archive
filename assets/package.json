@@ -1,0 +1,25 @@
+{
+  "name": "molovo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "http://molovo.co",
+  "dependencies": {
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-cache": "latest",
+    "gulp-clean": "latest",
+    "gulp-concat": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-jshint": "latest",
+    "gulp-livereload": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-notify": "latest",
+    "gulp-rename": "latest",
+    "gulp-roole": "latest",
+    "gulp-uglifyjs": "latest",
+    "tiny-lr": "latest"
+  },
+  "repository": "",
+  "author": "",
+  "license": ""
+}

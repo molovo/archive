@@ -1,0 +1,237 @@
+.logo
+
+  svg
+    width: 2.5em
+    height: 1.35em
+
+    path
+      transition: fill .25s
+
+    .frame
+      fill: $red
+
+    .left-lens, .right-lens
+      fill: transparent
+
+    &:hover
+      .left-lens, .right-lens
+        fill: rgba($dark, .7)
+
+.fixed
+  position: fixed
+  top: 0
+  width: 100%
+  transform: translate3D(0,0,0)
+  backface-visibility: hidden
+  z-index: 999
+  transition: transform .3s
+
+  .logo
+    float: left
+
+  &.scrolled
+    transform: translate3D(0, -3em, 0)
+
+  .main
+    text-align: right
+    background: transparent
+    transition: background .25s
+    z-index: 999
+    position: relative
+
+    padding: .75em 1.5em
+
+    @media (min-width: $bp_large)
+      padding: .75em 3em
+
+    a
+      text-decoration: none
+      color: $red
+      display: inline-block
+      transition: color .25s
+
+      &:not(.logo)
+        margin-left: .75em
+
+        @media (min-width: 24em)
+          margin-left: 1.5em
+
+        @media (max-width: 18em)
+          font-size: .75em
+
+  .work
+    background: white
+    transform: translate3D(0,0,0)
+    height: 100vh
+    overflow: auto
+    // transition: height .25s .25s, margin .25s, transform .5s
+    transition: opacity .25s
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 998
+    padding: 2.9em 0 0
+    opacity: 0
+    pointer-events: none
+    // transform: translateY(50%) rotateX(45deg)
+
+    .main-menu
+      max-width: $container_width
+      margin: 0 auto 3em
+      text-align: center
+      border-bottom: 1px solid rgba($dark, .1)
+
+      a
+        display: inline-block
+        padding: 1.5em
+        font-family: $secondary
+        color: $red
+        text-decoration: none
+        font-weight: 700
+        font-size: 1.3125em
+
+    hgroup
+      h3
+        font-weight: 400
+        text-align: center
+
+    .container
+      max-width: 100%
+
+    ul
+      padding: 0
+      list-style: none
+      margin: 0
+      height: auto
+      overflow: hidden
+      // position: relative
+
+      li
+        // position: relative
+        // border-bottom: 1px solid rgba(white, .05)
+        // transition: background .25s
+        // transform: translate(0,0,0)
+
+        // @media (min-width: 36em)
+        //   background:
+        //     size: cover
+        //     position: -100vw center
+        //     repeat: no-repeat
+
+        // @media (max-width: 36em)
+        //   background: transparent !important
+
+        a
+          text-decoration: none
+          padding: 3em 0
+          display: block
+          position: relative
+          z-index: 2
+
+          &:after
+            width: 25%
+            height: 1px
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+            background: rgba(white, .3)
+            content: ''
+
+        &:last-child
+          a:after
+            display: none
+
+        // &:first-child
+        //   padding: 3em 0
+
+        //   h3
+        //     font-weight: 300
+        //     color: $red
+
+        .background
+          background:
+            size: cover
+            repeat: no-repeat
+            position: center
+            attachment: fixed
+          position: fixed
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          z-index: 2
+          transition: opacity .25s 0
+          opacity: 0
+          pointer-events: none
+
+        a:hover
+          // background-position: 0 center
+
+          & + .background
+            opacity: .05
+            transition: opacity .25s .25s
+
+        h6
+          color: $dark
+          margin-bottom: 0
+
+        h2
+          color: $red
+          font-size: 3em
+          margin-bottom: 0
+          font-family: $secondary
+          letter-spacing: -.025em
+
+  &.open
+
+    .work
+      // height: 100vh
+      // overflow: auto
+      // background: white
+      // margin-top: -2.9em
+      // transform: translateY(0) rotateX(0)
+      opacity: 1
+      pointer-events: auto
+
+    .main
+      background: transparent
+
+      a
+        color: $red
+
+        .lines
+          &, &:before, &:after
+            background: $red
+
+    .logo svg
+      .frame
+        fill: $red
+
+      &:hover
+        .left-lens
+          fill: rgba($dark, .7)
+        .right-lens
+          fill: rgba($dark, .7)
+
+  &.transparent:not(.open)
+    .main
+      background: transparent
+
+      a
+        color: white
+
+        .lines
+          &, &:before, &:after
+            background: white
+
+    .logo svg
+      .frame
+        fill: white
+
+      &:hover
+        .left-lens
+          fill: $blue
+        .right-lens
+          fill: $burgundy

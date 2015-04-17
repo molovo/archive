@@ -1,0 +1,78 @@
+---
+layout: default
+---
+
+{% capture slug %}{{ page.id | replace: '/blog/', '' }}{% endcapture %}
+<article class="feature-post article--{{ slug }}">
+  <section class="feature" style="background-image: url({{ site.url}}/assets/dist/img/{{ page.url | replace: "/blog/", "" }}/{{ page.image }});">
+  </section>
+
+  <div class="container">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </div>
+
+  <main role="main" class="container post-main">
+    {% if page.subtitle %}
+      <h3 class="serif">{{ page.subtitle }}</h3>
+    {% endif %}
+    <h6 class="alt">{{ page.date | date_to_string }}</h6>
+
+    <div class="post">
+      {% include ads.html %}
+
+      {{ content }}
+    </div>
+
+    <div class="faded-scroll-indicator"></div>
+
+    <!-- <hr />
+
+    <ul class="post-list">
+      <h4 class="serif">Older Posts</h4>
+      <li style="display: none;"></li>
+
+      {% for post in site.categories.blog limit:3 %}
+        <li>
+          {% if post.redirectURL %}
+            <h2><a href="{{ post.redirectURL }}" target="_blank">{{ post.title }}</a></h2>
+          {% else %}
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          {% endif %}
+          <h6 class="alt">{{ post.date | date_to_string }}</h6>
+        </li>
+      {% endfor %}
+
+      <li><a href="/blog">More&hellip;</a></li>
+    </ul> -->
+  </main>
+
+</article>
+
+{% if page.blog_next %}
+  <a href="{{ page.blog_next.url }}" class="next-post-link">
+    <em><small>Next Post</small></em>
+    <h6>{{ page.blog_next.title }}</h6>
+  </a>
+{% endif %}
+
+{% if page.blog_previous %}
+  <a href="{{ page.blog_previous.url }}" class="previous-post-link">
+    <em><small>Previous Post</small></em>
+    <h6>{{ page.blog_previous.title }}</h6>
+  </a>
+{% endif %}
+
+<script>
+  document.getElementsByClassName('fixed')[0].classList.add('transparent');
+
+  var quotes = document.querySelector('.post-main').getElementsByTagName('blockquote');
+
+  for (var i = quotes.length - 1; i >= 0; i--) {
+    var image = quotes[i].getAttribute('data-image');
+
+    quotes[i].style.backgroundImage = 'url({{ site.url }}/assets/dist/img/{{ page.url | replace: "/blog/", "" }}/' + image + ')';
+  };
+
+  var quotes = document.querySelector('.post-main').getElementsByTagName('blockquote');
+
+</script>

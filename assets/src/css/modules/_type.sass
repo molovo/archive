@@ -1,0 +1,288 @@
+html
+  font: 100%/1.5em $primary
+  color: $dark
+
+@media (min-width: 32em)
+  body
+    font-size: 1.125em
+
+@media (min-width: 40em)
+  body
+    font-size: 1.3125em
+
+// @media (min-width: 64em)
+//   body
+//     font-size: 1.5em
+
+// @media (min-width: 96em)
+//   body
+//     font-size: 1.6125em
+
+h1, h2, h3, h4, h5, h6
+  font:
+    family: $heading
+    weight: 700
+  color: $burgundy
+  letter-spacing: -.025em
+
+  a
+    color: $red
+
+  em
+    font-weight: 400
+    font-family: $primary
+
+  &.serif
+    font-family: $primary
+    letter-spacing: 0
+
+h1
+  font-size: 3em
+  line-height: 1em
+  margin-bottom: .5em
+
+h2
+  font-size: 2.25em
+  line-height: 1.35em
+  margin-bottom: .6666666666666667em
+
+h3
+  font-size: 1.5em
+  line-height: 1em
+  margin-bottom: 1em
+
+h4
+  font-size: 1.3125em
+  line-height: 1.142857142857143em
+  margin-bottom: 1.142857142857143em
+
+h5
+  font-size: 1.125em
+  line-height: 1.35em
+  margin-bottom: 1.333333333333333em
+
+h6
+  font-size: 1em
+  line-height: 1.5em
+  margin-bottom: 1.5em
+
+p, ul, ol, dl, blockquote
+  margin-bottom: 1.5em
+
+ul
+  list-style: disc outside
+
+  ul
+    list-style: circle outside
+    margin:
+      bottom: 0
+      left: 1.5em
+
+ol
+  list-style: decimal outside
+
+  ol
+    list-style: lower-roman outside
+    margin:
+      bottom: 0
+      left: 1.5em
+
+em
+  font-style: italic
+
+strong
+  font-weight: 700
+
+small
+  font-size: .75em
+  line-height: .5em
+
+hr
+  height: 0
+  margin: 2.95em auto 3em
+  border: 0
+    bottom: 1px solid rgba(0,0,0,.1)
+
+blockquote
+  display: block
+  font:
+    weight: 300
+    style: italic
+
+  cite, cite a
+    color: $red
+    font:
+      size: .75em
+      family: $secondary
+      weight: 700
+    display: block
+
+    &:before
+      content: '—'
+
+  &:not(.pull):not(.push)
+    margin: 0 0 1.5em -1.75em
+    border: 0
+      left: .25em solid rgba(0,0,0,.1)
+    padding: 0
+      left: 1.5em
+  &.pull, &.push
+    margin-bottom: 1.5em
+
+    p
+      font:
+        size: 1.5em
+        style: normal
+      line-height: 1.35em
+      padding: .6666666666666667em 0
+      position: relative
+      margin: 0
+
+      @media (min-width: 40em)
+        font-size: 2.25em
+
+      &:before, &:after
+        content: ' '
+        width: 3em
+        height: 1px
+        background: $red
+        position: absolute
+        left: 0
+
+      &:before
+        top: 0
+
+      &:after
+        bottom: 0
+
+    .post-main &.graphic
+      height: 75vh
+      width: 100vw
+
+      margin: 3em 0
+      // margin: 0 -1.5em 1.5em
+      padding: 1.5em
+
+      @media (min-width: 1.3125 * 32em)
+        margin: 3em 0
+        padding: 0
+
+      position: relative
+      left: 50%
+      top: 0
+      transform: translateX(-50%)
+
+      color: white
+
+      background:
+        position: center
+        attachment: scroll
+        repeat: no-repeat
+        size: cover
+
+      &:before
+        display: inline-block
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: rgba(0,0,0, .5)
+        content: ' '
+
+      cite
+        font-size: .5em
+
+        &, a
+          color: white
+
+      p
+        position: relative
+        top: 50%
+        left: 0
+        width: 100%
+        font-size: 3em
+        line-height: 1em
+        transform: translate(0, -50%)
+
+        @media (min-width: 1.3125 * 32em)
+          left: 50%
+          transform: translate(-21rem, -50%)
+          max-width: 13em
+
+        &:after, &:before
+          background: white
+
+  &.push
+    @media (min-width: 1.3125 * 51em)
+      float: right
+      width: 75%
+      margin-right: -25%
+      margin-left: 1.5em
+
+    p
+      font-size: 1.5em
+
+.center
+  text-align: center
+
+.lalign
+  text-align: left
+
+.ralign
+  text-align: right
+
+.alt
+  letter-spacing: -.025em
+  font:
+    weight: 400
+    family: $secondary
+
+code
+  font-family: $mono
+  font-size: .75em
+  letter-spacing: -.025em
+  font-weight: 300
+
+  p > &
+    background: rgba($dark,.05)
+    white-space: nowrap
+    padding: .125em .25em
+    border-radius: .15em
+
+  &, span
+    line-height: 1.5em
+
+.button
+  padding: .75em 2.25em
+  font-family: $secondary
+  // border: .175em solid $burgundy
+  background: $blue
+  color: white
+  font-weight: 600
+  text-decoration: none
+  display: inline-block
+  transition: .25s
+  border: 0
+  text-align: center
+  cursor: pointer
+  letter-spacing: -.025em
+  -webkit-font-smoothing: antialiased
+  font-smoothing: antialiased
+
+  &:hover
+    background: rgba($blue,.7)
+
+a
+  color: $blue
+
+.lead
+  font-size: 1.3125em
+  line-height: 1.5em
+
+.icon
+  font-family: 'entypo'
+  font-size: 3em
+  line-height: 0
+  transform: translate(0, .15em)
+  display: inline-block

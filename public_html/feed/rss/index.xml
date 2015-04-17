@@ -1,0 +1,1433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title type="text" xml:lang="en">Molovo</title>
+  <link type="application/atom+xml" href="http://molovo.co/feed/rss" rel="self"/>
+  <link type="text" href="http://molovo.co" rel="alternate"/>
+  <updated>2015-04-17T13:57:28+01:00</updated>
+  <id>http://molovo.co</id>
+  <author>
+    <name>James Dinsdale</name>
+  </author>
+  <rights>Copyright (c) 2009-2014, James Dinsdale; all rights reserved.</rights>
+
+  
+  <entry>
+    <title>This Site has been on a Diet</title>
+    <link href="http://molovo.co/blog/this-site-has-been-on-a-diet"/>
+    <updated>2015-04-10T00:00:00+01:00</updated>
+    <id>http://molovo.co/blog/this-site-has-been-on-a-diet</id>
+    <content type="html">&lt;p&gt;I&amp;rsquo;ve come a long way since I started my career. For the four years I&amp;rsquo;ve been writing it, this blog has served as a great reminder to myself of my progress as a designer and developer. That said, it has also contained&amp;mdash;for a long time&amp;mdash;posts which are naïve, misinformative, pretentious and &lt;em&gt;a bit too sweary&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Whilst I&amp;rsquo;m all for preserving the integrity of links on the internet, a lot of these past articles do not represent my current position as a designer, developer and decent human being. As such, I&amp;rsquo;ve removed those articles which I&amp;rsquo;m no longer proud of, and that is why you may be seeing this explanation instead of what you expected to see.&lt;/p&gt;
+
+&lt;p&gt;Please take a look at &lt;a href=&quot;//molovo.co&quot;&gt;the full listing&lt;/a&gt; and read some of my other articles. Some of them are actually quite good.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>I did it my way</title>
+    <link href="http://molovo.co/work/melody"/>
+    <updated>2015-03-11T00:00:00+00:00</updated>
+    <id>http://molovo.co/work/melody</id>
+    <content type="html">&lt;p&gt;Melody was borne out of frustration with the available CSS frameworks at the time. I was jumping between frameworks the second a new one came out. Why? Because the ones I was using didn’t really meet my needs, they all involved compromises. I needed something incredibly easy to use; flexible enough to encourage rapid prototyping, yet robust enough to use as production code.&lt;/p&gt;
+
+&lt;p&gt;When I first built Melody in 2012, it was one of the first frameworks to drop support for IE7 and below, and use &lt;code&gt;display: inline-block;&lt;/code&gt; for arranging grid elements, rather than floating them. It used padding and &lt;code&gt;box-sizing: border-box;&lt;/code&gt; instead of margin for gutters, to allow grids to be nested. The whole CSS file was just 8kb, yet still managed to include a reset, the typographic foundation, and a full CSS grid system.&lt;/p&gt;
+
+&lt;p&gt;It became the foundation of all my client development work for the next two years, as well as being used by developers all over the world. Here&amp;rsquo;s the site as it was when Melody was released:&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;
+  &lt;div class=&quot;browser&quot;&gt;
+    &lt;img src=&quot;/assets/dist/img/case-studies/melody/old-homepage.jpg&quot; alt=&quot;The old Melody homepage&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;image-caption&quot;&gt;
+    &lt;span&gt;The old Melody homepage&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;As time went on, my skills and experience broadened, and I began experimenting with SASS and Gulp. For a time, I used the original melody.css as a base stylesheet, and used SASS to build site-specific styles on top of this. However I soon grew tired of the disconnect, and decided to rebuild Melody from the ground up; less as a grid system, but as a full SASS layout engine, keeping true to the principles on which I built the original.&lt;/p&gt;
+
+&lt;p&gt;One thing that I did want to improve on, was that the original Melody was heavily dependent on classes in the markup. In this new version, I wanted to go one step further, and do as much of the layout work autonomously as possible, without dirtying my markup. The new &lt;a href=&quot;//melody.molovo.co/layouts&quot;&gt;layout functions&lt;/a&gt; require only a single SASS mixin to be applied to the parent, allowing the framework to do the rest for you.&lt;/p&gt;
+
+&lt;p&gt;With the increased flexibility of this new version, there is of course more complications, and so I have also developed a new site, containing in-depth documentation of all of Melody&amp;rsquo;s features.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m using an early version of this new framework on this site, and I&amp;rsquo;m continuing to develop it as I use it on both personal and client projects.&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;NOTE: I wrote in more depth about my reasons for building the framework in an article on &lt;a href=&quot;http://everydaydesigner.net/development/i-build-my-own-tools-and-you-should-too&quot;&gt;Everyday Designer&lt;/a&gt;.&lt;/small&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Great Minds</title>
+    <link href="http://molovo.co/blog/great-minds"/>
+    <updated>2014-07-31T00:00:00+01:00</updated>
+    <id>http://molovo.co/blog/great-minds</id>
+    <content type="html">&lt;p&gt;Throughout my life, I&amp;rsquo;ve constantly found myself amazed at how little I know. My ability to learn has always been fuelled by this feeling of inadequacy, and a desire to better myself. It&amp;rsquo;s the thing that keeps me going at 4.30am, trying to meet a deadline, with absolutely no idea of how I&amp;rsquo;m going to get there.&lt;/p&gt;
+
+&lt;p&gt;And nothing makes me feel more inadequate, than reading articles on the web. There are so many great minds in our industry &amp;ndash; stalwarts like &lt;a href=&quot;http://zeldman.com&quot;&gt;Jeffrey Zeldman&lt;/a&gt; and &lt;a href=&quot;http://ia.com&quot;&gt;Oliver Reichenstein&lt;/a&gt;, trendsetters like &lt;a href=&quot;http://frankchimero.com&quot;&gt;Frank Chimero&lt;/a&gt; and &lt;a href=&quot;http://trentwalton.com&quot;&gt;Trent Walton&lt;/a&gt;, or up-and-coming youngsters like &lt;a href=&quot;http://devinhalladay.com&quot;&gt;Devin Halladay&lt;/a&gt; and &lt;a href=&quot;http://twnsnd.co&quot;&gt;Cole Townsend&lt;/a&gt;. The writings of all of the above, and many others, have inspired me in some way or another. I trawl through article after article, I eagerly await updates, all in the hope of some sentence, some phrase or snippet which will teach me something new.&lt;/p&gt;
+
+&lt;p&gt;It also pleases me that the recurring theme, amongst all these words I take in, is &lt;em&gt;improvement&lt;/em&gt;. Self-improvement, professional improvement. Improving design practices, development methods and performance optimisations. Improving work/life balance. Improving lives with ideas for new products, or charitable contributions. Improving the human race, one well-written article at a time.&lt;/p&gt;
+
+&lt;p&gt;Maybe as designers we are a little arrogant to think we have the power to cause this kind of change, but the simple fact is, we do. We work with hive mind, all striving subconsciously toward the same purpose &amp;ndash; improving everything we touch. We see problems to be solved where others see frustration.&lt;/p&gt;
+
+&lt;p&gt;And there will always be problems to solve; always things to improve; always more knowledge to obtain.&lt;/p&gt;
+
+&lt;p&gt;When asked, I used to tell people that I got my motivation from striving to be the best in my field, as though there were some imaginary ladder I could climb in order to reach the top. But now I realise that such a thing simply does not exist. As I learn and develop and improve myself, so too do my peers. As hard as I try to reach a certain level, by the time I get there, the benchmark has moved.&lt;/p&gt;
+
+&lt;p&gt;Socrates once said &lt;em&gt;&amp;ldquo;The only true wisdom is in knowing you know nothing.&amp;rdquo;&lt;/em&gt;, and I take solace in the fact that I&amp;rsquo;m never going to &amp;ldquo;know it all&amp;rdquo; &amp;ndash; The world would be an incredibly boring place if I did.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>The Art of Storytelling</title>
+    <link href="http://molovo.co/blog/the-art-of-storytelling"/>
+    <updated>2014-07-29T00:00:00+01:00</updated>
+    <id>http://molovo.co/blog/the-art-of-storytelling</id>
+    <content type="html">&lt;p&gt;Users. Customers. Buyers. Shoppers. Clients. Patrons. Consumers. We use many different names to describe the people for whom we build things on the web, but we often forget that they are just that &amp;ndash; people. People with emotions, contrasting opinions, differing reactions and distinct expectations.&lt;/p&gt;
+
+&lt;p&gt;People don&amp;rsquo;t get excited about websites. People aren&amp;rsquo;t excited by a fancy interface or an expensive font. People get excited about &lt;em&gt;experiences&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;And this is why I became a designer. I love the look on my client&amp;rsquo;s face when I present a project for the first time, and totally knock it out of the park. I love seeing a group of users excitedly exploring a new version of a product they have used for years. The more I put into this job, the more I get out of it.&lt;/p&gt;
+
+&lt;p&gt;Everything put on the web tells a story. The challenge is to write a story that your customers will want to tell over and over again.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/contact&quot; id=&quot;stories-cta&quot;&gt;&lt;strong&gt;Let&amp;rsquo;s write a new chapter today&amp;hellip;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Brewing Up a Storm</title>
+    <link href="http://molovo.co/work/haresfoot"/>
+    <updated>2014-07-07T00:00:00+01:00</updated>
+    <id>http://molovo.co/work/haresfoot</id>
+    <content type="html">&lt;p&gt;Real Ale has never been so popular. There are more than 700 real ale brewers in the UK &amp;ndash; the highest number since the Second World War, and four times as many since the founding of Camra (the &lt;strong&gt;Cam&lt;/strong&gt;paign for &lt;strong&gt;R&lt;/strong&gt;eal &lt;strong&gt;A&lt;/strong&gt;le). &lt;a href=&quot;http://haresfoot.com&quot;&gt;Haresfoot Craft Beer&lt;/a&gt; are a new microbrewery based in Berkhamsted, started by eight friends with a real passion for their craft.&lt;/p&gt;
+
+&lt;p&gt;Teaming up again with Chris Page from &lt;a href=&quot;http://taitdesign.co.uk&quot;&gt;Tait Design&lt;/a&gt;, right from the off we knew that this site needed to get taste buds tingling and mouths salivating. Chris had already come up with a series of beer labels, making great use of bold, bright colours to entice beer-lovers. We built on these when forming ideas for the site itself, keeping the bold colours and beautiful patterns for a really eye-catching experience.&lt;/p&gt;
+
+&lt;p&gt;&lt;figure class=&quot;group-of-four with-padding&quot;&gt;
+  &lt;img alt=&quot;Lock Keeper&#39;s Launch Label&quot; src=&quot;/assets/dist/img/ajax-loader.gif&quot; data-echo=&quot;/assets/dist/img/case-studies/haresfoot/lock-keepers.png&quot; /&gt;
+  &lt;img alt=&quot;Sundial Golden Ale Label&quot; src=&quot;/assets/dist/img/ajax-loader.gif&quot; data-echo=&quot;/assets/dist/img/case-studies/haresfoot/sundial.png&quot; /&gt;
+  &lt;figcaption&gt;
+    &lt;p&gt;The beer labels which formed the beginnings of Haresfoot&amp;rsquo;s branding.&lt;/p&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;The first step was to create a landing page, as a way to build interest in the Haresfoot brand prior to their official launch. We knew we wanted the final site to be as simple and informative as possible, so built the holding page as a template which we could later expand on when building the final site.&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;
+  &lt;div class=&quot;browser&quot;&gt;
+    &lt;img src=&quot;/assets/dist/img/ajax-loader.gif&quot; data-echo=&quot;/assets/dist/img/case-studies/haresfoot/holding-page.jpg&quot; alt=&quot;&quot; /&gt;
+  &lt;/div&gt;
+  &lt;figcaption&gt;
+    &lt;p&gt;The holding page which first appeared on haresfoot.com&lt;/p&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Taming the Beast</title>
+    <link href="http://molovo.co/blog/taming-the-beast"/>
+    <updated>2014-07-01T00:00:00+01:00</updated>
+    <id>http://molovo.co/blog/taming-the-beast</id>
+    <content type="html">&lt;p&gt;There&amp;rsquo;s no denying it, pregnant women need a lot of attention. As Gemma and I reach the eve of that magic 37th week, I thought I&amp;rsquo;d share some tips on how I&amp;rsquo;ve managed to avoid and divert some of the nagging over the last 8 and a bit months in order to actually get some work done.&lt;/p&gt;
+
+&lt;h4&gt;1. Chocolate&lt;/h4&gt;
+
+&lt;p&gt;I&amp;rsquo;m putting this at the top, as it&amp;rsquo;s by far the most important. Use it generously, and often. Should be evenly split across every room in the house, except the one you&amp;rsquo;re working in. Hopefully it provides enough of a distraction to keep her at bay until you&amp;rsquo;ve met that important deadline.&lt;/p&gt;
+
+&lt;h4&gt;2. Mess&lt;/h4&gt;
+
+&lt;p&gt;A clean office is undoubtedly good for productivity, but some strategically placed &amp;lsquo;crap&amp;rsquo; designed to make your office &lt;em&gt;look&lt;/em&gt; untidy will serve as a further deterrent as her &amp;lsquo;nesting&amp;rsquo; habits take hold. There seems to be a direct correlation between items on desk and the distance she will stay away.&lt;/p&gt;
+
+&lt;h4&gt;3. Alcohol free beer/wine&lt;/h4&gt;
+
+&lt;p&gt;After months of sobriety, pregnant women love to &lt;em&gt;feel&lt;/em&gt; like they are joining in when you are enjoying a cold one on a summer&amp;rsquo;s evening. And luckily for us, the placebo effect also extends to her dozing off on the sofa nice and early, so you can sneak off to your computer for some late-night typography binges.&lt;/p&gt;
+
+&lt;h4&gt;4. Walking&lt;/h4&gt;
+
+&lt;p&gt;Your pregnant woman will soon get bored of being cooped up all day long, which gives you the perfect opportunity to suggest a nice trip to your favourite coffee house at lunchtime, without any fear of disapproval. A chocolate muffin (or just more chocolate) will ensure more peace and quiet when you get home, and the additional exercise will mean she&amp;rsquo;s less likely to venture from the sofa when she thinks of something else for you to do.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This article is entirely tongue in cheek, and was proofread by my amazing girlfriend &lt;a href=&quot;http://twitter.com/koozai_gemma&quot;&gt;Gemma&lt;/a&gt; prior to posting. Please go on Twitter and let her know what a bloody good job she&amp;rsquo;s doing.&lt;/em&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>The View From Above</title>
+    <link href="http://molovo.co/blog/the-view-from-above"/>
+    <updated>2014-06-10T00:00:00+01:00</updated>
+    <id>http://molovo.co/blog/the-view-from-above</id>
+    <content type="html">&lt;p&gt;This is a satellite image of the house where I grew up.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/dist/img/the-view-from-above/my-home.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When I was young we had a real photograph of this view framed on our living room wall. It had been taken by a local man who, as the only pilot in the village, had hired a photographer and flown him across it, to take photos of all the houses.&lt;/p&gt;
+
+&lt;p&gt;He advertised them in the Post Office, and at local craft fairs, and the villagers would stop next to the stacks of photographs and flick through them one by one, searching for their own home. Along the way, they would spot the houses of friends and relatives, pointing and exclaiming their excitement.&lt;/p&gt;
+
+&lt;p&gt;My parents did exactly that, and then purchased and mounted the picture, as did many others. Neighbours would discuss and compare their own photographs in the street, and this little phenomenon became a sense of pride in our community.&lt;/p&gt;
+
+&lt;p&gt;At this young age, I would often look at this photo, taken high above the home I knew. I had never flown before; never seen the roof of my house. I would sit and look, imagining that this must be what the birds saw when I heard them calling and singing. It stank of freedom, and had a strange other-wordly aura.&lt;/p&gt;
+
+&lt;p&gt;By the time I first set foot on a plane two years later, I had moved to a different house, in another country. I had no frame of reference, I&amp;rsquo;d never seen the roof of this new home, but I remembered that photograph. As I travelled overhead, I stared out of the window for the entire flight, trying to see the roof of my house. I had no concept of distance and countries and borders. All the way over Germany, Belgium, France and then England, I stared and stared, knowing that my house was somewhere in the rolling terrain below.&lt;/p&gt;
+
+&lt;p&gt;When we arrived in England, I ran to my father in excitement. &amp;ldquo;I saw our house! I saw our house!&amp;rdquo; I shouted, not because I actually had seen it, but because I&amp;rsquo;d looked at every single building below that tiny plane window, and therefore one of them must have been ours.&lt;/p&gt;
+
+&lt;p&gt;It is now eighteen years later, and the picture which fueled my imagination so much is long since lost. That one photograph, nothing but paper and ink and a wooden frame, opened my mind to the idea that the world I lived in had a z-axis, and now sits discarded in a cupboard or box and forgetten.&lt;/p&gt;
+
+&lt;p&gt;I look back and remember that picture well, and struggle to see where, in this modern age, children will be able to excercise the same imagination and curiosity. The satellite image I embedded above only took me 30 seconds to find; but I didn&amp;rsquo;t frame it and hang it or discuss it with friends, I simply closed my browser window.&lt;/p&gt;
+
+&lt;p&gt;As much as I love the community that has been built around the web, I wish that I could bring back those days when the world and the simplest things within it were so awe-inspiring, because I worry that as my daughter grows up she will have so much information available to her that she&amp;rsquo;ll feel no need to go looking for it. Pictures and maps and videos and virtual three-dimensional models of every little corner of the earth are so prevalent online that they no longer attract our attention, and almost negate the need to visit the places they depict. Stories of disasters, tragedies and personal struggles are no longer as potent, so numbed we are through over-exposure. Friendly debates no longer take place, as the answer to an argument is a few taps on a smartphone away.&lt;/p&gt;
+
+&lt;p&gt;It is as though as a society we have been climbing a rope, higher and higher, trying to get a better view of the world, just like the pilot. Except now, as we are nearing the top, we are so high, and we are faced with so much of the world below us that we are simply incapable of feeling the awe which we anticipated. We are simply staring, unsure which way to turn, such that we cannot find the enthusiasm, the innovation and the time which we need to bind thread and make the rope longer. Instead we have no choice but to gingerly climb back down, or simply let go.&lt;/p&gt;
+
+&lt;p&gt;And I feel partly responsible, as I am helping contribute to this impasse. I build websites and write articles that people will read alone, and then post on social media for other people to then read alone. I am helping to build a web which is slowly nullifying the enjoyment of exploration and discovery, as experienced by the pilot, the photographer, and the many families who purchased a photo of their home.&lt;/p&gt;
+
+&lt;p&gt;We need a shift of direction. The web is already prevalent in every area of our lives; we need to stop building it so that it only improves and contributes to itself. So much of the focus in open-source and publicly accessible software is on building &amp;ldquo;a better web&amp;rdquo;, but what if instead we could work together to build a better &lt;em&gt;world&lt;/em&gt;. What if we could write software that contributed to society, rather than providing it with more distractions?&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Writing</title>
+    <link href="http://molovo.co/blog/writing"/>
+    <updated>2014-05-30T00:00:00+01:00</updated>
+    <id>http://molovo.co/blog/writing</id>
+    <content type="html">&lt;p&gt;I love writing. More accurately, I love the idea of it.&lt;/p&gt;
+
+&lt;p&gt;I love the idea of finishing a completed piece, and sharing it with the world to critical acclaim and admiration. I love the idea of seeing my name at the foot of a column in a popular tome, or seeing it in bright colours on the shelves of a book store.&lt;/p&gt;
+
+&lt;p&gt;But in reality, I&amp;rsquo;m not very good at writing. I have ideas aplenty. I have a decent understanding of the Queen&amp;rsquo;s English. I even know a thing or two about the things I try to write about; but I lack direction, the ability to draw the reader in. The things I write, after a while, bore myself.&lt;/p&gt;
+
+&lt;blockquote class=&quot;pull graphic&quot; data-image=&quot;typewriter.jpg&quot;&gt;
+  &lt;p&gt;
+    There is nothing to writing. All you do is sit down at a typewriter and bleed.
+    &lt;cite&gt;Ernest Hemingway&lt;/cite&gt;
+  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+&lt;p&gt;As such, I&amp;rsquo;m always writing, but I&amp;rsquo;m never finished. My drafts folder is full of unfinished case studies, articles with no direction, tutorials with no insight, and twelve chapters from two separate novel attempts.&lt;/p&gt;
+
+&lt;p&gt;Even this article, the one you are reading now, sat in my folder for three months containing just the first line, until I finally thought of a second one.&lt;/p&gt;
+
+&lt;p&gt;Two months ago I redesigned this website, and in doing so, reformatted and re-read a lot of the content. I was reminded of my youthful naivety, my pretentious sense of entitlement, and the forced nature of the articles I had written.&lt;/p&gt;
+
+&lt;p&gt;I vowed to do things differently. I promised myself I would write meanigful articles, and give useful advice, rather than force my thinking down people&amp;rsquo;s throats.&lt;/p&gt;
+
+&lt;p&gt;I devoted myself to making my blog as readable as possible. I toiled for hours over choosing the correct typeface. I designed graphical elements, and other inventive ways to display content. I thought it would give me focus; make me a more interesting person; make me write things that people wanted to read. I haven&amp;rsquo;t published a damn thing.&lt;/p&gt;
+
+&lt;p&gt;So this is me, publishing something. Hopefully the next one is more interesting.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Popping the Cork</title>
+    <link href="http://molovo.co/work/1855"/>
+    <updated>2014-04-01T00:00:00+01:00</updated>
+    <id>http://molovo.co/work/1855</id>
+    <content type="html">&lt;p&gt;The brand-new 1855 is a modern wine bar and bistro in Oxford&amp;rsquo;s Castle Quarter, serving gourmet food and coffee alongside their more traditional tipple.&lt;/p&gt;
+
+&lt;p&gt;To show off their individuality, they wanted a site that would really impress potential customers, and show off their modern take on wine.&lt;/p&gt;
+
+&lt;p&gt;Collaborating again with Chris Page at &lt;a href=&quot;http://taitdesign.co.uk&quot;&gt;Tait Design&lt;/a&gt;, we built a long single-page site, to present the 1855 experience as a story that their customers can&amp;rsquo;t wait to be a part of.&lt;/p&gt;
+
+&lt;p&gt;Taking them through the history of the 1855 classification before introducing them to the sommelier and chef, by the time the user reaches the contact information at the bottom their mouth is salivating at the thought of visiting.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>A Smile Costs Nothing</title>
+    <link href="http://molovo.co/work/helen-starkie"/>
+    <updated>2014-02-20T00:00:00+00:00</updated>
+    <id>http://molovo.co/work/helen-starkie</id>
+    <content type="html">&lt;p&gt;Over time, Helen&amp;rsquo;s website had become a faceless and out-of-date mess. There was little to no content on the site, and as a result it was struggling to convert visitors into customers. Helen needed a solution that would put her at the forefront of the online legal world.&lt;/p&gt;
+
+&lt;p&gt;&lt;figure class=&quot;left&quot;&gt;
+  &lt;img src=&quot;/assets/dist/img/case-studies/helen-starkie/group-shot.jpg&quot; alt=&quot;Gina, Helen and Jo&quot; /&gt;
+  &lt;figcaption class=&quot;image-caption&quot;&gt;
+    &lt;p&gt;
+      &amp;ldquo;The Girls&amp;rdquo;, as Helen affectionately refers to them &amp;ndash; Gina, Helen and Jo
+    &lt;/p&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;As soon as I met Helen and the team, their kindness and hospitality told me everything I needed to know about the firm. Whatever I designed needed to focus on the people behind the scenes, and given the sensitive nature of the work they do on behalf of their clients, a reassuring smile would be by far their biggest selling point.&lt;/p&gt;
+
+&lt;p&gt;I tried to recreate the warm welcome I was given, by putting profiles of the three team members front and center on the homepage, so that user&amp;rsquo;s visiting the site can get to know them before delving into the legal information found elsewhere on the site.&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;
+  &lt;div class=&quot;browser&quot;&gt;
+    &lt;img alt=&quot;Above the Fold&quot; src=&quot;/assets/dist/img/case-studies/helen-starkie/above-the-fold.jpg&quot; /&gt;
+  &lt;/div&gt;
+  &lt;figcaption class=&quot;image-caption&quot;&gt;
+    &lt;p&gt;
+      &lt;strong&gt;Above The Fold&lt;/strong&gt;. What the user first sees when visiting helenstarkie.co.uk
+    &lt;/p&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Confidence</title>
+    <link href="http://molovo.co/blog/feels/confidence"/>
+    <updated>2014-01-30T00:00:00+00:00</updated>
+    <id>http://molovo.co/blog/feels/confidence</id>
+    <content type="html">&lt;p&gt;Lack of confidence is not a curse. It&amp;rsquo;s a problem; a thing to be overcome.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve spent my entire life solving problems, but I can&amp;rsquo;t seem to break this one. And I&amp;rsquo;m not alone, there&amp;rsquo;s quite a few of us.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;re the ones dotted around the edge of the room at conferences, awkwardly playing with our phones, hoping to be noticed.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;re the ones who travel to meet ups, only to spend 10 minutes outside chain-smoking, trying to build up the confidence to enter, only to give up and leave.&lt;/p&gt;
+
+&lt;p&gt;I could chat for hours about what I do, if I only I could find the balls to introduce myself.&lt;/p&gt;
+
+&lt;p&gt;All it takes is one friendly face; one person to spot me, and I can become a normal person again.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s a problem, that&amp;rsquo;s all. I&amp;rsquo;ll get there.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Me and my bag</title>
+    <link href="http://molovo.co/blog/me-and-my-bag"/>
+    <updated>2014-01-16T00:00:00+00:00</updated>
+    <id>http://molovo.co/blog/me-and-my-bag</id>
+    <content type="html">&lt;p&gt;Those of you who know me well, have probably noticed that I always have an ugly, brown bag across my shoulder. I&amp;rsquo;ve lived out of that bag for about eight years. If I ever lost it I&amp;rsquo;d be royally fucked.&lt;/p&gt;
+
+&lt;p&gt;Everything I need, both for my job and my personal life, live in that bag. None of the things hold any sentimental value, they are just things that I feel I need on me at all times for my job. It travels with me to clients&#39; offices, friends&#39; and relatives&#39; houses, conferences, bars; even my morning trip out for breakfast.&lt;/p&gt;
+
+&lt;p&gt;At the time of writing the contents are as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1 MacBook Pro - 99% of my work is done on this&lt;/li&gt;
+&lt;li&gt;Various tablets:
+
+&lt;ul&gt;
+&lt;li&gt;1 iPad Air&lt;/li&gt;
+&lt;li&gt;1 iPad Mini&lt;/li&gt;
+&lt;li&gt;1 Surface 2&lt;/li&gt;
+&lt;li&gt;1 Nexus 7&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;1 backup phone (a Nokia Lumia 520 - just in case)&lt;/li&gt;
+&lt;li&gt;Chargers to support all of the above
+
+&lt;ul&gt;
+&lt;li&gt;1 MacBook Pro Charger&lt;/li&gt;
+&lt;li&gt;1 Lightning Cable&lt;/li&gt;
+&lt;li&gt;1 MicroUSB Cable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;1 Adonit Jot Pro stylus&lt;/li&gt;
+&lt;li&gt;Various papers relating to client work&lt;/li&gt;
+&lt;li&gt;1 dot grid notebook containing detailed sketches of two or three promising app ideas&lt;/li&gt;
+&lt;li&gt;Various hotel Invoices&lt;/li&gt;
+&lt;li&gt;1 european power adapter&lt;/li&gt;
+&lt;li&gt;1 purple Vans hoodie&lt;/li&gt;
+&lt;li&gt;1 contact lens case and solutions&lt;/li&gt;
+&lt;li&gt;1 pair of glasses&lt;/li&gt;
+&lt;li&gt;1 can of Red Bull (for emergencies only)&lt;/li&gt;
+&lt;li&gt;2 spare packs of cigarette papers&lt;/li&gt;
+&lt;li&gt;1 spare pack of tobacco&lt;/li&gt;
+&lt;li&gt;2 spare lighters&lt;/li&gt;
+&lt;li&gt;3 pencils, 1 pen&lt;/li&gt;
+&lt;li&gt;1 pair WESC RAZR headphones&lt;/li&gt;
+&lt;li&gt;1 spare pair of cheap Samsung headphones&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;As well as all the above, I&amp;rsquo;ll ocassionally stuff in some spare clothes if I crash at a friends house, shopping (on the rare occasion I do any), my Wacom tablet, and an Apple wireless keyboard to use with the iPads. Plus, I&amp;rsquo;d like to fit my camera and possibly a couple of lenses in there too now I&amp;rsquo;ve finally gotten around to buying one.&lt;/p&gt;
+
+&lt;p&gt;The bag itself isn&amp;rsquo;t anything special, just an old, brown Animal messenger bag that I don&amp;rsquo;t even remember buying. Years ago, I needed a bag for something, and found it in my old wardrobe in my parent&amp;rsquo;s house and just dumped everything in it.&lt;/p&gt;
+
+&lt;p&gt;The problem with something this simple is you don&amp;rsquo;t realise how much you rely on it until you don&amp;rsquo;t have it any more. &lt;strong&gt;My bag is dying&lt;/strong&gt;. Two of the three clasps have fallen off, the zip on the front pocket doesn&amp;rsquo;t close all the way, and the strap is frayed almost to breaking point.&lt;/p&gt;
+
+&lt;p&gt;So today I bought a new bag. The only reason I hadn&amp;rsquo;t replaced it until now, is that having realised just how important this bit of kit is to me, I wanted to put some research in and make sure I could get something that meets my needs, and will last as long as the old one. Traditional laptop bags are far too rigid - I can&amp;rsquo;t just keep stuffing things in - and normal messenger bags just aren&amp;rsquo;t sturdy enough for that amount of weight.&lt;/p&gt;
+
+&lt;p&gt;I wanted the best bag that money could buy. I looked at low-end, high-end, even custom-made solutions. I found some really inventive bags aimed at designers, with pockets for a laptop, graphics tablet, notebooks and an iPad, which look great, but there&amp;rsquo;s no room in there for anything else. I looked at backpacks but they feel too restrictive on my shoulders.&lt;/p&gt;
+
+&lt;p&gt;Knowing this new bag would have to have quite a bit more room than the old one, and be structurally strong enough to protect the camera and its accessories, I stopped looking at laptop bags, and started looking at camera bags.&lt;/p&gt;
+
+&lt;p&gt;And that&amp;rsquo;s when I found the &lt;a href=&quot;http://www.amazon.co.uk/gp/product/B003JME5PM/ref=oh_details_o00_s00_i00?ie=UTF8&amp;amp;psc=1&quot;&gt;Domke F-833&lt;/a&gt;. I&amp;rsquo;m not usually one to spend the price of a weekend away on something as simple as a bag, but it had everything I wanted, should be rugged enough to handle being dragged around every day, and still looks cool to boot.&lt;/p&gt;
+
+&lt;p&gt;Hopefully with my new bag I&amp;rsquo;ll have as much of a fulfilling relationship as I did with my old one. I&amp;rsquo;m still trying to think of a way to give the old one the retirement it deserves; I&amp;rsquo;m open to ideas.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Dear Client</title>
+    <link href="http://molovo.co/blog/dear-client"/>
+    <updated>2014-01-10T00:00:00+00:00</updated>
+    <id>http://molovo.co/blog/dear-client</id>
+    <content type="html">&lt;p&gt;Hello there,&lt;/p&gt;
+
+&lt;p&gt;Chances are, this is your first time hiring a web designer. Even if it isn&amp;rsquo;t, you may not understand the methods I use, or the processes I follow, or even some of the language I speak. You may not even fully understand what it is you actually want me to provide for you, further than &amp;lsquo;a website&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;The good news is, you don&amp;rsquo;t need to know these things; that&amp;rsquo;s what you&amp;rsquo;re paying me for.&lt;/p&gt;
+
+&lt;p&gt;The bad news is, you have a new job now; well quite a few actually. My whole business is about providing value for money, and I can&amp;rsquo;t give you the best value without your input. We&amp;rsquo;re starting on a journey together, and I need your help just as much as you need mine.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Your first job is to teach me as much as you can about you and about your company. I&amp;rsquo;ll do a lot of research myself, but the best information will come from the horse&amp;rsquo;s mouth.&lt;/p&gt;
+
+&lt;p&gt;Why do think you need a website? Who of your clients/customers have expressed interest in using one? What do they want to use it for? Are you aiming to replace offline processes with online ones, or just use it as a marketing tool?&lt;/p&gt;
+
+&lt;p&gt;Until I know the answers to these questions I won&amp;rsquo;t know which audiences the site should focus on, and &lt;em&gt;it will fail&lt;/em&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Secondly, what content are you going to put on your shiny new website? Get it to me straight away. Hire a copywriter if necessary (in actual fact, it&amp;rsquo;s always necessary).&lt;/p&gt;
+
+&lt;p&gt;If I don&amp;rsquo;t have any content when designing the site, all I can build is a bland template, with a hole to put some text in. Give me good content, and give it to me early, and I can tailor the entire website experience to it, and guide your users through your site in an immersive way that they will remember, and return for regularly.&lt;/p&gt;
+
+&lt;p&gt;Without content I can&amp;rsquo;t do that, your site will be forgettable, and &lt;em&gt;it will fail&lt;/em&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Thirdly, do you have people in house who will maintain and support the website? Do you already have in-house designers, or another third-party that regularly create content, graphics or other design work for you?&lt;/p&gt;
+
+&lt;p&gt;I need to meet all of the people above, and they need to be involved in the design process from the beginning; therefore I&amp;rsquo;ll need you to introduce me. These are the people who already know your customers, and what appeals to them - as such they will be hugely valuable when creating a site that blends seamlessly with the brand they have helped you build. Without this insight, &lt;em&gt;your site will fail&lt;/em&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;And lastly, who are your customers? Let&amp;rsquo;s meet them.&lt;/p&gt;
+
+&lt;p&gt;All the research in the world is no good if we don&amp;rsquo;t put a prototype of the new design in front of the real-world users of your website. These users will play with it, get frustrated with it, break it, tell their friends about it, and based on their experience, use it, or leave it. If you wait until launch before you first show your new site to users, you are playing with fire. At launch, if a customer can&amp;rsquo;t use the new site in the way they want, you&amp;rsquo;ve lost a customer, and &lt;em&gt;your site has failed&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Get their reaction early in the process, so we can respond to it, and at launch know in advance that together we have built something your customers will love and enjoy using.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;As I said at the beginning of this post, this might be your first website, so you may not know the above is required of you, and without doubt there are many web designers who would not ask for that kind of involvement.&lt;/p&gt;
+
+&lt;p&gt;But it is &lt;em&gt;absolutely necessary&lt;/em&gt;, however busy you are, that you or an equally-well-informed representative are as involved as I am throughout the design process. Whilst it may cost you time or money, this way we can ensure that I am designing a site that &lt;em&gt;fits your company&lt;/em&gt; and is not just an empty shell, lacking in personality.&lt;/p&gt;
+
+&lt;p&gt;So please, be the client of my dreams, and help me out.&lt;/p&gt;
+
+&lt;p&gt;Sincerely,&lt;/p&gt;
+
+&lt;p&gt;Your friendly web designer.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Looking out for the little guy</title>
+    <link href="http://molovo.co/blog/looking-out-for-the-little-guy"/>
+    <updated>2013-12-28T00:00:00+00:00</updated>
+    <id>http://molovo.co/blog/looking-out-for-the-little-guy</id>
+    <content type="html">&lt;p&gt;I am not a web designer.&lt;/p&gt;
+
+&lt;p&gt;I market myself as a web designer, because that&amp;rsquo;s what my clients think they want. In fact, what they want is a person who makes websites.&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s what I am. I&amp;rsquo;m a person who makes websites. And apps too, if you&amp;rsquo;re feeling adventurous. I&amp;rsquo;m a UX designer, a UI designer, a front-end developer, a back-end developer, a hosting provider, a sysadmin, a copywriter and a marketer.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve done all of the above individually, for different companies at different times, and also I&amp;rsquo;ve done all of them at the same time for a single client as part of a larger package, which I will refer to as &amp;ldquo;a website&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Primarily, I work in front-end development. But to any client outside of &amp;ldquo;the web&amp;rdquo;, this means nothing. They don&amp;rsquo;t care about day rates, the tools I use, or the maintainability of my code; they want to give me a brief, and when the website is live, hand over a cheque for a pre-agreed amount.&lt;/p&gt;
+
+&lt;p&gt;There is much talk in the web community about the latest responsive trends, scalability tools and performance optimisations that should be used on the web; and much berating of those who shy away from them. This criticism is often short-sighted. Granted, the above are all important aspects in the building of a website, but they also cost money; money that the average client simply doesn&amp;rsquo;t have. But why should a lack of budget deny a client from receiving a website that employs good design principles?&lt;/p&gt;
+
+&lt;p&gt;The answer is in the base elements of the design; the layout and typography. &lt;a href=&quot;//twitter.com/hereinthehive&quot;&gt;Dan Donald&lt;/a&gt; talks about this at length in his great talk &lt;a href=&quot;https://www.youtube.com/watch?v=zgne_bgSRx8&quot;&gt;Flux and Flexibility&lt;/a&gt;. A well designed website could be as simple as a single column layout, with a good typographic base. Inherently responsive, a design such as this could easily catapult a small business into the modern era of web design, for very little cost.&lt;/p&gt;
+
+&lt;p&gt;But instead of this, too many designers concentrate on adding embellishments that add nothing more than zeroes to the price of the site. They may be eye catching, and no doubt will appeal to the client, but by placing these front and centre in mockups and prototypes, when it comes the time to remove features in order to fit a project within budget, these are the features which the client will want to keep.&lt;/p&gt;
+
+&lt;p&gt;But there are many aspects of web design that clients might not fully understand; responsiveness, performance optimisation, maintainability, accessibility. Why would any client choose these as features of their website, when the fancy lick of paint that masks them looks so appealing?&lt;/p&gt;
+
+&lt;p&gt;The answer is progressive enhancement. Not in the development sense, but in the process through which the website is designed and built. When creating mockups and agreeing quotes, start with that simple, single column layout. Explain that although such a design may not be the most modern, or the most eye catching, it is functional and inclusive across all devices, connection speeds and ability levels. Explain that embellishments cost extra, and add to a simple base, rather than removing features from an over-ambitious mockup.&lt;/p&gt;
+
+&lt;p&gt;If we were all to work in this way, the even the smallest of budgets could allow access to well designed, well implemented sites. Clients would not be disappointed when their users complain of lack of support for their device, or inaccessibility.&lt;/p&gt;
+
+&lt;p&gt;And why shouldn&amp;rsquo;t they be allowed access to good design? People laugh at clients who come to them with budgets in the range of hundreds, rather than thousands; but this is unnecessary. A website &lt;em&gt;can&lt;/em&gt; be built in a couple of hours. It won&amp;rsquo;t win any awards, but if built properly and populated with the right content, it will be functional, and more than likely meet the clients needs.&lt;/p&gt;
+
+&lt;p&gt;So think about this the next time a small, local business comes to you for a quote. Spend the time to talk to them, and remember that whilst a simple website built in a couple of hours might not be up to your usual standard of work, it might just be the best thing that&amp;rsquo;s ever happened to that particular business.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Never Stop Doing</title>
+    <link href="http://molovo.co/blog/never-stop-doing"/>
+    <updated>2013-12-05T00:00:00+00:00</updated>
+    <id>http://molovo.co/blog/never-stop-doing</id>
+    <content type="html">&lt;p&gt;You may have noticed I&amp;rsquo;ve been releasing a lot of new work recently. Two apps in two months isn&amp;rsquo;t bad going, and I&amp;rsquo;m pretty pleased with myself.&lt;/p&gt;
+
+&lt;p&gt;The first, &lt;a href=&quot;http://chatter.li&quot;&gt;Chatter&lt;/a&gt;, was a blot out of the blue. I wanted comments on my portfolio, and there wasn&amp;rsquo;t anything out there that would meet my needs. (Disqus, eurgh). Since this site is built with Jekyll, and as such I have no database, I needed something off-site, and I figured there were a lot of other people looking for the same thing, so I built it.&lt;/p&gt;
+
+&lt;p&gt;Then Chatter took off, and I needed to write some docs for it. I started off building static HTML pages and placing them within the apps routing system. It was taking ages, and I wasn&amp;rsquo;t happy with the results, so I started looking for something that could make it easier. There wasn&amp;rsquo;t anything, so I built it. It&amp;rsquo;s called &lt;a href=&quot;http://docci.co&quot;&gt;docci&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Before I started building the apps above, I was really unhappy with my work. It had been a while since I&amp;rsquo;d done anything other than client work, and as a result I wasn&amp;rsquo;t trying new things. I was coasting. I was growing stale.&lt;/p&gt;
+
+&lt;p&gt;As soon as the idea for Chatter came to me, I started building it, and I remembered why I got into this business in the first place. The thrill of knowing you&amp;rsquo;re making something that people really need is a huge motivator. The same happened with docci. I was invigorated, working late into the night to finish something I was passionate about. My client work immediately improved, and I&amp;rsquo;ve got some awesome client projects launching this month which I&amp;rsquo;ve really enjoyed working on.&lt;/p&gt;
+
+&lt;p&gt;So now, I&amp;rsquo;m going to try and see if I can keep it up. I&amp;rsquo;ve cut down my hours on client work to just 3 days per week, and I&amp;rsquo;ve set myself the challenge of building one app per month, for the whole of 2014. I wrote Chatter in Ruby, and docci in PHP, so to keep the theme going, in each one I&amp;rsquo;ll be building in something I&amp;rsquo;ve never done before, to keep myself on the upwards learning curve. I&amp;rsquo;ll be going through Node.js, Python, Angular.js and Perl for building the actual apps, as well as trying out new things like SVG and Canvas elements along the way.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve already got a few good ideas for January, but if there&amp;rsquo;s something you&amp;rsquo;d really like to see built, but haven&amp;rsquo;t got the time or knowledge to do it yourself, please let me know, and it might just happen at some point within the next year.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Sincerely Yours, A Pissed-Off Web Developer</title>
+    <link href="http://molovo.co/blog/sincerely-yours-a-pissed-off-web-developer"/>
+    <updated>2013-11-25T00:00:00+00:00</updated>
+    <id>http://molovo.co/blog/sincerely-yours-a-pissed-off-web-developer</id>
+    <content type="html">&lt;p&gt;Dear Apple,&lt;br /&gt;
+&lt;br /&gt;
+It&amp;rsquo;s been six fucking years. If you&amp;rsquo;re not going to fix WebKit on iOS, for God&amp;rsquo;s sake stop blocking other people from implementing their own version that actually works. Even IE6 could implement CSS backgrounds correctly. &lt;strong&gt;You&amp;rsquo;re shit&lt;/strong&gt;.&lt;br /&gt;
+&lt;br /&gt;
+Sincerely yours,&lt;br /&gt;
+&lt;br /&gt;
+A pissed off web developer.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Dear Google,&lt;br /&gt;
+&lt;br /&gt;
+I don&amp;rsquo;t know why you felt the need to destroy Chrome with the last two updates, but Dev Tools are now completely unusable. If I wanted to use guesswork to help me develop sites I&amp;rsquo;d still be using fucking Notepad. &lt;strong&gt;You&amp;rsquo;re shit&lt;/strong&gt;.&lt;br /&gt;
+&lt;br /&gt;
+Sincerely yours,&lt;br /&gt;
+&lt;br /&gt;
+A pissed off web developer.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Dear Mozilla,&lt;br /&gt;
+&lt;br /&gt;
+Why in the name of all that is the internet does Firefox need so much memory? Are you secretly trying to cache the entire fucking internet in my RAM? &lt;strong&gt;You&amp;rsquo;re shit&lt;/strong&gt;.&lt;br /&gt;
+&lt;br /&gt;
+Sincerely yours,&lt;br /&gt;
+&lt;br /&gt;
+A pissed off web developer.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Dear Opera,&lt;br /&gt;
+&lt;br /&gt;
+Have you ever even heard of a web font? I mean, seriously, how can they &lt;em&gt;not&lt;/em&gt; work. &lt;strong&gt;You&amp;rsquo;re shit&lt;/strong&gt;.&lt;br /&gt;
+&lt;br /&gt;
+Sincerely yours,&lt;br /&gt;
+&lt;br /&gt;
+A pissed off web developer.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Dear Microsoft,&lt;br /&gt;
+&lt;br /&gt;
+IE11 is actually really fucking good. &lt;em&gt;Well fucking done&lt;/em&gt;. But your marketing tactics are lower than low. &lt;strong&gt;You&amp;rsquo;re shit&lt;/strong&gt;.&lt;br /&gt;
+&lt;br /&gt;
+Sincerely yours,&lt;br /&gt;
+&lt;br /&gt;
+A pissed off web developer.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>They Don't Make 'em Like They Used To...</title>
+    <link href="http://molovo.co/blog/they-dont-make-em-like-they-used-to"/>
+    <updated>2013-11-21T20:41:07+00:00</updated>
+    <id>http://molovo.co/blog/they-dont-make-em-like-they-used-to</id>
+    <content type="html">&lt;p&gt;Blank&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Things about CSS that make me want to put my face in a blender</title>
+    <link href="http://molovo.co/blog/development/things-about-css-that-make-me-want-to-put-my-face-in-a-blender"/>
+    <updated>2013-10-16T00:00:00+01:00</updated>
+    <id>http://molovo.co/blog/development/things-about-css-that-make-me-want-to-put-my-face-in-a-blender</id>
+    <content type="html">&lt;h4&gt;Padding&lt;/h4&gt;
+
+&lt;p&gt;When you enter a margin value such as:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;24&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;the vertical value is taken as a percentage of the height of the parent and the horizontal value is taken as a percentage of the  width of the parent. This makes sense.&lt;/p&gt;
+
+&lt;p&gt;If I enter the same values as padding:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;24&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;the vertical value is taken from the width of the element (horizontal), and the horizontal value is taken from the height of the element (vertical). &lt;strong&gt;This is stupid&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The only time this has &lt;em&gt;ever&lt;/em&gt; been of any use to me whatsoever in four years of writing CSS has been when forcing the aspect ratio of an element like so:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%;&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;/* Forces a 2:1 aspect ratio. */&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You know what would be far more useful? Make the horizontal and vertical the right way around, and give us an aspect ratio property. Not only would this make aspect ratios an &lt;em&gt;actualproperthing&amp;trade;&lt;/em&gt; rather than a hack, it also allow us to &lt;strong&gt;finally&lt;/strong&gt; vertically center things properly.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;c&quot;&gt;/* 25% of the element&amp;#39;s height will be&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;    whitespace above and below its children,&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;    making them vertically centered (Hurrah!) */&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;/* The elements width will be double that&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;    of its height, which is determined by&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;    the flow of content. */&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;aspect-ratio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h4&gt;Exes and Whys?&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;Y&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;Y&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;Y&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;outline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;Y&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;background-position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;X&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;translate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Why, dear God, Why???&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4&gt;Fixed positioned elements&lt;/h4&gt;
+
+&lt;p&gt;I set some elements at a certain size.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.parent&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;.parent&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.child&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;.child&lt;/code&gt; is 30% of the width of it&amp;rsquo;s parent. Nice and easy. Then I add &lt;code&gt;position: fixed;&lt;/code&gt; to the child.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.parent&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;.parent&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.child&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;fixed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Boom! &lt;code&gt;.child&lt;/code&gt; has now doubled in width. That makes sense doesn&amp;rsquo;t it? &lt;strong&gt;No.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4&gt;Borders&lt;/h4&gt;
+
+&lt;p&gt;I only ever use solid borders, because anything else is harder to see than a true word in the Daily Mail.&lt;/p&gt;
+
+&lt;p&gt;I want to write&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and have it give me a 1px wide, solid blue border.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;5px&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;gives me a 5px, solid blue border. Easy peasy.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4&gt;Posititioning&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;background-position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;is a nice easy way to position a background. At the moment, to absolutely position an element in this way, I have to do this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;300px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;margin-left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-150px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If the width is dynamic, the above is impossible without a javascript hack. This would be better:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;/* Boom! */&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr /&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been Ranty Donaldson and this is the 9 o&#39;clock news. Have a spiffing day.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>What Inspires You?</title>
+    <link href="http://molovo.co/work/the-branch"/>
+    <updated>2013-10-10T00:00:00+01:00</updated>
+    <id>http://molovo.co/work/the-branch</id>
+    <content type="html">&lt;p&gt;The idea for The Branch came to me after writing an article on something that I&amp;rsquo;d seen when I first began my career as a web designer (which later became &lt;a href=&quot;http://thebran.ch/articles/what-if-money-was-no-object&quot;&gt;the first article&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;After writing it, I realised that it would be great to know about the inspiration and motivation behind others in similiar industries. I&amp;rsquo;ve always enjoyed reading this kind of article, looking into the depths of a fellow creative mind, but had never seen one place with all these thoughts grouped together.&lt;/p&gt;
+
+&lt;p&gt;Designed for easy, comfortable reading, the main focus of the site is on a clean layout and beautiful typography. Later, the separate reading layout was launched to provide a distraction-free environment and allow the reader to focus on the content.&lt;/p&gt;
+
+&lt;p&gt;The Branch was launched with some great initial articles, and ever since then its fanbase has been growing, with excellent articles being written for the site by friends, colleagues and strangers alike.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Freshly Roasted</title>
+    <link href="http://molovo.co/work/love-coffee"/>
+    <updated>2013-10-10T00:00:00+01:00</updated>
+    <id>http://molovo.co/work/love-coffee</id>
+    <content type="html">&lt;p&gt;Love Coffee already had over 30 stores by the time they comissioned their first website. With a following ready and waiting to be introduced to the site, the bar was set high from the beginning.&lt;/p&gt;
+
+&lt;p&gt;Chris Page at &lt;a href=&quot;http://taitdesign.co.uk&quot;&gt;Tait Design&lt;/a&gt; came up with a unique and colourful design, interspersed with some great imagery showing the story of the brand&amp;rsquo;s product - Coffee - from the field to the cup. My challenge was to turn it into a fully responsive website.&lt;/p&gt;
+
+&lt;p&gt;The main aim of the site is to get customers in the door, so it needed to be as easy as possible to find and locate stores. Integrating the site with Google Maps meant that users could enter their postcode, and have directions to their nearest store in front of them within a matter of seconds.&lt;/p&gt;
+
+&lt;p&gt;As well as this, the site give Love Coffee an portal through which they can present news and updates to their customers, and allow people to find and apply for employment opportunities with Love Coffee online.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>On the Importance of a Process</title>
+    <link href="http://molovo.co/blog/on-the-importance-of-a-process"/>
+    <updated>2013-10-02T14:49:47+01:00</updated>
+    <id>http://molovo.co/blog/on-the-importance-of-a-process</id>
+    <content type="html">&lt;p&gt;Many designers have a well thought-out, tried and tested approach to their work. I have one myself, although the simplicity of it may surprise you.&lt;/p&gt;
+
+&lt;p&gt;I &lt;em&gt;think&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve tried all the brainstorming and productivity tools under the sun. I&amp;rsquo;ve tried sketches. I&amp;rsquo;ve tried wireframes. I&amp;rsquo;ve tried writing out ideas, both in longform and as notes. But actually I&amp;rsquo;ve found that the act of recording my ideas is enough to distract me from actually coming up with them in the first place.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve worked with some people who come away from an hour-long design meeting with pages and pages of notes. Most times I&amp;rsquo;m lucky if I come away with more than five lines. It&amp;rsquo;s not because I&amp;rsquo;m not paying attention, it&amp;rsquo;s because as I&amp;rsquo;m having the conversation, I&amp;rsquo;m aligning shapes, colours, fonts and UX ideas in my head, and forming a picture of what I&amp;rsquo;m going to create. The notes I do take are when I need to remember the exact wording of something; a blog post to link to or the tagline of a site.&lt;/p&gt;
+
+&lt;p&gt;This has been so effective for me, that when I discuss timeframes with a client, I&amp;rsquo;ll always book a job to start 2-3 weeks in the future, even if I&amp;rsquo;ve got nothing else on at the time. And during those weeks, I&amp;rsquo;m thinking about the site. I&amp;rsquo;ll look at competitors and other similiar sites, and pay attention to the things that set them apart. I&amp;rsquo;m designing the site &lt;em&gt;in my head&lt;/em&gt;, iterating ideas until I come up with something that I know will make for a great finished product.&lt;/p&gt;
+
+&lt;p&gt;As soon as I have that killer idea, I stop whatever I&amp;rsquo;m doing, and start building. I mockup in HTML and CSS, and iterate as I go along, rather than trying to come up with the perfect wireframe or sketch prior to starting.&lt;/p&gt;
+
+&lt;p&gt;Too many people get hung up on &lt;em&gt;their process&lt;/em&gt;. I&amp;rsquo;ve been called reckless in my approach, and accused of not planning. But actually, I am planning, I&amp;rsquo;m just doing it in a way that works for me. And although I&amp;rsquo;m far from the best designer out there, I&amp;rsquo;m pleased to say that my clients are usually very impressed with the products I am able to create for them.&lt;/p&gt;
+
+&lt;p&gt;So sod convention, and do what works for you. I&amp;rsquo;d be interested to hear about your process, and how you go about preparing to begin a build. That&amp;rsquo;s what the comments are there for. &lt;em&gt;Fire away&lt;/em&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>I build my own tools, and you should too</title>
+    <link href="http://molovo.co/blog/i-build-my-own-tools-and-you-should-too"/>
+    <updated>2013-08-20T21:41:07+01:00</updated>
+    <id>http://molovo.co/blog/i-build-my-own-tools-and-you-should-too</id>
+    <content type="html">&lt;p&gt;Blank&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Recruitment is broken, let's fix it</title>
+    <link href="http://molovo.co/blog/recruitment-is-broken-lets-fix-it"/>
+    <updated>2013-07-29T12:42:26+01:00</updated>
+    <id>http://molovo.co/blog/recruitment-is-broken-lets-fix-it</id>
+    <content type="html">&lt;p&gt;&lt;small&gt;&lt;em&gt;I can&amp;rsquo;t speak for the issues in the job markets of other countries, so this is aimed mainly at recruiters in the UK.&lt;/em&gt;&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;Job adverts in the UK come with a veil of secrecy.&lt;/p&gt;
+
+&lt;p style=&quot;color: rgb(71,81,91); font-weight: 400; padding: .75rem 1.5rem 1.5rem; border: 1px solid rgb(71,81,91); border-radius: .25rem;&quot;&gt;A &lt;em&gt;&lt;strong&gt;market leader&lt;/strong&gt;&lt;/em&gt; wants a &lt;em&gt;&lt;strong&gt;model professional&lt;/strong&gt;&lt;/em&gt; to work on &lt;em&gt;&lt;strong&gt;high-profile projects&lt;/strong&gt;&lt;/em&gt; for a &lt;em&gt;&lt;strong&gt;competitive salary&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+
+
+&lt;p&gt;As soon as I see this I navigate away. The only reason that these generic terms are used is to protect the recruiters&#39; bottom line. If I could see which company was advertising the job, I could approach them directly, meaning that the recruiter loses their cut. So the information is masked, which poses a number of problems for me:&lt;/p&gt;
+
+&lt;h4&gt;I don&amp;rsquo;t care that your company is a market leader.&lt;/h4&gt;
+
+&lt;p&gt;I don&amp;rsquo;t yet know what the market is, so it&amp;rsquo;s completely irrelevant. Give me the name of your company, and I&amp;rsquo;m going to research you before I apply anyway. When I do that, I&amp;rsquo;ll see that you&amp;rsquo;re a market leader, I&amp;rsquo;ll see why, and I&amp;rsquo;ll see how you achieved it.&lt;/p&gt;
+
+&lt;p&gt;But more importantly, I&amp;rsquo;ll see what the working environment is like; whether the people in the team are the sort of people I&amp;rsquo;d get on with; whether I&amp;rsquo;d be a good fit; whether I agree with your company&amp;rsquo;s goals on a moral or ethical level. If any of the above are an issue, hiding it until after I&amp;rsquo;ve applied wastes my time and yours, and that benefits no one.&lt;/p&gt;
+
+&lt;h4&gt;What exactly is a model professional?&lt;/h4&gt;
+
+&lt;p&gt;Everyone&amp;rsquo;s definition is different. Tell me exactly what qualities you value as a company, and I&amp;rsquo;ll tell you how I fit in with that ethos. I don&amp;rsquo;t want to spend 2 hours writing a cover letter only to be told that I don&amp;rsquo;t fit your company&amp;rsquo;s mentality. Given the chance, I can work that out myself.&lt;/p&gt;
+
+&lt;h4&gt;How high is high?&lt;/h4&gt;
+
+&lt;p&gt;What are the high-profile projects you&amp;rsquo;re referring to? Give me an example or three. Get me excited about working for your company. Make me feel as though time spent working at your company would be a privilege, and a foundation on which I can build a successful career.&lt;/p&gt;
+
+&lt;h4&gt;What am I competing against?&lt;/h4&gt;
+
+&lt;p&gt;A competitive salary could mean any number of things. Is the salary competitive only when compared against the average salary for the area? Or how about the average salary within that specific field of expertise? Or maybe even against other employees within your company?&lt;/p&gt;
+
+&lt;p&gt;I know how much I&amp;rsquo;m worth, and I want to know if you value my skills at the same or a similiar level. Give me a number. Give me an idea of where that number sits within the structure of your organisation. I don&amp;rsquo;t want to be resented by my colleagues because I earn more than them, neither do I want to be underpaid for skills and knowledge I&amp;rsquo;ve spent a long time acquiring.&lt;/p&gt;
+
+&lt;h4&gt;If you want the best candidate, &lt;em&gt;write the best advert&lt;/em&gt;.&lt;/h4&gt;
+
+&lt;p&gt;Tell potential applicants what you actually &lt;em&gt;want&lt;/em&gt;, and what they&amp;rsquo;ll get in return, and only those who match it will apply. When I apply for a job, I&amp;rsquo;m not going to leave half of my skills out, in the hope that you&amp;rsquo;ll ask me about them later. Unless you list psychic powers as a requirement, all this veil of secrecy does is adds to the list of unsuitable CVs for you to sift through each time you advertise a job.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Don't Call Me Unemployed</title>
+    <link href="http://molovo.co/blog/dont-call-me-unemployed"/>
+    <updated>2013-07-21T16:50:29+01:00</updated>
+    <id>http://molovo.co/blog/dont-call-me-unemployed</id>
+    <content type="html">&lt;blockquote&gt;&lt;p&gt;Freelancing is not a career choice, it&amp;rsquo;s a state of mind.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;It&amp;rsquo;s been 51 days since I left full time work.&lt;/p&gt;
+
+&lt;p&gt;By most standards, I&amp;rsquo;ve been lucky. Having left my old job rather earlier than I expected to, I was lucky enough to find and walk straight into my first freelance job over the course of a weekend.&lt;/p&gt;
+
+&lt;p&gt;Since then, I&amp;rsquo;ve been working like crazy, knowing that it&amp;rsquo;s still early days, and wanting to get a little money behind me in preparation for the hard times that are sure to come at some point in the future.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m thoroughly enjoying myself. I enjoy my work, and I find myself being far more productive by working wherever and whenever I have the motivation, rather than in the same place, and between an arbitrary time limit within the day.&lt;/p&gt;
+
+&lt;p&gt;I have no regrets whatsoever about the choice I have made, but there is still one great hurdle which I still have yet to overcome.&lt;/p&gt;
+
+&lt;h3&gt;My family&lt;/h3&gt;
+
+&lt;p&gt;Freelancing is not something that any member of my family other than myself would ever consider doing. I&amp;rsquo;m the product of a chartered accountant and a 30 year veteran of the civil service. They&amp;rsquo;re 9-5 people. They both have steady jobs, which don&amp;rsquo;t make them all giddy and excited, but instead are a means to an end, which in their case is the payment of a mortgage, bills and the occasional holiday.&lt;/p&gt;
+
+&lt;p&gt;When I first told my mother I was planning on giving up my job, the first words she said were &amp;ldquo;Don&amp;rsquo;t be so stupid.&amp;rdquo; Even now, when I&amp;rsquo;m earning good money, she doesn&amp;rsquo;t see that freelancing is a &amp;ldquo;real job&amp;rdquo;. When I&amp;rsquo;m working from home, she sees it as a day off. On more than one occasion she has referred to me as unemployed.&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s not to say that my parents haven&amp;rsquo;t been supportive, far from it. I temporarily moved back into my parents house when I left work, to try and save some money. They&amp;rsquo;ve cleared out their dining room, which now serves as my office, and redecorated my old bedroom for me to move into.&lt;/p&gt;
+
+&lt;p&gt;The problem is simply the massive culture gap between those who freelance, and those who baulk at the idea of anything other than a fixed salary. I understand that some people have a need for stability, they have mortgages to pay, families to support. Right now though, I don&amp;rsquo;t have any of those responsibilities, so I&amp;rsquo;m doing something I love while I have the opportunity and, slowly but surely, proving my doubters wrong.&lt;/p&gt;
+
+&lt;p&gt;Almost all of the freelancers I&amp;rsquo;ve met have a &lt;em&gt;sense of adventure&lt;/em&gt;, myself included, and I think that&amp;rsquo;s an important part of it. If you can&amp;rsquo;t face the idea of living on beans on toast for a month to make the rent when a client pulls out, then perhaps freelancing isn&amp;rsquo;t for you. But for me, the benefits are so good, that I&amp;rsquo;m willing to take the risk.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>How to start a successful software company</title>
+    <link href="http://molovo.co/blog/how-to-start-a-successful-software-company"/>
+    <updated>2013-07-13T20:57:15+01:00</updated>
+    <id>http://molovo.co/blog/how-to-start-a-successful-software-company</id>
+    <content type="html">&lt;p&gt;Blank&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Must. Type. Faster.</title>
+    <link href="http://molovo.co/blog/must-type-faster"/>
+    <updated>2013-06-25T21:48:11+01:00</updated>
+    <id>http://molovo.co/blog/must-type-faster</id>
+    <content type="html">&lt;p&gt;I&amp;rsquo;ve been working on an application recently which allows Solicitors and Legal Costs Draftsmen to quickly record time and budget forecast data. The application is very data-heavy, with multiple large forms throughout.&lt;/p&gt;
+
+&lt;p&gt;Obviously, with this model, anything that can speed up the data-entry process is a godsend. The user base is largely averse to using the mouse when entering data, tabbing through the fields as quickly as possible until they get to the end of the form, and then moving onto the next one.&lt;/p&gt;
+
+&lt;p&gt;One thing that was hindering this process was the standard date and time input fields available in HTML5. The data being entered is often copied from reports, or hand-written shorthand, and as such, does not always match the default format of the date/time fields, requiring the user to slow down, convert the date/time mentally and then enter. This may only take a couple of seconds per field, but when entering thousands of values a day, those seconds quickly add up.&lt;/p&gt;
+
+&lt;p&gt;Thus, the idea for &lt;a href=&quot;http://github.com/molovo/dateme&quot;&gt; DateMe&lt;/a&gt; and &lt;a href=&quot;http://github.com/molovo/timeme&quot;&gt; TimeMe&lt;/a&gt; was born. The idea being that a user can quickly stab out the data in whatever format it is presented to them, and it is then converted to a consistent value for storage in the database.&lt;/p&gt;
+
+&lt;p&gt;I couldn&amp;rsquo;t find anything reliable (and lightweight enough) to do this for me, so I quickly coded up a couple of scripts, and after some user testing, it went down so well that I thought I&amp;rsquo;d release them for the public. Hopefully you find them useful.&lt;/p&gt;
+
+&lt;h4&gt;Links&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://github.com/molovo/dateme&quot;&gt; DateMe&lt;/a&gt;
+&lt;a href=&quot;http://github.com/molovo/timeme&quot;&gt; TimeMe&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>In pursuit of Happyness</title>
+    <link href="http://molovo.co/blog/in-pursuit-of-happyness"/>
+    <updated>2013-06-17T21:07:33+01:00</updated>
+    <id>http://molovo.co/blog/in-pursuit-of-happyness</id>
+    <content type="html">&lt;p&gt;Blank&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Time</title>
+    <link href="http://molovo.co/blog/time"/>
+    <updated>2013-05-29T22:44:46+01:00</updated>
+    <id>http://molovo.co/blog/time</id>
+    <content type="html">&lt;p&gt;Today marks two days until the end of my love/hate relationship with full-time work, and I have to be honest, I&amp;rsquo;m fucked.&lt;/p&gt;
+
+&lt;p&gt;Excited as I was to be heading out into the world of freelancing, I&amp;rsquo;ve taken on more and more work to try and prepare myself for the jump. Since March I&amp;rsquo;ve been working on a 50-hour-per-week front-end development contract on top of the full time job. I&amp;rsquo;ve also been taking on around 12 hours per week in odd jobs for other clients, as well as general admin and working on my own projects.&lt;/p&gt;
+
+&lt;p&gt;You may have noticed that this doesn&amp;rsquo;t leave much time for sleep or socialising. It doesn&amp;rsquo;t. I usually get around one evening per week to get out and see friends or indulge my hobbies. I&amp;rsquo;ve been working an average of two all-nighters per week. Most days I&amp;rsquo;m walking around like a zombie and falling asleep at my desk.&lt;/p&gt;
+
+&lt;p&gt;Why am I telling you this? I&amp;rsquo;m telling you &lt;em&gt;not to be so fucking stupid&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Manage your time. Manage it well. Don&amp;rsquo;t take on more work than you can do.&lt;/p&gt;
+
+&lt;p&gt;Starting Monday I&amp;rsquo;ll be limiting myself to 50 hours per week. &lt;strong&gt;No more&lt;/strong&gt;. I need sleep, and I need a work/life balance.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s to a less sleepy future.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;UPDATE 14/06/13:&lt;/strong&gt; &lt;em&gt;The last paragraph above was complete bollocks. It&amp;rsquo;s now been two weeks and I&amp;rsquo;m working more than I was before. Ho hum.&lt;/em&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Screenreaders and The Web</title>
+    <link href="http://molovo.co/blog/screenreaders-and-the-web"/>
+    <updated>2013-03-02T16:32:41+00:00</updated>
+    <id>http://molovo.co/blog/screenreaders-and-the-web</id>
+    <content type="html">&lt;p&gt;Mention &lt;em&gt;alt&lt;/em&gt; text to a room of web developers and you&amp;rsquo;ll likely start an argument. Should they be ignored for decorative images? Should they ever be left blank? And is anyone brave enough to say &lt;code&gt;alt=&quot; &quot;&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;Everyone has their own methods for implementing accessibility. Some are innovative, some are better than others, some are downright lazy. All however, are less than ideal, as every screenreader reads assets, code and content differently.&lt;/p&gt;
+
+&lt;p&gt;An &lt;em&gt;alt&lt;/em&gt; attribute on an image is a prime example. If empty, some screenreaders will announce &amp;ldquo;Image&amp;rdquo; and nothing else. Some will announce the filename. Some will announce the &lt;em&gt;title&lt;/em&gt; if one is present. Some will ignore the image altogether. And when included, an &lt;em&gt;alt&lt;/em&gt; attribute is often a cop-out, an afterthought thrown in to please those who get angry about this sort of thing. Take a look at the below image:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://twimg0-a.akamaihd.net/profile_images/3320078323/fad7ae557577248bc153e667a5c17b5b.jpeg&quot; alt=&quot;Portrait of James Dinsdale&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Those of you readers who are blessed with sight have just been treated to the pretty face of yours truly. However those users without sight simply heard &amp;ldquo;Portrait of James Dinsdale&amp;rdquo;. Where is the additional context that sighted readers enjoy? Where is the description, telling those who cannot deduce it by looking my age, race, approximate height, eye colour, hair colour, clothes, facial expression, surroundings. All these things are detected by sighted users in a matter of seconds, but for a user using a screenreader they will never be privy to this information, as &lt;em&gt;alt&lt;/em&gt; text never goes into as much detail.&lt;/p&gt;
+
+&lt;p&gt;For textual content also, the mechanical, impersonal voices employed by screenreaders do little to convey the tone, emphasis and thought lovingly put into the article by the author. Where is the long pause after that poignant sentence? Where is the different voices and accents that we readers imagine when reading a written conversation? Where is the correct pronunciation when reading a name, or a word in a different language slipped into a paragraph?&lt;/p&gt;
+
+&lt;p&gt;In other forms of media, additional context is readily provided. Many books and magazines have audiobook counterparts for those users with poor or no sight; audible descriptions are provided for films and television programs; transcripts are provided for video and podcasts to assist the hard of hearing, but the web falls a long way behind these forms when it comes to providing a totally immersive experience for all, regardless of ability. Great steps have been made, no doubt, but more could be done.&lt;/p&gt;
+
+&lt;p&gt;What the web needs, is an &lt;em&gt;audio&lt;/em&gt; attribute for images and content. The value of this attribute would be the path to an audio file, in which an image is described in detail by a real person, or an article is read aloud by the author, in exactly the context intended. Image &lt;em&gt;alt&lt;/em&gt; attributes would still have a place, providing a short description allowing the user to then make a decision as to whether or not they would like to hear the full description. If they decide to hear more information, the audio file is downloaded and played in the background.&lt;/p&gt;
+
+&lt;p&gt;Yes, creating audio files for every body of text or image on a website would be a lot of work, but not every item would require it. An address, for example, does not need quite the same &lt;em&gt;joie de vivre&lt;/em&gt; as an enthusiastic, thought-provoking article. But for important elements within a web page this would provide a much more personal experience to non-sighted users, something which is currently lacking.&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;&lt;em class=&quot;blue&quot;&gt;If anyone knows where I can go to recommend this sort of thing be implemented into accessibility specifications I&amp;rsquo;d love to know about it.&lt;/em&gt;&lt;/small&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>First Past the Post</title>
+    <link href="http://molovo.co/blog/first-past-the-post"/>
+    <updated>2013-03-01T16:35:09+00:00</updated>
+    <id>http://molovo.co/blog/first-past-the-post</id>
+    <content type="html">&lt;p&gt;There have been two exciting new products doing the rounds recently. The first is &lt;a href=&quot;http://executebook.com/&quot;&gt; Execute&lt;/a&gt;, a fantastic book by &lt;a href=&quot;http://drewwilson.com/&quot;&gt;Drew Wilson&lt;/a&gt; and &lt;a href=&quot;http://joshlong.me/&quot;&gt;Josh Long&lt;/a&gt;. It is about &amp;ldquo;executing on ideas immediately when inspired rather than following the normal rules&amp;rdquo;. The second is &lt;a href=&quot;http://medium.com/&quot;&gt; Medium&lt;/a&gt;. Created by Twitter founder &lt;a href=&quot;http://evhead.com/&quot;&gt;Ev Williams&lt;/a&gt;, it is an online magazine, open to contributions from the public.&lt;/p&gt;
+
+&lt;p&gt;I only managed to pick up Execute this week. I read it cover to cover in under two hours. I &lt;em&gt;really&lt;/em&gt; wish this book had been written 2 years ago, when I first had the idea for a website very similiar to Medium, called The Branch.&lt;/p&gt;
+
+&lt;p&gt;The idea was almost the same, anybody can submit articles and assign categories to them. Readers can then subscribe to a category, an author or a group of authors, and each are presented as individual collections or &amp;ldquo;magazines&amp;rdquo; within the interface. I even had plans drawn up to give a percentage of advertising revenue back to the authors.&lt;/p&gt;
+
+&lt;p&gt;The interface for article creation was fairly innovative, and aimed primarily at those with no knowledge of HTML, without resorting to other languages like Markdown or Textile. You can see some screenshots of the interface &lt;a href=&quot;http://loviv.com/molovo/5974&quot;&gt;on Loviv&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The problem? I wasted time. I tried to build this mammoth interface all by myself, around my daily work. I completely redesigned the site three times, as having stared at it for so long I grew bored of it. I strived to create the &lt;em&gt;perfect&lt;/em&gt; experience, and never finished, rather than concentrating on ensuring that the product shipped.&lt;/p&gt;
+
+&lt;p&gt;When Medium was announced publicly and went into private beta, I immediately pulled the plug. The team at Medium managed to pull off exactly the vision I was striving towards, to allow anybody to easily create articles in a beautifully typographic way. They did it with a better design, ethos and infrastructure than I did, and with the traction and publicity that Medium has gained since being announced, there was no way that my product was going to compete.&lt;/p&gt;
+
+&lt;p&gt;What I should have done, as suggested in the Execute book, was put aside the time to work towards the goal I had. I should have been unafraid to ask for help, rather than trying to go it alone in secret, for fear of the idea being stolen. Had I done that two years ago, I may have been able to get the site live long before Medium came into existence. Instead, I have two years of wasted evenings, with nothing to show at the end of it.&lt;/p&gt;
+
+&lt;p&gt;Since the day I pulled the plug, I&amp;rsquo;ve been far more focused when I come up with an idea. I actually ended up reusing the name and domain I had for The Branch for &lt;a href=&quot;http://thebran.ch/&quot;&gt;another exciting project&lt;/a&gt; which I built in a little under two weeks, and am now immensely proud of and enjoy maintaining.&lt;/p&gt;
+
+&lt;p&gt;Since reading Execute, I now know exactly where I went wrong, and will use the approaches recommended by Drew and Josh when I next come up with a great idea.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;d recommend this book to anyone who works on projects in their spare time, it&amp;rsquo;ll save you a whole lot of headaches. &lt;a href=&quot;http://executebook.com/&quot;&gt;Go buy it now&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Stroke Your Ego</title>
+    <link href="http://molovo.co/blog/stroke-your-ego"/>
+    <updated>2013-02-21T08:00:13+00:00</updated>
+    <id>http://molovo.co/blog/stroke-your-ego</id>
+    <content type="html">&lt;p&gt;Designers. We&amp;rsquo;re an egotistical bunch. And that&amp;rsquo;s a good thing.&lt;/p&gt;
+
+&lt;p&gt;We love the sound of our own voice, which means we get fantastic speakers sharing their experiences on stage at conferences, and interesting discussions in the bar afterwards.&lt;/p&gt;
+
+&lt;p&gt;We all think we are excellent wordsmiths, so there are countless blogs, magazines and articles waiting to be devoured by our eager counterparts.&lt;/p&gt;
+
+&lt;p&gt;We all have our own techniques and tools, which of course are better than others, so we wax lyrically about them, demonstrating their prowess to all who care to listen.&lt;/p&gt;
+
+&lt;p&gt;We write the cleanest, most readable, most efficient code possible, and minify it, so that those who want to learn from it are enticed by the mystery hidden behind all that missing white space.&lt;/p&gt;
+
+&lt;p&gt;And lastly, when happy accidents occur, we declare that it was all down to following a practiced and perfected design process from which great ideas sprout like roses.&lt;/p&gt;
+
+&lt;p&gt;Without our egos, best practice would not exist, instead being hidden behind a veil of secrecy in the recesses of the minds of those at the head of our industry. Great ideas would go unnoticed. Boundaries would never be pushed. Friendships, collaborations and cooperatives would not have been formed. Amazing new tools would not be used by those who need them.&lt;/p&gt;
+
+&lt;p&gt;So please, don&amp;rsquo;t be ashamed. Stroke your ego. In public, loud and proud. It makes being a designer exciting.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Keep it Simple, Stupid</title>
+    <link href="http://molovo.co/blog/keep-it-simple-stupid"/>
+    <updated>2013-02-19T14:09:28+00:00</updated>
+    <id>http://molovo.co/blog/keep-it-simple-stupid</id>
+    <content type="html">&lt;p&gt;I&amp;rsquo;ve been working on a site recently that will have a number of authors, without any technical ability, needing to write, edit and update articles through the CMS. I&amp;rsquo;ve set up some CSS and jQuery rules to automatically format images and links written in standard Markdown syntax, to allow them to easily size, align and caption their images, as well as a couple of custom buttons for links to audio files and documents.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m conscious of accessibility, and whilst I think I&amp;rsquo;ve done a reasonably good job in this regard, I&amp;rsquo;d be interested to hear your thoughts on the generated markup, and whether there&amp;rsquo;s an easier way to do it.&lt;/p&gt;
+
+&lt;h5&gt;Links&lt;/h5&gt;
+
+&lt;p&gt;Very simple, a title of either &amp;lsquo;pdf&amp;rsquo; or &amp;lsquo;audio&amp;rsquo; is added after the URL in the Markdown syntax as follows:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;[ Click to Download Audio](/example.mp3 &amp;#39;audio&amp;#39;)
+[ Click to Download PDF](/example.mp3 &amp;#39;pdf&amp;#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This title can then be picked up in CSS and have custom styles added to it to create the buttons. No title means just a standard text link.&lt;/p&gt;
+
+&lt;h5&gt;Images&lt;/h5&gt;
+
+&lt;p&gt;Images are a little more complicated. I&amp;rsquo;m using the alt text of the image as the content of an :after pseudo-element to create the captions (simply for ease of use for the authors). As browsers will not render an :after pseudo-element on an image, I&amp;rsquo;m using jQuery to wrap a div around each image with the same alt text. To allow for sizing and alignment, I&amp;rsquo;m using the title attribute of the image to add a class to the generated div. The jQuery code looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;section.content img&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;each&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;wrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;div class=&amp;quot;image-wrapper &amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;title&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;quot; alt=&amp;quot;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;alt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;quot; /&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;src&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;src&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;?php echo base_url(); ?&amp;gt;/content/&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The reasoning is simple. The alt text of the div can be used for the content of &lt;code&gt;.image-wrapper:after&lt;/code&gt; to provide the caption, but will be ignored by screen readers, so only the alt text on the original image will be read.&lt;/p&gt;
+
+&lt;p&gt;The title is used for the alignment simply because it is the only other attribute that can be passed through Markdown. The majority of screen readers will ignore this too, but some won&amp;rsquo;t so it&amp;rsquo;s less than ideal. A title of &amp;lsquo;left&amp;rsquo; floats left, &amp;lsquo;right&amp;rsquo; floats right, and &amp;lsquo;full&amp;rsquo; stretches the image across the width of the article.&lt;/p&gt;
+
+&lt;p&gt;The URL of the image is also generated by the jQuery, so the user need only enter the filename of the image they have uploaded and the rest is done for them.&lt;/p&gt;
+
+&lt;p&gt;Example Markdown:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;![This is aligned to the left](boysbrigade.jpg &amp;#39;left&amp;#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Generated markup:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;image-wrapper left&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;This is aligned to the left&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/bmc/content/boysbrigade.jpg&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;This is aligned to the left&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;left&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Is this as accessible as it can be, or should I go about it another way? All input is appreciated.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; After a good discussion with &lt;a href=&quot;http://twitter.com/japborst&quot;&gt;Jelmer Borst&lt;/a&gt; and &lt;a href=&quot;http://twitter.com/matthewbeta&quot;&gt;Matthew Jackson&lt;/a&gt; and some testing I concluded that the best way to mark up the images would be to use a figure and figcaption, and then replace the alt text of the image with &amp;ldquo;Image&amp;rdquo; so that a screenreader will not repeat the caption twice, instead announcing &amp;ldquo;Image: Caption&amp;rdquo;. I&amp;rsquo;ve also removed the title (as it&amp;rsquo;s only needed to apply the class to the figure) to avoid any confusion.&lt;/p&gt;
+
+&lt;p&gt;(This method is not recommended for images alone, &lt;strong&gt;always use alt text&lt;/strong&gt;. It is only workable in this instance because the content of the figcaption will be announced to a screenreader immediately after the image).&lt;/p&gt;
+
+&lt;p&gt;With the same Markdown as above, this is the generated markup:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;figure&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;image-wrapper left&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/bmc/content/boysbrigade.jpg&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Image&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;figcaption&amp;gt;&lt;/span&gt;This is aligned to the left&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figcaption&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/figure&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And the jQuery to do it:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;section.content img&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;each&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;act&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;base_url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/content/&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;act&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;src&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;act&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;wrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;figure class=&amp;quot;image-wrapper &amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;act&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;title&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;quot; /&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;after&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;figcaption&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;act&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;alt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;/figcaption&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;alt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Image&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeAttr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;title&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;src&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Any more thoughts?&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Show your personality</title>
+    <link href="http://molovo.co/blog/show-your-personality"/>
+    <updated>2013-02-10T22:29:34+00:00</updated>
+    <id>http://molovo.co/blog/show-your-personality</id>
+    <content type="html">&lt;p&gt;I&amp;rsquo;ve seen countless blog posts, magazine articles and comment pieces from people complaining about the impersonal nature of the email. Well, I think I may have found the culprit.&lt;/p&gt;
+
+&lt;p&gt;How many times have you received a one or two word email - &amp;ldquo;Thanks&amp;rdquo; or &amp;ldquo;Sounds Great!&amp;rdquo; - followed by 10-15 lines of Name, Job Title, Address, Contact Information etc. etc. Some may even go so far as to add legal information, or request that you refrain from printing the email in order to save trees. I receive countless numbers of these emails, not just professionally, but from people I have known for years, and for whom I have all the information in the signature block memorised.&lt;/p&gt;
+
+&lt;p&gt;Google recently announced that signature blocks and company logos make up more than 40% of &lt;em&gt;all&lt;/em&gt; storage on gmail. That&amp;rsquo;s a ridiculous amount of data for something that rarely even gets read.&lt;/p&gt;
+
+&lt;p&gt;The problem is, now that signature blocks have become so commonplace, that we forgo important facets of human interaction when emailing people.&lt;/p&gt;
+
+&lt;p&gt;Take this for an example: if you were to meet someone in a bar would you introduce yourself straight away, or hand them your business card at the end of the conversation? On the telephone, would you finish talking, exchange salutations, and then spend a few minutes reciting your contact information?&lt;/p&gt;
+
+&lt;p&gt;If someone is emailing you directly, chances are they already know your name and job title; they certainly already know your email address, yet it&amp;rsquo;s still recited in every message in the conversation. If you&amp;rsquo;re emailing a stranger, rather than including this information in a footer, begin your message by introducing yourself. Let the reader know who you are and what you do, so that they can get a picture in their head of why you are emailing them and why they should take notice.&lt;/p&gt;
+
+&lt;p&gt;The same can be said for those times when you want your telephone or Skype contact details to be available to the recipient. Rather than expecting the person to find this information, add a line into your message: &amp;ldquo;Feel free to give me a call if you&amp;rsquo;d like, my number is&amp;hellip;&amp;rdquo; or &amp;ldquo;Let&amp;rsquo;s talk on the phone some time&amp;rdquo;. Leave them in no doubt that you are happy for them to use this method of communication to contact you.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s also worth noting that many popular web-based email clients actually hide signature blocks from the conversation, so any contact information that is not part of the message itself is easily overlooked.&lt;/p&gt;
+
+&lt;p&gt;The majority of emails could be much more thoughtful messages, and with these added personal touches could become, instead of a necessary burden, a form of communication that harks back to the good old days when it was a joy to receive and respond to them.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I miss those days.&lt;/em&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Don't Give Away the Gold</title>
+    <link href="http://molovo.co/blog/dont-give-away-the-gold"/>
+    <updated>2013-02-07T22:46:17+00:00</updated>
+    <id>http://molovo.co/blog/dont-give-away-the-gold</id>
+    <content type="html">&lt;p&gt;I attended the &lt;a href=&quot;http://port80events.co.uk&quot;&gt;Port80 Events&lt;/a&gt; Spring Localhost tonight. &lt;a href=&quot;http://twitter.com/handybitesize&quot;&gt;Carey Hiles&lt;/a&gt; stood up and talked about speculative work, and the lengths that we should be willing to go in order to gain that all important signature on a contract. Spec work has always been a controversial subject in the design industry, and as if on cue, at the end of the talk there were some heated words between Carey and Victoria Jones from &lt;a href=&quot;http://designwales.org&quot;&gt;Design Wales&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Design Wales have been running campaigns for some time now to try and eliminate speculative work from our industry. They&amp;rsquo;re doing some admirable work in this regard, and have even gained some public sector support. However, Victoria made the comment, quite adamantly, that she disagreed with everything that Carey had said during his talk, which I could see from observation Carey took quite hard. I found this to be incredibly harsh, especially as, from the comments she made, I think she missed the most important sentence in Carey&amp;rsquo;s talk, that is, the title of this blog post.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Don&amp;rsquo;t give away the gold&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;I&amp;rsquo;ve &lt;a href=&quot;http://molovo.co.uk/blog/crowdsourcing&quot;&gt;spoken about spec work before&lt;/a&gt;, particularly the crowdsourcing industry. If we as designers and developers were to create a fully polished piece of work on the offchance of some payment at the end of it we&amp;rsquo;d never be able to pay the bills, so I can understand Design Wales&#39; wish to eliminate this practice. However, in this instance I fully support Carey&amp;rsquo;s stance on the subject. That&amp;rsquo;s because he wasn&amp;rsquo;t really talking about speculative work at all, merely the sharing of ideas, critique of a current product to be redesigned, a basic outline of a recommended path, and simply researching the client.&lt;/p&gt;
+
+&lt;p&gt;These are all things that every designer should be doing, for every project. At this stage no work has been done, no time or money lost, it&amp;rsquo;s merely demonstrating to the client that you are the right person for the job. How can we possibly be expected to provide a quote for our work without taking the time to think about what we are actually quoting for?&lt;/p&gt;
+
+&lt;p&gt;In Design Wales&#39; perfect world, every client has an expert knowledge of design and can simply pick any designer to put together the website or product that best suits their business. The problem is, in reality clients rarely know what that is, and even if they did, the insight and difference of perspective that we as designers provide is the reason that they hire us in the first place.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;d love to see speculative work eliminated from the design industry, but if Design Wales are pursuing a world where there is no communication between client and designer before project initiation, they are going to do more harm than good to our industry, as it will simply lead to the wrong person being picked for the wrong job every time.&lt;/p&gt;
+
+&lt;p&gt;Carey, I would have liked to have talked to you in person after the event, to say that I really hope that you haven&amp;rsquo;t been put off by the reaction you received. It took a lot of courage to talk about such a controversial subject, you did an fantastic job, and I hope to see you speak again at some point. Keep up the good work.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Learning</title>
+    <link href="http://molovo.co/blog/learning"/>
+    <updated>2013-01-02T03:01:32+00:00</updated>
+    <id>http://molovo.co/blog/learning</id>
+    <content type="html">&lt;p&gt;2012 was a big year for me, with a number of huge changes in both my personal and professional life. I wanted to celebrate the new year with an article about how these changes have improved my life, and made me a better person, but every thought I put down in words came across as pretentious. Instead, I&amp;rsquo;m just going to list the little lessons that life has taught me over the last year, without editing, re-reading or censoring.&lt;/p&gt;
+
+&lt;p&gt;Here goes:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Experience is relative&lt;/strong&gt; in that I&amp;rsquo;ve found that those with less experience in a field are &lt;em&gt;usually&lt;/em&gt; more up-to-date with the current developments within it, and more willing to push boundaries and think outside the box. Some of the best conversations I&amp;rsquo;ve had in the last year were with &amp;ldquo;rookie&amp;rdquo; designers, who even managed to teach me a thing or two.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Giving stuff away&lt;/strong&gt; is one of the most fulfilling things you can ever do. I made &lt;a href=&quot;http://melody.molovo.co.uk&quot;&gt;a few&lt;/a&gt;, &lt;a href=&quot;http://thebran.ch&quot;&gt;cool things&lt;/a&gt; in 2012, and it feels &lt;em&gt;really&lt;/em&gt; great to know that people find the things that I can do useful.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Work sucks in every definition&lt;/strong&gt;. Which is why, if like me you are lucky enough to be able to do a job that you love, you shouldn&amp;rsquo;t call it work. Call it &lt;em&gt;living&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Alan Watts&lt;/strong&gt; was, in my opinion, &lt;a href=&quot;http://thebran.ch/articles/what-if-money-was-no-object&quot;&gt;the most intelligent man to have ever lived&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Maintaining 8 Twitter accounts&lt;/strong&gt; gets very annoying very quickly.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Family is everything&lt;/strong&gt;. This needs no explanation.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Staying up all night&lt;/strong&gt; is sometimes the best way to ensure you&amp;rsquo;re up early in the morning.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A person&amp;rsquo;s success&lt;/strong&gt; can only be judged by themselves. If you&amp;rsquo;ve achieved something that you set out to do, however small, whatever the reason for doing it, and whatever other people&amp;rsquo;s opinions, give yourself a pat on the back from me.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;There is absolutely nothing&lt;/strong&gt; that &lt;em&gt;cannot&lt;/em&gt; be achieved if you put enough effort in.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;There is absolutely nothing&lt;/strong&gt; that &lt;em&gt;can&lt;/em&gt; be achieved without putting in any effort at all.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Having an addiction&lt;/strong&gt; is only a burden if you let it be one. I&amp;rsquo;m a smoker, and over the last few months, I&amp;rsquo;ve forced myself to complete a task, such as writing a certain amount of code, or replying to all my emails/tweets before I allow myself a cigarette. I now work quicker and more efficiently, and smoke a lot less. Win, win.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Home cooked food&lt;/strong&gt;, however simple, is always better than ready meals.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Having no coffee&lt;/strong&gt; is always better than having bad coffee.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;If you need help&lt;/strong&gt; just ask. There are nice people out there somewhere, honest.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;If giving help&lt;/strong&gt;, give it to those who deserve it. People who ask for advice and then ignore or dismiss it when given aren&amp;rsquo;t worth your time. Also, those who listen to any advice you give them are far more likely to return the favour in future.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chasing happiness&lt;/strong&gt; is a misleading concept. If you&amp;rsquo;re chasing it, chances are you&amp;rsquo;ll never catch it. Instead, &lt;em&gt;Grab happiness by the balls and don&amp;rsquo;t let go&lt;/em&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Switching Off</title>
+    <link href="http://molovo.co/blog/switching-off"/>
+    <updated>2012-12-27T13:16:14+00:00</updated>
+    <id>http://molovo.co/blog/switching-off</id>
+    <content type="html">&lt;p&gt;I work too much. Always have, always will. I&amp;rsquo;m always either at my desk at home or my desk at work. The only exceptions are eating and sleeping, neither of which I do often enough. Even when traveling between home and the office I&amp;rsquo;m tied to my phone, replying to emails, tweets and Facebook posts, all in the name of &amp;lsquo;business&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;I spend far too little time with my family, and even when I do, there is always a phone, tablet or laptop within arm&amp;rsquo;s reach so that I can &amp;ldquo;just take a quick look at something&amp;rdquo;. Any semblance of a social life went out the window years ago.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve always used the hamster time recording software for recording my billable hours, but recently I started recording my unbillable hours too; the time I spend emailing, writing blog posts, working on my own projects or contributing to shared open source projects. I did this so that I could see just how much work I am actually doing. In the three weeks before Christmas, I averaged 87.2 hours per week, or 12.4 hours per day. Having never taken the time to work out my unbillable hours before, that answer surprised me. That&amp;rsquo;s a &lt;em&gt;lot&lt;/em&gt; of work.&lt;/p&gt;
+
+&lt;p&gt;So this Christmas I decided to do something I&amp;rsquo;ve never done before. On Christmas Eve I allowed my phone and tablet to run out of battery, and didn&amp;rsquo;t charge them. I left the laptop at home. From 2PM on the 24th until 1PM on the 26th, I was completely uncontactable. I chatted with friends and family, ate good food, drank good wine. I even played charades. &lt;em&gt;It was brilliant&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;For that 48 hours, I was the most relaxed I think I&amp;rsquo;ve ever been, and I have no regrets whatsoever. In future when I take a day off, I&amp;rsquo;m going to do exactly the same thing. I&amp;rsquo;ll say to my clients &amp;ldquo;I&amp;rsquo;m not working today&amp;rdquo;, and spend my time doing all the things I never have enough time for when I&amp;rsquo;m working. So sorry, but I&amp;rsquo;m not sorry, and I now have a very different attitude to work on my personal time, that is:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;It can wait until tomorrow&lt;/strong&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Holding back the years</title>
+    <link href="http://molovo.co/blog/holding-back-the-years"/>
+    <updated>2012-12-19T01:33:29+00:00</updated>
+    <id>http://molovo.co/blog/holding-back-the-years</id>
+    <content type="html">&lt;p&gt;A few weeks ago, a friend asked me a very important question:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;How did you get into design? Like, &lt;strong&gt;what was the first thing you ever designed&lt;/strong&gt;?&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Think about this yourself, it&amp;rsquo;s not as easy as you might imagine.&lt;/p&gt;
+
+&lt;p&gt;I immediately answered that I made my first website aged 19, and it&amp;rsquo;s true, that is definitely the first thing I ever received any kind of payment for. But it&amp;rsquo;s not the first &lt;em&gt;thing&lt;/em&gt; I designed, for that I have to go back much further.&lt;/p&gt;
+
+&lt;p&gt;For instance, at age 16 I was studying an engineering apprenticeship, and as part of that I made a spring loaded centre. It&amp;rsquo;s a tool used as a guide when tapping the thread of a bolt on a lathe. I designed and made it by hand, and still occasionally use it to this day when making guitar parts.&lt;/p&gt;
+
+&lt;p&gt;When I was 14, I designed and built my own bedroom furniture, out of the offcuts of wood that can be had for free outside of Ikea stores. This isn&amp;rsquo;t a tale of a tough childhood, I simply had an awkward sized room, and the best solution was a custom built one. Both my father and Grandfather were big DIY fans, and from a young age they taught me to do things for myself as much as I can, in order to learn new skills. So I did, and I ended up being able to fit far more storage in that room than I would have been able to with &amp;ldquo;off the shelf&amp;rdquo; solutions, all for next to no cost.&lt;/p&gt;
+
+&lt;p&gt;Aged 11, I helped my father design and make a series of wooden planting boxes as a present to my mother for her birthday. Again, these were custom designed, and made to fit perfectly into the spaces around the deck we had in our garden when I was a kid.&lt;/p&gt;
+
+&lt;p&gt;Back still further, at 8, I used Lego to design and build a giant model of a multi-storey car park, in an attempt to get myself featured in Lego UK magazine.&lt;/p&gt;
+
+&lt;p&gt;Where am I going with this? At the time, I didn&amp;rsquo;t consider any of these things &amp;ldquo;design&amp;rdquo;, but they were. In each instance, I had a problem, and I was able to come up with a finished product that solved it, whilst at the same time considering the cost and time taken to make it, and the reliability of the solution.&lt;/p&gt;
+
+&lt;p&gt;What the simple question above made me realise is that design is not something I just chose to do. In fact, I have been designing things in some way or another since the day I was born, honing my skills and learning from mistakes my whole life. I&amp;rsquo;ve never had any formal education in design, much like I haven&amp;rsquo;t in woodwork or building Lego car parks, but perseverance, and taking the time to study and learn the craft, &lt;em&gt;that&amp;rsquo;s&lt;/em&gt; what got me to the position I am in today.&lt;/p&gt;
+
+&lt;p&gt;So, the first thing I can remember designing was a card for my parents, that I made at four years old, in the middle of the night, whilst waiting for them to return from hospital on Christmas morning after the birth of my little brother. That was the first thing I designed, and as I can still remember the smile on my mother&amp;rsquo;s face now, I think it&amp;rsquo;s probably one of my best.&lt;/p&gt;
+
+&lt;p&gt;So tell me; &lt;em&gt;What was the first thing you ever designed?&lt;/em&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Reinventing the wheel</title>
+    <link href="http://molovo.co/blog/reinventing-the-wheel"/>
+    <updated>2012-12-12T13:35:30+00:00</updated>
+    <id>http://molovo.co/blog/reinventing-the-wheel</id>
+    <content type="html">&lt;p&gt;I&amp;rsquo;ve been working on an app recently that has a simple aim, speed and simplicity. Without revealing to much information, the app allows the user to send emails from the account with which they sign up. As such, email verification in a secure way was an imperative requirement, and I wanted to see if there was any way in which I could reduce the signup procedure to as few clicks as possible, and still maintain a good level of security.&lt;/p&gt;
+
+&lt;p&gt;As the best way for the user to see a sample of the emails that could be sent with the application was to send a sample, and explain the features within that, I also integrated this into the signup procedure. As a result, the single call to action on the page is a single button, with the text &amp;ldquo;See a sample/Sign up&amp;rdquo;. On mouseover this expands to the width of the container, the text fades out, and is replaced by a single email input box. The text below also fades in, and explains how it works to the user:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Just enter your email here, and we&amp;rsquo;ll send you an example of what you can create with - name removed -. If you want to sign up, just click the link in the email and your account will be created automatically.&lt;/p&gt;
+
+&lt;p&gt;Since - name removed - will send emails from the address you provide above, we are doing it this way so we can be sure it&amp;rsquo;s your email, cos we can&amp;rsquo;t let you go around pretending to be the President now can we? We won&amp;rsquo;t store any details until you click the link in the email, so if you&amp;rsquo;re not interested, just ignore it and we&amp;rsquo;ll forget you were ever here. &lt;em&gt;Who are you again?&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;But how to make this work in practice, and still maintain security?&lt;/p&gt;
+
+&lt;p&gt;When I say above that the email is never stored, I meant it. When an email is entered, two things happen. Firstly a 64 character random string is created. This is then added as a new row in a single column table containing all the activation codes currently in use. This random string is also added to the URL for the signup link in the email, along with the email itself. The only time the email is EVER associated with the string is in that one URL.&lt;/p&gt;
+
+&lt;p&gt;Upon the user clicking the link, the app opens in the browser, and scans the activation code table for the string in the URL. If it is found it is immediately deleted, and a new account is created with the email that was in the URL. If the email is ignored, the code is deleted after 7 days, with the app still blissfully unaware of the email with which it is connected.&lt;/p&gt;
+
+&lt;p&gt;Stopping URL harvesting from being used to hit the app with repeated random strings in an attempt to break it is accomplished by allowing no more than 5 calls to that URL per IP address per day. It would take years to correctly match a random string with this limitation.&lt;/p&gt;
+
+&lt;p&gt;Account creation is done by creating a new session variable with the users email, and they are prompted with a password and confirmation box. The account is only then created when a valid password is entered on this screen, and a new, different session variable is created which allows the user to access to the application, as would happen during normal login.&lt;/p&gt;
+
+&lt;p&gt;So there you have it, feature demonstration, email verification and signup in just three clicks.&lt;/p&gt;
+
+&lt;p&gt;The app is still in development so I&amp;rsquo;d be interested in hearing your thoughts on possible security issues, and if there&amp;rsquo;s anything I&amp;rsquo;ve missed. Feel free to ask any questions in the comments below.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>SQL Bind Variables</title>
+    <link href="http://molovo.co/blog/sql-bind-variables"/>
+    <updated>2012-12-10T13:07:09+00:00</updated>
+    <id>http://molovo.co/blog/sql-bind-variables</id>
+    <content type="html">&lt;p&gt;I hate people who try and tell me that my development techniques are wrong. Everyone is different. It was part of the motivation for my previous post on &lt;a href=&quot;http://molovo.co.uk/blog/frameworks&quot;&gt; Frameworks&lt;/a&gt;. That said, I&amp;rsquo;m going to break my golden rule, and give you all a very important instruction:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;If you don&amp;rsquo;t know what SQL bind variables are, then do not write any SQL. &lt;strong&gt;Ever&lt;/strong&gt;.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;This is important. Having come into web development from a database administration background it amazes me how many back end developers are writing SQL without knowing what SQL bind variables are, or how to implement them. So to begin, here&amp;rsquo;s a quick and dirty explanation of what they are, and why they are important.&lt;/p&gt;
+
+&lt;h4&gt;Bind variables&lt;/h4&gt;
+
+&lt;p&gt;Bind variables essentially reduce the number of times a query needs to be parsed, and reduces the number of queries held in database memory.&lt;/p&gt;
+
+&lt;p&gt;Take the following 3 statements:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;mysql&quot;&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;All three are essentially doing the same thing, but because the values are included literally, each time one of them is run the database will parse the statement, store it in memory and then run it. If either of the three above are run again, it can pick it up from memory without the need to parse. But if I run:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;mysql&quot;&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;the database needs to go through the full procedure again.&lt;/p&gt;
+
+&lt;p&gt;If we add a variable &amp;lsquo;:value&amp;rsquo; :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;mysql&quot;&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This gets stored in memory, and we can assign absolutely any value we want before running the statement, and after the first run, it will always be picked up from memory, greatly reducing the load on the database. Also, as the statement is only stored in memory once, the memory usage of the database will also be reduced greatly.&lt;/p&gt;
+
+&lt;p&gt;If you need to run the same statement a large number of times, say a login script for an application with 10,000 users, then without bind variables, you would be parsing this statement and storing it in the database memory &lt;em&gt;10,000 times&lt;/em&gt;. With a bind variable it would be once.&lt;/p&gt;
+
+&lt;p&gt;This is not something that should be left to your database administrator. SQL can be tuned at a database level, and any DBA worth his salt will be doing this for you, but if the application is producing inefficient SQL, no amount of tuning will improve things.&lt;/p&gt;
+
+&lt;p&gt;They aren&amp;rsquo;t even that difficult to implement. All server-side languages include ways of applying bind variables to your SQL. In vanilla PHP it would be done as so:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;&lt;span class=&quot;x&quot;&gt;// prepare the statement&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;$stmt = $this-&amp;gt;_db-&amp;gt;prepare(&amp;quot;SELECT column FROM table WHERE key = :value&amp;quot;);&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;$stmt-&amp;gt;bindParam(&amp;#39;:value&amp;#39;, $value);&lt;/span&gt;
+
+&lt;span class=&quot;x&quot;&gt;// select one row&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;$value = 1;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;$stmt-&amp;gt;execute();&lt;/span&gt;
+
+&lt;span class=&quot;x&quot;&gt;// select another row with a different value&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;$value = 2;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;$stmt-&amp;gt;execute();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;I&amp;rsquo;m not saying that you should include bind variables for every single statement, but I do thoroughly recommend it for any statement that will be run multiple times. What I &lt;em&gt;am&lt;/em&gt; saying, is that until you take the time to understand them you cannot know where they would be useful, and you will more than likely end up with a very unhappy database.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Frameworks</title>
+    <link href="http://molovo.co/blog/frameworks"/>
+    <updated>2012-12-10T12:28:58+00:00</updated>
+    <id>http://molovo.co/blog/frameworks</id>
+    <content type="html">&lt;p&gt;There are plenty of programming languages out there. Everyone has their favourite, and many, like me, probably have a list as long as their arm of languages they&amp;rsquo;d like to learn. Every language has a selection of frameworks, designed to make them easier to build apps with. Many are incredibly useful. jQuery for instance, has taken the web design world by storm, and it&amp;rsquo;s quite rare to see a site nowadays that doesn&amp;rsquo;t make use of it. Laravel and CodeIgniter for PHP are very highly regarded, as is Rails for Ruby development.&lt;/p&gt;
+
+&lt;p&gt;The problem is, with many of these, it&amp;rsquo;s easier to learn and use the framework than it is to use the base language itself. I myself was guilty of this when I first started learning jQuery many years ago. It&amp;rsquo;s only within the last year that I&amp;rsquo;ve taken the time to actually learn and understand the JavaScript code underneath it. And you know what? Since doing that I&amp;rsquo;ve found that in a number of instances, where before I would have jumped straight into jQuery without thinking, I now use vanilla JavaScript as much as possible.&lt;/p&gt;
+
+&lt;p&gt;The same can be said for other languages. The best way to learn how to use a language is to learn the vanilla language first. With PHP, if you jump straight into Laravel or CodeIgniter, you&amp;rsquo;ll likely be lost when looking at vanilla PHP and trying to use one of the additional functions from the framework. All my PHP and Ruby development is done vanilla, no framework. I simply don&amp;rsquo;t currently work on applications on the sort of scale at which a framework would give me any benefit. That doesn&amp;rsquo;t make me a bad person.&lt;/p&gt;
+
+&lt;p&gt;Learn the language first, and any of the frameworks will be almost second nature, and you can choose the right tool for the job, rather than relying on a huge framework when all you need are a few simple server-side calls.&lt;/p&gt;
+
+&lt;p&gt;Frameworks should be a tool allowing you to do the best job you can, not a mandated starting point.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Crowdsourcing</title>
+    <link href="http://molovo.co/blog/crowdsourcing"/>
+    <updated>2012-11-29T19:52:41+00:00</updated>
+    <id>http://molovo.co/blog/crowdsourcing</id>
+    <content type="html">&lt;blockquote&gt;&lt;p&gt;Like a car crash or your first hangover, crowdsourcing is a mistake every designer should make, and most likely will make at least once.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;A bold claim, but I&amp;rsquo;ll stand by it. I abhor crowdsourcing, and wouldn&amp;rsquo;t wish it on anyone, but having said that, if you do get sucked in what&amp;rsquo;s important is what you learn from the experience, and how it improves your work, your approach to design, and your valuation of your own work.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been meaning to write this article for a while, and have decided to revisit it to add some additional thoughts after becoming involved in a heated discussion on Twitter about the ethics of crowdsourcing, in which, I&amp;rsquo;ll admit, I was a little unnecessarily sarcastic.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been sucked into the crowdsourcing spiral before. Every freelancer will experience a lull in work at one time or another, and as a young designer, having never heard of crowdsourcing, when I first became aware of it I initially saw it as a way to make a quick buck between projects. How wrong I was.&lt;/p&gt;
+
+&lt;p&gt;My crowdsourcing adventure lasted six weeks. In that time I devoted 97 hours to a total of 43 contests. I tried to be sensible, and only pitched for logo and branding projects, knowing that entering into a full web design contest was likely to take up too much of my time. I religiously stuck to each client brief; sketched, planned and developed good designs, designs that I would have been more than happy to present to a real, paying client. In fact, a couple of them made their way into my portfolio, so pleased I was with the quality of my work.&lt;/p&gt;
+
+&lt;p&gt;I earnt a grand total of £0.00. Zilch. Nada. Nothing.&lt;/p&gt;
+
+&lt;p&gt;The same number of hours spent on actual client work would have earnt me enough to buy a car.&lt;/p&gt;
+
+&lt;p&gt;However, in some ways the process was beneficial. It provided experience, which as a young designer is invaluable. It afforded me the opportunity to explore new techniques. Most importantly, it taught me that &lt;em&gt;my time is the most valuable asset I have as a designer&lt;/em&gt;. Crowdsourcing wastes it. I still occasionally do free work when I&amp;rsquo;m not busy, but I instead do valuable work which, rather than being lost in a sea of contest entries, will be used, and may provide me with additional exposure. Work for a charity; testing and development of open source software; a plugin or two.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://twitter.com/sam_piggott&quot;&gt;Sam Piggott&lt;/a&gt; summed up his experiences for me:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;You&amp;rsquo;ll spend hours designing or developing a proposal with the mindset that there&amp;rsquo;s no WAY the client will turn it down - only to find that someone has copied you and is charging half the price for a half-assed job. Crowdsourcing is not worth your time. Your time is better spent going out into the world and knocking on doors - that&amp;rsquo;s far more beneficial and gets your face known. - &lt;a href=&quot;http://twitter.com/sam_piggott&quot;&gt;@Sam_Piggott&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Brilliant advice that has been echoed in all corners of the design community.&lt;/p&gt;
+
+&lt;p&gt;Now, finally, onto the point of this post. Imagine my surprise to find that the well-known &lt;a href=&quot;http://stokefire.com&quot;&gt;Stokefire Branding&lt;/a&gt; have recently been using crowdsourcing for their projects. This is a high class agency, active in the design community, and who put out extremely high quality work of their own accord. Yet their recent announcement on twitter of a project hosted on crowdSPRING caused a bit of a storm:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Personally, I see it as totally unethical and find it odd that an established agency would turn to it&amp;hellip; when spec work is usually so frowned upon by respected designers. - &lt;a href=&quot;http://twitter.com/illogicaljake&quot;&gt;@illogicaljake&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;What would you call the 100s of unchosen entries? I would call that getting something for nothing. - ‏&lt;a href=&quot;http://twitter.com/BenBloodworth&quot;&gt;@BenBloodworth&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Stokefire have promised a blog post on the subject, but whilst we wait for that, they have said that they will give $20 &amp;ldquo;to any designer whose work we reference as an example - good or bad&amp;rdquo;. I can understand the sentiment behind this, but believe they are misguided in their intentions. Given the number of entries usually made to these contests, $20 a pop would likely add up to a considerable expense, not including the time that would be spent reviewing and responding to each entry.&lt;/p&gt;
+
+&lt;p&gt;Rather than &lt;em&gt;encouraging&lt;/em&gt; the crowdsourcing industry, there are much better ways that this money could be invested in order to spur on budding designers. Inviting local students into the office for a days work experience perhaps? I know of many people who would give an arm for such an opportunity. Maybe putting on a series of talks or webinars about the design processes they follow - I&amp;rsquo;d watch those myself.&lt;/p&gt;
+
+&lt;p&gt;They also show a little naivety not to see the fact that, whilst better than the zero return usually on offer, $20 seriously undervalues the time and effort that will be put into these entries.&lt;/p&gt;
+
+&lt;p&gt;I may have learnt from my experiences and moved on, but there are many young designers out there who attempt to make a living solely from crowdsourcing. I really feel for these people, and Stokefire owes it to them to join forces with the rest of the community to stamp out crowdsourcing, and to educate young designers about why they should avoid it. With the backing of a company of their stature we may just see progress, but with their current attitude they are merely providing &lt;a href=&quot;https://twitter.com/rosskimbarovsky/status/273914792304078849&quot;&gt; propaganda&lt;/a&gt; for those who make a living preying on the weak and inexperienced.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>It's a whole new world</title>
+    <link href="http://molovo.co/blog/its-a-whole-new-world"/>
+    <updated>2012-11-27T12:23:47+00:00</updated>
+    <id>http://molovo.co/blog/its-a-whole-new-world</id>
+    <content type="html">&lt;h3&gt;My thoughts on a week with elementary OS.&lt;/h3&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been an Ubuntu user for 7 years now, but I hate what it&amp;rsquo;s become. I really, really hate it. For a year I&amp;rsquo;ve had to contend with only being able to boot my PC using the boot loader on an old Mac OSX &amp;ldquo;hackintosh&amp;rdquo; CD after the upgrade to 11.10 ruined my hard disks boot partition beyond repair (I devoted a full two weeks to fixing it at one point, it will not work). I haven&amp;rsquo;t had a properly working third monitor since my foray into Linux began.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m not one of those people who was disgusted at the appearance of Unity. I think the idea is brilliant, but it&amp;rsquo;s so poorly executed it&amp;rsquo;s put me off the whole Ubuntu ecosystem. It runs like a hippo in quicksand, and because of my third monitor I&amp;rsquo;m forced to use unity 2d, which is even worse, and it was recently announced that unity 2d will no longer be supported in future versions. The speed is a huge issue for me. My desktop machine has 6 cores and 16GB of RAM - even under windows it’s capable of running anything you can throw at it - but with unity in either 2d or 3d mode, even the simplest task takes an age to complete.&lt;/p&gt;
+
+&lt;p&gt;I haven&amp;rsquo;t switched to another OS yet, simply because I haven&amp;rsquo;t found another distribution that offers the same no nonsense ease of use that made me originally choose Ubuntu for everyday use. My desperation even caused me to go so far as to attempt to build my own distribution, but lack of time and knowledge meant that this idea was soon discarded.&lt;/p&gt;
+
+&lt;p&gt;This week the team at elementary released Luna beta 1, and it seemed like a good time to set aside a partition and see if it could replace Ubuntu as my OS of choice. After a week of getting used to the UI, and setting up my usual applications and settings I have to say I&amp;rsquo;m thoroughly impressed. I&amp;rsquo;ll outline some of the most important points (for me) below:&lt;/p&gt;
+
+&lt;h4&gt;Speed&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;It’s quick&lt;/strong&gt;. By god it&amp;rsquo;s quick. As a small comparison, I created a small php test page to pull in 1000 rows from a local mysql database and echo the results to the browser. Admittedly, under elementary I&amp;rsquo;m using nginx, rather than apache2 under Ubuntu (as I could never get nginx working), but other than that the setup is identical. Under Ubuntu the page load would take 3-4 secs on average. In elementary, it takes &amp;lt;250ms. This is a huge difference, which makes for a much faster development workflow.&lt;/p&gt;
+
+&lt;p&gt;Part of this speed increase is due to much lower RAM usage. This is evident when using large images in gimp. I regularly work with 3-4GB multi-layered images. Having one of these open in Ubuntu meant that using the PC for anything else at the same time was impossible. Now I can comfortably work on 3 or 4 at once, and still have multiple tabs in chrome, rhythmbox and an IDE open, and everything still works perfectly.&lt;/p&gt;
+
+&lt;h4&gt;UI&lt;/h4&gt;
+
+&lt;p&gt;I&amp;rsquo;ve complained before about the insistence of OSes on developing new and markedly different user interfaces - such as unity or metro in windows - without concentrating on the small details that have provided annoyance in every version of modern OSes. A prime example is the standard three window controls, positioned next to reach other in one corner. I bet you&amp;rsquo;ve never even noticed a problem with this system, as no one has ever challenged it, but how many times have you accidentally closed an important document whilst aiming for the maximise/minimise buttons? Elementary has a solution, close on the left, maximise on the right, a simple change that makes a lot of sense, and removes any chance of inaccuracy.&lt;/p&gt;
+
+&lt;p&gt;Another example is the changes to the file browser. You can now single click to open files and folders instead of double click, and each icon has a small plus sign attached to it to allow you to select multiple files, without the need to hold the CTRL key. Again, a small change which makes for a much more intuitive user experience.&lt;/p&gt;
+
+&lt;p&gt;Using ALT+TAB to switch between windows is a joy. Rather than displaying a row of icons, all windows fade away, leaving only the selected one visible, and then all restore with the selected window on top when ALT is released. The window of choice is much easier to identify this way, particularly if you have multiple instances of the same program open.&lt;/p&gt;
+
+&lt;p&gt;The Applications menu is another huge improvement over Unity and Gnome, giving a simple view of the applications installed on the system without any of the unnecessary rubbish added to the menu by other OSes.&lt;/p&gt;
+
+&lt;p&gt;Hot corners are included in Ubuntu, but due to the terrible performance any use of animated features becomes a burden under heavy use. In elementary everything is smooth, and works as designed.&lt;/p&gt;
+
+&lt;p&gt;All of the default applications feature excellent user interfaces, keeping things lightweight and concentrating on quality rather than quantity of features. A commendable choice by the design team, and it has made elementary incredibly easy to use.&lt;/p&gt;
+
+&lt;h4&gt;Plank&lt;/h4&gt;
+
+&lt;p&gt;Plank is a huge breath of fresh air. It&amp;rsquo;s exactly what unity should have been, instead of the behemoth it is today. It has icons, you click on them to open programs; it doesn&amp;rsquo;t need to do anything else, and as a result startup and login time is massively reduced, because you don&amp;rsquo;t have to wait for the system to load countless features that you&amp;rsquo;ll never use.&lt;/p&gt;
+
+&lt;h4&gt;Geary&lt;/h4&gt;
+
+&lt;p&gt;Geary is the first linux email application I’ve even considered using over the Gmail web interface, and will more than likely use it as my main email client. It reads and sends emails, and shares the conversation view of the web interface. I have no need for custom labels or rules, and by omitting these and a number of other rarely used features the application is a joy to use.&lt;/p&gt;
+
+&lt;h4&gt;Noise&lt;/h4&gt;
+
+&lt;p&gt;I haven’t been able to test Noise, as the application crashes as soon as I try to import any music. I’m told that an update is in the pipeline so we’ll have to wait and see how that pans out. That said, the interface looks good, with the same simplicity as the rest of the OS, so I’m looking forward to being able to test it properly.&lt;/p&gt;
+
+&lt;h4&gt;Midori&lt;/h4&gt;
+
+&lt;p&gt;For casual browsing Midori is an excellent choice. It’s fast, simple and conforms to web standards. As a web developer I still need to use chrome due to a number of browser extensions I use, but when I’m not working I find myself jumping to Midori so that I can get to the information I want without any distractions. The RAM usage is also much lower than in chrome, firefox or opera.&lt;/p&gt;
+
+&lt;h4&gt;Install and boot time&lt;/h4&gt;
+
+&lt;p&gt;Install was quick, easy and seamless. Elementary shares Ubuntu’s installer, and admittedly it is one feature which Canonical got right, so it was a good decision to keep it in here.&lt;/p&gt;
+
+&lt;p&gt;Boot time is much quicker than Ubuntu or windows, due to the lightweight nature of the operating system and the desktop environment, there simply isn’t as much to load.&lt;/p&gt;
+
+&lt;h4&gt;A few niggles&lt;/h4&gt;
+
+&lt;p&gt;The third monitor is still a no-go for me, but this is largely down to the poor drivers Nvidia is still putting out for linux. One day, someone will finally work out a way to fix this.&lt;/p&gt;
+
+&lt;p&gt;Hot corners only apply to the primary screen, rather than the desktop as a whole. I’m not sure if this is a bug or a feature, but if the two monitors you use are the same size only two of the hot corners are useable.&lt;/p&gt;
+
+&lt;p&gt;Custom shortcuts don’t currently stay pinned to the dock through the right click menu in Plank, disappearing when the application is closed. They can be added by modifying the configuration file though.&lt;/p&gt;
+
+&lt;h4&gt;Conclusion&lt;/h4&gt;
+
+&lt;p&gt;All in all, for a week old beta, it’s a huge step in the right direction. There are still bugs to iron out, but given the quality of work by the team so far, I’m confident that elementary will be as near to flawless as possible by final release. In fact, it’s so much better than Ubuntu already that I am now intending to use it as my production OS, whilst I patiently await the final release.&lt;/p&gt;
+
+&lt;p&gt;If you are an Ubuntu user, I urge you to head to &lt;a href=&quot;http://elementaryos.org&quot;&gt;elementaryos.org&lt;/a&gt; and download a copy of Luna Beta 1 to try out. I think you’ll be pleasantly surprised.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>You're doing it wrong</title>
+    <link href="http://molovo.co/blog/youre-doing-it-wrong"/>
+    <updated>2012-11-27T12:12:46+00:00</updated>
+    <id>http://molovo.co/blog/youre-doing-it-wrong</id>
+    <content type="html">&lt;p&gt;Adverts annoy me. Adverts annoy the majority of people. There are entire industries devoted to blocking adverts on the web. Yet still, they persist in appearing on nearly every free website, social network and mobile app in existence. Why?&lt;/p&gt;
+
+&lt;p&gt;Facebook, Google+ and Twitter all employ promoted posts as their advertising method of choice. I, like half the world, use all of these social networks. I use them in both my personal life, as well as to promote my business. The people I follow on these networks are people whose posts I am interested in, who I know are going to write updates that I want to read. So when an advert appears in my stream, interrupting these posts, it annoys me. Even if it is a product I may be interested in, the first thing I look for is the hide button, because it is &lt;em&gt;unsolicited&lt;/em&gt;. I have no problem with businesses that I follow promoting their content or services. This is because I have chosen to follow them, and by extension, the information that they post is information that I want to see.&lt;/p&gt;
+
+&lt;p&gt;Another thing that all three networks employ, is the “Report Spam” button. When I am sent a message that is unsolicited, that is, from a business/company/person who I am not following, I click the “Report Spam” button. Why do the social networks believe that people are going to be any more interested in “spam” just because the poster has paid them for the privilege of posting it. I know of many people who regularly use the “Report Spam” button on officially promoted posts for exactly this reason.&lt;/p&gt;
+
+&lt;p&gt;I appreciate that these networks need to make money. At the end of the day, why else do they exist? But they are all missing a completely obvious solution to these problems: why risk alienating the users on whom they rely, by spamming them with posts from businesses they have no interest in, when the obvious solution is to charge the millions of businesses that use their services every minute of every day?&lt;/p&gt;
+
+&lt;p&gt;Business accounts are already separate entities on Facebook and Google+, and it wouldn’t be a huge stretch to introduce the same on Twitter. All three encourage businesses to promote their posts in order to try and attract new customers. But a larger number of businesses rightly focus solely on their existing customers, the people who have already subscribed to their updates, and who wait with bated breath for the information they put out.&lt;/p&gt;
+
+&lt;p&gt;Given the large number of businesses, the charge wouldn’t need to be much for this strategy to work, say $10 a month. In fact, at this price, spread over all business accounts, they would probably make more money than they do currently. In a professional capacity, I mainly use Twitter. I have a modest 42 followers, and I follow 105 other people, most of whom are in the design and development industry. I would have no qualms about paying a small amount to continue using the service, because it provides a valuable insight into my industry, and allows me to promote my work to people who &lt;em&gt;I know are interested in it&lt;/em&gt;. I’m sure there are many out there who feel the same way. You only need look at the success of app.net to see how this model works. For a business with tens or hundreds of thousands of followers, $10 a month is next to nothing.&lt;/p&gt;
+
+&lt;p&gt;All three networks would be able to keep accounts free for personal use, which is the lifeblood of the service, but by charging businesses &lt;em&gt;they wouldn’t need to keep spamming their users with unsolicited advertisements&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;This idea may well be controversial, so feel free to use the comments below to let me know your thoughts. Would you be happy to pay to use these services in a professional capacity?&lt;/p&gt;
+</content>
+  </entry>
+  
+</feed>

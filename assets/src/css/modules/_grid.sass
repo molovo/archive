@@ -1,0 +1,57 @@
+@if $show_baseline == true
+	body
+		background:
+			image: url(../img/grid.png)
+			repeat: repeat
+			size: 1px 1.5em
+
+.container
+	width: 100%
+	max-width: $container_width
+	margin: 0 auto
+
+	@media (max-width: 39 * 1.3125em)
+		padding: 0 1.5em
+
+.grid
+	display: inline-block
+	padding: 1.5em
+
+@for $i from 1 through $columns
+	.\3#{$i} of#{$columns}
+		width: ( $i / $columns ) * 100%
+
+=split($left-ratio, $right-ratio, $breakpoint: $bp_medium)
+	$total: $left-ratio + $right-ratio
+
+	@media (min-width: $breakpoint)
+		height: auto
+		overflow: hidden
+
+		& > :nth-child(2n+1),
+		& > :nth-child(2n)
+			display: inline-block
+			vertical-align: top
+			float: left
+
+		& > :nth-child(2n+1)
+			width: percentage($left-ratio/$total)
+
+		& > :nth-child(2n)
+			width: percentage($right-ratio/$total)
+
+=grid($small_columns: 1, $mid_columns: 2, $large_columns: 4, $bpm: $bp_medium, $bpl: $bp_large)
+	height: auto
+	overflow: hidden
+
+	& > *
+		display: inline-block
+		width: percentage(1/$small_columns)
+		vertical-align: top
+		float: left
+
+		@media (min-width: $bpm)
+			width: percentage(1/$mid_columns)
+
+		@media (min-width: $bpl)
+			width: percentage(1/$large_columns)

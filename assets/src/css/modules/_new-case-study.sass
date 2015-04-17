@@ -1,0 +1,132 @@
+.case-study
+  .section-title
+    text-align: center
+    font-size: 3em
+    line-height: 1em
+
+    @media (min-width: 40em)
+      font-size: 4.5em
+
+  .browser
+    border: solid rgba($dark, .7)
+    border-width: 1.5em 0 0
+    border-radius: .25em
+    position: relative
+
+    &, img
+      width: 100%
+      max-width: 100%
+
+    &:after
+      content: ' '
+      background: url(/assets/dist/img/browser-buttons.svg) center no-repeat
+        size: 100%
+      width: 2.5em
+      height: 1em
+      position: absolute
+      top: -1.2em
+      left: .45em
+
+  &-branding
+    margin: 0 auto 6em
+    width: 18em
+    max-width: 90%
+    display: block
+
+  &-brief, &-typography
+    padding: 6em 0
+
+  &-intro
+    width: 100vw
+    height: 100vh
+    position: relative
+
+    hgroup
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      max-width: $container_width
+      text-align: center
+
+      h1
+        font-size: 6em
+        line-height: 1em
+        margin-bottom: .5em
+
+    &.reverse-color h1,
+    &.reverse-color h4
+      color: white
+
+  &-brief
+    p:first-of-type
+      @extend .lead
+
+      &:first-letter
+        font-size: 2.25em
+        float: left
+        vertical-align: top
+        color: $red
+
+    p
+      // We want a better font size for long-form content
+      // font-size: 1.125em
+      // line-height: 1.5em
+
+  &-color-palette
+    background:
+      size: cover
+      repeat: no-repeat
+      position: center
+
+    @media (min-width: 1024px)
+      background-attachment: fixed
+
+    height: auto
+    overflow: hidden
+
+    &-text p
+      // We want a better font size for long-form content
+      // font-size: 1.125em
+      // line-height: 1.5em
+
+    h2
+      color: white
+
+    .swatch
+      width: 50%
+
+      @media (min-width: 24em)
+        width: 25%
+
+      margin: 0
+
+      padding: 1.5em
+      float: left
+      position: relative
+
+      &:before
+        width: 100%
+        height: 0
+        padding-bottom: 100%
+        display: inline-block
+        background: attr(data-color)
+        content: ' '
+
+      &:after
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        content: attr(data-color)
+        @extend .alt
+        font-weight: 600
+
+      &.dark:after
+        color: white
+
+      &.light:after
+        color: $dark
+
+      .container
+        padding: 0

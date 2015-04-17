@@ -1,0 +1,71 @@
+---
+layout: default
+title: Hire Me
+---
+
+<form autocomplete="off" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" action="https://formkeep.com/f/341336cdb5e3" method="POST">
+  <section class="contact-header">
+    <div class="container">
+      <h1>Hi There!</h1>
+
+      <a href="#contactForm" id="linkToContactForm" data-steps="5"></a>
+
+      <p class="lead"><span class="lead">Let's talk about <span class="moz-select"><select name="project-type" id="project-type">
+        <option value="websites">Websites</option>
+        <option value="apps">Apps</option>
+        <option value="startups">Startups</option>
+        <option value="open-source">Open Source</option>
+        <option value="bigfoot">Bigfoot</option>
+      </select></span></span></p>
+    </div>
+  </section>
+
+  <section class="call-to-action">
+    <div class="container">
+      <p class="alt">Alternatively, you can get in touch with me at <a href="mailto:hi@molovo.co.uk">hi@molovo.co.uk</a>.</p>
+    </div>
+  </section>
+
+  <section class="contact-form" id="contactForm">
+    <div class="container">
+      <fieldset>
+        <!-- <p><small>Alternatively, you can get in touch with me <a href="mailto:hi@molovo.co.uk">directly</a>.</small></p> -->
+
+        <label for="name">
+          Name
+          <input type="text" id="name" name="name" placeholder="Joe Bloggs" required />
+        </label>
+
+        <label for="email">
+          Email
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </label>
+
+        <label for="url">
+          Website URL
+          <input type="url" id="url" name="url" placeholder="http://your-site.com" />
+        </label>
+
+        <label for="budget">
+          Budget
+          <input type="tel" id="budget" name="budget" placeholder="£5000" onfocus="if (!this.value) { this.value = '£' }" onblur="if (this.value.length > 1 && !this.value.match('£')) { this.value = '£' + this.value } else if (this.value == '£') { this.value = '' }" optional />
+        </label>
+
+        <label for="release-date">
+          Release Date
+          <input type="date" name="release-date" optional />
+        </label>
+
+        <label for="message" class="full-width">
+          Message
+          <textarea name="message" id="message" placeholder="Tell me a story&hellip;" required></textarea>
+        </label>
+      </fieldset>
+
+      <p class="lead">
+        <input type="hidden" name="utf8" value="✓">
+        <input type="submit" class="button" value="Send" />
+      </p>
+    </div>
+  </section>
+</form>

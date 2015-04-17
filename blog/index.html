@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+{% for post in site.categories.blog limit: 1 %}
+  <div class="container">
+    {% if post.redirectURL %}
+      <h1 class="post-title"><a href="{{ post.redirectURL }}" target="_blank" title="{{ post.title }}">{{ post.title }}</a></h1>
+    {% else %}
+      <h1 class="post-title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
+    {% endif %}
+  </div>
+{% endfor %}
+
+<section class="post-list">
+  <ul class="container">
+    {% for post in site.categories.blog %}
+      {% unless post.archived %}
+        <li>
+          {% if forloop.first %}
+            {% if post.subtitle %}
+              <h3 class="serif">{{ post.subtitle }}</h3>
+            {% endif %}
+            <h6 class="alt">{{ post.date | date_to_string }}</h6>
+
+            <article class="post">
+              {% include ads.html %}
+
+              {{ post.content | markdownify }}
+            </article>
+          {% else %}
+            {% if post.redirectURL %}
+              <h2><a href="{{ post.redirectURL }}" target="_blank" title="{{ post.title }}">{{ post.title }}</a></h2>
+            {% else %}
+              <h2><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+            {% endif %}
+            <h6 class="alt">{{ post.date | date_to_string }}</h6>
+          {% endif %}
+        </li>
+      {% endunless %}
+
+      {% if forloop.first %}
+        <h4 class="serif">Older Posts</h4>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <div class="faded-scroll-indicator"></div>
+</section>

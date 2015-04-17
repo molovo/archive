@@ -1,0 +1,199 @@
+.intro
+  .work &:before
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    content: ''
+    background: rgba($dark,.3)
+
+  .browser
+    margin: 6em 0 -7.5em
+    z-index: 1
+    max-height: 24em
+    overflow-y: hidden
+
+.feature
+  min-height: 100vh
+
+  background:
+    size: cover
+    repeat: no-repeat
+    position: 0 -2em
+
+  @media (min-width: 1024px)
+    background-attachment: fixed
+
+  text-align: center
+  padding: 25vh 1.5em
+  position: relative
+  z-index: 2
+
+  h1, h2, h4
+    color: white
+
+  h1
+    letter-spacing: -.025em
+    font-family: $secondary
+
+    @media (min-width: 24em)
+      font-size: 4.5em
+
+    @media (min-width: 48em)
+      font-size: 6em
+
+.section-title
+  text-align: center
+  font-size: 3em
+  line-height: 1em
+
+  @media (min-width: 40em)
+    font-size: 4.5em
+
+.typography, .brief, .solution, .what-i-learned, .website-design
+  padding: 6em 0
+
+.brief
+  background: $beige
+  position: relative
+  z-index: 2
+
+.solution
+  background: $burgundy
+  color: white
+
+  h2, p
+    color: white
+
+  a
+    color: white
+
+.typography
+  h5
+    font-weight: 400
+
+  h6
+    @extend .alt
+    font-weight: 600
+    position: relative
+    display: inline-block
+
+  &.reverse-color
+    color: white
+
+    h2:first-of-type, h6
+      color: white
+
+.color-palette
+  background:
+    size: cover
+    repeat: no-repeat
+    position: center
+
+  @media (min-width: 1024px)
+    background-attachment: fixed
+
+  height: auto
+  overflow: hidden
+
+  h2
+    color: white
+
+  .swatch
+    width: 50%
+
+    @media (min-width: 24em)
+      width: 25%
+
+    margin: 0
+
+    padding: 1.5em
+    float: left
+    position: relative
+
+    &:before
+      width: 100%
+      height: 0
+      padding-bottom: 100%
+      display: inline-block
+      background: attr(data-color)
+      content: ' '
+
+    &:after
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      content: attr(data-color)
+      @extend .alt
+      font-weight: 600
+
+    &.dark:after
+      color: white
+
+    &.light:after
+      color: $dark
+
+    .container
+      padding: 0
+
+.project-link
+  padding: 6em 0
+
+.website-design
+  background:
+    size: cover
+    repeat: no-repeat
+    position: center
+
+  @media (min-width: 1024px)
+    background-attachment: fixed
+
+  .container:not(:last-of-type)
+    padding-bottom: 6em
+
+  h2
+    color: white
+
+.browser
+  border: solid rgba($dark, .7)
+  border-width: 1.5em 0 0
+  border-radius: .25em
+  position: relative
+
+  &, img
+    width: 100%
+    max-width: 100%
+
+  &:after
+    content: ' '
+    background: url(/assets/dist/img/browser-buttons.svg) center no-repeat
+      size: 100%
+    width: 2.5em
+    height: 1em
+    position: absolute
+    top: -1.2em
+    left: .45em
+
+.what-i-learned
+  h2
+    font-weight: 300
+
+    p
+      margin-bottom: 0
+
+      &:before
+        content: '\201C'
+
+      &:after
+        content: '\201D'
+
+    p + &
+      margin-top: 3em
+
+.branding
+  margin: 0 auto 6em
+  width: 18em
+  max-width: 90%
+  display: block

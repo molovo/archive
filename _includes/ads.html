@@ -1,0 +1,88 @@
+<div class="ad-container">
+
+  <!-- Media Temple -->
+  <a href="http://www.tkqlhce.com/click-7484363-11654442" target="_top">
+    <img data-src="//mediatemple.net/_img/affiliate/banners/250x250-grid-light.gif"
+         alt="Media Temple. Your blog, portfolio or studio site belongs on the grid."
+         data-screen-size="large" />
+    <img data-src="//mediatemple.net/_img/affiliate/banners/728x90-grid-light.gif"
+         alt="Media Temple. Your blog, portfolio or studio site belongs on the grid."
+         data-screen-size="medium" />
+    <img data-src="//mediatemple.net/_img/affiliate/banners/728x90-grid-light.gif"
+         alt="Media Temple. Your blog, portfolio or studio site belongs on the grid."
+         data-screen-size="small" />
+  </a>
+
+  <a href="http://www.jdoqocy.com/click-7484363-11654398" target="_top">
+    <img data-src="//mediatemple.net/_img/affiliate/banners/250x250-mt-light.gif"
+         alt="Media Temple. Powering designers and developers since 1998."
+         data-screen-size="large" />
+    <img data-src="//mediatemple.net/_img/affiliate/banners/728x90-light.gif"
+         alt="Media Temple. Powering designers and developers since 1998."
+         data-screen-size="medium" />
+    <img data-src="//mediatemple.net/_img/affiliate/banners/728x90-light.gif"
+         alt="Media Temple. Powering designers and developers since 1998."
+         data-screen-size="small" />
+  </a>
+
+  <a href="http://www.kqzyfj.com/click-7484363-11654439" target="_top">
+    <img data-src="//mediatemple.net/_img/affiliate/banners/dv/250x250-dv-light.gif"
+         alt="Media Temple. Pro-level VPS hosting you'll never outgrow."
+         data-screen-size="large" />
+    <img data-src="//mediatemple.net/_img/affiliate/banners/dv/728x90-dv-light.gif"
+         alt="Media Temple. Pro-level VPS hosting you'll never outgrow."
+         data-screen-size="medium" />
+    <img data-src="//mediatemple.net/_img/affiliate/banners/dv/728x90-dv-light.gif"
+         alt="Media Temple. Pro-level VPS hosting you'll never outgrow."
+         data-screen-size="small" />
+  </a>
+
+  <a href="http://www.dpbolvw.net/click-7484363-11689723" target="_top">
+    <img data-src="//www.tqlkg.com/image-7484363-11689723"
+         alt="Namecheap. The hassle-free way to register your domains. As low as $3.98 a year."
+         data-screen-size="large" />
+    <img data-src="//www.awltovhc.com/image-7484363-11429115"
+         alt="Namecheap. The hassle-free way to register your domains. As low as $3.98 a year."
+         data-screen-size="medium" />
+    <img data-src="//www.awltovhc.com/image-7484363-11689754"
+         alt="Namecheap. The hassle-free way to register your domains. As low as $3.98 a year."
+         data-screen-size="small" />
+  </a>
+
+  <script>
+    var ads = document.querySelectorAll('.ad-container a')        // Grab all the ads
+      , num = Math.floor((Math.random() * ads.length) + 1) - 1    // We grab a random number
+      , ad  = ads[num]                                            // And use as an array index
+      , x   = window.innerWidth
+           || document.documentElement.clientWidth
+           || document.body.clientWidth                           // Get the window width, cross-browser
+      , screenSize
+      , image;
+
+    // Display the ad
+    ad.style.display = 'inline-block';
+
+    window.onresize = function() {
+      // We rework screen size when the resize happens
+      x   = window.innerWidth
+         || document.documentElement.clientWidth
+         || document.body.clientWidth;
+
+      // Set the screen size variables based on the em values in the CSS
+      screenSize = x > (51 * 1.3125 * 16) ? 'large'
+                 : x > (36 * 16)          ? 'medium'
+                 : 'small';
+
+      // Find the right image for the screen size
+      image = ad.querySelector('img[data-screen-size="' + screenSize + '"]');
+
+      // Update the src if it hasn't been done already
+      // This check stops it being set more than once (resulting in multiple requests)
+      if (image.src !== image.getAttribute('data-src'))
+        image.src = image.getAttribute('data-src');
+    }
+
+    // Fire a resize event on first load
+    window.onresize();
+  </script>
+</div>

@@ -1,0 +1,304 @@
+.blog
+  background: $beige
+
+.post-main, .post-list
+  padding-bottom: 6em
+  box-sizing: border-box
+
+  @media (max-width: 39 * 1.3125em)
+    .container
+      padding: 0 3em
+
+  // p
+  //   // We want a better font size for long-form content
+  //   font-size: 1.125em
+
+  .faded-scroll-indicator
+    height: 4.5em
+    background: linear-gradient(rgba($beige, 0.01), rgba($beige, .7) 50%, $beige)
+    position: fixed
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 1
+    pointer-events: none
+
+  img, blockquote
+    z-index: 2
+    position: relative
+
+  h1, h2
+    font-family: $secondary
+    letter-spacing: -.025em
+    line-height: 1em
+
+  h1
+    @media (min-width: 51em)
+      font-size: 4.5em
+
+  h2
+    @media (min-width: 51em)
+      font-size: 3em
+
+.post-list
+  li
+    list-style: none
+
+    &:first-of-type
+      padding: 0 0 3em
+      margin: 0 0 4.5em
+      border-bottom: 1px solid rgba($dark, .1)
+
+    p > img:not(.full-width):not([title="full-width"])
+      max-width: 100%
+
+      @media (min-width: 51 * 1.3125em)
+        max-width: calc(100% + 6em)
+
+    h2
+      margin-bottom: 0
+
+    h1, h2
+      a
+        color: $red
+        text-decoration: none
+
+      a:hover
+        text-decoration: underline
+
+.post-title
+  width: 125%
+  max-width: calc(100vw - 3rem)
+  font-size: 4.5em
+  margin-top: 2em
+
+figure
+  width: 100%
+  position: relative
+  margin: 0
+
+  img
+    max-width: 100%
+
+  @media (min-width: 51 * 1.3125em)
+    width: calc(100% + 6em)
+    margin-left: -6em
+
+    &.left, &.right
+      width: 50%
+      margin: 0 1.5em
+
+    &.left
+      float: left
+      margin-left: -6em
+
+    &.right
+      float: right
+      margin-right: -6em
+
+  &.group-of-four
+    img
+      width: 50%
+      display: inline-block
+      margin-right: -.25em
+      margin-bottom: -.5em
+
+    &.with-padding
+      img
+        &:nth-child(2n)
+          padding-left: 1.5em
+        &:nth-child(2n+1)
+          padding-right: 1.5em
+
+      @media (min-width: 51em)
+        .image-caption
+          top: 1.5em
+
+  .image-caption,
+  figcaption
+    display: inline-block
+    text-align: left
+    width: 100%
+    line-height: .75em
+
+    & > span,
+    & > p
+      font-size: .6em
+      font-family: $secondary
+      margin-bottom: 0
+
+      h6
+        margin: 0
+
+  @media (min-width: 51 * 1.3125em)
+    &:not(.left):not(.right)
+      .image-caption,
+      figcaption
+        position: absolute
+        top: 1.5em
+        left: 100%
+        margin-left: 1.5em
+        width: 6em
+
+p > img.full-width, img[title="full-width"]
+  width: 100vw
+  position: relative
+  left: 50%
+  transform: translateX(-50%)
+  margin: 1.5em -50% 1.5em 0
+
+.post
+  position: relative
+
+  .ad-container
+    width: 100%
+    margin-bottom: 1.5em
+
+    @media (min-width: 51 * 1.3125em)
+      position: absolute
+      top: 0
+      right: 100%
+      margin-right: 1.5em
+      width: auto
+
+    a
+      display: none
+
+    span
+      font-size: .75em
+      @extend .alt
+      font-size: .75em
+      line-height: 1.5em
+      display: inline-block
+      margin: 0 8.16666666666%
+
+      @media (min-width: 51 * 1.3125em)
+        margin: 0 9.16666666666%
+
+    img
+      margin: 0
+      width: 100%
+
+      &[data-screen-size="medium"],
+      &[data-screen-size="large"]
+        display: none
+
+      &[data-screen-size="small"]
+        display: inline-block
+
+      @media (min-width: 36em)
+        &[data-screen-size="small"],
+        &[data-screen-size="large"]
+          display: none
+
+        &[data-screen-size="medium"]
+          display: inline-block
+
+      @media (max-width: 51 * 1.3125em)
+        width: 100%
+
+      @media (min-width: 51 * 1.3125em)
+        width: auto
+        width: 6em
+
+        &[data-screen-size="small"],
+        &[data-screen-size="medium"]
+          display: none
+
+        &[data-screen-size="large"]
+          display: inline-block
+
+      @media (min-width: 57 * 1.3125em)
+        width: 9em
+
+      @media (min-width: 63 * 1.3125em)
+        width: 12em
+
+.post-main > .post-list
+  padding-top: 3em
+
+.post-image-wrapper
+  margin-top: 6em
+  margin-bottom: 1.5em
+
+  img
+    max-width: 50%
+
+  & + .container .post-title
+    margin-top: 0
+
+.next-post-link,
+.previous-post-link
+  padding: .5em 3em 1em
+  background: rgba($burgundy, .3)
+  position: fixed
+  top: 50%
+  font-family: $primary
+  width: auto
+  color: white
+  text-decoration: none
+  z-index: 99
+  transform: translate(0, -50%)
+  transition: transform .25s, background .25s
+  white-space: nowrap
+  font-size: .75em
+
+  em
+    display: block
+    font-style: normal
+    font-family: $secondary
+    color: rgba(255, 255, 255, .7)
+
+  h6
+    color: white
+    margin: 0
+    font-style: normal
+    line-height: 1em
+    font-family: $primary
+    font-weight: 300
+    letter-spacing: 0
+
+  &:hover
+    background: $red
+
+  &:before
+    position: absolute
+    top: 50%
+    display: inline-block
+    text-align: center
+
+.next-post-link
+  left: 100%
+  border-radius: .25em 0 0 .25em
+  transform: translate(-3em, -50%)
+  padding-right: 1.5em
+
+  &:hover
+    transform: translate(-100%, -50%)
+
+  &:before
+    content: '\2192'
+    left: 1.5em
+    transform: translate(-50%, -50%)
+
+.previous-post-link
+  right: 100%
+  text-align: right
+  border-radius: 0 .25em .25em 0
+  transform: translate(3em, -50%)
+  padding-left: 1.5em
+
+  &:hover
+    transform: translate(100%, -50%)
+
+  &:before
+    content: '\2190'
+    right: 1.5em
+    transform: translate(50%, -50%)
+
+// Overrides for chatter
+.chatter-comment-form,
+.chatter-comment-form textarea,
+.chatter-comment-list,
+.chatter-add-comment-link
+  background: rgb(245,245,242) !important

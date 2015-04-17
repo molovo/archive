@@ -1,0 +1,126 @@
+---
+layout: default
+---
+
+{% capture img_root %}/assets/dist/img/case-studies/{{ page.slug }}{% endcapture %}
+
+<article class="case-study-article case-study--{{ page.slug }}">
+  <section class="intro" data-echo-background="{{ img_root }}/bg.jpg">
+    <div class="container intro-container">
+      <h2 class="serif">{{ page.intro }}</h2>
+    </div>
+  </section>
+
+  <section class="brief">
+    <div class="container">
+      {% unless page.hide_branding %}
+        <img src="/assets/dist/img/ajax-loader.gif" data-echo="{{ img_root }}/logo.png" alt="{{ page.client }} Logo" class="branding">
+      {% endunless %}
+
+      <h1 class="section-title">{{ page.title }}</h1>
+
+      {{ content }}
+    </div>
+  </section>
+
+  <section class="typography {% if page.typography.reverse-color %}reverse-color{% endif %}">
+    <div class="container">
+      <h2 class="section-title">{{ page.typography.title }}</h2>
+
+      {% if page.typography.text %}
+        <section class="typography-text">
+          {{ page.typography.text | markdownify }}
+        </section>
+      {% endif %}
+
+      {% if page.typography.heading %}
+        <h6 class="headings"><small>Headings</small></h6>
+        <h2 class="typography-heading">{{ page.typography.heading.name }}</h2>
+      {% endif %}
+
+      {% if page.typography.subheading %}
+        <h6 class="subheadings"><small>Subheadings</small></h6>
+        <h4 class="typography-subheading">{{ page.typography.subheading.name }}</h4>
+      {% endif %}
+
+      {% if page.typography.body %}
+        <h6 class="body"><small>Body</small></h6>
+        <h5 class="remove-bottom typography-body">
+          {{ page.typography.body.name }}
+        </h5>
+        <p class="typography-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, eligendi, odio, alias, voluptatibus repellendus obcaecati accusantium asperiores id ab exercitationem nostrum illo veritatis molestiae. Ipsam, voluptatibus dolor laborum consectetur recusandae.
+        </p>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="color-palette" style="{{ page.typography.style }}">
+    {% if page.color-palette.text %}
+      <div class="container">
+        <section class="color-palette-text">
+          {{ page.color-palette.text | markdownify }}
+        </section>
+      </div>
+    {% endif %}
+
+    {% for color in page.color-palette.colors %}
+      <div class="swatch" data-color="{{ color }}"></div>
+    {% endfor %}
+  </section>
+
+  <section class="website-design" data-echo-background="{{ img_root }}/bg.jpg">
+    {% for screenshot in page.screenshots %}
+      <div class="container">
+        <h2>{{ screenshot.title }}</h2>
+        <div class="browser">
+          <img src="/assets/dist/img/ajax-loader.gif" data-echo="{{ img_root }}/{{ screenshot.url }}" alt="">
+        </div>
+      </div>
+    {% endfor %}
+  </section>
+
+  <section class="what-i-learned">
+    <div class="container">
+      <h3 class="section-title">What I Learned</h3>
+
+      {% for lesson in page.what_i_learned %}
+        {% if lesson.title %}
+          <h2 class="serif center">{{ lesson.title | markdownify }}</h2>
+        {% endif %}
+
+        {{ lesson.content | markdownify }}
+
+        {% unless forloop.last %}
+          <p>&nbsp;</p>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="project-link">
+    <div class="container center">
+      {% unless page.hide_branding %}
+        <img src="/assets/dist/img/ajax-loader.gif" data-echo="{{ img_root }}/logo.png" alt="{{ page.client }} Logo" class="branding">
+      {% endunless %}
+
+      <p>
+        <a href="{{ page.projectURL }}" class="button" target="_blank">Visit {{ page.client }}</a>
+      </p>
+    </div>
+  </section>
+</article>
+
+{% if page.work_next %}
+  <a href="{{ page.work_next.url }}" class="next-post-link">
+    <em><small>Next Case Study</small></em>
+    <h6>{{ page.work_next.client }}</h6>
+  </a>
+{% endif %}
+
+{% if page.work_previous %}
+  <a href="{{ page.work_previous.url }}" class="previous-post-link">
+    <em><small>Previous Case Study</small></em>
+    <h6>{{ page.work_previous.client }}</h6>
+  </a>
+{% endif %}

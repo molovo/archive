@@ -1,0 +1,11 @@
+name: Molovo
+url: ''
+markdown: rdiscount
+rdiscount:
+  extensions: [smart, footnotes]
+pygments: true
+permalink: /:categories/:title
+exclude: ['.gitignore', 'molovo.sublime-project', 'molovo.sublime-workspace', '.sass_cache', 'node_modules', 'src', 'gulpfile.js', 'package.json']
+include: ['.htaccess']
+encoding: utf-8
+destination: 'public_html'

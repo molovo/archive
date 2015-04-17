@@ -1,0 +1,62 @@
+$button-size : 1.5rem
+$transition : transform .25s, top .25s, width .25s, margin .25s, background .25s
+
+=line
+  display: inline-block
+  width: $button-size/1.25
+  height: $button-size/7.5
+  background: $red
+  border-radius: $button-size/14
+  transition: $transition
+
+//common to all three-liners
+.lines-button
+  padding: 0
+  transition: $transition
+  cursor: pointer
+  background: transparent
+  border: 0
+  top: -.3em
+  position: relative
+  margin-right: .15em
+  &:hover
+    opacity: 1
+
+  //common to all three-liners
+  .lines
+    +line
+    position: relative
+
+    &:before, &:after
+      +line
+      position: absolute
+      left: 0
+      content: ''
+      transform-origin: 50% 50%
+
+    &:before
+      top: $button-size/4
+
+    &:after
+      top: -$button-size/4
+
+  &.x.close
+    top: -.3em
+    margin-right: -.1em
+    .lines
+      transform: scale3d(.8,.8,.8)
+      background: transparent !important
+      &:before, &:after
+        transform-origin: 50% 50%
+        top: 0
+        width: $button-size
+        background: white
+
+      &, &:before, &:after
+        width: $button-size
+
+      &:before
+        transform: rotate3d(0,0,1,45deg)
+
+      &:after
+        transform: rotate3d(0,0,1,-45deg)

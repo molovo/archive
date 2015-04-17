@@ -1,0 +1,435 @@
+
+
+
+  
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="dns-prefetch" href="//use.typekit.net" />
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>SQL Bind Variables - molovo. Web Design, Portsmouth</title>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+
+    <link rel="shortcut icon" href="/assets/dist/img/favicon.png" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/dist/css/main.min.css" />
+
+    <!-- Load font kits for case studies that use them -->
+    
+
+    
+
+    
+      <meta name="description" content="Please read carefully">
+    
+
+    <script src="//use.typekit.net/xly4ucd.js" async defer
+      onload="Typekit.load();">
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  </head>
+
+  <body class="blog">
+
+    <header class="fixed  ">
+
+      <nav class="work">
+        <nav class="main-menu">
+          <a href="//jamesdinsdale.me" id="about-link" target="_blank">CV / Résumé</a>
+          <a href="/blog" id="writing-link">Writing</a>
+          <a href="/contact" id="hire-me-link">Hire Me</a>
+        </nav>
+
+        <hgroup>
+          <h3 class="serif">Selected project stories&hellip;</h3>
+        </hgroup>
+
+        <ul class="center">
+          
+            <li class="melody">
+              <a href="/work/melody" title="I did it my way">
+                <div class="container">
+                  <h2>I did it my way</h2>
+                  <h6><em>The making of Melody</em></h6>
+                </div>
+              </a>
+            </li>
+          
+            <li class="haresfoot">
+              <a href="/work/haresfoot" title="Brewing Up a Storm">
+                <div class="container">
+                  <h2>Brewing Up a Storm</h2>
+                  <h6><em>The making of Haresfoot Craft Beer</em></h6>
+                </div>
+              </a>
+            </li>
+          
+            <li class="1855">
+              <a href="/work/1855" title="Popping the Cork">
+                <div class="container">
+                  <h2>Popping the Cork</h2>
+                  <h6><em>The making of 1855</em></h6>
+                </div>
+              </a>
+            </li>
+          
+            <li class="helen-starkie">
+              <a href="/work/helen-starkie" title="A Smile Costs Nothing">
+                <div class="container">
+                  <h2>A Smile Costs Nothing</h2>
+                  <h6><em>The making of Helen Starkie Solicitor</em></h6>
+                </div>
+              </a>
+            </li>
+          
+            <li class="the-branch">
+              <a href="/work/the-branch" title="What Inspires You?">
+                <div class="container">
+                  <h2>What Inspires You?</h2>
+                  <h6><em>The making of The Branch</em></h6>
+                </div>
+              </a>
+            </li>
+          
+            <li class="love-coffee">
+              <a href="/work/love-coffee" title="Freshly Roasted">
+                <div class="container">
+                  <h2>Freshly Roasted</h2>
+                  <h6><em>The making of Love Coffee</em></h6>
+                </div>
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+
+      <nav class="main">
+        <!-- <a href="/" class="logo">&lt;/m&gt;</a> -->
+        <a href="/" class="logo" id="home-link">
+          <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="33.541px" viewBox="0 0 100 33.541" enable-background="new 0 0 100 33.541" xml:space="preserve">
+  <path class="frame" d="M61.902,2.442c-3.809,0.957-8.227,1.935-12.155,1.814c-2.359-0.072-4.593-0.621-6.708-1.114 C28.778-0.181,15.903-1.437,0,2.213l1.022,6.688c0.988,0.022,2.637,0.381,2.712,2.272C4.341,26.407,8.307,33.712,22.74,33.335 c17.861-0.466,22.505-14.761,23.482-20.2c0.524-2.919,2.027-3.216,3.707-3.261c2.976-0.08,3.314,2.095,3.835,3.412 c6.123,15.477,9.803,18.998,22.65,20.117c19.53,1.703,17.28-12.779,19.922-21.195c0.506-1.608,1.061-2.432,2.828-2.471L100,3.048 C88.682,0.63,76.937-1.334,61.902,2.442z M4.923,6.486c-1.411,0-2.555-0.291-2.555-0.65c0-0.359,1.144-0.65,2.555-0.65 s2.555,0.292,2.555,0.65C7.478,6.195,6.334,6.486,4.923,6.486z M41.059,16.797c-2.733,8.065-7.017,13.918-18.021,14.213 c-10.899,0-14.066-1.986-15.513-14.678c0-8.515-0.558-13.5,15.606-13.47C34.03,3.908,45.462,3.804,41.059,16.797z M92.615,16.333 c-1.447,12.691-4.613,14.678-15.514,14.678c-11.004-0.295-15.288-6.148-18.021-14.213C54.678,3.804,66.109,3.908,77.009,2.863 C93.172,2.833,92.615,7.818,92.615,16.333z M95.355,7.137c-1.41,0-2.555-0.292-2.555-0.65c0-0.359,1.145-0.65,2.555-0.65 s2.555,0.291,2.555,0.65C97.91,6.845,96.766,7.137,95.355,7.137z"/>
+  <path class="left-lens" d="M41.059,16.797c-2.733,8.065-7.017,13.918-18.021,14.213 c-10.899,0-14.066-1.986-15.513-14.678c0-8.515-0.558-13.5,15.606-13.47C34.03,3.908,45.462,3.804,41.059,16.797z" />
+  <path class="right-lens" d="M92.615,16.333 c-1.447,12.691-4.613,14.678-15.514,14.678c-11.004-0.295-15.288-6.148-18.021-14.213C54.678,3.804,66.109,3.908,77.009,2.863 C93.172,2.833,92.615,7.818,92.615,16.333z" />
+</svg>
+        </a>
+
+        <a href="#work" id="work-link">
+          <span class="lines-button x" type="button" role="button" aria-label="Toggle Navigation">
+            <span class="lines"></span>
+          </span>
+        </a>
+      </nav>
+
+    </header>
+
+    
+<article class="article--sql-bind-variables">
+  
+
+  <div class="container">
+    <h1 class="post-title">SQL Bind Variables</h1>
+  </div>
+
+  <main role="main" class="container post-main">
+    
+    <h6 class="alt">10 Dec 2012</h6>
+
+    <div class="post">
+      <div class="ad-container">
+
+  <!-- Media Temple -->
+  <a href="http://www.tkqlhce.com/click-7484363-11654442" target="_top">
+    <img data-src="//mediatemple.net/_img/affiliate/banners/250x250-grid-light.gif"
+         alt="Media Temple. Your blog, portfolio or studio site belongs on the grid."
+         data-screen-size="large" />
+    <img data-src="//mediatemple.net/_img/affiliate/banners/728x90-grid-light.gif"
+         alt="Media Temple. Your blog, portfolio or studio site belongs on the grid."
+         data-screen-size="medium" />
+    <img data-src="//mediatemple.net/_img/affiliate/banners/728x90-grid-light.gif"
+         alt="Media Temple. Your blog, portfolio or studio site belongs on the grid."
+         data-screen-size="small" />
+  </a>
+
+  <a href="http://www.jdoqocy.com/click-7484363-11654398" target="_top">
+    <img data-src="//mediatemple.net/_img/affiliate/banners/250x250-mt-light.gif"
+         alt="Media Temple. Powering designers and developers since 1998."
+         data-screen-size="large" />
+    <img data-src="//mediatemple.net/_img/affiliate/banners/728x90-light.gif"
+         alt="Media Temple. Powering designers and developers since 1998."
+         data-screen-size="medium" />
+    <img data-src="//mediatemple.net/_img/affiliate/banners/728x90-light.gif"
+         alt="Media Temple. Powering designers and developers since 1998."
+         data-screen-size="small" />
+  </a>
+
+  <a href="http://www.kqzyfj.com/click-7484363-11654439" target="_top">
+    <img data-src="//mediatemple.net/_img/affiliate/banners/dv/250x250-dv-light.gif"
+         alt="Media Temple. Pro-level VPS hosting you'll never outgrow."
+         data-screen-size="large" />
+    <img data-src="//mediatemple.net/_img/affiliate/banners/dv/728x90-dv-light.gif"
+         alt="Media Temple. Pro-level VPS hosting you'll never outgrow."
+         data-screen-size="medium" />
+    <img data-src="//mediatemple.net/_img/affiliate/banners/dv/728x90-dv-light.gif"
+         alt="Media Temple. Pro-level VPS hosting you'll never outgrow."
+         data-screen-size="small" />
+  </a>
+
+  <a href="http://www.dpbolvw.net/click-7484363-11689723" target="_top">
+    <img data-src="//www.tqlkg.com/image-7484363-11689723"
+         alt="Namecheap. The hassle-free way to register your domains. As low as $3.98 a year."
+         data-screen-size="large" />
+    <img data-src="//www.awltovhc.com/image-7484363-11429115"
+         alt="Namecheap. The hassle-free way to register your domains. As low as $3.98 a year."
+         data-screen-size="medium" />
+    <img data-src="//www.awltovhc.com/image-7484363-11689754"
+         alt="Namecheap. The hassle-free way to register your domains. As low as $3.98 a year."
+         data-screen-size="small" />
+  </a>
+
+  <script>
+    var ads = document.querySelectorAll('.ad-container a')        // Grab all the ads
+      , num = Math.floor((Math.random() * ads.length) + 1) - 1    // We grab a random number
+      , ad  = ads[num]                                            // And use as an array index
+      , x   = window.innerWidth
+           || document.documentElement.clientWidth
+           || document.body.clientWidth                           // Get the window width, cross-browser
+      , screenSize
+      , image;
+
+    // Display the ad
+    ad.style.display = 'inline-block';
+
+    window.onresize = function() {
+      // We rework screen size when the resize happens
+      x   = window.innerWidth
+         || document.documentElement.clientWidth
+         || document.body.clientWidth;
+
+      // Set the screen size variables based on the em values in the CSS
+      screenSize = x > (51 * 1.3125 * 16) ? 'large'
+                 : x > (36 * 16)          ? 'medium'
+                 : 'small';
+
+      // Find the right image for the screen size
+      image = ad.querySelector('img[data-screen-size="' + screenSize + '"]');
+
+      // Update the src if it hasn't been done already
+      // This check stops it being set more than once (resulting in multiple requests)
+      if (image.src !== image.getAttribute('data-src'))
+        image.src = image.getAttribute('data-src');
+    }
+
+    // Fire a resize event on first load
+    window.onresize();
+  </script>
+</div>
+
+      <p>I hate people who try and tell me that my development techniques are wrong. Everyone is different. It was part of the motivation for my previous post on <a href="http://molovo.co.uk/blog/frameworks"> Frameworks</a>. That said, I&rsquo;m going to break my golden rule, and give you all a very important instruction:</p>
+
+<blockquote><p>If you don&rsquo;t know what SQL bind variables are, then do not write any SQL. <strong>Ever</strong>.</p></blockquote>
+
+<p>This is important. Having come into web development from a database administration background it amazes me how many back end developers are writing SQL without knowing what SQL bind variables are, or how to implement them. So to begin, here&rsquo;s a quick and dirty explanation of what they are, and why they are important.</p>
+
+<h4>Bind variables</h4>
+
+<p>Bind variables essentially reduce the number of times a query needs to be parsed, and reduces the number of queries held in database memory.</p>
+
+<p>Take the following 3 statements:</p>
+
+<div class="highlight"><pre><code class="mysql"><span class="k">SELECT</span> <span class="k">column</span> <span class="k">FROM</span> <span class="k">table</span> <span class="k">WHERE</span> <span class="k">key</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">SELECT</span> <span class="k">column</span> <span class="k">FROM</span> <span class="k">table</span> <span class="k">WHERE</span> <span class="k">key</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="k">SELECT</span> <span class="k">column</span> <span class="k">FROM</span> <span class="k">table</span> <span class="k">WHERE</span> <span class="k">key</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+</code></pre></div>
+
+
+<p>All three are essentially doing the same thing, but because the values are included literally, each time one of them is run the database will parse the statement, store it in memory and then run it. If either of the three above are run again, it can pick it up from memory without the need to parse. But if I run:</p>
+
+<div class="highlight"><pre><code class="mysql"><span class="k">SELECT</span> <span class="k">column</span> <span class="k">FROM</span> <span class="k">table</span> <span class="k">WHERE</span> <span class="k">key</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+</code></pre></div>
+
+
+<p>the database needs to go through the full procedure again.</p>
+
+<p>If we add a variable &lsquo;:value&rsquo; :</p>
+
+<div class="highlight"><pre><code class="mysql"><span class="k">SELECT</span> <span class="k">column</span> <span class="k">FROM</span> <span class="k">table</span> <span class="k">WHERE</span> <span class="k">key</span> <span class="o">=</span> <span class="p">:</span><span class="n">value</span><span class="p">;</span>
+</code></pre></div>
+
+
+<p>This gets stored in memory, and we can assign absolutely any value we want before running the statement, and after the first run, it will always be picked up from memory, greatly reducing the load on the database. Also, as the statement is only stored in memory once, the memory usage of the database will also be reduced greatly.</p>
+
+<p>If you need to run the same statement a large number of times, say a login script for an application with 10,000 users, then without bind variables, you would be parsing this statement and storing it in the database memory <em>10,000 times</em>. With a bind variable it would be once.</p>
+
+<p>This is not something that should be left to your database administrator. SQL can be tuned at a database level, and any DBA worth his salt will be doing this for you, but if the application is producing inefficient SQL, no amount of tuning will improve things.</p>
+
+<p>They aren&rsquo;t even that difficult to implement. All server-side languages include ways of applying bind variables to your SQL. In vanilla PHP it would be done as so:</p>
+
+<div class="highlight"><pre><code class="php"><span class="x">// prepare the statement</span>
+<span class="x">$stmt = $this-&gt;_db-&gt;prepare(&quot;SELECT column FROM table WHERE key = :value&quot;);</span>
+<span class="x">$stmt-&gt;bindParam(&#39;:value&#39;, $value);</span>
+
+<span class="x">// select one row</span>
+<span class="x">$value = 1;</span>
+<span class="x">$stmt-&gt;execute();</span>
+
+<span class="x">// select another row with a different value</span>
+<span class="x">$value = 2;</span>
+<span class="x">$stmt-&gt;execute();</span>
+</code></pre></div>
+
+
+<p>I&rsquo;m not saying that you should include bind variables for every single statement, but I do thoroughly recommend it for any statement that will be run multiple times. What I <em>am</em> saying, is that until you take the time to understand them you cannot know where they would be useful, and you will more than likely end up with a very unhappy database.</p>
+
+    </div>
+
+    <div class="faded-scroll-indicator"></div>
+
+    <!-- <hr /> -->
+
+    <!-- <ul class="post-list">
+      <h4 class="serif">Older Posts</h4>
+      <li style="display: none;"></li>
+
+      
+        <li>
+          
+            <h2><a href="/blog/this-site-has-been-on-a-diet">This Site has been on a Diet</a></h2>
+          
+          <h6 class="alt">10 Apr 2015</h6>
+        </li>
+      
+        <li>
+          
+            <h2><a href="/blog/great-minds">Great Minds</a></h2>
+          
+          <h6 class="alt">31 Jul 2014</h6>
+        </li>
+      
+        <li>
+          
+            <h2><a href="/blog/the-art-of-storytelling">The Art of Storytelling</a></h2>
+          
+          <h6 class="alt">29 Jul 2014</h6>
+        </li>
+      
+
+      <li><a href="/blog">More&hellip;</a></li>
+    </ul> -->
+  </main>
+</article>
+
+
+  <a href="/blog/reinventing-the-wheel" class="next-post-link">
+    <em><small>Next Post</small></em>
+    <h6>Reinventing the wheel</h6>
+  </a>
+
+
+
+  <a href="/blog/frameworks" class="previous-post-link">
+    <em><small>Previous Post</small></em>
+    <h6>Frameworks</h6>
+  </a>
+
+
+    <section class="featured-case-study intro" id="featured-case-study"></section>
+
+    <script id="case-study-template" type="text/template">
+      
+      <div class="container intro-container">
+        <h2 class="serif">
+          {{ intro }}
+        </h2>
+        <a href="/work/{{ slug }}" class="button">View the Case Study</a>
+      </div>
+      
+    </script>
+
+    <footer class="bottom">
+      <div class="container center">
+        <div class="left">
+          <div class="first">
+            <a href="/" class="logo">
+              <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="33.541px" viewBox="0 0 100 33.541" enable-background="new 0 0 100 33.541" xml:space="preserve">
+  <path class="frame" d="M61.902,2.442c-3.809,0.957-8.227,1.935-12.155,1.814c-2.359-0.072-4.593-0.621-6.708-1.114 C28.778-0.181,15.903-1.437,0,2.213l1.022,6.688c0.988,0.022,2.637,0.381,2.712,2.272C4.341,26.407,8.307,33.712,22.74,33.335 c17.861-0.466,22.505-14.761,23.482-20.2c0.524-2.919,2.027-3.216,3.707-3.261c2.976-0.08,3.314,2.095,3.835,3.412 c6.123,15.477,9.803,18.998,22.65,20.117c19.53,1.703,17.28-12.779,19.922-21.195c0.506-1.608,1.061-2.432,2.828-2.471L100,3.048 C88.682,0.63,76.937-1.334,61.902,2.442z M4.923,6.486c-1.411,0-2.555-0.291-2.555-0.65c0-0.359,1.144-0.65,2.555-0.65 s2.555,0.292,2.555,0.65C7.478,6.195,6.334,6.486,4.923,6.486z M41.059,16.797c-2.733,8.065-7.017,13.918-18.021,14.213 c-10.899,0-14.066-1.986-15.513-14.678c0-8.515-0.558-13.5,15.606-13.47C34.03,3.908,45.462,3.804,41.059,16.797z M92.615,16.333 c-1.447,12.691-4.613,14.678-15.514,14.678c-11.004-0.295-15.288-6.148-18.021-14.213C54.678,3.804,66.109,3.908,77.009,2.863 C93.172,2.833,92.615,7.818,92.615,16.333z M95.355,7.137c-1.41,0-2.555-0.292-2.555-0.65c0-0.359,1.145-0.65,2.555-0.65 s2.555,0.291,2.555,0.65C97.91,6.845,96.766,7.137,95.355,7.137z"/>
+  <path class="left-lens" d="M41.059,16.797c-2.733,8.065-7.017,13.918-18.021,14.213 c-10.899,0-14.066-1.986-15.513-14.678c0-8.515-0.558-13.5,15.606-13.47C34.03,3.908,45.462,3.804,41.059,16.797z" />
+  <path class="right-lens" d="M92.615,16.333 c-1.447,12.691-4.613,14.678-15.514,14.678c-11.004-0.295-15.288-6.148-18.021-14.213C54.678,3.804,66.109,3.908,77.009,2.863 C93.172,2.833,92.615,7.818,92.615,16.333z" />
+</svg><h6 class="upp">Made in the UK.</h6>
+            </a>
+          </div>
+
+          <div class="second">
+            <p>&copy; 2014 molovo</p>
+          </div>
+
+          <div class="third">
+            <a href="mailto:hi@molovo.co.uk">
+              hi@molovo.co.uk</a>
+          </div>
+        </div>
+
+        <a href="/contact" class="right footer-contact-link">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<g id="Your_Icon">
+  <polygon points="50,61.447 99.998,27.447 99.998,83 0,83 0,27.447  "/>
+  <polygon points="100,17 0,17 50,51  "/>
+</g>
+</svg>
+          Ready to talk? &rarr;
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      (function (d) {
+        function addFont() {
+          var style = d.createElement( 'style' );
+          style.rel = 'stylesheet';
+          d.head.appendChild( style );
+          style.textContent = localStorage.gauthier;
+        }
+
+        try {
+          if ( localStorage.gauthier ) {
+            // The font is in localStorage, we can load it directly
+            addFont();
+          } else {
+            // We have to first load the font file asynchronously
+            var request = new XMLHttpRequest();
+            request.open( 'GET', '/assets/fonts/gauthier_fy/molovo.css', true );
+
+            request.onload = function () {
+              if ( request.status >= 200 && request.status < 400 ) {
+                // We save the file in localStorage
+                localStorage.gauthier = request.responseText;
+
+                // ... and load the font
+                addFont();
+              }
+            }
+
+            request.send();
+          }
+        } catch ( ex ) {
+          // maybe load the font synchronously for woff-capable browsers
+          // to avoid blinking on every request when localStorage is not available
+          var link = d.createElement( 'link' );
+          link.rel = 'stylesheet';
+          link.href = '/assets/fonts/gauthier_fy/molovo.css';
+          d.head.appendChild( link );
+        }
+      }(document));
+    </script>
+
+    <script src="/assets/dist/js/main.min.js" async defer></script>
+
+    
+
+  </body>
+</html>
