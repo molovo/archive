@@ -2,6 +2,8 @@
 
 {% if currentURL == 'index.html' %}
   {% assign bodyClass = 'home' %}
+{% else if currentURL == '404.html' %}
+  {% assign bodyClass = 'four-oh-four' %}
 {% else %}
   {% assign bodyClass = currentURL %}
 {% endif %}
@@ -86,7 +88,7 @@
 
   <body class="{{ bodyClass }}">
 
-    <header class="fixed {% if 'home contact work' contains bodyClass %}transparent{% endif %} {% if page.headerClass %}{{ page.headerClass }}{% endif %}">
+    <header class="fixed {% if 'home contact work four-oh-four' contains bodyClass %}transparent{% endif %} {% if page.headerClass %}{{ page.headerClass }}{% endif %}">
 
       <nav class="work">
         <nav class="main-menu">

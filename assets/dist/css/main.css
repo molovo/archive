@@ -2490,6 +2490,11 @@ p + .what-i-learned h2 {
   }
 }
 
+.four-oh-four .intro h1 {
+  color: white;
+  font-size: 6em;
+}
+
 .article--keeping-up .post-title {
   font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   text-transform: uppercase;
