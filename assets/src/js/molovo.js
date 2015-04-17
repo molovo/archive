@@ -315,6 +315,10 @@
           this.colorSwatches();
           this.caseStudy();
 
+          if ( document.body.classList.contains( "blog" ) ) {
+            this.ads();
+          }
+
           if ( document.body.classList.contains( "home" ) ) {
             this.callToAction();
           }
@@ -329,6 +333,36 @@
               console.log( element, 'has been', op + 'ed' )
             }
           } );
+        },
+
+        ads: function () {
+          var ads = document.querySelectorAll( '.ad-container a' ), // Grab all the ads
+            num = Math.floor( ( Math.random() * ads.length ) + 1 ) - 1, // We grab a random number
+            ad = ads[ num ], // And use as an array index
+            x = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, // Get the window width, cross-browser
+            screenSize, image;
+
+          // Display the ad
+          ad.style.display = 'inline-block';
+
+          window.onresize = function () {
+            // We rework screen size when the resize happens
+            x = window.innerWidth || document.documentElement.clientWidth || d.body.clientWidth;
+
+            // Set the screen size variables based on the em values in the CSS
+            screenSize = x > ( 51 * 1.3125 * 16 ) ? 'large' : x > ( 36 * 16 ) ? 'medium' : 'small';
+
+            // Find the right image for the screen size
+            image = ad.querySelector( 'img[data-screen-size="' + screenSize + '"]' );
+
+            // Update the src if it hasn't been done already
+            // This check stops it being set more than once (resulting in multiple requests)
+            if ( image.src !== image.getAttribute( 'data-src' ) )
+              image.src = image.getAttribute( 'data-src' );
+          }
+
+          // Fire a resize event on first load
+          window.onresize();
         },
 
         /**

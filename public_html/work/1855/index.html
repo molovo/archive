@@ -14,8 +14,49 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <title>Popping the Cork - molovo. Web Design, Portsmouth</title>
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+    <title>Popping the Cork - molovo. Web Design, Portsmouth</title>
+
+    <script>
+      (function (d) {
+        function addFont() {
+          var style = d.createElement( 'style' );
+          style.rel = 'stylesheet';
+          d.head.appendChild( style );
+          style.textContent = localStorage.gauthier;
+        }
+
+        try {
+          if ( localStorage.gauthier ) {
+            // The font is in localStorage, we can load it directly
+            addFont();
+          } else {
+            // We have to first load the font file asynchronously
+            var request = new XMLHttpRequest();
+            request.open( 'GET', '/assets/fonts/gauthier_fy/molovo.css', true );
+
+            request.onload = function () {
+              if ( request.status >= 200 && request.status < 400 ) {
+                // We save the file in localStorage
+                localStorage.gauthier = request.responseText;
+
+                // ... and load the font
+                addFont();
+              }
+            }
+
+            request.send();
+          }
+        } catch ( ex ) {
+          // maybe load the font synchronously for woff-capable browsers
+          // to avoid blinking on every request when localStorage is not available
+          var link = d.createElement( 'link' );
+          link.rel = 'stylesheet';
+          link.href = '/assets/fonts/gauthier_fy/molovo.css';
+          d.head.appendChild( link );
+        }
+      }(document));
+    </script>
 
     <link rel="shortcut icon" href="/assets/dist/img/favicon.png" />
 
@@ -309,47 +350,6 @@
         </a>
       </div>
     </footer>
-
-    <script>
-      (function (d) {
-        function addFont() {
-          var style = d.createElement( 'style' );
-          style.rel = 'stylesheet';
-          d.head.appendChild( style );
-          style.textContent = localStorage.gauthier;
-        }
-
-        try {
-          if ( localStorage.gauthier ) {
-            // The font is in localStorage, we can load it directly
-            addFont();
-          } else {
-            // We have to first load the font file asynchronously
-            var request = new XMLHttpRequest();
-            request.open( 'GET', '/assets/fonts/gauthier_fy/molovo.css', true );
-
-            request.onload = function () {
-              if ( request.status >= 200 && request.status < 400 ) {
-                // We save the file in localStorage
-                localStorage.gauthier = request.responseText;
-
-                // ... and load the font
-                addFont();
-              }
-            }
-
-            request.send();
-          }
-        } catch ( ex ) {
-          // maybe load the font synchronously for woff-capable browsers
-          // to avoid blinking on every request when localStorage is not available
-          var link = d.createElement( 'link' );
-          link.rel = 'stylesheet';
-          link.href = '/assets/fonts/gauthier_fy/molovo.css';
-          d.head.appendChild( link );
-        }
-      }(document));
-    </script>
 
     <script src="/assets/dist/js/main.min.js" async defer></script>
 

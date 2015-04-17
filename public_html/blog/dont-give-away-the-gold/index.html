@@ -14,8 +14,49 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <title>Don't Give Away the Gold - molovo. Web Design, Portsmouth</title>
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+    <title>Don't Give Away the Gold - molovo. Web Design, Portsmouth</title>
+
+    <script>
+      (function (d) {
+        function addFont() {
+          var style = d.createElement( 'style' );
+          style.rel = 'stylesheet';
+          d.head.appendChild( style );
+          style.textContent = localStorage.gauthier;
+        }
+
+        try {
+          if ( localStorage.gauthier ) {
+            // The font is in localStorage, we can load it directly
+            addFont();
+          } else {
+            // We have to first load the font file asynchronously
+            var request = new XMLHttpRequest();
+            request.open( 'GET', '/assets/fonts/gauthier_fy/molovo.css', true );
+
+            request.onload = function () {
+              if ( request.status >= 200 && request.status < 400 ) {
+                // We save the file in localStorage
+                localStorage.gauthier = request.responseText;
+
+                // ... and load the font
+                addFont();
+              }
+            }
+
+            request.send();
+          }
+        } catch ( ex ) {
+          // maybe load the font synchronously for woff-capable browsers
+          // to avoid blinking on every request when localStorage is not available
+          var link = d.createElement( 'link' );
+          link.rel = 'stylesheet';
+          link.href = '/assets/fonts/gauthier_fy/molovo.css';
+          d.head.appendChild( link );
+        }
+      }(document));
+    </script>
 
     <link rel="shortcut icon" href="/assets/dist/img/favicon.png" />
 
@@ -193,43 +234,6 @@
          alt="Namecheap. The hassle-free way to register your domains. As low as $3.98 a year."
          data-screen-size="small" />
   </a>
-
-  <script>
-    var ads = document.querySelectorAll('.ad-container a')        // Grab all the ads
-      , num = Math.floor((Math.random() * ads.length) + 1) - 1    // We grab a random number
-      , ad  = ads[num]                                            // And use as an array index
-      , x   = window.innerWidth
-           || document.documentElement.clientWidth
-           || document.body.clientWidth                           // Get the window width, cross-browser
-      , screenSize
-      , image;
-
-    // Display the ad
-    ad.style.display = 'inline-block';
-
-    window.onresize = function() {
-      // We rework screen size when the resize happens
-      x   = window.innerWidth
-         || document.documentElement.clientWidth
-         || document.body.clientWidth;
-
-      // Set the screen size variables based on the em values in the CSS
-      screenSize = x > (51 * 1.3125 * 16) ? 'large'
-                 : x > (36 * 16)          ? 'medium'
-                 : 'small';
-
-      // Find the right image for the screen size
-      image = ad.querySelector('img[data-screen-size="' + screenSize + '"]');
-
-      // Update the src if it hasn't been done already
-      // This check stops it being set more than once (resulting in multiple requests)
-      if (image.src !== image.getAttribute('data-src'))
-        image.src = image.getAttribute('data-src');
-    }
-
-    // Fire a resize event on first load
-    window.onresize();
-  </script>
 </div>
 
       <p>I attended the <a href="http://port80events.co.uk">Port80 Events</a> Spring Localhost tonight. <a href="http://twitter.com/handybitesize">Carey Hiles</a> stood up and talked about speculative work, and the lengths that we should be willing to go in order to gain that all important signature on a contract. Spec work has always been a controversial subject in the design industry, and as if on cue, at the end of the talk there were some heated words between Carey and Victoria Jones from <a href="http://designwales.org">Design Wales</a>.</p>
@@ -347,47 +351,6 @@
         </a>
       </div>
     </footer>
-
-    <script>
-      (function (d) {
-        function addFont() {
-          var style = d.createElement( 'style' );
-          style.rel = 'stylesheet';
-          d.head.appendChild( style );
-          style.textContent = localStorage.gauthier;
-        }
-
-        try {
-          if ( localStorage.gauthier ) {
-            // The font is in localStorage, we can load it directly
-            addFont();
-          } else {
-            // We have to first load the font file asynchronously
-            var request = new XMLHttpRequest();
-            request.open( 'GET', '/assets/fonts/gauthier_fy/molovo.css', true );
-
-            request.onload = function () {
-              if ( request.status >= 200 && request.status < 400 ) {
-                // We save the file in localStorage
-                localStorage.gauthier = request.responseText;
-
-                // ... and load the font
-                addFont();
-              }
-            }
-
-            request.send();
-          }
-        } catch ( ex ) {
-          // maybe load the font synchronously for woff-capable browsers
-          // to avoid blinking on every request when localStorage is not available
-          var link = d.createElement( 'link' );
-          link.rel = 'stylesheet';
-          link.href = '/assets/fonts/gauthier_fy/molovo.css';
-          d.head.appendChild( link );
-        }
-      }(document));
-    </script>
 
     <script src="/assets/dist/js/main.min.js" async defer></script>
 
