@@ -5,9 +5,11 @@ image: sky.jpg
 categories: blog
 ---
 
-This is a satellite image of the house where I grew up.
+<figure>
+  ![](/assets/dist/img/the-view-from-above/my-home.png)
+</figure>
 
-![](/assets/dist/img/the-view-from-above/my-home.png)
+This is a satellite image of the house where I grew up.
 
 When I was young we had a real photograph of this view framed on our living room wall. It had been taken by a local man who, as the only pilot in the village, had hired a photographer and flown him across it, to take photos of all the houses.
 

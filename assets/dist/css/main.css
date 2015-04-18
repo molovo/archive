@@ -2692,17 +2692,12 @@ p + .what-i-learned h2 {
   -webkit-mask-image: url(/assets/dist/img/keeping-up/knockout.png);
           mask-image: url(/assets/dist/img/keeping-up/knockout.png);
   font-size: 4.5em;
-  max-width: 7.33333em;
-}
-@media (max-width: 51em) {
-  .article--great-minds .post-title {
-    padding: 1.5em 1.5rem 0;
-  }
+  max-width: 33em/4.5;
 }
 @media (min-width: 51em) {
   .article--great-minds .post-title {
-    max-width: 3.66667em;
-    font-size: 9em;
+    font-size: 6em;
+    max-width: 33em/6;
   }
 }
 .article--great-minds .post-title:before {

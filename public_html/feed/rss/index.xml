@@ -4,7 +4,7 @@
   <title type="text" xml:lang="en">Molovo</title>
   <link type="application/atom+xml" href="http://molovo.co/feed/rss" rel="self"/>
   <link type="text" href="http://molovo.co" rel="alternate"/>
-  <updated>2015-04-17T17:28:37+01:00</updated>
+  <updated>2015-04-18T02:14:55+01:00</updated>
   <id>http://molovo.co</id>
   <author>
     <name>James Dinsdale</name>
@@ -157,9 +157,11 @@
     <link href="http://molovo.co/blog/the-view-from-above"/>
     <updated>2014-06-10T00:00:00+01:00</updated>
     <id>http://molovo.co/blog/the-view-from-above</id>
-    <content type="html">&lt;p&gt;This is a satellite image of the house where I grew up.&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;figure&gt;
+  &lt;img src=&quot;/assets/dist/img/the-view-from-above/my-home.png&quot; alt=&quot;&quot; /&gt;
+&lt;/figure&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/dist/img/the-view-from-above/my-home.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;This is a satellite image of the house where I grew up.&lt;/p&gt;
 
 &lt;p&gt;When I was young we had a real photograph of this view framed on our living room wall. It had been taken by a local man who, as the only pilot in the village, had hired a photographer and flown him across it, to take photos of all the houses.&lt;/p&gt;
 
