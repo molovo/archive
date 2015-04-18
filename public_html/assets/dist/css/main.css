@@ -1388,11 +1388,11 @@ p > img.full-width, img[title="full-width"] {
   font-size: 0.75em;
   line-height: 1.5em;
   display: inline-block;
-  margin: 0 8.16667%;
+  margin: 0;
 }
 @media (min-width: 66.9375em) {
   .post .ad-container span {
-    margin: 0 9.16667%;
+    margin: 0;
   }
 }
 .post .ad-container img {
