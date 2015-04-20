@@ -1,5 +1,5 @@
 name: Molovo
-url: ''
+url: 'https://molovo.co'
 markdown: rdiscount
 rdiscount:
   extensions: [smart, footnotes]
