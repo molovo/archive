@@ -4,7 +4,6 @@ title:  "Recruitment is broken, let's fix it"
 date:   2013-07-29 11:42:26
 excerpt: "If you want the best candidate, *write the best advert*."
 categories: blog
-archived: true
 ---
 
 <small><em>I can't speak for the issues in the job markets of other countries, so this is aimed mainly at recruiters in the UK.</em></small>

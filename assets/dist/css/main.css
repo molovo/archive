@@ -513,128 +513,31 @@ hr {
 
 blockquote {
   display: block;
-  font-weight: 300;
-  font-style: italic;
-}
-blockquote cite, blockquote cite a {
-  color: #B52936;
-  font-size: 0.75em;
   font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-weight: 700;
+  font-weight: 300;
+}
+blockquote.push, blockquote.pull {
+  width: 50%;
+}
+blockquote.push {
+  float: right;
+  padding: 0 0 0 1.5em;
+  margin: 0 -6em 0 1.5em;
+  border-left: 1.5em solid #B52936;
+}
+blockquote.pull {
+  float: left;
+  padding: 0 1.5em 0 0;
+  margin: 0 1.5em 0 -6em;
+  border-right: 1.5em solid #B52936;
+}
+blockquote cite {
   display: block;
+  font-weight: 700;
+  color: #B52936;
 }
-blockquote cite:before, blockquote cite a:before {
+blockquote cite:before {
   content: "—";
-}
-blockquote:not(.pull):not(.push) {
-  margin: 0 0 1.5em -1.75em;
-  border: 0;
-  border-left: 0.25em solid rgba(0, 0, 0, 0.1);
-  padding: 0;
-  padding-left: 1.5em;
-}
-blockquote.pull, blockquote.push {
-  margin-bottom: 1.5em;
-}
-blockquote.pull p, blockquote.push p {
-  font-size: 1.5em;
-  font-style: normal;
-  line-height: 1.35em;
-  padding: 0.66667em 0;
-  position: relative;
-  margin: 0;
-}
-@media (min-width: 40em) {
-  blockquote.pull p, blockquote.push p {
-    font-size: 2.25em;
-  }
-}
-blockquote.pull p:before, blockquote.pull p:after, blockquote.push p:before, blockquote.push p:after {
-  content: " ";
-  width: 3em;
-  height: 1px;
-  background: #B52936;
-  position: absolute;
-  left: 0;
-}
-blockquote.pull p:before, blockquote.push p:before {
-  top: 0;
-}
-blockquote.pull p:after, blockquote.push p:after {
-  bottom: 0;
-}
-.post-main blockquote.pull.graphic, .post-main blockquote.push.graphic {
-  height: 75vh;
-  width: 100vw;
-  margin: 3em 0;
-  padding: 1.5em;
-  position: relative;
-  left: 50%;
-  top: 0;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  color: white;
-  background-position: center;
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-@media (min-width: 42em) {
-  .post-main blockquote.pull.graphic, .post-main blockquote.push.graphic {
-    margin: 3em 0;
-    padding: 0;
-  }
-}
-.post-main blockquote.pull.graphic:before, .post-main blockquote.push.graphic:before {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  content: " ";
-}
-.post-main blockquote.pull.graphic cite, .post-main blockquote.push.graphic cite {
-  font-size: 0.5em;
-}
-.post-main blockquote.pull.graphic cite, .post-main blockquote.pull.graphic cite a, .post-main blockquote.push.graphic cite, .post-main blockquote.push.graphic cite a {
-  color: white;
-}
-.post-main blockquote.pull.graphic p, .post-main blockquote.push.graphic p {
-  position: relative;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  font-size: 3em;
-  line-height: 1em;
-  -webkit-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-}
-@media (min-width: 42em) {
-  .post-main blockquote.pull.graphic p, .post-main blockquote.push.graphic p {
-    left: 50%;
-    -webkit-transform: translate(-21rem, -50%);
-        -ms-transform: translate(-21rem, -50%);
-            transform: translate(-21rem, -50%);
-    max-width: 13em;
-  }
-}
-.post-main blockquote.pull.graphic p:after, .post-main blockquote.pull.graphic p:before, .post-main blockquote.push.graphic p:after, .post-main blockquote.push.graphic p:before {
-  background: white;
-}
-@media (min-width: 66.9375em) {
-  blockquote.push {
-    float: right;
-    width: 75%;
-    margin-right: -25%;
-    margin-left: 1.5em;
-  }
-}
-blockquote.push p {
-  font-size: 1.5em;
 }
 
 .center {
@@ -1280,6 +1183,14 @@ body {
   margin-top: 2em;
 }
 
+.feature {
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 figure {
   width: 100%;
   position: relative;
@@ -1707,39 +1618,6 @@ p > img.full-width, img[title="full-width"] {
   z-index: 1;
   max-height: 24em;
   overflow-y: hidden;
-}
-
-.feature {
-  min-height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0 -2em;
-  text-align: center;
-  padding: 25vh 1.5em;
-  position: relative;
-  z-index: 2;
-}
-@media (min-width: 1024px) {
-  .feature {
-    background-attachment: fixed;
-  }
-}
-.feature h1, .feature h2, .feature h4 {
-  color: white;
-}
-.feature h1 {
-  letter-spacing: -0.025em;
-  font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
-@media (min-width: 24em) {
-  .feature h1 {
-    font-size: 4.5em;
-  }
-}
-@media (min-width: 48em) {
-  .feature h1 {
-    font-size: 6em;
-  }
 }
 
 .section-title {

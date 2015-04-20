@@ -4,7 +4,6 @@ title:  "Must. Type. Faster."
 date:   2013-06-25 20:48:11
 excerpt: "Speeding up the data-entry process. Some free JS plugins I made."
 categories: blog
-archived: true
 ---
 
 I've been working on an application recently which allows Solicitors and Legal Costs Draftsmen to quickly record time and budget forecast data. The application is very data-heavy, with multiple large forms throughout.

@@ -1,10 +1,11 @@
 ---
 layout: default
+headerClass: transparent
 ---
 
 {% capture slug %}{{ page.id | replace: '/blog/', '' }}{% endcapture %}
 <article class="feature-post article--{{ slug }}">
-  <section class="feature" style="background-image: url({{ site.url}}/assets/dist/img/{{ page.url | replace: "/blog/", "" }}/{{ page.image }});">
+  <section class="feature" data-echo-background="{{ site.url}}/assets/dist/img/{{ page.url | replace: "/blog/", "" }}/{{ page.image }}">
   </section>
 
   <div class="container">
@@ -62,7 +63,7 @@ layout: default
   </a>
 {% endif %}
 
-<script>
+<!-- <script>
   document.getElementsByClassName('fixed')[0].classList.add('transparent');
 
   var quotes = document.querySelector('.post-main').getElementsByTagName('blockquote');
@@ -75,4 +76,4 @@ layout: default
 
   var quotes = document.querySelector('.post-main').getElementsByTagName('blockquote');
 
-</script>
+</script> -->

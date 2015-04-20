@@ -3,7 +3,6 @@ title: "Never Stop Doing"
 layout: post
 excerpt: "Why I'm building a lot of things lately."
 categories: blog
-archived: true
 ---
 
 You may have noticed I've been releasing a lot of new work recently. Two apps in two months isn't bad going, and I'm pretty pleased with myself.

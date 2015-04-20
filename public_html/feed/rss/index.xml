@@ -4,7 +4,7 @@
   <title type="text" xml:lang="en">Molovo</title>
   <link type="application/atom+xml" href="http://molovo.co/feed/rss" rel="self"/>
   <link type="text" href="http://molovo.co" rel="alternate"/>
-  <updated>2015-04-20T20:18:46+01:00</updated>
+  <updated>2015-04-20T21:30:19+01:00</updated>
   <id>http://molovo.co</id>
   <author>
     <name>James Dinsdale</name>
@@ -153,6 +153,48 @@
   </entry>
   
   <entry>
+    <title>Sucking</title>
+    <link href="http://molovo.co/archive/sucking"/>
+    <updated>2014-06-30T00:00:00+01:00</updated>
+    <id>http://molovo.co/archive/sucking</id>
+    <content type="html">&lt;blockquote class=&quot;pull&quot;&gt;
+  &lt;p&gt;
+    Sucking at something is the first step to becoming sorta good at something.
+    &lt;cite&gt;Jake the Dog, Adventure Time&lt;/cite&gt;
+  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+&lt;p&gt;I learnt how to suck a long time ago. That feeling of inadequacy that comes from being in a room of people wiser/smarter/more creative than me just inspires me to meet their high standards. Spending weeks working on a project, only to be beaten to the punch by a more organised rival, inspires me to up my game.&lt;/p&gt;
+
+&lt;p&gt;I wouldn&amp;rsquo;t be where I am if I didn&amp;rsquo;t suck. A sense of entitlement is for spoilt rich kids, who are still spending Daddy&amp;rsquo;s money - I can&amp;rsquo;t afford such a luxury.&lt;/p&gt;
+
+&lt;p&gt;Get out there, suck, and get better.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Thank You for Not Smoking</title>
+    <link href="http://molovo.co/archive/thank-you-for-not-smoking"/>
+    <updated>2014-06-29T00:00:00+01:00</updated>
+    <id>http://molovo.co/archive/thank-you-for-not-smoking</id>
+    <content type="html">&lt;p&gt;Giving up smoking is the hardest thing I&amp;rsquo;ve ever had to do.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve spent the last 4 months, 3 weeks, 2 days and 13 hours desperate for a cigarette.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve only relapsed once.&lt;/p&gt;
+
+&lt;p&gt;Well, OK, twice.&lt;/p&gt;
+
+&lt;p&gt;But, in less than month, I&amp;rsquo;ll get to meet my daughter for the first time.&lt;/p&gt;
+
+&lt;p&gt;From the first second I hold her in my arms, it will all seem worthwhile.&lt;/p&gt;
+
+&lt;p&gt;I can&amp;rsquo;t wait.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
     <title>The View From Above</title>
     <link href="http://molovo.co/blog/the-view-from-above"/>
     <updated>2014-06-10T00:00:00+01:00</updated>
@@ -200,7 +242,7 @@
 
 &lt;p&gt;But in reality, I&amp;rsquo;m not very good at writing. I have ideas aplenty. I have a decent understanding of the Queen&amp;rsquo;s English. I even know a thing or two about the things I try to write about; but I lack direction, the ability to draw the reader in. The things I write, after a while, bore myself.&lt;/p&gt;
 
-&lt;blockquote class=&quot;pull graphic&quot; data-image=&quot;typewriter.jpg&quot;&gt;
+&lt;blockquote class=&quot;push&quot;&gt;
   &lt;p&gt;
     There is nothing to writing. All you do is sit down at a typewriter and bleed.
     &lt;cite&gt;Ernest Hemingway&lt;/cite&gt;
@@ -293,9 +335,9 @@
   
   <entry>
     <title>Me and my bag</title>
-    <link href="http://molovo.co/blog/me-and-my-bag"/>
+    <link href="http://molovo.co/archive/me-and-my-bag"/>
     <updated>2014-01-16T00:00:00+00:00</updated>
-    <id>http://molovo.co/blog/me-and-my-bag</id>
+    <id>http://molovo.co/archive/me-and-my-bag</id>
     <content type="html">&lt;p&gt;Those of you who know me well, have probably noticed that I always have an ugly, brown bag across my shoulder. I&amp;rsquo;ve lived out of that bag for about eight years. If I ever lost it I&amp;rsquo;d be royally fucked.&lt;/p&gt;
 
 &lt;p&gt;Everything I need, both for my job and my personal life, live in that bag. None of the things hold any sentimental value, they are just things that I feel I need on me at all times for my job. It travels with me to clients&#39; offices, friends&#39; and relatives&#39; houses, conferences, bars; even my morning trip out for breakfast.&lt;/p&gt;
@@ -529,7 +571,28 @@ A pissed off web developer.&lt;/p&gt;
     <link href="http://molovo.co/blog/they-dont-make-em-like-they-used-to"/>
     <updated>2013-11-21T20:41:07+00:00</updated>
     <id>http://molovo.co/blog/they-dont-make-em-like-they-used-to</id>
-    <content type="html">&lt;p&gt;Blank&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;a href=&quot;http://everydaydesigner.net/design/they-dont-make-em-like-they-used-to&quot;&gt;&lt;em&gt;Published on Everyday Designer&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>I'm sick of the word Designer</title>
+    <link href="http://molovo.co/archive/im-sick-of-the-word-designer"/>
+    <updated>2013-11-05T00:00:00+00:00</updated>
+    <id>http://molovo.co/archive/im-sick-of-the-word-designer</id>
+    <content type="html">&lt;blockquote&gt;&lt;p&gt;I&amp;rsquo;m a &lt;strong&gt;Designer&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Notice the emphasis. There&amp;rsquo;s always emphasis. The above sentence appears on the websites and blogs of a million twenty-something, naive little twats the world over, jobless and fresh out of university, describing what they do in such a vague way because they&amp;rsquo;re &lt;em&gt;so fucking cool&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;You&amp;rsquo;ll recognise them as the people who recite &lt;a href=&quot;https://readymag.com/u15041256/32/&quot;&gt;Dieter Rams 10 Design Priniciples&lt;/a&gt; like some horrible bastard lovechild of the Dribbble comments section and the Westboro Baptist Church.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s because of these dicks - these people who don&amp;rsquo;t realise that design has been around for thousands of years, not just since the advent of the web - that terms like &amp;ldquo;Unicorn&amp;rdquo; and &amp;ldquo;Rainbow&amp;rdquo; designers are now flying around the internet. These Photoshop Jockeys immediately discount anyone who can write the smallest amount of HTML as not being a &amp;ldquo;proper&amp;rdquo; designer, just because they&amp;rsquo;re too fucking lazy to learn to code themselves.&lt;/p&gt;
+
+&lt;p&gt;Design is solving problems. It&amp;rsquo;s about being given a brief for a thing, finding the best way to create/fix/present the thing, and fucking doing it.&lt;/p&gt;
+
+&lt;p&gt;Development &lt;em&gt;is design&lt;/em&gt;. Typesetting &lt;em&gt;is design&lt;/em&gt;. Carpentry &lt;em&gt;is design&lt;/em&gt;. Aircraft Engineering &lt;em&gt;is design&lt;/em&gt;. Fucking sewer system architecture &lt;em&gt;is design&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Just because someone can write a bit of code, doesn&amp;rsquo;t mean they&amp;rsquo;re a bad designer. And if you can&amp;rsquo;t write code, that doesn&amp;rsquo;t either. The only things that make someone a bad designer, are being a fucking bad designer, or having your head so far up your own ass that you can chew on your tonsils.&lt;/p&gt;
 </content>
   </entry>
   
@@ -732,6 +795,15 @@ A pissed off web developer.&lt;/p&gt;
     <link href="http://molovo.co/blog/i-build-my-own-tools-and-you-should-too"/>
     <updated>2013-08-20T21:41:07+01:00</updated>
     <id>http://molovo.co/blog/i-build-my-own-tools-and-you-should-too</id>
+    <content type="html">&lt;p&gt;&lt;a href=&quot;http://everydaydesigner.net/development/i-build-my-own-tools-and-you-should-too&quot;&gt;&lt;em&gt;Published on Everyday Designer&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>This post will offend you</title>
+    <link href="http://molovo.co/archive/this-post-will-offend-you"/>
+    <updated>2013-08-20T20:55:50+01:00</updated>
+    <id>http://molovo.co/archive/this-post-will-offend-you</id>
     <content type="html">&lt;p&gt;Blank&lt;/p&gt;
 </content>
   </entry>
@@ -808,10 +880,65 @@ A pissed off web developer.&lt;/p&gt;
   </entry>
   
   <entry>
+    <title>My Bucket List</title>
+    <link href="http://molovo.co/archive/my-bucket-list"/>
+    <updated>2013-07-19T22:36:39+01:00</updated>
+    <id>http://molovo.co/archive/my-bucket-list</id>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Get drunk and hit golf balls from the roof of a tall building.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Get tattoos.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Have a group of complete strangers round for a dinner party.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Go travelling for 3 months to a year, with no plans other than my first destination.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Buy a sports car, and race it round the Nürbürgring.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Go skinny dipping.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Kiss a complete stranger and walk away.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Stargaze from the peak of a mountain.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Live somewhere right next to the beach.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Rescue an animal.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Build something that solves a real-world problem.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Write a book.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Skydive.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Get over my fear of heights.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Get laser eye surgery.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Take more pictures.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Buy some proper art.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;See the Rio carnival.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Buy a proper coffee machine.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Invest in a club or restaurant.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+  </entry>
+  
+  <entry>
     <title>How to start a successful software company</title>
     <link href="http://molovo.co/blog/how-to-start-a-successful-software-company"/>
     <updated>2013-07-13T20:57:15+01:00</updated>
     <id>http://molovo.co/blog/how-to-start-a-successful-software-company</id>
+    <content type="html">&lt;p&gt;&lt;a href=&quot;https://medium.com/@molovo/how-to-start-a-successful-software-company-4698ba3af3d9&quot;&gt;&lt;em&gt;Published on Medium&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>A Tribute to &ldquo;That Steve Jobs quote&rdquo;</title>
+    <link href="http://molovo.co/archive/a-tribute-to-that-steve-jobs-quote"/>
+    <updated>2013-07-09T09:39:10+01:00</updated>
+    <id>http://molovo.co/archive/a-tribute-to-that-steve-jobs-quote</id>
+    <content type="html">&lt;p&gt;Here&amp;rsquo;s to the boring ones, the conformists, the sheep, the unimaginative, the round pegs in the round holes.&lt;/p&gt;
+
+&lt;p&gt;The ones who see everything the same. They blindly stick to the rules.&lt;/p&gt;
+
+&lt;p&gt;You can quote them, disagree with them, glorify or vilify them, or you can ignore them, because they change absolutely nothing.&lt;/p&gt;
+
+&lt;p&gt;They hold the human race back, and while some may see them as the sensible ones, we see asininity, because the ones who aren&amp;rsquo;t crazy enough to think that they can change the world, go unnoticed as it passes them by.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>OK Internet, that's enough now</title>
+    <link href="http://molovo.co/archive/ok-internet-thats-enough-now"/>
+    <updated>2013-07-03T21:00:18+01:00</updated>
+    <id>http://molovo.co/archive/ok-internet-thats-enough-now</id>
     <content type="html">&lt;p&gt;Blank&lt;/p&gt;
 </content>
   </entry>
@@ -843,15 +970,15 @@ A pissed off web developer.&lt;/p&gt;
     <link href="http://molovo.co/blog/in-pursuit-of-happyness"/>
     <updated>2013-06-17T21:07:33+01:00</updated>
     <id>http://molovo.co/blog/in-pursuit-of-happyness</id>
-    <content type="html">&lt;p&gt;Blank&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;a href=&quot;http://thebran.ch/articles/in-pursuit-of-happyness&quot;&gt;&lt;em&gt;Published on The Branch&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
   
   <entry>
     <title>Time</title>
-    <link href="http://molovo.co/blog/time"/>
+    <link href="http://molovo.co/archive/time"/>
     <updated>2013-05-29T22:44:46+01:00</updated>
-    <id>http://molovo.co/blog/time</id>
+    <id>http://molovo.co/archive/time</id>
     <content type="html">&lt;p&gt;Today marks two days until the end of my love/hate relationship with full-time work, and I have to be honest, I&amp;rsquo;m fucked.&lt;/p&gt;
 
 &lt;p&gt;Excited as I was to be heading out into the world of freelancing, I&amp;rsquo;ve taken on more and more work to try and prepare myself for the jump. Since March I&amp;rsquo;ve been working on a 50-hour-per-week front-end development contract on top of the full time job. I&amp;rsquo;ve also been taking on around 12 hours per week in odd jobs for other clients, as well as general admin and working on my own projects.&lt;/p&gt;
@@ -869,6 +996,40 @@ A pissed off web developer.&lt;/p&gt;
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;strong&gt;UPDATE 14/06/13:&lt;/strong&gt; &lt;em&gt;The last paragraph above was complete bollocks. It&amp;rsquo;s now been two weeks and I&amp;rsquo;m working more than I was before. Ho hum.&lt;/em&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Gisele</title>
+    <link href="http://molovo.co/archive/gisele"/>
+    <updated>2013-05-24T11:51:01+01:00</updated>
+    <id>http://molovo.co/archive/gisele</id>
+    <content type="html">&lt;p&gt;On Friday, it happened.&lt;/p&gt;
+
+&lt;p&gt;The first sense to be aroused was my hearing. The soft &lt;em&gt;click-click-click&lt;/em&gt; of her ridiculous 6-inch heels, swaying her hips like a pirate-ship fairground ride as she - &lt;em&gt;whoops&lt;/em&gt; - stumbles her way towards me.&lt;/p&gt;
+
+&lt;p&gt;Then my sight, taking in the soaked red dress, clinging to her body as though it were painted. The rain &lt;em&gt;drip-drip-dripping&lt;/em&gt; from her oh-so-long blonde hair, hiding her face, turned to milk by the full moon.&lt;/p&gt;
+
+&lt;p&gt;Then, her slender shadow reaching me long before she did, I detected the warm fruity scent of over-sprayed perfume, advertising her desperation to find affection and warmth on this cold wet night.&lt;/p&gt;
+
+&lt;p&gt;Finally, touch, as she perched herself on my knees, and taste - gin - straight from the paper bag in her left hand to my mouth as her tongue and lips started exploring mine.&lt;/p&gt;
+
+&lt;p&gt;This was Gisele, and I had been waiting for this moment for 3 years.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Taking the Leap</title>
+    <link href="http://molovo.co/archive/taking-the-leap"/>
+    <updated>2013-04-20T18:09:37+01:00</updated>
+    <id>http://molovo.co/archive/taking-the-leap</id>
+    <content type="html">&lt;p&gt;Two weeks ago, I made a decision. After too long working in an organisation where I don&amp;rsquo;t feel like I fit in, where change is fought at every corner, and where following processes is deemed more important than end results, I&amp;rsquo;ve decided to take a risk, hand in my notice, and become a freelancer full time.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been passionate about web design for a number of years, and have been taking on freelance work alongside the day job for the last year. I haven&amp;rsquo;t made a huge amount of money, although I can match my current salary, but the feeling of worth I get from my clients, who appreciate and value the things I am able to do for them far outweighs any monetary reward I could ask for.&lt;/p&gt;
+
+&lt;p&gt;So, starting tomorrow, I&amp;rsquo;m giving up my job, giving up my house, moving back in with my folks, and hoping for the best. I&amp;rsquo;ve received a huge amount of support from people in all areas of the industry - friends, acquaintances and strangers alike - that makes me sure I&amp;rsquo;m making the right decision.&lt;/p&gt;
+
+&lt;p&gt;So here goes nothing. Wish me luck.&lt;/p&gt;
 </content>
   </entry>
   
@@ -951,9 +1112,9 @@ A pissed off web developer.&lt;/p&gt;
   
   <entry>
     <title>Keep it Simple, Stupid</title>
-    <link href="http://molovo.co/blog/keep-it-simple-stupid"/>
+    <link href="http://molovo.co/archive/keep-it-simple-stupid"/>
     <updated>2013-02-19T14:09:28+00:00</updated>
-    <id>http://molovo.co/blog/keep-it-simple-stupid</id>
+    <id>http://molovo.co/archive/keep-it-simple-stupid</id>
     <content type="html">&lt;p&gt;I&amp;rsquo;ve been working on a site recently that will have a number of authors, without any technical ability, needing to write, edit and update articles through the CMS. I&amp;rsquo;ve set up some CSS and jQuery rules to automatically format images and links written in standard Markdown syntax, to allow them to easily size, align and caption their images, as well as a couple of custom buttons for links to audio files and documents.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m conscious of accessibility, and whilst I think I&amp;rsquo;ve done a reasonably good job in this regard, I&amp;rsquo;d be interested to hear your thoughts on the generated markup, and whether there&amp;rsquo;s an easier way to do it.&lt;/p&gt;
@@ -1043,9 +1204,9 @@ A pissed off web developer.&lt;/p&gt;
   
   <entry>
     <title>Show your personality</title>
-    <link href="http://molovo.co/blog/show-your-personality"/>
+    <link href="http://molovo.co/archive/show-your-personality"/>
     <updated>2013-02-10T22:29:34+00:00</updated>
-    <id>http://molovo.co/blog/show-your-personality</id>
+    <id>http://molovo.co/archive/show-your-personality</id>
     <content type="html">&lt;p&gt;I&amp;rsquo;ve seen countless blog posts, magazine articles and comment pieces from people complaining about the impersonal nature of the email. Well, I think I may have found the culprit.&lt;/p&gt;
 
 &lt;p&gt;How many times have you received a one or two word email - &amp;ldquo;Thanks&amp;rdquo; or &amp;ldquo;Sounds Great!&amp;rdquo; - followed by 10-15 lines of Name, Job Title, Address, Contact Information etc. etc. Some may even go so far as to add legal information, or request that you refrain from printing the email in order to save trees. I receive countless numbers of these emails, not just professionally, but from people I have known for years, and for whom I have all the information in the signature block memorised.&lt;/p&gt;
@@ -1070,9 +1231,9 @@ A pissed off web developer.&lt;/p&gt;
   
   <entry>
     <title>Don't Give Away the Gold</title>
-    <link href="http://molovo.co/blog/dont-give-away-the-gold"/>
+    <link href="http://molovo.co/archive/dont-give-away-the-gold"/>
     <updated>2013-02-07T22:46:17+00:00</updated>
-    <id>http://molovo.co/blog/dont-give-away-the-gold</id>
+    <id>http://molovo.co/archive/dont-give-away-the-gold</id>
     <content type="html">&lt;p&gt;I attended the &lt;a href=&quot;http://port80events.co.uk&quot;&gt;Port80 Events&lt;/a&gt; Spring Localhost tonight. &lt;a href=&quot;http://twitter.com/handybitesize&quot;&gt;Carey Hiles&lt;/a&gt; stood up and talked about speculative work, and the lengths that we should be willing to go in order to gain that all important signature on a contract. Spec work has always been a controversial subject in the design industry, and as if on cue, at the end of the talk there were some heated words between Carey and Victoria Jones from &lt;a href=&quot;http://designwales.org&quot;&gt;Design Wales&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Design Wales have been running campaigns for some time now to try and eliminate speculative work from our industry. They&amp;rsquo;re doing some admirable work in this regard, and have even gained some public sector support. However, Victoria made the comment, quite adamantly, that she disagreed with everything that Carey had said during his talk, which I could see from observation Carey took quite hard. I found this to be incredibly harsh, especially as, from the comments she made, I think she missed the most important sentence in Carey&amp;rsquo;s talk, that is, the title of this blog post.&lt;/p&gt;
@@ -1092,10 +1253,98 @@ A pissed off web developer.&lt;/p&gt;
   </entry>
   
   <entry>
+    <title>Sleep</title>
+    <link href="http://molovo.co/archive/sleep"/>
+    <updated>2013-01-22T20:08:14+00:00</updated>
+    <id>http://molovo.co/archive/sleep</id>
+    <content type="html">&lt;p&gt;I had a good week last week. In fact, I was absolutely ecstatic. Last week I managed to do something which I&amp;rsquo;ve been trying to do for over 5 years. Last week I overcame the biggest challenge I&amp;rsquo;ve faced in my adult life.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Last week I managed to get up before 6AM every day.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Pathetic really isn&amp;rsquo;t it?&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m not a morning person. I&amp;rsquo;ve been plagued with insomnia for as long as I can remember. I&amp;rsquo;ve tried varying the time I go to bed, the time I set my alarm, the bedclothes I sleep in, the temperature of the bedroom. None of the above allowed me to achieve a regular sleeping pattern. I&amp;rsquo;ve tried herbal remedies, breathing techniques, exercises that are supposed to combat depression. Still nothing.&lt;/p&gt;
+
+&lt;p&gt;As I&amp;rsquo;ve been working more and more, my level of tiredness has increased, but I still find myself unable to sleep until so late that I cannot get up in the morning. On the occasional day when I have needed to start work early, I&amp;rsquo;ve made sure that I&amp;rsquo;m up in time by not even attempting to sleep the night before. This is fine for the odd day, but faced with a week of early starts, I knew that something had to change.&lt;/p&gt;
+
+&lt;p&gt;I spent almost all of my weekend researching sleeping patterns, reading scientific studies, medical journals and white papers. I learnt a lot. I learnt that the average sleep cycle last for 90 minutes, and that it is far easier to wake up if it happens at the end of a sleep cycle. I learnt that if a person is woken, and then immediately goes back to sleep, they enter the deepest kind of sleep - called REM or Rapid-Eye-Movement - meaning that the first one or two sleep cycles after that are equivalent to almost double the rest time when compared to being taken without that short break.&lt;/p&gt;
+
+&lt;p&gt;So, as a last resort, I tried something inventive. I made sure that I was in bed by 1AM. I set two alarms, both for 4AM, one on my phone on the opposite side of my bedroom, and the other on my tablet in the hallway outside the room. I set a further alarm on each of these for 5.30AM. At 4AM I awoke, got out of bed to turn of both alarms, and too tired to think of doing anything else, went straight back to bed; the same reaction I&amp;rsquo;ve had to my alarm almost every day for 5 years.&lt;/p&gt;
+
+&lt;p&gt;5.30AM the first morning.&lt;/p&gt;
+
+&lt;p&gt;Imagine my surprise, I was actually awake. For the first time in a long time, I had no urge to jump straight back into bed, despite having been woken unnaturally. I had time. Time to make myself a coffee, eat breakfast, and walk at a leisurely pace to the train station, instead of my usual half-walk-half-run. And I was more awake when I got to work. Despite getting less sleep than usual, I was alert throughout the day; I was more productive; I was &lt;em&gt;happier&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;All because I&amp;rsquo;d found a sleep pattern that worked for me, and I&amp;rsquo;m pleased to say, I&amp;rsquo;ve managed to stick to it ever since.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Stop. Think. Discuss</title>
+    <link href="http://molovo.co/archive/stop-think-discuss"/>
+    <updated>2013-01-07T16:30:17+00:00</updated>
+    <id>http://molovo.co/archive/stop-think-discuss</id>
+    <content type="html">&lt;p&gt;Everyone&amp;rsquo;s done it. Someone posts something on Twitter that you wholeheartedly disagree with. So you reply and squeeze your distaste into 140 characters and end up offending said person. Then you find yourself faced with a deluge of abuse from the supporters of said person&amp;rsquo;s argument, and back-pedal like crazy, maybe even writing an apologetic and unassertive blog post, completely abandoning your original ideas in the pursuit of a happier existence.&lt;/p&gt;
+
+&lt;p&gt;The answer? &lt;em&gt;Don&amp;rsquo;t react&lt;/em&gt;. The problem is, Twitter is an almost faceless communication platform. Chances are you don&amp;rsquo;t really know this person. So rather than responding with your argument directly, try this:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Invite the offending person to have a skype or phone conversation with you to discuss the issue.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Do not discuss the issue for the first five minutes&lt;/strong&gt;. This is important. Instead, spend 5 mins introducing yourselves, explaining your background, making small talk as though you&amp;rsquo;d just met in a bar.&lt;/li&gt;
+&lt;li&gt;Once you&amp;rsquo;re at ease with each other&amp;rsquo;s company, &lt;em&gt;then&lt;/em&gt; agree to a well-constructed, considerate debate on the issue.&lt;/li&gt;
+&lt;li&gt;After a consensus has been agreed (even if it is to disagree), post your findings, either together or separately, so that others may gain a full-context insight into the discussion.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;The benefits? Not only are you likely to make a good connection with a person, chances are, being face to face and unrestrained by character limits, you&amp;rsquo;ll both learn a great deal from the other persons argument. Of course, there are still some people out there who are just generally unpleasant to deal with, if you run into that situation, just end the discussion and walk away. But for the most part, people are more than willing to have their horizons broadened and to hear opposing arguments. After all, why else would they post them onto a social network in the first place? Social networks are all about grabbing attention.&lt;/p&gt;
+
+&lt;p&gt;So, when we are all happily chatting away and there are no such things as internet fights, I hope you will all come back and thank me*.&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;&lt;small&gt;*Obviously, I jest.&lt;/small&gt;&lt;/small&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Git plus</title>
+    <link href="http://molovo.co/archive/git-plus"/>
+    <updated>2013-01-05T13:42:06+00:00</updated>
+    <id>http://molovo.co/archive/git-plus</id>
+    <content type="html">&lt;p&gt;I wanted to simplify my git deployment workflow, so I created an alias for each site I&amp;rsquo;m working on, which allows me to deploy any changes to the site with a single line on the command line. You&amp;rsquo;ll need a server with SSH access and git client support, and SSH access set up between your local machine, the repo and the server. It&amp;rsquo;s Mac and Linux only I&amp;rsquo;m afraid (the way I&amp;rsquo;ve done it).&lt;/p&gt;
+
+&lt;p&gt;If it doesn&amp;rsquo;t exist already, create a file called &amp;lsquo;.bashrc&amp;rsquo; in your users home directory. In this file enter the following commands. &lt;strong&gt;Anything in capitals needs to be replaced with actual information&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;    push-NAME_OF_SITE&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+      &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /YOUR/SITE/DIRECTORY
+
+      &lt;span class=&quot;c&quot;&gt;# Commit and push our changes&lt;/span&gt;
+      git add .
+      git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;$1&amp;quot;&lt;/span&gt;
+      git push origin master         &lt;span class=&quot;c&quot;&gt;# Or whatever the name and branch of your repo&lt;/span&gt;
+
+      &lt;span class=&quot;c&quot;&gt;# SSH to server and pull changes from repo&lt;/span&gt;
+      ssh USERNAME@SERVERNAME &lt;span class=&quot;s2&quot;&gt;&amp;quot;cd /PUBLIC/HTML/DIRECTORY; git pull origin master&amp;quot;&lt;/span&gt;
+
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Save that file, and close and reopen the terminal.&lt;/p&gt;
+
+&lt;p&gt;Now we&amp;rsquo;ve set that up, we can pass a single command to do all the above, and the $1 will add any parameter we give the alias as a commit message, like so:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;    push-NAME_OF_SITE &lt;span class=&quot;s2&quot;&gt;&amp;quot;Enter awesome commit message here&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</content>
+  </entry>
+  
+  <entry>
     <title>Learning</title>
-    <link href="http://molovo.co/blog/learning"/>
+    <link href="http://molovo.co/archive/learning"/>
     <updated>2013-01-02T03:01:32+00:00</updated>
-    <id>http://molovo.co/blog/learning</id>
+    <id>http://molovo.co/archive/learning</id>
     <content type="html">&lt;p&gt;2012 was a big year for me, with a number of huge changes in both my personal and professional life. I wanted to celebrate the new year with an article about how these changes have improved my life, and made me a better person, but every thought I put down in words came across as pretentious. Instead, I&amp;rsquo;m just going to list the little lessons that life has taught me over the last year, without editing, re-reading or censoring.&lt;/p&gt;
 
 &lt;p&gt;Here goes:&lt;/p&gt;
@@ -1136,9 +1385,9 @@ A pissed off web developer.&lt;/p&gt;
   
   <entry>
     <title>Switching Off</title>
-    <link href="http://molovo.co/blog/switching-off"/>
+    <link href="http://molovo.co/archive/switching-off"/>
     <updated>2012-12-27T13:16:14+00:00</updated>
-    <id>http://molovo.co/blog/switching-off</id>
+    <id>http://molovo.co/archive/switching-off</id>
     <content type="html">&lt;p&gt;I work too much. Always have, always will. I&amp;rsquo;m always either at my desk at home or my desk at work. The only exceptions are eating and sleeping, neither of which I do often enough. Even when traveling between home and the office I&amp;rsquo;m tied to my phone, replying to emails, tweets and Facebook posts, all in the name of &amp;lsquo;business&amp;rsquo;.&lt;/p&gt;
 
 &lt;p&gt;I spend far too little time with my family, and even when I do, there is always a phone, tablet or laptop within arm&amp;rsquo;s reach so that I can &amp;ldquo;just take a quick look at something&amp;rdquo;. Any semblance of a social life went out the window years ago.&lt;/p&gt;
@@ -1186,9 +1435,9 @@ A pissed off web developer.&lt;/p&gt;
   
   <entry>
     <title>Reinventing the wheel</title>
-    <link href="http://molovo.co/blog/reinventing-the-wheel"/>
+    <link href="http://molovo.co/archive/reinventing-the-wheel"/>
     <updated>2012-12-12T13:35:30+00:00</updated>
-    <id>http://molovo.co/blog/reinventing-the-wheel</id>
+    <id>http://molovo.co/archive/reinventing-the-wheel</id>
     <content type="html">&lt;p&gt;I&amp;rsquo;ve been working on an app recently that has a simple aim, speed and simplicity. Without revealing to much information, the app allows the user to send emails from the account with which they sign up. As such, email verification in a secure way was an imperative requirement, and I wanted to see if there was any way in which I could reduce the signup procedure to as few clicks as possible, and still maintain a good level of security.&lt;/p&gt;
 
 &lt;p&gt;As the best way for the user to see a sample of the emails that could be sent with the application was to send a sample, and explain the features within that, I also integrated this into the signup procedure. As a result, the single call to action on the page is a single button, with the text &amp;ldquo;See a sample/Sign up&amp;rdquo;. On mouseover this expands to the width of the container, the text fades out, and is replaced by a single email input box. The text below also fades in, and explains how it works to the user:&lt;/p&gt;
@@ -1215,9 +1464,9 @@ A pissed off web developer.&lt;/p&gt;
   
   <entry>
     <title>SQL Bind Variables</title>
-    <link href="http://molovo.co/blog/sql-bind-variables"/>
+    <link href="http://molovo.co/archive/sql-bind-variables"/>
     <updated>2012-12-10T13:07:09+00:00</updated>
-    <id>http://molovo.co/blog/sql-bind-variables</id>
+    <id>http://molovo.co/archive/sql-bind-variables</id>
     <content type="html">&lt;p&gt;I hate people who try and tell me that my development techniques are wrong. Everyone is different. It was part of the motivation for my previous post on &lt;a href=&quot;http://molovo.co.uk/blog/frameworks&quot;&gt; Frameworks&lt;/a&gt;. That said, I&amp;rsquo;m going to break my golden rule, and give you all a very important instruction:&lt;/p&gt;
 
 &lt;blockquote&gt;&lt;p&gt;If you don&amp;rsquo;t know what SQL bind variables are, then do not write any SQL. &lt;strong&gt;Ever&lt;/strong&gt;.&lt;/p&gt;&lt;/blockquote&gt;
@@ -1295,9 +1544,9 @@ A pissed off web developer.&lt;/p&gt;
   
   <entry>
     <title>Crowdsourcing</title>
-    <link href="http://molovo.co/blog/crowdsourcing"/>
+    <link href="http://molovo.co/archive/crowdsourcing"/>
     <updated>2012-11-29T19:52:41+00:00</updated>
-    <id>http://molovo.co/blog/crowdsourcing</id>
+    <id>http://molovo.co/archive/crowdsourcing</id>
     <content type="html">&lt;blockquote&gt;&lt;p&gt;Like a car crash or your first hangover, crowdsourcing is a mistake every designer should make, and most likely will make at least once.&lt;/p&gt;&lt;/blockquote&gt;
 
 &lt;p&gt;A bold claim, but I&amp;rsquo;ll stand by it. I abhor crowdsourcing, and wouldn&amp;rsquo;t wish it on anyone, but having said that, if you do get sucked in what&amp;rsquo;s important is what you learn from the experience, and how it improves your work, your approach to design, and your valuation of your own work.&lt;/p&gt;
@@ -1337,10 +1586,54 @@ A pissed off web developer.&lt;/p&gt;
   </entry>
   
   <entry>
+    <title>Poke it til it hurts</title>
+    <link href="http://molovo.co/archive/poke-it-til-it-hurts"/>
+    <updated>2012-11-28T23:20:20+00:00</updated>
+    <id>http://molovo.co/archive/poke-it-til-it-hurts</id>
+    <content type="html">&lt;p&gt;I recently got a rather nasty case of what I have always referred to as &amp;ldquo;brain constipation&amp;rdquo;. Others may call it designer&amp;rsquo;s block, writer&amp;rsquo;s block or lack of inspiration. Some have even associated it with anxiety or depression. All I know is, for one week, I was unable to produce a single piece of work I was happy with. I switched to trying to write a blog post instead; no more luck there. I was lost in a sea of frustration, scribbles and screwed up pieces of paper, with no escape in sight. In the end I did three things to overcome it.&lt;/p&gt;
+
+&lt;h4&gt;Step one: Skrillex&lt;/h4&gt;
+
+&lt;p&gt;This isn&amp;rsquo;t going to be a pretentious post about how an artist&amp;rsquo;s music changed my life. In fact, it&amp;rsquo;s the opposite. You see, &lt;em&gt;I fucking hate Skrillex&lt;/em&gt;. Word&amp;rsquo;s cannot describe how appalling I find his &amp;ldquo;music&amp;rdquo;, but I found a use for it nonetheless. On one particularly frustrating evening, I listened to Skrillex. On repeat. At full volume. I refused to stop listening, or working, until I had some tangible evidence of my ability on my screen.&lt;/p&gt;
+
+&lt;h4&gt;Step two: Budweiser&lt;/h4&gt;
+
+&lt;p&gt;I&amp;rsquo;m not a big drinker, mainly because I live miles from any real social scene and end up driving whenever I go out. But by midnight, I just felt like having a couple of beers. It may have helped, it may not, who knows.&lt;/p&gt;
+
+&lt;h4&gt;Step three: Onword&lt;/h4&gt;
+
+&lt;p&gt;I love &lt;a href=&quot;http://onword.co&quot;&gt; Onword&lt;/a&gt;. In fact, I&amp;rsquo;m using it to write this blog post. I always struggle with writing, and being able to hit F11 and have nothing but my own words to concentrate on makes it much easier for me. So, on this fateful evening, I fired up Onword and wrote out, in detail, a description of the logo I was trying to create; what I wanted to convey first and foremost, how that would be represented in the logo, what subtle additional contexts I would include, how it would fit in with the brand as a whole. In all I wrote 347 words, most of them rambling, but by the time I had finished, I had an almost pixel-perfect picture of the design I wanted in my head.&lt;/p&gt;
+
+&lt;p&gt;It was hard. It took until 5.30am. But I finished it. And the sense of euphoria I had after finally being happy with something threw me straight into my next project. I was back on form.&lt;/p&gt;
+
+&lt;p&gt;And the fruit of all this labour? Well it looks &lt;a href=&quot;http://dribbble.com/shots/827551-Facing-Africa&quot;&gt;kinda like this&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>You've got a friend in me</title>
+    <link href="http://molovo.co/archive/youve-got-a-friend-in-me"/>
+    <updated>2012-11-28T10:37:27+00:00</updated>
+    <id>http://molovo.co/archive/youve-got-a-friend-in-me</id>
+    <content type="html">&lt;p&gt;When I started molovo in 2009 it was little more than a hobby. I began making websites for a few of my friends, and then a few of their friends and so on. Things have been growing gradually, and finally, towards the end of August this year, I decided I was going to try and make it as a fully fledged designer and developer. I was terrified. Was it worth all the effort? What if I didn’t find any clients? Was I even good enough? How would I possibly manage to make a name for myself in this already overcrowded field?&lt;/p&gt;
+
+&lt;p&gt;I started actively using the services of Twitter and Loviv at around this time, as they gave me a good outlet to promote news and updates for molovo, as well as showing off some of my in-progress work. Since doing this, I have realised that my fears about joining the design and development community were trivial. I’ve realised that I don’t have any competitors in the traditional sense of the word. What I have instead is a worldwide community of friends, many of whom I’ve yet to meet, who are on hand to provide extremely useful design advice, help with code debugging, praise and criticism, and whose unending generosity has had a huge effect on both my confidence and ability.&lt;/p&gt;
+
+&lt;p&gt;I sincerely hope that one day I’ll be able to repay the kindness of these friends, acquaintances and strangers, as without their help I very much doubt I would have gotten off to the great start I’ve been lucky enough to enjoy. I&amp;rsquo;d particularly like to give a shout out to two extra-specially awesome people. &lt;a href=&quot;http://samdoesth.at&quot;&gt;Sam Piggott&lt;/a&gt; has provided some great free advice about getting started in the field, as well as some brilliant constructive criticism, and &lt;a href=&quot;http://twitter.com/imran_parvez&quot;&gt;Imran Parvez&lt;/a&gt;, whose critique has helped me to eliminate bad habits and poor practises from my work.&lt;/p&gt;
+
+&lt;p&gt;I’ve also had the great fortune of being able to work with my little brother, best friend, and budding trainee Gareth, who has been a huge help in developing my wild and crazy ideas into useable concepts, testing new projects on a variety of different devices, and telling me honestly when I’m heading in the wrong direction.&lt;/p&gt;
+
+&lt;p&gt;It’s been a great couple of months, and I hope it continues. Overall though, if it’s made me realise one thing, it’s this:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I wish I’d done it sooner&lt;/em&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
     <title>It's a whole new world</title>
-    <link href="http://molovo.co/blog/its-a-whole-new-world"/>
+    <link href="http://molovo.co/archive/its-a-whole-new-world"/>
     <updated>2012-11-27T12:23:47+00:00</updated>
-    <id>http://molovo.co/blog/its-a-whole-new-world</id>
+    <id>http://molovo.co/archive/its-a-whole-new-world</id>
     <content type="html">&lt;h3&gt;My thoughts on a week with elementary OS.&lt;/h3&gt;
 
 &lt;p&gt;I&amp;rsquo;ve been an Ubuntu user for 7 years now, but I hate what it&amp;rsquo;s become. I really, really hate it. For a year I&amp;rsquo;ve had to contend with only being able to boot my PC using the boot loader on an old Mac OSX &amp;ldquo;hackintosh&amp;rdquo; CD after the upgrade to 11.10 ruined my hard disks boot partition beyond repair (I devoted a full two weeks to fixing it at one point, it will not work). I haven&amp;rsquo;t had a properly working third monitor since my foray into Linux began.&lt;/p&gt;
@@ -1411,9 +1704,9 @@ A pissed off web developer.&lt;/p&gt;
   
   <entry>
     <title>You're doing it wrong</title>
-    <link href="http://molovo.co/blog/youre-doing-it-wrong"/>
+    <link href="http://molovo.co/archive/youre-doing-it-wrong"/>
     <updated>2012-11-27T12:12:46+00:00</updated>
-    <id>http://molovo.co/blog/youre-doing-it-wrong</id>
+    <id>http://molovo.co/archive/youre-doing-it-wrong</id>
     <content type="html">&lt;p&gt;Adverts annoy me. Adverts annoy the majority of people. There are entire industries devoted to blocking adverts on the web. Yet still, they persist in appearing on nearly every free website, social network and mobile app in existence. Why?&lt;/p&gt;
 
 &lt;p&gt;Facebook, Google+ and Twitter all employ promoted posts as their advertising method of choice. I, like half the world, use all of these social networks. I use them in both my personal life, as well as to promote my business. The people I follow on these networks are people whose posts I am interested in, who I know are going to write updates that I want to read. So when an advert appears in my stream, interrupting these posts, it annoys me. Even if it is a product I may be interested in, the first thing I look for is the hide button, because it is &lt;em&gt;unsolicited&lt;/em&gt;. I have no problem with businesses that I follow promoting their content or services. This is because I have chosen to follow them, and by extension, the information that they post is information that I want to see.&lt;/p&gt;

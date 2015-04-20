@@ -7,7 +7,6 @@ excerpt: "Life is a little like writing a story.
 
 <p><small><em>Published on The Branch.</em></small></p>"
 categories: blog
-archived: true
 ---
 
-Blank
+[*Published on The Branch*]({{ page.redirectURL }})

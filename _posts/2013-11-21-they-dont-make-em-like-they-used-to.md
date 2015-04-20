@@ -7,4 +7,4 @@ excerpt: "Comparing a vintage guitar to modern UI and web design.<br /><small><e
 categories: blog
 ---
 
-Blank
+[*Published on Everyday Designer*]({{ page.redirectURL }})
