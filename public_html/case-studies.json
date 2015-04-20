@@ -1,10 +1,34 @@
 [
   
   {
+    "title"    : "Start Your Engines",
+    "intro"    : "Beer hasn't been brewed in Berkhamsted since 1914. I helped Haresfoot Craft Beer restart a centuries old local tradition.",
+    "slug"     : "hottrax-motorsport",
+    "client"   : "Hottrax Motorsport"
+  }
+  ,
+  
+  {
     "title"    : "I did it my way",
     "intro"    : "I needed a CSS framework that worked slightly differently from those available - so I built my own.",
     "slug"     : "melody",
     "client"   : "Melody"
+  }
+  ,
+  
+  {
+    "title"    : "I did it my way",
+    "intro"    : "I needed a CSS framework that worked slightly differently from those available - so I built my own.",
+    "slug"     : "melody",
+    "client"   : "Melody"
+  }
+  ,
+  
+  {
+    "title"    : "Brewing Up a Storm",
+    "intro"    : "Beer hasn't been brewed in Berkhamsted since 1914. I helped Haresfoot Craft Beer restart a centuries old local tradition.",
+    "slug"     : "haresfoot",
+    "client"   : "Haresfoot Craft Beer"
   }
   ,
   
@@ -25,6 +49,22 @@
   ,
   
   {
+    "title"    : "Popping the Cork",
+    "intro"    : "In the heart of Oxford, 1855 is not your traditional wine bar. I helped them break ground with a fresh and innovative new website.",
+    "slug"     : "1855",
+    "client"   : "1855"
+  }
+  ,
+  
+  {
+    "title"    : "A Smile Costs Nothing",
+    "intro"    : "Entering the legal world can be a scary prospect. I helped Helen Starkie make those first steps a little easier for her clients.",
+    "slug"     : "helen-starkie",
+    "client"   : "Helen Starkie Solicitor"
+  }
+  ,
+  
+  {
     "title"    : "A Smile Costs Nothing",
     "intro"    : "Entering the legal world can be a scary prospect. I helped Helen Starkie make those first steps a little easier for her clients.",
     "slug"     : "helen-starkie",
@@ -37,6 +77,22 @@
     "intro"    : "Everyone gets their inspiration from somewhere different. The Branch is a place where inspiring people write about and share the things that inspire them the most.",
     "slug"     : "the-branch",
     "client"   : "The Branch"
+  }
+  ,
+  
+  {
+    "title"    : "What Inspires You?",
+    "intro"    : "Everyone gets their inspiration from somewhere different. The Branch is a place where inspiring people write about and share the things that inspire them the most.",
+    "slug"     : "the-branch",
+    "client"   : "The Branch"
+  }
+  ,
+  
+  {
+    "title"    : "Freshly Roasted",
+    "intro"    : "Love Coffee are already a recognised name on British high streets. I helped them launch their brand onto the web.",
+    "slug"     : "love-coffee",
+    "client"   : "Love Coffee"
   }
   ,
   

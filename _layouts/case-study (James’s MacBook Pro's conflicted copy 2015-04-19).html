@@ -1,0 +1,112 @@
+---
+layout: default
+---
+
+{% if page.typography.uses_kit %}
+  <link rel="stylesheet" href="/assets/fonts/case-studies/{{ page.slug }}/kit.css" />
+{% endif %}
+
+<article class="case-study-article {{ page.slug }}">
+  <section class="feature" style="background-image: url({{ site.url }}/assets/dist/img/{{ page.slug }}-bg.jpg);">
+    <h4><em>{{ page.title }}</em></h4>
+    <!-- <img src="/assets/dist/img/{{ page.slug }}-logo-white.png" alt="{{ page.title }} Logo" class="branding"> -->
+    <h1>{{ page.client }}</h1>
+  </section>
+
+  <section class="brief">
+    <div class="container">
+      <img src="/assets/dist/img/{{ page.slug }}-logo.png" alt="{{ page.title }} Logo" class="branding">
+
+      <h2>Brief</h2>
+
+      {{ page.brief | markdownify }}
+    </div>
+  </section>
+
+  <section class="solution">
+    <div class="container">
+      <h2>Solution</h2>
+
+      {{ page.solution | markdownify }}
+    </div>
+  </section>
+
+  <section class="color-palette" style="background-image: url({{ site.url }}/assets/dist/img/{{ page.slug }}-bg.jpg);">
+    <div class="container">
+      <h2>Colour Palette</h2>
+
+      {% for color in page.color-palette %}
+        <div class="swatch" data-color="{{ color }}"></div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="typography {% if page.typography.reverse-color %}reverse-color{% endif %}" style="{{ page.typography.style }}">
+    <div class="container">
+      <h2>Typography</h2>
+
+      {% if page.typography.heading %}
+        <h6 class="headings"><small>Headings</small></h6>
+        <h2 class="{{ page.typography.heading.class }}" style="{{ page.typography.heading.style }}">{{ page.typography.heading.name }}</h2>
+      {% endif %}
+
+      {% if page.typography.subheading %}
+        <h6 class="subheadings"><small>Subheadings</small></h6>
+        <h4 class="{{ page.typography.subheading.class }}" style="{{ page.typography.subheading.style }}">{{ page.typography.subheading.name }}</h4>
+      {% endif %}
+
+      {% if page.typography.body %}
+        <h6 class="body"><small>Body</small></h6>
+        <h5 class="remove-bottom {{ page.typography.body.class }}" style="{{ page.typography.body.style }}">
+          {{ page.typography.body.name }}
+        </h5>
+        <p class="{{ page.typography.body.class }}" style="{{ page.typography.body.style }}">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, eligendi, odio, alias, voluptatibus repellendus obcaecati accusantium asperiores id ab exercitationem nostrum illo veritatis molestiae. Ipsam, voluptatibus dolor laborum consectetur recusandae.
+        </p>
+      {% endif %}
+
+      {% if page.typography.text %}
+        <section class="typography-text">
+          {{ page.typography.text | markdownify }}
+        </section>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="website-design" style="background-image: url({{ site.url }}/assets/dist/img/{{ page.slug }}-bg.jpg);">
+    {% for screenshot in page.screenshots %}
+      <div class="container">
+        <h2>{{ screenshot.title }}</h2>
+        <div class="browser">
+          <img src="{{ site.url }}/assets/dist/img/{{ screenshot.url }}" alt="">
+        </div>
+      </div>
+    {% endfor %}
+  </section>
+
+  <section class="what-i-learned">
+    <div class="container">
+      <h2>What I Learned</h2>
+
+      {{ page.what_i_learned | markdownify }}
+    </div>
+  </section>
+
+  <section class="project-link" style="background-image: url({{ site.url }}/assets/dist/img/{{ page.slug }}-bg.jpg);">
+    <a href="{{ page.projectURL }}" class="button" target="_blank">Visit {{ page.client }}</a>
+  </section>
+</article>
+
+{% if page.work_next %}
+  <a href="{{ page.work_next.url }}" class="next-post-link">
+    <em><small>Next Case Study</small></em>
+    <h6>{{ page.work_next.client }}</h6>
+  </a>
+{% endif %}
+
+{% if page.work_previous %}
+  <a href="{{ page.work_previous.url }}" class="previous-post-link">
+    <em><small>Previous Case Study</small></em>
+    <h6>{{ page.work_previous.client }}</h6>
+  </a>
+{% endif %}

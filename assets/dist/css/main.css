@@ -422,7 +422,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.025em;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  color: #b52936;
+  color: #B52936;
 }
 h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
   font-weight: 400;
@@ -517,7 +517,7 @@ blockquote {
   font-style: italic;
 }
 blockquote cite, blockquote cite a {
-  color: #b52936;
+  color: #B52936;
   font-size: 0.75em;
   font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 700;
@@ -553,7 +553,7 @@ blockquote.pull p:before, blockquote.pull p:after, blockquote.push p:before, blo
   content: " ";
   width: 3em;
   height: 1px;
-  background: #b52936;
+  background: #B52936;
   position: absolute;
   left: 0;
 }
@@ -674,7 +674,7 @@ code, code span {
 .button {
   padding: 0.75em 2.25em;
   font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  background: #1a92ce;
+  background: #1A92CE;
   color: white;
   font-weight: 600;
   text-decoration: none;
@@ -693,7 +693,7 @@ code, code span {
 }
 
 a {
-  color: #1a92ce;
+  color: #1A92CE;
 }
 
 .lead, .case-study-brief p:first-of-type {
@@ -790,7 +790,7 @@ body {
           transition: fill 0.25s;
 }
 .logo svg .frame {
-  fill: #b52936;
+  fill: #B52936;
 }
 .logo svg .left-lens, .logo svg .right-lens {
   fill: transparent;
@@ -836,7 +836,7 @@ body {
 }
 .fixed .main a {
   text-decoration: none;
-  color: #b52936;
+  color: #B52936;
   display: inline-block;
   -webkit-transition: color 0.25s;
           transition: color 0.25s;
@@ -882,7 +882,7 @@ body {
   display: inline-block;
   padding: 1.5em;
   font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  color: #b52936;
+  color: #B52936;
   text-decoration: none;
   font-weight: 700;
   font-size: 1.3125em;
@@ -949,7 +949,7 @@ body {
   margin-bottom: 0;
 }
 .fixed .work ul li h2 {
-  color: #b52936;
+  color: #B52936;
   font-size: 3em;
   margin-bottom: 0;
   font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -963,13 +963,13 @@ body {
   background: transparent;
 }
 .fixed.open .main a {
-  color: #b52936;
+  color: #B52936;
 }
 .fixed.open .main a .lines, .fixed.open .main a .lines:before, .fixed.open .main a .lines:after {
-  background: #b52936;
+  background: #B52936;
 }
 .fixed.open .logo svg .frame {
-  fill: #b52936;
+  fill: #B52936;
 }
 .fixed.open .logo svg:hover .left-lens {
   fill: rgba(9, 39, 55, 0.7);
@@ -990,14 +990,14 @@ body {
   fill: white;
 }
 .fixed.transparent:not(.open) .logo svg:hover .left-lens {
-  fill: #1a92ce;
+  fill: #1A92CE;
 }
 .fixed.transparent:not(.open) .logo svg:hover .right-lens {
   fill: #730329;
 }
 
 .bottom {
-  background: #b52936;
+  background: #B52936;
   position: relative;
   z-index: 2;
   color: white;
@@ -1141,7 +1141,7 @@ body {
   display: inline-block;
   width: 1.2rem;
   height: 0.2rem;
-  background: #b52936;
+  background: #B52936;
   border-radius: 0.10714rem;
   -webkit-transition: -webkit-transform 0.25s, top 0.25s, width 0.25s, margin 0.25s, background 0.25s;
           transition: transform 0.25s, top 0.25s, width 0.25s, margin 0.25s, background 0.25s;
@@ -1151,7 +1151,7 @@ body {
   display: inline-block;
   width: 1.2rem;
   height: 0.2rem;
-  background: #b52936;
+  background: #B52936;
   border-radius: 0.10714rem;
   -webkit-transition: -webkit-transform 0.25s, top 0.25s, width 0.25s, margin 0.25s, background 0.25s;
           transition: transform 0.25s, top 0.25s, width 0.25s, margin 0.25s, background 0.25s;
@@ -1209,7 +1209,7 @@ body {
 }
 @media (max-width: 51.1875em) {
   .post-main .container, .post-list .container {
-    padding: 0 3em;
+    padding: 0 1.5em;
   }
 }
 .post-main .faded-scroll-indicator, .post-list .faded-scroll-indicator {
@@ -1265,7 +1265,7 @@ body {
   margin-bottom: 0;
 }
 .post-list li h1 a, .post-list li h2 a {
-  color: #b52936;
+  color: #B52936;
   text-decoration: none;
 }
 .post-list li h1 a:hover, .post-list li h2 a:hover {
@@ -1494,7 +1494,7 @@ p > img.full-width, img[title="full-width"] {
 }
 .next-post-link:hover,
 .previous-post-link:hover {
-  background: #b52936;
+  background: #B52936;
 }
 .next-post-link:before,
 .previous-post-link:before {
@@ -1518,7 +1518,7 @@ p > img.full-width, img[title="full-width"] {
           transform: translate(-100%, -50%);
 }
 .next-post-link:before {
-  content: "\2192";
+  content: "→";
   left: 1.5em;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
@@ -1540,7 +1540,7 @@ p > img.full-width, img[title="full-width"] {
           transform: translate(100%, -50%);
 }
 .previous-post-link:before {
-  content: "\2190";
+  content: "←";
   right: 1.5em;
   -webkit-transform: translate(50%, -50%);
       -ms-transform: translate(50%, -50%);
@@ -1555,7 +1555,7 @@ p > img.full-width, img[title="full-width"] {
 }
 
 .contact-header {
-  background: #b52936;
+  background: #B52936;
   color: white;
   padding: 9em 0 6em;
 }
@@ -1646,7 +1646,7 @@ p > img.full-width, img[title="full-width"] {
 .contact-form input:not([type="submit"]), .contact-form textarea {
   padding: 0.75em;
   border-radius: 0.15em;
-  border: 0 solid #29b549;
+  border: 0 solid #29B549;
   margin: 0 -0.75em 1.5em;
   background: rgba(115, 3, 41, 0.05);
   font-size: 1em;
@@ -1665,7 +1665,7 @@ p > img.full-width, img[title="full-width"] {
   background: white;
 }
 .contact-form input:not([type="submit"]):valid, .contact-form textarea:valid {
-  border-color: #29b549;
+  border-color: #29B549;
   border-left-width: 0.25em;
   padding-left: 0.5em;
 }
@@ -1893,10 +1893,10 @@ p > img.full-width, img[title="full-width"] {
   margin-bottom: 0;
 }
 .what-i-learned h2 p:before {
-  content: "\201C";
+  content: "“";
 }
 .what-i-learned h2 p:after {
-  content: "\201D";
+  content: "”";
 }
 p + .what-i-learned h2 {
   margin-top: 3em;
@@ -1975,7 +1975,7 @@ p + .what-i-learned h2 {
   font-size: 2.25em;
   float: left;
   vertical-align: top;
-  color: #b52936;
+  color: #B52936;
 }
 .case-study-color-palette {
   background-size: cover;
@@ -2038,10 +2038,10 @@ p + .what-i-learned h2 {
   background-repeat: no-repeat;
 }
 .case-study--haresfoot .section-title {
-  color: #b42c33;
+  color: #B42C33;
 }
 .case-study--haresfoot .typography, .case-study--haresfoot .color-palette {
-  background-color: #ffca06;
+  background-color: #FFCA06;
 }
 .case-study--haresfoot .typography-heading {
   font-weight: 400;
@@ -2058,7 +2058,7 @@ p + .what-i-learned h2 {
   color: white;
 }
 .case-study--haresfoot .typography-body {
-  color: white;
+  color: #FFFFFF;
   font-family: "Mission Gothic";
 }
 
@@ -2071,22 +2071,22 @@ p + .what-i-learned h2 {
   color: #113245;
 }
 .case-study--1855 .typography, .case-study--1855 .color-palette {
-  background-color: #aa314e;
+  background-color: #AA314E;
 }
 .case-study--1855 .typography-heading {
   font-weight: 300;
   font-family: "brandon-grotesque";
   text-transform: uppercase;
-  color: white;
+  color: #FFFFFF;
 }
 .case-study--1855 .typography-subheading {
   font-weight: 300;
   font-family: "brandon-grotesque";
   text-transform: uppercase;
-  color: white;
+  color: #FFFFFF;
 }
 .case-study--1855 .typography-body {
-  color: white;
+  color: #FFFFFF;
   font-style: italic;
   font-family: "minion-pro";
 }
@@ -2097,25 +2097,25 @@ p + .what-i-learned h2 {
   background-repeat: no-repeat;
 }
 .case-study--melody .section-title {
-  color: #2b303b;
+  color: #2B303B;
 }
 .case-study--melody .typography, .case-study--melody .color-palette {
-  background-color: #c16069;
+  background-color: #C16069;
 }
 .case-study--melody .typography-heading {
   font-family: "jaf-bernino-sans";
   letter-spacing: 0;
-  color: white;
+  color: #FFFFFF;
 }
 .case-study--melody .typography-subheading {
   font-family: "ff-meta-serif-web-pro";
   letter-spacing: 0;
-  color: white;
+  color: #FFFFFF;
 }
 .case-study--melody .typography-body {
   font-family: "ff-meta-serif-web-pro";
   letter-spacing: 0;
-  color: white;
+  color: #FFFFFF;
 }
 
 .case-study--helen-starkie .intro {
@@ -2124,15 +2124,15 @@ p + .what-i-learned h2 {
   background-repeat: no-repeat;
 }
 .case-study--helen-starkie .section-title {
-  color: #cbd09e;
+  color: #CBD09E;
 }
 .case-study--helen-starkie .typography, .case-study--helen-starkie .color-palette {
-  background-color: #fffff8;
+  background-color: #FFFFF8;
 }
 .case-study--helen-starkie .typography-heading {
   font-family: "freight-sans-pro";
   letter-spacing: 0;
-  color: #cbd09e;
+  color: #CBD09E;
 }
 .case-study--helen-starkie .typography-body {
   font-family: "ff-tisa-web-pro";
@@ -2146,15 +2146,15 @@ p + .what-i-learned h2 {
   background-repeat: no-repeat;
 }
 .case-study--the-branch .section-title {
-  color: #3d5165;
+  color: #3D5165;
 }
 .case-study--the-branch .typography, .case-study--the-branch .color-palette {
-  background-color: white;
+  background-color: #FFFFFF;
 }
 .case-study--the-branch .typography-heading {
   font-weight: 900;
   text-transform: uppercase;
-  color: #3d5165;
+  color: #3D5165;
   letter-spacing: 1px;
   word-spacing: 5px;
   font-family: "brandon-grotesque";
@@ -2162,7 +2162,7 @@ p + .what-i-learned h2 {
 .case-study--the-branch .typography-subheading {
   font-weight: 300;
   text-transform: uppercase;
-  color: #7d97b1;
+  color: #7D97B1;
   letter-spacing: 1px;
   word-spacing: 5px;
   font-family: "brandon-grotesque";
@@ -2170,7 +2170,7 @@ p + .what-i-learned h2 {
 .case-study--the-branch .typography-body {
   font-family: "rooney-web";
   letter-spacing: 0;
-  color: #3d5165;
+  color: #3D5165;
 }
 
 .case-study--love-coffee .intro {
@@ -2182,16 +2182,16 @@ p + .what-i-learned h2 {
   color: #057281;
 }
 .case-study--love-coffee .typography, .case-study--love-coffee .color-palette {
-  background-color: #ef8019;
+  background-color: #EF8019;
 }
 .case-study--love-coffee .typography-heading {
   font-weight: 300;
   font-family: "Avant Garde";
   text-transform: uppercase;
-  color: white;
+  color: #FFFFFF;
 }
 .case-study--love-coffee .typography-body {
-  color: white;
+  color: #FFFFFF;
   font-family: "Georgia";
 }
 
@@ -2201,16 +2201,16 @@ p + .what-i-learned h2 {
   background-repeat: no-repeat;
 }
 .case-study--hottrax-motorsport .section-title {
-  color: #f87d00;
+  color: #F87D00;
 }
 .case-study--hottrax-motorsport .typography, .case-study--hottrax-motorsport .color-palette {
-  background-color: #152d2c;
+  background-color: #152D2C;
 }
 .case-study--hottrax-motorsport .typography-heading {
   font-weight: 700;
   font-family: "proxima-nova";
   letter-spacing: -0.025em;
-  color: #f87d00;
+  color: #F87D00;
 }
 .case-study--hottrax-motorsport .typography-body {
   color: white;
@@ -2223,12 +2223,10 @@ p + .what-i-learned h2 {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-
   50% {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
   }
-
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
@@ -2240,12 +2238,10 @@ p + .what-i-learned h2 {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-
   50% {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
   }
-
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
@@ -2277,7 +2273,7 @@ p + .what-i-learned h2 {
 }
 
 .intro {
-  background: #b52936;
+  background: #B52936;
   padding: 9em 0 6em;
   position: relative;
 }
@@ -2364,10 +2360,10 @@ p + .what-i-learned h2 {
   height: 0.25em;
 }
 .featured-case-study .testimonial blockquote p:before {
-  content: "\201c";
+  content: "“";
 }
 .featured-case-study .testimonial blockquote p:after {
-  content: "\201d";
+  content: "”";
 }
 .featured-case-study .testimonial blockquote cite {
   color: white;
@@ -2389,7 +2385,7 @@ p + .what-i-learned h2 {
 }
 .stories h1 {
   text-align: center;
-  color: #b52936;
+  color: #B52936;
   font-weight: 300;
 }
 @media (min-width: 40em) {
@@ -2499,7 +2495,7 @@ p + .what-i-learned h2 {
   font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   text-transform: uppercase;
   display: block;
-  color: #b52936;
+  color: #B52936;
   text-shadow: -1px 1px 1px #730329, -2px 2px 1px #730329, -3px 3px 1px #730329, -4px 4px 1px #730329, -5px 5px 1px #730329, -6px 6px 1px #730329, -7px 7px 1px #730329, -8px 8px 1px #730329, -9px 9px 1px #730329, -10px 10px 1px #730329, 5px 5px 15px rgba(0, 0, 0, 0.3);
   line-height: 1.125em;
   font-weight: 700;
@@ -2564,7 +2560,7 @@ p + .what-i-learned h2 {
 }
 .article--keeping-up .fucked:after {
   border-style: solid;
-  border-color: #b52936 #b52936 transparent transparent;
+  border-color: #B52936 #B52936 transparent transparent;
   border-width: 18em 80vw;
   content: "";
   height: 0;
@@ -2593,7 +2589,7 @@ p + .what-i-learned h2 {
   max-width: 12em;
   font-family: "GauthierFY", "Georgia", "Times New Roman", serif;
   font-weight: 700;
-  color: #f7f7aa;
+  color: #F7F7AA;
   text-shadow: -1px 1px 1px #730329, -2px 2px 1px #730329, -3px 3px 1px #730329, -4px 4px 1px #730329, -5px 5px 1px #730329, -6px 6px 1px #730329, -7px 7px 1px #730329, -8px 8px 1px #730329, -9px 9px 1px #730329, -10px 10px 1px #730329, 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 .article--keeping-up .making-sense-of-it-all {
@@ -2621,7 +2617,7 @@ p + .what-i-learned h2 {
   font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   text-transform: uppercase;
   display: block;
-  color: #b52936;
+  color: #B52936;
   text-shadow: -1px 1px 1px #730329, -2px 2px 1px #730329, -3px 3px 1px #730329, -4px 4px 1px #730329, -5px 5px 1px #730329, -6px 6px 1px #730329, -7px 7px 1px #730329, -8px 8px 1px #730329, -9px 9px 1px #730329, -10px 10px 1px #730329, 5px 5px 15px rgba(0, 0, 0, 0.3);
   line-height: 1.125em;
   font-weight: 700;
@@ -2650,7 +2646,7 @@ p + .what-i-learned h2 {
   font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   text-transform: uppercase;
   display: block;
-  color: #b52936;
+  color: #B52936;
   text-shadow: -1px 1px 1px #730329, -2px 2px 1px #730329, -3px 3px 1px #730329, -4px 4px 1px #730329, -5px 5px 1px #730329, -6px 6px 1px #730329, -7px 7px 1px #730329, -8px 8px 1px #730329, -9px 9px 1px #730329, -10px 10px 1px #730329, 5px 5px 15px rgba(0, 0, 0, 0.3);
   line-height: 1.125em;
   font-weight: 700;
@@ -2681,7 +2677,7 @@ p + .what-i-learned h2 {
 }
 
 .article--great-minds .post-title {
-  color: #7dc2c2;
+  color: #7DC2C2;
   font-family: "GauthierFY", "Georgia", "Times New Roman", serif;
   text-transform: capitalize;
   position: relative;
