@@ -23,7 +23,7 @@
 
     <script>
       (function (d) {
-        window.pageTitle = '{% if page.title %}{{ page.title}} - {% endif %}molovo. Web Design, Portsmouth';
+        window.pageTitle = '{% if page.title %}{{ page.title | escape }} - {% endif %}molovo. Web Design, Portsmouth';
 
         function addFont() {
           var style = d.createElement( 'style' );
