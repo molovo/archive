@@ -23,19 +23,6 @@
 
       // Initialize smoothscroll.js
       ss.fixAllLinks();
-
-      // Init Google Analytics
-      window.ga = function () {
-        window.ga.q.push( arguments )
-      };
-      ga.q = [];
-      ga.l = +new Date;
-      ga( 'create', 'UA-61791620-1', {
-        'cookieDomain': 'molovo.co',
-        'cookieExpires': 60 * 60 * 24 * 28 // Time in seconds.
-      } );
-      ga( 'send', 'pageview' )
-
     },
 
     /**
