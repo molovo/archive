@@ -10,4 +10,4 @@
   insertBefore( d, q )
 }( window, document, 'script', '_gs' );
 
-_gs( 'your-site-token' );
+_gs( 'GSN-821671-Z' );
