@@ -183,6 +183,11 @@
             scroll_pos = window.pageYOffset;
           }, 50 );
 
+          if ( !window.userHasScrolled ) {
+            Molovo.events.lazyLoaders.caseStudy();
+            window.userHasScrolled = true;
+          }
+
           if ( window.trackingScrollEvents ) {
             return;
           }
@@ -303,14 +308,9 @@
          */
         init: function () {
           this.colorSwatches();
-          this.caseStudy();
 
           if ( document.body.classList.contains( "blog" ) ) {
             this.ads();
-          }
-
-          if ( document.body.classList.contains( "home" ) ) {
-            this.callToAction();
           }
 
           // Initialize echo.js here for lazy loading images
@@ -401,10 +401,6 @@
           return this.getFile( "/case-studies.json", callback );
         },
 
-        getCallsToAction: function ( callback ) {
-          return this.getFile( "/calls-to-action.json", callback );
-        },
-
         caseStudy: function () {
           this.getCaseStudies( function ( data ) {
             var caseStudies = JSON.parse( data ),
@@ -421,18 +417,7 @@
 
             html = compiled.render( context );
             act.innerHTML = html;
-            act.setAttribute( 'data-echo-background', "/assets/dist/img/case-studies/" + context.slug + "/bg.jpg" );
-          } );
-        },
-
-        callToAction: function () {
-          this.getCallsToAction( function ( data ) {
-            var callsToAction = JSON.parse( data ),
-              num = Math.floor( Math.random() * callsToAction.length ),
-              context = callsToAction[ num ],
-              act = document.getElementById( "call-to-action" ).getElementsByTagName( "p" )[ 0 ];
-
-            act.innerHTML = context;
+            act.style.backgroundImage = "url(/assets/dist/img/case-studies/" + context.slug + "/bg.jpg)";
           } );
         }
 
