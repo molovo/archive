@@ -21,6 +21,8 @@
       // Initialize buggyfill to fix vh and vw units on iOS
       window.viewportUnitsBuggyfill.init();
 
+      window.userHasScrolled = false;
+
       // Initialize smoothscroll.js
       ss.fixAllLinks();
     },
@@ -422,7 +424,7 @@
               html;
 
             if ( location.href.indexOf( context.slug ) > -1 ) {
-              context = caseStudies[ num++ ];
+              context = caseStudies[ num === (num.length - 1) ? 0 : num++ ];
             }
 
             html = compiled.render( context );
