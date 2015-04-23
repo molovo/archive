@@ -86,6 +86,24 @@
       onload="Typekit.load();">
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+    <script id="case-study-template" type="text/template">
+      {% raw %}
+      <div class="container intro-container">
+        <h2 class="serif">
+          {{ intro }}
+        </h2>
+        <a href="/work/{{ slug }}" class="button">View the Case Study</a>
+      </div>
+      {% endraw %}
+    </script>
+
+    <script src="/assets/dist/js/main.min.js" async defer></script>
+
+    {% if currentURL == 'work' %}
+      <script src="//use.typekit.net/ace7wjo.js" async defer
+        onload="Typekit.load();"></script>
+    {% endif %}
   </head>
 
   <body class="{{ bodyClass }}">
@@ -161,24 +179,6 @@
         </a>
       </div>
     </footer>
-
-    <script id="case-study-template" type="text/template">
-      {% raw %}
-      <div class="container intro-container">
-        <h2 class="serif">
-          {{ intro }}
-        </h2>
-        <a href="/work/{{ slug }}" class="button">View the Case Study</a>
-      </div>
-      {% endraw %}
-    </script>
-
-    <script src="/assets/dist/js/main.min.js" async defer></script>
-
-    {% if currentURL == 'work' %}
-      <script src="//use.typekit.net/ace7wjo.js" async defer
-        onload="Typekit.load();"></script>
-    {% endif %}
 
   </body>
 </html>

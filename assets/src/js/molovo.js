@@ -1,5 +1,5 @@
 /* jshint browser: true */
-/* global ss, Hogan */
+/* global ss, Hogan, NProgress, echo */
 ( function () {
   "use strict";
 
@@ -56,6 +56,7 @@
         window.addEventListener( "mousemove", this.mouseOverHeader );
 
         this.bindScrollListeners();
+        this.pageLoadListeners();
         this.checkPageVisibility();
 
         if ( document.body.classList.contains( "contact" ) ) {
@@ -63,9 +64,21 @@
         }
       },
 
+      pageLoadListeners: function () {
+        var done = function() {
+          console.log('done');
+          NProgress.done();
+          Molovo.init();
+        };
+
+        document.addEventListener( "page:fetch", NProgress.start );
+        document.addEventListener( "page:restore", NProgress.remove );
+        document.addEventListener( "page:change", done );
+        document.addEventListener( "page:load", done );
+      },
+
       headerScrollListener: function () {
-        var list = document.querySelector( ".work" ),
-          items = document.querySelectorAll( ".work li" );
+        var items = document.querySelectorAll( ".work li" );
         clearTimeout( window.isScrollingWorkList );
 
         for ( var i = items.length - 1; i >= 0; i-- ) {
@@ -318,38 +331,35 @@
             offset: 100,
             throttle: 250,
             unload: false,
-            debounce: false,
-            callback: function ( element, op ) {
-              console.log( element, 'has been', op + 'ed' )
-            }
+            debounce: false
           } );
         },
 
         ads: function () {
-          var ads = document.querySelectorAll( '.ad-container a' ), // Grab all the ads
+          var ads = document.querySelectorAll( ".ad-container a" ), // Grab all the ads
             num = Math.floor( ( Math.random() * ads.length ) + 1 ) - 1, // We grab a random number
             ad = ads[ num ], // And use as an array index
             x = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, // Get the window width, cross-browser
             screenSize, image;
 
           // Display the ad
-          ad.style.display = 'inline-block';
+          ad.style.display = "inline-block";
 
           window.onresize = function () {
             // We rework screen size when the resize happens
-            x = window.innerWidth || document.documentElement.clientWidth || d.body.clientWidth;
+            x = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
             // Set the screen size variables based on the em values in the CSS
-            screenSize = x > ( 51 * 1.3125 * 16 ) ? 'large' : x > ( 36 * 16 ) ? 'medium' : 'small';
+            screenSize = x > ( 51 * 1.3125 * 16 ) ? "large" : x > ( 36 * 16 ) ? "medium" : "small";
 
             // Find the right image for the screen size
-            image = ad.querySelector( 'img[data-screen-size="' + screenSize + '"]' );
+            image = ad.querySelector( "img[data-screen-size=\"" + screenSize + "\"]" );
 
             // Update the src if it hasn't been done already
             // This check stops it being set more than once (resulting in multiple requests)
-            if ( image.src !== image.getAttribute( 'data-src' ) )
-              image.src = image.getAttribute( 'data-src' );
-          }
+            if ( image.src !== image.getAttribute( "data-src" ) )
+              image.src = image.getAttribute( "data-src" );
+          };
 
           // Fire a resize event on first load
           window.onresize();
