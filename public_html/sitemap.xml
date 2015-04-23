@@ -1,71 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>https://molovo.co/archive/youre-doing-it-wrong</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>https://molovo.co/archive/its-a-whole-new-world</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>https://molovo.co/archive/youve-got-a-friend-in-me</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>https://molovo.co/archive/poke-it-til-it-hurts</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>https://molovo.co/archive/crowdsourcing</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
         <loc>https://molovo.co/blog/frameworks</loc>
         <lastmod>2015-04-21T22:04:41+01:00</lastmod>
     </url>
     <url>
-        <loc>https://molovo.co/archive/sql-bind-variables</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>https://molovo.co/archive/reinventing-the-wheel</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
         <loc>https://molovo.co/blog/holding-back-the-years</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>https://molovo.co/archive/switching-off</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>https://molovo.co/archive/learning</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>https://molovo.co/archive/git-plus</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>https://molovo.co/archive/stop-think-discuss</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>https://molovo.co/archive/sleep</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>https://molovo.co/archive/dont-give-away-the-gold</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>https://molovo.co/archive/show-your-personality</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>https://molovo.co/archive/keep-it-simple-stupid</loc>
         <lastmod>2015-04-21T22:04:41+01:00</lastmod>
     </url>
     <url>
@@ -81,18 +21,6 @@
         <lastmod>2015-04-21T22:04:41+01:00</lastmod>
     </url>
     <url>
-        <loc>https://molovo.co/archive/taking-the-leap</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>https://molovo.co/archive/gisele</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>https://molovo.co/archive/time</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
         <loc>https://molovo.co/blog/in-pursuit-of-happyness</loc>
         <lastmod>2015-04-21T22:04:41+01:00</lastmod>
     </url>
@@ -101,19 +29,7 @@
         <lastmod>2015-04-21T22:04:41+01:00</lastmod>
     </url>
     <url>
-        <loc>https://molovo.co/archive/ok-internet-thats-enough-now</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>https://molovo.co/archive/a-tribute-to-that-steve-jobs-quote</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
         <loc>https://molovo.co/blog/how-to-start-a-successful-software-company</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>https://molovo.co/archive/my-bucket-list</loc>
         <lastmod>2015-04-21T22:04:41+01:00</lastmod>
     </url>
     <url>
@@ -122,10 +38,6 @@
     </url>
     <url>
         <loc>https://molovo.co/blog/recruitment-is-broken-lets-fix-it</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>https://molovo.co/archive/this-post-will-offend-you</loc>
         <lastmod>2015-04-21T22:04:41+01:00</lastmod>
     </url>
     <url>
@@ -151,10 +63,6 @@
         <lastmod>2015-04-21T22:04:41+01:00</lastmod>
     </url>
     <url>
-        <loc>https://molovo.co/archive/im-sick-of-the-word-designer</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
         <loc>https://molovo.co/blog/they-dont-make-em-like-they-used-to</loc>
         <lastmod>2015-04-21T22:04:41+01:00</lastmod>
     </url>
@@ -175,10 +83,6 @@
         <lastmod>2015-04-21T22:04:41+01:00</lastmod>
     </url>
     <url>
-        <loc>https://molovo.co/archive/me-and-my-bag</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
         <loc>https://molovo.co/blog/feels/confidence</loc>
         <lastmod>2015-04-21T22:04:41+01:00</lastmod>
     </url>
@@ -196,14 +100,6 @@
     </url>
     <url>
         <loc>https://molovo.co/blog/the-view-from-above</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>https://molovo.co/archive/thank-you-for-not-smoking</loc>
-        <lastmod>2015-04-21T22:04:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>https://molovo.co/archive/sucking</loc>
         <lastmod>2015-04-21T22:04:41+01:00</lastmod>
     </url>
     <url>
@@ -259,7 +155,11 @@
         <lastmod>2014-07-04T16:22:03+01:00</lastmod>
     </url>
     <url>
+        <loc>https://molovo.co/feed.xml</loc>
+        <lastmod>2015-04-23T22:53:37+01:00</lastmod>
+    </url>
+    <url>
         <loc>https://molovo.co/</loc>
-        <lastmod>2015-04-22T22:10:32+01:00</lastmod>
+        <lastmod>2015-04-23T22:55:22+01:00</lastmod>
     </url>
 </urlset>

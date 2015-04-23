@@ -9,3 +9,4 @@ exclude: ['.gitignore', 'molovo.sublime-project', 'molovo.sublime-workspace', '.
 include: ['.htaccess']
 encoding: utf-8
 destination: 'public_html'
+description: 'Hi. I&rsquo;m James, and I design things for the web, like websites, apps, blogs, icons and logos.'
