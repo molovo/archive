@@ -67,16 +67,6 @@
       },
 
       pageLoadListeners: function () {
-        var done = function() {
-          console.log('done');
-          NProgress.done();
-          Molovo.init();
-        };
-
-        document.addEventListener( "page:fetch", NProgress.start );
-        document.addEventListener( "page:restore", NProgress.remove );
-        document.addEventListener( "page:change", done );
-        document.addEventListener( "page:load", done );
       },
 
       headerScrollListener: function () {
@@ -439,4 +429,15 @@
   };
 
   Molovo.init();
+
+  var done = function() {
+    NProgress.done();
+    Molovo.init();
+    _gs('track');
+  };
+
+  document.addEventListener( "page:fetch", NProgress.start );
+  document.addEventListener( "page:restore", NProgress.remove );
+  document.addEventListener( "page:change", done );
+  document.addEventListener( "page:load", done );
 } )();
