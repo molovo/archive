@@ -69,15 +69,17 @@ layout: default
     {% endfor %}
   </section>
 
-  <section class="website-design" data-echo-background="{{ img_root }}/bg.jpg">
-    {% for screenshot in page.screenshots %}
-      <div class="container">
+  <section class="website-design">
+    <div class="container">
+      <h2 class="section-title">The Finished Product</h2>
+
+      {% for screenshot in page.screenshots %}
         <h2>{{ screenshot.title }}</h2>
         <div class="browser">
           <img src="/assets/dist/img/ajax-loader.gif" data-echo="{{ img_root }}/{{ screenshot.url }}" alt="">
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </section>
 
   <section class="what-i-learned">

@@ -17,9 +17,7 @@ subheadings:
 color-palette:
   colors: ["#FFCA06", "#F5812F", "#DB6328", "#B42C33"]
   text: |
-    The colors needed to be bright and attention-seeking, so we chose a palette that followed the progression of 'shades' found in the different varieties of real ale:
-
-    <strong><span style="color: #F87D00; text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;">Pale</span> &rarr; <span style="color: #152D2C;">Golden</span> &rarr; <span style="color: #F2F2F2;">Amber</span> &rarr; <span style="color: #FFFFFF;">Stout</span></strong>.
+    The colors needed to be bright and attention-seeking, so we chose a palette that followed the progression of 'shades' found in the different varieties of real ale.
 typography:
   uses_kit: true
   title: Big, Bold and Beautiful
