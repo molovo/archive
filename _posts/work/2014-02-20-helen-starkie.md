@@ -9,6 +9,7 @@ categories: work
 excerpt: The Making of Helen Starkie Solicitor
 color-palette:
   colors: ["#FFFFF8", "#CBD09E", "#444444", "#FFFFFF"]
+typekit-code: pvp4gfc
 typography:
   title: Warm and Inviting
   text: |

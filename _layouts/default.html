@@ -174,8 +174,8 @@
       <link rel="stylesheet" href="/assets/fonts/case-studies/{{ page.slug }}/kit.css" async defer />
     {% endif %}
 
-    {% if currentURL == 'work' %}
-      <script src="//use.typekit.net/ace7wjo.js" async defer
+    {% if page.typekit-code %}
+      <script src="//use.typekit.net/{{ page.typekit-code }}.js" async defer
         onload="Typekit.load();"></script>
     {% endif %}
 

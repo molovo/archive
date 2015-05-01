@@ -7,6 +7,7 @@ excerpt: The Making of The Branch
 intro: Everyone gets their inspiration from somewhere different. The Branch is a place where inspiring people write about and share the things that inspire them the most.
 color-palette:
   colors: ["#3D5165", "#725250", "#FFFFFF", "#7D97B1"]
+typekit-code: hys1tvt
 typography:
   style: "background: #FFFFFF;"
   heading:
