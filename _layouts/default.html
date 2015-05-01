@@ -69,11 +69,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/assets/dist/css/main.min.css" async defer />
 
-    <!-- Load font kits for case studies that use them -->
-    {% if page.typography.uses_kit %}
-      <link rel="stylesheet" href="/assets/fonts/case-studies/{{ page.slug }}/kit.css" async defer />
-    {% endif %}
-
     {% if page.url == '/blog/index.html' %}
       <meta name="robots" content="noindex,follow">
     {% endif %}
@@ -82,7 +77,7 @@
       <meta name="description" content="{{ page.excerpt | escape }}">
     {% endif %}
 
-    <script src="//use.typekit.net/xly4ucd.js" async defer
+    <script src="//use.typekit.net/xly4ucd.js"
       onload="Typekit.load();">
     </script>
 
@@ -98,11 +93,6 @@
     </script>
 
     <script src="/assets/dist/js/main.min.js" async defer></script>
-
-    {% if currentURL == 'work' %}
-      <script src="//use.typekit.net/ace7wjo.js" async defer
-        onload="Typekit.load();"></script>
-    {% endif %}
   </head>
 
   <body class="{{ bodyClass }}">
@@ -178,6 +168,16 @@
         </a>
       </div>
     </footer>
+
+    <!-- Load font kits for case studies that use them -->
+    {% if page.typography.uses_kit %}
+      <link rel="stylesheet" href="/assets/fonts/case-studies/{{ page.slug }}/kit.css" async defer />
+    {% endif %}
+
+    {% if currentURL == 'work' %}
+      <script src="//use.typekit.net/ace7wjo.js" async defer
+        onload="Typekit.load();"></script>
+    {% endif %}
 
   </body>
 </html>

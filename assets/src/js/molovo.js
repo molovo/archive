@@ -18,13 +18,7 @@
         self.events.bindListeners();
       }, 250 );
 
-      // Initialize buggyfill to fix vh and vw units on iOS
-      window.viewportUnitsBuggyfill.init();
-
       window.userHasScrolled = false;
-
-      // Initialize smoothscroll.js
-      ss.fixAllLinks();
     },
 
     /**
@@ -38,15 +32,6 @@
       bindListeners: function () {
 
         document.getElementById( "work-link" ).addEventListener( "click", this.openWorkMenu );
-        if ( document.querySelector( "a[title=\"Open Work Menu\"]" ) ) {
-          document.querySelector( "a[title=\"Open Work Menu\"]" ).addEventListener( "click", this.openWorkMenu );
-        }
-
-        document.querySelector( ".work" ).addEventListener( "scroll", this.headerScrollListener );
-
-        if ( document.body.classList.contains( "home" ) ) {
-          document.getElementById( "workLink" ).addEventListener( "click", this.openWorkMenu );
-        }
 
         if ( document.body.classList.contains( "contact" ) ) {
           document.getElementById( "project-type" ).onchange = function () {
@@ -60,28 +45,6 @@
         this.bindScrollListeners();
         this.pageLoadListeners();
         this.checkPageVisibility();
-
-        if ( document.body.classList.contains( "contact" ) ) {
-          this.bindFormListeners();
-        }
-      },
-
-      pageLoadListeners: function () {
-      },
-
-      headerScrollListener: function () {
-        var items = document.querySelectorAll( ".work li" );
-        clearTimeout( window.isScrollingWorkList );
-
-        for ( var i = items.length - 1; i >= 0; i-- ) {
-          items[ i ].style.pointerEvents = "none";
-        }
-
-        window.isScrollingWorkList = setTimeout( function () {
-          for ( var i = items.length - 1; i >= 0; i-- ) {
-            items[ i ].style.pointerEvents = "auto";
-          }
-        }, 50 );
       },
 
       /**
@@ -137,29 +100,6 @@
         }
 
         return false;
-      },
-
-      bindFormListeners: function () {
-        var self = this,
-          fields = document.querySelectorAll( ".contact-form input, .contact-form textarea" );
-
-        if ( fields.length < 1 ) return false;
-
-        for ( var i = fields.length - 1; i >= 0; i-- ) {
-          /* jshint loopfunc: true */
-          fields[ i ].addEventListener( "change", function ( event ) {
-            self.recordFormFieldFilled( event );
-          } );
-        }
-      },
-
-      recordFormFieldFilled: function ( event ) {
-        var act = event.target;
-
-        if ( window.filledFormFields[ act.name ] ) return;
-        if ( !act.value ) return;
-
-        window.filledFormFields[ act.name ] = true;
       },
 
       /**
@@ -244,36 +184,6 @@
             document.title = v;
           }
         }
-      },
-
-      ctaOnScroll: function ( current_scroll ) {
-        var act = document.querySelector( ".call-to-action" ),
-          top = document.querySelector( ".intro" ).clientHeight;
-
-        if ( current_scroll > top ) {
-          act.classList.add( "position-fixed" );
-        } else {
-          act.classList.remove( "position-fixed" );
-        }
-      },
-
-      getContentContainer: function () {
-        var container = document.body;
-
-        if ( document.body.classList.contains( "blog" ) ) {
-          container = document.querySelector( ".post-main .post" ) || document.querySelector( ".post-list li:first-of-type" );
-        }
-
-        if ( document.body.classList.contains( "home" ) ) {
-          container = document.querySelector( ".about" );
-        }
-
-        return container;
-      },
-
-      getContentContainerBottom: function () {
-        var container = this.getContentContainer();
-        return container.getBoundingClientRect().top + container.clientHeight;
       },
 
       scrollHeader: function ( target, current_scroll, scroll_pos ) {
@@ -424,20 +334,30 @@
         }
 
       },
+    },
+
+    progress: {
+      start: function() {
+        NProgress.start();
+      },
+
+      remove: function() {
+        NProgress.remove();
+      },
+
+      done: function() {
+        NProgress.done();
+        Molovo.init();
+        _gs('track');
+      }
     }
 
   };
 
   Molovo.init();
 
-  var done = function() {
-    NProgress.done();
-    Molovo.init();
-    _gs('track');
-  };
-
-  document.addEventListener( "page:fetch", NProgress.start );
-  document.addEventListener( "page:restore", NProgress.remove );
-  document.addEventListener( "page:change", done );
-  document.addEventListener( "page:load", done );
+  document.addEventListener( "page:fetch", Molovo.progress.start );
+  document.addEventListener( "page:restore", Molovo.progress.remove );
+  document.addEventListener( "page:change", Molovo.progress.done );
+  document.addEventListener( "page:load", Molovo.progress.done );
 } )();

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -76,7 +75,7 @@ sub {
 }
 
 #nprogress .bar {
-  background: #4EFF78;
+  background: #66c17b;
   position: fixed;
   z-index: 1031;
   top: 0;
@@ -92,8 +91,8 @@ sub {
   right: 0px;
   width: 100px;
   height: 100%;
-  -webkit-box-shadow: 0 0 10px #4EFF78, 0 0 5px #4EFF78;
-          box-shadow: 0 0 10px #4EFF78, 0 0 5px #4EFF78;
+  -webkit-box-shadow: 0 0 10px #66c17b, 0 0 5px #66c17b;
+          box-shadow: 0 0 10px #66c17b, 0 0 5px #66c17b;
   opacity: 1.0;
   -webkit-transform: rotate(3deg) translate(0px, -4px);
   -ms-transform: rotate(3deg) translate(0px, -4px);
@@ -116,8 +115,8 @@ sub {
      -moz-box-sizing: border-box;
           box-sizing: border-box;
   border: solid 2px transparent;
-  border-top-color: #4EFF78;
-  border-left-color: #4EFF78;
+  border-top-color: #66c17b;
+  border-left-color: #66c17b;
   border-radius: 50%;
   -webkit-animation: nprogress-spinner 400ms linear infinite;
   animation: nprogress-spinner 400ms linear infinite;
@@ -137,6 +136,7 @@ sub {
   0% {
     -webkit-transform: rotate(0deg);
   }
+
   100% {
     -webkit-transform: rotate(360deg);
   }
@@ -146,6 +146,7 @@ sub {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
+
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
@@ -503,7 +504,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.025em;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  color: #B52936;
+  color: #b52936;
 }
 h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
   font-weight: 400;
@@ -604,21 +605,21 @@ blockquote.push {
   float: right;
   padding: 0 0 0 1.5em;
   margin: 0 -6em 0 1.5em;
-  border-left: 1.5em solid #B52936;
+  border-left: 1.5em solid #b52936;
 }
 blockquote.pull {
   float: left;
   padding: 0 1.5em 0 0;
   margin: 0 1.5em 0 -6em;
-  border-right: 1.5em solid #B52936;
+  border-right: 1.5em solid #b52936;
 }
 blockquote cite {
   display: block;
   font-weight: 700;
-  color: #B52936;
+  color: #b52936;
 }
 blockquote cite:before {
-  content: "—";
+  content: "\2014";
 }
 
 .center {
@@ -658,7 +659,7 @@ code, code span {
 .button {
   padding: 0.75em 2.25em;
   font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  background: #1A92CE;
+  background: #1a92ce;
   color: white;
   font-weight: 600;
   text-decoration: none;
@@ -677,7 +678,7 @@ code, code span {
 }
 
 a {
-  color: #1A92CE;
+  color: #1a92ce;
 }
 
 .lead, .case-study-brief p:first-of-type {
@@ -774,7 +775,7 @@ body {
           transition: fill 0.25s;
 }
 .logo svg .frame {
-  fill: #B52936;
+  fill: #b52936;
 }
 .logo svg .left-lens, .logo svg .right-lens {
   fill: transparent;
@@ -820,7 +821,7 @@ body {
 }
 .fixed .main a {
   text-decoration: none;
-  color: #B52936;
+  color: #b52936;
   display: inline-block;
   -webkit-transition: color 0.25s;
           transition: color 0.25s;
@@ -866,7 +867,7 @@ body {
   display: inline-block;
   padding: 1.5em;
   font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  color: #B52936;
+  color: #b52936;
   text-decoration: none;
   font-weight: 700;
   font-size: 1.3125em;
@@ -933,7 +934,7 @@ body {
   margin-bottom: 0;
 }
 .fixed .work ul li h2 {
-  color: #B52936;
+  color: #b52936;
   font-size: 3em;
   margin-bottom: 0;
   font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -947,13 +948,13 @@ body {
   background: transparent;
 }
 .fixed.open .main a {
-  color: #B52936;
+  color: #b52936;
 }
 .fixed.open .main a .lines, .fixed.open .main a .lines:before, .fixed.open .main a .lines:after {
-  background: #B52936;
+  background: #b52936;
 }
 .fixed.open .logo svg .frame {
-  fill: #B52936;
+  fill: #b52936;
 }
 .fixed.open .logo svg:hover .left-lens {
   fill: rgba(9, 39, 55, 0.7);
@@ -974,14 +975,14 @@ body {
   fill: white;
 }
 .fixed.transparent:not(.open) .logo svg:hover .left-lens {
-  fill: #1A92CE;
+  fill: #1a92ce;
 }
 .fixed.transparent:not(.open) .logo svg:hover .right-lens {
   fill: #730329;
 }
 
 .bottom {
-  background: #B52936;
+  background: #b52936;
   position: relative;
   z-index: 2;
   color: white;
@@ -1125,7 +1126,7 @@ body {
   display: inline-block;
   width: 1.2rem;
   height: 0.2rem;
-  background: #B52936;
+  background: #b52936;
   border-radius: 0.10714rem;
   -webkit-transition: -webkit-transform 0.25s, top 0.25s, width 0.25s, margin 0.25s, background 0.25s;
           transition: transform 0.25s, top 0.25s, width 0.25s, margin 0.25s, background 0.25s;
@@ -1135,7 +1136,7 @@ body {
   display: inline-block;
   width: 1.2rem;
   height: 0.2rem;
-  background: #B52936;
+  background: #b52936;
   border-radius: 0.10714rem;
   -webkit-transition: -webkit-transform 0.25s, top 0.25s, width 0.25s, margin 0.25s, background 0.25s;
           transition: transform 0.25s, top 0.25s, width 0.25s, margin 0.25s, background 0.25s;
@@ -1249,7 +1250,7 @@ body {
   margin-bottom: 0;
 }
 .post-list li h1 a, .post-list li h2 a {
-  color: #B52936;
+  color: #b52936;
   text-decoration: none;
 }
 .post-list li h1 a:hover, .post-list li h2 a:hover {
@@ -1486,7 +1487,7 @@ p > img.full-width, img[title="full-width"] {
 }
 .next-post-link:hover,
 .previous-post-link:hover {
-  background: #B52936;
+  background: #b52936;
 }
 .next-post-link:before,
 .previous-post-link:before {
@@ -1510,7 +1511,7 @@ p > img.full-width, img[title="full-width"] {
           transform: translate(-100%, -50%);
 }
 .next-post-link:before {
-  content: "→";
+  content: "\2192";
   left: 1.5em;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
@@ -1532,7 +1533,7 @@ p > img.full-width, img[title="full-width"] {
           transform: translate(100%, -50%);
 }
 .previous-post-link:before {
-  content: "←";
+  content: "\2190";
   right: 1.5em;
   -webkit-transform: translate(50%, -50%);
       -ms-transform: translate(50%, -50%);
@@ -1547,7 +1548,7 @@ p > img.full-width, img[title="full-width"] {
 }
 
 .contact-header {
-  background: #B52936;
+  background: #b52936;
   color: white;
   padding: 9em 0 6em;
 }
@@ -1638,7 +1639,7 @@ p > img.full-width, img[title="full-width"] {
 .contact-form input:not([type="submit"]), .contact-form textarea {
   padding: 0.75em;
   border-radius: 0.15em;
-  border: 0 solid #29B549;
+  border: 0 solid #29b549;
   margin: 0 -0.75em 1.5em;
   background: rgba(115, 3, 41, 0.05);
   font-size: 1em;
@@ -1657,7 +1658,7 @@ p > img.full-width, img[title="full-width"] {
   background: white;
 }
 .contact-form input:not([type="submit"]):valid, .contact-form textarea:valid {
-  border-color: #29B549;
+  border-color: #29b549;
   border-left-width: 0.25em;
   padding-left: 0.5em;
 }
@@ -1852,10 +1853,10 @@ p > img.full-width, img[title="full-width"] {
   margin-bottom: 0;
 }
 .what-i-learned h2 p:before {
-  content: "“";
+  content: "\201C";
 }
 .what-i-learned h2 p:after {
-  content: "”";
+  content: "\201D";
 }
 p + .what-i-learned h2 {
   margin-top: 3em;
@@ -1934,7 +1935,7 @@ p + .what-i-learned h2 {
   font-size: 2.25em;
   float: left;
   vertical-align: top;
-  color: #B52936;
+  color: #b52936;
 }
 .case-study-color-palette {
   background-size: cover;
@@ -1997,10 +1998,10 @@ p + .what-i-learned h2 {
   background-repeat: no-repeat;
 }
 .case-study--haresfoot .section-title {
-  color: #B42C33;
+  color: #b42c33;
 }
 .case-study--haresfoot .typography, .case-study--haresfoot .color-palette {
-  background-color: #FFCA06;
+  background-color: #ffca06;
 }
 .case-study--haresfoot .typography-heading {
   font-weight: 400;
@@ -2017,7 +2018,7 @@ p + .what-i-learned h2 {
   color: white;
 }
 .case-study--haresfoot .typography-body {
-  color: #FFFFFF;
+  color: white;
   font-family: "Mission Gothic";
 }
 
@@ -2030,22 +2031,22 @@ p + .what-i-learned h2 {
   color: #113245;
 }
 .case-study--1855 .typography, .case-study--1855 .color-palette {
-  background-color: #AA314E;
+  background-color: #aa314e;
 }
 .case-study--1855 .typography-heading {
   font-weight: 300;
   font-family: "brandon-grotesque";
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: white;
 }
 .case-study--1855 .typography-subheading {
   font-weight: 300;
   font-family: "brandon-grotesque";
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: white;
 }
 .case-study--1855 .typography-body {
-  color: #FFFFFF;
+  color: white;
   font-style: italic;
   font-family: "minion-pro";
 }
@@ -2056,25 +2057,25 @@ p + .what-i-learned h2 {
   background-repeat: no-repeat;
 }
 .case-study--melody .section-title {
-  color: #2B303B;
+  color: #2b303b;
 }
 .case-study--melody .typography, .case-study--melody .color-palette {
-  background-color: #C16069;
+  background-color: #c16069;
 }
 .case-study--melody .typography-heading {
   font-family: "jaf-bernino-sans";
   letter-spacing: 0;
-  color: #FFFFFF;
+  color: white;
 }
 .case-study--melody .typography-subheading {
   font-family: "ff-meta-serif-web-pro";
   letter-spacing: 0;
-  color: #FFFFFF;
+  color: white;
 }
 .case-study--melody .typography-body {
   font-family: "ff-meta-serif-web-pro";
   letter-spacing: 0;
-  color: #FFFFFF;
+  color: white;
 }
 
 .case-study--helen-starkie .intro {
@@ -2083,15 +2084,15 @@ p + .what-i-learned h2 {
   background-repeat: no-repeat;
 }
 .case-study--helen-starkie .section-title {
-  color: #CBD09E;
+  color: #cbd09e;
 }
 .case-study--helen-starkie .typography, .case-study--helen-starkie .color-palette {
-  background-color: #FFFFF8;
+  background-color: #fffff8;
 }
 .case-study--helen-starkie .typography-heading {
   font-family: "freight-sans-pro";
   letter-spacing: 0;
-  color: #CBD09E;
+  color: #cbd09e;
 }
 .case-study--helen-starkie .typography-body {
   font-family: "ff-tisa-web-pro";
@@ -2105,15 +2106,15 @@ p + .what-i-learned h2 {
   background-repeat: no-repeat;
 }
 .case-study--the-branch .section-title {
-  color: #3D5165;
+  color: #3d5165;
 }
 .case-study--the-branch .typography, .case-study--the-branch .color-palette {
-  background-color: #FFFFFF;
+  background-color: white;
 }
 .case-study--the-branch .typography-heading {
   font-weight: 900;
   text-transform: uppercase;
-  color: #3D5165;
+  color: #3d5165;
   letter-spacing: 1px;
   word-spacing: 5px;
   font-family: "brandon-grotesque";
@@ -2121,7 +2122,7 @@ p + .what-i-learned h2 {
 .case-study--the-branch .typography-subheading {
   font-weight: 300;
   text-transform: uppercase;
-  color: #7D97B1;
+  color: #7d97b1;
   letter-spacing: 1px;
   word-spacing: 5px;
   font-family: "brandon-grotesque";
@@ -2129,7 +2130,7 @@ p + .what-i-learned h2 {
 .case-study--the-branch .typography-body {
   font-family: "rooney-web";
   letter-spacing: 0;
-  color: #3D5165;
+  color: #3d5165;
 }
 
 .case-study--love-coffee .intro {
@@ -2141,16 +2142,16 @@ p + .what-i-learned h2 {
   color: #057281;
 }
 .case-study--love-coffee .typography, .case-study--love-coffee .color-palette {
-  background-color: #EF8019;
+  background-color: #ef8019;
 }
 .case-study--love-coffee .typography-heading {
   font-weight: 300;
   font-family: "Avant Garde";
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: white;
 }
 .case-study--love-coffee .typography-body {
-  color: #FFFFFF;
+  color: white;
   font-family: "Georgia";
 }
 
@@ -2160,16 +2161,16 @@ p + .what-i-learned h2 {
   background-repeat: no-repeat;
 }
 .case-study--hottrax-motorsport .section-title {
-  color: #F87D00;
+  color: #f87d00;
 }
 .case-study--hottrax-motorsport .typography, .case-study--hottrax-motorsport .color-palette {
-  background-color: #152D2C;
+  background-color: #152d2c;
 }
 .case-study--hottrax-motorsport .typography-heading {
   font-weight: 700;
   font-family: "proxima-nova";
   letter-spacing: -0.025em;
-  color: #F87D00;
+  color: #f87d00;
 }
 .case-study--hottrax-motorsport .typography-body {
   color: white;
@@ -2182,10 +2183,12 @@ p + .what-i-learned h2 {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
+
   50% {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
   }
+
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
@@ -2197,10 +2200,12 @@ p + .what-i-learned h2 {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
+
   50% {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
   }
+
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
@@ -2232,7 +2237,7 @@ p + .what-i-learned h2 {
 }
 
 .intro {
-  background: #B52936;
+  background: #b52936;
   padding: 9em 0 6em;
   position: relative;
 }
@@ -2319,10 +2324,10 @@ p + .what-i-learned h2 {
   height: 0.25em;
 }
 .featured-case-study .testimonial blockquote p:before {
-  content: "“";
+  content: "\201c";
 }
 .featured-case-study .testimonial blockquote p:after {
-  content: "”";
+  content: "\201d";
 }
 .featured-case-study .testimonial blockquote cite {
   color: white;
@@ -2344,7 +2349,7 @@ p + .what-i-learned h2 {
 }
 .stories h1 {
   text-align: center;
-  color: #B52936;
+  color: #b52936;
   font-weight: 300;
 }
 @media (min-width: 40em) {
@@ -2451,7 +2456,7 @@ p + .what-i-learned h2 {
 }
 
 .article--great-minds .post-title {
-  color: #7DC2C2;
+  color: #7dc2c2;
   font-family: "GauthierFY", "Georgia", "Times New Roman", serif;
   text-transform: capitalize;
   position: relative;
@@ -2459,8 +2464,8 @@ p + .what-i-learned h2 {
   margin: 0 auto 0.5em;
   padding-top: 0.75em;
   text-align: left;
-  -webkit-mask-image: url(/assets/dist/img/keeping-up/knockout.png);
-          mask-image: url(/assets/dist/img/keeping-up/knockout.png);
+  -webkit-mask-image: url(/assets/dist/img/great-minds/knockout.png);
+          mask-image: url(/assets/dist/img/great-minds/knockout.png);
   font-size: 4.5em;
   max-width: 33em/4.5;
 }
