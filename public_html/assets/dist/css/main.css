@@ -1958,7 +1958,15 @@ p + .what-i-learned h2 {
   padding: 0;
 }
 
-@import: url(/assets/fonts/case-studies/haresfoot/kit.css);
+@font-face {
+  font-family: "Langdon";
+  src: url("/assets/fonts/case-studies/haresfoot/Langdon.otf") format("opentype");
+}
+@font-face {
+  font-family: "Mission Gothic";
+  src: url("/assets/fonts/case-studies/haresfoot/Mission Gothic Light.otf") format("opentype");
+  font-weight: 400;
+}
 .case-study--haresfoot .intro {
   background-position: center;
   background-size: cover;
@@ -2100,7 +2108,11 @@ p + .what-i-learned h2 {
   color: #3D5165;
 }
 
-@import: url(/assets/fonts/case-studies/love-coffee/kit.css);
+@font-face {
+  font-family: "Avant Garde";
+  src: url("/assets/fonts/case-studies/love-coffee/webfonts/273DC5_0_0.eot");
+  src: url("/assets/fonts/case-studies/love-coffee/webfonts/273DC5_0_0.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/case-studies/love-coffee/webfonts/273DC5_0_0.woff") format("woff"), url("/assets/fonts/case-studies/love-coffee/webfonts/273DC5_0_0.ttf") format("truetype");
+}
 .case-study--love-coffee .intro {
   background-position: center;
   background-size: cover;
