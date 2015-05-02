@@ -18,9 +18,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
@@ -92,8 +90,7 @@ sub {
   right: 0px;
   width: 100px;
   height: 100%;
-  -webkit-box-shadow: 0 0 10px #66C17B, 0 0 5px #66C17B;
-          box-shadow: 0 0 10px #66C17B, 0 0 5px #66C17B;
+  box-shadow: 0 0 10px #66C17B, 0 0 5px #66C17B;
   opacity: 1.0;
   -webkit-transform: rotate(3deg) translate(0px, -4px);
   -ms-transform: rotate(3deg) translate(0px, -4px);
@@ -112,9 +109,7 @@ sub {
 #nprogress .spinner-icon {
   width: 18px;
   height: 18px;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: solid 2px transparent;
   border-top-color: #66C17B;
   border-left-color: #66C17B;
@@ -1183,9 +1178,7 @@ body {
 
 .post-main, .post-list {
   padding-bottom: 6em;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 @media (max-width: 51.1875em) {
   .post-main .container, .post-list .container {
@@ -1194,7 +1187,6 @@ body {
 }
 .post-main .faded-scroll-indicator, .post-list .faded-scroll-indicator {
   height: 4.5em;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 245, 242, 0.01)), color-stop(50%, rgba(245, 245, 242, 0.7)), to(#f5f5f2));
   background: -webkit-linear-gradient(rgba(245, 245, 242, 0.01), rgba(245, 245, 242, 0.7) 50%, #f5f5f2);
   background: linear-gradient(rgba(245, 245, 242, 0.01), rgba(245, 245, 242, 0.7) 50%, #f5f5f2);
   position: fixed;
@@ -1232,7 +1224,6 @@ body {
 }
 @media (min-width: 66.9375em) {
   .post-list li p > img:not(.full-width):not([title="full-width"]) {
-    max-width: -webkit-calc(100% + 6em);
     max-width: calc(100% + 6em);
   }
 }
@@ -1249,7 +1240,6 @@ body {
 
 .post-title {
   width: 125%;
-  max-width: -webkit-calc(100vw - 3rem);
   max-width: calc(100vw - 3rem);
   font-size: 4.5em;
   margin-top: 2em;
@@ -1273,7 +1263,6 @@ figure img {
 }
 @media (min-width: 66.9375em) {
   figure {
-    width: -webkit-calc(100% + 6em);
     width: calc(100% + 6em);
     margin-left: -6em;
   }
@@ -1629,11 +1618,8 @@ p > img.full-width, img[title="full-width"] {
   font-size: 1em;
   line-height: 1.5em;
   font-family: "GauthierFY", "Georgia", "Times New Roman", serif;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   display: block;
-  width: -webkit-calc(100% + 1.5em);
   width: calc(100% + 1.5em);
   -webkit-transition: border-width 0.25s, border-color 0.25s, padding 0.25s, background 0.25s;
           transition: border-width 0.25s, border-color 0.25s, padding 0.25s, background 0.25s;

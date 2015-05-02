@@ -9,7 +9,11 @@ var gulp = require( 'gulp' ),
   rename = require( 'gulp-rename' ),
   clean = require( 'gulp-clean' ),
   concat = require( 'gulp-concat' ),
-  cache = require( 'gulp-cache' );
+  cache = require( 'gulp-cache' ),
+  jpegoptim = require( 'imagemin-jpegoptim' ),
+  pngquant = require( 'imagemin-pngquant' ),
+  optipng = require( 'imagemin-optipng' ),
+  svgo = require( 'imagemin-svgo' );
 
 // Styles
 gulp.task( 'styles', [ 'clean' ], function () {
@@ -39,12 +43,24 @@ gulp.task( 'scripts', [ 'clean' ], function () {
 // Images
 gulp.task( 'images', [ 'main', 'cleanimages' ], function () {
   return gulp.src( 'src/img/**/*' )
-    .pipe( cache( imagemin( {
-      optimizationLevel: 3,
+    .pipe( pngquant( {
+      quality: '25-72',
+      speed: 1
+    } )() )
+    .pipe( optipng( {
+      optimizationLevel: 7
+    } )() )
+    .pipe( jpegoptim( {
       progressive: true,
-      interlaced: true,
-      pngquant: true
-    } ) ) )
+      max: 50
+    } )() )
+    .pipe( svgo()() )
+    // .pipe( imagemin( {
+    //   optimizationLevel: 7,
+    //   progressive: true,
+    //   interlaced: true,
+    //   pngquant: true
+    // } ) )
     .pipe( gulp.dest( 'dist/img' ) );
 } );
 

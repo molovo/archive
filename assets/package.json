@@ -17,7 +17,11 @@
     "gulp-rename": "latest",
     "gulp-roole": "latest",
     "gulp-uglifyjs": "latest",
-    "tiny-lr": "latest"
+    "tiny-lr": "latest",
+    "imagemin-jpegoptim": "latest",
+    "imagemin-pngquant": "latest",
+    "imagemin-optipng": "latest",
+    "imagemin-svgo": "latest"
   },
   "repository": "",
   "author": "",
