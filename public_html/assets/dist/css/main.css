@@ -1958,6 +1958,7 @@ p + .what-i-learned h2 {
   padding: 0;
 }
 
+@import: url(/assets/fonts/case-studies/haresfoot/kit.css);
 .case-study--haresfoot .intro {
   background-position: center;
   background-size: cover;
@@ -2099,6 +2100,7 @@ p + .what-i-learned h2 {
   color: #3D5165;
 }
 
+@import: url(/assets/fonts/case-studies/love-coffee/kit.css);
 .case-study--love-coffee .intro {
   background-position: center;
   background-size: cover;

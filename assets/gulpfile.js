@@ -36,7 +36,7 @@ gulp.task( 'scripts', [ 'clean' ], function () {
   return gulp.src( 'src/js/**/*.js' )
     .pipe( uglify( 'main.min.js', {
       outSourceMap: 'main.min.js.map',
-      basePath: '/assets/dist/js'
+      basePath: '/public/assets'
     } ) )
     .pipe( gulp.dest( 'dist/js' ) );
 } );
@@ -45,15 +45,15 @@ gulp.task( 'scripts', [ 'clean' ], function () {
 gulp.task( 'optimages', [ 'main', 'cleanimages' ], function () {
   return gulp.src( 'src/img/**/*' )
     .pipe( pngquant( {
-      quality: '25-72',
+      quality: '80',
       speed: 1
     } )() )
     .pipe( optipng( {
-      optimizationLevel: 7
+      optimizationLevel: 3
     } )() )
     .pipe( jpegoptim( {
       progressive: true,
-      max: 50
+      max: 80
     } )() )
     .pipe( svgo()() )
     // .pipe( imagemin( {
@@ -68,8 +68,9 @@ gulp.task( 'optimages', [ 'main', 'cleanimages' ], function () {
 gulp.task( 'images', [ 'optimages' ], function () {
   return gulp.src( 'dist/img/**/*' )
     .pipe( webp( {
-      quality: 50,
-      alphaQuality: 25
+      quality: 70,
+      alphaQuality: 70,
+      method: 6
     } ) )
     .pipe( gulp.dest( 'dist/img' ) );
 } )

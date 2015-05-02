@@ -347,7 +347,7 @@
       done: function () {
         NProgress.done();
         Molovo.init();
-        _gs( "track" );
+        // _gs( "track" );
       }
     }
 
