@@ -353,10 +353,12 @@
 
   };
 
-  Molovo.init();
+  document.addEventListener( "DOMContentLoaded", function () {
+    Molovo.init()
+  } );
 
   document.addEventListener( "page:fetch", Molovo.progress.start );
   document.addEventListener( "page:restore", Molovo.progress.remove );
   document.addEventListener( "page:change", Molovo.progress.done );
-  document.addEventListener( "page:load", Molovo.progress.done );
+  // document.addEventListener( "page:load", Molovo.progress.done );
 } )();
