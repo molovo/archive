@@ -36,7 +36,7 @@ gulp.task( 'scripts', [ 'clean' ], function () {
   return gulp.src( 'src/js/**/*.js' )
     .pipe( uglify( 'main.min.js', {
       outSourceMap: 'main.min.js.map',
-      basePath: '/public/assets'
+      basePath: '/assets/dist/js'
     } ) )
     .pipe( gulp.dest( 'dist/js' ) );
 } );
