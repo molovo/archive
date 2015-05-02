@@ -13,7 +13,8 @@ var gulp = require( 'gulp' ),
   jpegoptim = require( 'imagemin-jpegoptim' ),
   pngquant = require( 'imagemin-pngquant' ),
   optipng = require( 'imagemin-optipng' ),
-  svgo = require( 'imagemin-svgo' );
+  svgo = require( 'imagemin-svgo' ),
+  webp = require( 'gulp-webp' );
 
 // Styles
 gulp.task( 'styles', [ 'clean' ], function () {
@@ -41,7 +42,7 @@ gulp.task( 'scripts', [ 'clean' ], function () {
 } );
 
 // Images
-gulp.task( 'images', [ 'main', 'cleanimages' ], function () {
+gulp.task( 'optimages', [ 'main', 'cleanimages' ], function () {
   return gulp.src( 'src/img/**/*' )
     .pipe( pngquant( {
       quality: '25-72',
@@ -63,6 +64,15 @@ gulp.task( 'images', [ 'main', 'cleanimages' ], function () {
     // } ) )
     .pipe( gulp.dest( 'dist/img' ) );
 } );
+
+gulp.task( 'images', [ 'optimages' ], function () {
+  return gulp.src( 'dist/img/**/*' )
+    .pipe( webp( {
+      quality: 50,
+      alphaQuality: 25
+    } ) )
+    .pipe( gulp.dest( 'dist/img' ) );
+} )
 
 // Clean
 gulp.task( 'clean', function () {

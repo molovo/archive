@@ -25,5 +25,8 @@
   },
   "repository": "",
   "author": "",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "gulp-webp": "~2.3.0"
+  }
 }
