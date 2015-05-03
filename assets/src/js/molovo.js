@@ -393,9 +393,7 @@
 
   };
 
-  document.addEventListener( "DOMContentLoaded", function () {
-    Molovo.init()
-  } );
+  document.addEventListener( "DOMContentLoaded", Molovo.init() );
 
   document.addEventListener( "page:fetch", Molovo.progress.start );
   document.addEventListener( "page:restore", Molovo.progress.remove );
