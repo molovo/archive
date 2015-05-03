@@ -18,62 +18,6 @@
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
     <title>404 - molovo. Web Design, Portsmouth</title>
 
-    <script>
-      (function (d) {
-        window.pageTitle = '404 - molovo. Web Design, Portsmouth';
-
-        function addFont() {
-          var style = d.createElement( 'style' );
-          style.rel = 'stylesheet';
-          d.head.appendChild( style );
-          style.textContent = localStorage.gauthier;
-        }
-
-        try {
-          if ( localStorage.gauthier ) {
-            // The font is in localStorage, we can load it directly
-            addFont();
-          } else {
-            // We have to first load the font file asynchronously
-            var request = new XMLHttpRequest();
-            request.open( 'GET', '/assets/fonts/gauthier_fy/molovo.css', true );
-
-            request.onload = function () {
-              if ( request.status >= 200 && request.status < 400 ) {
-                // We save the file in localStorage
-                localStorage.gauthier = request.responseText;
-
-                // ... and load the font
-                addFont();
-              }
-            }
-
-            request.send();
-          }
-        } catch ( ex ) {
-          // maybe load the font synchronously for woff-capable browsers
-          // to avoid blinking on every request when localStorage is not available
-          var link = d.createElement( 'link' );
-          link.rel = 'stylesheet';
-          link.href = '/assets/fonts/gauthier_fy/molovo.css';
-          d.head.appendChild( link );
-        }
-      }(document));
-    </script>
-
-    <link rel="shortcut icon" href="/assets/dist/img/favicon.png" async defer />
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/dist/css/main.min.css" async defer />
-
-    
-
-    
-
-    <!-- <script src="//use.typekit.net/xly4ucd.js"
-      onload="Typekit.load();">
-    </script> -->
-
     <script id="case-study-template" type="text/template">
       
       <div class="container intro-container">
@@ -85,12 +29,25 @@
       
     </script>
 
-    <script src="/assets/dist/js/main.min.js" async defer></script>
+    <link rel="shortcut icon" href="/assets/dist/img/favicon.png" async />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/dist/css/main.min.css" async />
+
+    
+
+    
+
+    <!-- <script src="//use.typekit.net/xly4ucd.js"
+      onload="Typekit.load();">
+    </script> -->
+
 
     <!-- <script type="text/javascript">
       window.heap=window.heap||[],heap.load=function(t,e){window.heap.appid=t,window.heap.config=e;var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+t+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(t){return function(){heap.push([t].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
       heap.load("3929321974");
     </script> -->
+    <script src="/assets/dist/js/main.min.js" async></script>
   </head>
 
   <body class="four-oh-four">
@@ -237,6 +194,10 @@
     </footer>
 
     
+
+    <script>
+      window.pageTitle = '404 - molovo. Web Design, Portsmouth';
+    </script>
 
   </body>
 </html>

@@ -1,8 +1,0 @@
-for a in `ls`
-do
-  d=`
-  for f in `ls ${a}`
-  do
-    mv ${f} ${f//
-  done
-done
