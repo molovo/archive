@@ -1,6 +1,6 @@
 // Load plugins
 var gulp = require( 'gulp' ),
-  sass = require( 'gulp-ruby-sass' ),
+  sass = require( 'gulp-sass' ),
   autoprefixer = require( 'gulp-autoprefixer' ),
   minifycss = require( 'gulp-minify-css' ),
   jshint = require( 'gulp-jshint' ),
@@ -14,13 +14,15 @@ var gulp = require( 'gulp' ),
   pngquant = require( 'imagemin-pngquant' ),
   optipng = require( 'imagemin-optipng' ),
   svgo = require( 'imagemin-svgo' ),
-  webp = require( 'gulp-webp' );
+  webp = require( 'gulp-webp' ),
+  dalek = require( 'gulp-dalek' );
 
 // Styles
 gulp.task( 'styles', [ 'clean' ], function () {
   return gulp.src( 'src/css/main.sass' )
     .pipe( sass( {
-      style: 'expanded',
+      // style: 'expanded',
+      indentedSyntax: true
     } ) )
     .pipe( cache( autoprefixer( 'last 5 version' ) ) )
     .pipe( gulp.dest( 'dist/css' ) )
@@ -35,7 +37,7 @@ gulp.task( 'styles', [ 'clean' ], function () {
 gulp.task( 'scripts', [ 'clean' ], function () {
   return gulp.src( 'src/js/**/*.js' )
     .pipe( uglify( 'main.min.js', {
-      outSourceMap: false, //'main.min.js.map',
+      outSourceMap: 'main.min.js.map',
       basePath: '/public/assets'
     } ) )
     .pipe( gulp.dest( 'dist/js' ) );
@@ -89,6 +91,14 @@ gulp.task( 'cleanimages', function () {
     } )
     .pipe( clean() );
 } )
+
+gulp.task( 'test', function () {
+  return gulp.src( [ '../_test/**/*' ] )
+    .pipe( dalek( {
+      browser: [ 'phantomjs' ],
+      reporter: [ 'console' ]
+    } ) );
+} );
 
 gulp.task( 'main', [ 'styles', 'scripts' ] );
 

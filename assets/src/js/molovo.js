@@ -33,7 +33,7 @@
 
         document.getElementById( "work-link" ).addEventListener( "click", this.openWorkMenu );
 
-        if ( document.body.classList.contains( "contact" ) ) {
+        if ( document.body.classList.contains( "contact" ) && !document.body.classList.contains( "thanks" ) ) {
           document.getElementById( "project-type" ).onchange = function () {
             document.getElementById( "linkToContactForm" ).click();
             document.getElementById( "name" ).focus();

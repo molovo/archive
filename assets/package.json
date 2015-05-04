@@ -15,18 +15,17 @@
     "gulp-minify-css": "latest",
     "gulp-notify": "latest",
     "gulp-rename": "latest",
-    "gulp-roole": "latest",
     "gulp-uglifyjs": "latest",
-    "tiny-lr": "latest",
     "imagemin-jpegoptim": "latest",
     "imagemin-pngquant": "latest",
     "imagemin-optipng": "latest",
-    "imagemin-svgo": "latest"
+    "imagemin-svgo": "latest",
+    "gulp-webp": "~2.3.0",
+    "dalekjs": "0.0.9",
+    "gulp-sass": "~1.3.3",
+    "gulp-dalek": "0.0.1"
   },
   "repository": "",
   "author": "",
-  "license": "",
-  "devDependencies": {
-    "gulp-webp": "~2.3.0"
-  }
+  "license": ""
 }

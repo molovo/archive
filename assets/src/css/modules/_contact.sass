@@ -1,3 +1,22 @@
+=select_stuff()
+  -webkit-appearance: none
+  appearance: none
+  background: $burgundy
+  transition: background .25s
+  border: 0
+  border-radius: 0
+  margin: -.25em 0 -.15em
+  padding: .25em .75em .15em
+  border-bottom: .25em solid white
+  font-size: 1em
+  font-family: $primary
+  line-height: 1.5em
+  color: white
+  padding-right: 2em
+  cursor: pointer
+  background: $burgundy url(/assets/dist/img/icons/down-arrow.svg) 6.75em center no-repeat
+    size: .75em
+
 .contact-header
   background: $red
   color: white
@@ -5,25 +24,6 @@
 
   h1
     color: white
-
-  =select_stuff()
-    -webkit-appearance: none
-    appearance: none
-    background: $burgundy
-    transition: background .25s
-    border: 0
-    border-radius: 0
-    margin: -.25em 0 -.15em
-    padding: .25em .75em .15em
-    border-bottom: .25em solid white
-    font-size: 1em
-    font-family: $primary
-    line-height: 1.5em
-    color: white
-    padding-right: 2em
-    cursor: pointer
-    background: $burgundy url(/assets/dist/img/icons/down-arrow.svg) 6.75em center no-repeat
-      size: .75em
 
   select
     +select_stuff
