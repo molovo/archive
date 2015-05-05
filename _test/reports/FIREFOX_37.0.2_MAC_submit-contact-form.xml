@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="submit-contact-form"
+    errors="0" failures="0" hostname="" id="" package="submit-contact-form" skipped="0"
+    tests="1" time="8.981" timestamp="Tue, 05 May 2015 22:22:00 GMT">
+  
+    <testcase name="Submit contact form" time="8.981" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+  
+  </testsuite>
+</testsuites>

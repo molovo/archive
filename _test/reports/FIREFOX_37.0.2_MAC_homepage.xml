@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="3">
+
+  <testsuite name="homepage"
+    errors="0" failures="1" hostname="" id="" package="homepage" skipped="1"
+    tests="3" time="6.368" timestamp="Tue, 05 May 2015 22:21:48 GMT">
+  
+    <testcase name="Page title is correct" time="3.559" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="Link to Work Opens Menu" time="2.809" assertions="1">  <failure message="Timed out while waiting for element &lt;.work li.haresfoot&gt; to be visible for 2000 milliseconds.">Timed out while waiting for element &lt;.work li.haresfoot&gt; to be visible for 2000 milliseconds.: Expected &quot;visible&quot; but got: &quot;not visible&quot;
+    at F.WaitForElement.fail (/usr/local/lib/node_modules/nightwatch/lib/api/commands/_waitForElement.js:194:15)
+    at F.WaitForElementVisible.elementNotVisible (/usr/local/lib/node_modules/nightwatch/lib/api/commands/waitForElementVisible.js:61:15)
+    at Object.&lt;anonymous&gt; (/usr/local/lib/node_modules/nightwatch/lib/api/commands/_waitForElement.js:238:17)
+    at HttpRequest.&lt;anonymous&gt; (/usr/local/lib/node_modules/nightwatch/lib/index.js:299:20)
+    at HttpRequest.EventEmitter.emit (events.js:98:17)
+    at HttpRequest.&lt;anonymous&gt; (/usr/local/lib/node_modules/nightwatch/lib/index.js:322:15)
+    at HttpRequest.EventEmitter.emit (events.js:106:17)
+    at IncomingMessage.&lt;anonymous&gt; (/usr/local/lib/node_modules/nightwatch/lib/http/request.js:148:16)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16</failure>
+
+    
+    </testcase>
+  
+  
+    
+    <testcase
+      name="Case Studies Have Loaded">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>

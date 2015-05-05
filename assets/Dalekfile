@@ -1,5 +1,0 @@
-{
-  "html-reporter": {
-    "dest": "../_test/reports"
-  }
-}

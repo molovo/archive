@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="open-case-study"
+             errors="0"
+             failures="0"
+             tests="3">
+  
+  <testsuite errors="0" failures="0" hostname="" id=""
+    name="Open a Case Study" package="open-case-study" skipped="0"
+    tests="3" time="" timestamp="">
+    
+    
+      <testcase name="Element &lt;.work li.haresfoot&gt; was visible after 142 milliseconds.">
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if the URL equals &quot;https://molovo.co/work/haresfoot&quot;.">
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if the page title equals &quot;Brewing Up a Storm - molovo. Web Design, Portsmouth&quot;.">
+        
+        
+      </testcase>
+    
+    
+    </testsuite>
+  
+</testsuites>

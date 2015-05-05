@@ -33,11 +33,8 @@
 
         document.getElementById( "work-link" ).addEventListener( "click", this.openWorkMenu );
 
-        if ( document.body.classList.contains( "contact" ) && !document.body.classList.contains( "thanks" ) ) {
-          document.getElementById( "project-type" ).onchange = function () {
-            document.getElementById( "linkToContactForm" ).click();
-            document.getElementById( "name" ).focus();
-          };
+        if ( document.body.classList.contains( 'home' ) ) {
+          document.getElementById( "workLink" ).addEventListener( "click", this.openWorkMenu );
         }
 
         window.addEventListener( "mousemove", this.mouseOverHeader );
@@ -49,12 +46,12 @@
       /**
        * Show the header if the users cursor is within 100px of it
        */
-      mouseOverHeader: function ( event ) {
+      mouseOverHeader: function ( evt ) {
         var header = document.querySelector( ".fixed" );
 
-        event = event || window.event;
+        evt = evt || window.event;
 
-        if ( event.clientY < 100 ) {
+        if ( evt.clientY < 100 ) {
           header.classList.remove( "scrolled" );
         }
       },

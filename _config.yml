@@ -5,7 +5,7 @@ rdiscount:
   extensions: [smart, footnotes]
 pygments: true
 permalink: /:categories/:title
-exclude: ['.gitignore', 'molovo.sublime-project', 'molovo.sublime-workspace', '.sass_cache', 'node_modules', 'gulpfile.js', 'src', 'package.json', '.git', '.gitignore']
+exclude: ['.gitignore', 'molovo.sublime-project', 'molovo.sublime-workspace', '.sass_cache', 'node_modules', 'gulpfile.js', 'src', 'package.json', '.git', '.gitignore', 'temp']
 include: ['.htaccess']
 encoding: utf-8
 destination: 'public_html'

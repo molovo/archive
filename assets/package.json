@@ -21,9 +21,9 @@
     "imagemin-optipng": "latest",
     "imagemin-svgo": "latest",
     "gulp-webp": "~2.3.0",
-    "dalekjs": "0.0.9",
     "gulp-sass": "~1.3.3",
-    "gulp-dalek": "0.0.1"
+    "gulp-sourcemaps": "latest",
+    "gulp-nightwatch": "latest"
   },
   "repository": "",
   "author": "",
