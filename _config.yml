@@ -3,9 +3,9 @@ url: 'https://molovo.co'
 markdown: rdiscount
 rdiscount:
   extensions: [smart, footnotes]
-pygments: true
+higlighter: pygments
 permalink: /:categories/:title
-exclude: ['.gitignore', 'molovo.sublime-project', 'molovo.sublime-workspace', '.sass_cache', 'node_modules', 'gulpfile.js', 'src', 'package.json', '.git', '.gitignore', 'temp']
+exclude: ['.gitignore', 'molovo.sublime-project', 'molovo.sublime-workspace', '.sass_cache', 'node_modules', 'gulpfile.js', 'src', 'package.json', '.git', '.gitignore', 'temp', 'public_html/assets/report', 'public_html/assets/reports']
 include: ['.htaccess']
 encoding: utf-8
 destination: 'public_html'

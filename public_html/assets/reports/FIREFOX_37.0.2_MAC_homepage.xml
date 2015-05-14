@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites name="homepage"
              errors="0"
-             failures="1"
-             tests="4">
+             failures="0"
+             tests="5">
   
   <testsuite errors="0" failures="0" hostname="" id=""
     name="Page title is correct" package="homepage" skipped="0"
@@ -17,14 +17,35 @@
     
     </testsuite>
   
-  <testsuite errors="0" failures="1" hostname="" id=""
-    name="Link to Work Opens Menu" package="homepage" skipped="2"
-    tests="3" time="" timestamp="">
+  <testsuite errors="0" failures="0" hostname="" id=""
+    name="Link to Work Opens Menu" package="homepage" skipped="0"
+    tests="2" time="" timestamp="">
     
     
-      <testcase name="Timed out while waiting for element &lt;.work li.haresfoot&gt; to be visible for 2000 milliseconds.">
+      <testcase name="Element &lt;.work li.haresfoot&gt; was visible after 323 milliseconds.">
         
-          <failure message="Expected &quot;visible&quot; but got: &quot;not visible&quot;"></failure>
+        
+      </testcase>
+    
+      <testcase name="Element &lt;.work li.haresfoot&gt; was not visible after 740 milliseconds.">
+        
+        
+      </testcase>
+    
+    
+    </testsuite>
+  
+  <testsuite errors="0" failures="0" hostname="" id=""
+    name="Case Studies Have Loaded" package="homepage" skipped="0"
+    tests="2" time="" timestamp="">
+    
+    
+      <testcase name="Element &lt;.featured-case-study .button&gt; was visible after 128 milliseconds.">
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;.featured-case-study .button&gt; contains text: &quot;View the Case Study&quot;.">
         
         
       </testcase>

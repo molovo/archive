@@ -5,9 +5,9 @@
 
   <testsuite name="open-case-study"
     errors="0" failures="0" hostname="" id="" package="open-case-study" skipped="0"
-    tests="1" time="5.393" timestamp="Tue, 05 May 2015 22:21:55 GMT">
+    tests="1" time="5.774" timestamp="Tue, 05 May 2015 22:43:35 GMT">
   
-    <testcase name="Open a Case Study" time="5.393" assertions="3">
+    <testcase name="Open a Case Study" time="5.774" assertions="3">
 
     
 

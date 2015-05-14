@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="homepage"
+             errors="0"
+             failures="0"
+             tests="5">
+  
+  <testsuite errors="0" failures="0" hostname="" id=""
+    name="Page title is correct" package="homepage" skipped="0"
+    tests="1" time="" timestamp="">
+    
+    
+      <testcase name="Testing if the page title equals &quot;molovo. Web Design, Portsmouth&quot;.">
+        
+        
+      </testcase>
+    
+    
+    </testsuite>
+  
+  <testsuite errors="0" failures="0" hostname="" id=""
+    name="Link to Work Opens Menu" package="homepage" skipped="0"
+    tests="2" time="" timestamp="">
+    
+    
+      <testcase name="Element &lt;.work li.haresfoot&gt; was visible after 600 milliseconds.">
+        
+        
+      </testcase>
+    
+      <testcase name="Element &lt;.work li.haresfoot&gt; was not visible after 561 milliseconds.">
+        
+        
+      </testcase>
+    
+    
+    </testsuite>
+  
+  <testsuite errors="0" failures="0" hostname="" id=""
+    name="Case Studies Have Loaded" package="homepage" skipped="0"
+    tests="2" time="" timestamp="">
+    
+    
+      <testcase name="Element &lt;.featured-case-study .button&gt; was visible after 49 milliseconds.">
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;.featured-case-study .button&gt; contains text: &quot;View the Case Study&quot;.">
+        
+        
+      </testcase>
+    
+    
+    </testsuite>
+  
+</testsuites>

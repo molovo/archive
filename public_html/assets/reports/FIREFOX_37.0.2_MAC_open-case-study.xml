@@ -9,12 +9,12 @@
     tests="3" time="" timestamp="">
     
     
-      <testcase name="Element &lt;.work li.haresfoot&gt; was visible after 142 milliseconds.">
+      <testcase name="Element &lt;.work li.haresfoot&gt; was visible after 170 milliseconds.">
         
         
       </testcase>
     
-      <testcase name="Testing if the URL equals &quot;https://molovo.co/work/haresfoot&quot;.">
+      <testcase name="Testing if the URL equals &quot;http://molovo.dev/work/haresfoot&quot;.">
         
         
       </testcase>

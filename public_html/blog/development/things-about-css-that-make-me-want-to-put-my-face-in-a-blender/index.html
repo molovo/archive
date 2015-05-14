@@ -47,9 +47,9 @@
     </script>
   </head>
 
-  <body class=" blog development things-about-css-that-make-me-want-to-put-my-face-in-a-blender">
+  <body class="blog">
 
-    <header class="fixed ">
+    <header class="fixed  ">
 
       <nav class="work">
         <nav class="main-menu">
@@ -172,30 +172,27 @@
 
 <p>When you enter a margin value such as:</p>
 
-<div class="highlight"><pre><code class="css"><span class="nt">margin</span><span class="o">:</span> <span class="nt">12</span><span class="o">%</span> <span class="nt">24</span><span class="o">%;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">margin</span><span class="o">:</span> <span class="nt">12</span><span class="o">%</span> <span class="nt">24</span><span class="o">%;</span></code></pre></div>
 
 
 <p>the vertical value is taken as a percentage of the height of the parent and the horizontal value is taken as a percentage of the  width of the parent. This makes sense.</p>
 
 <p>If I enter the same values as padding:</p>
 
-<div class="highlight"><pre><code class="css"><span class="nt">padding</span><span class="o">:</span> <span class="nt">12</span><span class="o">%</span> <span class="nt">24</span><span class="o">%;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">padding</span><span class="o">:</span> <span class="nt">12</span><span class="o">%</span> <span class="nt">24</span><span class="o">%;</span></code></pre></div>
 
 
 <p>the vertical value is taken from the width of the element (horizontal), and the horizontal value is taken from the height of the element (vertical). <strong>This is stupid</strong>.</p>
 
 <p>The only time this has <em>ever</em> been of any use to me whatsoever in four years of writing CSS has been when forcing the aspect ratio of an element like so:</p>
 
-<div class="highlight"><pre><code class="css"><span class="nt">height</span><span class="o">:</span> <span class="nt">0</span><span class="o">;</span>
-<span class="nt">padding</span><span class="o">:</span> <span class="nt">0</span> <span class="nt">0</span> <span class="nt">50</span><span class="o">%;</span>  <span class="c">/* Forces a 2:1 aspect ratio. */</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">height</span><span class="o">:</span> <span class="nt">0</span><span class="o">;</span>
+<span class="nt">padding</span><span class="o">:</span> <span class="nt">0</span> <span class="nt">0</span> <span class="nt">50</span><span class="o">%;</span>  <span class="c">/* Forces a 2:1 aspect ratio. */</span></code></pre></div>
 
 
 <p>You know what would be far more useful? Make the horizontal and vertical the right way around, and give us an aspect ratio property. Not only would this make aspect ratios an <em>actualproperthing&trade;</em> rather than a hack, it also allow us to <strong>finally</strong> vertically center things properly.</p>
 
-<div class="highlight"><pre><code class="css"><span class="c">/* 25% of the element&#39;s height will be</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* 25% of the element&#39;s height will be</span>
 <span class="c">    whitespace above and below its children,</span>
 <span class="c">    making them vertically centered (Hurrah!) */</span>
 <span class="nt">padding</span><span class="o">:</span> <span class="nt">25</span><span class="o">%</span> <span class="nt">0</span><span class="o">;</span>
@@ -205,22 +202,20 @@
 <span class="c">    the flow of content. */</span>
 <span class="nt">height</span><span class="o">:</span> <span class="nt">auto</span><span class="o">;</span>
 <span class="nt">width</span><span class="o">:</span> <span class="nt">auto</span><span class="o">;</span>
-<span class="nt">aspect-ratio</span><span class="o">:</span> <span class="nt">1</span> <span class="nt">2</span><span class="o">;</span>
-</code></pre></div>
+<span class="nt">aspect-ratio</span><span class="o">:</span> <span class="nt">1</span> <span class="nt">2</span><span class="o">;</span></code></pre></div>
 
 
 <hr />
 
 <h4>Exes and Whys?</h4>
 
-<div class="highlight"><pre><code class="css"><span class="nt">margin</span><span class="o">:</span> <span class="nt">Y</span> <span class="nt">X</span><span class="o">;</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">margin</span><span class="o">:</span> <span class="nt">Y</span> <span class="nt">X</span><span class="o">;</span>
 <span class="nt">padding</span><span class="o">:</span> <span class="nt">Y</span> <span class="nt">X</span><span class="o">;</span>
 <span class="nt">border</span><span class="o">:</span> <span class="nt">Y</span> <span class="nt">X</span><span class="o">;</span>
 <span class="nt">outline</span><span class="o">:</span> <span class="nt">Y</span> <span class="nt">X</span><span class="o">;</span>
 <span class="nt">background-position</span><span class="o">:</span> <span class="nt">X</span> <span class="nt">Y</span><span class="o">;</span>
 <span class="nt">transform</span><span class="o">:</span> <span class="nt">translate</span><span class="o">(</span><span class="nt">X</span><span class="o">,</span> <span class="nt">Y</span><span class="o">);</span>
-<span class="nt">transform</span><span class="o">:</span> <span class="nt">scale</span><span class="o">(</span><span class="nt">X</span><span class="o">,</span> <span class="nt">Y</span><span class="o">);</span>
-</code></pre></div>
+<span class="nt">transform</span><span class="o">:</span> <span class="nt">scale</span><span class="o">(</span><span class="nt">X</span><span class="o">,</span> <span class="nt">Y</span><span class="o">);</span></code></pre></div>
 
 
 <p>Why, dear God, Why???</p>
@@ -231,25 +226,23 @@
 
 <p>I set some elements at a certain size.</p>
 
-<div class="highlight"><pre><code class="css"><span class="nc">.parent</span> <span class="p">{</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">50</span><span class="o">%</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.parent</span> <span class="p">{</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">50%</span><span class="p">;</span>
 <span class="p">}</span>
     <span class="nc">.parent</span> <span class="nc">.child</span> <span class="p">{</span>
-      <span class="k">width</span><span class="o">:</span> <span class="m">30</span><span class="o">%</span><span class="p">;</span>
-    <span class="p">}</span>
-</code></pre></div>
+      <span class="k">width</span><span class="o">:</span> <span class="m">30%</span><span class="p">;</span>
+    <span class="p">}</span></code></pre></div>
 
 
 <p><code>.child</code> is 30% of the width of it&rsquo;s parent. Nice and easy. Then I add <code>position: fixed;</code> to the child.</p>
 
-<div class="highlight"><pre><code class="css"><span class="nc">.parent</span> <span class="p">{</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">50</span><span class="o">%</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.parent</span> <span class="p">{</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">50%</span><span class="p">;</span>
 <span class="p">}</span>
     <span class="nc">.parent</span> <span class="nc">.child</span> <span class="p">{</span>
-      <span class="k">width</span><span class="o">:</span> <span class="m">30</span><span class="o">%</span><span class="p">;</span>
+      <span class="k">width</span><span class="o">:</span> <span class="m">30%</span><span class="p">;</span>
       <span class="k">position</span><span class="o">:</span> <span class="k">fixed</span><span class="p">;</span>
-    <span class="p">}</span>
-</code></pre></div>
+    <span class="p">}</span></code></pre></div>
 
 
 <p>Boom! <code>.child</code> has now doubled in width. That makes sense doesn&rsquo;t it? <strong>No.</strong></p>
@@ -262,14 +255,12 @@
 
 <p>I want to write</p>
 
-<div class="highlight"><pre><code class="css"><span class="nt">border</span><span class="o">:</span> <span class="nt">blue</span><span class="o">;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">border</span><span class="o">:</span> <span class="nt">blue</span><span class="o">;</span></code></pre></div>
 
 
 <p>and have it give me a 1px wide, solid blue border.</p>
 
-<div class="highlight"><pre><code class="css"><span class="nt">border</span><span class="o">:</span> <span class="nt">5px</span> <span class="nt">blue</span><span class="o">;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">border</span><span class="o">:</span> <span class="nt">5px</span> <span class="nt">blue</span><span class="o">;</span></code></pre></div>
 
 
 <p>gives me a 5px, solid blue border. Easy peasy.</p>
@@ -278,24 +269,21 @@
 
 <h4>Posititioning</h4>
 
-<div class="highlight"><pre><code class="css"><span class="nt">background-position</span><span class="o">:</span> <span class="nt">top</span> <span class="nt">center</span><span class="o">;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">background-position</span><span class="o">:</span> <span class="nt">top</span> <span class="nt">center</span><span class="o">;</span></code></pre></div>
 
 
 <p>is a nice easy way to position a background. At the moment, to absolutely position an element in this way, I have to do this:</p>
 
-<div class="highlight"><pre><code class="css"><span class="nt">width</span><span class="o">:</span> <span class="nt">300px</span><span class="o">;</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">width</span><span class="o">:</span> <span class="nt">300px</span><span class="o">;</span>
 <span class="nt">position</span><span class="o">:</span> <span class="nt">absolute</span><span class="o">;</span>
 <span class="nt">top</span><span class="o">:</span> <span class="nt">0</span><span class="o">;</span>
 <span class="nt">left</span><span class="o">:</span> <span class="nt">50</span><span class="o">%;</span>
-<span class="nt">margin-left</span><span class="o">:</span> <span class="nt">-150px</span><span class="o">;</span>
-</code></pre></div>
+<span class="nt">margin-left</span><span class="o">:</span> <span class="nt">-150px</span><span class="o">;</span></code></pre></div>
 
 
 <p>If the width is dynamic, the above is impossible without a javascript hack. This would be better:</p>
 
-<div class="highlight"><pre><code class="css"><span class="nt">position</span><span class="o">:</span> <span class="nt">top</span> <span class="nt">center</span><span class="o">;</span>  <span class="c">/* Boom! */</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">position</span><span class="o">:</span> <span class="nt">top</span> <span class="nt">center</span><span class="o">;</span>  <span class="c">/* Boom! */</span></code></pre></div>
 
 
 <hr />

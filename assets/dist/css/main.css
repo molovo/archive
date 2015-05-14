@@ -759,19 +759,18 @@ body {
     fill: rgba(9, 39, 55, 0.7); }
   .fixed.open .logo svg:hover .right-lens {
     fill: rgba(9, 39, 55, 0.7); }
-
-.home .fixed:not(.open) .main, .contact .fixed:not(.open) .main, .four-oh-four .fixed:not(.open) .main, .work .fixed:not(.open) .main {
-  background: transparent; }
-  .home .fixed:not(.open) .main a, .contact .fixed:not(.open) .main a, .four-oh-four .fixed:not(.open) .main a, .work .fixed:not(.open) .main a {
-    color: white; }
-    .home .fixed:not(.open) .main a .lines, .home .fixed:not(.open) .main a .lines:before, .home .fixed:not(.open) .main a .lines:after, .contact .fixed:not(.open) .main a .lines, .contact .fixed:not(.open) .main a .lines:before, .contact .fixed:not(.open) .main a .lines:after, .four-oh-four .fixed:not(.open) .main a .lines, .four-oh-four .fixed:not(.open) .main a .lines:before, .four-oh-four .fixed:not(.open) .main a .lines:after, .work .fixed:not(.open) .main a .lines, .work .fixed:not(.open) .main a .lines:before, .work .fixed:not(.open) .main a .lines:after {
-      background: white; }
-.home .fixed:not(.open) .logo svg .frame, .contact .fixed:not(.open) .logo svg .frame, .four-oh-four .fixed:not(.open) .logo svg .frame, .work .fixed:not(.open) .logo svg .frame {
-  fill: white; }
-.home .fixed:not(.open) .logo svg:hover .left-lens, .contact .fixed:not(.open) .logo svg:hover .left-lens, .four-oh-four .fixed:not(.open) .logo svg:hover .left-lens, .work .fixed:not(.open) .logo svg:hover .left-lens {
-  fill: #1A92CE; }
-.home .fixed:not(.open) .logo svg:hover .right-lens, .contact .fixed:not(.open) .logo svg:hover .right-lens, .four-oh-four .fixed:not(.open) .logo svg:hover .right-lens, .work .fixed:not(.open) .logo svg:hover .right-lens {
-  fill: #730329; }
+  .fixed.transparent:not(.open) .main {
+    background: transparent; }
+    .fixed.transparent:not(.open) .main a {
+      color: white; }
+      .fixed.transparent:not(.open) .main a .lines, .fixed.transparent:not(.open) .main a .lines:before, .fixed.transparent:not(.open) .main a .lines:after {
+        background: white; }
+  .fixed.transparent:not(.open) .logo svg .frame {
+    fill: white; }
+  .fixed.transparent:not(.open) .logo svg:hover .left-lens {
+    fill: #1A92CE; }
+  .fixed.transparent:not(.open) .logo svg:hover .right-lens {
+    fill: #730329; }
 
 .bottom {
   background: #B52936;

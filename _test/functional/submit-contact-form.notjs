@@ -1,0 +1,17 @@
+module.exports = {
+  'Submit contact form': function ( browser ) {
+    browser
+      .url( 'http://molovo.dev/contact' )
+      .setValue( '#name', 'Muffin Man' )
+      .setValue( '#email', 'muffin@man.com' )
+      .setValue( '#url', 'http://themuffinman.com' )
+      .setValue( '#budget', '5000' )
+      .setValue( '#release-date', '01/01/2016' )
+      .setValue( '#message', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis reprehenderit consectetur quam totam laborum animi magnam optio porro fuga adipisci doloremque ab at libero iusto neque beatae, enim quis deleniti!' )
+      .click( '#send' )
+      .pause( 1000 )
+      .assert.urlEquals( 'https://molovo.co/contact/thanks/' )
+      .assert.containsText( '.contact.thanks .contact-header h1', 'Thanks!' )
+      .end();
+  }
+};
