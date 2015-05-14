@@ -5,9 +5,9 @@
 
   <testsuite name="submit-contact-form"
     errors="0" failures="0" hostname="" id="" package="submit-contact-form" skipped="0"
-    tests="1" time="8.981" timestamp="Tue, 05 May 2015 22:22:00 GMT">
+    tests="1" time="6.899" timestamp="Tue, 05 May 2015 22:43:40 GMT">
   
-    <testcase name="Submit contact form" time="8.981" assertions="2">
+    <testcase name="Submit contact form" time="6.899" assertions="2">
 
     
 

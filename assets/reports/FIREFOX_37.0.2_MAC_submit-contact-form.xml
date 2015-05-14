@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites name="submit-contact-form"
              errors="0"
-             failures="0"
-             tests="2">
+             failures="1"
+             tests="3">
   
-  <testsuite errors="0" failures="0" hostname="" id=""
-    name="Submit contact form" package="submit-contact-form" skipped="0"
-    tests="2" time="" timestamp="">
+  <testsuite errors="0" failures="1" hostname="" id=""
+    name="Submit contact form" package="submit-contact-form" skipped="2"
+    tests="3" time="" timestamp="">
     
     
       <testcase name="Testing if the URL equals &quot;https://molovo.co/contact/thanks/&quot;.">
         
-        
-      </testcase>
-    
-      <testcase name="Testing if element &lt;.contact.thanks .contact-header h1&gt; contains text: &quot;Thanks!&quot;.">
+          <failure message="Expected &quot;https://molovo.co/contact/thanks/&quot; but got: &quot;http://formspree.io/hi@molovo.co&quot;"></failure>
         
         
       </testcase>

@@ -94,23 +94,23 @@ gulp.task( 'cleanimages', function () {
     .pipe( clean() );
 } );
 
-gulp.task( 'nightwatch:chrome', function () {
-  gulp.src( '' )
-    .pipe( nightwatch( {
-      configFile: '../_test/nightwatch.json',
-      cliArgs: [ '--env chrome', '--group ../../_test' ]
-    } ) );
-} );
-
-gulp.task( 'nightwatch:firefox', function () {
-  gulp.src( '' )
+gulp.task( 'nightwatch', function () {
+  return gulp.src( '' )
     .pipe( nightwatch( {
       configFile: '../_test/nightwatch.json',
       cliArgs: [ '--env firefox', '--group ../../_test' ]
+    } ) )
+    .pipe( nightwatch( {
+      configFile: '../_test/nightwatch.json',
+      cliArgs: [ '--env chrome', '--group ../../_test' ]
+    } ) )
+    .pipe( nightwatch( {
+      configFile: '../_test/nightwatch.json',
+      cliArgs: [ '--env safari', '--group ../../_test' ]
     } ) );
 } );
 
-gulp.task( 'test', [ 'nightwatch:firefox' ] );
+gulp.task( 'test', [ 'nightwatch' ] );
 
 gulp.task( 'main', [ 'styles', 'scripts' ] );
 

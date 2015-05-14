@@ -1,7 +1,7 @@
 module.exports = {
   'Submit contact form': function ( browser ) {
     browser
-      .url( 'https://molovo.co/contact' )
+      .url( 'http://molovo.dev/contact' )
       .setValue( '#name', 'Muffin Man' )
       .setValue( '#email', 'muffin@man.com' )
       .setValue( '#url', 'http://themuffinman.com' )
