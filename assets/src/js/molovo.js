@@ -1,5 +1,5 @@
 /* jshint browser: true */
-/* global Hogan, NProgress, echo, _gs */
+/* global Hogan, NProgress, echo */
 ( function () {
   "use strict";
 
@@ -33,7 +33,7 @@
 
         document.getElementById( "work-link" ).addEventListener( "click", this.openWorkMenu );
 
-        if ( document.body.classList.contains( 'home' ) ) {
+        if ( document.body.classList.contains( "home" ) ) {
           document.getElementById( "workLink" ).addEventListener( "click", this.openWorkMenu );
         }
 
@@ -236,8 +236,8 @@
 
         fonts: function () {
           function addFont() {
-            var style = document.createElement( 'style' );
-            style.rel = 'stylesheet';
+            var style = document.createElement( "style" );
+            style.rel = "stylesheet";
             document.head.appendChild( style );
             style.textContent = localStorage.gauthier;
           }
@@ -249,7 +249,7 @@
             } else {
               // We have to first load the font file asynchronously
               var request = new XMLHttpRequest();
-              request.open( 'GET', '/assets/fonts/gauthier_fy/molovo.css', true );
+              request.open( "GET", "/assets/fonts/gauthier_fy/molovo.css", true );
 
               request.onload = function () {
                 if ( request.status >= 200 && request.status < 400 ) {
@@ -259,16 +259,16 @@
                   // ... and load the font
                   addFont();
                 }
-              }
+              };
 
               request.send();
             }
           } catch ( ex ) {
             // maybe load the font synchronously for woff-capable browsers
             // to avoid blinking on every request when localStorage is not available
-            var link = document.createElement( 'link' );
-            link.rel = 'stylesheet';
-            link.href = '/assets/fonts/gauthier_fy/molovo.css';
+            var link = document.createElement( "link" );
+            link.rel = "stylesheet";
+            link.href = "/assets/fonts/gauthier_fy/molovo.css";
             document.head.appendChild( link );
           }
         },
@@ -384,13 +384,12 @@
       done: function () {
         NProgress.done();
         Molovo.init();
-        // _gs( "track" );
       }
     }
 
   };
 
-  document.addEventListener( "DOMContentLoaded", Molovo.init() );
+  // document.addEventListener( "DOMContentLoaded", Molovo.init() );
 
   document.addEventListener( "page:fetch", Molovo.progress.start );
   document.addEventListener( "page:restore", Molovo.progress.remove );
