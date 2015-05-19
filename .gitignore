@@ -4,3 +4,5 @@
 _test/reports
 *.sublime*
 .htaccess
+*.un\~
+.gitignore\~
