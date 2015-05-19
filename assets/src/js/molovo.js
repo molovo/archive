@@ -221,9 +221,9 @@
           this.fonts();
           this.colorSwatches();
 
-          if ( document.body.classList.contains( "blog" ) ) {
-            this.ads();
-          }
+          // if ( document.body.classList.contains( "blog" ) ) {
+          //   this.ads();
+          // }
 
           // Initialize echo.js here for lazy loading images
           echo.init( {
