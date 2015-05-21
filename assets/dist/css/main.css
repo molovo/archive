@@ -7,8 +7,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
   -moz-font-feature-settings: "calt=0,liga=0"; }
 
 /* HTML5 display-role reset for older browsers */
