@@ -7,6 +7,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
   -moz-font-feature-settings: "calt=0,liga=0"; }
 
 /* HTML5 display-role reset for older browsers */
@@ -996,7 +998,7 @@ body {
 figure {
   width: 100%;
   position: relative;
-  margin: 0; }
+  padding: 1.5em 0; }
   figure img {
     max-width: 100%; }
   @media (min-width: 66.9375em) {
@@ -1005,7 +1007,8 @@ figure {
       margin-left: -6em; }
       figure.left, figure.right {
         width: 50%;
-        margin: 0 1.5em; }
+        margin: 0 1.5em;
+        padding: 0; }
       figure.left {
         float: left;
         margin-left: -6em; }
@@ -1038,7 +1041,7 @@ figure {
   @media (min-width: 66.9375em) {
     figure:not(.left):not(.right) .image-caption, figure:not(.left):not(.right) figcaption {
       position: absolute;
-      top: 1.5em;
+      top: 3em;
       left: 100%;
       margin-left: 1.5em;
       width: 6em; } }
