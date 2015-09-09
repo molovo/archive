@@ -7,6 +7,18 @@
     <atom:link href="https://molovo.co/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Blood, Sweat and Stale Coffee</title>
+        
+        
+          <description>&lt;p&gt;My career as a freelancer failed. Hard.&lt;/p&gt;
+</description>
+        
+        <pubDate>Thu, 09 Jul 2015 00:00:00 +0100</pubDate>
+        <link>https://molovo.co/blog/blood-sweat-and-stale-coffee</link>
+        <guid isPermaLink="true">https://molovo.co/blog/blood-sweat-and-stale-coffee</guid>
+      </item>
+    
+      <item>
         <title>This Site has been on a Diet</title>
         
         
@@ -111,17 +123,6 @@
         <pubDate>Sat, 28 Dec 2013 00:00:00 +0000</pubDate>
         <link>https://molovo.co/blog/looking-out-for-the-little-guy</link>
         <guid isPermaLink="true">https://molovo.co/blog/looking-out-for-the-little-guy</guid>
-      </item>
-    
-      <item>
-        <title>Never Stop Doing</title>
-        
-        
-          <description>Why I&#39;m building a lot of things lately.</description>
-        
-        <pubDate>Thu, 05 Dec 2013 00:00:00 +0000</pubDate>
-        <link>https://molovo.co/blog/never-stop-doing</link>
-        <guid isPermaLink="true">https://molovo.co/blog/never-stop-doing</guid>
       </item>
     
   </channel>

@@ -397,7 +397,7 @@ html {
     font-size: 1.6125em; } }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "usual", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 700;
   color: #730329;
   letter-spacing: -.04em; }
@@ -475,7 +475,7 @@ hr {
 
 blockquote {
   display: block;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "usual", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 300; }
   blockquote.push, blockquote.pull {
     width: 50%; }
@@ -507,7 +507,7 @@ blockquote {
 
 .alt, .post .ad-container span, .typography h6, .color-palette .swatch:after, .case-study-color-palette .swatch:after {
   font-weight: 300;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font-family: "usual", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
 code {
   font-family: "Nitti WM2", "Source Code Pro", "Courier New", "Courier", monospace;
@@ -524,7 +524,7 @@ code {
 
 .button {
   padding: .75em 2.25em;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "usual", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   background: #1A92CE;
   color: white;
   font-weight: 600;
@@ -691,7 +691,7 @@ body {
       .fixed .work .main-menu a {
         display: inline-block;
         padding: 1.5em;
-        font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        font-family: "usual", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
         color: #B52936;
         text-decoration: none;
         font-weight: 700;
@@ -814,7 +814,7 @@ body {
     .bottom .container .left {
       height: auto;
       overflow: hidden;
-      font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-family: "usual", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
       font-weight: 600;
       font-size: .75em;
       line-height: 3em;
@@ -847,7 +847,7 @@ body {
   .bottom h6 {
     color: white;
     margin: 0;
-    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+    font-family: "usual", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
   .bottom svg, .bottom h6 {
     display: inline-block;
     vertical-align: middle; }
@@ -1034,7 +1034,7 @@ figure {
     line-height: .75em; }
     figure .image-caption > span, figure .image-caption > p, figure figcaption > span, figure figcaption > p {
       font-size: .6em;
-      font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-family: "usual", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
       margin-bottom: 0; }
       figure .image-caption > span h6, figure .image-caption > p h6, figure figcaption > span h6, figure figcaption > p h6 {
         margin: 0; }
@@ -1139,7 +1139,7 @@ p > img.full-width, img[title="full-width"] {
   .next-post-link em, .previous-post-link em {
     display: block;
     font-style: normal;
-    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "usual", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     color: rgba(255, 255, 255, 0.7); }
   .next-post-link h6, .previous-post-link h6 {
     color: white;
@@ -1253,7 +1253,7 @@ p > img.full-width, img[title="full-width"] {
   padding: 3em 0 6em; }
   .contact-form label {
     display: inline-block;
-    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "usual", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-weight: 600;
     float: left;
     width: 100%; }
@@ -1877,6 +1877,29 @@ p > img.full-width, img[title="full-width"] {
     content: '';
     float: left;
     margin: 0 6em .25em 0; }
+
+.article--blood-sweat-and-stale-coffee .section-heading {
+  width: 100vw;
+  height: 24em;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-mask: url(/assets/dist/img/great-minds/knockout.png) center/cover no-repeat;
+          mask: url(/assets/dist/img/great-minds/knockout.png) center/cover no-repeat; }
+  .article--blood-sweat-and-stale-coffee .section-heading.one--new-beginnings {
+    background: url('/assets/dist/img/articles/blood-sweat-and-stale-coffee/new-beginnings.jpg') center/cover no-repeat; }
+    .article--blood-sweat-and-stale-coffee .section-heading.one--new-beginnings .container {
+      position: relative;
+      top: 25%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%); }
+    .article--blood-sweat-and-stale-coffee .section-heading.one--new-beginnings h2 {
+      font-family: "GauthierFY", "Georgia", "Times New Roman", serif;
+      font-weight: 300;
+      color: white; }
 
 body {
   background: white;

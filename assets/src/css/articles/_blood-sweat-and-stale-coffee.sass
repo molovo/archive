@@ -1,0 +1,25 @@
+$slug: 'blood-sweat-and-stale-coffee'
+$img_path: '/assets/dist/img/articles/#{$slug}'
+
+.article--#{$slug}
+  .section-heading
+    width: 100vw
+    height: 24em
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+    mask: url(/assets/dist/img/great-minds/knockout.png) center / cover no-repeat
+
+    &.one--new-beginnings
+      background: url('#{$img_path}/new-beginnings.jpg') center / cover no-repeat
+
+      .container
+        position: relative
+        top: 25%
+        transform: translateY(-50%)
+
+      h2
+        font:
+          family: $primary
+          weight: 300
+        color: white
