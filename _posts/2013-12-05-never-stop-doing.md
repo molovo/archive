@@ -7,9 +7,9 @@ categories: blog
 
 You may have noticed I've been releasing a lot of new work recently. Two apps in two months isn't bad going, and I'm pretty pleased with myself.
 
-The first, [Chatter](http://chatter.li), was a blot out of the blue. I wanted comments on my portfolio, and there wasn't anything out there that would meet my needs. (Disqus, eurgh). Since this site is built with Jekyll, and as such I have no database, I needed something off-site, and I figured there were a lot of other people looking for the same thing, so I built it.
+The first, <del><a href="http://chatter.li" data-proofer-ignore>Chatter</a></del>(edit: now offline), was a blot out of the blue. I wanted comments on my portfolio, and there wasn't anything out there that would meet my needs. (Disqus, eurgh). Since this site is built with Jekyll, and as such I have no database, I needed something off-site, and I figured there were a lot of other people looking for the same thing, so I built it.
 
-Then Chatter took off, and I needed to write some docs for it. I started off building static HTML pages and placing them within the apps routing system. It was taking ages, and I wasn't happy with the results, so I started looking for something that could make it easier. There wasn't anything, so I built it. It's called [docci](http://docci.co).
+Then Chatter took off, and I needed to write some docs for it. I started off building static HTML pages and placing them within the apps routing system. It was taking ages, and I wasn't happy with the results, so I started looking for something that could make it easier. There wasn't anything, so I built it. It's called <del><a href="http://docci.co" data-proofer-ignore>Docci</a></del>(edit: now offline).
 
 Before I started building the apps above, I was really unhappy with my work. It had been a while since I'd done anything other than client work, and as a result I wasn't trying new things. I was coasting. I was growing stale.
 

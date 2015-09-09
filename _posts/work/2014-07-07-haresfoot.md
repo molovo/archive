@@ -62,7 +62,7 @@ The first step was to create a landing page, as a way to build interest in the H
 
 <figure>
   <div class="browser">
-    <img src="/assets/dist/img/ajax-loader.gif" data-echo="{{ img_root }}/holding-page.jpg" alt="" />
+    <img src="/assets/dist/img/ajax-loader.gif" data-echo="{{ img_root }}/holding-page.jpg" alt="The holding page" />
   </div>
   <figcaption>
     <p>The holding page which first appeared on haresfoot.com</p>

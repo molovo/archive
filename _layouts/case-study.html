@@ -76,7 +76,7 @@ layout: default
       {% for screenshot in page.screenshots %}
         <h2>{{ screenshot.title }}</h2>
         <div class="browser">
-          <img src="/assets/dist/img/ajax-loader.gif" data-echo="{{ img_root }}/{{ screenshot.url }}" alt="">
+          <img src="/assets/dist/img/ajax-loader.gif" data-echo="{{ img_root }}/{{ screenshot.url }}" alt="{{ screenshot.title }}">
         </div>
       {% endfor %}
     </div>

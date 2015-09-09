@@ -12,7 +12,7 @@ Everyone has their own methods for implementing accessibility. Some are innovati
 
 An *alt* attribute on an image is a prime example. If empty, some screenreaders will announce "Image" and nothing else. Some will announce the filename. Some will announce the *title* if one is present. Some will ignore the image altogether. And when included, an *alt* attribute is often a cop-out, an afterthought thrown in to please those who get angry about this sort of thing. Take a look at the below image:
 
-![Portrait of James Dinsdale](https://twimg0-a.akamaihd.net/profile_images/3320078323/fad7ae557577248bc153e667a5c17b5b.jpeg)
+![Portrait of James Dinsdale](/assets/dist/img/me2.jpg)
 
 Those of you readers who are blessed with sight have just been treated to the pretty face of yours truly. However those users without sight simply heard "Portrait of James Dinsdale". Where is the additional context that sighted readers enjoy? Where is the description, telling those who cannot deduce it by looking my age, race, approximate height, eye colour, hair colour, clothes, facial expression, surroundings. All these things are detected by sighted users in a matter of seconds, but for a user using a screenreader they will never be privy to this information, as *alt* text never goes into as much detail.
 

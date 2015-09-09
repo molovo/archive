@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Molovo</title>
+    <description>Hi. I&amp;rsquo;m James, and I design things for the web, like websites, apps, blogs, icons and logos.</description>
+    <link>https://molovo.co</link>
+    <atom:link href="https://molovo.co/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Blood, Sweat and Stale Coffee</title>
+        
+        
+          <description>&lt;p&gt;My career as a freelancer failed. Hard.&lt;/p&gt;
+</description>
+        
+        <pubDate>Thu, 09 Jul 2015 00:00:00 +0100</pubDate>
+        <link>https://molovo.co/blog/blood-sweat-and-stale-coffee</link>
+        <guid isPermaLink="true">https://molovo.co/blog/blood-sweat-and-stale-coffee</guid>
+      </item>
+    
+      <item>
+        <title>This Site has been on a Diet</title>
+        
+        
+          <description>&lt;p&gt;I&amp;rsquo;ve come a long way since I started my career. For the four years I&amp;rsquo;ve been writing it, this blog has served as a great reminder to myself of my progress as a designer and developer. That said, it has also contained&amp;mdash;for a long time&amp;mdash;posts which are naïve, misinformative, pretentious and &lt;em&gt;a bit too sweary&lt;/em&gt;.&lt;/p&gt;
+</description>
+        
+        <pubDate>Fri, 10 Apr 2015 00:00:00 +0100</pubDate>
+        <link>https://molovo.co/blog/this-site-has-been-on-a-diet</link>
+        <guid isPermaLink="true">https://molovo.co/blog/this-site-has-been-on-a-diet</guid>
+      </item>
+    
+      <item>
+        <title>Great Minds</title>
+        
+        
+          <description>&lt;p&gt;Throughout my life, I&amp;rsquo;ve constantly found myself amazed at how little I know. My ability to learn has always been fuelled by this feeling of inadequacy, and a desire to better myself. It&amp;rsquo;s the thing that keeps me going at 4.30am, trying to meet a deadline, with absolutely no idea of how I&amp;rsquo;m going to get there.&lt;/p&gt;
+</description>
+        
+        <pubDate>Thu, 31 Jul 2014 00:00:00 +0100</pubDate>
+        <link>https://molovo.co/blog/great-minds</link>
+        <guid isPermaLink="true">https://molovo.co/blog/great-minds</guid>
+      </item>
+    
+      <item>
+        <title>The Art of Storytelling</title>
+        
+        
+          <description>&lt;p&gt;Users. Customers. Buyers. Shoppers. Clients. Patrons. Consumers. We use many different names to describe the people for whom we build things on the web, but we often forget that they are just that &amp;ndash; people. People with emotions, contrasting opinions, differing reactions and distinct expectations.&lt;/p&gt;
+</description>
+        
+        <pubDate>Tue, 29 Jul 2014 00:00:00 +0100</pubDate>
+        <link>https://molovo.co/blog/the-art-of-storytelling</link>
+        <guid isPermaLink="true">https://molovo.co/blog/the-art-of-storytelling</guid>
+      </item>
+    
+      <item>
+        <title>Taming the Beast</title>
+        
+        
+          <description>&lt;p&gt;There&amp;rsquo;s no denying it, pregnant women need a lot of attention. As Gemma and I reach the eve of that magic 37th week, I thought I&amp;rsquo;d share some tips on how I&amp;rsquo;ve managed to avoid and divert some of the nagging over the last 8 and a bit months in order to actually get some work done.&lt;/p&gt;
+</description>
+        
+        <pubDate>Tue, 01 Jul 2014 00:00:00 +0100</pubDate>
+        <link>https://molovo.co/blog/taming-the-beast</link>
+        <guid isPermaLink="true">https://molovo.co/blog/taming-the-beast</guid>
+      </item>
+    
+      <item>
+        <title>The View From Above</title>
+        
+        
+          <description>&lt;p&gt;&lt;figure&gt;
+  &lt;img src=&quot;/assets/dist/img/the-view-from-above/my-home.png&quot; alt=&quot;A satellite image of my childhood home&quot; /&gt;
+&lt;/figure&gt;&lt;/p&gt;
+</description>
+        
+        <pubDate>Tue, 10 Jun 2014 00:00:00 +0100</pubDate>
+        <link>https://molovo.co/blog/the-view-from-above</link>
+        <guid isPermaLink="true">https://molovo.co/blog/the-view-from-above</guid>
+      </item>
+    
+      <item>
+        <title>Writing</title>
+        
+        
+          <description>&lt;p&gt;I love writing. More accurately, I love the idea of it.&lt;/p&gt;
+</description>
+        
+        <pubDate>Fri, 30 May 2014 00:00:00 +0100</pubDate>
+        <link>https://molovo.co/blog/writing</link>
+        <guid isPermaLink="true">https://molovo.co/blog/writing</guid>
+      </item>
+    
+      <item>
+        <title>Confidence</title>
+        
+        
+          <description>Lack of confidence is not a curse. It&#39;s a problem; a thing to be overcome.</description>
+        
+        <pubDate>Thu, 30 Jan 2014 00:00:00 +0000</pubDate>
+        <link>https://molovo.co/blog/confidence</link>
+        <guid isPermaLink="true">https://molovo.co/blog/confidence</guid>
+      </item>
+    
+      <item>
+        <title>Dear Client</title>
+        
+        
+          <description>An open letter to the clients of web designers everywhere.</description>
+        
+        <pubDate>Fri, 10 Jan 2014 00:00:00 +0000</pubDate>
+        <link>https://molovo.co/blog/dear-client</link>
+        <guid isPermaLink="true">https://molovo.co/blog/dear-client</guid>
+      </item>
+    
+      <item>
+        <title>Looking out for the little guy</title>
+        
+        
+          <description>Designing for small businesses.</description>
+        
+        <pubDate>Sat, 28 Dec 2013 00:00:00 +0000</pubDate>
+        <link>https://molovo.co/blog/looking-out-for-the-little-guy</link>
+        <guid isPermaLink="true">https://molovo.co/blog/looking-out-for-the-little-guy</guid>
+      </item>
+    
+  </channel>
+</rss>

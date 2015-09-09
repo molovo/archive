@@ -1,5 +1,7 @@
 require 'html/proofer'
 
 task :default do
-  HTML::Proofer.new("./public_html").run
+  sh "bundle exec jekyll build"
+  sh "bundle exec percy snapshot _site/"
+  HTML::Proofer.new("./_site").run
 end

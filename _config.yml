@@ -5,8 +5,8 @@ rdiscount:
   extensions: [smart, footnotes]
 higlighter: pygments
 permalink: /:categories/:title
-exclude: ['.gitignore', 'molovo.sublime-project', 'molovo.sublime-workspace', '/assets/.sass_cache', '/assets/node_modules', '/assets/gulpfile.js', '/assets/src', '/assets/package.json', '.git', '.gitignore', 'temp', '/assets/report', '/assets/reports']
+exclude: ['.gitignore', 'molovo.sublime-project', 'molovo.sublime-workspace', '/.sass_cache', '/node_modules', '/gulpfile.js', '/src', '/package.json', '.git', '.gitignore', 'temp', '/report', '/reports', 'Gemfile.lock', 'Gemfile', 'Rakefile']
 include: ['.htaccess']
 encoding: utf-8
-destination: 'public_html'
+destination: '_site'
 description: 'Hi. I&rsquo;m James, and I design things for the web, like websites, apps, blogs, icons and logos.'

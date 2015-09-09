@@ -1,7 +1,7 @@
 ---
 title: Confidence
 layout: post
-categories: blog feels
+categories: blog
 excerpt: "Lack of confidence is not a curse. It's a problem; a thing to be overcome."
 ---
 
