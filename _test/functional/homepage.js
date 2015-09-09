@@ -1,7 +1,8 @@
 module.exports = {
   'Page title is correct': function ( browser ) {
     browser
-      .url( 'http://molovo.dev' )
+      .url( 'http://localhost:9543' )
+      .pause( 3000 )
       .assert.title( 'molovo. Web Design, Portsmouth' );
   },
 
