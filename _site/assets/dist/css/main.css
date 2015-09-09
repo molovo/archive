@@ -397,7 +397,7 @@ html {
     font-size: 1.6125em; } }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 800;
   color: #730329;
   letter-spacing: -.04em; }
@@ -475,7 +475,7 @@ hr {
 
 blockquote {
   display: block;
-  font-family: -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 300; }
   blockquote.push, blockquote.pull {
     width: 50%; }
@@ -507,7 +507,7 @@ blockquote {
 
 .alt, .post .ad-container span, .typography h6, .color-palette .swatch:after, .case-study-color-palette .swatch:after {
   font-weight: 300;
-  font-family: -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
 code {
   font-family: "Nitti WM2", "Source Code Pro", "Courier New", "Courier", monospace;
@@ -524,7 +524,7 @@ code {
 
 .button {
   padding: .75em 2.25em;
-  font-family: -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   background: #1A92CE;
   color: white;
   font-weight: 800;
@@ -691,7 +691,7 @@ body {
       .fixed .work .main-menu a {
         display: inline-block;
         padding: 1.5em;
-        font-family: -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
         color: #B52936;
         text-decoration: none;
         font-weight: 800;
@@ -814,7 +814,7 @@ body {
     .bottom .container .left {
       height: auto;
       overflow: hidden;
-      font-family: -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
       font-weight: 600;
       font-size: .75em;
       line-height: 3em;
@@ -847,7 +847,7 @@ body {
   .bottom h6 {
     color: white;
     margin: 0;
-    font-family: -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
   .bottom svg, .bottom h6 {
     display: inline-block;
     vertical-align: middle; }
@@ -1037,7 +1037,7 @@ figure {
     line-height: .75em; }
     figure .image-caption > span, figure .image-caption > p, figure figcaption > span, figure figcaption > p {
       font-size: .6em;
-      font-family: -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
       margin-bottom: 0; }
       figure .image-caption > span h6, figure .image-caption > p h6, figure figcaption > span h6, figure figcaption > p h6 {
         margin: 0; }
@@ -1142,7 +1142,7 @@ p > img.full-width, img[title="full-width"] {
   .next-post-link em, .previous-post-link em {
     display: block;
     font-style: normal;
-    font-family: -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     color: rgba(255, 255, 255, 0.7); }
   .next-post-link h6, .previous-post-link h6 {
     color: white;
@@ -1258,7 +1258,7 @@ p > img.full-width, img[title="full-width"] {
   padding: 3em 0 6em; }
   .contact-form label {
     display: inline-block;
-    font-family: -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-weight: 600;
     float: left;
     width: 100%; }
