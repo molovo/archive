@@ -1,9 +1,14 @@
 language: ruby
+sudo: true
 rvm:
   - 2.2.1
 before_install:
   - nvm install 0.12
   - nvm use 0.12
+  - wget http://chromedriver.storage.googleapis.com/2.10/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip
+  - sudo mv chromedriver /usr/local/bin
+  - sudo chmod a+x /usr/local/bin/chromedriver
 install:
   - bundle install
   - npm install
