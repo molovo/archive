@@ -98,7 +98,7 @@ gulp.task( 'nightwatch', function () {
   return gulp.src( '' )
     .pipe( nightwatch( {
       configFile: 'nightwatch.json',
-      cliArgs: [ '--env firefox' ]
+      cliArgs: [ '--env chrome' ]
     } ) );
 } );
 
