@@ -12,7 +12,7 @@
 		"server_path": "",
 		"log_path": "",
 		"host": "127.0.0.1",
-		"port": 57866,
+		"port": 58874,
 		"cli_args": {
 			"webdriver.chrome.driver": "/usr/local/bin/chromedriver",
 			"webdriver.ie.driver": ""
@@ -20,8 +20,8 @@
 	},
 	"test_settings": {
 		"default": {
-			"launch_url": "http://127.0.0.1:2043",
-			"selenium_port": 57866,
+			"launch_url": "http://127.0.0.1:58877",
+			"selenium_port": 58874,
 			"selenium_host": "localhost",
 			"silent": true,
 			"screenshots": {

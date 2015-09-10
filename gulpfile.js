@@ -16,7 +16,7 @@ var gulp = require( 'gulp' ),
   svgo = require( 'imagemin-svgo' ),
   webp = require( 'gulp-webp' ),
   sourcemaps = require( 'gulp-sourcemaps' ),
-  nightwatch = require( 'gulp-nightwatch-headless' );
+  nightwatch = require( 'gulp-nightwatch' );
 
 // Styles
 gulp.task( 'styles', [ 'clean' ], function () {
@@ -94,43 +94,12 @@ gulp.task( 'cleanimages', function () {
     .pipe( clean() );
 } );
 
-// gulp.task( 'nightwatch', function () {
-//   return gulp.src( '' )
-//     .pipe( nightwatch( {
-//       configFile: '_test/nightwatch.json',
-//       cliArgs: [ '--env phantom', '--group ../_test' ]
-//     } ) )
-//     // .pipe( nightwatch( {
-//     //   configFile: '_test/nightwatch.json',
-//     //   cliArgs: [ '--env firefox', '--group ../_test' ]
-//     // } ) )
-//     // .pipe( nightwatch( {
-//     //   configFile: '_test/nightwatch.json',
-//     //   cliArgs: [ '--env chrome', '--group ../_test' ]
-//     // } ) )
-//     // .pipe( nightwatch( {
-//     //   configFile: '_test/nightwatch.json',
-//     //   cliArgs: [ '--env safari', '--group ../_test' ]
-//     // } ) );
-// } );
-
 gulp.task( 'nightwatch', function () {
   return gulp.src( '' )
     .pipe( nightwatch( {
-      nightwatch: {
-        tempDir: 'temp',
-        config: 'nightwatch.json'
-      },
-      selenium: {
-        // disable: true
-      },
-      httpserver: {
-        port: 2043,
-        path: '_site'
-      },
-      verbose: true
-    } ) )
-    .on( 'error', console.log );
+      configFile: 'nightwatch.json',
+      cliArgs: [ '--env firefox' ]
+    } ) );
 } );
 
 gulp.task( 'test', [ 'nightwatch' ] );
