@@ -23,7 +23,7 @@
     "gulp-webp": "~2.3.0",
     "gulp-sass": "~1.3.3",
     "gulp-sourcemaps": "latest",
-    "gulp-nightwatch-headless": "latest"
+    "gulp-nightwatch": "latest"
   },
   "repository": "",
   "author": "",
