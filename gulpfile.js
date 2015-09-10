@@ -98,6 +98,10 @@ gulp.task( 'nightwatch', function () {
   return gulp.src( '' )
     .pipe( nightwatch( {
       configFile: 'nightwatch.json',
+      cliArgs: [ '--env firefox' ]
+    } ) )
+    .pipe( nightwatch( {
+      configFile: 'nightwatch.json',
       cliArgs: [ '--env chrome' ]
     } ) );
 } );
