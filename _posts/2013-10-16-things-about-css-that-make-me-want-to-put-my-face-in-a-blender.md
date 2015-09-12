@@ -2,7 +2,7 @@
 layout: post
 title: "Things about CSS that make me want to put my face in a blender"
 excerpt: "'Nuff said."
-categories: blog development
+categories: blog
 tags: css dev development "front-end dev" "front-end development" hacks
 ---
 

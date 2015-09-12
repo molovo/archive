@@ -6,7 +6,7 @@ categories: blog
 ---
 
 <figure>
-  ![](/assets/dist/img/the-view-from-above/my-home.png)
+  ![A satellite image of my childhood home](/assets/dist/img/the-view-from-above/my-home.png)
 </figure>
 
 This is a satellite image of the house where I grew up.

@@ -1,8 +1,9 @@
-/assets/.sass-cache
-/assets/node_modules
-/assets/reports
+.sass-cache/
+node_modules/
+reports/
 _test/reports
 *.sublime*
 .htaccess
 *.un\~
 .gitignore\~
+Gemfile.lock
