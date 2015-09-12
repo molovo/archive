@@ -107,7 +107,11 @@ layout: default
       {% endunless %}
 
       <p>
-        <a href="{{ page.projectURL }}" class="button" target="_blank">Visit {{ page.client }}</a>
+        {% unless page.offline %}
+          <a href="{{ page.projectURL }}" class="button" target="_blank">Visit {{ page.client }}</a>
+        {% else %}
+          <em>Site no longer online.</em>
+        {% endunless %}
       </p>
     </div>
   </section>
