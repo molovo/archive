@@ -47,6 +47,7 @@ keep_files:
   - img
 exclude:
   - _assets
+  - coffeelint.json
   - Gemfile
   - Gemfile.lock
   - gulpfile.coffee

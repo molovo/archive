@@ -97,13 +97,13 @@ gulp.task 'compile:images', () ->
     .pipe gulp.dest('_site/img/')
 
 gulp.task 'compile:html', () ->
-  args = ['build', '--incremental', '--config', '_config.yml,_config.dev.yml']
+  args = ['exec', 'jekyll', 'build', '--incremental', '--config', '_config.yml,_config.dev.yml']
 
   if gutil.env.env is 'production'
-    args = ['build']
+    args = ['exec', 'jekyll', 'build']
 
   require 'child_process'
-    .spawn 'jekyll', args, {stdio: 'inherit'}
+    .spawn 'bundle', args, {stdio: 'inherit'}
 
 gulp.task 'watch', () ->
   gulp.watch sources.images, ['compile:images']
