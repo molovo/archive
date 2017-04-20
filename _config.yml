@@ -56,30 +56,6 @@ exclude:
   - package.json
   - yarn.lock
 
-projects:
-  - 'zulu-zsh/zulu'
-  - 'zulu-zsh/www'
-  - 'molovo/zunit'
-  - 'molovo/zunit-www'
-  - 'molovo/zvm'
-  - 'molovo/zshbuild'
-  - 'molovo/crash'
-  - 'molovo/revolver'
-  - 'molovo/filthy'
-  - 'molovo/lumberjack'
-  - 'molovo/zlint'
-  - 'philliphq/phillip'
-  - 'molovo/graphite'
-  - 'molovo/interrogate'
-  - 'molovo/accidents'
-  - 'molovo/amnesia'
-  - 'molovo/traffic'
-  - 'pugphp/pug'
-  - 'molovo/roots-image-pipeline'
-  - 'molovo/crayon'
-  - 'molovo/validator'
-  - 'molovo/tipz'
-
 # Jekyll Picture Tag settings
 picture:
   source: "_assets/img"

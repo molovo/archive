@@ -1,0 +1,66 @@
+- repo: zulu-zsh/zulu
+  description: Total environment manager for ZSH
+  language: Shell
+- repo: zulu-zsh/www
+  description: The website for the Zulu ZSH environment manager
+  language: CoffeeScript
+- repo: molovo/zunit
+  description: A powerful testing framework for ZSH projects
+  language: Shell
+- repo: molovo/zunit-www
+  description: The website for the ZUnit ZSH testing framework
+  language: CoffeeScript
+- repo: molovo/zvm
+  description: The ZSH version manager
+  language: Shell
+- repo: molovo/zshbuild
+  description: A helper tool for building large ZSH projects from source
+  language: Shell
+- repo: molovo/crash
+  description: Proper error handling, exceptions and try/catch for ZSH
+  language: Shell
+- repo: molovo/revolver
+  description: A progress spinner for ZSH scripts
+  language: Shell
+- repo: molovo/filthy
+  description: A disgustingly clean ZSH prompt
+  language: Shell
+- repo: molovo/lumberjack
+  description: Lumberjack is a logging interface for shell scripts
+  language: Shell
+- repo: molovo/zlint
+  description: A linter and code style checker for ZSH
+  language: Shell
+- repo: philliphq/phillip
+  description: A Unit Testing framework for PHP
+  language: PHP
+- repo: molovo/graphite
+  description: A collection of helpers for building pretty command-line tools in PHP
+  language: PHP
+- repo: molovo/interrogate
+  description: A lightweight, standalone ORM for PHP 5.5+
+  language: PHP
+- repo: molovo/accidents
+  description: Pretty error handling for command-line PHP apps
+  language: PHP
+- repo: molovo/amnesia
+  description: A lightweight, standalone caching library for PHP 5.5+
+  language: PHP
+- repo: molovo/traffic
+  description: A simple router in ~200 lines of PHP
+  language: PHP
+- repo: pugphp/pug
+  description: The little framework for big apps
+  language: PHP
+- repo: molovo/roots-image-pipeline
+  description: Image pipeline plugin for Roots (http://roots.cx)
+  language: CoffeeScript
+- repo: molovo/crayon
+  description: A collection of helpers for building pretty command-line tools in Crystal
+  language: Crystal
+- repo: molovo/validator
+  description: A port of (most-of) Laravel's Validator functionality to JavaScript, for use on the front end
+  language: JavaScript
+- repo: molovo/tipz
+  description: Gives you helpful hints when you execute a command for which you have an alias defined
+  language: Shell

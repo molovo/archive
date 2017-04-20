@@ -8,6 +8,7 @@ layout: page
   <h1>Projects</h1>
 
   <nav class="projects__filter">
+    <span>Filter Projects</span>
     <ul>
       <li>
         <a href="javascript:void()" class="active" data-target="all">All</a>
@@ -29,22 +30,22 @@ layout: page
 
   <nav class="projects__list">
     <ul>
-      {% for project in site.projects %}
+      {% for project in site.data.projects %}
         <li class="projects__project">
-          <a href="https://github.com/{{ project }}"
-             data-repo="{{ project }}" target="_blank">
+          <a href="https://github.com/{{ project.repo }}"
+             data-repo="{{ project.repo }}" target="_blank">
             <h4>
-              <span data-owner></span>
+              <span data-owner>{{ project.repo | split: '/' | first }}</span>
               <span>/</span>
-              <span data-name></span>
+              <span data-name>{{ project.repo | split: '/' | last }}</span>
             </h4>
 
-            <p data-description></p>
+            <p data-description>{{ project.description }}</p>
 
             <div class="projects__meta">
               <span class="projects__meta--language">
                 <span class="projects__meta__icon">●</span>
-                <span data-language></span>
+                <span data-language>{{ project.language }}</span>
               </span>
               <span class="projects__meta--stars">
                 <span class="projects__meta__icon">
