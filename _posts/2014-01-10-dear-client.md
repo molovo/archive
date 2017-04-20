@@ -12,15 +12,11 @@ The good news is, you don't need to know these things; that's what you're paying
 
 The bad news is, you have a new job now; well quite a few actually. My whole business is about providing value for money, and I can't give you the best value without your input. We're starting on a journey together, and I need your help just as much as you need mine.
 
----
-
 Your first job is to teach me as much as you can about you and about your company. I'll do a lot of research myself, but the best information will come from the horse's mouth.
 
 Why do think you need a website? Who of your clients/customers have expressed interest in using one? What do they want to use it for? Are you aiming to replace offline processes with online ones, or just use it as a marketing tool?
 
 Until I know the answers to these questions I won't know which audiences the site should focus on, and *it will fail*.
-
----
 
 Secondly, what content are you going to put on your shiny new website? Get it to me straight away. Hire a copywriter if necessary (in actual fact, it's always necessary).
 
@@ -28,21 +24,15 @@ If I don't have any content when designing the site, all I can build is a bland 
 
 Without content I can't do that, your site will be forgettable, and *it will fail*.
 
----
-
 Thirdly, do you have people in house who will maintain and support the website? Do you already have in-house designers, or another third-party that regularly create content, graphics or other design work for you?
 
 I need to meet all of the people above, and they need to be involved in the design process from the beginning; therefore I'll need you to introduce me. These are the people who already know your customers, and what appeals to them - as such they will be hugely valuable when creating a site that blends seamlessly with the brand they have helped you build. Without this insight, *your site will fail*.
-
----
 
 And lastly, who are your customers? Let's meet them.
 
 All the research in the world is no good if we don't put a prototype of the new design in front of the real-world users of your website. These users will play with it, get frustrated with it, break it, tell their friends about it, and based on their experience, use it, or leave it. If you wait until launch before you first show your new site to users, you are playing with fire. At launch, if a customer can't use the new site in the way they want, you've lost a customer, and *your site has failed*.
 
 Get their reaction early in the process, so we can respond to it, and at launch know in advance that together we have built something your customers will love and enjoy using.
-
----
 
 As I said at the beginning of this post, this might be your first website, so you may not know the above is required of you, and without doubt there are many web designers who would not ask for that kind of involvement.
 
