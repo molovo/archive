@@ -1,0 +1,28 @@
+---
+layout: page
+pagination:
+  enabled: true
+---
+
+{% assign body = content %}
+{% include article.html post=page link="false" %}
+
+<!-- Pagination links -->
+<nav class="posts__pagination">
+  <ul>
+    <li>
+      {% if page.previous.url %}
+        <a href="{{ page.previous.url }}" class="previous">&larr; {{ page.previous.title }}</a>
+      {% endif %}
+    </li>
+
+    <li>
+    </li>
+
+    <li>
+      {% if page.next.url %}
+        <a href="{{ page.next.url }}" class="next">{{ page.next.title }} &rarr;</a>
+      {% endif %}
+    </li>
+  </ul>
+</div>

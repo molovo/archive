@@ -1,0 +1,74 @@
+.projects
+  padding: 6em 0
+
+  &__filter
+    margin-bottom: $baseline
+
+    li
+      display: inline-block
+      list-style: none
+
+    a
+      margin-right: $baseline
+
+      &.active
+        color: $color-red
+        font-weight: 600
+
+  &__list
+    ul
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      list-style: none
+
+  &__project
+    border: 1px solid rgba($color-black, .1)
+    box-sizing: border-box
+    flex: 0 0 100%
+    line-height: $baseline
+    margin: 0 0 $baseline
+    padding: .75em
+
+    svg
+      path
+        fill: $color-red
+
+    &:hover
+      background: $color-red
+      border-color: $color-red
+
+      a
+        color: $color-white
+        text-decoration: none
+
+      svg
+        path
+          fill: $color-white
+
+      .projects__meta__icon
+        color: $color-white
+
+    @media (min-width: 48em)
+      flex: 0 0 calc(50% - #{(1 / 2) * $baseline})
+
+    @media (min-width: 72em)
+      flex: 0 0 calc(33.33333333% - #{(2 / 3) * $baseline})
+
+    [data-description]
+      height: #{$baseline * 2}
+
+  &__meta
+    align-items: center
+    display: flex
+
+    > span
+      align-items: center
+      display: flex
+      margin-right: $baseline
+
+    &__icon
+      align-items: center
+      color: $color-red
+      display: flex
+      margin-right: #{($baseline / 4)}

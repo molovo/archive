@@ -1,0 +1,43 @@
+---
+title: writing
+layout: page
+permalink: /writing/
+pagination:
+  enabled: true
+---
+
+<section class="posts">
+  <div class="posts__list">
+    {% for post in paginator.posts %}
+      {% assign body = post.content | markdownify %}
+      {% include article.html post=post link="true" %}
+
+      {% unless forloop.last %}
+        <hr class="posts__break">
+      {% endunless %}
+    {% endfor %}
+  </div>
+
+  <!-- Pagination links -->
+  {% if paginator.total_pages > 1 %}
+    <nav class="posts__pagination">
+      <ul>
+        <li>
+          {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}" class="previous">&larr; Previous Page</a>
+          {% endif %}
+        </li>
+
+        <li>
+          <span class="page_number ">{{ paginator.page }} of {{ paginator.total_pages }}</span>
+        </li>
+
+        <li>
+          {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}" class="next">Next Page &rarr;</a>
+          {% endif %}
+        </li>
+      </ul>
+    </div>
+  {% endif %}
+</section>

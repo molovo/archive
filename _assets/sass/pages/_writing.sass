@@ -1,0 +1,49 @@
+.posts,
+main > .post
+  padding: 6em 0
+
+.posts,
+.post
+  max-width: 36em
+
+.post
+  &__share
+    a
+      svg
+        vertical-align: middle
+        width: $baseline
+
+        path
+          fill: $color-blue
+
+  &__content
+    font-size: 1.125em
+    line-height: $baseline
+
+.posts
+  &__list
+    .post
+      margin: 0 0 #{$baseline * 4}
+
+  &__break
+    border: 0
+    background: url('/img/icons/logo.svg') left center / contain no-repeat
+    display: block
+    height: 1em
+    margin: 0 0 #{$baseline * 4}
+
+  &__pagination
+    max-width: 36em
+
+    .page--post &
+      margin: 0 0 #{$baseline * 4}
+
+    ul
+      display: flex
+      justify-content: space-between
+      list-style: none
+
+      li
+        flex: 0 0 6em
+        text-align: center
+        white-space: nowrap

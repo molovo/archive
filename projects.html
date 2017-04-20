@@ -1,0 +1,67 @@
+---
+title: Projects
+description: A list of the Open Source projects I have written and maintain
+layout: page
+---
+
+<section class="projects">
+  <h1>Projects</h1>
+
+  <nav class="projects__filter">
+    <ul>
+      <li>
+        <a href="javascript:void()" class="active" data-target="all">All</a>
+      </li>
+      <li>
+        <a href="javascript:void()" data-target="Shell">ZSH</a></li>
+      <li>
+        <a href="javascript:void()" data-target="PHP">PHP</a></li>
+      <li>
+        <a href="javascript:void()" data-target="Crystal">Crystal</a></li>
+      <li>
+        <a href="javascript:void()" data-target="CoffeeScript">CoffeeScript</a>
+      </li>
+      <li>
+        <a href="javascript:void()" data-target="JavaScript">JavaScript</a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav class="projects__list">
+    <ul>
+      {% for project in site.projects %}
+        <li class="projects__project">
+          <a href="https://github.com/{{ project }}"
+             data-repo="{{ project }}" target="_blank">
+            <h4>
+              <span data-owner></span>
+              <span>/</span>
+              <span data-name></span>
+            </h4>
+
+            <p data-description></p>
+
+            <div class="projects__meta">
+              <span class="projects__meta--language">
+                <span class="projects__meta__icon">●</span>
+                <span data-language></span>
+              </span>
+              <span class="projects__meta--stars">
+                <span class="projects__meta__icon">
+                  {% include icons/star.svg %}
+                </span>
+                <span data-stars></span>
+              </span>
+              <span class="projects__meta--forks">
+                <span class="projects__meta__icon">
+                  {% include icons/fork.svg %}
+                </span>
+                <span data-forks></span>
+              </span>
+            </div>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</section>

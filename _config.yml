@@ -1,0 +1,97 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: molovo - Web Design and Development
+email: hi@molovo.co
+description: >
+  molovo.co is the home of Southsea web designer and developer James Dinsdale.
+baseurl: '/'
+url: 'https://molovo.co'
+twitter_username: molovo
+github_username:  molovo
+author: James Dinsdale
+
+# Build settings
+permalink: /writing/:title/
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: /:num/
+  sort_reverse: true
+markdown: redcarpet
+redcarpet:
+  extensions:
+    - no_intra_emphasis
+    - tables
+    - autolink
+    - strikethrough
+    - with_toc_data
+    - smart
+gems:
+  - jekyll-feed
+keep_files:
+  - css
+  - js
+  - img
+exclude:
+  - _assets
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.coffee
+  - netlify.toml
+  - node_modules
+  - package.json
+  - yarn.lock
+
+projects:
+  - 'zulu-zsh/zulu'
+  - 'zulu-zsh/www'
+  - 'molovo/zunit'
+  - 'molovo/zunit-www'
+  - 'molovo/zvm'
+  - 'molovo/zshbuild'
+  - 'molovo/crash'
+  - 'molovo/revolver'
+  - 'molovo/filthy'
+  - 'molovo/lumberjack'
+  - 'molovo/zlint'
+  - 'philliphq/phillip'
+  - 'molovo/graphite'
+  - 'molovo/interrogate'
+  - 'molovo/accidents'
+  - 'molovo/amnesia'
+  - 'molovo/traffic'
+  - 'pugphp/pug'
+  - 'molovo/roots-image-pipeline'
+  - 'molovo/crayon'
+  - 'molovo/validator'
+  - 'molovo/tipz'
+
+# Jekyll Picture Tag settings
+picture:
+  source: "_assets/img"
+  output: "img"
+  markup: "picture"
+  presets:
+    default:
+      ppi: [1, 2]
+      source_large:
+        media: "(min-width: 64em)"
+        width: "1280"
+      source_medium:
+        media: "(min-width: 40em)"
+        width: "960"
+      source_default:
+        width: "600"

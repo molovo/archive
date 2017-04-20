@@ -1,0 +1,4 @@
+# Global settings applied to the whole site.
+[build]
+  publish = "_site"
+  command = "gulp compile --env production"
