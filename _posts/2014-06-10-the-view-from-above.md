@@ -2,12 +2,11 @@
 title: The View From Above
 date: 2014-06-10 12:00:00
 layout: post
+description: Pondering a fond childhood memory
 ---
 
-<!-- figure
-    != image('articles/the-view-from-above/forth-vean.png', {sizes: [{media: '(min-width: 40em)', width: 550}, {width: 350}, {media: 'fallback', width: 550}], attributes: {alt: 'A satellite image of Forth Vean, the street where I grew up.'}}) -->
 <figure>
-    {% picture articles/the-view-from-above/forth-vean.png %}
+    {% picture articles/the-view-from-above/forth-vean.png alt="A satellite image of Forth Vean, the street where I grew up." %}
 </figure>
 
 This is a satellite image of the house where I grew up.
