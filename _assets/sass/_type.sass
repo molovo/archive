@@ -20,18 +20,10 @@ html
 
 body
   color: $color-black
+  font-size: calc(16px + (21 - 16) * (100vw - 384px) / (1280 - 384))
   height: 100%
   line-height: $baseline
   position: relative
-
-  @media (max-width: 24em)
-    font-size: .875em
-
-  @media (min-width: 42em)
-    font-size: 1.125em
-
-  @media (min-width: 60em)
-    font-size: 1.3125em
 
 h1, h2, h3, h4, h5, h6
   font-weight: 600
