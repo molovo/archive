@@ -5,6 +5,7 @@
     "coffee-script": "^1.12.4",
     "coffeeify": "^2.1.0",
     "coffeelint": "^1.16.0",
+    "critical": "^0.8.4",
     "es6-promise": "^4.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",

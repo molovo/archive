@@ -17,6 +17,7 @@ coffeelint   = require 'gulp-coffeelint'
 sassLint     = require 'gulp-sass-lint'
 sass         = require 'gulp-sass'
 autoprefixer = require 'gulp-autoprefixer'
+critical     = require('critical').stream
 
 # Dependencies for compressing images
 imagemin     = require 'gulp-imagemin'
@@ -67,6 +68,15 @@ gulp.task 'compile:sass', () ->
     )
     .pipe rename('main.css')
     .pipe gulp.dest('_site/css/')
+
+  if gutil.env.env is 'production'
+    gulp.src '_site/**/*.html'
+      .pipe critical(
+        base: '_site/'
+        inline: true
+      )
+      .on 'error', (err) -> gutil.log gutil.colors.red(err.message)
+      .pipe gulp.dest('_site')
 
 gulp.task 'compile:coffee', () ->
   # Set up the browserify instance
