@@ -1,0 +1,2 @@
+# Ensure correct domain is used
+https://molovo.netlify.com/* https://molovo.co/:splat 301!
