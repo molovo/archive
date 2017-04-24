@@ -17,6 +17,7 @@ $font-script: 'flood-std'
 
 html
   font: 300 100% / #{$baseline} $font-primary
+  font-feature-settings: "kern", "liga", "clig", "calt", "onum"
 
 body
   color: $color-black
@@ -138,6 +139,8 @@ blockquote
 
   p
     color: $color-blue
+    font-feature-settings: "kern", "liga", "clig", "dlig", "calt", "onum"
+
 
     &:last-of-type
       margin: 0
