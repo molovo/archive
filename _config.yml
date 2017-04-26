@@ -41,6 +41,7 @@ redcarpet:
     - smart
 gems:
   - jekyll-feed
+  - jekyll-sitemap
 keep_files:
   - css
   - js
