@@ -5,7 +5,7 @@ buffer       = require 'vinyl-buffer'
 gutil        = require 'gulp-util'
 rename       = require 'gulp-rename'
 browserSync  = require 'browser-sync'
-exec         = require('child_process').exec
+spawn        = require('child_process').spawn
 
 # Dependencies for compiling coffeescript
 uglify       = require 'gulp-uglify'
@@ -58,12 +58,7 @@ gulp.task 'lint:coffee', () ->
 ###*
  * Compilation tasks
 ###
-if gutil.env.env is 'production'
-  tasks = ['compile:critical', 'compile:coffee', 'compile:images']
-else
-  tasks = ['compile:html', 'compile:sass', 'compile:coffee', 'compile:images']
-
-gulp.task 'compile', tasks
+gulp.task 'compile', ['compile:html', 'compile:sass', 'compile:coffee', 'compile:images']
 
 gulp.task 'compile:sass', () ->
   gulp.src entries.sass
@@ -94,15 +89,14 @@ gulp.task 'compile:coffee', () ->
     .pipe sourcemaps.write('./')
     .pipe gulp.dest('_site/js/')
 
-gulp.task 'compile:critical', ['compile:sass', 'compile:html'], () ->
-  if gutil.env.env is 'production'
-    gulp.src '_site/**/*.html'
-      .pipe critical(
-        base: '_site/'
-        inline: true
-      )
-      .on 'error', (err) -> gutil.log gutil.colors.red(err.message)
-      .pipe gulp.dest('_site')
+gulp.task 'compile:critical', () ->
+  gulp.src '_site/**/*.html'
+    .pipe critical(
+      base: '_site/'
+      inline: true
+    )
+    .on 'error', (err) -> gutil.log gutil.colors.red(err.message)
+    .pipe gulp.dest('_site')
 
 gulp.task 'compile:images', () ->
   gulp.src sources.images
@@ -115,16 +109,19 @@ gulp.task 'compile:images', () ->
     .pipe gulp.dest('_site/img/')
 
 gulp.task 'compile:html', () ->
-  args = 'exec jekyll build --incremental --config _config.yml,_config.dev.yml'
+  args = [
+    'exec'
+    'jekyll'
+    'build'
+    '--incremental'
+    '--config'
+    '_config.yml,_config.dev.yml'
+  ]
 
   if gutil.env.env is 'production'
-    args = 'exec jekyll build'
+    args = ['exec', 'jekyll', 'build']
 
-    exec "bundle #{args}", (error, stdout, stderr) ->
-      gutil.log "stdout: #{stdout}"
-      gutil.log "stderr: #{stderr}"
-      if error isnt null
-        gutil.log gutil.colors.red("exec error: #{error}")
+  spawn 'bundle', args, stdio: 'inherit'
 
 gulp.task 'watch', () ->
   gulp.watch sources.images, ['compile:images']
