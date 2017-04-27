@@ -11,6 +11,12 @@ $font-script: 'flood-std'
   transform: scaleX(.75) rotate(-5deg)
   transform-origin: 0 0
 
+@function scale($to, $from, $toWidth, $fromWidth)
+  $slope: ($to - $from) / ($toWidth - $fromWidth)
+  $base: $from - $slope * $fromWidth
+
+  @return calc(#{$base} + #{100vw * $slope})
+
 .screenreader-text
   position: absolute
   top: -1000em
@@ -21,7 +27,7 @@ html
 
 body
   color: $color-black
-  font-size: calc(16px + (21 - 16) * (100vw - 384px) / (1280 - 384))
+  font-size: calc(14px + (20 - 14) * (100vw - 384px) / (1280 - 384))
   height: 100%
   line-height: $baseline
   position: relative
