@@ -21,6 +21,8 @@ baseurl: '/'
 url: 'https://molovo.co'
 twitter_username: molovo
 github_username:  molovo
+medium_username: molovo
+dribbble_username: molovo
 author: James Dinsdale
 
 # Build settings
