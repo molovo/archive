@@ -47,3 +47,23 @@ main > .post
         flex: 0 0 6em
         text-align: center
         white-space: nowrap
+
+    &__next
+      &::after
+        color: $color-red
+        content: '→'
+        margin-left: 1ch
+
+      &:hover
+        &::after
+          text-decoration: none
+
+    &__previous
+      &::before
+        color: $color-red
+        content: '←'
+        margin-right: 1ch
+
+      &:hover
+        &::before
+          text-decoration: none
