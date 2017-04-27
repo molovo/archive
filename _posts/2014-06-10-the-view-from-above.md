@@ -5,8 +5,9 @@ layout: post
 description: Pondering a fond childhood memory
 ---
 
-<figure>
+<figure class="image image--pull-left">
     {% picture articles/the-view-from-above/forth-vean.png alt="A satellite image of Forth Vean, the street where I grew up." %}
+    <figcaption class="image__caption">A satellite image of Forth Vean, the street where I grew up.</figcaption>
 </figure>
 
 This is a satellite image of the house where I grew up.

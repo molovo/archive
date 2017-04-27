@@ -1,0 +1,37 @@
+.image
+  margin: 0 0 $baseline
+  position: relative
+
+  img,
+  picture
+    display: block
+    width: 100%
+
+  &--pull-left
+    img,
+    picture
+      margin: 0 0 $baseline #{($baseline * -1)}
+      width: calc(100% + #{$baseline})
+
+      @media (min-width: 42em)
+        margin: 0 0 $baseline #{$baseline * -2}
+        width: calc(100% + #{($baseline * 2)})
+
+      @media (min-width: 64em)
+        margin: 0 0 $baseline #{$baseline * -4}
+        width: calc(100% + #{($baseline * 4)})
+
+  &__caption
+    font-family: $font-cursive
+    font-size: .875em
+    font-style: italic
+
+    @media(min-width: 64em)
+      left: 100%
+      margin-left: $baseline
+      position: absolute
+      top: 0
+      width: 12em
+
+    @media (min-width: 80em)
+      width: 15em

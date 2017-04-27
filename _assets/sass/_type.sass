@@ -153,26 +153,6 @@ blockquote
       style: normal
       weight: 600
 
-figure
-  max-width: 100%
-
-  img
-    display: block
-    margin: 0 0 $baseline #{($baseline * -1)}
-    width: calc(100% + #{$baseline})
-
-    @media (min-width: 42em)
-      margin: 0 0 $baseline #{$baseline * -2}
-      width: calc(100% + #{($baseline * 2)})
-
-    @media (min-width: 64em)
-      margin: 0 0 $baseline #{$baseline * -4}
-      width: calc(100% + #{($baseline * 4)})
-
-  figcaption
-    font-size: .75em
-    font-style: italic
-
 pre
   background: $color-black
   color: $color-white
@@ -199,5 +179,6 @@ code
 date
   display: block
   color: $color-red
-  font-weight: 700
+  font-family: $font-cursive
+  font-style: italic
   margin: 0 0 $baseline
