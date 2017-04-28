@@ -33,10 +33,11 @@ layout: page
       {% for project in site.data.projects %}
         <li class="projects__project"
             itemscope
-            itemtype="http://schema.org/SoftwareSourceCode">
+            itemtype="http://schema.org/SoftwareSourceCode"
+            aria-labelledby="{{ project.repo | slugify }}">
           <a href="https://github.com/{{ project.repo }}"
              data-repo="{{ project.repo }}" target="_blank">
-            <h4>
+            <h4 id="{{ project.repo | slugify }}">
                 <span itemprop="author"
                       itemscope
                       {% if project.org == 'true' %}
