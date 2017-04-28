@@ -74,7 +74,7 @@
         "dateModified": "{{ page.date | date_to_xmlschema }}",
         "mainEntityOfPage": "{{ site.url }}{{ page.url | replace: 'index.html' }}",
         "headline": "{{ page.title | slugify }}",
-        "logo": {
+        "image": {
           "@type": "ImageObject",
           {% if page.image %}
             "url": "{{ site.url }}{{ page.image.url }}",
