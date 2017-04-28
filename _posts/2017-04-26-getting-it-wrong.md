@@ -1,5 +1,5 @@
 ---
-title: All for One, and One for All
+title: Getting it Wrong
 layout: post
 description: A heartfelt apology to users with accessibility needs.
 ---
@@ -13,14 +13,14 @@ That said, when I decided recently to redesign it, I pushed on with the task qui
 In my haste to do this, I failed to do it properly. Last week, a full two months after launching the site, I opened it up in the text-only web browser [lynx](https://en.m.wikipedia.org/wiki/Lynx_(web_browser) "lynx - a text-only web browser") on a whim, and was greeted with the following page.
 
 <figure class="image">
-    {% picture articles/all-for-one-and-one-for-all/homepage-before.jpg alt="The homepage of this website as viewed through a text browser, before accessibility optimisations." %}
+    {% picture articles/getting-it-wrong/homepage-before.jpg alt="The homepage of this website as viewed through a text browser, before accessibility optimisations." %}
     <figcaption class="image__caption">The homepage of this website as viewed through a text browser, before accessibility optimisations.</figcaption>
 </figure>
 
 There is no obvious navigation, as it is so obscure and unreadable. There are no headings. There are no links to the location of the content or the top of the page. I was disappointed in myself to say the least, a feeling that only grew when I navigated to the Projects page.
 
 <figure class="image">
-    {% picture articles/all-for-one-and-one-for-all/projects-before.jpg alt="The projects page of this website as viewed through a text browser, before accessibility optimisations." %}
+    {% picture articles/getting-it-wrong/projects-before.jpg alt="The projects page of this website as viewed through a text browser, before accessibility optimisations." %}
     <figcaption class="image__caption">The projects page of this website as viewed through a text browser, before accessibility optimisations.</figcaption>
 </figure>
 
@@ -31,8 +31,8 @@ Immediately, I felt a wave of empathy. Empathy and guilt towards those who may h
 I've just finished rebuilding this site again---from the ground up---in an effort to right this wrong and I'm pleased to say that things are a lot better. Although it looks nearly identical, behind the scenes I've switched from using [Roots](http://roots.cx "Roots") back to my old friend [Jekyll](http://jekyllrb.com "Jekyll"), as the accessibility aids it provides are far better. As well as this, I've completely restructured the HTML to ensure that it's semantically correct, and properly annotated for screenreaders.
 
 <figure class="image">
-    {% picture articles/all-for-one-and-one-for-all/homepage-now.jpg alt="The homepage of this website, as viewed through a text browser at time of writing." %}
+    {% picture articles/getting-it-wrong/homepage-now.jpg alt="The homepage of this website, as viewed through a text browser at time of writing." %}
     <figcaption class="image__caption">The homepage of this website, as viewed through a text browser at time of writing.</figcaption>
 </figure>
 
-I'm a lot happier with it now, and I'll be tweaking further over the next few weeks as I start to add more content.
+I'll be tweaking further over the next few weeks as I start to add more content, but I'm a lot happier with the way things are now.
