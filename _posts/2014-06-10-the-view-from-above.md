@@ -3,10 +3,6 @@ title: The View From Above
 date: 2014-06-10 12:00:00
 layout: post
 description: Pondering a fond childhood memory
-image:
-    url: /img/articles/the-view-from-above/forth-vean.png
-    width: 1110
-    height: 284
 ---
 
 <figure class="image image--pull-left">
