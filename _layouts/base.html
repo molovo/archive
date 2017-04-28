@@ -18,6 +18,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="msvalidate.01" content="1CA4D3771537532449A3A5BA08271280" />
 
   <link rel="dns-prefetch" href="//cdn.heapanalytics.com" />
   <link rel="dns-prefetch" href="//use.typekit.net" />
@@ -52,8 +53,51 @@
   <meta name="twitter:site" content="@{{ site.twitter_username }}">
   <meta name="twitter:image" content="{{ site.url }}/img/me.jpg">
 
-  <script type="application/ld+json">{"@context":"http://schema.org","@type":"WebSite","@id":"#website","url":"{{ site.url }}","name":"{{ site.title }}"}</script>
-  <script type="application/ld+json">{"@context":"http://schema.org","@type":"Person","url":"{{ site.url }}","sameAs":["https://twitter.com/{{ site.twitter_username }}","https://github.com/{{ site.github_username }}", "https://medium.com/@{{ site.medium_username }}", "https://dribbble.com/{{ site.dribbble_username }}"],"@id":"#person","name":"{{ site.author }}"}</script>
+  <script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}",
+    "description": "{{ site.description }}"
+  }</script>
+  <script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "name": "{{ title }}"
+    "url": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}",
+    "mainEntityOfPage": "{{ site.url }}",
+    "description": "{{ description }}"{% if page.layout == 'post' %},
+      "mainEntity": {
+        "@type": "BlogPost",
+        "@id": "{{ site.url }}{{ page.url | replace: 'index.html' }}#article",
+        "datePublished": ""
+        "mainEntityOfPage": "{{ site.url }}{{ page.url | replace: 'index.html' }}",
+        "headline": "{{ page.title | slugify }}",
+        "author": {
+          "@type": "Person",
+          "name": "{{ site.author }}",
+          "sameAs": "{{ site.url }}"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "{{ site.author }}",
+          "sameAs": "{{ site.url }}"
+        }
+      }
+    {% endif %}
+  }</script>
+  <script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "url": "{{ site.url }}",
+    "sameAs": [
+      "https://twitter.com/{{ site.twitter_username }}",
+      "https://github.com/{{ site.github_username }}",
+      "https://medium.com/@{{ site.medium_username }}",
+      "https://dribbble.com/{{ site.dribbble_username }}"
+    ],
+    "name":"{{ site.author }}"
+  }</script>
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=M4olpG7v6d">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=M4olpG7v6d">

@@ -31,16 +31,35 @@ layout: page
   <nav class="projects__list">
     <ul>
       {% for project in site.data.projects %}
-        <li class="projects__project">
+        <li class="projects__project"
+            itemscope
+            itemtype="http://schema.org/SoftwareSourceCode">
           <a href="https://github.com/{{ project.repo }}"
              data-repo="{{ project.repo }}" target="_blank">
             <h4>
-              <span data-owner>{{ project.repo | split: '/' | first }}</span>
+                <span itemprop="author"
+                      itemscope
+                      {% if project.org == 'true' %}
+                        itemtype="http://schema.org/Organization"
+                      {% else %}
+                        itemtype="http://schema.org/Person"
+                      {% endif %}>
+                  <link itemprop="url" href="https://github.com/{{ project.repo | split: '/' | first }}">
+                  <span itemprop="name"
+                        data-owner>
+                    {{ project.repo | split: '/' | first }}
+                  </span>
+                </span>
               <span>/</span>
-              <span data-name>{{ project.repo | split: '/' | last }}</span>
+              <span itemprop="name" data-name>
+                {{ project.repo | split: '/' | last }}
+              </span>
             </h4>
+            <link itemprop="codeRepository" href="https://github.com/{{ project.repo }}" />
 
-            <p data-description>{{ project.description }}</p>
+            <p itemprop="description" data-description>
+              {{ project.description }}
+            </p>
 
             <ul class="projects__meta">
               <li class="projects__meta--language">
@@ -48,7 +67,9 @@ layout: page
                   {% include icons/dot.svg %}
                 </span>
                 <span class="screenreader-text">Language:</span>
-                <span data-language>{{ project.language }}</span>
+                <span itemprop="programmingLanguage" data-language>
+                  {{ project.language }}
+                </span>
               </li>
               <li class="projects__meta--stars">
                 <span class="projects__meta__icon">

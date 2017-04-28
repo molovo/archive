@@ -6,11 +6,13 @@ pagination:
   enabled: true
 ---
 
-<section class="posts">
+<section class="posts"
+         itemscope
+         itemtype="http://schema.org/Blog">
   <div class="posts__list">
     {% for post in paginator.posts %}
       {% assign body = post.content | markdownify %}
-      {% include article.html post=post link="true" %}
+      {% include article.html post=post listing="true" %}
 
       {% unless forloop.last %}
         <hr class="posts__break">

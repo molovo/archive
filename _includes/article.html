@@ -1,16 +1,30 @@
-<article class="post">
+<article class="post"
+         aria-labelledby="{{ include.post.title | slugify }}-title"
+         {% if include.listing == 'true' %}itemprop="blogPost"{% endif %}
+         itemscope
+         itemtype="http://schema.org/BlogPosting"
+         {% if include.listing == 'false' %}id="article"{% endif %}
+         {% if include.listing == 'true' %}id="{{ include.post.title | slugify }}"{% endif %}>
   <header class="post__header">
-    {% if include.link == 'true' %}
-      <a href="{{ include.post.url }}" title="{{ include.post.title }}">
-        <h1>{{ include.post.title }}</h1>
+    {% if include.listing == 'true' %}
+      <a itemprop="headline"
+         href="{{ include.post.url }}"
+         title="{{ include.post.title }}">
+        <h1 id="{{ include.post.title | slugify }}-title">
+          {{ include.post.title }}
+        </h1>
       </a>
     {% else %}
-      <h1>{{ include.post.title }}</h1>
+      <h1 itemprop="headline" id="{{ include.post.title | slugify }}-title">
+        {{ include.post.title }}
+      </h1>
     {% endif %}
-    <date>{{ include.post.date | date: '%A %d %B %Y' }}</date>
+    <date itemprop="datePublished" content="{{ include.post.date | date_to_xmlschema }}">
+      {{ include.post.date | date: '%A %d %B %Y' }}
+    </date>
   </header>
 
-  <section class="post__content">
+  <section itemprop="articleBody" class="post__content">
     {{ body }}
   </section>
 
