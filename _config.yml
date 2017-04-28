@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: molovo - Web Design and Development
+name: molovo
 email: hi@molovo.co
 description: >
   molovo.co is the home of Southsea web designer and developer James Dinsdale.
