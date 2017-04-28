@@ -5,6 +5,12 @@
          itemtype="http://schema.org/BlogPosting"
          {% if include.listing == 'false' %}id="article"{% endif %}
          {% if include.listing == 'true' %}id="{{ include.post.title | slugify }}"{% endif %}>
+    <link itemprop="mainEntityOfPage" href="{{ site.url }}{{ include.post.url | replace: 'index.html', '' }}" />
+    {% if post.image %}
+      <link itemprop="image" href="{{ site.url }}{{ post.image }}" />
+    {% else %}
+      <link itemprop="image" href="{{ site.url }}/apple-touch-icon.png" />
+    {% endif %}
   <header class="post__header">
     {% if include.listing == 'true' %}
       <a itemprop="headline"
@@ -22,6 +28,15 @@
     <date itemprop="datePublished" content="{{ include.post.date | date_to_xmlschema }}">
       {{ include.post.date | date: '%A %d %B %Y' }}
     </date>
+    <meta itemprop="dateModified" content="{{ include.post.date | date_to_xmlschema }}">
+    <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="{{ site.author }}" />
+      <link itemprop="url" href="{{ site.url }}" />
+    </div>
+    <div itemprop="publisher" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="{{ site.author }}" />
+      <link itemprop="url" href="{{ site.url }}" />
+    </div>
   </header>
 
   <section itemprop="articleBody" class="post__content">
