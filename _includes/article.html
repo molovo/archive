@@ -7,16 +7,26 @@
          {% if include.listing == 'true' %}id="{{ include.post.title | slugify }}"{% endif %}>
     <link itemprop="mainEntityOfPage" href="{{ site.url }}{{ include.post.url | replace: 'index.html', '' }}" />
     {% if post.image %}
-      <link itemprop="image" href="{{ site.url }}{{ post.image }}" />
+      <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+        <link itemprop="url" href="{{ site.url }}{{ post.image.url }}" />
+        <meta itemprop="representativeOfPage" content="true" />
+        <meta itemprop="height" content="{{ post.image.height }}" />
+        <meta itemprop="width" content="{{ post.image.width }}" />
+      </div>
     {% else %}
+      <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+        <link itemprop="url" href="{{ site.url }}/apple-touch-icon.png" />
+        <meta itemprop="representativeOfPage" content="false" />
+        <meta itemprop="height" content="180" />
+        <meta itemprop="width" content="180" />
+      </div>
       <link itemprop="image" href="{{ site.url }}/apple-touch-icon.png" />
     {% endif %}
   <header class="post__header">
     {% if include.listing == 'true' %}
-      <a itemprop="headline"
-         href="{{ include.post.url }}"
+      <a href="{{ include.post.url }}"
          title="{{ include.post.title }}">
-        <h1 id="{{ include.post.title | slugify }}-title">
+        <h1 itemprop="headline" id="{{ include.post.title | slugify }}-title">
           {{ include.post.title }}
         </h1>
       </a>

@@ -68,7 +68,7 @@
     "mainEntityOfPage": "{{ site.url }}",
     "description": "{{ description }}"{% if page.layout == 'post' %},
       "mainEntity": {
-        "@type": "BlogPost",
+        "@type": "BlogPosting",
         "@id": "{{ site.url }}{{ page.url | replace: 'index.html' }}#article",
         "datePublished": ""
         "mainEntityOfPage": "{{ site.url }}{{ page.url | replace: 'index.html' }}",
