@@ -7,7 +7,7 @@
 {% if page.description %}
   {% assign description = page.description %}
 {% elsif page.excerpt %}
-  {% assign description = page.excerpt %}
+  {% capture description %}{{ page.excerpt | strip_html }}{% endcapture %}
 {% else %}
   {% assign description = site.description %}
 {% endif %}
