@@ -20,7 +20,6 @@
         <meta itemprop="height" content="180" />
         <meta itemprop="width" content="180" />
       </div>
-      <link itemprop="image" href="{{ site.url }}/apple-touch-icon.png" />
     {% endif %}
   <header class="post__header">
     {% if include.listing == 'true' %}
@@ -46,6 +45,12 @@
     <div itemprop="publisher" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="{{ site.author }}" />
       <link itemprop="url" href="{{ site.url }}" />
+      <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+        <link itemprop="url" href="{{ site.url }}/apple-touch-icon.png" />
+        <meta itemprop="representativeOfPage" content="false" />
+        <meta itemprop="height" content="180" />
+        <meta itemprop="width" content="180" />
+      </div>
     </div>
   </header>
 
