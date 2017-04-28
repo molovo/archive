@@ -65,7 +65,6 @@
     "@type": "WebPage",
     "name": "{{ title }}",
     "url": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}",
-    "mainEntityOfPage": "{{ site.url }}",
     "description": "{{ description }}"{% if page.layout == 'post' %},
       "mainEntity": {
         "@type": "BlogPosting",
