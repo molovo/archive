@@ -70,7 +70,7 @@
       "mainEntity": {
         "@type": "BlogPosting",
         "@id": "{{ site.url }}{{ page.url | replace: 'index.html' }}#article",
-        "datePublished": ""
+        "datePublished": "{{ include.post.date | date_to_xmlschema }}",
         "mainEntityOfPage": "{{ site.url }}{{ page.url | replace: 'index.html' }}",
         "headline": "{{ page.title | slugify }}",
         "author": {
