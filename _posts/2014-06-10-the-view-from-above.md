@@ -1,7 +1,6 @@
 ---
 title: The View From Above
 date: 2014-06-10 12:00:00
-layout: post
 description: Pondering a fond childhood memory
 ---
 

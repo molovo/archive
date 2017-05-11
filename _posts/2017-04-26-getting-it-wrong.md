@@ -1,6 +1,5 @@
 ---
 title: Getting it Wrong
-layout: post
 description: A heartfelt apology to users with accessibility needs.
 ---
 

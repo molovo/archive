@@ -1,7 +1,6 @@
 ---
 title:  "First Past the Post"
 date:   2013-03-01 16:35:09
-layout: post
 description: "A short discussion of the book 'Execute' by Drew Wilson and Josh Long"
 ---
 

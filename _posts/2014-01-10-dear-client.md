@@ -1,7 +1,6 @@
 ---
 title: "Dear Client"
 date: 2014-01-10 12:00:00
-layout: post
 ---
 
 Hello there,
