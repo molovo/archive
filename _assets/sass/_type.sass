@@ -11,9 +11,9 @@ $font-script: 'flood-std'
   transform: scaleX(.75) rotate(-5deg)
   transform-origin: 0 0
 
-@function scale($to, $from, $toWidth, $fromWidth)
-  $slope: ($to - $from) / ($toWidth - $fromWidth)
-  $base: $from - $slope * $fromWidth
+@function scale($to, $from, $to-width, $from-width)
+  $slope: ($to - $from) / ($to-width - $from-width)
+  $base: $from - $slope * $from-width
 
   @return calc(#{$base} + #{100vw * $slope})
 
@@ -23,7 +23,7 @@ $font-script: 'flood-std'
 
 html
   font: 400 100% / #{$baseline} $font-primary
-  font-feature-settings: "kern", "liga", "clig", "calt", "onum"
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'onum'
 
 body
   color: $color-black
@@ -145,7 +145,7 @@ blockquote
 
   p
     color: $color-blue
-    font-feature-settings: "kern", "liga", "clig", "dlig", "calt", "onum"
+    font-feature-settings: 'kern', 'liga', 'clig', 'dlig', 'calt', 'onum'
 
 
     &:last-of-type
@@ -173,18 +173,21 @@ pre
     width: calc(100% + #{($baseline * 1)})
 
 code
-  background: rgba($color-black, .1)
+  background: $color-gray
   font:
     family: $font-monospace
     size: .75em
-  padding: .25em
-
   // Line height should be inherited, but for inline code blocks where it isn't, this maintains the baseline
   line-height: 0
+  padding: .25em
+
+  pre &
+    background: transparent
+
 
 date
-  display: block
   color: $color-red
+  display: block
   font-family: $font-cursive
   font-style: italic
   margin: 0 0 $baseline
