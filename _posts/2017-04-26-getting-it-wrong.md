@@ -1,6 +1,7 @@
 ---
 title: Getting it Wrong
 description: A heartfelt apology to users with accessibility needs.
+layout: post
 ---
 
 I had hoped that my first blog post in two years would be about something a little sunnier than this, yet here I find myself offering my readers a heartfelt apology, and a promise to do better.

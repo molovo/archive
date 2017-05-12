@@ -1,6 +1,7 @@
 ---
 title: This Site has been on a Diet
 date: 2015-04-10 12:00:00
+layout: post
 ---
 
 I've come a long way since I started my career. For the four years I've been writing it, this blog has served as a great reminder to myself of my progress as a designer and developer. That said, it has also contained---for a long time---posts which are naïve, misinformative, pretentious and *a bit too sweary*.

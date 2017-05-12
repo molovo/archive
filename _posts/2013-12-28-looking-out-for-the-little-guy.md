@@ -1,6 +1,7 @@
 ---
 title: "Looking out for the little guy"
 date: 2013-12-28 12:00:00
+layout: post
 ---
 
 I am not a web designer.

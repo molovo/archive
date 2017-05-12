@@ -2,6 +2,7 @@
 title:  "First Past the Post"
 date:   2013-03-01 16:35:09
 description: "A short discussion of the book 'Execute' by Drew Wilson and Josh Long"
+layout: post
 ---
 
 There have been two exciting new products doing the rounds recently. The first is [Execute](http://executebook.com/), a fantastic book by [Drew Wilson](http://drewwilson.com/) and [Josh Long](http://joshlong.me/). It is about "executing on ideas immediately when inspired rather than following the normal rules". The second is [ Medium](http://medium.com/). Created by Twitter founder [Ev Williams](http://evhead.com/), it is an online magazine, open to contributions from the public.
