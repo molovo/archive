@@ -46,6 +46,12 @@
   stars: 25
   forks: 2
   org: false
+- repo: molovo/micro-stripe-payment
+  description: An asynchronous HTTP micro-service for accepting Stripe payments on static sites
+  language: JavaScript
+  stars: 0
+  forks: 0
+  org: false
 - repo: molovo/filthy
   description: A disgustingly clean ZSH prompt
   language: Shell
