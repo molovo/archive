@@ -16,4 +16,4 @@ document.addEventListener 'DOMContentLoaded', () ->
     if not window.___browserSync___?
       Turbolinks.start()
 
-  setTimeout startTurbolinks, 250
+  setTimeout startTurbolinks, 1000
