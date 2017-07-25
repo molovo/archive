@@ -25,6 +25,7 @@ keep_files:
   - js
   - img
 include:
+  - _headers
   - _redirects
 exclude:
   - _assets
