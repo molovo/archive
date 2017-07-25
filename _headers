@@ -1,6 +1,6 @@
 /*
-  Content-Security-Policy: default-src https:; script-src https: 'unsafe-inline'
-  X-Content-Security-Policy: default-src https:; script-src https: 'unsafe-inline'
+  Content-Security-Policy: default-src https://molovo.co; script-src https://molovo.co https://cdn.heapanalytics.com https://use.typekit.net 'unsafe-inline'
+  X-Content-Security-Policy: default-src https://molovo.co; script-src https://molovo.co https://cdn.heapanalytics.com https://use.typekit.net 'unsafe-inline'
   Referrer-Policy: strict-origin-when-cross-origin
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
