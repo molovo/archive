@@ -71,6 +71,7 @@ redcarpet:
 gems:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-webmention_io
 
 # Jekyll Picture Tag settings
 picture:
@@ -88,3 +89,20 @@ picture:
         width: "960"
       source_default:
         width: "600"
+
+# Webmentions
+webmentions:
+  username: molovo.co
+  # skip bad URLs for 5 days
+  cache_bad_uris_for: 5
+  # I moved to www and then to https, so…
+  legacy_domains:
+    - http://molovo.co.uk
+    - http://www.molovo.co.uk
+    - https://molovo.co.uk
+    - https://www.molovo.co.uk
+    - http://molovo.co
+    - http://www.molovo.co
+    - https://www.molovo.co
+  js:
+    destination: _assets/js

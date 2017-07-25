@@ -126,8 +126,7 @@
   <link rel="me" href="https://dribbble.com/{{ site.dribbble_username }}" />
   <link rel="me" href="mailto:{{ site.email }}" />
 
-  <link rel="pingback" href="https://webmention.io/molovo.co/xmlrpc" />
-  <link rel="webmention" href="https://webmention.io/molovo.co/webmention" />
+  {% webmentions_head %}
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=M4olpG7v6d">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=M4olpG7v6d">
@@ -172,5 +171,7 @@
   {% if page.layout != 'error' %}
     {% include footer.html %}
   {% endif %}
+
+  {% webmentions_js %}
 </body>
 </html>

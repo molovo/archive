@@ -1,4 +1,4 @@
 # Global settings applied to the whole site.
 [build]
   publish = "_site"
-  command = "gulp compile --env production && gulp compile:critical"
+  command = "gulp compile --env production && gulp compile:critical && bundle exec jekyll webmention"

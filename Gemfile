@@ -23,6 +23,7 @@ group :jekyll_plugins do
   gem "jekyll-paginate-v2"
   gem "jekyll-picture-tag", "~> 0.3.0"
   gem "jekyll-sitemap"
+  gem "jekyll-webmention_io"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

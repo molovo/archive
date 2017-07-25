@@ -1,0 +1,30 @@
+---
+http://localhost:3000/writing/first-past-the-post/:
+  http://executebook.com/: false
+  http://drewwilson.com/: false
+  http://joshlong.me/: false
+  http://medium.com/: false
+  http://evhead.com/: false
+  http://thebran.ch/: false
+http://localhost:3000/writing/screenreaders-and-the-web/: {}
+http://localhost:3000/writing/things-about-css-that-make-me-want-to-put-my-face-in-a-blender/: {}
+http://localhost:3000/writing/looking-out-for-the-little-guy/:
+  "//twitter.com/hereinthehive": false
+  https://www.youtube.com/watch?v=zgne_bgSRx8: false
+http://localhost:3000/writing/dear-client/: {}
+http://localhost:3000/writing/confidence/: {}
+http://localhost:3000/writing/writing/: {}
+http://localhost:3000/writing/the-view-from-above/: {}
+http://localhost:3000/writing/the-art-of-storytelling/: {}
+http://localhost:3000/writing/great-minds/:
+  http://zeldman.com: false
+  http://ia.com: false
+  http://frankchimero.com: false
+  http://trentwalton.com: false
+  http://devinhalladay.com: false
+  http://twnsnd.co: false
+http://localhost:3000/writing/this-site-has-been-on-a-diet/: {}
+http://localhost:3000/writing/getting-it-wrong/:
+  https://en.m.wikipedia.org/wiki/Lynx_(web_browser: false
+  http://roots.cx: false
+  http://jekyllrb.com: false
