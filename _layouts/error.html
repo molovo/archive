@@ -2,15 +2,22 @@
 layout: base
 ---
 
-<section class="intro">
-  <a href="/" aria-label="molovo">
-    {% include icons/logo.svg %}
-  </a>
-</section>
+<div class="page__wrapper">
+  <section class="intro">
+    <a href="/" aria-label="molovo">
+      {% include icons/logo.svg %}
+    </a>
+  </section>
 
-<section class="error">
-  <h1>{{ page.code }}</h1>
+  <section class="error">
+    <h4 class="error__code">{{ page.code }}</h4>
+    <h1 class="error__title">{{ page.title }}</h1>
 
-  {{ content }}
-</section>
+    {{ content }}
+  </section>
+</div>
 
+<div class="page__image">
+  <img src="/img/dog-in-space.gif"
+       alt="A dog in space" />
+</div>

@@ -169,6 +169,8 @@
     {{ content }}
   </main>
 
-  {% include footer.html %}
+  {% if page.layout != 'error' %}
+    {% include footer.html %}
+  {% endif %}
 </body>
 </html>
