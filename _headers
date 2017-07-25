@@ -1,6 +1,6 @@
 /*
-  Content-Security-Policy: default-src https: data: 'unsafe-inline' 'unsafe-eval'
-  X-Content-Security-Policy: default-src https: data: 'unsafe-inline' 'unsafe-eval'
+  Content-Security-Policy: default-src https:; script-src https: 'unsafe-inline'
+  X-Content-Security-Policy: default-src https:; script-src https: 'unsafe-inline'
   Referrer-Policy: strict-origin-when-cross-origin
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
