@@ -1,6 +1,75 @@
 .webmentions
+  font-size: .75em
+  line-height: $baseline
   margin: 0 0 6em
+  max-width: #{(4/3) * 36em}
+
+  &__list
+    list-style: none
 
   &__not-found
     font-family: $font-cursive
     font-style: italic
+
+  &__item
+    border-bottom: 1px dashed $color-gray
+    margin-bottom: $baseline
+    padding-bottom: $baseline
+
+    &:last-child
+      border-bottom-width: 0
+
+.webmention
+  align-items: center
+  display: flex
+  flex-wrap: wrap
+
+  &__author
+    a
+      align-items: center
+      display: flex
+
+    &__photo
+      margin-right: $baseline
+      width: #{$baseline * 2}
+
+  &__content
+    flex: 0 0 100%
+    order: 2
+    padding-left: #{$baseline * 3}
+
+    p
+      margin-bottom: 0
+
+  &__meta
+    margin-left: auto
+
+  &__pubdate,
+  &__source
+    display: inline-block
+    height: 1em
+    overflow: hidden
+    position: relative
+    text-indent: 100%
+    vertical-align: middle
+    width: 1em
+
+  &__pubdate
+    background: url('/img/icons/clock.svg') center / contain no-repeat
+
+  &__source
+    background: url('/img/icons/link.svg') center / contain no-repeat
+
+  &--like,
+  &--repost
+    .webmention__content
+      color: $color-gray-two
+      flex: 1 1 auto
+      font-family: $font-cursive
+      font-style: italic
+      order: 0
+      padding-left: 0
+
+    .webmention__author
+      .p-name
+        display: none

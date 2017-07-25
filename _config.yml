@@ -104,5 +104,4 @@ webmentions:
     - http://molovo.co
     - http://www.molovo.co
     - https://www.molovo.co
-  js:
-    destination: _assets/js
+  js: false
