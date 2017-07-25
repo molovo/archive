@@ -1,6 +1,6 @@
 /*
-  Content-Security-Policy: default-src https://molovo.co; script-src https://molovo.co https://cdn.heapanalytics.com https://use.typekit.net 'unsafe-inline'; style-src https://molovo.co 'unsafe-inline'; image-src https: data:; font-src https://use.typekit.net
-  X-Content-Security-Policy: default-src https://molovo.co; script-src https://molovo.co https://cdn.heapanalytics.com https://use.typekit.net 'unsafe-inline'; style-src https://molovo.co 'unsafe-inline'; image-src https: data:; font-src https://use.typekit.net
+  Content-Security-Policy: default-src https://molovo.co; script-src https://molovo.co https://cdn.heapanalytics.com https://use.typekit.net 'unsafe-inline'; style-src https://molovo.co 'unsafe-inline'; img-src https: data:; font-src https://use.typekit.net
+  X-Content-Security-Policy: default-src https://molovo.co; script-src https://molovo.co https://cdn.heapanalytics.com https://use.typekit.net 'unsafe-inline'; style-src https://molovo.co 'unsafe-inline'; img-src https: data:; font-src https://use.typekit.net
   Referrer-Policy: strict-origin-when-cross-origin
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
