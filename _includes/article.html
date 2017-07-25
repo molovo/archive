@@ -24,17 +24,24 @@
   <header class="post__header">
     {% if include.listing == 'true' %}
       <a href="{{ include.post.url }}"
+         class="u-url u-uid"
          title="{{ include.post.title }}">
-        <h1 itemprop="headline" id="{{ include.post.title | slugify }}-title">
+        <h1 itemprop="headline"
+            class="p-name"
+            id="{{ include.post.title | slugify }}-title">
           {{ include.post.title }}
         </h1>
       </a>
     {% else %}
-      <h1 itemprop="headline" id="{{ include.post.title | slugify }}-title">
+      <h1 itemprop="headline"
+          class="p-name"
+          id="{{ include.post.title | slugify }}-title">
         {{ include.post.title }}
       </h1>
     {% endif %}
-    <date itemprop="datePublished" content="{{ include.post.date | date_to_xmlschema }}">
+    <date itemprop="datePublished"
+          content="{{ include.post.date | date_to_xmlschema }}"
+          class="dt-published">
       {{ include.post.date | date: '%A %d %B %Y' }}
     </date>
     <meta itemprop="dateModified" content="{{ include.post.date | date_to_xmlschema }}">
@@ -54,7 +61,8 @@
     </div>
   </header>
 
-  <section itemprop="articleBody" class="post__content">
+  <section itemprop="articleBody"
+           class="post__content e-content">
     {{ body }}
   </section>
 
