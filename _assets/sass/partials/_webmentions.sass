@@ -42,23 +42,29 @@
       margin-bottom: 0
 
   &__meta
+    color: $color-gray-two
+    font-family: $font-cursive
+    font-style: italic
     margin-left: auto
 
-  &__pubdate,
   &__source
     display: inline-block
     height: 1em
+    line-height: 1em
     overflow: hidden
     position: relative
-    text-indent: 100%
+    text-indent: 1.5em
     vertical-align: middle
+    white-space: nowrap
     width: 1em
 
-  &__pubdate
-    background: url('/img/icons/clock.svg') center / contain no-repeat
+    &:hover
+      margin-right: -.5em
+      overflow: inherit
+      width: 1.5em
 
   &__source
-    background: url('/img/icons/link.svg') center / contain no-repeat
+    background: url('/img/icons/link.svg') left center / contain no-repeat
 
   &--like,
   &--repost
