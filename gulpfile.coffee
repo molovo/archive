@@ -28,7 +28,12 @@ sources =
   sass: '_assets/sass/**/*.s+(a|c)ss'
   coffee: '_assets/coffee/**/*.coffee'
   images: '_assets/img/**/*'
-  views: ['**/*.{html,md}', '!_site/**/*', '_data/**/*.yml']
+  views: [
+    '**/*.{html,md,markdown}'
+    '!_site/**/*'
+    '_data/**/*.yml'
+    '_config{,.dev}.yml'
+  ]
 entries =
   sass: '_assets/sass/main.sass'
   coffee: '_assets/coffee/main.coffee'

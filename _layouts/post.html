@@ -29,5 +29,7 @@ pagination:
   </nav>
 {% endif %}
 
-<h4>There have been {% webmention_count page.url %} webmentions</h4>
-{% webmentions page.url %}
+{% if site.environment == 'production' %}
+  <h4>There have been {% webmention_count page.url %} webmentions</h4>
+  {% webmentions page.url %}
+{% endif %}

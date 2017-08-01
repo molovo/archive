@@ -13,6 +13,7 @@ medium_username: molovo
 dribbble_username: molovo
 instagram_username: jameswdinsdale
 author: James Dinsdale
+environment: production
 
 # Build settings
 permalink: /writing/:title/
@@ -39,11 +40,14 @@ exclude:
   - package.json
   - yarn.lock
 
-# Create pages for archived posts without including them in the listing
 collections:
+  # Create pages for archived posts without including them in the listing
   archive:
     output: true
     permalink: /writing/:name/
+  studies:
+    output: true
+    permalink: /:collection/:path/
 defaults:
 - scope:
     path: ""
@@ -57,6 +61,12 @@ defaults:
   values:
     layout: post
     pagination: true
+- scope:
+    path: /studies/
+    type: studies
+  values:
+    layout: study
+    pagination: false
 
 # Markdown Configuration
 markdown: redcarpet
