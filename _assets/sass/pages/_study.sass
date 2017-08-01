@@ -1,0 +1,70 @@
+.studies
+  padding: 6em 0 0
+
+  &__list
+    list-style: none
+
+  &__item
+    padding: $baseline 0
+
+    .study__intro,
+    .study__title
+      margin: 0
+
+.study
+  color: $color-white
+
+  &__intro
+    flex: 0 0 #{2.5 * $baseline}
+    margin: 0 0 18em
+    text-decoration: none
+
+    .logo
+      height: $baseline
+
+    .octicon--plus
+      height: $baseline
+      margin: 0 $baseline
+      width: $baseline
+
+      polygon
+        fill: $color-white
+
+  &__icon
+    height: auto
+    vertical-align: middle
+    width: #{1.5 * $baseline}
+
+    &--1855
+      transform: scale(1.25)
+      transform-origin: center
+
+    path
+      fill: $color-white
+
+  &__title
+    color: $color-white
+    font-family: $font-cursive
+    // letter-spacing: 0
+    -webkit-font-smoothing: antialiased
+    font-smoothing: antialiased
+
+  &__link
+    align-items: center
+    color: $color-white
+    display: flex
+
+    &, &:hover
+      text-decoration: none
+
+  &__content
+    font-size: 1.125em
+    line-height: $baseline
+    max-width: 36em
+
+.page--study
+  .study__title
+    font-size: 4.5em
+  
+  .study__icon
+    vertical-align: baseline

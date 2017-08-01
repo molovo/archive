@@ -9,3 +9,28 @@ layout: base
 
   {{ content }}
 </section>
+
+<section class="studies">
+  <h4>Selected Projects</h4>
+
+  <ul class="studies__list">
+    {% for study in site.studies %}
+      <li>
+        <article class="studies__item study"
+                  aria-labelledby="{{ study.slug }}">
+          <a href="{{ study.url }}"
+             class="study__link study__link--{{ study.slug }}">
+            <div class="study__intro">
+              {% include icons/studies/{{ study.slug }}/icon.svg %}
+            </div>
+
+            <h2 id="{{ study.slug }}"
+                class="study__title">
+              {{ study.client }}
+            </h2>
+          </a>
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

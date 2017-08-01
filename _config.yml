@@ -53,7 +53,7 @@ collections:
     permalink: /writing/:name/
   studies:
     output: true
-    permalink: /:collection/:path/
+    permalink: /studies/:name/
 defaults:
 - scope:
     path: ""

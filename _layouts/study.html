@@ -1,0 +1,23 @@
+---
+layout: base
+---
+
+<article class="study study--{{ page.slug }}">
+  <header class="study__header">
+    <div class="study__intro">
+      <a href="/" aria-label="Molovo">
+        {% include icons/logo.svg %}
+      </a>
+      {% include icons/plus.svg %}
+      <span aria-label="{{ page.client }}">
+        {% include icons/studies/{{ page.slug }}/icon.svg %}
+      </span>
+    </div>
+
+    <h1 class="study__title">{{ page.title }}</h1>
+  </header>
+
+  <div class="study__content">
+    {{ content }}
+  </div>
+</article>

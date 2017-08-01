@@ -1,0 +1,16 @@
+$haresfoot-yellow: #FFCA06
+$haresfoot-orange: #F5812F
+$haresfoot-orange2: #DB6328
+$haresfoot-red: #B42C33
+
+.page--haresfoot
+  background: $haresfoot-orange2 url('/img/studies/haresfoot/mobile-bg.png') center / cover no-repeat
+
+  @media (min-width: 42em)
+    background-image: url('/img/studies/haresfoot/bg.png')
+
+.study__link--haresfoot
+  &:hover
+    .study__icon
+      path
+        fill: $haresfoot-orange2

@@ -1,8 +1,8 @@
 ---
-title: Brewing Up a Storm
-slug: haresfoot
-client: Haresfoot Craft Beer
-url: https://haresfoot.com
+title: Freshly Roasted
+slug: love-coffee
+client: Love Coffee
+url: http://lovemycoffee.com
 layout: study
 ---
 

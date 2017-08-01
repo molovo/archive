@@ -29,7 +29,7 @@ sources =
   coffee: '_assets/coffee/**/*.coffee'
   images: '_assets/img/**/*'
   views: [
-    '**/*.{html,md,markdown}'
+    '**/*.{html,md,markdown,svg}'
     '!_site/**/*'
     '_data/**/*.yml'
     '_config{,.dev}.yml'
