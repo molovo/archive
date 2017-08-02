@@ -130,9 +130,8 @@ module.exports = class Search
   appendNotFound: () =>
     item = document.createElement 'li'
     item.classList.add 'search__result'
-    item.innerHTML = """
-      <em>No results found</em>
-      """
+    item.classList.add 'search__result--not-found'
+    item.innerHTML = 'No results found'
     @results.appendChild item
 
   ###*
