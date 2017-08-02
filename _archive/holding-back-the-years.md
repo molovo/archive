@@ -1,6 +1,9 @@
 ---
 title:  "Holding back the years"
 date:   2012-12-19 01:33:29
+tags:
+- design
+- inspiration
 ---
 
 A few weeks ago, a friend asked me a very important question:

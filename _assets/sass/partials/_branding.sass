@@ -7,13 +7,13 @@
 
   &--frame,
   &--lens
-    transition: fill .5s
+    transition: fill .25s
 
   &--frame
     fill: $color-red
 
   &:hover
-    .logo--lens
+    .logo--frame
       fill: $color-black
 
   &--lens
@@ -26,6 +26,9 @@
       fill: $color-white
 
     &:hover
+      .logo--frame
+        fill: $color-white
+
       .logo--lens-left
         fill: $color-blue
 

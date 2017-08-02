@@ -1,6 +1,8 @@
 ---
 title:  "Don't Call Me Unemployed"
 date:   2013-07-21 15:50:29
+tags:
+- freelancing
 ---
 
 > Freelancing is not a career choice, it's a state of mind.

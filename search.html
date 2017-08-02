@@ -1,0 +1,30 @@
+---
+layout: page
+title: Search
+---
+
+<section class="search">
+  <h1>Search</h1>
+  
+  <form class="search__form" id="search-form">
+    <label>
+      <input type="search" name="q" id="search" placeholder="Enter your search term..." />
+    </label>
+  </form>
+
+  <ul class="search__results posts__list" id="search-results"></ul>
+</section>
+
+<section class="tags">
+  <h4>Tags</h4>
+  
+  <ul class="tags__list">
+    {% assign tags = site.tags | sort %}
+    {% for item in tags %}
+      {% assign tag = item | first %}
+      <li class="tags__tag">
+        <a href="/tag/{{ tag }}">{{ tag }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

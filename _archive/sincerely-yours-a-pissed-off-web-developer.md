@@ -1,6 +1,11 @@
 ---
 title: "Sincerely Yours, A Pissed-Off Web Developer"
 date: 2013-11-25 12:00:00
+tags:
+- rant
+- browsers
+- development
+- css
 ---
 
 Dear Apple,

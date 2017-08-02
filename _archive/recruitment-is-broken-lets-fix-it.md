@@ -1,6 +1,10 @@
 ---
 title:  "Recruitment is broken, let's fix it"
 date:   2013-07-29 11:42:26
+tags:
+- recruitment
+- work
+- freelancing
 ---
 
 <small><em>I can't speak for the issues in the job markets of other countries, so this is aimed mainly at recruiters in the UK.</em></small>

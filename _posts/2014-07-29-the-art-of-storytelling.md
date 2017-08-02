@@ -1,7 +1,10 @@
 ---
 title: The Art of Storytelling
-date: 2014-07-29 12:00:00
 layout: post
+date: 2014-07-29 12:00:00
+tags:
+- design
+- web
 ---
 
 Users. Customers. Buyers. Shoppers. Clients. Patrons. Consumers. We use many different names to describe the people for whom we build things on the web, but we often forget that they are just that -- people. People with emotions, contrasting opinions, differing reactions and distinct expectations.

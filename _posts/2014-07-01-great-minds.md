@@ -1,7 +1,12 @@
 ---
 title: Great Minds
-date: 2014-07-31 12:00:00
 layout: post
+date: 2014-07-31 12:00:00
+tags:
+- writing
+- opinion
+- inspiration
+- feels
 ---
 
 Throughout my life, I've constantly found myself amazed at how little I know. My ability to learn has always been fuelled by this feeling of inadequacy, and a desire to better myself. It's the thing that keeps me going at 4.30am, trying to meet a deadline, with absolutely no idea of how I'm going to get there.

@@ -1,0 +1,21 @@
+---
+layout: page
+robots: noindex,follow
+---
+
+<section class="posts"
+         itemscope
+         itemtype="http://schema.org/Blog">
+  <h4 font-family="skolar-latin">{{ page.title }}</h4>
+  
+  <div class="posts__list">
+    {% for post in site.tags[page.tag] %}
+      {% assign body = post.content | markdownify %}
+      {% include article.html post=post listing="true" %}
+
+      {% unless forloop.last %}
+        <hr class="posts__break">
+      {% endunless %}
+    {% endfor %}
+  </div>
+</section>

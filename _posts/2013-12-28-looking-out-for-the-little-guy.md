@@ -1,7 +1,11 @@
 ---
 title: "Looking out for the little guy"
-date: 2013-12-28 12:00:00
 layout: post
+date: 2013-12-28 12:00:00
+tags:
+- web
+- process
+- freelancing
 ---
 
 I am not a web designer.

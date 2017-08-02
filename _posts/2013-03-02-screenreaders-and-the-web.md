@@ -1,8 +1,13 @@
 ---
 title:  "Screenreaders and The Web"
+layout: post
 date:   2013-03-02 16:32:41
 description: "An idea to improve the audio output of screenreaders"
-layout: post
+tags:
+- a11y
+- html
+- screenreaders
+- web
 ---
 
 Mention `alt` text to a room of web developers and you'll likely start an argument. Should they be ignored for decorative images? Should they ever be left blank? And is anyone brave enough to say `alt=" "`?

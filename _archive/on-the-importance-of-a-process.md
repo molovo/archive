@@ -1,6 +1,11 @@
 ---
 title:  "On the Importance of a Process"
 date:   2013-10-02 13:49:47
+tags:
+- design
+- process
+- inspiration
+- opinion
 ---
 
 Many designers have a well thought-out, tried and tested approach to their work. I have one myself, although the simplicity of it may surprise you.

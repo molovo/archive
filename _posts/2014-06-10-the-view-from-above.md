@@ -1,8 +1,11 @@
 ---
 title: The View From Above
+layout: post
 date: 2014-06-10 12:00:00
 description: Pondering a fond childhood memory
-layout: post
+tags:
+- inspiration
+- opinion
 ---
 
 <figure class="image image--pull-left">

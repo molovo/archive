@@ -1,6 +1,9 @@
 ---
 title:  "Stroke Your Ego"
 date:   2013-02-21 08:00:13
+tags:
+- design
+- opinion
 ---
 
 Designers. We're an egotistical bunch. And that's a good thing.

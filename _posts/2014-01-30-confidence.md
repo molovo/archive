@@ -1,7 +1,9 @@
 ---
 title: Confidence
-date: 2014-01-30 12:00:00
 layout: post
+date: 2014-01-30 12:00:00
+tags:
+- feels
 ---
 
 Lack of confidence is not a curse. It's a problem; a thing to be overcome.

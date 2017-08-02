@@ -1,6 +1,9 @@
 ---
 title: "Dear Client"
+layout: post
 date: 2014-01-10 12:00:00
+tags:
+- freelancing
 ---
 
 Hello there,

@@ -1,8 +1,13 @@
 ---
 title: "Things about CSS that make me want to put my face in a blender"
+layout: post
 date: 2013-10-16 13:49:47
 description: "A light-hearted rant about cascading stylesheets"
-layout: post
+tags:
+- rant
+- css
+- development
+- web
 ---
 
 #### Padding

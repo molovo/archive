@@ -1,6 +1,10 @@
 ---
 title: "Never Stop Doing"
 date: 2013-12-05 12:00:00
+tags:
+- apps
+- work
+- product
 ---
 
 You may have noticed I've been releasing a lot of new work recently. Two apps in two months isn't bad going, and I'm pretty pleased with myself.

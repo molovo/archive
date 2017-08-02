@@ -1,6 +1,10 @@
 ---
 title: Social Media responses on a Jekyll site using Webmentions
 layout: post
+tags:
+- web
+- webmentions
+- social
 ---
 
 I've tried a few times to host some form of comment feed on my Jekyll site, but always ended up abandoning them. Hosted solutions such as Disqus and Facebook were too invasive for my tastes, and after trying and failing to launch my own SaaS company (Chatter.li) to solve the problem, my site has been left comment-less for a few years.

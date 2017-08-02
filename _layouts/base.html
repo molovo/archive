@@ -37,7 +37,7 @@
 
   <meta name="description" content="{{ description }}" />
   <meta name="author" content="{{ site.author }}" />
-  <meta name="robots" content="noodp" />
+  <meta name="robots" content="{% if page.robots %}{{ page.robots }},{% endif %}noodp" />
 
   <meta property="og:locale" content="en_GB">
   <meta property="og:type" content="website">

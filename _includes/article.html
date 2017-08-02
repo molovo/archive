@@ -39,11 +39,21 @@
         {{ include.post.title }}
       </h1>
     {% endif %}
-    <date itemprop="datePublished"
-          content="{{ include.post.date | date_to_xmlschema }}"
-          class="dt-published">
-      {{ include.post.date | date: '%A %d %B %Y' }}
-    </date>
+    <div class="post__meta">
+      <date itemprop="datePublished"
+            content="{{ include.post.date | date_to_xmlschema }}"
+            class="post__date dt-published">
+        {{ include.post.date | date: '%e' }}{{ include.post.date | date_to_xmlschema | ordinal }} {{ include.post.date | date: '%B %Y' }}
+      </date>
+
+      {% if include.post.tags %}
+        <ul class="post__tags">
+          {% for tag in include.post.tags %}
+            <li class="post__tag"><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
     <meta itemprop="dateModified" content="{{ include.post.date | date_to_xmlschema }}">
     <div itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="{{ site.author }}" />

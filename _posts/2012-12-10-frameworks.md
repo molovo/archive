@@ -1,6 +1,12 @@
 ---
 title:  "Frameworks"
+layout: post
 date:   2012-12-10 12:28:58
+tags:
+- frameworks
+- development
+- learning
+- web
 ---
 
 There are plenty of programming languages out there. Everyone has their favourite, and many, like me, probably have a list as long as their arm of languages they'd like to learn. Every language has a selection of frameworks, designed to make them easier to build apps with. Many are incredibly useful. jQuery for instance, has taken the web design world by storm, and it's quite rare to see a site nowadays that doesn't make use of it. Laravel and CodeIgniter for PHP are very highly regarded, as is Rails for Ruby development.

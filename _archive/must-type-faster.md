@@ -1,6 +1,10 @@
 ---
 title:  "Must. Type. Faster."
 date:   2013-06-25 20:48:11
+tags:
+- development
+- open source
+- javascript
 ---
 
 I've been working on an application recently which allows Solicitors and Legal Costs Draftsmen to quickly record time and budget forecast data. The application is very data-heavy, with multiple large forms throughout.
