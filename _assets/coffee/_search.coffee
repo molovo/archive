@@ -75,7 +75,8 @@ module.exports = class Search
         fuse = new Fuse(articles, OPTIONS)
         fuse.search @term
       .then (results) =>
-        @appendNotFound() if results.length is 0
+        return @appendNotFound() if results.length is 0
+        @appendCount(results.length)
         @append(result) for result in results
 
   ###*
@@ -132,6 +133,20 @@ module.exports = class Search
     item.classList.add 'search__result'
     item.classList.add 'search__result--not-found'
     item.innerHTML = 'No results found'
+    @results.appendChild item
+
+  ###*
+   * Append the count of results
+   *
+   * @param {int} count
+   *
+   * @return {void}
+  ###
+  appendCount: (count = 0) =>
+    item = document.createElement 'li'
+    item.classList.add 'search__result'
+    item.classList.add 'search__result--count'
+    item.innerHTML = "#{count} results match ‘#{@input.value}’"
     @results.appendChild item
 
   ###*

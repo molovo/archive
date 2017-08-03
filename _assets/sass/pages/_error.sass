@@ -20,10 +20,10 @@
       padding: 6em 1.5em 0
 
     @media (min-width: 42em)
-      padding: 6em 1.5em 0 scale(1.5em, 6em, 42em, 80em)
+      padding: 6em 3em 0 scale(1.5em, 6em, 42em, 80em)
 
     @media (min-width: 80em)
-      padding: 6em 1.5em 0 6em
+      padding: 6em 3em 0 6em
 
   .page__image
     flex: 0 0 50%
@@ -49,3 +49,14 @@
 
   &__title
     font-family: $font-cursive
+    -webkit-font-smoothing: antialiased
+            font-smoothing: antialiased
+
+  .search__form
+    margin-bottom: 3em
+
+    @media (min-width: 42em)
+      margin-bottom: 6em
+
+    input
+      border: 0

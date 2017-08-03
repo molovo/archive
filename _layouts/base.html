@@ -127,9 +127,7 @@
   <link rel="me" href="https://instagram.com/{{ site.instagram_username }}" />
   <link rel="me" href="mailto:{{ site.email }}" />
 
-  {% if site.environment == 'production' %}
-    {% webmentions_head %}
-  {% endif %}
+  {% webmentions_head %}
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=M4olpG7v6d">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=M4olpG7v6d">

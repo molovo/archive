@@ -13,7 +13,8 @@
   &__result
     margin: 0 0 3em
 
-    &--not-found
+    &--not-found,
+    &--count
       color: $color-red
       font-family: $font-cursive
       font-style: italic
@@ -22,5 +23,11 @@
   padding: 6em 0
   
   &__list
-    column-count: 4
+    column-count: 2
     list-style: none
+
+    @media (min-width: 24em)
+      column-count: 3
+
+    @media (min-width: 36em)
+      column-count: 4
