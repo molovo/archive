@@ -1,29 +1,46 @@
-<div class="header screenreader-text" id="top" data-turbolinks-permanent>
-  <nav class="nav--main">
-    <a href="#content" title="Skip to Content">Skip to Content</a>
-
-    <ul>
-      <li>
-        <a href="/" aria-label="molovo">
-          {% include icons/logo.svg %}
-          Home
-        </a>
-      </li>
-
-      <li>
-        <a href="/projects/">Projects</a>
-      </li>
-
-      <li>
-        <a href="/writing/">Writing</a>
-      </li>
-
-      <li class="footer--nav-link-twitter">
-        <a href="https://twitter.com/molovo">
-          {% include icons/twitter.svg %}
-          <span>Follow me on Twitter</span>
-        </a>
-      </li>
-    </ul>
+<header class="header"
+        id="top"
+        data-turbolinks-permanent>
+  <nav class="top-nav">
+    <a href="#menu">Menu</a>
   </nav>
-</div>
+</header>
+
+<nav class="nav nav--main">
+  <a href="#content"
+     title="Skip to Content"
+     class="screenreader-text">
+    Skip to Content
+  </a>
+
+  <ul class="nav__menu">
+    <li class="nav__item nav__item--home">
+      <a href="/"
+         aria-label="molovo">
+        {% include icons/logo.svg %}
+        <span class="screenreader-text">Home</span>
+      </a>
+    </li>
+
+    <li class="nav__item">
+      <a href="/projects/"
+         class="nav__link">
+        Projects
+      </a>
+    </li>
+
+    <li class="nav__item">
+      <a href="/writing/"
+         class="nav__link">
+        Writing
+      </a>
+    </li>
+
+    <li class="screenreader-text">
+      <a href="https://twitter.com/molovo">
+        {% include icons/twitter.svg %}
+        <span>Follow me on Twitter</span>
+      </a>
+    </li>
+  </ul>
+</nav>

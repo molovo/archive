@@ -1,0 +1,32 @@
+.nav
+  @extend %script-background
+  background: $color-black
+  bottom: 0
+  left: 0
+  padding: 1.5em
+  position: fixed
+  right: 0
+  top: 0
+  z-index: 999
+
+  @media (min-width: 42em)
+    padding: scale(1.5em, 6em, 42em, 80em)
+
+  @media (min-width: 80em)
+    padding: 6em
+
+  &__menu
+    list-style: none
+
+  &__item
+    margin: 0 0 $baseline
+
+    &--home
+      margin: 0 0 #{$baseline * 4}
+
+  &__link
+    @extend h1
+    color: $color-white
+    font-family: $font-cursive
+    -webkit-font-smoothing: antialiased
+            font-smoothing: antialiased
