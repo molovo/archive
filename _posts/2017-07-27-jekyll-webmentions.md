@@ -36,7 +36,7 @@ This plugin performs a few different tasks for you. It adds the necessary tags t
 
 To install the plugin, first add the following to your `Gemfile` and run `bundle install`.
 
-```
+```ruby
 group :jekyll_plugins do
   gem "jekyll-webmention_io"
 end

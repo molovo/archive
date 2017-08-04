@@ -160,12 +160,11 @@ blockquote
       weight: 600
 
 pre
-  background: $color-black
+  background: $color-almost-black
   color: $color-white
   display: block
-  font-size: .75em
   margin: 0 0 $baseline
-  padding: $baseline
+  padding: #{$baseline / 2} $baseline #{$baseline / 1.5}
   width: 100%
 
   @media (min-width: 42em)
@@ -183,3 +182,4 @@ code
 
   pre &
     background: transparent
+    padding: 0
