@@ -1,19 +1,79 @@
+.nav-toggle
+  align-items: center
+  background: $color-white
+  border-radius: .5em
+  display: flex
+  height: 2em
+  justify-content: center
+  position: fixed
+  right: 1.5em
+  top: 1.5em
+  transition: background .25s
+  width: 2em
+  z-index: 1000
+
+  @media (min-width: 42em)
+    right: scale(1.5em, 6em, 42em, 80em)
+    top: scale(1.5em, 6em, 42em, 80em)
+
+  @media (min-width: 80em)
+    right: 6em
+    top: 6em
+
+  svg
+    height: 1.75em
+    width: 1.75em
+
+    path
+      fill: $color-red
+      transition: fill .25s
+
+  &:hover
+    svg
+      path
+        fill: $color-black
+
+  .page--home &,
+  .page--error &,
+  .nav:target + .header &,
+  .nav.nav--open + .header &
+    background: $color-black
+
+    svg
+      path
+        fill: $color-white
+    
+    &:hover
+      svg
+        path
+          fill: $color-red
+
 .nav
   @extend %script-background
   background: $color-black
   bottom: 0
   left: 0
-  padding: 1.5em
+  padding: 6em 1.5em
   position: fixed
+  opacity: 0
+  overflow-x: hidden
+  overflow-y: auto
+  pointer-events: none
   right: 0
   top: 0
+  transition: opacity .25s
   z-index: 999
 
   @media (min-width: 42em)
-    padding: scale(1.5em, 6em, 42em, 80em)
+    padding: 6em scale(1.5em, 6em, 42em, 80em)
 
   @media (min-width: 80em)
     padding: 6em
+
+  &:target,
+  &--open
+    opacity: 1
+    pointer-events: initial
 
   &__menu
     list-style: none
@@ -30,3 +90,7 @@
     font-family: $font-cursive
     -webkit-font-smoothing: antialiased
             font-smoothing: antialiased
+
+    &:hover
+      color: $color-red
+      text-decoration: none

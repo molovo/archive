@@ -1,15 +1,9 @@
-<header class="header"
-        id="top"
-        data-turbolinks-permanent>
-  <nav class="top-nav">
-    <a href="#menu">Menu</a>
-  </nav>
-</header>
-
-<nav class="nav nav--main">
+<nav class="nav nav--main"
+     id="menu"
+     data-turbolinks-permanent>
   <a href="#content"
-     title="Skip to Content"
-     class="screenreader-text">
+    title="Skip to Content"
+    class="screenreader-text">
     Skip to Content
   </a>
 
@@ -44,3 +38,16 @@
     </li>
   </ul>
 </nav>
+
+<header class="header"
+        id="top"
+        data-turbolinks-permanent>
+  <nav class="top-nav">
+    <a href="#menu"
+       class="nav-toggle"
+       id="nav-toggle">
+      <span class="screenreader-text">Menu</span>
+      {% include icons/menu.svg %}
+    </a>
+  </nav>
+</header>
