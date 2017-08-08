@@ -25,7 +25,7 @@
     width: 1.75em
 
     circle
-      fill: $color-black
+      fill: $color-almost-black
       transition: fill .25s
 
   &:hover
@@ -37,21 +37,31 @@
   .page--error &,
   .nav:target + .header &,
   .nav.nav--open + .header &
-    background: $color-black
-
     svg
       circle
         fill: $color-white
+
+  .page--home &,
+  .page--error &
+    background: $color-black
 
     &:hover
       svg
         circle
           fill: $color-red
 
+  .nav:target + .header &,
+  .nav.nav--open + .header &
+    background: $color-red
+
+    &:hover
+      svg
+        circle
+          fill: $color-almost-black
 
 .nav
   @extend %script-background
-  background: $color-black
+  background: $color-red
   bottom: 0
   left: 0
   padding: 6em 1.5em
@@ -70,6 +80,9 @@
   @media (min-width: 80em)
     padding: 6em
 
+  &::after
+    color: darken($color-red, 2%)
+
   &:target,
   &--open
     opacity: 1
@@ -87,9 +100,10 @@
   &__link
     @extend h1
     color: $color-white
+    transition: color .25s
     -webkit-font-smoothing: antialiased
             font-smoothing: antialiased
 
     &:hover
-      color: $color-red
+      color: $color-almost-black
       text-decoration: none
