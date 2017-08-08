@@ -24,14 +24,14 @@
     height: 1.75em
     width: 1.75em
 
-    path
-      fill: $color-red
+    circle
+      fill: $color-black
       transition: fill .25s
 
   &:hover
     svg
-      path
-        fill: $color-black
+      circle
+        fill: $color-red
 
   .page--home &,
   .page--error &,
@@ -40,13 +40,14 @@
     background: $color-black
 
     svg
-      path
+      circle
         fill: $color-white
-    
+
     &:hover
       svg
-        path
+        circle
           fill: $color-red
+
 
 .nav
   @extend %script-background
@@ -56,8 +57,7 @@
   padding: 6em 1.5em
   position: fixed
   opacity: 0
-  overflow-x: hidden
-  overflow-y: auto
+  overflow: hidden
   pointer-events: none
   right: 0
   top: 0
@@ -79,7 +79,7 @@
     list-style: none
 
   &__item
-    margin: 0 0 $baseline
+    margin: 0 0 #{$baseline / 2}
 
     &--home
       margin: 0 0 #{$baseline * 4}
@@ -87,7 +87,6 @@
   &__link
     @extend h1
     color: $color-white
-    font-family: $font-cursive
     -webkit-font-smoothing: antialiased
             font-smoothing: antialiased
 

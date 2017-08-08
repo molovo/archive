@@ -1,3 +1,4 @@
+
 <article class="post"
          aria-labelledby="{{ include.post.title | slugify }}-title"
          {% if include.listing == 'true' %}itemprop="blogPost"{% endif %}
@@ -40,14 +41,17 @@
       </h1>
     {% endif %}
     <div class="post__meta">
+      
       <date itemprop="datePublished"
             content="{{ include.post.date | date_to_xmlschema }}"
             class="post__date dt-published">
+        <span class="screenreader-text">Published on:</span>
         {{ include.post.date | date: '%e' }}{{ include.post.date | date_to_xmlschema | ordinal }} {{ include.post.date | date: '%B %Y' }}
       </date>
 
       {% if include.post.tags %}
         <ul class="post__tags">
+          <span class="screenreader-text">Tags:</span>
           {% for tag in include.post.tags %}
             <li class="post__tag"><a href="/tag/{{ tag }}">{{ tag }}</a></li>
           {% endfor %}
