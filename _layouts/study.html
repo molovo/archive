@@ -3,21 +3,25 @@ layout: base
 ---
 
 <article class="study study--{{ page.slug }}">
-  <header class="study__header">
-    <div class="study__intro">
-      <a href="/" aria-label="Molovo">
-        {% include icons/logo.svg %}
-      </a>
-      {% include icons/plus.svg %}
-      <span aria-label="{{ page.client }}">
-        {% include icons/studies/{{ page.slug }}/icon.svg %}
-      </span>
+  <section class="study__section study__section--{{ page.slug }} study__section--intro">
+    {% include study/intro.html title=page.title slug=page.slug client=page.client %}
+
+    <div class="study__content">
+      <div class="post__content">
+        {{ page.content }}
+      </div>
     </div>
+  </section>
 
-    <h1 class="study__title">{{ page.title }}</h1>
-  </header>
-
-  <div class="study__content">
-    {{ content }}
-  </div>
+  {% for section in page.sections %}
+    <section class="study__section study__section--{{ page.slug }} study__section--{{ section.type }}">
+        {% include study/intro.html title=section.title slug=page.slug client=page.client %}
+    
+        <div class="study__content">
+          <div class="post__content">
+            {{ section.content | markdownify }}
+          </div>
+        </div>
+    </section>
+  {% endfor %}
 </article>

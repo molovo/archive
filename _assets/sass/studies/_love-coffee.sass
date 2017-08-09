@@ -3,11 +3,35 @@ $lovecoffee-blue: #057281
 $lovecoffee-orange: #EF8019
 $lovecoffee-brown: #52302C
 
-.page--love-coffee
-  background: $lovecoffee-blue url('/img/studies/love-coffee/bg.jpg') center / cover no-repeat
+.study__section
+  &--love-coffee
+    background: $color-white
 
-.study__link--love-coffee
-  &:hover
-    .study__icon
-      path
+    .study__title
+      color: $lovecoffee-blue
+
+    .study__icons
+      .logo--frame,
+      .octicon--plus polygon,
+      .study__icon path
         fill: $lovecoffee-blue
+
+    &.study__section--intro
+      background: $lovecoffee-blue
+
+      .study__intro
+        background-color: $lovecoffee-blue
+        background-image: linear-gradient(to bottom, rgba($lovecoffee-blue, 0) 0%, rgba($lovecoffee-blue, 0) 75%, $lovecoffee-blue 100%), url('/img/studies/love-coffee/bg.jpg')
+        background-position: center
+        background-size: cover
+
+      .study__title,
+      .study__content,
+      .study__client
+        color: $color-white
+
+      .study__icons
+        .logo--frame,
+        .octicon--plus polygon,
+        .study__icon path
+          fill: $color-white

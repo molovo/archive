@@ -1,0 +1,23 @@
+.button
+  appearance: none
+  background: $color-red
+  border: .25em solid transparent
+  color: $color-white
+  display: inline-block
+  padding: #{$baseline * .5} $baseline #{$baseline * .675}
+  transition: background-color .25s, border-color .25s, color .25s
+
+  &:hover
+    text-decoration: none
+
+  &--white
+    background: $color-white
+    color: $color-red
+
+  &--bordered
+    border-color: $color-white
+    background: transparent
+
+    &:hover
+      background: $color-white
+      color: $color-red

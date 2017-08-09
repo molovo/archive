@@ -3,14 +3,38 @@ $haresfoot-orange: #F5812F
 $haresfoot-orange2: #DB6328
 $haresfoot-red: #B42C33
 
-.page--haresfoot
-  background: $haresfoot-orange2 url('/img/studies/haresfoot/mobile-bg.png') center / cover no-repeat
+.study__section
+  &--haresfoot
+    background: $color-white
 
-  @media (min-width: 42em)
-    background-image: url('/img/studies/haresfoot/bg.png')
+    .study__title
+      color: $haresfoot-orange2
 
-.study__link--haresfoot
-  &:hover
-    .study__icon
-      path
+    .study__icons
+      .logo--frame,
+      .octicon--plus polygon,
+      .study__icon path
         fill: $haresfoot-orange2
+
+    &.study__section--intro
+      background: $haresfoot-orange2
+
+      .study__intro
+        background-color: $haresfoot-orange2
+        background-image: linear-gradient(to bottom, rgba($haresfoot-orange2, 0) 0%, rgba($haresfoot-orange2, 0) 75%, $haresfoot-orange2 100%), url('/img/studies/haresfoot/mobile-bg.png')
+        background-position: center
+        background-size: cover
+
+        @media (min-width: 42em)
+          background-image: linear-gradient(to bottom, rgba($haresfoot-orange2, 0) 0%, rgba($haresfoot-orange2, 0) 75%, $haresfoot-orange2 100%), url('/img/studies/haresfoot/bg.png')
+
+      .study__title,
+      .study__content,
+      .study__client
+        color: $color-white
+
+      .study__icons
+        .logo--frame,
+        .octicon--plus polygon,
+        .study__icon path
+          fill: $color-white

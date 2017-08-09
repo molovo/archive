@@ -1,22 +1,48 @@
-.studies
-  padding: 6em 0 0
+.page--study
+  padding: 0
 
-  &__list
-    list-style: none
+  .footer,
+  .contact
+    margin: 0
+
+.studies
+  margin: -6em -1.5em 0
+
+  @media (min-width: 42em)
+    margin: -6em between(-1.5em, -6em, 42em, 80em) 0
+
+  @media (min-width: 80em)
+    margin: -6em -6em 0
 
   &__item
-    padding: $baseline 0
+    margin: 0
 
-    .study__intro,
-    .study__title
-      margin: 0
+    .study__intro
+      padding: 6em 1.5em
+      position: relative
+
+      @media (min-width: 42em)
+        padding: 6em between(1.5em, 6em, 42em, 80em)
+
+      @media (min-width: 80em)
+        padding: 6em 6em
+
+    .study__link
+      margin: 1.5em 0 0
 
 .study
-  color: $color-white
-
   &__intro
-    flex: 0 0 #{2.5 * $baseline}
-    margin: 0 0 18em
+    padding: 6em 1.5em 0
+    position: relative
+
+    @media (min-width: 42em)
+      padding: 6em between(1.5em, 6em, 42em, 80em) 0
+
+    @media (min-width: 80em)
+      padding: 6em 6em 0
+
+  &__icons
+    margin: 0 0 $baseline
     text-decoration: none
 
     .logo
@@ -32,7 +58,7 @@
 
   &__icon
     height: auto
-    vertical-align: middle
+    vertical-align: baseline
     width: #{1.5 * $baseline}
 
     &--1855
@@ -42,27 +68,29 @@
     path
       fill: $color-white
 
+  &__client
+    -webkit-font-smoothing: antialiased
+            font-smoothing: antialiased
+
   &__title
     color: $color-white
-    -webkit-font-smoothing: antialiased
-    font-smoothing: antialiased
+    margin: 12em 0 3em
 
-  &__link
-    align-items: center
-    color: $color-white
-    display: flex
-
-    &, &:hover
-      text-decoration: none
+    h1
+      +script
+      font-size: 23vw
+      letter-spacing: 0
+      margin: 0
+      text-align: left
+      -webkit-font-smoothing: antialiased
+              font-smoothing: antialiased
 
   &__content
-    font-size: 1.125em
-    line-height: $baseline
-    max-width: 36em
+    max-width: 48em
+    padding: 0 1.5em 6em
 
-.page--study
-  .study__title
-    font-size: 4.5em
-  
-  .study__icon
-    vertical-align: baseline
+    @media (min-width: 42em)
+      padding: 0 between(1.5em, 6em, 42em, 80em) 6em
+
+    @media (min-width: 80em)
+      padding: 0 6em 6em

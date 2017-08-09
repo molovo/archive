@@ -1,13 +1,38 @@
 $eighteenfiftyfive-red: #AA314E
+$eighteenfiftyfive-red2: #FC6473
 $eighteenfiftyfive-blue: #113245
 $eighteenfiftyfive-white: #FFFFFF
 $eighteenfiftyfive-black: #000000
 
-.page--1855
-  background: $eighteenfiftyfive-red url('/img/studies/1855/bg.jpg') center / cover no-repeat
+.study__section
+  &--1855
+    background: $color-white
 
-.study__link--1855
-  &:hover
-    .study__icon
-      path
-        fill: $eighteenfiftyfive-red
+    .study__title
+      color: $eighteenfiftyfive-red2
+
+    .study__icons
+      .logo--frame,
+      .octicon--plus polygon,
+      .study__icon path
+        fill: $eighteenfiftyfive-red2
+
+    &.study__section--intro
+      background: $eighteenfiftyfive-red2
+      
+      .study__intro
+        background-color: $eighteenfiftyfive-red2
+        background-image: linear-gradient(to bottom, rgba($eighteenfiftyfive-red2, 0) 0%, rgba($eighteenfiftyfive-red2, 0) 75%, $eighteenfiftyfive-red2 100%), url('/img/studies/1855/bg.jpg')
+        background-position: center
+        background-size: cover
+
+      .study__title,
+      .study__content,
+      .study__client
+        color: $color-white
+
+      .study__icons
+        .logo--frame,
+        .octicon--plus polygon,
+        .study__icon path
+          fill: $color-white
