@@ -124,6 +124,24 @@
   stars: 4
   forks: 1
   org: false
+- repo: molovo/tiny
+  description: A Crystal module to help you build multi-threaded HTTP micro-services
+  language: Crystal
+  stars: 1
+  forks: 0
+  org: false
+- repo: molovo/herd
+  description: A simple module to help with running multi-threaded processes in Crystal
+  language: Crystal
+  stars: 5
+  forks: 0
+  org: false
+- repo: molovo/miner
+  description: A standalone SQL ORM library for Crystal
+  language: Crystal
+  stars: 0
+  forks: 0
+  org: false
 - repo: molovo/validator
   description: A port of (most-of) Laravel's Validator functionality to JavaScript, for use on the front end
   language: JavaScript
