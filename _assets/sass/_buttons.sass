@@ -4,10 +4,12 @@
   border: .25em solid transparent
   color: $color-white
   display: inline-block
+  opacity: 1
   padding: #{$baseline * .5} $baseline #{$baseline * .675}
-  transition: background-color .25s, border-color .25s, color .25s
+  transition: background-color .25s, border-color .25s, color .25s, opacity .25s
 
   &:hover
+    opacity: .9
     text-decoration: none
 
   &--white
