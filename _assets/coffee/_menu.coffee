@@ -34,3 +34,6 @@ module.exports = class Menu
       evt.preventDefault()
       @nav.classList.toggle 'nav--open'
       document.body.classList.toggle 'menu-open'
+
+    document.addEventListener 'turbolinks:visit', (evt) =>
+      @nav.classList.remove 'nav--open'
