@@ -1,37 +1,93 @@
 .image
+  align-items: flex-start
+  display: flex
+  flex-wrap: wrap
   margin: 0 0 $baseline
   position: relative
 
-  img,
-  picture
+  .post__content &
+    font-size: #{(1/1.125) * 1em}
+
+  > img,
+  > picture,
+  > svg
     display: block
+    flex: 0 0 100%
+    height: auto
+    margin-bottom: 0
     width: 100%
 
-  &--pull-left
-    img,
-    picture
-      margin: 0 0 $baseline #{($baseline * -1)}
-      width: calc(100% + #{$baseline})
-
+    &:first-of-type:nth-last-of-type(2n),
+    &:first-of-type:nth-last-of-type(2n) ~ img,
+    &:first-of-type:nth-last-of-type(2n) ~ picture,
+    &:first-of-type:nth-last-of-type(2n) ~ svg
       @media (min-width: 42em)
-        margin: 0 0 $baseline #{$baseline * -2}
-        width: calc(100% + #{($baseline * 2)})
+        flex: 0 0 50%
 
-      @media (min-width: 64em)
-        margin: 0 0 $baseline #{$baseline * -4}
-        width: calc(100% + #{($baseline * 4)})
+    &:first-of-type:nth-last-of-type(3n),
+    &:first-of-type:nth-last-of-type(3n) ~ img,
+    &:first-of-type:nth-last-of-type(3n) ~ picture,
+    &:first-of-type:nth-last-of-type(3n) ~ svg
+      @media (min-width: 42em)
+        flex: 0 0 33.3333%
+
+  &--pull-left
+    margin-left: -1.5em
+    width: calc(100% + 1.5em)
+
+    @media (min-width: 42em)
+      $slope: (6em - 1.5em) / (80em - 42em)
+      $base: 1.5em - $slope * 42em
+
+      margin-left: between(-1.5em, -6em, 42em, 80em)
+      width: calc(100% + (#{$base} + #{100vw * $slope}))
+
+    @media (min-width: 80em)
+      margin-left: -6em
+
+  &--full-width
+    margin-left: -1.5em
+    width: 100vw
+
+    .image__caption
+      margin-left: 1.5em
+      margin-top: $baseline
+      position: static
+
+    @media (min-width: 42em)
+      $slope: (6em - 1.5em) / (80em - 42em)
+      $base: 1.5em - $slope * 42em
+
+      margin-left: between(-1.5em, -6em, 42em, 80em)
+      width: 100vw
+
+      .image__caption
+        margin-left: between(1.5em, 6em, 42em, 80em)
+
+    @media (min-width: 80em)
+      margin-left: -6em
+
+      .image__caption
+        margin-left: 6em
 
   &__caption
+    flex: 0 0 100%
     font-family: $font-cursive
-    font-size: .875em
     font-style: italic
+    margin-top: $baseline
 
     @media(min-width: 64em)
       left: 100%
       margin-left: $baseline
+      margin-top: 0
       position: absolute
       top: 0
       width: 12em
 
     @media (min-width: 80em)
       width: 15em
+
+picture
+  > source,
+  > img
+    width: 100%

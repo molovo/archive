@@ -24,6 +24,7 @@ group :jekyll_plugins do
   gem "jekyll-picture-tag", "~> 0.3.0"
   gem "jekyll-sitemap"
   gem "jekyll-webmention_io"
+  gem "jekyll-typogrify"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

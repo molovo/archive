@@ -9,6 +9,8 @@
     <span aria-label="{{ include.client }}">
         {% include icons/studies/{{ include.slug }}/icon.svg %} 
     </span>
+
+    <h6 class="study__client">The making of {{ include.client }}</h6>
   </div>
 
   <div class="study__title">
@@ -16,6 +18,6 @@
   </div>
 
   {% if include.url %}
-    <a href="{{ include.url }}" class="button button--bordered study__link">Read the making of {{ include.client }}</a>
+    <a href="{{ include.url }}" class="button button--bordered study__link">Read the Case Study</a>
   {% endif %}
 </header>

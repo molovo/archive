@@ -65,6 +65,9 @@ GEM
       sass (~> 3.4)
     jekyll-sitemap (1.1.1)
       jekyll (~> 3.3)
+    jekyll-typogrify (0.3.2)
+      titlecase
+      typogruby
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
     jekyll-webmention_io (2.6.0)
@@ -101,13 +104,17 @@ GEM
       ffi (>= 0.5.0)
     redcarpet (3.4.0)
     rouge (1.11.1)
+    rubypants (0.6.0)
     safe_yaml (1.0.4)
     sass (3.4.23)
     string_inflection (0.1.2)
     subexec (0.2.3)
     thread_safe (0.3.6)
+    titlecase (0.1.1)
     typhoeus (0.8.0)
       ethon (>= 0.8.0)
+    typogruby (1.0.18)
+      rubypants
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
     uglifier (3.2.0)
@@ -132,6 +139,7 @@ DEPENDENCIES
   jekyll-paginate-v2
   jekyll-picture-tag (~> 0.3.0)
   jekyll-sitemap
+  jekyll-typogrify
   jekyll-webmention_io
   redcarpet
   tzinfo-data

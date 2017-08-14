@@ -52,7 +52,7 @@ collections:
     output: true
     permalink: /writing/:name/
   studies:
-    output: false
+    output: true
     permalink: /studies/:name/
 defaults:
 - scope:
@@ -90,6 +90,7 @@ gems:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-webmention_io
+  - jekyll-typogrify
 
 # Jekyll Picture Tag settings
 picture:
