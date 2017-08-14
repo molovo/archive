@@ -1,0 +1,12 @@
+---
+title: Case Studies
+layout: base
+---
+
+<section class="studies">
+  {% for study in site.studies %}
+    <article class="studies__item study__section study__section--{{ study.slug }} study__section--intro">
+      {% include study/intro.html title=study.title slug=study.slug client=study.client url=study.url %}
+    </article>
+  {% endfor %}
+</section>
