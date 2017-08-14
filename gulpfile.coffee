@@ -104,14 +104,18 @@ gulp.task 'compile:critical', () ->
     .pipe gulp.dest('_site')
 
 gulp.task 'compile:images', () ->
-  gulp.src sources.images
-    .pipe imagemin([
-      imagemin.gifsicle interlaced: true
-      imagemin.jpegtran progressive: true
-      imagemin.optipng optimizationLevel: 5
-      imagemin.svgo plugins: [removeViewBox: true]
-    ])
-    .pipe gulp.dest('_site/img/')
+  if gutil.env.env is 'production'
+    gulp.src sources.images
+      .pipe imagemin([
+        imagemin.gifsicle interlaced: true
+        imagemin.jpegtran progressive: true
+        imagemin.optipng optimizationLevel: 5
+        imagemin.svgo plugins: [removeViewBox: true]
+      ])
+      .pipe gulp.dest('_site/img/')
+  else
+    gulp.src sources.images
+      .pipe gulp.dest('_site/img/')
 
 gulp.task 'compile:html', () ->
   args = [
@@ -119,6 +123,8 @@ gulp.task 'compile:html', () ->
     'jekyll'
     'build'
     '--incremental'
+    '--limit_posts'
+    '1'
     '--config'
     '_config.yml,_config.dev.yml'
   ]
