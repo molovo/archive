@@ -10,16 +10,6 @@ document.addEventListener 'turbolinks:load', () ->
   new Projects
   new Search
   new Menu
-
-document.addEventListener 'DOMContentLoaded', () ->
   new Title
-  new Github
-  new Projects
-  new Search
-  new Menu
 
-  startTurbolinks = () ->
-    if not window.___browserSync___?
-      Turbolinks.start()
-
-  setTimeout startTurbolinks, 1000
+Turbolinks.start()

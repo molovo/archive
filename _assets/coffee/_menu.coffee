@@ -30,10 +30,19 @@ module.exports = class Menu
    * Register a listener to toggle the nav
   ###
   registerNavToggleListener: () =>
-    @toggle.addEventListener 'click', (evt) =>
-      evt.preventDefault()
-      @nav.classList.toggle 'nav--open'
-      document.body.classList.toggle 'menu-open'
+    @toggle.removeEventListener 'click', @toggleMenu
+    @toggle.addEventListener 'click', @toggleMenu
 
     document.addEventListener 'turbolinks:visit', (evt) =>
       @nav.classList.remove 'nav--open'
+      document.body.classList.remove 'menu-open'
+
+  toggleMenu: (evt) =>
+    evt.preventDefault()
+
+    if @nav.classList.contains 'nav--open'
+      @nav.classList.remove 'nav--open'
+      document.body.classList.remove 'menu-open'
+    else
+      @nav.classList.add 'nav--open'
+      document.body.classList.add 'menu-open'

@@ -144,6 +144,10 @@ gulp.task 'serve', ['compile', 'watch'], () ->
   browserSync.init(
     server:
       baseDir: './_site'
+    snippetOptions:
+      rule:
+        match: /<\/head>/i
+        fn: (snippet, match) -> snippet + match
   )
 
   gulp.watch '_site/**/*'
