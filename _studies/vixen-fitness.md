@@ -21,7 +21,7 @@ Gemma from Vixen Fitness came to me just as she was launching her personal train
 
 Since Gemma specialises in pre- and post-natal excercise, she wanted something that was unmistakeably feminine, whilst conveying the strength and body confidence that her clients aspire to. The flowing form of the vixen&mdash;a well-known metaphor for female beauty&mdash;seemed like the perfect fit.
 
-<figure class="image image--full-width">
+<figure class="image image--pull-left">
   {% include icons/studies/vixen-fitness/vixen-vertical-plum-bg.svg %}
   {% include icons/studies/vixen-fitness/vixen-vertical-white-bg.svg %}
   {% include icons/studies/vixen-fitness/vixen-vertical-yellow-bg.svg %}

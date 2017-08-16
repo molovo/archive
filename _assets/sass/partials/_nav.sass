@@ -41,6 +41,9 @@
       circle
         fill: $color-white
 
+  .nav.nav--open + .header &
+    z-index: 10000
+
   .page--home &,
   .page--error &
     background: $color-black
@@ -84,6 +87,7 @@
   &--open
     opacity: 1
     pointer-events: initial
+    z-index: 9999
 
   &__menu
     display: flex

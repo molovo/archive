@@ -10,6 +10,8 @@ layout: base
       <div class="post__content">
         {{ page.content | improve }}
       </div>
+
+      {% include social.html post=page %}
     </div>
   </section>
 
@@ -21,6 +23,8 @@ layout: base
           <div class="post__content">
             {{ section.content | markdownify | improve }}
           </div>
+
+          {% include social.html post=page %}
         </div>
     </section>
   {% endfor %}

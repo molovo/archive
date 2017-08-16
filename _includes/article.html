@@ -80,34 +80,6 @@
            class="post__content e-content">
     {{ body | improve }}
   </section>
-  
-  <aside class="post__social">
-    <h6 class="post__social__title">Share</h6>
-    
-    <a href="javascript:void('');"
-        title="Like this post"
-        class="post__social__link post__social__link--like"
-        data-url="{{ include.post.url }}"
-        target="_blank">
-      {% include icons/heart.svg %}
-      <span class="screenreader-text">Like this post</span>
-      <span class="post__social__likes"></span>
-    </a>
 
-    <a href="http://twitter.com/share?text=I just read this article on molovo.co and you should too :: &url={{ site.url }}{{ include.post.url }}"
-        title="Share on Twitter"
-        class="post__social__link post__social__link--twitter"
-        target="_blank">
-      {% include icons/twitter.svg %}
-      <span class="screenreader-text">Share on Twitter</span>
-    </a>
-
-    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ include.post.url }}"
-       title="Share on Facebook"
-       class="post__social__link post__social__link--facebook"
-       target="_blank">
-      {% include icons/facebook.svg %}
-      <span class="screenreader-text">Share on Facebook</span>
-    </a>
-  </aside>
+  {% include social.html post=include.post %}
 </article>
