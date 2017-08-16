@@ -86,20 +86,32 @@
     pointer-events: initial
 
   &__menu
+    display: flex
+    flex-wrap: wrap
     list-style: none
 
   &__item
+    flex: 0 0 100%
     margin: 0 0 #{$baseline / 2}
+    order: 1
+
+    @media (min-width: 42em)
+      flex: 0 0 50%
 
     &--home
+      flex: 0 0 100%
       margin: 0 0 #{$baseline * 4}
+      order: 0
+
+    @media (min-width: 42em)
+      &--case-studies,
+      &--writing
+        order: 0
 
   &__link
     @extend h1
     color: $color-white
     transition: color .25s
-    -webkit-font-smoothing: antialiased
-            font-smoothing: antialiased
 
     &:hover
       color: $color-red

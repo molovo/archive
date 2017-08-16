@@ -123,8 +123,6 @@ gulp.task 'compile:html', () ->
     'jekyll'
     'build'
     '--incremental'
-    '--limit_posts'
-    '1'
     '--config'
     '_config.yml,_config.dev.yml'
   ]

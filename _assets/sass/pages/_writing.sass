@@ -2,11 +2,12 @@
 main > .post
   padding: 6em 0
 
-.posts,
 .post
-  max-width: 36em
+  align-items: flex-start
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
 
-.post
   &__share
     svg
       vertical-align: middle
@@ -15,9 +16,14 @@ main > .post
     path
       fill: $color-blue
 
+  &__header
+    margin-right: auto
+    max-width: 36em
+
   &__content
     font-size: 1.125em
     line-height: $baseline
+    max-width: #{(1/1.125) * 36em}
 
   &__meta
     color: $color-red
@@ -42,6 +48,52 @@ main > .post
 
     &:not(:last-child)::after
       content: ', '
+
+  &__social
+    display: inline-flex
+    flex-direction: column
+    font-size: .75em
+    position: sticky
+    top: 18em
+    transform: translateX(-1px)
+
+    svg
+      display: block
+      margin: 0 auto $baseline
+      width: 1.5em
+
+      path
+        stroke-width: 2
+
+    &__likes
+      left: 100%
+      position: absolute
+      top: 50%
+      transform: translate(0, -100%)
+      width: 100%
+
+    &__link
+      position: relative
+
+      &--like
+        svg
+          path
+            stroke: $color-red
+
+      &--liked
+        svg
+          path
+            fill: $color-red
+
+      &--twitter
+        svg
+          path
+            stroke: #1da1f2
+
+      &--facebook
+        svg
+          path
+            stroke: #3b5998
 
 .posts
   &__list
