@@ -3,6 +3,7 @@ Projects   = require './_projects.coffee'
 Title      = require './_title.coffee'
 Search     = require './_search.coffee'
 Menu       = require './_menu.coffee'
+Likes      = require './_likes.coffee'
 Turbolinks = require 'turbolinks'
 
 document.addEventListener 'turbolinks:load', () ->
@@ -11,5 +12,6 @@ document.addEventListener 'turbolinks:load', () ->
   new Search
   new Menu
   new Title
+  new Likes
 
 Turbolinks.start()
