@@ -15,12 +15,6 @@ instagram_username: jameswdinsdale
 author: James Dinsdale
 environment: production
 
-# Include a couple plugins
-gems:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-webmention_io
-
 # Build settings
 permalink: /writing/:title/
 pagination:
