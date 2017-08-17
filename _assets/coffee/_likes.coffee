@@ -72,7 +72,7 @@ module.exports = class Likes
   ###
   getCount: (link) =>
     new Promise (resolve, reject) =>
-      fetch "http://127.0.0.1:3000?url=#{link.dataset.url}"
+      fetch "https://like.molovo.co?url=#{link.dataset.url}"
         .then @parseJson
         .then (response) =>
           resolve response.likes
@@ -85,7 +85,13 @@ module.exports = class Likes
   ###
   updateCount: (link, count) =>
     el = link.querySelector '.post__social__likes'
-    el.innerHTML = count if el?
+    return if not el?
+
+    if count
+      el.innerHTML = count
+      return
+
+    el.innerHTML = ''
 
   ###*
    * Like a link
@@ -94,9 +100,9 @@ module.exports = class Likes
   ###
   like: (link) =>
     params = @requestParams
-    params.body = JSON.stringify url: link.dataset.url
+    params.body = JSON.stringify(url: link.dataset.url)
 
-    fetch 'http://127.0.0.1:3000', params
+    fetch 'https://like.molovo.co', params
       .then @parseJson
       .then (response) =>
         if response.success
@@ -118,7 +124,7 @@ module.exports = class Likes
       unlike: true
     )
 
-    fetch 'http://127.0.0.1:3000', params
+    fetch 'https://like.molovo.co', params
       .then @parseJson
       .then (response) =>
         if response.success

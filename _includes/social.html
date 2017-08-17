@@ -1,6 +1,4 @@
 <aside class="post__social">
-  <h6 class="post__social__title">Share</h6>
-  
   <a href="javascript:void('');"
       title="Like this post"
       class="post__social__link post__social__link--like"
@@ -19,10 +17,11 @@
     <span class="screenreader-text">Share on Twitter</span>
   </a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ include.post.url }}"
-      title="Share on Facebook"
-      class="post__social__link post__social__link--facebook"
-      target="_blank">
+  {% capture url %}{{ site.url | url_encode }}{{ include.post.url | url_encode }}{% endcapture %}
+  <a href="https://www.facebook.com/dialog/share?app_id=1777155628978473&display=popup&href={{ url }}"
+     title="Share on Facebook"
+     class="post__social__link post__social__link--facebook"
+     target="_blank">
     {% include icons/facebook.svg %}
     <span class="screenreader-text">Share on Facebook</span>
   </a>

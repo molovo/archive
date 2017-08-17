@@ -48,12 +48,36 @@
 
   &--full-width
     margin-left: -1.5em
+    position: relative
     width: 100vw
+    z-index: 9999
+
+    @media (min-width: 64em)
+      &::after,
+      &::before
+        content: ''
+        display: inline-block
+        height: 9em
+        left: between(39em, 43.5em, 42em, 80em)
+        right: 0
+        position: absolute
+
+      &::before
+        background: linear-gradient(to bottom, rgba($color-white, 0), $color-white 66.66%, $color-white)
+        bottom: 100%
+
+      &::after
+        background: linear-gradient(to top, rgba($color-white, 0), $color-white 66.66%, $color-white)
+        top: calc(100% - 3.15em)
 
     .image__caption
       margin-left: 1.5em
       margin-top: $baseline
       position: static
+
+      &::after,
+      &::before
+        content: none
 
     @media (min-width: 42em)
       $slope: (6em - 1.5em) / (80em - 42em)
@@ -79,14 +103,30 @@
 
     @media(min-width: 64em)
       background: $color-white
-      box-shadow: 0px 30px 30px $color-white, 0px -30px 30px $color-white
       left: 100%
       margin-left: $baseline
       margin-top: 0
       position: absolute
       top: 0
-      width: 12em
+      width: 9em
       z-index: 1001
+
+      &::before,
+      &::after
+        content: ''
+        display: inline-block
+        height: 6em
+        left: 0
+        position: absolute
+        width: 200%
+
+      &::before
+        background: linear-gradient(to bottom, rgba($color-white, 0), $color-white 66.66%, $color-white)
+        bottom: 100%
+
+      &::after
+        background: linear-gradient(to top, rgba($color-white, 0), $color-white 66.66%, $color-white)
+        top: 100%
 
     @media (min-width: 80em)
       width: 15em
