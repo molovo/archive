@@ -91,7 +91,7 @@ module.exports = class Likes
       el.innerHTML = count
       return
 
-    el.innerHTML = ''
+    el.innerHTML = '0'
 
   ###*
    * Like a link

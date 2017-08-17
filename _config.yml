@@ -124,3 +124,5 @@ webmentions:
     - http://www.molovo.co
     - https://www.molovo.co
   js: false
+  templates:
+    count: _includes/webmentions/count.html

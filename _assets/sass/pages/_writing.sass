@@ -51,31 +51,51 @@ main > .post
 
   &__social
     display: inline-flex
-    flex-direction: column
     font-size: .75em
     margin-top: .5em
     position: sticky
-    top: 12em
-    transform: translateX(-.6em)
+    top: 7.5em
+
+    @media (min-width: 42em)
+      flex-direction: column
+      top: between(7.5em, 12em, 42em, 80em)
+      transform: translateX(-.6em)
+
+    @media (min-width: 80em)
+      top: 12em
 
     svg
       display: block
-      margin: 0 auto $baseline
       width: 1.5em
 
       path
         stroke-width: 2
 
-    &__likes
+    &__likes,
+    &__mentions
       color: $color-almost-black
       left: 100%
       position: absolute
       top: 50%
-      transform: translate(.75em, -100%)
+      transform: translate(.5em, -62.5%)
       width: 100%
 
+      @media (min-width: 42em)
+        transform: translate(.75em, -62.5%)
+
     &__link
+      margin: 0 $baseline 0 0
       position: relative
+
+      @media (min-width: 42em)
+        margin: 0 auto $baseline
+
+      &--like,
+      &--mention
+        margin-right: #{$baseline * 1.5}
+
+        @media (min-width: 42em)
+          margin-right: 0
 
       &--like
         svg
@@ -88,6 +108,18 @@ main > .post
         svg
           path
             fill: $color-red
+
+      &--mention
+        svg
+          path
+            fill: transparent
+            stroke: $color-green
+            transition: fill .25s
+
+      &--has-mentions
+        svg
+          path
+            fill: $color-green
 
       &--twitter
         svg
