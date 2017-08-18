@@ -24,54 +24,56 @@
     {% endif %}
 
   <header class="post__header">
-    {% if include.listing == 'true' %}
-      <a href="{{ include.post.url }}"
-         class="u-url u-uid"
-         title="{{ include.post.title }}">
+    <div class="post__header__wrapper">
+      {% if include.listing == 'true' %}
+        <a href="{{ include.post.url }}"
+          class="u-url u-uid"
+          title="{{ include.post.title }}">
+          <h1 itemprop="headline"
+              class="p-name"
+              id="{{ include.post.title | slugify }}-title">
+            {{ include.post.title }}
+          </h1>
+        </a>
+      {% else %}
         <h1 itemprop="headline"
             class="p-name"
             id="{{ include.post.title | slugify }}-title">
           {{ include.post.title }}
         </h1>
-      </a>
-    {% else %}
-      <h1 itemprop="headline"
-          class="p-name"
-          id="{{ include.post.title | slugify }}-title">
-        {{ include.post.title }}
-      </h1>
-    {% endif %}
-    <div class="post__meta">
-      
-      <date itemprop="datePublished"
-            content="{{ include.post.date | date_to_xmlschema }}"
-            class="post__date dt-published">
-        <span class="screenreader-text">Published on:</span>
-        {{ include.post.date | date: '%e' }}{{ include.post.date | date_to_xmlschema | ordinal }} {{ include.post.date | date: '%B %Y' }}
-      </date>
-
-      {% if include.post.tags %}
-        <ul class="post__tags">
-          <span class="screenreader-text">Tags:</span>
-          {% for tag in include.post.tags %}
-            <li class="post__tag"><a href="/tag/{{ tag }}">{{ tag }}</a></li>
-          {% endfor %}
-        </ul>
       {% endif %}
-    </div>
-    <meta itemprop="dateModified" content="{{ include.post.date | date_to_xmlschema }}">
-    <div itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="{{ site.author }}" />
-      <link itemprop="url" href="{{ site.url }}" />
-    </div>
-    <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="{{ site.name }}" />
-      <link itemprop="url" href="{{ site.url }}" />
-      <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-        <link itemprop="url" href="{{ site.url }}{{ site.logo }}" />
-        <meta itemprop="representativeOfPage" content="false" />
-        <meta itemprop="height" content="60" />
-        <meta itemprop="width" content="323" />
+      <div class="post__meta">
+        
+        <date itemprop="datePublished"
+              content="{{ include.post.date | date_to_xmlschema }}"
+              class="post__date dt-published">
+          <span class="screenreader-text">Published on:</span>
+          {{ include.post.date | date: '%e' }}{{ include.post.date | date_to_xmlschema | ordinal }} {{ include.post.date | date: '%B %Y' }}
+        </date>
+
+        {% if include.post.tags %}
+          <ul class="post__tags">
+            <span class="screenreader-text">Tags:</span>
+            {% for tag in include.post.tags %}
+              <li class="post__tag"><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+      <meta itemprop="dateModified" content="{{ include.post.date | date_to_xmlschema }}">
+      <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="{{ site.author }}" />
+        <link itemprop="url" href="{{ site.url }}" />
+      </div>
+      <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="{{ site.name }}" />
+        <link itemprop="url" href="{{ site.url }}" />
+        <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+          <link itemprop="url" href="{{ site.url }}{{ site.logo }}" />
+          <meta itemprop="representativeOfPage" content="false" />
+          <meta itemprop="height" content="60" />
+          <meta itemprop="width" content="323" />
+        </div>
       </div>
     </div>
   </header>
