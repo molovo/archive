@@ -50,9 +50,9 @@
     margin-left: -1.5em
     position: relative
     width: 100vw
-    z-index: 9999
+    z-index: 1001
 
-    @media (min-width: 64em)
+    @media (min-width: 42em)
       &::after,
       &::before
         content: ''
@@ -60,6 +60,7 @@
         height: 9em
         left: between(39em, 43.5em, 42em, 80em)
         right: 0
+        pointer-events: none
         position: absolute
 
       &::before
@@ -117,6 +118,7 @@
         display: inline-block
         height: 6em
         left: 0
+        pointer-events: none
         position: absolute
         width: 100%
 

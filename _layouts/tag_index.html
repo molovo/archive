@@ -9,6 +9,7 @@ robots: noindex,follow
   <h4 font-family="skolar-latin">{{ page.title }}</h4>
   
   <div class="posts__list">
+    {% comment %}
     {% for post in site.tags[page.tag] %}
       {% assign body = post.content | markdownify %}
       {% include article.html post=post listing="true" %}
@@ -17,5 +18,6 @@ robots: noindex,follow
         <hr class="posts__break">
       {% endunless %}
     {% endfor %}
+    {% endcomment %}
   </div>
 </section>

@@ -1,7 +1,7 @@
 ---
-title:  "They Don't Make 'em Like They Used To..."
+title: "They Don't Make 'em Like They Used To..."
 layout: post
-date:   2013-11-21 20:41:07
+date: 2013-11-21 20:41:07
 tags:
 - design
 - inspiration
@@ -13,7 +13,11 @@ tags:
 Ladies and Gentlemen, allow me to introduce you to Country Ken.
 
 <figure class="image image--pull-left">
-    {% picture articles/they-dont-make-em-like-they-used-to/countryken.jpg alt="Country Ken" %}
+    {% responsive_image_block %}
+        path: '_assets/img/articles/they-dont-make-em-like-they-used-to/countryken.jpg'
+        alt: 'Country Ken'
+        sizes: '(min-width: 42em) 36em, 100vw'
+    {% endresponsive_image_block %}
     <figcaption class="image__caption">Country Ken</figcaption>
 </figure>
 

@@ -29,8 +29,7 @@ sources =
   coffee: '_assets/coffee/**/*.coffee'
   images: '_assets/img/**/*'
   views: [
-    '**/*.{html,md,markdown,svg}'
-    '!_site/**/*'
+    '_{layouts,includes,posts,studies,archive}/**/*.{html,md,markdown,svg}'
     '_data/**/*.yml'
     '_config{,.dev}.yml'
   ]
@@ -148,5 +147,15 @@ gulp.task 'serve', ['compile', 'watch'], () ->
         fn: (snippet, match) -> snippet + match
   )
 
+  reloading = null
+
   gulp.watch '_site/**/*'
-    .on 'change', browserSync.reload
+    .on 'change', () ->
+      clearTimeout reloading
+      reloading = setTimeout(
+        () ->
+          browserSync.reload()
+        250
+      )
+
+

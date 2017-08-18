@@ -21,10 +21,10 @@ gem "html-proofer", "3.5.0"
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
   gem "jekyll-paginate-v2"
-  gem "jekyll-picture-tag", "~> 0.3.0"
   gem "jekyll-sitemap"
   gem "jekyll-webmention_io"
   gem "jekyll-typogrify"
+  gem "jekyll-responsive-image"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

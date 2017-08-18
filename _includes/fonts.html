@@ -74,6 +74,10 @@
     }
   }
 
-  loadFont('Have Heart One', '/fonts/have-heart-woff.css', '/fonts/have-heart-woff2.css')
-  loadFont('GauthierFY', '/fonts/gauthier-woff.css', '/fonts/gauthier-woff2.css')
+  loadFont('GauthierFY-preload', '/fonts/gauthier-woff-preload.css', '/fonts/gauthier-woff2-preload.css')
+
+  document.addEventListener('DOMContentLoaded', function() {
+    loadFont('Have Heart One', '/fonts/have-heart-woff.css', '/fonts/have-heart-woff2.css')
+    loadFont('GauthierFY', '/fonts/gauthier-woff.css', '/fonts/gauthier-woff2.css')
+  })
 </script>

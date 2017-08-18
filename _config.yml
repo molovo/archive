@@ -85,23 +85,23 @@ gems:
   - jekyll-sitemap
   - jekyll-webmention_io
   - jekyll-typogrify
+  - jekyll-responsive-image
 
-# Jekyll Picture Tag settings
-picture:
-  source: "_assets/img"
-  output: "img"
-  markup: "picture"
-  presets:
-    default:
-      ppi: [1, 2]
-      source_large:
-        media: "(min-width: 64em)"
-        width: "1280"
-      source_medium:
-        media: "(min-width: 40em)"
-        width: "960"
-      source_default:
-        width: "600"
+responsive_image:
+  template: _includes/responsive-image.html
+  default_quality: 65
+  sizes:
+    - width: 320
+    - width: 480
+    - width: 640
+    - width: 800
+    - width: 1024
+    - width: 1280
+    - width: 1440
+  base_path: _assets/img
+  output_path_format: 'img/%{dirname}/%{filename}-%{width}x%{height}.%{extension}'
+  save_to_source: false
+  cache: true
 
 # Webmentions
 webmentions:

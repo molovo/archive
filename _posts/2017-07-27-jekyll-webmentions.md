@@ -10,7 +10,12 @@ tags:
 I've tried a few times to host some form of comment feed on my Jekyll site, but always ended up abandoning them. Hosted solutions such as Disqus and Facebook were too invasive for my tastes, and after trying and failing to launch my own SaaS company (Chatter.li) to solve the problem, my site has been left comment-less for a few years.
 
 <figure class="image">
-    {% picture articles/jekyll-webmentions/chatter.jpg alt="A screenshot of the commenting service Chatter, which I launched in 2013, appearing on an older version of this blog." %}
+    {% responsive_image_block %}
+        path: '_assets/img/articles/jekyll-webmentions/chatter.jpg'
+        alt: 'A screenshot of the commenting service Chatter, which I launched in 2013, appearing on an older version of this blog.'
+        sizes: '(min-width: 42em) 36em, 100vw'
+    {% endresponsive_image_block %}
+
     <figcaption class="image__caption">A screenshot of the commenting service Chatter, which I launched in 2013, appearing on an older version of this blog.</figcaption>
 </figure>
 

@@ -1,2 +1,4 @@
 environment: dev
 url: 'http://localhost:3000'
+webmentions:
+  pause_lookups: true
