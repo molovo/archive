@@ -1,0 +1,26 @@
+<title>{{ title }}</title>
+
+<meta name="description" content="{{ description }}" />
+<meta name="author" content="{{ site.author }}" />
+<meta name="robots" content="{% if page.robots %}{{ page.robots }},{% endif %}noodp" />
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ site.url }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:image" content="{{ site.url }}/img/me.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:site" content="@{{ site.twitter_username }}">
+<meta name="twitter:image" content="{{ site.url }}/img/me.jpg">
+
+<link rel="me" href="https://twitter.com/{{ site.twitter_username }}" />
+<link rel="me" href="https://github.com/{{ site.github_username }}" />
+<link rel="me" href="https://medium.com/@{{ site.medium_username }}" />
+<link rel="me" href="https://dribbble.com/{{ site.dribbble_username }}" />
+<link rel="me" href="https://instagram.com/{{ site.instagram_username }}" />
+<link rel="me" href="mailto:{{ site.email }}" />

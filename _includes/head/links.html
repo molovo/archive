@@ -1,0 +1,12 @@
+<link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}" />
+{% if paginator.previous_page %}
+  <link rel="prev" href="{{ site.url }}{{ paginator.previous_page_path }}" />
+{% elsif page.previous.url %}
+  <link rel="prev" href="{{ site.url }}{{ page.previous.url }}" />
+{% endif %}
+{% if paginator.next_page %}
+  <link rel="next" href="{{ site.url }}{{ paginator.next_page_path }}" />
+{% elsif page.next.url %}
+  <link rel="next" href="{{ site.url }}{{ page.next.url }}" />
+{% endif %}
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }} » Feed" href="{{ site.url }}/feed.xml">

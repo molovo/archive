@@ -20,97 +20,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="msvalidate.01" content="1CA4D3771537532449A3A5BA08271280" />
 
-  <!-- DNS Prefetch external resources -->
-  <link rel="dns-prefetch" href="//cdn.heapanalytics.com" />
-  <link rel="dns-prefetch" href="//use.typekit.net" />
-
-  <!-- Preload critical resources -->
-  <link rel="preload" as="style" href="/css/main.css" />
-  <link rel="preload" as="script" href="//use.typekit.net/mmt3fau.js" />
-  <link rel="preload" as="script" href="/js/main.min.js" />
-  <link rel="preload" as="script" href="//cdn.heapanalytics.com/js/heap-3929321974.js" />
-
-  {% include fonts.html %}
-
-  <meta name="description" content="{{ description }}" />
-  <meta name="author" content="{{ site.author }}" />
-  <meta name="robots" content="{% if page.robots %}{{ page.robots }},{% endif %}noodp" />
-
-  <meta property="og:locale" content="en_GB">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ title }}">
-  <meta property="og:description" content="{{ description }}">
-  <meta property="og:url" content="{{ site.url }}">
-  <meta property="og:site_name" content="{{ site.title }}">
-  <meta property="og:image" content="{{ site.url }}/img/me.jpg">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:description" content="{{ description }}">
-  <meta name="twitter:title" content="{{ title }}">
-  <meta name="twitter:site" content="@{{ site.twitter_username }}">
-  <meta name="twitter:image" content="{{ site.url }}/img/me.jpg">
-
-  <link rel="me" href="https://twitter.com/{{ site.twitter_username }}" />
-  <link rel="me" href="https://github.com/{{ site.github_username }}" />
-  <link rel="me" href="https://medium.com/@{{ site.medium_username }}" />
-  <link rel="me" href="https://dribbble.com/{{ site.dribbble_username }}" />
-  <link rel="me" href="https://instagram.com/{{ site.instagram_username }}" />
-  <link rel="me" href="mailto:{{ site.email }}" />
-
+  {% include head/preload.html %}
+  {% include head/fonts.html %}
+  {% include head/styles.html %}
+  {% include head/meta.html %}
   {% webmentions_head %}
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=M4olpG7v6d">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=M4olpG7v6d">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=M4olpG7v6d">
-  <link rel="manifest" href="/manifest.json?v=M4olpG7v6d">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg?v=M4olpG7v6d" color="#bf616a">
-  <link rel="shortcut icon" href="/favicon.ico?v=M4olpG7v6d">
-  <meta name="theme-color" content="#1c1f26">
-
-  <link rel="stylesheet" type="text/css" href="/css/main.css" />
-
-  <link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}" />
-  {% if paginator.previous_page %}
-    <link rel="prev" href="{{ site.url }}{{ paginator.previous_page_path }}" />
-  {% elsif page.previous.url %}
-    <link rel="prev" href="{{ site.url }}{{ page.previous.url }}" />
-  {% endif %}
-  {% if paginator.next_page %}
-    <link rel="next" href="{{ site.url }}{{ paginator.next_page_path }}" />
-  {% elsif page.next.url %}
-    <link rel="next" href="{{ site.url }}{{ page.next.url }}" />
-  {% endif %}
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} » Feed" href="{{ site.url }}/feed.xml">
-
-  <title>{{ title }}</title>
-  
-  <script type="application/ld+json">{
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "name": "{{ site.title }}",
-    "url": "{{ site.url }}",
-    "description": "{{ site.description }}"
-  }</script>
-  <script type="application/ld+json">{
-    "@context": "http://schema.org",
-    "@type": "Person",
-    "url": "{{ site.url }}",
-    "sameAs": [
-      "https://twitter.com/{{ site.twitter_username }}",
-      "https://github.com/{{ site.github_username }}",
-      "https://medium.com/@{{ site.medium_username }}",
-      "https://dribbble.com/{{ site.dribbble_username }}"
-    ],
-    "name":"{{ site.author }}"
-  }</script>
-
-  <script src="/js/main.min.js" async></script>
-
-  <script type="text/javascript">
-    var pageTitle = '{{ title }}';
-
-    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])}; heap.load("3929321974");
-  </script>
+  {% include head/favicons.html %}
+  {% include head/links.html %}
+  {% include head/schema.html %}
+  {% include head/scripts.html %}
 </head>
 <body class="page page--{{ page.layout }} {% if page.slug %}page--{{ page.slug }}{% endif %}">
   {% include header.html %}
@@ -124,52 +42,6 @@
     {% include footer.html %}
   {% endif %}
 
-  <script type="application/ld+json">{
-    "@context": "http://schema.org",
-    "@type": "WebPage",
-    "name": "{{ title }}",
-    "url": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}",
-    "description": "{{ description }}"{% if page.layout == 'post' %},
-      "mainEntity": {
-        "@type": "BlogPosting",
-        "@id": "{{ site.url }}{{ page.url | replace: 'index.html' }}#article",
-        "datePublished": "{{ page.date | date_to_xmlschema }}",
-        "dateModified": "{{ page.date | date_to_xmlschema }}",
-        "mainEntityOfPage": "{{ site.url }}{{ page.url | replace: 'index.html' }}",
-        "headline": "{{ page.title | slugify }}",
-        "image": {
-          "@type": "ImageObject",
-          {% if page.image %}
-            "url": "{{ site.url }}{{ page.image.url }}",
-            "height": {{ page.image.height }},
-            "width": {{ page.image.width }},
-            "representativeOfPage": true
-          {% else %}
-            "url": "{{ site.url }}{{ site.logo }}",
-            "height": 60,
-            "width": 323,
-            "representativeOfPage": false
-          {% endif %}
-        },
-        "author": {
-          "@type": "Person",
-          "name": "{{ site.author }}",
-          "sameAs": "{{ site.url }}"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "{{ site.name }}",
-          "sameAs": "{{ site.url }}",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "{{ site.url }}{{ site.logo }}",
-            "height": 60,
-            "width": 323,
-            "representativeOfPage": false
-          }
-        }
-      }
-    {% endif %}
-  }</script>
+  {% include page-schema.html %}
 </body>
 </html>
