@@ -23,6 +23,9 @@ critical     = require('critical').stream
 # Dependencies for compressing images
 imagemin     = require 'gulp-imagemin'
 
+# Dependencies for compressing HTML
+htmlmin      = require 'gulp-htmlmin'
+
 # Sources and entry points for compilation
 sources =
   sass: '_assets/sass/**/*.s+(a|c)ss'
@@ -100,6 +103,15 @@ gulp.task 'compile:critical', () ->
       inline: true
     )
     .on 'error', (err) -> gutil.log gutil.colors.red(err.message)
+    .pipe htmlmin(
+      collapseWhitespace: true
+      minifyCss: true
+      minifyJs: true
+      removeEmptyAttributes: true
+      removeRedundantAttributes: true
+      removeScriptTypeAttributes: true
+      removeStyleLinkTypeAttributes: true
+    )
     .pipe gulp.dest('_site')
 
 gulp.task 'compile:images', () ->
@@ -157,5 +169,3 @@ gulp.task 'serve', ['compile', 'watch'], () ->
           browserSync.reload()
         250
       )
-
-

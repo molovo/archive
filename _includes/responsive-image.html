@@ -6,7 +6,15 @@
 
 {% assign largest = resized | sort: 'width' | last %}
 
-<img src="/{{ largest.path }}"
+<img src="/img/dummy.png"
+     data-src="/{{ largest.path }}"
+     data-srcset="{{ srcset | strip_newlines }}"
      alt="{{ alt }}"
-     srcset="{{ srcset | strip_newlines }}"
      sizes="{{ sizes }}" />
+
+<noscript>
+    <img src="/{{ largest.path }}"
+         srcset="{{ srcset | strip_newlines }}"
+         alt="{{ alt }}"
+         sizes="{{ sizes }}" />
+</noscript>
