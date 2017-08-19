@@ -22,7 +22,7 @@ module.exports = class Images
       return load image for image in @images
 
     @config =
-      rootMargin: '50px 0px'
+      rootMargin: '-50px 0px'
       threshold: 0.01
 
     ###*
@@ -40,7 +40,6 @@ module.exports = class Images
    * @param {Array} entries
   ###
   onIntersection: (entries) =>
-    console.log 'intersection'
     for entry in entries
       do (entry) =>
         if entry.intersectionRatio > 0
@@ -53,11 +52,12 @@ module.exports = class Images
    * @param {HTMLImageElement} image
   ###
   load: (image) =>
-    image.onload = () =>
-      image.removeAttribute 'data-srcset'
-      image.removeAttribute 'data-src'
+    image.onload = () ->
+      requestAnimationFrame () ->
+        image.removeAttribute 'data-src'
+        image.removeAttribute 'data-srcset'
 
-    if image.dataset.srcset?
-      image.setAttribute 'srcset', image.dataset.srcset
-
-    image.setAttribute 'src', image.dataset.src
+    if image.srcset? and image.dataset.srcset?
+      image.srcset = image.dataset.srcset
+    else
+      image.src = image.dataset.src
