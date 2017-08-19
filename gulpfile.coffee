@@ -110,8 +110,8 @@ gulp.task 'compile:critical', () ->
     .on 'error', (err) -> gutil.log gutil.colors.red(err.message)
     .pipe htmlmin(
       collapseWhitespace: true
-      minifyCss: true
-      minifyJs: true
+      minifyCSS: true
+      minifyJS: true
       removeEmptyAttributes: true
       removeRedundantAttributes: true
       removeScriptTypeAttributes: true
