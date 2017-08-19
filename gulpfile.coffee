@@ -22,6 +22,7 @@ critical     = require('critical').stream
 
 # Dependencies for compressing images
 imagemin     = require 'gulp-imagemin'
+mozJpeg      = require 'imagemin-mozjpeg'
 
 # Dependencies for compressing HTML
 htmlmin      = require 'gulp-htmlmin'
@@ -30,7 +31,10 @@ htmlmin      = require 'gulp-htmlmin'
 sources =
   sass: '_assets/sass/**/*.s+(a|c)ss'
   coffee: '_assets/coffee/**/*.coffee'
-  images: '_assets/img/**/*'
+  images: [
+    '_assets/img/**/*'
+    '_site/img/**/resized/**/*'
+  ]
   views: [
     '_{layouts,includes,posts,studies,archive}/**/*.{html,md,markdown,svg}'
     '_data/**/*.yml'
@@ -65,7 +69,7 @@ gulp.task 'lint:coffee', () ->
 ###*
  * Compilation tasks
 ###
-gulp.task 'compile', ['compile:html', 'compile:sass', 'compile:coffee', 'compile:images']
+gulp.task 'compile', ['compile:html', 'compile:sass', 'compile:coffee']
 
 gulp.task 'compile:sass', () ->
   gulp.src entries.sass
@@ -101,6 +105,7 @@ gulp.task 'compile:critical', () ->
     .pipe critical(
       base: '_site/'
       inline: true
+      minify: true
     )
     .on 'error', (err) -> gutil.log gutil.colors.red(err.message)
     .pipe htmlmin(
@@ -119,7 +124,10 @@ gulp.task 'compile:images', () ->
     gulp.src sources.images
       .pipe imagemin([
         imagemin.gifsicle interlaced: true
-        imagemin.jpegtran progressive: true
+        mozJpeg(
+          progressive: true
+          quality: 30
+        )
         imagemin.optipng optimizationLevel: 5
         imagemin.svgo plugins: [removeViewBox: true]
       ])

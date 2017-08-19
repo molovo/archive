@@ -27,17 +27,17 @@
     <div class="post__header__wrapper">
       {% if include.listing == 'true' %}
         <a href="{{ include.post.url }}"
-          class="u-url u-uid"
+          class="post__link u-url u-uid"
           title="{{ include.post.title }}">
           <h1 itemprop="headline"
-              class="p-name"
+              class="post__title p-name"
               id="{{ include.post.title | slugify }}-title">
             {{ include.post.title }}
           </h1>
         </a>
       {% else %}
         <h1 itemprop="headline"
-            class="p-name"
+            class="post__title p-name"
             id="{{ include.post.title | slugify }}-title">
           {{ include.post.title }}
         </h1>

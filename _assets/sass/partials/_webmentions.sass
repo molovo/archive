@@ -8,7 +8,7 @@
     list-style: none
 
   &__not-found
-    font-family: $font-cursive
+    +font-secondary
     font-style: italic
 
   &__item
@@ -42,8 +42,8 @@
       margin-bottom: 0
 
   &__meta
+    +font-secondary
     color: $color-gray-two
-    font-family: $font-cursive
     font-style: italic
     margin-left: auto
 
@@ -69,9 +69,9 @@
   &--like,
   &--repost
     .webmention__content
+      +font-secondary
       color: $color-gray-two
       flex: 1 1 auto
-      font-family: $font-cursive
       font-style: italic
       order: 0
       padding-left: 0

@@ -1,0 +1,44 @@
+$font-stack-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+$font-primary: 'skolar-sans-latin', $font-stack-primary
+
+$font-stack-secondary: 'Georgia', serif
+$font-secondary-preload: 'GauthierFY-preload', $font-stack-secondary
+$font-secondary: 'GauthierFY', $font-secondary-preload
+
+$font-script: 'Have Heart One'
+
+$font-monospace: 'Operator Mono Book', 'Operator Mono', 'Fira Code', 'Fira Mono', 'Courier', monospace
+
+=font-primary
+  font-family: $font-stack-primary
+
+  .wf-active &
+    font-family: $font-primary
+
+=font-secondary
+  font-family: $font-stack-secondary
+
+  .fonts-stage-1 &
+    font-family: $font-secondary-preload
+
+  .fonts-stage-2 &
+    font-family: $font-secondary
+
+=font-script
+  font-family: inherit
+  opacity: 0
+  transition: opacity .25s
+
+  .fonts-stage-2 &
+    font-family: $font-script
+    opacity: 1
+
+=script
+  +font-script
+  font-size: 22vw
+  font-weight: 400
+  letter-spacing: 0
+  line-height: .75em
+  text-align: center
+  transform: rotate(-2deg)
+  transform-origin: 0 0

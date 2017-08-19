@@ -22,6 +22,7 @@
     "gulp-util": "^3.0.8",
     "gulp-xo": "^0.15.0",
     "hogan.js": "^3.0.2",
+    "imagemin-mozjpeg": "^6.0.0",
     "isomorphic-fetch": "^2.2.1",
     "query-string": "^5.0.0",
     "turbolinks": "^5.0.3",

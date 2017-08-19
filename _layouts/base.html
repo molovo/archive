@@ -20,23 +20,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="msvalidate.01" content="1CA4D3771537532449A3A5BA08271280" />
 
+  <!-- DNS Prefetch external resources -->
   <link rel="dns-prefetch" href="//cdn.heapanalytics.com" />
   <link rel="dns-prefetch" href="//use.typekit.net" />
 
-  {% include fonts.html %}
+  <!-- Preload critical resources -->
+  <link rel="preload" as="style" href="/css/main.css" />
+  <link rel="preload" as="script" href="//use.typekit.net/mmt3fau.js" />
+  <link rel="preload" as="script" href="/js/main.min.js" />
+  <link rel="preload" as="script" href="//cdn.heapanalytics.com/js/heap-3929321974.js" />
 
-  <script type="text/javascript">
-    (function(d) {
-      var tkTimeout=3000;
-      if(window.sessionStorage){if(sessionStorage.getItem('useTypekit')==='false'){tkTimeout=0;}}
-      var config = {
-      kitId: 'mmt3fau',
-      scriptTimeout: tkTimeout,
-      async: true
-      },
-      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+"wf-inactive";if(window.sessionStorage){sessionStorage.setItem("useTypekit","false")}},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+="wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-    })(document);
-  </script>
+  {% include fonts.html %}
 
   <meta name="description" content="{{ description }}" />
   <meta name="author" content="{{ site.author }}" />

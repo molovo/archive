@@ -1,83 +1,96 @@
+<link rel="preload" href="/fonts/gauthier-preload.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/gauthier.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/gauthier-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/gauthier-bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/have-heart-one.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@import url("//hello.myfonts.net/count/347bfe");
+@font-face {
+  font-family: 'GauthierFY-preload';
+  src: url('/fonts/gauthier-preload.woff2') format('woff2'),
+       url('/fonts/gauthier-preload.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  /* unicode-range: U+65-90, U+97-122; */
+}
+@font-face {
+  font-family: 'GauthierFY';
+  src: url('/fonts/gauthier.woff2') format('woff2'),
+       url('/fonts/gauthier.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GauthierFY';
+  src: url('/fonts/gauthier-bold.woff2') format('woff2'),
+       url('/fonts/gauthier-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GauthierFY';
+  src: url('/fonts/gauthier-italic.woff2') format('woff2'),
+       url('/fonts/gauthier-italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Have Heart One';
+  src: url('/fonts/have-heart-one.woff2') format('woff2'),
+       url('/fonts/have-heart-one.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+</style>
 <script>
-  //This script must be placed in the HEAD above all external stylesheet declarations (link[rel=stylesheet])
-  function loadFont(fontName, woffUrl, woff2Url) {
-    // 0. Many unsupported browsers should stop here
-    var nua = navigator.userAgent;
-    var noSupport = !window.addEventListener // IE8 and below
-            || (nua.match(/(Android (2|3|4.0|4.1|4.2|4.3))|(Opera (Mini|Mobi))/) && !nua.match(/Chrome/)) // Android Stock Browser below 4.4 and Opera Mini
+(function() {
 
-    if (noSupport) { return; }
-
-    // 1. Setting up localStorage
-    var loSto = {};
-    try {
-      // We set up a proxy variable to help with localStorage, e.g. when cookies are disabled
-      // and the browser prevents us accessing it.
-      // Otherwise some exceptions can be thrown which completely prevent font loading.
-      loSto = localStorage || {};
-    } catch(ex) {}
-
-    var localStoragePrefix = 'x-font-' + fontName;
-    var localStorageUrlKey = localStoragePrefix + 'url';
-    var localStorageCssKey = localStoragePrefix + 'css';
-    var storedFontUrl = loSto[localStorageUrlKey];
-    var storedFontCss = loSto[localStorageCssKey];
-
-
-    // 2. Setting up the <style> element, that we are using to apply the base64 encoded font data
-    var styleElement = document.createElement('style');
-    styleElement.rel = 'stylesheet';
-    document.head.appendChild(styleElement);
-    // Setting styleElement.textContent must be after this line, because of IE9 errors
-
-
-    // 3. Checking whether the font data is already in localStorage and up-to-date
-    if (storedFontCss && (storedFontUrl === woffUrl || storedFontUrl === woff2Url)) {
-      // the css is still in the localStorage
-      // AND it was loaded from one of the current URLs
-
-      // 4. Applying the font style sheet
-      styleElement.textContent = storedFontCss;
-    } else {
-      // The data was not present, or loaded from an obsolete URL
-      // So we have to load it again
-
-      // 5. Checking for WOFF2 support to know which URL we should use
-      var url = (woff2Url && supportsWoff2())
-          ? woff2Url // WOFF2 URL provided and supported
-          : woffUrl; // only WOFF support
-
-
-      // 6. Fetching the font data from the server
-      var request = new XMLHttpRequest();
-      request.open('GET', url);
-      request.onload = function() {
-        if (request.status >= 200 && request.status < 400) {
-          // 7. Updating localStorage with the fresh data and applying the font data
-          loSto[localStorageUrlKey] = url;
-          loSto[localStorageCssKey] = styleElement.textContent = request.responseText;
-        }
-      };
-      request.send();
-    }
-
-    function supportsWoff2() {
-      // Source: https://github.com/filamentgroup/woff2-feature-test
-      if (!window.FontFace) {
-        return false;
-      }
-
-      var f = new FontFace('t', 'url("data:application/font-woff2,") format("woff2")', {});
-      f.load();
-
-      return f.status === 'loading';
-    }
+  // Optimization for Repeat Views
+  if( sessionStorage.criticalFoftFontsLoaded ) {
+    document.documentElement.classList.add('fonts-stage-1');
+    // document.documentElement.classList.add('fonts-stage-2');
+    return;
   }
 
-  loadFont('GauthierFY-preload', '/fonts/gauthier-woff-preload.css', '/fonts/gauthier-woff2-preload.css')
+  // FontFaceObserver https://github.com/bramstein/fontfaceobserver
+  (function(){function e(e,t){document.addEventListener?e.addEventListener("scroll",t,!1):e.attachEvent("scroll",t)}function t(e){document.body?e():document.addEventListener?document.addEventListener("DOMContentLoaded",function t(){document.removeEventListener("DOMContentLoaded",t),e()}):document.attachEvent("onreadystatechange",function n(){if("interactive"==document.readyState||"complete"==document.readyState)document.detachEvent("onreadystatechange",n),e()})}function n(e){this.a=document.createElement("div"),this.a.setAttribute("aria-hidden","true"),this.a.appendChild(document.createTextNode(e)),this.b=document.createElement("span"),this.c=document.createElement("span"),this.h=document.createElement("span"),this.f=document.createElement("span"),this.g=-1,this.b.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.c.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.f.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.h.style.cssText="display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;",this.b.appendChild(this.h),this.c.appendChild(this.f),this.a.appendChild(this.b),this.a.appendChild(this.c)}function r(e,t){e.a.style.cssText="max-width:none;min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;left:-999px;white-space:nowrap;font:"+t+";"}function i(e){var t=e.a.offsetWidth,n=t+100;return e.f.style.width=n+"px",e.c.scrollLeft=n,e.b.scrollLeft=e.b.scrollWidth+100,e.g!==t?(e.g=t,!0):!1}function s(t,n){function r(){var e=s;i(e)&&null!==e.a.parentNode&&n(e.g)}var s=t;e(t.b,r),e(t.c,r),i(t)}function o(e,t){var n=t||{};this.family=e,this.style=n.style||"normal",this.weight=n.weight||"normal",this.stretch=n.stretch||"normal"}function l(){if(null===a){var e=document.createElement("div");try{e.style.font="condensed 100px sans-serif"}catch(t){}a=""!==e.style.font}return a}function c(e,t){return[e.style,e.weight,l()?e.stretch:"","100px",t].join(" ")}var u=null,a=null,f=null;o.prototype.load=function(e,i){var o=this,a=e||"BESbswy",l=i||3e3,h=(new Date).getTime();return new Promise(function(e,i){null===f&&(f=!!window.FontFace);if(f){var p=new Promise(function(e,t){function n(){(new Date).getTime()-h>=l?t():document.fonts.load(c(o,o.family),a).then(function(t){1<=t.length?e():setTimeout(n,25)},function(){t()})}n()}),d=new Promise(function(e,t){setTimeout(t,l)});Promise.race([d,p]).then(function(){e(o)},function(){i(o)})}else t(function(){function t(){var t;if(t=-1!=m&&-1!=g||-1!=m&&-1!=S||-1!=g&&-1!=S)(t=m!=g&&m!=S&&g!=S)||(null===u&&(t=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent),u=!!t&&(536>parseInt(t[1],10)||536===parseInt(t[1],10)&&11>=parseInt(t[2],10))),t=u&&(m==x&&g==x&&S==x||m==T&&g==T&&S==T||m==N&&g==N&&S==N)),t=!t;t&&(null!==C.parentNode&&C.parentNode.removeChild(C),clearTimeout(L),e(o))}function f(){if((new Date).getTime()-h>=l)null!==C.parentNode&&C.parentNode.removeChild(C),i(o);else{var e=document.hidden;if(!0===e||void 0===e)m=p.a.offsetWidth,g=d.a.offsetWidth,S=v.a.offsetWidth,t();L=setTimeout(f,50)}}var p=new n(a),d=new n(a),v=new n(a),m=-1,g=-1,S=-1,x=-1,T=-1,N=-1,C=document.createElement("div"),L=0;C.dir="ltr",r(p,c(o,"sans-serif")),r(d,c(o,"serif")),r(v,c(o,"monospace")),C.appendChild(p.a),C.appendChild(d.a),C.appendChild(v.a),document.body.appendChild(C),x=p.a.offsetWidth,T=d.a.offsetWidth,N=v.a.offsetWidth,f(),s(p,function(e){m=e,t()}),r(p,c(o,'"'+o.family+'",sans-serif')),s(d,function(e){g=e,t()}),r(d,c(o,'"'+o.family+'",serif')),s(v,function(e){S=e,t()}),r(v,c(o,'"'+o.family+'",monospace'))})})},"undefined"!=typeof module?module.exports=o:(window.FontFaceObserver=o,window.FontFaceObserver.prototype.load=o.prototype.load)})();
 
-  document.addEventListener('DOMContentLoaded', function() {
-    loadFont('Have Heart One', '/fonts/have-heart-woff.css', '/fonts/have-heart-woff2.css')
-    loadFont('GauthierFY', '/fonts/gauthier-woff.css', '/fonts/gauthier-woff2.css')
-  })
+  var fontASubset = new FontFaceObserver('GauthierFY-preload', {
+    weight: 700
+  });
+
+  Promise.all([fontASubset.load()]).then(function () {
+    document.documentElement.classList.add('fonts-stage-1');
+
+    var fontA = new FontFaceObserver('GauthierFY', {
+      weight: 400
+    });
+    var fontB = new FontFaceObserver('GauthierFY', {
+      weight: 700
+    });
+    var fontC = new FontFaceObserver('GauthierFY', {
+      style: 'italic',
+      weight: 400
+    });
+    var fontD = new FontFaceObserver('Have Heart One');
+
+    Promise.all([fontA.load(), fontB.load(), fontC.load(), fontD.load()]).then(function () {
+      // document.documentElement.classList.add('fonts-stage-2');
+
+      // Optimization for Repeat Views
+      sessionStorage.criticalFoftFontsLoaded = true;
+    });
+  });
+})();
+
+(function(d) {
+  var tkTimeout=3000;
+  if(window.sessionStorage){if(sessionStorage.getItem('useTypekit')==='false'){tkTimeout=0;}}
+  var config = {
+  kitId: 'mmt3fau',
+  scriptTimeout: tkTimeout,
+  async: true
+  },
+  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,'')+'wf-inactive';if(window.sessionStorage){sessionStorage.setItem('useTypekit','false')}},config.scriptTimeout),tk=d.createElement('script'),f=false,s=d.getElementsByTagName('script')[0],a;h.classList.add('wf-loading');tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!='complete'&&a!='loaded')return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+})(document);
 </script>
