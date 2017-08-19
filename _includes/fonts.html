@@ -11,7 +11,6 @@
        url('/fonts/gauthier-preload.woff') format('woff');
   font-weight: 700;
   font-style: normal;
-  /* unicode-range: U+65-90, U+97-122; */
 }
 @font-face {
   font-family: 'GauthierFY';
@@ -48,7 +47,7 @@
   // Optimization for Repeat Views
   if( sessionStorage.criticalFoftFontsLoaded ) {
     document.documentElement.classList.add('fonts-stage-1');
-    // document.documentElement.classList.add('fonts-stage-2');
+    document.documentElement.classList.add('fonts-stage-2');
     return;
   }
 
@@ -75,7 +74,7 @@
     var fontD = new FontFaceObserver('Have Heart One');
 
     Promise.all([fontA.load(), fontB.load(), fontC.load(), fontD.load()]).then(function () {
-      // document.documentElement.classList.add('fonts-stage-2');
+      document.documentElement.classList.add('fonts-stage-2');
 
       // Optimization for Repeat Views
       sessionStorage.criticalFoftFontsLoaded = true;
