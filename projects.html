@@ -36,7 +36,9 @@ layout: page
             itemtype="http://schema.org/SoftwareSourceCode"
             aria-labelledby="{{ project.repo | slugify }}">
           <a href="https://github.com/{{ project.repo }}"
-             data-repo="{{ project.repo }}" target="_blank">
+             data-repo="{{ project.repo }}"
+             target="_blank"
+             class="projects__link">
             <h4 id="{{ project.repo | slugify }}">
                 <span itemprop="author"
                       itemscope

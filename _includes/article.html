@@ -52,8 +52,8 @@
         </date>
 
         {% if include.post.tags %}
+          <h6 class="screenreader-text">Tags:</h6>
           <ul class="post__tags">
-            <span class="screenreader-text">Tags:</span>
             {% for tag in include.post.tags %}
               <li class="post__tag"><a href="/tag/{{ tag }}">{{ tag }}</a></li>
             {% endfor %}
