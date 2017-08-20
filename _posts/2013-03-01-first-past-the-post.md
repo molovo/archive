@@ -8,13 +8,13 @@ tags:
 - process
 ---
 
-There have been two exciting new products doing the rounds recently. The first is [Execute](http://executebook.com/), a fantastic book by [Drew Wilson](http://drewwilson.com/) and [Josh Long](http://joshlong.me/). It is about "executing on ideas immediately when inspired rather than following the normal rules". The second is [ Medium](http://medium.com/). Created by Twitter founder [Ev Williams](http://evhead.com/), it is an online magazine, open to contributions from the public.
+There have been two exciting new products doing the rounds recently. The first is [Execute](http://executebook.com/), a fantastic book by [Drew Wilson](http://drewwilson.com/) and [Josh Long](http://joshlong.me/). It is about "executing on ideas immediately when inspired rather than following the normal rules". The second is [Medium](http://medium.com/). Created by Twitter founder [Ev Williams](http://evhead.com/), it is an online magazine, open to contributions from the public.
 
 I only managed to pick up Execute this week. I read it cover to cover in under two hours. I *really* wish this book had been written 2 years ago, when I first had the idea for a website very similiar to Medium, called The Branch.
 
 The idea was almost the same, anybody can submit articles and assign categories to them. Readers can then subscribe to a category, an author or a group of authors, and each are presented as individual collections or "magazines" within the interface. I even had plans drawn up to give a percentage of advertising revenue back to the authors.
 
-The interface for article creation was fairly innovative, and aimed primarily at those with no knowledge of HTML, without resorting to other languages like Markdown or Textile. You can see some screenshots of the interface ~~[on Loviv]()~~ (link dead).
+The interface for article creation was fairly innovative, and aimed primarily at those with no knowledge of HTML, without resorting to other languages like Markdown or Textile. You can see some screenshots of the interface ~~on Loviv~~ (link dead).
 
 The problem? I wasted time. I tried to build this mammoth interface all by myself, around my daily work. I completely redesigned the site three times, as having stared at it for so long I grew bored of it. I strived to create the *perfect* experience, and never finished, rather than concentrating on ensuring that the product shipped.
 

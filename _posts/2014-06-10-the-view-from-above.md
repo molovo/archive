@@ -9,13 +9,13 @@ tags:
 ---
 
 <figure class="image image--pull-left">
-    {% responsive_image_block %}
-        path: '_assets/img/articles/the-view-from-above/forth-vean.png'
-        alt: 'A satellite image of Forth Vean, the street where I grew up.'
-        sizes: '(min-width: 42em) 36em, 100vw'
-    {% endresponsive_image_block %}
+  {% responsive_image_block %}
+    path: '_assets/img/articles/the-view-from-above/forth-vean.png'
+    alt: 'A satellite image of Forth Vean, the street where I grew up.'
+    sizes: '(min-width: 42em) 36em, 100vw'
+  {% endresponsive_image_block %}
 
-    <figcaption class="image__caption">A satellite image of Forth Vean, the street where I grew up.</figcaption>
+  <figcaption class="image__caption">A satellite image of Forth Vean, the street where I grew up.</figcaption>
 </figure>
 
 This is a satellite image of the house where I grew up.

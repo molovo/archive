@@ -10,13 +10,13 @@ tags:
 I've tried a few times to host some form of comment feed on my Jekyll site, but always ended up abandoning them. Hosted solutions such as Disqus and Facebook were too invasive for my tastes, and after trying and failing to launch my own SaaS company (Chatter.li) to solve the problem, my site has been left comment-less for a few years.
 
 <figure class="image">
-    {% responsive_image_block %}
-        path: '_assets/img/articles/jekyll-webmentions/chatter.jpg'
-        alt: 'A screenshot of the commenting service Chatter, which I launched in 2013, appearing on an older version of this blog.'
-        sizes: '(min-width: 42em) 36em, 100vw'
-    {% endresponsive_image_block %}
+  {% responsive_image_block %}
+    path: '_assets/img/articles/jekyll-webmentions/chatter.jpg'
+    alt: 'A screenshot of the commenting service Chatter, which I launched in 2013, appearing on an older version of this blog.'
+    sizes: '(min-width: 42em) 36em, 100vw'
+  {% endresponsive_image_block %}
 
-    <figcaption class="image__caption">A screenshot of the commenting service Chatter, which I launched in 2013, appearing on an older version of this blog.</figcaption>
+  <figcaption class="image__caption">A screenshot of the commenting service Chatter, which I launched in 2013, appearing on an older version of this blog.</figcaption>
 </figure>
 
 I recently came across the new [Webmention](https://www.w3.org/TR/webmention/) specification, and the hosted webmention API [webmention.io](https://webmention.io). There were quite a few steps to get it set up, but now that it's done and everything is automated, I am able to have posts about my site and their responses appear as webmentions on my Jekyll blog automatically. I'll talk you through the process below.

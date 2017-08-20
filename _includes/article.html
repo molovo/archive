@@ -7,7 +7,7 @@
          {% if include.listing == 'false' %}id="article"{% endif %}
          {% if include.listing == 'true' %}id="{{ include.post.title | slugify }}"{% endif %}>
     <link itemprop="mainEntityOfPage" href="{{ site.url }}{{ include.post.url | replace: 'index.html', '' }}" />
-    {% if post.image %}
+    {% if include.post.image %}
       <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
         <link itemprop="url" href="{{ site.url }}{{ post.image.url }}" />
         <meta itemprop="representativeOfPage" content="true" />
@@ -80,7 +80,12 @@
 
   <section itemprop="articleBody"
            class="post__content e-content">
-    {{ body | improve }}
+    {% if include.hide-content %}
+      {{ include.post.excerpt }}
+      <a href="{{ post.url }}">Read More&hellip;</a>
+    {% else %}
+      {{ include.post.content | markdownify | improve }}
+    {% endif %}
   </section>
 
   {% include social.html post=include.post %}

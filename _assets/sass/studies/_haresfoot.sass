@@ -44,3 +44,30 @@ $haresfoot-white: #fff
         .octicon--plus polygon,
         .study__icon path
           fill: $color-white
+
+      .image--full-width
+        @media (min-width: 42em)
+          &::before
+            background: linear-gradient(to bottom, rgba($haresfoot-orange2, 0), $haresfoot-orange2 66.66%, $haresfoot-orange2)
+
+          &::after
+            background: linear-gradient(to top, rgba($haresfoot-orange2, 0), $haresfoot-orange2 66.66%, $haresfoot-orange2)
+
+      .image__caption
+        @media (min-width: 64em)
+          background: $haresfoot-orange2
+
+          &::before
+            background: linear-gradient(to bottom, rgba($haresfoot-orange2, 0), $haresfoot-orange2 66.66%, $haresfoot-orange2)
+
+          &::after
+            background: linear-gradient(to top, rgba($haresfoot-orange2, 0), $haresfoot-orange2 66.66%, $haresfoot-orange2)
+
+      .post__social
+        &__link
+          svg
+            path
+              stroke: $color-white
+
+        &__likes
+          color: $color-white

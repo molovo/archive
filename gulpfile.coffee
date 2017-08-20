@@ -144,6 +144,7 @@ gulp.task 'compile:html', () ->
     'jekyll'
     'build'
     '--incremental'
+    '--trace'
     '--config'
     '_config.yml,_config.dev.yml'
   ]

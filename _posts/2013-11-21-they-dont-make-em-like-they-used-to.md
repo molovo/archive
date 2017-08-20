@@ -13,12 +13,13 @@ tags:
 Ladies and Gentlemen, allow me to introduce you to Country Ken.
 
 <figure class="image image--pull-left">
-    {% responsive_image_block %}
-        path: '_assets/img/articles/they-dont-make-em-like-they-used-to/countryken.jpg'
-        alt: 'Country Ken'
-        sizes: '(min-width: 42em) 36em, 100vw'
-    {% endresponsive_image_block %}
-    <figcaption class="image__caption">Country Ken</figcaption>
+  {% responsive_image_block %}
+    path: '_assets/img/articles/they-dont-make-em-like-they-used-to/countryken.jpg'
+    alt: 'Country Ken'
+    sizes: '(min-width: 42em) 36em, 100vw'
+  {% endresponsive_image_block %}
+
+  <figcaption class="image__caption">Country Ken</figcaption>
 </figure>
 
 Country Ken is a 1967 long-scale Epiphone Casino. You might not think that he’s anything special.
