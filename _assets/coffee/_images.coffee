@@ -17,10 +17,14 @@ module.exports = class Images
     ###
     @images = document.querySelectorAll 'img[data-src], picture source[data-srcset]'
 
-    # If IntersectionObserver is not defined, load all images immediately
-    if not window.IntersectionObserver?
-      return load image for image in @images
+    # If IntersectionObserver is defined, set up lazy loading
+    if 'IntersectionObserver' in window
+      return @lazyLoadImages()
 
+    # If IntersectionObserver is not defined, load all images immediately
+    @load image for image in @images
+
+  lazyLoadImages: () =>
     @config =
       rootMargin: '-50px 0px'
       threshold: 0.01
