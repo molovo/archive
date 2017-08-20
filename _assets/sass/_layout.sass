@@ -1,6 +1,14 @@
+html,
+body
+  overflow-x: hidden
+  position: relative
+  width: 100%
+
+  &.menu-open
+    overflow-y: hidden !important
+
 body
   background: $color-white
-  overflow-x: hidden
   padding: 6em 1.5em 0
 
   @media (min-width: 42em)
@@ -8,9 +16,6 @@ body
 
   @media (min-width: 80em)
     padding: 6em 6em 0
-
-  &.menu-open
-    overflow: hidden !important
 
 .turbolinks-progress-bar
   height: 5px

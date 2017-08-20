@@ -17,13 +17,19 @@ module.exports = class Images
     ###
     @images = document.querySelectorAll 'img[data-src], picture source[data-srcset]'
 
+    console.log window.IntersectionObserver
+
     # If IntersectionObserver is defined, set up lazy loading
-    if 'IntersectionObserver' in window
+    if window.IntersectionObserver?
       return @lazyLoadImages()
 
     # If IntersectionObserver is not defined, load all images immediately
     @load image for image in @images
 
+  ###*
+   * Setup the IntersectionObserver instance which will
+   * trigger image loading
+  ###
   lazyLoadImages: () =>
     @config =
       rootMargin: '-50px 0px'
@@ -56,6 +62,7 @@ module.exports = class Images
    * @param {HTMLImageElement} image
   ###
   load: (image) =>
+    console.log 'loading image'
     image.onload = () ->
       requestAnimationFrame () ->
         image.removeAttribute 'data-src'

@@ -35,14 +35,14 @@ module.exports = class Menu
 
     document.addEventListener 'turbolinks:visit', (evt) =>
       @nav.classList.remove 'nav--open'
-      document.body.classList.remove 'menu-open'
+      document.documentElement.classList.remove 'menu-open'
 
   toggleMenu: (evt) =>
     evt.preventDefault()
 
     if @nav.classList.contains 'nav--open'
       @nav.classList.remove 'nav--open'
-      document.body.classList.remove 'menu-open'
+      document.documentElement.classList.remove 'menu-open'
     else
       @nav.classList.add 'nav--open'
-      document.body.classList.add 'menu-open'
+      document.documentElement.classList.add 'menu-open'
