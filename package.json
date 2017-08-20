@@ -20,6 +20,7 @@
     "gulp-sourcemaps": "^2.5.0",
     "gulp-uglify": "^2.1.2",
     "gulp-util": "^3.0.8",
+    "gulp-webp": "^2.3.0",
     "gulp-xo": "^0.15.0",
     "hogan.js": "^3.0.2",
     "imagemin-mozjpeg": "^6.0.0",

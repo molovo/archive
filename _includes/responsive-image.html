@@ -4,17 +4,30 @@
 {% endfor %}
 {% endcapture %}
 
+{% capture srcset-webp %}
+{% for i in resized %}
+    {{ i.dirname }}/{{ i.filename }}.webp {{ i.width }}w,
+{% endfor %}
+{% endcapture %}
+
 {% assign largest = resized | sort: 'width' | last %}
 
-<img src="/img/dummy.png"
-     data-src="/{{ largest.path }}"
-     data-srcset="{{ srcset | strip_newlines }}"
-     alt="{{ alt }}"
-     sizes="{{ sizes }}" />
+<picture>
+    <source type="image/webp"
+            srcset="/img/dummy.png"
+            data-srcset="{{ srcset-webp | strip_newlines }}"
+            alt="{{ alt }}"
+            sizes="{{ sizes }}" />
+    <source srcset="/img/dummy.png"
+            data-srcset="{{ srcset | strip_newlines }}"
+            alt="{{ alt }}"
+            sizes="{{ sizes }}" />
+    <img src="/img/dummy.png"
+         data-src="/{{ largest.path }}"
+         alt="{{ alt }}" />
+</picture>
 
 <noscript>
     <img src="/{{ largest.path }}"
-         srcset="{{ srcset | strip_newlines }}"
-         alt="{{ alt }}"
-         sizes="{{ sizes }}" />
+         alt="{{ alt }}" />
 </noscript>

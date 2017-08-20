@@ -23,6 +23,7 @@ critical     = require('critical').stream
 # Dependencies for compressing images
 imagemin     = require 'gulp-imagemin'
 mozJpeg      = require 'imagemin-mozjpeg'
+webp         = require 'gulp-webp'
 
 # Dependencies for compressing HTML
 htmlmin      = require 'gulp-htmlmin'
@@ -131,6 +132,7 @@ gulp.task 'compile:images', () ->
         imagemin.optipng optimizationLevel: 5
         imagemin.svgo plugins: [removeViewBox: true]
       ])
+      .pipe webp()
       .pipe gulp.dest('_site/img/')
   else
     gulp.src sources.images

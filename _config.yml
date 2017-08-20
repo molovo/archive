@@ -98,8 +98,8 @@ responsive_image:
     - width: 1024
     - width: 1280
     - width: 1440
-  base_path: _assets/img
-  output_path_format: 'img/%{dirname}/resized/%{filename}-%{width}x%{height}.%{extension}'
+  base_path: _assets
+  output_path_format: '%{dirname}/resized/%{filename}-%{width}x%{height}.%{extension}'
   save_to_source: false
   cache: true
 

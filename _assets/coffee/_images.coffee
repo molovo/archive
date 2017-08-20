@@ -15,7 +15,7 @@ module.exports = class Images
      *
      * @type {HTMLElementList}
     ###
-    @images = document.querySelectorAll 'img[data-src]'
+    @images = document.querySelectorAll 'img[data-src], picture source[data-srcset]'
 
     # If IntersectionObserver is not defined, load all images immediately
     if not window.IntersectionObserver?
