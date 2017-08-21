@@ -1,5 +1,7 @@
 {
     "name": "Molovo",
+    "short_name": "Molovo",
+    "start_url": "https://molovo.co",
     "icons": [
         {
             "src": "/android-chrome-192x192.png?v=M4olpG7v6d",
