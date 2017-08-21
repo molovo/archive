@@ -134,12 +134,16 @@
       width: 15em
 
 picture
+  overflow: hidden
+
   > source,
   > img
     width: 100%
 
-img
-  transition: opacity .5s
+img,
+source
+  transition: filter .5s
 
-  &[data-src]
-    opacity: 0
+  &[data-src],
+  &[data-srcset]
+    filter: blur(20px)

@@ -62,7 +62,6 @@ module.exports = class Images
    * @param {HTMLImageElement} image
   ###
   load: (image) =>
-    console.log 'loading image'
     image.onload = () ->
       requestAnimationFrame () ->
         image.removeAttribute 'data-src'

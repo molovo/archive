@@ -10,19 +10,20 @@
 {% endfor %}
 {% endcapture %}
 
+{% assign smallest = resized | sort: 'width' | first %}
 {% assign largest = resized | sort: 'width' | last %}
 
 <picture>
     <source type="image/webp"
-            srcset="/img/dummy.png"
+            srcset="{{ smallest.dirname }}/{{ smallest.filename }}.webp"
             data-srcset="{{ srcset-webp | strip_newlines }}"
             alt="{{ alt }}"
             sizes="{{ sizes }}" />
-    <source srcset="/img/dummy.png"
+    <source srcset="/{{ smallest.path }}"
             data-srcset="{{ srcset | strip_newlines }}"
             alt="{{ alt }}"
             sizes="{{ sizes }}" />
-    <img src="/img/dummy.png"
+    <img src="/{{ smallest.path }}"
          data-src="/{{ largest.path }}"
          alt="{{ alt }}" />
 </picture>

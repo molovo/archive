@@ -127,12 +127,12 @@ gulp.task 'compile:images', () ->
         imagemin.gifsicle interlaced: true
         mozJpeg(
           progressive: true
-          quality: 30
+          quality: 72
         )
         imagemin.optipng optimizationLevel: 5
         imagemin.svgo plugins: [removeViewBox: true]
       ])
-      .pipe webp()
+      .pipe webp(method: 6)
       .pipe gulp.dest('_site/img/')
   else
     gulp.src sources.images
