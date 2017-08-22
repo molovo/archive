@@ -99,21 +99,19 @@ self.addEventListener('fetch', event => {
 
       // Handle errors for pages on the service worker domain
       if (requestURL.origin == location.origin) {
-        return caches.open(CACHE_NAME).then(cache => {
-          // If the page was not found, return the 404 page
-          if (response.status == 404) {
-            return fetch('/404.html').then(response => {
-              return new Response(response.body, {
-                status: 404
-              })
-            })
-          }
-
-          // Return a generic error page
-          return fetch('/500.html').then(response => {
+        // If the page was not found, return the 404 page
+        if (response.status == 404) {
+          return fetch('/404.html').then(response => {
             return new Response(response.body, {
-              status: 500
+              status: 404
             })
+          })
+        }
+
+        // Return a generic error page
+        return fetch('/500.html').then(response => {
+          return new Response(response.body, {
+            status: 500
           })
         })
       }
