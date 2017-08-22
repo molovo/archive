@@ -38,8 +38,10 @@ sources =
   ]
   views: [
     '_{layouts,includes,posts,studies,archive}/**/*.{html,md,markdown,svg}'
+    'errors/**/*.{html,md,markdown}'
     '_data/**/*.yml'
     '_config{,.dev}.yml'
+    'sw.js'
   ]
 entries =
   sass: '_assets/sass/main.sass'
