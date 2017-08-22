@@ -40,6 +40,13 @@ module.exports = class Github
           project.querySelector('[data-stars]')
             .innerText = response.stargazers_count
 
+        # Catch errors
+        .catch (err) ->
+          # We catch error responses to prevent dirtying the console,
+          # but don't do anything with the errorsince the original
+          # data can remain on the page
+          return
+
   ###*
    * Get repository data from Github's API, and then cache it
    * for 5 minutes in localStorage
@@ -86,7 +93,7 @@ module.exports = class Github
           )
 
           # Return the response
-          resolve(response)
+          resolve response
 
         # Handle errors
         .catch reject

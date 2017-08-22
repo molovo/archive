@@ -14,10 +14,33 @@ layout: base
     <h1 class="error__title">{{ page.title }}</h1>
 
     {{ content }}
+
+    {% if page.show_search %}
+      <form class="search__form" id="search-form" action="/search/">
+        <label>
+          <input type="search" name="q" id="search" placeholder="Enter your search term..." />
+        </label>
+      </form>
+    {% endif %}
   </section>
 </div>
 
-<div class="page__image">
-  <img src="/img/dog-in-space.gif"
-       alt="A dog in space" />
-</div>
+{% if page.show_listing %}
+  <div class="page__listing">
+    <ul>
+      {% for post in site.posts limit:3 %}
+        <li>
+          <a href="{{ post.url }}"
+             title="{{ post.title }}">
+            {{ post.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% else %}
+  <div class="page__image">
+    <img src="/img/error/{{ page.code }}.gif"
+         alt="A dog in space" />
+  </div>
+{% endif %}
