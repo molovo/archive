@@ -58,7 +58,11 @@ self.addEventListener('fetch', event => {
           }
 
           return response
-        }).catch(() => caches.match('/offline.html'))
+        }).catch(() => {
+          if (requestURL.origin == location.origin) {
+            return caches.match('/offline.html')
+          }
+        })
       })
     })
   )
