@@ -76,11 +76,15 @@ gulp.task 'compile', ['compile:html', 'compile:sass', 'compile:coffee']
 
 gulp.task 'compile:sass', () ->
   gulp.src entries.sass
-    .pipe sass().on('error', sass.logError)
+    .pipe sourcemaps.init()
+    .pipe sass(
+      outputStyle: 'compressed'
+    ).on('error', sass.logError)
     .pipe autoprefixer(
       browsers: ['last 3 versions']
       cascade: false
     )
+    .pipe sourcemaps.write('./')
     .pipe rename('main.css')
     .pipe gulp.dest('_site/css/')
 
