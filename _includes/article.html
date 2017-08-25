@@ -25,6 +25,15 @@
 
   <header class="post__header">
     <div class="post__header__wrapper">
+      {% if include.post.tags %}
+        <h6 class="screenreader-text">Tags:</h6>
+        <ul class="post__tags">
+          {% for tag in include.post.tags %}
+            <li class="post__tag"><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
       {% if include.listing == 'true' %}
         <a href="{{ include.post.url }}"
           class="post__link u-url u-uid"
@@ -43,22 +52,12 @@
         </h1>
       {% endif %}
       <div class="post__meta">
-        
+        <span>Published on</span>
         <date itemprop="datePublished"
               content="{{ include.post.date | date_to_xmlschema }}"
               class="post__date dt-published">
-          <span class="screenreader-text">Published on:</span>
           {{ include.post.date | date: '%e' }}{{ include.post.date | date_to_xmlschema | ordinal }} {{ include.post.date | date: '%B %Y' }}
         </date>
-
-        {% if include.post.tags %}
-          <h6 class="screenreader-text">Tags:</h6>
-          <ul class="post__tags">
-            {% for tag in include.post.tags %}
-              <li class="post__tag"><a href="/tag/{{ tag }}">{{ tag }}</a></li>
-            {% endfor %}
-          </ul>
-        {% endif %}
       </div>
       <meta itemprop="dateModified" content="{{ include.post.date | date_to_xmlschema }}">
       <div itemprop="author" itemscope itemtype="http://schema.org/Person">

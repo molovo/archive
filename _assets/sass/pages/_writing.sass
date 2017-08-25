@@ -33,26 +33,30 @@ main > .post
     width: 100%
 
   &__meta
-    +font-secondary
-    color: $color-red
     display: block
-    font-style: italic
     margin: 0 0 $baseline
 
-  &__tags
-    display: inline
-    list-style: none
-    margin: 0
+    span, date
+      font-size: .75em
 
-    &::before
-      content: '•'
-      margin: 0 1ch
+  &__date
+    color: $color-red
+
+  &__tags
+    display: block
+    list-style: none
+    letter-spacing: .025em
+    margin: 0 0 $baseline
+    text-transform: uppercase
 
   &__tag
     display: inline
+    font-size: .75em
 
-    &:not(:last-child)::after
-      content: ', '
+    &:not(:first-child)
+      &::before
+        content: '•'
+        margin: 0 1ch
 
   &__social
     display: inline-flex
