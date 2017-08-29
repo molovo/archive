@@ -17,8 +17,6 @@ module.exports = class Images
     ###
     @images = document.querySelectorAll 'img[data-src], picture source[data-srcset]'
 
-    console.log window.IntersectionObserver
-
     # If IntersectionObserver is defined, set up lazy loading
     if window.IntersectionObserver?
       return @lazyLoadImages()
