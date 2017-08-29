@@ -52,7 +52,7 @@
         </h1>
       {% endif %}
       <div class="post__meta">
-        <span>Published on</span>
+        <span>Published on</span>&nbsp;
         <date itemprop="datePublished"
               content="{{ include.post.date | date_to_xmlschema }}"
               class="post__date dt-published">
@@ -80,12 +80,13 @@
   <section itemprop="articleBody"
            class="post__content e-content">
     {% if include.hide-content %}
-      {{ include.post.excerpt }}
-      <a href="{{ post.url }}">Read More&hellip;</a>
+      <a href="{{ include.post.url }}" class="button">Read Article</a>
     {% else %}
       {{ include.post.content | markdownify | improve }}
     {% endif %}
   </section>
 
-  {% include social.html post=include.post %}
+  {% unless include.hide-content %}
+    {% include social.html post=include.post %}
+  {% endunless %}
 </article>
