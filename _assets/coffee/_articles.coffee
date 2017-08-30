@@ -7,7 +7,7 @@ module.exports = class Articles
 
   setupArticleAnimation: () =>
     config =
-      rootMargin: '150px 0px'
+      rootMargin: '-150px 0px'
       threshold: 0.01
 
     @observer = new IntersectionObserver @onIntersection, config
