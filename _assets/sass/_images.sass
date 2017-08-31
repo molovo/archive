@@ -46,7 +46,8 @@
       margin-left: -6em
       width: calc(100% + 6em)
 
-  &--full-width
+  &--full-width,
+  &--slideshow
     margin-left: -1.5em
     position: relative
     width: 100vw
@@ -81,9 +82,6 @@
         content: none
 
     @media (min-width: 42em)
-      $slope: (6em - 1.5em) / (80em - 42em)
-      $base: 1.5em - $slope * 42em
-
       margin-left: between(-1.5em, -6em, 42em, 80em)
       width: 100vw
 
@@ -95,6 +93,21 @@
 
       .image__caption
         margin-left: 6em
+
+  > .swiper-container
+    margin-left: 1.5em
+    max-width: 36em
+    overflow: visible
+    width: calc(100% - #{$baseline * 2})
+
+    @media (min-width: 42em)
+      margin-left: between(1.5em, 6em, 42em, 80em)
+
+    @media (min-width: 80em)
+      margin-left: 6em
+
+    .swiper-slide
+      width: 100% !important
 
   &__caption
     +font-secondary
@@ -132,6 +145,10 @@
 
     @media (min-width: 80em)
       width: 15em
+
+    strong
+      +font-primary
+      font-style: normal
 
 picture
   overflow: hidden

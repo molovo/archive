@@ -1,3 +1,5 @@
+Swiper = require 'swiper'
+
 ###*
  * This class deals with lazy loading of images
  *
@@ -16,6 +18,9 @@ module.exports = class Images
      * @type {HTMLElementList}
     ###
     @images = document.querySelectorAll 'img[data-src], picture source[data-srcset]'
+
+    # Setup swiper instances
+    @setupSwipers()
 
     # If IntersectionObserver is defined, set up lazy loading
     if window.IntersectionObserver?
@@ -69,3 +74,19 @@ module.exports = class Images
       image.srcset = image.dataset.srcset
     else
       image.src = image.dataset.src
+
+  setupSwipers: () =>
+    base = parseInt window.getComputedStyle(document.body).fontSize.replace('px', '')
+
+    swiper = new Swiper('.swiper-container', {
+      loop: false
+      nextButton: '.swiper-button-next'
+      prevButton: '.swiper-button-prev'
+      spaceBetween: base * 1.5
+      on:
+        slideChangeEnd: () ->
+          indicator = document.querySelector '.swiper-current'
+
+          if indicator?
+            indicator.innerHTML = @realIndex
+    })

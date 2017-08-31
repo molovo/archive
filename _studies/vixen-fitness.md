@@ -28,3 +28,46 @@ Since Gemma specialises in pre- and post-natal excercise, she wanted something t
   <figcaption class="image__caption">The different variations of the Vixen Fitness logo</figcaption>
 </figure>
 
+Gemma meets most of her clients face to face, so to help her make a good impression, I designed a series of postcards, each providing more information about particular services she provides.
+
+<figure class="image image--slideshow image--flyers">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="//placecage.com/800/600" />
+      </div>
+      <div class="swiper-slide">
+        <img src="//placecage.com/800/600" />
+        {% comment %}
+        <img src="/img/studies/vixen-fitness/ante-natal-flyer-front.svg" />
+        <img src="/img/studies/vixen-fitness/ante-natal-flyer-back.svg" />
+        {% endcomment %}
+      </div>
+      <div class="swiper-slide">
+        <img src="//placecage.com/800/600" />
+      </div>
+      <div class="swiper-slide">
+        <img src="//placecage.com/800/600" />
+        {% comment %}
+        <img src="/img/studies/vixen-fitness/post-natal-flyer-front.svg" />
+        <img src="/img/studies/vixen-fitness/post-natal-flyer-back.svg" />
+        {% endcomment %}
+      </div>
+      <div class="swiper-slide">
+        <img src="//placecage.com/800/600" />
+      </div>
+      <div class="swiper-slide">
+        <img src="//placecage.com/800/600" />
+        {% comment %}
+        <img src="/img/studies/vixen-fitness/mobile-training-flyer-front.svg" />
+        <img src="/img/studies/vixen-fitness/mobile-training-flyer-back.svg" />
+        {% endcomment %}
+      </div>
+    </div>
+  </div>
+
+  <figcaption class="image__caption">
+    <strong><span class="swiper-current">1</span> of 6</strong> &mdash;
+    The series of postcards I designed for each of Gemma's services
+  </figcaption>
+</figure>
