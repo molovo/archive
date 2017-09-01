@@ -76,17 +76,19 @@ module.exports = class Images
       image.src = image.dataset.src
 
   setupSwipers: () =>
-    base = parseInt window.getComputedStyle(document.body).fontSize.replace('px', '')
+    base = parseInt(window.getComputedStyle(document.body).fontSize.replace('px', '')) * 1.5
 
     swiper = new Swiper('.swiper-container', {
       loop: false
+      grabCursor: true
       nextButton: '.swiper-button-next'
       prevButton: '.swiper-button-prev'
-      spaceBetween: base * 1.5
-      on:
-        slideChangeEnd: () ->
-          indicator = document.querySelector '.swiper-current'
+      spaceBetween: base * 2
+      slideToClickedSlide: true
+      onSlideChangeEnd: (swiper) =>
+        figure    = swiper.container[0].parentNode
+        indicator = figure.querySelector '.swiper-current'
 
-          if indicator?
-            indicator.innerHTML = @realIndex
+        if indicator?
+          indicator.innerHTML = ++swiper.realIndex
     })

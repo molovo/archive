@@ -48,6 +48,7 @@
 
   &--full-width,
   &--slideshow
+    background: $color-white
     margin-left: -1.5em
     position: relative
     width: 100vw
@@ -76,6 +77,7 @@
       margin-left: 1.5em
       margin-top: $baseline
       position: static
+      z-index: 0
 
       &::after,
       &::before
@@ -96,7 +98,7 @@
 
   > .swiper-container
     margin-left: 1.5em
-    max-width: 36em
+    max-width: 24em
     overflow: visible
     width: calc(100% - #{$baseline * 2})
 
@@ -107,7 +109,43 @@
       margin-left: 6em
 
     .swiper-slide
-      width: 100% !important
+      box-shadow: 0px 3px 8px rgba(0,0,0,.1)
+
+      // For some reason images within the slideshow have
+      // a wierd margin around them. Removing the line-height
+      // fixes it though
+      line-height: 0
+
+      > img,
+      > picture,
+      > picture > source,
+      > svg
+        width: 100%
+
+    .swiper-button-next,
+    .swiper-button-prev
+      background: transparent
+      bottom: #{$baseline * -2.125}
+      display: inline-block
+      height: $baseline
+      left: auto
+      position: absolute
+      top: auto
+      width: $baseline
+
+      svg
+        height: 100%
+        width: 100%
+
+        g
+          stroke: $color-blue
+
+    .swiper-button-next
+      right: -12em
+      transform: rotate(180deg)
+
+    .swiper-button-prev
+      right: -10.5em
 
   &__caption
     +font-secondary

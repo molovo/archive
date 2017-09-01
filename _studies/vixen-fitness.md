@@ -34,40 +34,44 @@ Gemma meets most of her clients face to face, so to help her make a good impress
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <img src="//placecage.com/800/600" />
+        {% responsive_image_block %}
+          path: '_assets/img/studies/vixen-fitness/ante-natal-flyer-front.png'
+          alt: 'The front of an ante-natal training flyer'
+          sizes: '(min-width: 42em) 36em, 100vw'
+        {% endresponsive_image_block %}
       </div>
       <div class="swiper-slide">
-        <img src="//placecage.com/800/600" />
-        {% comment %}
-        <img src="/img/studies/vixen-fitness/ante-natal-flyer-front.svg" />
-        <img src="/img/studies/vixen-fitness/ante-natal-flyer-back.svg" />
-        {% endcomment %}
+        {% responsive_image_block %}
+          path: '_assets/img/studies/vixen-fitness/ante-natal-flyer-back.png'
+          alt: 'The back of an ante-natal training flyer'
+          sizes: '(min-width: 42em) 36em, 100vw'
+        {% endresponsive_image_block %}
       </div>
       <div class="swiper-slide">
-        <img src="//placecage.com/800/600" />
+        {% responsive_image_block %}
+          path: '_assets/img/studies/vixen-fitness/post-natal-flyer-front.png'
+          alt: 'The front of an post-natal training flyer'
+          sizes: '(min-width: 42em) 36em, 100vw'
+        {% endresponsive_image_block %}
       </div>
       <div class="swiper-slide">
-        <img src="//placecage.com/800/600" />
-        {% comment %}
-        <img src="/img/studies/vixen-fitness/post-natal-flyer-front.svg" />
-        <img src="/img/studies/vixen-fitness/post-natal-flyer-back.svg" />
-        {% endcomment %}
-      </div>
-      <div class="swiper-slide">
-        <img src="//placecage.com/800/600" />
-      </div>
-      <div class="swiper-slide">
-        <img src="//placecage.com/800/600" />
-        {% comment %}
-        <img src="/img/studies/vixen-fitness/mobile-training-flyer-front.svg" />
-        <img src="/img/studies/vixen-fitness/mobile-training-flyer-back.svg" />
-        {% endcomment %}
+        {% responsive_image_block %}
+          path: '_assets/img/studies/vixen-fitness/post-natal-flyer-back.png'
+          alt: 'The back of an post-natal training flyer'
+          sizes: '(min-width: 42em) 36em, 100vw'
+        {% endresponsive_image_block %}
       </div>
     </div>
+    <span class="swiper-button-prev">
+      {% include icons/chevrons-left.svg %}
+    </span>
+    <span class="swiper-button-next">
+      {% include icons/chevrons-right.svg %}
+    </span>
   </div>
 
   <figcaption class="image__caption">
-    <strong><span class="swiper-current">1</span> of 6</strong> &mdash;
+    <strong><span class="swiper-current">1</span> of 4</strong> &mdash;
     The series of postcards I designed for each of Gemma's services
   </figcaption>
 </figure>
