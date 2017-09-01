@@ -1,17 +1,5 @@
 <header class="study__intro study__intro--{{ include.slug }}">
-  <div class="study__icons">
-    <a href="/" class="home-icon" aria-label="Molovo">
-      {% include icons/logo.svg %}
-    </a>
-
-    {% include icons/plus.svg %}
-
-    <span aria-label="{{ include.client }}">
-        {% include icons/studies/{{ include.slug }}/icon.svg %}
-    </span>
-
-    <h6 class="study__client">The making of {{ include.client }}</h6>
-  </div>
+  {% include study/icons.html slug=include.slug client=include.client showTitle=true %}
 
   <div class="study__title">
     <h1>{{ include.title }}</h1>
