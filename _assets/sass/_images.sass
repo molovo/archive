@@ -75,6 +75,7 @@
 
     .image__caption
       margin-left: 1.5em
+      margin-right: -1.5em
       margin-top: $baseline
       position: static
       z-index: 0
@@ -89,12 +90,14 @@
 
       .image__caption
         margin-left: between(1.5em, 6em, 42em, 80em)
+        margin-right: between(-1.5em, -6em, 42em, 80em)
 
     @media (min-width: 80em)
       margin-left: -6em
 
       .image__caption
         margin-left: 6em
+        margin-right: -6em
 
   > .swiper-container
     margin-left: 1.5em

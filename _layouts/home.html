@@ -9,23 +9,3 @@ layout: base
 
   {{ content }}
 </section>
-
-<section class="studies">
-  {% for study in site.studies %}
-    <article class="studies__item">
-      <div class="studies__content">
-        {% include study/icons.html slug=study.slug client=study.client showTitle=false %}
-
-        <h1 class="studies__title">{{ study.intro }}</h1>
-
-        <a href="{{ study.url }}"
-           class="button">Read the Case Study</a>
-      </div>
-
-      <div class="studies__image">
-        <img src="/img/studies/{{ study.slug }}/bg.png"
-             alt="">
-      </div>
-    </article>
-  {% endfor %}
-</section>
