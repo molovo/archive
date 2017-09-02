@@ -2,6 +2,8 @@
 title: Bringing Foxy Back
 slug: vixen-fitness
 client: Vixen Fitness
+order: 0
+intro: I helped Vixen Fitness explode onto the Southsea Fitness scene
 url: https://vixenfitness.co.uk
 layout: study
 sections:

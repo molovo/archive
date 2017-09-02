@@ -1,14 +1,15 @@
 .button
   appearance: none
   background: $color-red
-  border: .25em solid transparent
+  border: .125em solid transparent
   color: $color-white
   display: inline-block
   font-size: .75em
   font-weight: 600
   letter-spacing: .025em
+  line-height: $baseline
   opacity: 1
-  padding: .25em 1.5em .5em
+  padding: .5em 1.5em .75em
   transition: background-color .25s, border-color .25s, color .25s, opacity .25s
   text-transform: uppercase
 
@@ -21,8 +22,13 @@
     color: $color-red
 
   &--bordered
-    border-color: $color-white
+    border-color: $color-almost-black
     background: transparent
+    color: $color-almost-black
+
+    &.button--white
+      border-color: $color-white
+      color: $color-white
 
     &:hover
       background: $color-white

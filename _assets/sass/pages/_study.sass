@@ -6,29 +6,56 @@
     margin: 0
 
 .studies
-  margin: -6em -1.5em 0
-
-  @media (min-width: 42em)
-    margin: -6em between(-1.5em, -6em, 42em, 80em) 0
-
-  @media (min-width: 80em)
-    margin: -6em -6em 0
-
   &__item
-    margin: 0
+    align-items: flex-end
+    display: flex
+    padding: 0 0 6em
 
-    .study__intro
-      padding: 6em 1.5em
-      position: relative
+  &__content
+    flex: 0 0 60%
+    margin-bottom: #{$baseline * .25}
+    width: 60%
 
-      @media (min-width: 42em)
-        padding: 6em between(1.5em, 6em, 42em, 80em)
+  .study__icons
+    .logo--frame,
+    .octicon--plus polygon,
+    .study__icon path
+      fill: $color-almost-black
 
-      @media (min-width: 80em)
-        padding: 6em 6em
+  &__image
+    align-items: flex-end
+    display: flex
+    flex: 0 0 50vw
+    height: 50vw
+    width: 50vw
 
-    .study__link
-      margin: 1.5em 0 0
+    svg
+      margin-top: auto
+      width: 100%
+
+  &__title
+    +font-secondary
+    // font-size: 2em
+    font-weight: 400
+
+  &__item:nth-child(2n)
+    justify-content: flex-start
+
+    .studies__content
+      margin-right: #{$baseline * 4}
+
+    .studies__image
+      margin-right: -50vw
+
+  &__item:nth-child(2n+1)
+    justify-content: flex-end
+
+    .studies__content
+      margin-left: #{$baseline * 4}
+      order: 1
+
+    .studies__image
+      margin-left: -50vw
 
 .study
   &__intro
