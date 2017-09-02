@@ -36,32 +36,44 @@ Gemma meets most of her clients face to face, so to help her make a good impress
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
+        <img src="/img/studies/vixen-fitness/ante-natal-flyer-front.svg" />
+        {% comment %}
         {% responsive_image_block %}
           path: '_assets/img/studies/vixen-fitness/ante-natal-flyer-front.png'
           alt: 'The front of an ante-natal training flyer'
           sizes: '(min-width: 42em) 36em, 100vw'
         {% endresponsive_image_block %}
+        {% endcomment %}
       </div>
       <div class="swiper-slide">
+        <img src="/img/studies/vixen-fitness/ante-natal-flyer-back.svg" />
+        {% comment %}
         {% responsive_image_block %}
           path: '_assets/img/studies/vixen-fitness/ante-natal-flyer-back.png'
           alt: 'The back of an ante-natal training flyer'
           sizes: '(min-width: 42em) 36em, 100vw'
         {% endresponsive_image_block %}
+        {% endcomment %}
       </div>
       <div class="swiper-slide">
+        <img src="/img/studies/vixen-fitness/post-natal-flyer-front.svg" />
+        {% comment %}
         {% responsive_image_block %}
           path: '_assets/img/studies/vixen-fitness/post-natal-flyer-front.png'
           alt: 'The front of an post-natal training flyer'
           sizes: '(min-width: 42em) 36em, 100vw'
         {% endresponsive_image_block %}
+        {% endcomment %}
       </div>
       <div class="swiper-slide">
+        <img src="/img/studies/vixen-fitness/post-natal-flyer-back.svg" />
+        {% comment %}
         {% responsive_image_block %}
           path: '_assets/img/studies/vixen-fitness/post-natal-flyer-back.png'
           alt: 'The back of an post-natal training flyer'
           sizes: '(min-width: 42em) 36em, 100vw'
         {% endresponsive_image_block %}
+        {% endcomment %}
       </div>
     </div>
     <span class="swiper-button-prev">

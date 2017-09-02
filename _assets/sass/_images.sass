@@ -134,7 +134,12 @@
       left: auto
       position: absolute
       top: auto
+      transition: opacity .25s
       width: $baseline
+
+      &.swiper-button-disabled
+        opacity: 0
+        pointer-events: none
 
       svg
         height: 100%
