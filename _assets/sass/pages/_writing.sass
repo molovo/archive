@@ -7,10 +7,6 @@ main > .post
   display: flex
   flex-wrap: wrap
   justify-content: space-between
-
-  @media (min-width: 42em)
-    flex-wrap: nowrap
-
   &__share
     svg
       vertical-align: middle
@@ -30,10 +26,14 @@ main > .post
     color: $color-red
 
   &__content
+    flex: 0 0 100%
     font-size: 1.125em
     line-height: $baseline
     max-width: #{(1/1.125) * 36em}
     width: 100%
+
+    @media (min-width: 42em)
+      flex: 0 0 36em
 
   &__meta
     display: block
@@ -68,7 +68,7 @@ main > .post
     position: sticky
     top: 7.5em
 
-    @media (min-width: 42em)
+    @media (min-width: 51em)
       flex-direction: column
       top: between(7.5em, 12em, 42em, 80em)
       transform: translateX(-.6em)
@@ -92,21 +92,21 @@ main > .post
       transform: translate(.5em, -62.5%)
       width: 100%
 
-      @media (min-width: 42em)
+      @media (min-width: 51em)
         transform: translate(.75em, -62.5%)
 
     &__link
       margin: 0 $baseline 0 0
       position: relative
 
-      @media (min-width: 42em)
+      @media (min-width: 51em)
         margin: 0 auto $baseline
 
       &--like,
       &--mention
         margin-right: #{$baseline * 1.5}
 
-        @media (min-width: 42em)
+        @media (min-width: 51em)
           margin-right: 0
 
       &--like
