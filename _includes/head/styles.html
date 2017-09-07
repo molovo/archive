@@ -1,6 +1,10 @@
 {% if site.environment == 'production' %}
-  <link rel="preload" href="/css/main.css" as="style" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/css/main.css"></noscript>
+  <link rel="preload" href="/css/main.css" as="style" onload="this.rel='stylesheet'" />
+  <link rel="preload" href="https://use.typekit.net/mmt3fau.css" as="style" onload="this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/mmt3fau.css" />
+  </noscript>
 
   <script>
   /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
