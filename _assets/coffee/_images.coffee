@@ -1,3 +1,4 @@
+require 'intersection-observer'
 Swiper = require 'swiper'
 
 ###*
