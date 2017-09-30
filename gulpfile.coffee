@@ -4,7 +4,7 @@ source       = require 'vinyl-source-stream'
 buffer       = require 'vinyl-buffer'
 gutil        = require 'gulp-util'
 rename       = require 'gulp-rename'
-browserSync  = require 'browser-sync'
+livereload   = require 'gulp-livereload'
 spawn        = require('child_process').spawn
 
 # Dependencies for compiling coffeescript
@@ -87,6 +87,7 @@ gulp.task 'compile:sass', () ->
     .pipe sourcemaps.write('./')
     .pipe rename('main.css')
     .pipe gulp.dest('_site/css/')
+    .pipe livereload()
 
 gulp.task 'compile:coffee', () ->
   # Set up the browserify instance
@@ -106,6 +107,7 @@ gulp.task 'compile:coffee', () ->
     .pipe rename('main.min.js')
     .pipe sourcemaps.write('./')
     .pipe gulp.dest('_site/js/')
+    .pipe livereload()
 
 gulp.task 'compile:critical', () ->
   gulp.src '_site/**/*.html'
@@ -143,6 +145,7 @@ gulp.task 'compile:images', () ->
   else
     gulp.src sources.images
       .pipe gulp.dest('_site/img/')
+      .pipe livereload()
 
 gulp.task 'compile:html', () ->
   args = [
@@ -162,28 +165,12 @@ gulp.task 'compile:html', () ->
 
   spawn 'bundle', args, stdio: 'inherit'
 
-gulp.task 'watch', () ->
+gulp.task 'watch', ['compile'], () ->
+  livereload.listen()
   gulp.watch sources.images, ['compile:images']
   gulp.watch sources.coffee, ['compile:coffee']
   gulp.watch sources.sass, ['compile:sass']
 
-gulp.task 'serve', ['compile', 'watch'], () ->
-  browserSync.init(
-    server:
-      baseDir: './_site'
-    snippetOptions:
-      rule:
-        match: /<\/head>/i
-        fn: (snippet, match) -> snippet + match
-  )
-
-  reloading = null
-
-  gulp.watch '_site/**/*'
-    .on 'change', () ->
-      clearTimeout reloading
-      reloading = setTimeout(
-        () ->
-          browserSync.reload()
-        250
-      )
+  gulp.watch '_site/**/*.html'
+    .on 'change', (file) ->
+      livereload.changed(file.path)
