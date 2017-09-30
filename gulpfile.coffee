@@ -149,8 +149,10 @@ gulp.task 'compile:html', () ->
     'exec'
     'jekyll'
     'build'
+    '--watch'
     '--incremental'
     '--trace'
+    '--drafts'
     '--config'
     '_config.yml,_config.dev.yml'
   ]
@@ -164,7 +166,6 @@ gulp.task 'watch', () ->
   gulp.watch sources.images, ['compile:images']
   gulp.watch sources.coffee, ['compile:coffee']
   gulp.watch sources.sass, ['compile:sass']
-  gulp.watch sources.views, ['compile:html']
 
 gulp.task 'serve', ['compile', 'watch'], () ->
   browserSync.init(
