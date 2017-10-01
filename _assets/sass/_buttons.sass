@@ -1,35 +1,52 @@
-.button
-  appearance: none
-  background: $color-red
-  border: .125em solid transparent
-  color: $color-white
-  display: inline-block
-  font-size: .75em
-  font-weight: 600
-  letter-spacing: .025em
-  line-height: $baseline
-  opacity: 1
-  padding: .5em 1.5em .75em
-  transition: background-color .25s, border-color .25s, color .25s, opacity .25s
-  text-transform: uppercase
+// .button
+//   appearance: none
+//   background: $color-red
+//   border: .125em solid transparent
+//   color: $color-white
+//   display: inline-block
+//   font-size: .75em
+//   font-weight: 600
+//   letter-spacing: .025em
+//   line-height: $baseline
+//   opacity: 1
+//   padding: .5em 1.5em .75em
+//   transition: background-color .25s, border-color .25s, color .25s, opacity .25s
+//   text-transform: uppercase
 
-  &:hover
-    opacity: .9
+//   &:hover
+//     opacity: .9
+//     text-decoration: none
+
+//   &--white
+//     background: $color-white
+//     color: $color-red
+
+//   &--bordered
+//     border-color: $color-almost-black
+//     background: transparent
+//     color: $color-almost-black
+
+//     &.button--white
+//       border-color: $color-white
+//       color: $color-white
+
+//     &:hover
+//       background: $color-white
+//       color: $color-red
+
+.button
+  +font-secondary
+  color: $color-almost-black
+  position: relative
+
+  &, &:hover
     text-decoration: none
 
-  &--white
-    background: $color-white
-    color: $color-red
-
-  &--bordered
-    border-color: $color-almost-black
-    background: transparent
-    color: $color-almost-black
-
-    &.button--white
-      border-color: $color-white
-      color: $color-white
-
-    &:hover
-      background: $color-white
-      color: $color-red
+  &::after
+    background: $color-red
+    bottom: -.25em
+    content: ''
+    height: .125em
+    left: 0
+    position: absolute
+    right: 0

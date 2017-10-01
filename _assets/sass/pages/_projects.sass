@@ -25,6 +25,7 @@
 
   &__project
     border: 1px solid $color-gray
+    border-radius: .25em
     box-sizing: border-box
     flex: 0 0 100%
     line-height: $baseline
@@ -87,3 +88,52 @@
 
   &__link
     color: $color-almost-black
+
+.project-highlights
+  align-items: flex-start
+  display: flex
+  flex-wrap: wrap
+  margin: 0 0 #{$baseline * 4}
+
+  &__column
+    &--left
+      flex: 0 0 100%
+
+      @media (min-width: 42em)
+        flex: 0 0 45%
+        position: sticky
+        top: 0
+
+      @media (min-width: 56em)
+        flex: 0 0 40%
+
+    &--right
+      flex: 0 0 100%
+
+      @media (min-width: 42em)
+        flex: 0 0 55%
+
+      @media (min-width: 56em)
+        flex: 0 0 60%
+
+  &__list
+    list-style: none
+    margin: #{$baseline * 3} 0 0
+
+  &__item
+    display: flex
+
+    &:not(:last-child)
+      margin: 0 0 #{$baseline * 3}
+
+  &__image
+    flex: 0 0 #{$baseline * 2}
+    margin-right: $baseline
+
+    @media (min-width: 56em)
+      margin-right: #{$baseline * 2}
+      flex: 0 0 #{$baseline * 4}
+
+    img
+      border-radius: .25em
+      width: 100%
