@@ -1,8 +1,6 @@
 import { polyfill } from 'es6-promise'
 import 'isomorphic-fetch'
 import 'intersection-observer'
-polyfill()
-
 import Projects from './projects'
 import Title from './title'
 import Search from './search'
@@ -10,8 +8,8 @@ import Menu from './menu'
 import Likes from './likes'
 import Images from './images'
 import Github from './github'
-import Articles from './articles'
 import Turbolinks from 'turbolinks'
+polyfill()
 
 document.addEventListener('turbolinks:load', () => {
   new Github()
@@ -21,7 +19,6 @@ document.addEventListener('turbolinks:load', () => {
   new Title()
   new Likes()
   new Images()
-  new Articles()
 })
 
 Turbolinks.start()

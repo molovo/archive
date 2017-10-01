@@ -48,8 +48,6 @@ export default class Search {
    * @return {Search}
    */
   constructor () {
-    console.log(this.term, this.input, this.results)
-
     if (!this.input || !this.results) {
       return
     }
