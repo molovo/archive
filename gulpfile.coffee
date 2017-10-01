@@ -11,8 +11,10 @@ spawn        = require('child_process').spawn
 uglify       = require 'gulp-uglify'
 sourcemaps   = require 'gulp-sourcemaps'
 browserify   = require 'browserify'
+babelify     = require 'babelify'
+uglifyify    = require 'uglifyify'
 watchify     = require 'watchify'
-coffeelint   = require 'gulp-coffeelint'
+eslint       = require 'gulp-eslint'
 
 # Dependencies for compiling sass
 sassLint     = require 'gulp-sass-lint'
@@ -31,7 +33,7 @@ htmlmin      = require 'gulp-htmlmin'
 # Sources and entry points for compilation
 sources =
   sass: '_assets/sass/**/*.s+(a|c)ss'
-  coffee: '_assets/coffee/**/*.coffee'
+  js: '_assets/js/**/*.js'
   images: [
     '_assets/img/**/*'
     '_site/img/**/resized/**/*'
@@ -45,7 +47,7 @@ sources =
   ]
 entries =
   sass: '_assets/sass/main.sass'
-  coffee: '_assets/coffee/main.coffee'
+  js: '_assets/js/main.js'
 
 ###*
  * The default task. Lints and compiles sass and coffeescript
@@ -55,7 +57,7 @@ gulp.task 'default', ['lint', 'compile']
 ###*
  * Linting tasks
 ###
-gulp.task 'lint', ['lint:sass', 'lint:coffee']
+gulp.task 'lint', ['lint:sass', 'lint:js']
 
 gulp.task 'lint:sass', () ->
   gulp.src sources.sass
@@ -63,16 +65,16 @@ gulp.task 'lint:sass', () ->
     .pipe sassLint.format()
     .pipe sassLint.failOnError()
 
-gulp.task 'lint:coffee', () ->
-  gulp.src sources.coffee
-    .pipe coffeelint()
-    .pipe coffeelint.reporter()
-    .pipe coffeelint.reporter('fail')
+gulp.task 'lint:js', () ->
+  gulp.src sources.js
+    .pipe eslint()
+    .pipe eslint.format()
+    .pipe eslint.failOnError()
 
 ###*
  * Compilation tasks
 ###
-gulp.task 'compile', ['compile:html', 'compile:sass', 'compile:coffee']
+gulp.task 'compile', ['compile:html', 'compile:sass', 'compile:js']
 
 gulp.task 'compile:sass', () ->
   gulp.src entries.sass
@@ -89,25 +91,22 @@ gulp.task 'compile:sass', () ->
     .pipe gulp.dest('_site/css/')
     .pipe livereload()
 
-gulp.task 'compile:coffee', () ->
+gulp.task 'compile:js', () ->
   # Set up the browserify instance
-  bundler = browserify(
-    transform: ['coffeeify']
-    debug: true
-  )
-  bundler.add entries.coffee
+  bundle = browserify(entries.js)
 
-  # Compile the source
-  bundler.bundle()
-    .on 'error', gutil.log
-    .pipe source('main.js')
-    .pipe buffer()
-    .pipe sourcemaps.init(loadMaps: true)
-    .pipe uglify()
-    .pipe rename('main.min.js')
-    .pipe sourcemaps.write('./')
-    .pipe gulp.dest('_site/js/')
-    .pipe livereload()
+  if gutil.env.env is 'production'
+    bundle.transform('uglifyify', global: true)
+
+  bundle.transform('babelify')
+        .bundle()
+        .on 'error', gutil.log
+        .pipe source('main.js')
+        .pipe buffer()
+        # .pipe uglify()
+        .pipe rename('main.min.js')
+        .pipe gulp.dest('_site/js/')
+        .pipe livereload()
 
 gulp.task 'compile:critical', () ->
   gulp.src '_site/**/*.html'
@@ -168,7 +167,7 @@ gulp.task 'compile:html', () ->
 gulp.task 'watch', ['compile'], () ->
   livereload.listen()
   gulp.watch sources.images, ['compile:images']
-  gulp.watch sources.coffee, ['compile:coffee']
+  gulp.watch sources.js, ['compile:js']
   gulp.watch sources.sass, ['compile:sass']
 
   gulp.watch '_site/**/*.html'
