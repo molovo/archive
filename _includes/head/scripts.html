@@ -1,6 +1,6 @@
 <script src="/js/main.min.js" async defer></script>
 
-{% if site.environment %}
+{% if site.environment != 'production' %}
   <script src="http://localhost:35729/livereload.js" async></script>
 {% endif %}
 
