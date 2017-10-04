@@ -199,9 +199,17 @@
   &__pair
     align-items: stretch
     display: flex
+    width: 100%
 
     img, picture
-      max-width: 50%
+      align-self: stretch
+      flex: 1 1 auto
+      height: 100%
+      width: auto
+
+      img, source
+        height: 100%
+        width: 100%
 
 picture
   overflow: hidden

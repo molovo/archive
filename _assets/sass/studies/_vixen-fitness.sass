@@ -97,6 +97,46 @@ $vixen-fitness-white: #fff
         &__likes
           color: $color-white
 
+  &--website
+    background: $vixen-fitness-yellow
+
+    .study__title
+      color: $vixen-fitness-plum
+
+    .study__client
+      color: $vixen-fitness-white
+
+    .study__icons
+      .logo--frame,
+      .octicon--plus polygon,
+      .study__icon path
+        fill: $vixen-fitness-plum
+
+    .image--full-width,
+    .image--slideshow
+      background: $vixen-fitness-yellow
+      @media (min-width: 42em)
+        &::before
+          background: linear-gradient(to bottom, rgba($vixen-fitness-yellow, 0), $vixen-fitness-yellow 66.66%, $vixen-fitness-yellow)
+
+        &::after
+          background: linear-gradient(to top, rgba($vixen-fitness-yellow, 0), $vixen-fitness-yellow 66.66%, $vixen-fitness-yellow)
+
+      .swiper-button-next,
+      .swiper-button-prev
+        g
+          stroke: $vixen-fitness-pink
+
+    .image__caption
+      @media (min-width: 64em)
+        background: $vixen-fitness-yellow
+
+        &::before
+          background: linear-gradient(to bottom, rgba($vixen-fitness-yellow, 0), $vixen-fitness-yellow 66.66%, $vixen-fitness-yellow)
+
+        &::after
+          background: linear-gradient(to top, rgba($vixen-fitness-yellow, 0), $vixen-fitness-yellow 66.66%, $vixen-fitness-yellow)
+
 .study__type-sample
   &--montserrat
     span

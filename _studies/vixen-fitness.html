@@ -93,8 +93,16 @@ layout: study
 
       <figure class="image image--pull-left">
         <div class="image__pair">
-          <img src="/img/studies/vixen-fitness/place-cards.jpg" />
-          <img src="/img/studies/vixen-fitness/business-cards.jpg" />
+          {% responsive_image_block %}
+            path: '_assets/img/studies/vixen-fitness/place-cards.jpg'
+            alt: 'A set of place cards for use in circuit classes'
+            sizes: '(min-width: 42em) 36em, 60vw'
+          {% endresponsive_image_block %}
+          {% responsive_image_block %}
+            path: '_assets/img/studies/vixen-fitness/business-cards.jpg'
+            alt: "Gemma's business cards"
+            sizes: '(min-width: 42em) 36em, 40vw'
+          {% endresponsive_image_block %}
         </div>
 
         <figcaption class="image__caption">(left) a set of place cards for circuit classes; (right) Gemma's business cards</figcaption>
@@ -115,5 +123,7 @@ layout: study
         <figcaption class="image__caption">The homepage of the Vixen Fitness website</figcaption>
       </figure>
     </div>
+    
+    {% include social.html post=page %}
   </div>
 </section>
