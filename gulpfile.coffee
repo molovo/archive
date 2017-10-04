@@ -148,22 +148,35 @@ gulp.task 'compile:images', () ->
     .pipe livereload()
 
 gulp.task 'compile:html', () ->
-  args = [
-    'exec'
-    'jekyll'
-    'build'
-    '--watch'
-    '--incremental'
-    '--trace'
-    '--drafts'
-    '--config'
-    '_config.yml,_config.dev.yml'
-  ]
+  args = {
+    dev: [
+      'exec'
+      'jekyll'
+      'build'
+      '--watch'
+      '--incremental'
+      '--trace'
+      '--drafts'
+      '--config'
+      '_config.yml,_config.dev.yml'
+    ]
+    staging: [
+      'exec'
+      'jekyll'
+      'build'
+      '--config'
+      '_config.yml,_config.staging.yml'
+    ]
+    production: [
+      'exec'
+      'jekyll'
+      'build'
+    ]
+  }
 
-  if gutil.env.env is 'production'
-    args = ['exec', 'jekyll', 'build']
+  env = gutil.env.env or 'dev'
 
-  spawn 'bundle', args, stdio: 'inherit'
+  spawn 'bundle', args[env], stdio: 'inherit'
 
 gulp.task 'watch', ['compile'], () ->
   livereload.listen()

@@ -1,0 +1,9 @@
+environment: staging
+url: 'https://staging.molovo.co'
+webmentions:
+  pause_lookups: true
+
+collections:
+  # Only output studies in dev mode for the moment
+  studies:
+    output: true

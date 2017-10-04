@@ -2,7 +2,12 @@
 
 <meta name="description" content="{{ description }}" />
 <meta name="author" content="{{ site.author }}" />
-<meta name="robots" content="{% if page.robots %}{{ page.robots }},{% endif %}noodp" />
+
+{% if site.environment == 'production' %}
+  <meta name="robots" content="{% if page.robots %}{{ page.robots }},{% endif %}noodp" />
+{% else %}
+  <meta name="robots" content="noindex,nofollow" />
+{% endif %}
 
 <meta property="og:locale" content="en_GB">
 <meta property="og:type" content="website">
