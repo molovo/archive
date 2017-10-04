@@ -7,6 +7,8 @@ rename       = require 'gulp-rename'
 livereload   = require 'gulp-livereload'
 spawn        = require('child_process').spawn
 changed      = require 'gulp-changed'
+clone        = require 'gulp-clone'
+sink         = clone.sink()
 
 # Dependencies for compiling coffeescript
 uglify       = require 'gulp-uglify'
@@ -143,7 +145,9 @@ gulp.task 'compile:images', () ->
       imagemin.optipng optimizationLevel: 5
       imagemin.svgo plugins: [removeViewBox: true]
     ])
+    .pipe sink
     .pipe webp(method: 6)
+    .pipe sink.tap()
     .pipe gulp.dest('_site/img/')
     .pipe livereload()
 
