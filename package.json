@@ -42,6 +42,7 @@
     "gulp-xo": "^0.15.0",
     "hogan.js": "^3.0.2",
     "imagemin-mozjpeg": "^6.0.0",
+    "run-sequence": "^2.2.0",
     "uglifyify": "^4.0.4",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",

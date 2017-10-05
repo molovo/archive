@@ -6,9 +6,11 @@ gutil        = require 'gulp-util'
 rename       = require 'gulp-rename'
 livereload   = require 'gulp-livereload'
 spawn        = require('child_process').spawn
+spawnSync    = require('child_process').spawnSync
 changed      = require 'gulp-changed'
 clone        = require 'gulp-clone'
 sink         = clone.sink()
+runSequence  = require 'run-sequence'
 
 # Dependencies for compiling coffeescript
 uglify       = require 'gulp-uglify'
@@ -53,14 +55,13 @@ entries =
   js: '_assets/js/main.js'
 
 ###*
- * The default task. Lints and compiles sass and coffeescript
-###
-gulp.task 'default', ['lint', 'compile']
-
-###*
  * Linting tasks
 ###
-gulp.task 'lint', ['lint:sass', 'lint:js']
+gulp.task 'lint', (cb) ->
+  runSequence(
+    'lint:sass'
+    'lint:js'
+  )
 
 gulp.task 'lint:sass', () ->
   gulp.src sources.sass
@@ -77,7 +78,16 @@ gulp.task 'lint:js', () ->
 ###*
  * Compilation tasks
 ###
-gulp.task 'compile', ['compile:html', 'compile:sass', 'compile:js', 'compile:images']
+gulp.task 'compile', (cb) ->
+  tasks = [
+    ['compile:html', 'compile:sass', 'compile:js']
+    'compile:images'
+  ]
+
+  if gutil.env.env isnt 'dev'
+    tasks.push 'compile:critical'
+
+  runSequence(tasks..., cb)
 
 gulp.task 'compile:sass', () ->
   gulp.src entries.sass
@@ -178,11 +188,13 @@ gulp.task 'compile:html', () ->
     ]
   }
 
+
   env = gutil.env.env or 'dev'
+  cmd = if env is 'dev' then spawn else spawnSync
 
-  spawn 'bundle', args[env], stdio: 'inherit'
+  cmd 'bundle', args[env], stdio: 'inherit'
 
-gulp.task 'watch', ['compile'], () ->
+gulp.task 'watch', () ->
   livereload.listen()
   gulp.watch sources.images, ['compile:images']
   gulp.watch sources.js, ['compile:js']
@@ -191,3 +203,10 @@ gulp.task 'watch', ['compile'], () ->
   gulp.watch '_site/**/*.html'
     .on 'change', (file) ->
       livereload.changed(file.path)
+
+gulp.task 'default', (cb) ->
+  runSequence(
+    'compile',
+    'watch',
+    cb
+  )

@@ -1,10 +1,10 @@
 # Global settings applied to the whole site.
 [build]
   publish = "_site"
-  command = "gulp compile --env production && gulp compile:critical"
+  command = "gulp compile --env production"
 
 [context.branch-deploy]
-  command = "gulp compile && gulp compile:critical"
+  command = "gulp compile"
 
 [context.staging]
-  command = "gulp compile --env staging && gulp compile:critical"
+  command = "gulp compile --env staging"
