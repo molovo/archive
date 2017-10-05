@@ -63,16 +63,32 @@ layout: study
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img data-action="zoom" src="/img/studies/vixen-fitness/ante-natal-flyer-front.svg" />
+              {% responsive_image_block %}
+                path: '_assets/img/studies/vixen-fitness/ante-natal-flyer-front.png'
+                alt: "The front of a flyer for ante-natal training services"
+                sizes: '(min-width: 42em) 24em, 90vw'
+              {% endresponsive_image_block %}
             </div>
             <div class="swiper-slide">
-              <img data-action="zoom" src="/img/studies/vixen-fitness/ante-natal-flyer-back.svg" />
+              {% responsive_image_block %}
+                path: '_assets/img/studies/vixen-fitness/ante-natal-flyer-back.png'
+                alt: "The back of a flyer for ante-natal training services"
+                sizes: '(min-width: 42em) 24em, 90vw'
+              {% endresponsive_image_block %}
             </div>
             <div class="swiper-slide">
-              <img data-action="zoom" src="/img/studies/vixen-fitness/post-natal-flyer-front.svg" />
+              {% responsive_image_block %}
+                path: '_assets/img/studies/vixen-fitness/post-natal-flyer-front.png'
+                alt: "The front of a flyer for post-natal training services"
+                sizes: '(min-width: 42em) 24em, 90vw'
+              {% endresponsive_image_block %}
             </div>
             <div class="swiper-slide">
-              <img data-action="zoom" src="/img/studies/vixen-fitness/post-natal-flyer-back.svg" />
+              {% responsive_image_block %}
+                path: '_assets/img/studies/vixen-fitness/post-natal-flyer-back.png'
+                alt: "The back of a flyer for post-natal training services"
+                sizes: '(min-width: 42em) 24em, 90vw'
+              {% endresponsive_image_block %}
             </div>
           </div>
           <span class="swiper-button-prev">
@@ -95,7 +111,7 @@ layout: study
         <div class="image__pair image__pair--cards">
           {% responsive_image_block %}
             path: '_assets/img/studies/vixen-fitness/place-cards.jpg'
-            alt: 'A set of place cards for use in circuit classes'
+            alt: 'A set of exercise place cards for use in circuit classes'
             sizes: '(min-width: 42em) 36em, 60vw'
           {% endresponsive_image_block %}
           {% responsive_image_block %}
@@ -105,7 +121,7 @@ layout: study
           {% endresponsive_image_block %}
         </div>
 
-        <figcaption class="image__caption">(left) a set of place cards for circuit classes; (right) Gemma's business cards</figcaption>
+        <figcaption class="image__caption">(left) a set of exercise place cards for use in circuit classes; (right) Gemma's business cards</figcaption>
       </figure>
     </div>
 
@@ -118,12 +134,60 @@ layout: study
 
   <div class="study__content">
     <div class="post__content">
+      <p>With training being a private activity for so many people, we wanted the website to speak directly to visitors. Copy was hugely important here, with friendly, informal prose guiding the user to individual service pages tailored to their situation.</p>
+
       <figure class="image">
-        <img data-src="/img/studies/vixen-fitness/website-homepage-resized.gif" />
+        {% responsive_image_block %}
+          path: '_assets/img/studies/vixen-fitness/website-homepage.png'
+          alt: "The homepage of the Vixen Fitness website"
+          sizes: '(min-width: 42em) 36em, 100vw'
+        {% endresponsive_image_block %}
+        {% comment %} <img data-src="/img/studies/vixen-fitness/website-homepage-resized.gif" /> {% endcomment %}
         <figcaption class="image__caption">The homepage of the Vixen Fitness website</figcaption>
       </figure>
+
+      <p>I built a page for each of Gemma's services to match the set of postcards I'd designed previously, with each one being able to act as a landing page; both for the links on the postcards themselves, and for targeted online and social media advertising campaigns.</p>
+
+      <figure class="image image--slideshow image--service-pages">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              {% responsive_image_block %}
+                path: '_assets/img/studies/vixen-fitness/ante-natal-training-page.png'
+                alt: "A landing page for ante-natal training services"
+                sizes: '(min-width: 42em) 24em, 90vw'
+              {% endresponsive_image_block %}
+            </div>
+            <div class="swiper-slide">
+              {% responsive_image_block %}
+                path: '_assets/img/studies/vixen-fitness/post-natal-training-page.png'
+                alt: "A landing page for post-natal training services"
+                sizes: '(min-width: 42em) 24em, 90vw'
+              {% endresponsive_image_block %}
+            </div>
+            <div class="swiper-slide">
+              {% responsive_image_block %}
+                path: '_assets/img/studies/vixen-fitness/mobile-personal-training-page.png'
+                alt: "A landing page for mobile personal training services"
+                sizes: '(min-width: 42em) 24em, 90vw'
+              {% endresponsive_image_block %}
+            </div>
+          </div>
+          <span class="swiper-button-prev">
+            {% include icons/chevrons-left.svg %}
+          </span>
+          <span class="swiper-button-next">
+            {% include icons/chevrons-right.svg %}
+          </span>
+        </div>
+
+        <figcaption class="image__caption">
+          <strong><span class="swiper-current">1</span> of 3</strong> &mdash;
+          The series of service pages on Gemma's website
+        </figcaption>
+      </figure>
     </div>
-    
+
     {% include social.html post=page %}
   </div>
 </section>

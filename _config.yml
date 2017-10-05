@@ -89,7 +89,7 @@ gems:
 
 responsive_image:
   template: _includes/responsive-image.html
-  default_quality: 100
+  default_quality: 72
   sizes:
     - width: 320
     - width: 480
