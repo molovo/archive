@@ -31,3 +31,7 @@ pagination:
 <a id="webmentions"></a>
 <h4>There have been {% webmention_count page.url %} responses</h4>
 {% webmentions page.url %}
+
+{% assign random = site.time | date: "%s%N" | modulo: site.posts.size %}
+{% assign study = site.studies[random] %}
+{% include study.html study=study cta=true %}

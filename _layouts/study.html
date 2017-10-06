@@ -1,7 +1,18 @@
 ---
 layout: base
+pagination:
+  enabled: true
 ---
 
 <article class="study study--{{ page.slug }}">
   {{ content }}
 </article>
+
+{% if page.collection == 'studies' %}
+  {% assign next = page.next %}
+  {% unless next %}
+    {% assign next = page.previous %}
+  {% endunless %}
+
+  {% include study.html study=next cta=true %}
+{% endif %}
