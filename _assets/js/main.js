@@ -8,6 +8,7 @@ import Menu from './menu'
 import Likes from './likes'
 import Images from './images'
 import Github from './github'
+import ScrollSync from './scroll-sync'
 import Turbolinks from 'turbolinks'
 
 document.addEventListener('turbolinks:load', () => {
@@ -18,6 +19,7 @@ document.addEventListener('turbolinks:load', () => {
   new Title()
   new Likes()
   new Images()
+  new ScrollSync()
 })
 
 polyfill()

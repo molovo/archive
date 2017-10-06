@@ -134,17 +134,21 @@ layout: study
 
   <div class="study__content">
     <div class="post__content">
-      <p>With training being a private activity for so many people, we wanted the website to speak directly to visitors. Copy was hugely important here, with friendly, informal prose guiding the user to individual service pages tailored to their situation.</p>
-
       <figure class="image">
-        {% responsive_image_block %}
-          path: '_assets/img/studies/vixen-fitness/website-homepage.png'
-          alt: "The homepage of the Vixen Fitness website"
-          sizes: '(min-width: 42em) 36em, 100vw'
-        {% endresponsive_image_block %}
-        {% comment %} <img data-src="/img/studies/vixen-fitness/website-homepage-resized.gif" /> {% endcomment %}
+        {% comment %} <div class="image__scroll-sync scroll-sync">
+          <div class="scroll-sync__wrapper">
+            {% responsive_image_block %}
+              path: '_assets/img/studies/vixen-fitness/website-homepage.png'
+              alt: "The homepage of the Vixen Fitness website"
+              sizes: '(min-width: 42em) 36em, 100vw'
+            {% endresponsive_image_block %}
+          </div>
+        </div> {% endcomment %}
+        <img data-src="/img/studies/vixen-fitness/website-homepage-resized.gif" />
         <figcaption class="image__caption">The homepage of the Vixen Fitness website</figcaption>
       </figure>
+
+      <p>With training being a private activity for so many people, we wanted the website to speak directly to visitors. Copy was hugely important here, with friendly, informal prose guiding the user to individual service pages tailored to their situation.</p>
 
       <p>I built a page for each of Gemma's services to match the set of postcards I'd designed previously, with each one being able to act as a landing page; both for the links on the postcards themselves, and for targeted online and social media advertising campaigns.</p>
 
