@@ -1,5 +1,5 @@
 ---
-title: The Art of Storytelling
+title: The art of storytelling
 layout: post
 date: 2014-07-29 12:00:00
 tags:

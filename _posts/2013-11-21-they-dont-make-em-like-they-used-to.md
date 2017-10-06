@@ -1,5 +1,5 @@
 ---
-title: "They Don't Make 'em Like They Used To..."
+title: "They don't make 'em like they used to..."
 layout: post
 date: 2013-11-21 20:41:07
 tags:

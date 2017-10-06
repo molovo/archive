@@ -1,5 +1,5 @@
 ---
-title:  "First Past the Post"
+title:  "First past the post"
 layout: post
 date:   2013-03-01 16:35:09
 description: "A short discussion of the book 'Execute' by Drew Wilson and Josh Long"

@@ -1,5 +1,5 @@
 ---
-title: Getting it Wrong
+title: Getting it wrong
 layout: post
 description: A heartfelt apology to users with accessibility needs.
 tags:

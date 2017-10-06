@@ -1,5 +1,5 @@
 ---
-title: This Site has been on a Diet
+title: This site has been on a diet
 layout: post
 date: 2015-04-10 12:00:00
 tags:

@@ -1,5 +1,5 @@
 ---
-title: Social Media responses on a Jekyll site using Webmentions
+title: Social media responses on a Jekyll site using webmentions
 layout: post
 tags:
 - web
@@ -19,7 +19,7 @@ I've tried a few times to host some form of comment feed on my Jekyll site, but 
   <figcaption class="image__caption">A screenshot of the commenting service Chatter, which I launched in 2013, appearing on an older version of this blog.</figcaption>
 </figure>
 
-I recently came across the new [Webmention](https://www.w3.org/TR/webmention/) specification, and the hosted webmention API [webmention.io](https://webmention.io). There were quite a few steps to get it set up, but now that it's done and everything is automated, I am able to have posts about my site and their responses appear as webmentions on my Jekyll blog automatically. I'll talk you through the process below.
+I recently came across the new [webmention](https://www.w3.org/TR/webmention/) specification, and the hosted webmention API [webmention.io](https://webmention.io). There were quite a few steps to get it set up, but now that it's done and everything is automated, I am able to have posts about my site and their responses appear as webmentions on my Jekyll blog automatically. I'll talk you through the process below.
 
 ### 1. Authenticate your domain
 

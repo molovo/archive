@@ -5,7 +5,6 @@ buffer       = require 'vinyl-buffer'
 gutil        = require 'gulp-util'
 rename       = require 'gulp-rename'
 livereload   = require 'gulp-livereload'
-spawn        = require('child_process').spawn
 spawnSync    = require('child_process').spawnSync
 changed      = require 'gulp-changed'
 clone        = require 'gulp-clone'
@@ -54,6 +53,8 @@ entries =
   sass: '_assets/sass/main.sass'
   js: '_assets/js/main.js'
 
+env = gutil.env.env or 'dev'
+
 ###*
  * Linting tasks
 ###
@@ -84,7 +85,7 @@ gulp.task 'compile', (cb) ->
     'compile:images'
   ]
 
-  if gutil.env.env isnt 'dev'
+  if env isnt 'dev'
     tasks.push 'compile:critical'
 
   runSequence(tasks..., cb)
@@ -108,7 +109,7 @@ gulp.task 'compile:js', () ->
   # Set up the browserify instance
   bundle = browserify(entries.js)
 
-  if gutil.env.env is 'production'
+  if env isnt 'dev'
     bundle.transform('uglifyify', global: true)
 
   bundle.transform('babelify')
@@ -167,7 +168,6 @@ gulp.task 'compile:html', () ->
       'exec'
       'jekyll'
       'build'
-      '--watch'
       '--incremental'
       '--trace'
       '--drafts'
@@ -188,17 +188,14 @@ gulp.task 'compile:html', () ->
     ]
   }
 
-
-  env = gutil.env.env or 'dev'
-  cmd = if env is 'dev' then spawn else spawnSync
-
-  cmd 'bundle', args[env], stdio: 'inherit'
+  spawnSync 'bundle', args[env], stdio: 'inherit'
 
 gulp.task 'watch', () ->
   livereload.listen()
   gulp.watch sources.images, ['compile:images']
   gulp.watch sources.js, ['compile:js']
   gulp.watch sources.sass, ['compile:sass']
+  gulp.watch sources.views, ['compile:html']
 
   gulp.watch '_site/**/*.html'
     .on 'change', (file) ->

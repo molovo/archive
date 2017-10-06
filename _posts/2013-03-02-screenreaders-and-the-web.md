@@ -1,5 +1,5 @@
 ---
-title:  "Screenreaders and The Web"
+title:  "Screenreaders and the web"
 layout: post
 date:   2013-03-02 16:32:41
 description: "An idea to improve the audio output of screenreaders"

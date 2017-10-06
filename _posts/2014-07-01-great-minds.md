@@ -1,5 +1,5 @@
 ---
-title: Great Minds
+title: Great minds
 layout: post
 date: 2014-07-31 12:00:00
 tags:
