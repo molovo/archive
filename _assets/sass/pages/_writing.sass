@@ -170,20 +170,22 @@ main > .post
         white-space: nowrap
 
     &__next
+      +font-secondary
+
       &::after
         color: $color-red
         content: '→'
-        margin-left: 1ch
 
       &:hover
         &::after
           text-decoration: none
 
     &__previous
+      +font-secondary
+      
       &::before
         color: $color-red
         content: '←'
-        margin-right: 1ch
 
       &:hover
         &::before

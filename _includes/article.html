@@ -23,15 +23,15 @@
       {% endif %}
   
       {% if include.listing == 'true' %}
-        <a href="{{ include.post.url }}"
-          class="post__link u-url u-uid"
-          title="{{ include.post.title }}">
-          <h1 itemprop="headline"
-              class="post__title p-name"
-              id="{{ include.post.title | slugify }}-title">
+        <h1 itemprop="headline"
+            class="post__title p-name"
+            id="{{ include.post.title | slugify }}-title">
+          <a href="{{ include.post.url }}"
+            class="post__link u-url u-uid"
+            title="{{ include.post.title }}">
             {{ include.post.title }}
-          </h1>
-        </a>
+          </a>
+        </h1>
       {% else %}
         <h1 itemprop="headline"
             class="post__title p-name"
@@ -68,7 +68,7 @@
   <section itemprop="articleBody"
            class="post__content e-content">
     {% if include.hide-content %}
-      <a href="{{ include.post.url }}" class="button">Read Article</a>
+      <a href="{{ include.post.url }}" class="button">Read article</a>
     {% else %}
       {{ include.post.content | markdownify | improve }}
     {% endif %}

@@ -7,14 +7,27 @@
 
 .studies
   &--cta
+    overflow: hidden
     position: relative
     z-index: 0
 
     .page--post &
-      margin: 0 -6em
+      margin: 0 -1.5em
+
+      @media (min-width: 42em)
+        margin: 0 between(-1.5em, -6em, 42em, 80em)
+
+      @media (min-width: 80em)
+        margin: 0 -6em
 
     .studies__item
-      padding: 6em
+      padding: 3em 1.5em
+
+      @media (min-width: 42em)
+        padding: between(3em, 6em, 42em, 80em) between(1.5em, 6em, 42em, 80em)
+
+      @media (min-width: 80em)
+        padding: 6em
 
     .studies__image
       margin-top: -100vw
@@ -49,24 +62,44 @@
   &__title
     +font-secondary
 
-  &__item:nth-child(2n)
+  &__item
     justify-content: flex-start
+    position: relative
 
-    .studies__content
-      margin-right: #{$baseline * 2}
+    @media (max-width: 54em)
+      .studies__content
+        flex: 0 0 100%
+        z-index: 1
 
-    .studies__image
-      margin-right: -50vw
+      .studies__image
+        bottom: 3em
+        position: absolute
+        right: -25vw
 
-  &__item:nth-child(2n+1)
-    justify-content: flex-end
+      .studies__title
+        font-size: 2.25em
 
-    .studies__content
-      margin-left: #{$baseline * 2}
-      order: 1
+        @media (max-width: 24em)
+          font-size: 1.5em
 
-    .studies__image
-      margin-left: -50vw
+    @media (min-width: 54em)
+      .studies__content
+        margin-right: #{$baseline * 2}
+
+      .studies__image
+        margin-right: -50vw
+
+      &:nth-child(2n+1):not(:only-child)
+        justify-content: flex-end
+
+        .studies__content
+          margin-left: #{$baseline * 2}
+          margin-right: 0
+          order: 1
+
+        .studies__image
+          margin-left: -50vw
+          margin-right: 0
 
 .study
   &__intro

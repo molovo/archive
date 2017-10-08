@@ -75,7 +75,7 @@
   pointer-events: none
   right: 0
   top: 0
-  transition: opacity .5s
+  transition: opacity .375s
   z-index: 9999
 
   @media (min-width: 42em)
@@ -103,6 +103,9 @@
     position: relative
     transition: opacity .375s .5s, transform .375s .5s
     transform: translateY(50%)
+    -moz-osx-font-smoothing: antialiased
+    -webkit-font-smoothing: antialiased
+    font-smooth: always
 
     @media (min-width: 42em)
       flex: 0 0 50%
@@ -118,7 +121,7 @@
 
       @for $i from 1 through 6
         &:nth-child(#{$i})
-          transition: opacity .375s #{$i * .075s}, transform .375s #{$i * .075s}
+          transition: opacity .25s #{.375s + ($i * .075s)}, transform .25s #{.375s + ($i * .075s)}
 
     @media (min-width: 42em)
       &--case-studies,
