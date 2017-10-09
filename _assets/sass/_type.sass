@@ -177,28 +177,3 @@ blockquote
       size: .75em
       style: normal
       weight: 600
-
-pre
-  background: $color-almost-black
-  color: $color-white
-  display: block
-  margin: 0 0 $baseline
-  padding: #{$baseline / 2} $baseline #{$baseline / 1.5}
-  width: 100%
-
-  @media (min-width: 42em)
-    margin: 0 0 $baseline #{$baseline * -1}
-    width: calc(100% + #{($baseline * 1)})
-
-code
-  background: $color-gray
-  font:
-    family: $font-monospace
-    size: .75em
-  // Line height should be inherited, but for inline code blocks where it isn't, this maintains the baseline
-  line-height: 0
-  padding: .25em
-
-  pre &
-    background: transparent
-    padding: 0
