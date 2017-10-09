@@ -7,6 +7,7 @@ main > .post
   display: flex
   flex-wrap: wrap
   justify-content: space-between
+
   &__share
     svg
       vertical-align: middle
@@ -61,14 +62,17 @@ main > .post
 
   &__social
     display: inline-flex
+    flex: 0 0 100%
     font-size: .75em
-    margin-top: .5em
-    position: sticky
-    top: 7.5em
+    justify-content: flex-start
+    margin-right: auto
 
-    @media (min-width: 51em)
+    @media (min-width: 64em)
+      flex: 0 0 auto
       flex-direction: column
-      top: between(7.5em, 12em, 42em, 80em)
+      margin-right: 0
+      position: sticky
+      top: between(7.75em, 12.25em, 42em, 80em)
       transform: translateX(-.6em)
 
     @media (min-width: 80em)
@@ -94,17 +98,18 @@ main > .post
         transform: translate(.75em, -62.5%)
 
     &__link
+      flex: 0 0 auto
       margin: 0 $baseline 0 0
       position: relative
 
-      @media (min-width: 51em)
-        margin: 0 auto $baseline
+      @media (min-width: 64em)
+        margin: 0 0 $baseline
 
       &--like,
       &--mention
         margin-right: #{$baseline * 1.5}
 
-        @media (min-width: 51em)
+        @media (min-width: 64em)
           margin-right: 0
 
       &--like
