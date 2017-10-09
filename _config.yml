@@ -68,6 +68,14 @@ defaults:
     layout: study
     pagination: false
 
+autopages:
+  enabled: true
+  tags:
+    layouts:
+      - 'tag.html'
+    title: 'Posts tagged with &lsquo;:tag&rsquo;'
+    permalink: '/tag/:tag/'
+
 # Markdown Configuration
 markdown: redcarpet
 redcarpet:

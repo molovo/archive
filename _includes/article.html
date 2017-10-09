@@ -67,14 +67,8 @@
 
   <section itemprop="articleBody"
            class="post__content e-content">
-    {% if include.hide-content %}
-      <a href="{{ include.post.url }}" class="button">Read article</a>
-    {% else %}
-      {{ include.post.content | markdownify | improve }}
-    {% endif %}
+    {{ include.post.content | markdownify | improve }}
   </section>
 
-  {% unless include.hide-content %}
-    {% include social.html post=include.post %}
-  {% endunless %}
+  {% include social.html post=include.post %}
 </article>

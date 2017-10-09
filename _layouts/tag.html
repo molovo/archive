@@ -1,0 +1,45 @@
+---
+layout: page
+robots: noindex,follow
+pagination:
+  enabled: true
+---
+
+<section class="posts"
+         itemscope
+         itemtype="http://schema.org/Blog">
+  <h4>{{ page.title }}</h4>
+
+  <div class="posts__list">
+    {% for post in paginator.posts %}
+      {% include article.html post=post listing="true" %}
+
+      {% unless forloop.last %}
+        <hr class="posts__break">
+      {% endunless %}
+    {% endfor %}
+  </div>
+
+  <!-- Pagination links -->
+  {% if paginator.total_pages > 1 %}
+    <nav class="posts__pagination">
+      <ul>
+        <li>
+          {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}" class="posts__pagination__previous">Previous page</a>
+          {% endif %}
+        </li>
+
+        <li>
+          <span class="posts__pagination__page-number ">{{ paginator.page }} of {{ paginator.total_pages }}</span>
+        </li>
+
+        <li>
+          {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}" class="posts__pagination__next">Next page</a>
+          {% endif %}
+        </li>
+      </ul>
+    </div>
+  {% endif %}
+</section>
