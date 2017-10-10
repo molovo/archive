@@ -1,3 +1,5 @@
+import { bind } from 'decko'
+
 /**
  * Provides methods for handling nav
  *
@@ -40,6 +42,7 @@ export default class Menu {
     })
   }
 
+  @bind
   toggleMenu (evt) {
     evt.preventDefault()
 
