@@ -11,6 +11,10 @@ import Github from './github'
 import ScrollSync from './scroll-sync'
 import Turbolinks from 'turbolinks'
 
+document.addEventListener('turbolinks:click', () => {
+  document.documentElement.classList.add('loading')
+})
+
 document.addEventListener('turbolinks:load', () => {
   new Github()
   new Projects()
@@ -20,6 +24,7 @@ document.addEventListener('turbolinks:load', () => {
   new Likes()
   new Images()
   new ScrollSync()
+  document.documentElement.classList.remove('loading')
 })
 
 polyfill()

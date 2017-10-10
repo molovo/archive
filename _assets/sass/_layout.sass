@@ -11,13 +11,29 @@ body
 body
   background: $color-white
   overflow-y: auto
+  opacity: 1
   padding: 6em 1.5em 0
+  transition: opacity .5s ease-out
 
   @media (min-width: 42em)
     padding: 6em between(1.5em, 6em, 42em, 80em) 0
 
   @media (min-width: 80em)
     padding: 6em 6em 0
+
+  .loading &
+    opacity: 0
+    transition: opacity .5s ease-in
+
+main
+  .page:not(.page--study) &
+    opacity: 1
+    transform: translateY(0)
+    transition: opacity .5s .5s ease-in, transform .5s .5s ease-out
+
+    .loading &
+      opacity: 0
+      transform: translateY(3em)
 
 .turbolinks-progress-bar
   height: 5px
