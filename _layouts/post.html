@@ -40,5 +40,7 @@ pagination:
 <h4>There have been {% webmention_count page.url %} responses</h4>
 {% webmentions page.url %}
 
-{% assign study = site.studies | sort: 'order' | first %}
-{% include study.html study=study cta=true %}
+{% if site.environment != 'production' %}
+  {% assign study = site.studies | sort: 'order' | first %}
+  {% include study.html study=study cta=true %}
+{% endif %}
