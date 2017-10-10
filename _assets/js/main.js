@@ -26,7 +26,7 @@ document.addEventListener('turbolinks:load', () => {
   new Images()
   new ScrollSync()
   new Animator()
-  
+
   document.documentElement.classList.remove('loading')
 })
 

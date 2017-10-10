@@ -4,7 +4,7 @@ export default class Animator {
   elements = document.querySelectorAll('.animate-on-scroll')
 
   opts = {
-    rootMargin: '150px 0',
+    rootMargin: '150px 0px',
     threshold: [0, 1]
   }
 
