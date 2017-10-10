@@ -1,5 +1,5 @@
 environment: dev
-url: 'http://localhost:3000'
+url: 'http://molovo.dev'
 webmentions:
   pause_lookups: true
 
