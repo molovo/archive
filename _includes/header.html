@@ -15,13 +15,15 @@
         <span class="screenreader-text">Home</span>
       </a>
     </li>
-    
+
+    {% if site.environment != 'production' %}
     <li class="nav__item nav__item--case-studies">
       <a href="/studies/"
           class="nav__link">
         Case studies
       </a>
     </li>
+    {% endif %}
 
     <li class="nav__item nav__item--open-source">
       <a href="/projects/"

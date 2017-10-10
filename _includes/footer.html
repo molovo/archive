@@ -8,10 +8,12 @@
           <span class="screenreader-text">Home</span>
         </a>
       </li>
-      
+
+      {% if site.environment != 'production' %}
       <li>
         <a href="/studies/">Studies</a>
       </li>
+      {% endif %}
       
       <li>
         <a href="/projects/">Projects</a>
