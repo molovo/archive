@@ -123,6 +123,19 @@
         opacity: 0
         transform: translateY(3em)
 
+    &.animate-on-scroll
+      .study__icons,
+      .study__title
+        opacity: 0
+        transform: translateY(3em)
+
+      &.animated
+        .study__icons,
+        .study__title
+          opacity: 1
+          transform: translateY(0)
+          transition: opacity .5s .5s ease-in, transform .5s .5s ease-out
+
   &__icons
     margin: 0 0 $baseline
     text-decoration: none

@@ -8,6 +8,7 @@ import Menu from './menu'
 import Likes from './likes'
 import Images from './images'
 import Github from './github'
+import Animator from './animator'
 import ScrollSync from './scroll-sync'
 import Turbolinks from 'turbolinks'
 
@@ -24,6 +25,8 @@ document.addEventListener('turbolinks:load', () => {
   new Likes()
   new Images()
   new ScrollSync()
+  new Animator()
+  
   document.documentElement.classList.remove('loading')
 })
 

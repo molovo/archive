@@ -30,7 +30,14 @@
     flex: 0 0 100%
     line-height: $baseline
     margin: 0 0 $baseline
+    opacity: 0
     padding: .75em
+    transform: translateY(3em)
+    transition: opacity .5s .5s, transform .5s .5s
+
+    &.animated
+      opacity: 1
+      transform: translateY(0)
 
     a
       display: flex
@@ -59,8 +66,16 @@
     @media (min-width: 48em)
       flex: 0 0 calc(50% - #{(1 / 2) * $baseline})
 
+      @for $i from 0 through 1
+        &:nth-child(2n+#{$i+1})
+          transition-delay: #{$i * .125s}
+
     @media (min-width: 72em)
       flex: 0 0 calc(33.33333333% - #{(2 / 3) * $baseline})
+
+      @for $i from 0 through 2
+        &:nth-child(3n+#{$i+1})
+          transition-delay: #{$i * .125s}
 
     [data-description]
       height: #{$baseline * 2}
@@ -122,6 +137,13 @@
 
   &__item
     display: flex
+    opacity: 0
+    transform: translateY(3em)
+    transition: opacity .5s .5s, transform .5s .5s
+
+    &.animated
+      opacity: 1
+      transform: translateY(0)
 
     &:not(:last-child)
       margin: 0 0 #{$baseline * 3}

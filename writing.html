@@ -12,7 +12,11 @@ robots: noindex,follow
          itemtype="http://schema.org/Blog">
   <div class="posts__list">
     {% for post in paginator.posts %}
-      {% include article.html post=post listing="true" %}
+      {% unless forloop.first %}
+        {% assign classes = 'animate-on-scroll' %}
+      {% endunless %}
+      
+      {% include article.html post=post listing='true' classes=classes %}
 
       {% unless forloop.last %}
         <hr class="posts__break">

@@ -8,6 +8,15 @@ main > .post
   flex-wrap: wrap
   justify-content: space-between
 
+  &.animate-on-scroll
+    opacity: 0
+    transform: translateY(3em)
+    transition: opacity .5s, transform .5s
+
+    &.animated
+      opacity: 1
+      transform: translateY(0)
+
   &__share
     svg
       vertical-align: middle

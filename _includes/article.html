@@ -1,4 +1,4 @@
-<article class="post"
+<article class="post {{ include.classes }}"
          aria-labelledby="{{ include.post.title | slugify }}-title"
          {% if include.listing == 'true' %}itemprop="blogPost"{% endif %}
          itemscope
