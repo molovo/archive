@@ -22,7 +22,7 @@ When Medium was announced publicly and went into private beta, I immediately pul
 
 What I should have done, as suggested in the Execute book, was put aside the time to work towards the goal I had. I should have been unafraid to ask for help, rather than trying to go it alone in secret, for fear of the idea being stolen. Had I done that two years ago, I may have been able to get the site live long before Medium came into existence. Instead, I have two years of wasted evenings, with nothing to show at the end of it.
 
-Since the day I pulled the plug, I've been far more focused when I come up with an idea. I actually ended up reusing the name and domain I had for The Branch for [another exciting project](http://thebran.ch/) which I built in a little under two weeks, and am now immensely proud of and enjoy maintaining.
+Since the day I pulled the plug, I've been far more focused when I come up with an idea. I actually ended up reusing the name and domain I had for The Branch for <a href="http://thebran.ch/" data-proofer-ignore>another exciting project</a> which I built in a little under two weeks, and am now immensely proud of and enjoy maintaining.
 
 Since reading Execute, I now know exactly where I went wrong, and will use the approaches recommended by Drew and Josh when I next come up with a great idea.
 

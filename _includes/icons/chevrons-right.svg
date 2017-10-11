@@ -1,9 +1,6 @@
 <svg viewBox="0 0 24 24">
-    <defs>
-        <path id="path-1" d="M0,10l5,-5l-5,-5"></path>
-    </defs>
-    <g fill="none" stroke="#2B303B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-        <use transform="translate(13, 7)" xlink:href="#path-1"></use>
-        <use transform="translate(6, 7)" xlink:href="#path-1"></use>
+    <g fill="none" stroke="#2B303B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="rotate(180deg)">
+        <path transform="translate(6, 7)" d="M5,10l-5,-5l5,-5"></path>
+        <path transform="translate(13, 7)" d="M5,10l-5,-5l5,-5"></path>
     </g>
 </svg>

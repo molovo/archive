@@ -23,7 +23,7 @@ title: Search
     {% for item in tags %}
       {% assign tag = item | first %}
       <li class="tags__tag">
-        <a href="/tag/{{ tag }}">{{ tag }}</a>
+        <a href="/tag/{{ tag | slugify }}">{{ tag }}</a>
       </li>
     {% endfor %}
   </ul>

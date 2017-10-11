@@ -8,18 +8,20 @@
     <span class="post__social__likes"></span>
   </a>
 
-  {% capture count %}{% webmention_count include.post.url %}{% endcapture %}
-  <a href="{{ include.post.url }}#webmentions"
-      title="Webmentions"
-      class="post__social__link
-             post__social__link--mention
-             {% if count != '0' and count != '' %}
-               post__social__link--has-mentions
-             {% endif %}">
-    {% include icons/message-square.svg %}
-    <span class="screenreader-text">View Webmentions</span>
-    <span class="post__social__mentions">{% if count != '0' %}{{ count }}{% endif %}</span>
-  </a>
+  {% if include.webmentions != 'false' %}
+    {% capture count %}{% webmention_count include.post.url %}{% endcapture %}
+    <a href="{{ include.post.url }}#webmentions"
+        title="Webmentions"
+        class="post__social__link
+              post__social__link--mention
+              {% if count != '0' and count != '' %}
+                post__social__link--has-mentions
+              {% endif %}">
+      {% include icons/message-square.svg %}
+      <span class="screenreader-text">View Webmentions</span>
+      <span class="post__social__mentions">{% if count != '0' %}{{ count }}{% endif %}</span>
+    </a>
+  {% endif %}
 
   <a href="http://twitter.com/share?text=I just read this article on molovo.co and you should too :: &url={{ site.url }}{{ include.post.url }}"
       title="Share on Twitter"

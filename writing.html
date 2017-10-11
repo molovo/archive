@@ -15,7 +15,7 @@ robots: noindex,follow
       {% unless forloop.first %}
         {% assign classes = 'animate-on-scroll' %}
       {% endunless %}
-      
+
       {% include article.html post=post listing='true' classes=classes %}
 
       {% unless forloop.last %}
@@ -44,6 +44,6 @@ robots: noindex,follow
           {% endif %}
         </li>
       </ul>
-    </div>
+    </nav>
   {% endif %}
 </section>

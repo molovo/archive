@@ -51,8 +51,6 @@ width: auto;
 aspect-ratio: 1 2;
 ```
 
----
-
 #### Exes and Whys?
 
 ```css
@@ -66,8 +64,6 @@ transform: scale(X, Y);
 ```
 
 Why, dear God, Why???
-
----
 
 #### Fixed positioned elements
 
@@ -96,8 +92,6 @@ I set some elements at a certain size.
 
 Boom! `.child` has now doubled in width. That makes sense doesn't it? **No.**
 
----
-
 #### Borders
 
 I only ever use solid borders, because anything else is harder to see than a true word in the Daily Mail.
@@ -115,8 +109,6 @@ border: 5px blue;
 ```
 
 gives me a 5px, solid blue border. Easy peasy.
-
----
 
 #### Posititioning
 
@@ -139,7 +131,3 @@ If the width is dynamic, the above is impossible without a javascript hack. This
 ```css
 position: top center;  /* Boom! */
 ```
-
----
-
-I've been Ranty Donaldson and this is the 9 o'clock news. Have a spiffing day.

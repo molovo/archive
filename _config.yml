@@ -41,20 +41,10 @@ exclude:
   - yarn.lock
 
 collections:
-  # Create pages for archived posts without including them in the listing
-  archive:
-    output: true
-    permalink: /writing/:name/
   studies:
     output: false
     permalink: /studies/:name/
 defaults:
-- scope:
-    path: ""
-    type: archive
-  values:
-    layout: post
-    pagination: false
 - scope:
     path: /writing/
     type: posts
@@ -70,6 +60,10 @@ defaults:
 
 autopages:
   enabled: true
+  collections:
+    enabled: false
+  categories:
+    enabled: false
   tags:
     layouts:
       - 'tag.html'
