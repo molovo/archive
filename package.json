@@ -9,8 +9,6 @@
     "babel-preset-stage-2": "^6.24.1",
     "babelify": "^7.3.0",
     "browserify": "^14.4.0",
-    "coffee-script": "^1.12.7",
-    "coffeeify": "^3.0.0",
     "critical": "^0.9.1",
     "eslint": "^4.8.0",
     "eslint-config-standard": "^10.2.1",
