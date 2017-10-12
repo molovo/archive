@@ -24,55 +24,48 @@
     height: 1.75em
     width: 1.75em
 
-    circle
-      fill: $color-almost-black
-      transition: fill .25s
+  circle
+    fill: $color-almost-black
+    transition: fill .25s
 
   &:hover
-    svg
-      circle
-        fill: $color-red
+    circle
+      fill: $color-red
 
   .page--home &,
   .page--error &,
   .nav:target + .header &,
   .nav.nav--open + .header &
-    svg
-      circle
-        fill: $color-white
-
-  .nav:target + .header &,
-  .nav.nav--open + .header &
-    z-index: 10000
+    circle
+      fill: $color-white
 
   .page--home &,
   .page--error &
     background: $color-black
 
     &:hover
-      svg
-        circle
-          fill: $color-red
+      circle
+        fill: $color-red
 
   .nav:target + .header &,
   .nav.nav--open + .header &
     background: $color-black
+    z-index: 10000
 
     &:hover
-      svg
-        circle
-          fill: $color-red
+      circle
+        fill: $color-red
 
 .nav
   @extend %script-background
   background: $color-black
   bottom: 0
   left: 0
-  padding: 6em 1.5em
-  position: fixed
   opacity: 0
   overflow: hidden
+  padding: 6em 1.5em
   pointer-events: none
+  position: fixed
   right: 0
   top: 0
   transition: opacity .375s
@@ -102,11 +95,8 @@
     opacity: 0
     order: 1
     position: relative
-    transition: opacity .375s .5s, transform .375s .5s
     transform: translateY(50%)
-    -moz-osx-font-smoothing: antialiased
-    -webkit-font-smoothing: antialiased
-    font-smooth: always
+    transition: opacity .375s .5s, transform .375s .5s
 
     @media (min-width: 42em)
       flex: 0 0 50%
@@ -130,8 +120,12 @@
         order: 0
 
   &__link
-    @extend h1
+    +font-secondary
     color: $color-white
+    font-size: 3em
+    font-weight: 700
+    line-height: #{(1 / 1.5) * $baseline}
+    margin-bottom: #{(.5 / 1.5) * $baseline}
     transition: color .25s
 
     &:hover

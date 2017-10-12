@@ -25,6 +25,13 @@ export default class Images {
   }
 
   /**
+   * An array in which swiper instances are stored
+   *
+   * @type {Swiper[]}
+   */
+  swipers = []
+
+  /**
    * Start your engines!
    *
    * @return {Images}
@@ -90,7 +97,7 @@ export default class Images {
   setupSwipers () {
     const base = parseInt(window.getComputedStyle(document.body).fontSize.replace('px', '')) * 1.5
 
-    const swiper = new Swiper('.swiper-container', {
+    this.swipers.push(new Swiper('.swiper-container', {
       grabCursor: true,
       loop: false,
       nextButton: '.swiper-button-next',
@@ -105,6 +112,6 @@ export default class Images {
           indicator.innerHTML = ++swiper.realIndex
         }
       }
-    })
+    }))
   }
 }

@@ -27,8 +27,9 @@ $vixen-fitness-white: #fff
             stroke: $vixen-fitness-pink
 
     .study__feature-list
-      li::before
-        color: $vixen-fitness-pink
+      li
+        &::before
+          color: $vixen-fitness-pink
 
     &.study__section--intro
       background: $vixen-fitness-plum
@@ -149,11 +150,12 @@ $vixen-fitness-white: #fff
 
 .image__pair
   &--cards
-    picture:first-of-type
-      flex: 0 1 55.55%
+    picture
+      &:first-of-type
+        flex: 0 1 55.55%
 
-    picture:last-of-type
-      flex: 0 1 44.45%
+      &:last-of-type
+        flex: 0 1 44.45%
 
 .study__type-sample
   &--montserrat

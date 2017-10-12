@@ -48,11 +48,10 @@ export default class Github {
         })
 
         // Catch errors
-        .catch((err) => {
+        .catch((err) => { // eslint-disable-line handle-callback-err
           // We catch error responses to prevent dirtying the console,
           // but don't do anything with the error since the original
           // data can remain on the page
-
         })
     })
   }

@@ -81,6 +81,10 @@ gulp.task('lint:js', () => {
     .pipe(eslint.failOnError())
 })
 
+gulp.task('validate:html', () => {
+  return spawnSync('bundle exec validate.rb')
+})
+
 /**
  * Compilation tasks
  */
@@ -227,6 +231,10 @@ gulp.task('watch', () => {
 
   gulp.watch('_site/**/*.html')
     .on('change', file => livereload.changed(file.path))
+})
+
+gulp.task('test', (cb) => {
+  return runSequence('lint', 'validate:html', cb)
 })
 
 gulp.task('default', (cb) => {

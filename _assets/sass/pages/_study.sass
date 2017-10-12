@@ -32,11 +32,6 @@
     .studies__image
       margin-top: -100vw
 
-  &__item
-    align-items: flex-end
-    display: flex
-    padding: 0 0 6em
-
   &__content
     flex: 0 0 70%
     margin-bottom: #{$baseline * .25}
@@ -63,7 +58,10 @@
     +font-secondary
 
   &__item
+    align-items: flex-end
+    display: flex
     justify-content: flex-start
+    padding: 0 0 6em
     position: relative
 
     @media (max-width: 54em)
@@ -89,17 +87,18 @@
       .studies__image
         margin-right: -50vw
 
-      &:nth-child(2n+1):not(:only-child)
-        justify-content: flex-end
+      &:nth-child(2n+1)
+        &:not(:only-child)
+          justify-content: flex-end
 
-        .studies__content
-          margin-left: #{$baseline * 2}
-          margin-right: 0
-          order: 1
+          .studies__content
+            margin-left: #{$baseline * 2}
+            margin-right: 0
+            order: 1
 
-        .studies__image
-          margin-left: -50vw
-          margin-right: 0
+          .studies__image
+            margin-left: -50vw
+            margin-right: 0
 
 .study
   &__intro
@@ -193,9 +192,9 @@
     background: $color-white
     left: 50vw
     margin: #{$baseline * 2} 0 #{$baseline * 2} -1.5em
+    position: relative
     text-align: center
     transform: translateX(-50%)
-    position: relative
     width: 125vw
     z-index: 1001
 
@@ -213,9 +212,9 @@
         height: 3em
         left: between(40em, 44.5em, 42em, 80em)
         margin-left: 12.5vw
-        right: 0
         pointer-events: none
         position: absolute
+        right: 0
 
       &::before
         background: linear-gradient(to bottom, rgba($color-white, 0), $color-white 66.66%, $color-white)
@@ -237,14 +236,14 @@
         padding: $baseline 0 $baseline #{$baseline * 3}
 
       &::before
+        +font-script
         display: inline-block
         float: left
-        left: .25em
         font-size: 3em
+        left: .25em
         position: absolute
         top: 50%
         transform: translateY(-50%)
-        +font-script
 
         @media (min-width: 42em)
           font-size: 4.5em
