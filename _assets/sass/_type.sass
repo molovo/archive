@@ -18,15 +18,15 @@ body
   +font-primary
   color: $color-almost-black
   height: 100%
-  font-size: 16px
+  font-size: 1em
   line-height: $baseline
   position: relative
 
-  @media (min-width: 384px)
-    font-size: calc(16px + (20 - 16) * (100vw - 384px) / (1280 - 384))
+  @media (min-width: 42em)
+    font-size: calc(1em + (1.3125 - 1) * (100vw - 42em) / (80 - 42))
 
-  @media (min-width: 1280px)
-    font-size: 20px
+  @media (min-width: 80em)
+    font-size: 1.3125em
 
 h1, h2, h3, h4, h5, h6
   font-weight: 500
