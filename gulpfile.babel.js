@@ -12,13 +12,15 @@ import runSequence from 'run-sequence'
 const sink = clone.sink()
 
 // Dependencies for compiling coffeescript
-import uglify     from 'gulp-uglify'
 import sourcemaps from 'gulp-sourcemaps'
 import browserify from 'browserify'
 import babelify   from 'babelify'
 import uglifyify  from 'uglifyify'
 import watchify   from 'watchify'
 import eslint     from 'gulp-eslint'
+import uglifyEs   from 'uglify-es'
+import composer   from 'gulp-uglify/composer'
+const uglify = composer(uglifyEs, console)
 
 // Dependencies for compiling sass
 import sassLint     from 'gulp-sass-lint'
@@ -119,7 +121,7 @@ gulp.task('compile:sass', () => {
 
 gulp.task('compile:js', () => {
   // Set up the browserify instance
-  const bundle = browserify(entries.js)
+  const bundle = browserify(entries.js, {debug: env === 'dev'})
 
   if (env !== 'dev') {
     bundle.transform('uglifyify', {
@@ -133,7 +135,10 @@ gulp.task('compile:js', () => {
     .on('error', gutil.log)
     .pipe(source('main.js'))
     .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(uglify())
     .pipe(rename('main.min.js'))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('_site/js/'))
     .pipe(livereload())
 })
