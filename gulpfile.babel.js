@@ -113,8 +113,8 @@ gulp.task('compile:sass', () => {
       browsers: ['last 2 versions', 'not ie <= 11', 'not android <= 60'],
       cascade: false
     }))
-    .pipe(sourcemaps.write('./'))
     .pipe(rename('main.css'))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('_site/css/'))
     .pipe(livereload())
 })
