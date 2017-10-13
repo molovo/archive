@@ -4,8 +4,10 @@
       "env",
       {
         "targets": {
-          "browsers": ["last 2 versions"]
-        }
+          "browsers": ["last 2 versions", "not ie <= 10", "not android <= 52"]
+        },
+        "useBuiltins": true,
+        "debug": true
       }
     ],
     "stage-2"

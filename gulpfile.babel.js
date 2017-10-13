@@ -108,7 +108,7 @@ gulp.task('compile:sass', () => {
       outputStyle: 'compressed'
     }).on('error', sass.logError))
     .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
+      browsers: ['last 2 versions', 'not ie <= 10', 'not android <= 52'],
       cascade: false
     }))
     .pipe(sourcemaps.write('./'))
