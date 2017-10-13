@@ -1,4 +1,3 @@
-import { polyfill } from 'es6-promise'
 import 'isomorphic-fetch'
 import 'intersection-observer'
 import Projects from './projects'

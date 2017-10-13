@@ -4,7 +4,7 @@
       "env",
       {
         "targets": {
-          "browsers": ["last 2 versions", "not ie <= 10", "not android <= 52"]
+          "browsers": ["last 2 versions", "not ie <= 11", "not android <= 60"]
         },
         "useBuiltins": true,
         "debug": true

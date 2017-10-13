@@ -108,7 +108,7 @@ gulp.task('compile:sass', () => {
       outputStyle: 'compressed'
     }).on('error', sass.logError))
     .pipe(autoprefixer({
-      browsers: ['last 2 versions', 'not ie <= 10', 'not android <= 52'],
+      browsers: ['last 2 versions', 'not ie <= 11', 'not android <= 60'],
       cascade: false
     }))
     .pipe(sourcemaps.write('./'))
@@ -119,7 +119,7 @@ gulp.task('compile:sass', () => {
 
 gulp.task('compile:js', () => {
   // Set up the browserify instance
-  const bundle = browserify(entries.js)
+  const bundle = browserify([require.resolve('babel-polyfill'), entries.js])
 
   if (env !== 'dev') {
     bundle.transform('uglifyify', {
