@@ -119,7 +119,7 @@ gulp.task('compile:sass', () => {
 
 gulp.task('compile:js', () => {
   // Set up the browserify instance
-  const bundle = browserify([require.resolve('babel-polyfill'), entries.js])
+  const bundle = browserify(entries.js)
 
   if (env !== 'dev') {
     bundle.transform('uglifyify', {
@@ -133,7 +133,6 @@ gulp.task('compile:js', () => {
     .on('error', gutil.log)
     .pipe(source('main.js'))
     .pipe(buffer())
-    // .pipe(uglify())
     .pipe(rename('main.min.js'))
     .pipe(gulp.dest('_site/js/'))
     .pipe(livereload())

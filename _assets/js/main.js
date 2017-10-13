@@ -1,3 +1,4 @@
+import 'babel-polyfill'
 import 'isomorphic-fetch'
 import 'intersection-observer'
 import Projects from './projects'
@@ -29,5 +30,4 @@ document.addEventListener('turbolinks:load', () => {
   document.documentElement.classList.remove('loading')
 })
 
-polyfill()
 Turbolinks.start()
