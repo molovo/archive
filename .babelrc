@@ -1,5 +1,15 @@
 {
-  "presets": ["env", "stage-2"],
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["last 2 versions"]
+        }
+      }
+    ],
+    "stage-2"
+  ],
   "plugins": [
     "transform-class-properties",
     "transform-object-rest-spread",
