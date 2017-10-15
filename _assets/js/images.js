@@ -1,5 +1,5 @@
-import Swiper from 'swiper'
 import { bind } from 'decko'
+import Slideshow from './slideshow'
 
 /**
  * This class deals with lazy loading of images
@@ -25,11 +25,11 @@ export default class Images {
   }
 
   /**
-   * An array in which swiper instances are stored
+   * An array in which slideshow instances are stored
    *
-   * @type {Swiper[]}
+   * @type {Slideshow[]}
    */
-  swipers = []
+  slideshows = []
 
   /**
    * Start your engines!
@@ -37,8 +37,8 @@ export default class Images {
    * @return {Images}
    */
   constructor () {
-    // Setup swiper instances
-    this.setupSwipers()
+    // Setup slideshow instances
+    this.setupSlideshows()
     this.lazyLoadImages()
   }
 
@@ -94,24 +94,18 @@ export default class Images {
     }
   }
 
-  setupSwipers () {
-    const base = parseInt(window.getComputedStyle(document.body).fontSize.replace('px', '')) * 1.5
-
-    this.swipers.push(new Swiper('.swiper-container', {
-      grabCursor: true,
-      loop: false,
-      nextButton: '.swiper-button-next',
-      prevButton: '.swiper-button-prev',
-      spaceBetween: base * 2,
-      slideToClickedSlide: true,
-      onSlideChangeEnd: (swiper) => {
-        const figure = swiper.container[0].parentNode
-        const indicator = figure.querySelector('.swiper-current')
-
-        if (indicator) {
-          indicator.innerHTML = ++swiper.realIndex
+  setupSlideshows () {
+    document.querySelectorAll('.slideshow').forEach(slideshow => {
+      this.slideshows.push(new Slideshow(slideshow, {
+        onChange: (slideshow) => {
+          const figure = slideshow.container.parentNode
+          const indicator = figure.querySelector('.slideshow__current')
+  
+          if (indicator) {
+            indicator.innerHTML = slideshow.current
+          }
         }
-      }
-    }))
+      }))
+    })
   }
 }

@@ -52,30 +52,17 @@
 
   &--full-width,
   &--slideshow
-    background: $color-white
-    margin-left: -1.5em
+    background-color: transparent
+    background-image: linear-gradient(to bottom, rgba($color-white, 0), $color-white 15%, $color-white), linear-gradient(to top, rgba($color-white, 0), $color-white 15%, $color-white)
+    background-position: top center, bottom center
+    background-repeat: no-repeat
+    background-size: 100% 15em, 100% 15em
+    margin: -1.5em 0 0 -1.5em
+    overflow: hidden
+    padding: #{$baseline * 2} 0
     position: relative
     width: 100vw
     z-index: 1001
-
-    @media (min-width: 42em)
-      &::after,
-      &::before
-        content: ''
-        display: inline-block
-        height: 3em
-        left: between(40em, 44.5em, 42em, 80em)
-        pointer-events: none
-        position: absolute
-        right: 0
-
-      &::before
-        background: linear-gradient(to bottom, rgba($color-white, 0), $color-white 66.66%, $color-white)
-        bottom: 100%
-
-      &::after
-        background: linear-gradient(to top, rgba($color-white, 0), $color-white 66.66%, $color-white)
-        top: calc(100% - .15em)
 
     .image__caption
       display: block
@@ -105,61 +92,15 @@
         margin-left: 6em
         margin-right: 6em
 
-  > .swiper-container
-    margin-left: 1.5em
-    max-width: 24em
-    overflow: visible
-    width: calc(100% - #{$baseline * 2})
+  &--slideshow
+    .image__caption
+      max-width: calc(100% - #{$baseline * 4})
 
-    @media (min-width: 42em)
-      margin-left: between(1.5em, 6em, 42em, 80em)
+      @media (min-width: 42em)
+        max-width: calc(100% - #{$baseline * 4})
 
-    @media (min-width: 80em)
-      margin-left: 6em
-
-    .swiper-slide
-      box-shadow: 0px 3px 8px rgba(0,0,0,.1)
-      // For some reason images within the slideshow have
-      // a wierd margin around them. Removing the line-height
-      // fixes it though
-      line-height: 0
-
-      > img,
-      > picture,
-      > picture > source,
-      > svg
-        display: block
-        width: 100%
-
-    .swiper-button-next,
-    .swiper-button-prev
-      background: transparent
-      bottom: #{$baseline * -2.125}
-      display: inline-block
-      height: $baseline
-      left: auto
-      position: absolute
-      top: auto
-      transition: opacity .25s
-      width: $baseline
-
-      &.swiper-button-disabled
-        opacity: 0
-        pointer-events: none
-
-      svg
-        height: 100%
-        width: 100%
-
-        g
-          stroke: $color-blue
-
-    .swiper-button-next
-      right: -12em
-      transform: rotate(180deg)
-
-    .swiper-button-prev
-      right: -10.5em
+      @media (min-width: 80em)
+        max-width: 30em
 
   &__caption
     +font-primary
@@ -226,6 +167,71 @@
     > img,
     > picture
       width: 100%
+
+.slideshow
+  margin-left: 1.5em
+  max-width: 36em
+  overflow: visible
+  position: relative
+  width: calc(100% - #{$baseline * 2})
+
+  @media (min-width: 42em)
+    margin-left: between(1.5em, 6em, 42em, 80em)
+
+  @media (min-width: 80em)
+    margin-left: 6em
+
+  &__slides
+    display: flex
+    transition: transform .5s ease-in-out
+    width: 100%
+
+  &__slide
+    box-shadow: 0px 3px 15px rgba($color-almost-black, .1)
+    flex: 0 0 100%
+    // For some reason images within the slideshow have
+    // a wierd margin around them. Removing the line-height
+    // fixes it though
+    line-height: 0
+    margin-right: $baseline
+    max-width: 24em
+
+    > img,
+    > picture,
+    > picture > source,
+    > svg
+      display: block
+      width: 100%
+
+  &__button
+    background: transparent
+    bottom: #{$baseline * -2.125}
+    cursor: pointer
+    display: inline-block
+    height: $baseline
+    left: auto
+    position: absolute
+    top: auto
+    transition: opacity .25s
+    width: $baseline
+
+    &--disabled
+      opacity: 0
+      pointer-events: none
+
+    svg
+      height: 100%
+      width: 100%
+
+      g
+        stroke: $color-blue
+
+    &--next
+      right: 0em
+      transform: rotate(180deg)
+
+    &--prev
+      right: 1.5em
 
 picture
   overflow: hidden

@@ -32,19 +32,18 @@ h1, h2, h3, h4, h5, h6
   font-weight: 500
   letter-spacing: -.025em
 
-h1
-  +font-secondary
-  font-size: 3em
-  font-weight: 700
-  line-height: #{(1 / 1.5) * $baseline}
-  margin-bottom: #{(.5 / 1.5) * $baseline}
-
-h2
+h1, h2
   +font-secondary
   font-size: 2.25em
   font-weight: 700
   line-height: #{(1.35 / 1.5) * $baseline}
   margin-bottom: #{(.6666666666666667 / 1.5) * $baseline}
+
+h1
+  @media (min-width: 24em)
+    font-size: 3em
+    line-height: #{(1 / 1.5) * $baseline}
+    margin-bottom: #{(.5 / 1.5) * $baseline}
 
 h3
   font-size: 1.5em

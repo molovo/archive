@@ -20,11 +20,9 @@ $vixen-fitness-white: #fff
         fill: $vixen-fitness-pink
 
     .image--slideshow
-      > .swiper-container
-        .swiper-button-next,
-        .swiper-button-prev
-          g
-            stroke: $vixen-fitness-pink
+      .slideshow__button
+        g
+          stroke: $vixen-fitness-pink
 
     .study__feature-list
       li
@@ -63,6 +61,7 @@ $vixen-fitness-white: #fff
       .image--full-width,
       .image--slideshow
         background: $vixen-fitness-plum
+
         @media (min-width: 42em)
           &::before
             background: linear-gradient(to bottom, rgba($vixen-fitness-plum, 0), $vixen-fitness-plum 66.66%, $vixen-fitness-plum)
@@ -70,8 +69,7 @@ $vixen-fitness-white: #fff
           &::after
             background: linear-gradient(to top, rgba($vixen-fitness-plum, 0), $vixen-fitness-plum 66.66%, $vixen-fitness-plum)
 
-        .swiper-button-next,
-        .swiper-button-prev
+        .slideshow__button
           g
             stroke: $vixen-fitness-yellow
 
@@ -116,16 +114,9 @@ $vixen-fitness-white: #fff
 
       .image--full-width,
       .image--slideshow
-        background: $vixen-fitness-yellow
-        @media (min-width: 42em)
-          &::before
-            background: linear-gradient(to bottom, rgba($vixen-fitness-yellow, 0), $vixen-fitness-yellow 66.66%, $vixen-fitness-yellow)
+        background-image: linear-gradient(to bottom, rgba($vixen-fitness-yellow, 0), $vixen-fitness-yellow 15%, $vixen-fitness-yellow), linear-gradient(to top, rgba($vixen-fitness-yellow, 0), $vixen-fitness-yellow 15%, $vixen-fitness-yellow)
 
-          &::after
-            background: linear-gradient(to top, rgba($vixen-fitness-yellow, 0), $vixen-fitness-yellow 66.66%, $vixen-fitness-yellow)
-
-        .swiper-button-next,
-        .swiper-button-prev
+        .slideshow__button
           g
             stroke: $vixen-fitness-pink
 

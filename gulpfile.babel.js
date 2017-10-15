@@ -9,7 +9,7 @@ import { spawnSync } from 'child_process'
 import changed     from 'gulp-changed'
 import clone       from 'gulp-clone'
 import runSequence from 'run-sequence'
-const sink = clone.sink()
+import es          from 'event-stream'
 
 // Dependencies for compiling coffeescript
 import sourcemaps from 'gulp-sourcemaps'
@@ -164,7 +164,7 @@ gulp.task('compile:critical', () => {
 })
 
 gulp.task('compile:images', () => {
-  return gulp.src(sources.images)
+  const images = gulp.src(sources.images)
     .pipe(changed('_site/img/'))
     .pipe(imagemin([
       imagemin.gifsicle({
@@ -186,11 +186,13 @@ gulp.task('compile:images', () => {
         ]
       })
     ]))
-    .pipe(sink)
+
+  const webpImages = images.pipe(clone())
     .pipe(webp({
-      method: 6
+      optimizationLevel: 6
     }))
-    .pipe(sink.tap())
+
+  return es.merge(images, webpImages)
     .pipe(gulp.dest('_site/img/'))
     .pipe(livereload())
 })

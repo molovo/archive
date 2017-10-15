@@ -6,31 +6,14 @@
     margin: 0
 
 .studies
-  &--cta
-    overflow: hidden
-    position: relative
-    z-index: 0
+  margin: 0 -1.5em
+  overflow: hidden
 
-    .page--post &
-      margin: 0 -1.5em
+  @media (min-width: 42em)
+    margin: 0 between(-1.5em, -6em, 42em, 80em)
 
-      @media (min-width: 42em)
-        margin: 0 between(-1.5em, -6em, 42em, 80em)
-
-      @media (min-width: 80em)
-        margin: 0 -6em
-
-    .studies__item
-      padding: 3em 1.5em
-
-      @media (min-width: 42em)
-        padding: between(3em, 6em, 42em, 80em) between(1.5em, 6em, 42em, 80em)
-
-      @media (min-width: 80em)
-        padding: 6em
-
-    .studies__image
-      margin-top: -100vw
+  @media (min-width: 80em)
+    margin: 0 -6em
 
   &__content
     flex: 0 0 70%
@@ -61,7 +44,7 @@
     align-items: flex-end
     display: flex
     justify-content: flex-start
-    padding: 0 0 6em
+    padding: 0 1.5em 6em
     position: relative
 
     @media (max-width: 54em)
@@ -79,6 +62,9 @@
 
         @media (max-width: 24em)
           font-size: 1.5em
+
+    @media (min-width: 42em)
+      padding: 0 between(1.5em, 6em, 42em, 80em) 6em
 
     @media (min-width: 54em)
       .studies__content
@@ -100,6 +86,28 @@
             margin-left: -50vw
             margin-right: 0
 
+    @media (min-width: 80em)
+      padding: 0 6em 6em
+
+  &--cta
+    position: relative
+    z-index: 0
+
+    .page--study &
+      margin: 0
+
+    .studies__item
+      padding: 3em 1.5em
+
+      @media (min-width: 42em)
+        padding: between(3em, 6em, 42em, 80em) between(1.5em, 6em, 42em, 80em)
+
+      @media (min-width: 80em)
+        padding: 6em
+
+    .studies__image
+      margin-top: -100vw
+
 .study
   &__intro
     padding: 6em 1.5em 0
@@ -112,8 +120,6 @@
       padding: 6em 6em 0
 
   &__section
-    overflow-x: hidden
-    
     .study__icons,
     .study__title
       opacity: 1
@@ -195,10 +201,26 @@
     left: 50vw
     margin: #{$baseline * 2} 0 #{$baseline * 2} -1.5em
     position: relative
-    text-align: center
     transform: translateX(-50%)
-    width: 125vw
+    width: 100vw
     z-index: 1001
+
+    &__wrapper
+      height: 100%
+      left: 50vw
+      overflow: hidden
+      position: relative
+      text-align: center
+      transform: translateX(-50%)
+      width: 100%
+
+      > span
+        display: inline-block
+        left: 50vw
+        position: relative
+        transform: translateX(-50%)
+        width: 125vw
+
 
     @media (min-width: 42em)
       margin-left: between(-1.5em, -6em, 42em, 80em)

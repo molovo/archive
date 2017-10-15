@@ -48,42 +48,46 @@ layout: study
       <p>The strong, unapologetic boldness of Montserrat was so effective as a logotype that I decided to use it as the primary font for the website and Gemma's marketing materials. Using multiple weights meant I could strike a nice balance between huge, bold headings and a cleaner, lighter weight for more readable body copy.</p>
 
       <figure class="study__type-sample study__type-sample--montserrat">
-        <span>crunch growth skinny isometrics fitness protein <span class="study__type-sample__font-name">Montserrat Bold</span> lift pull muscles dip fat diet press hamstring</span>
+        <div class="study__type-sample__wrapper">
+          <span>crunch growth skinny isometrics fitness protein <span class="study__type-sample__font-name">Montserrat Bold</span> lift pull muscles dip fat diet press hamstring</span>
+        </div>
       </figure>
 
       <p>To counter Montserrat's strength I used Have Heart One to add a touch of femininity to headings and other brand assets.</p>
 
       <figure class="study__type-sample study__type-sample--have-heart-one">
-        <span>lift pull muscles dip fat diet press hamstring biceps energy <span class="study__type-sample__font-name">Have Heart One</span> shape aerobic crunch growth skinny isometrics fitness protein</span>
+        <div class="study__type-sample__wrapper">
+          <span>lift pull muscles dip fat diet press hamstring biceps energy <span class="study__type-sample__font-name">Have Heart One</span> shape aerobic crunch growth skinny isometrics fitness protein</span>
+        </div>
       </figure>
 
       <p>Gemma meets most of her clients face to face, but handing over a business card doesn't really convey everything that she has to offer. To help her make a good impression, I designed a series of postcards to give to clients and hand out at events; each one providing more information about particular services she provides, allowing her to put the right information in front of prospective clients from the outset, and hopefully win their business.</p>
 
       <figure class="image image--slideshow image--flyers">
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
+        <div class="slideshow">
+          <div class="slideshow__slides">
+            <div class="slideshow__slide">
               {% responsive_image_block %}
                 path: '_assets/img/studies/vixen-fitness/ante-natal-flyer-front.png'
                 alt: "The front of a flyer for ante-natal training services"
                 sizes: '(min-width: 42em) 24em, 90vw'
               {% endresponsive_image_block %}
             </div>
-            <div class="swiper-slide">
+            <div class="slideshow__slide">
               {% responsive_image_block %}
                 path: '_assets/img/studies/vixen-fitness/ante-natal-flyer-back.png'
                 alt: "The back of a flyer for ante-natal training services"
                 sizes: '(min-width: 42em) 24em, 90vw'
               {% endresponsive_image_block %}
             </div>
-            <div class="swiper-slide">
+            <div class="slideshow__slide">
               {% responsive_image_block %}
                 path: '_assets/img/studies/vixen-fitness/post-natal-flyer-front.png'
                 alt: "The front of a flyer for post-natal training services"
                 sizes: '(min-width: 42em) 24em, 90vw'
               {% endresponsive_image_block %}
             </div>
-            <div class="swiper-slide">
+            <div class="slideshow__slide">
               {% responsive_image_block %}
                 path: '_assets/img/studies/vixen-fitness/post-natal-flyer-back.png'
                 alt: "The back of a flyer for post-natal training services"
@@ -91,16 +95,16 @@ layout: study
               {% endresponsive_image_block %}
             </div>
           </div>
-          <span class="swiper-button-prev">
+          <span class="slideshow__button slideshow__button--prev">
             {% include icons/chevrons-left.svg %}
           </span>
-          <span class="swiper-button-next">
+          <span class="slideshow__button slideshow__button--next">
             {% include icons/chevrons-right.svg %}
           </span>
         </div>
 
         <figcaption class="image__caption">
-          <strong><span class="swiper-current">1</span> of 4</strong> &mdash;
+          <strong><span class="slideshow__current">1</span> of 4</strong> &mdash;
           The series of postcards I designed for each of Gemma's services
         </figcaption>
       </figure>
@@ -120,6 +124,7 @@ layout: study
             sizes: '(min-width: 42em) 18em, 40vw'
           {% endresponsive_image_block %}
         </div>
+
 
         <figcaption class="image__caption">(left) a set of exercise place cards for use in circuit classes; (right) Gemma's business cards</figcaption>
       </figure>
@@ -154,23 +159,23 @@ layout: study
       <p>I built a page for each of Gemma's services to match the set of postcards I'd designed previously, with each one being able to act as a landing page; both for the links on the postcards themselves, and for targeted online and social media advertising campaigns.</p>
 
       <figure class="image image--slideshow image--service-pages">
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
+        <div class="slideshow">
+          <div class="slideshow__slides">
+            <div class="slideshow__slide">
               {% responsive_image_block %}
                 path: '_assets/img/studies/vixen-fitness/ante-natal-training-page.png'
                 alt: "A landing page for ante-natal training services"
                 sizes: '(min-width: 42em) 24em, 90vw'
               {% endresponsive_image_block %}
             </div>
-            <div class="swiper-slide">
+            <div class="slideshow__slide">
               {% responsive_image_block %}
                 path: '_assets/img/studies/vixen-fitness/post-natal-training-page.png'
                 alt: "A landing page for post-natal training services"
                 sizes: '(min-width: 42em) 24em, 90vw'
               {% endresponsive_image_block %}
             </div>
-            <div class="swiper-slide">
+            <div class="slideshow__slide">
               {% responsive_image_block %}
                 path: '_assets/img/studies/vixen-fitness/mobile-personal-training-page.png'
                 alt: "A landing page for mobile personal training services"
@@ -178,16 +183,16 @@ layout: study
               {% endresponsive_image_block %}
             </div>
           </div>
-          <span class="swiper-button-prev">
+          <span class="slideshow__button slideshow__button--prev">
             {% include icons/chevrons-left.svg %}
           </span>
-          <span class="swiper-button-next">
+          <span class="slideshow__button slideshow__button--next">
             {% include icons/chevrons-right.svg %}
           </span>
         </div>
 
         <figcaption class="image__caption">
-          <strong><span class="swiper-current">1</span> of 3</strong> &mdash;
+          <strong><span class="slideshow__current">1</span> of 3</strong> &mdash;
           The series of service pages on Gemma's website
         </figcaption>
       </figure>
