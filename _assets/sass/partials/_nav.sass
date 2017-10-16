@@ -63,7 +63,7 @@
   left: 0
   opacity: 0
   overflow: hidden
-  padding: 6em 1.5em
+  padding: 2.25em
   pointer-events: none
   position: fixed
   right: 0
@@ -72,7 +72,7 @@
   z-index: 9999
 
   @media (min-width: 42em)
-    padding: 6em between(1.5em, 6em, 42em, 80em)
+    padding: between(2.25em, 6em, 42em, 80em)
 
   @media (min-width: 80em)
     padding: 6em
@@ -122,11 +122,16 @@
   &__link
     +font-secondary
     color: $color-white
-    font-size: 3em
+    font-size: 2.25em
     font-weight: 700
-    line-height: #{(1 / 1.5) * $baseline}
-    margin-bottom: #{(.5 / 1.5) * $baseline}
+    line-height: #{(1.35 / 1.5) * $baseline}
+    margin-bottom: #{(.6666666666666667 / 1.5) * $baseline}
     transition: color .25s
+
+    @media (min-width: 24em)
+      font-size: 3em
+      line-height: #{(1 / 1.5) * $baseline}
+      margin-bottom: #{(.5 / 1.5) * $baseline}
 
     &:hover
       color: $color-red
