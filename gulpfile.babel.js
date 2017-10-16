@@ -119,18 +119,28 @@ gulp.task('compile:sass', () => {
     .pipe(livereload())
 })
 
-gulp.task('compile:js', () => {
-  // Set up the browserify instance
-  const bundle = browserify(entries.js, {debug: env === 'dev'})
+// Set up the browserify instance
+let bundler = browserify({
+  ...watchify.args,
+  debug: env === 'dev',
+  entries: [entries.js]
+})
 
-  if (env !== 'dev') {
-    bundle.transform('uglifyify', {
-      global: true
-    })
-  }
+if (env !== 'dev') {
+  bundler.transform('uglifyify', {
+    global: true
+  })
+}
 
-  return bundle
-    .transform('babelify')
+bundler.transform('babelify')
+
+if (env === 'dev') {
+  bundler = watchify(bundler)
+  bundler.on('update', bundle)
+}
+
+function bundle () {
+  return bundler
     .bundle()
     .on('error', gutil.log)
     .pipe(source('main.js'))
@@ -141,7 +151,9 @@ gulp.task('compile:js', () => {
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('_site/js/'))
     .pipe(livereload())
-})
+}
+
+gulp.task('compile:js', bundle)
 
 gulp.task('compile:critical', () => {
   return gulp.src('_site/**/*.html')
