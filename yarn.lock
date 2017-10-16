@@ -2200,10 +2200,6 @@ dom-serializer@0, dom-serializer@0.1.0, dom-serializer@~0.1.0:
     domelementtype "~1.1.1"
     entities "~1.1.1"
 
-dom7@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/dom7/-/dom7-2.0.1.tgz#a8a2c802cf17c20b051d9414143061472201a233"
-
 domain-browser@~1.1.0:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.1.7.tgz#867aa4b093faa05f1de08c06f4d7b21fdf8698bc"
@@ -2387,6 +2383,10 @@ error-ex@^1.2.0:
   resolved "https://registry.yarnpkg.com/error-ex/-/error-ex-1.3.1.tgz#f855a86ce61adc4e8621c3cda21e7a7612c3a8dc"
   dependencies:
     is-arrayish "^0.2.1"
+
+errorify@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/errorify/-/errorify-0.3.1.tgz#53e0aaeeb18adc3e55f9f1eb4e2d95929f41b79b"
 
 es5-ext@^0.10.14, es5-ext@^0.10.30, es5-ext@^0.10.9, es5-ext@~0.10.14, es5-ext@~0.10.2:
   version "0.10.30"
@@ -7160,12 +7160,6 @@ svgo@0.7.2, svgo@^0.7.0:
     mkdirp "~0.5.1"
     sax "~1.2.1"
     whet.extend "~0.9.9"
-
-swiper@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/swiper/-/swiper-4.0.1.tgz#038c1ddcc685af43650efb840e4a42b23e6893d2"
-  dependencies:
-    dom7 "^2.0.1"
 
 syntax-error@^1.1.1:
   version "1.3.0"

@@ -137,6 +137,7 @@ bundler.transform('babelify')
 if (env === 'dev') {
   bundler = watchify(bundler)
   bundler.on('update', bundle)
+  bundler.plugin('errorify')
 }
 
 function bundle () {
