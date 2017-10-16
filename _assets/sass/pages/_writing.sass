@@ -37,13 +37,14 @@ main > .post
 
   &__content
     flex: 0 0 100%
-    font-size: 1.125em
     line-height: $baseline
     max-width: 100%
-    width: #{(1/1.125) * 36em}
+    width: 36em
 
     @media (min-width: 42em)
       flex: 0 0 #{(1/1.125) * 36em}
+      font-size: 1.125em
+      width: #{(1/1.125) * 36em}
 
   &__meta
     display: block
