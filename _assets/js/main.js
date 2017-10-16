@@ -30,4 +30,16 @@ document.addEventListener('turbolinks:load', () => {
   document.documentElement.classList.remove('loading')
 })
 
+window.github = new Github()
+window.projects = new Projects()
+window.search = new Search()
+window.menu = new Menu()
+window.title = new Title()
+window.likes = new Likes()
+window.images = new Images()
+window.scrollSync = new ScrollSync()
+window.animator = new Animator()
+
+document.documentElement.classList.remove('loading')
+
 Turbolinks.start()
