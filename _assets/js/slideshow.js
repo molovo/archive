@@ -15,7 +15,7 @@ export default class Slideshow {
     scroll: true,
     vertical: false
   }
-  
+
   /**
    * The index of the current slide
    *
@@ -116,7 +116,7 @@ export default class Slideshow {
     if (this.slides[this._current - 1]) {
       this.slides[this._current - 1].classList.add('slideshow__slide--prev')
     }
-    
+
     if (this.slides[this._current + 1]) {
       this.slides[this._current + 1].classList.add('slideshow__slide--next')
     }
@@ -193,21 +193,17 @@ export default class Slideshow {
   /**
    * Handle touchstart events on the container
    *
-   * @param {TouchStartEvent} e
+   * @param {TouchEvent} e
    */
   @bind
   handleTouchStart (e) {
     this.touch = {x: e.touches[0].clientX, y: e.touches[0].clientY}
-
-    setTimeout(() => {
-      this.touch = null
-    }, 250)
   }
 
   /**
    * Handle touchmove events on the container
    *
-   * @param {TouchMoveEvent} e
+   * @param {TouchEvent} e
    */
   @bind
   handleTouchMove (e) {
@@ -227,9 +223,56 @@ export default class Slideshow {
   }
 
   /**
+   * Handle a swipe or scroll interaction
+   *
+   * @param {WheelEvent|TouchEvent} e
+   * @param {int} d
+   */
+  @bind
+  handleDeltaChange (e, d) {
+    if (this.transitioning) {
+      e.stopPropagation()
+      e.preventDefault()
+      e.cancelBubble = true
+      return false
+    }
+
+    const n = this.current
+
+    const atStart = d < -25 && n === 1
+    const atEnd = d > 25 && n === this.slides.length
+
+    if (atStart || atEnd) {
+      return
+    }
+
+    this.transitioning = true
+
+    e.stopPropagation()
+    e.preventDefault()
+    e.cancelBubble = true
+
+    if (d > 0) {
+      this.current = n + 1
+    }
+
+    if (d < 0) {
+      this.current = n - 1
+    }
+
+    this.touch = null
+
+    setTimeout(() => {
+      this.transitioning = false
+    }, 750)
+
+    return false
+  }
+
+  /**
    * Handle keypresses on arrows whilst the slideshow is within the viewport
    *
-   * @param {KeyupEvent} e
+   * @param {KeyboardEvent} e
    */
   @bind
   handleKeypress (e) {
@@ -268,51 +311,6 @@ export default class Slideshow {
   }
 
   /**
-   * Handle a swipe or scroll interaction
-   *
-   * @param {Event} e
-   * @param {int} d
-   */
-  @bind
-  handleDeltaChange (e, d) {
-    if (this.transitioning) {
-      e.stopPropagation()
-      e.preventDefault()
-      e.cancelBubble = true
-      return false
-    }
-
-    const n = this.current
-
-    const atStart = d < -25 && n === 1
-    const atEnd = d > 25 && n === this.slides.length
-
-    if (atStart || atEnd) {
-      return
-    }
-
-    this.transitioning = true
-
-    e.stopPropagation()
-    e.preventDefault()
-    e.cancelBubble = true
-
-    if (d > 0) {
-      this.current = n + 1
-    }
-
-    if (d < 0) {
-      this.current = n - 1
-    }
-    
-    setTimeout(() => {
-      this.transitioning = false
-    }, 1000)
-
-    return false
-  }
-
-  /**
    * Transition to the current slide
    */
   transition () {
@@ -339,7 +337,7 @@ export default class Slideshow {
 
     return el.offsetWidth + parseInt(style.marginLeft) + parseInt(style.marginRight)
   }
-  
+
   /**
    * Get the height of an element including padding, border and margin
    *

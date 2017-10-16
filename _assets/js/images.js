@@ -100,7 +100,7 @@ export default class Images {
         onChange: (slideshow) => {
           const figure = slideshow.container.parentNode
           const indicator = figure.querySelector('.slideshow__current')
-  
+
           if (indicator) {
             indicator.innerHTML = slideshow.current
           }
