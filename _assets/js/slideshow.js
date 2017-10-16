@@ -197,7 +197,7 @@ export default class Slideshow {
    */
   @bind
   handleTouchStart (e) {
-    this.touch = {x: e.clientX, y: e.clientY}
+    this.touch = {x: e.touches[0].clientX, y: e.touches[0].clientY}
 
     setTimeout(() => {
       this.touch = null
@@ -211,11 +211,11 @@ export default class Slideshow {
    */
   @bind
   handleTouchMove (e) {
-    const x = e.clientX
-    const y = e.clientY
+    const x = e.touches[0].clientX
+    const y = e.touches[0].clientY
 
-    const deltaX = x - this.touch.x
-    const deltaY = y - this.touch.y
+    const deltaX = this.touch.x - x
+    const deltaY = this.touch.y - y
 
     if (this.opts.vertical && Math.abs(deltaY) > Math.abs(deltaX)) {
       return this.handleDeltaChange(e, deltaY)
