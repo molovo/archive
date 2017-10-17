@@ -33,8 +33,8 @@ export default class Title {
    * Start your engines!
    */
   constructor () {
-    // Register the visibility change listeners
-    this.registerListeners()
+    // Register the visibility change listener
+    document.addEventListener('visibilitychange', this.updatePageTitle)
   }
 
   /**
@@ -56,37 +56,6 @@ export default class Title {
       } else {
         document.title = this.original
       }
-    }
-  }
-
-  /**
-   * Register listeners for changes in page visibility.
-   * There are lots, but hopefully this means it will work
-   * in all browsers.
-   */
-  registerListeners () {
-    // This sets the appropriate listeners so that everything works cross browser
-    let hidden = 'hidden'
-
-    // Standards:
-    if (hidden in document) {
-      document.addEventListener('visibilitychange', this.updatePageTitle)
-    } else if ((hidden = 'mozHidden') in document) {
-      document.addEventListener('mozvisibilitychange', this.updatePageTitle)
-    } else if ((hidden = 'webkitHidden') in document) {
-      document.addEventListener('webkitvisibilitychange', this.updatePageTitle)
-    } else if ((hidden = 'msHidden') in document) {
-      document.addEventListener('msvisibilitychange', this.updatePageTitle)
-    // IE 9 and lower:
-    } else if ('onfocusin' in document) {
-      document.onfocusin = this.updatePageTitle
-      document.onfocusout = this.updatePageTitle
-    // All others:
-    } else {
-      window.onpageshow = this.updatePageTitle
-      window.onpagehide = this.updatePageTitle
-      window.onfocus = this.updatePageTitle
-      window.onblur = this.updatePageTitle
     }
   }
 }
