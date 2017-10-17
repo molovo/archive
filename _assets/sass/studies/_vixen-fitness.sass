@@ -1,178 +1,168 @@
-$vixen-fitness-yellow: #ffc857
-$vixen-fitness-pink: #d398bb
-$vixen-fitness-purple: #9f87af
-$vixen-fitness-plum: #704155
-$vixen-fitness-green: #a3c4bc
-$vixen-fitness-white: #fff
+$vfYellow: #ffc857
+$vfPink: #d398bb
+$vfPurple: #9f87af
+$vfPlum: #704155
+$vfGreen: #a3c4bc
+$vfWhite: #fff
 
 .study__section
   &--vixen-fitness
-    background: $vixen-fitness-white
-    color: $vixen-fitness-plum
+    background: $vfWhite
+    color: $vfPlum
 
     .study__title
-      color: $vixen-fitness-pink
+      color: $vfPink
 
     .study__icons
-      .logo--frame,
-      .octicon--plus polygon,
-      .study__icon path
-        fill: $vixen-fitness-pink
+      +studyIcons
+        fill: $vfPink
 
     .image--slideshow
       .slideshow__button
         g
-          stroke: $vixen-fitness-pink
+          stroke: $vfPink
 
     .study__feature-list
       li
         &::before
-          color: $vixen-fitness-pink
+          color: $vfPink
 
     &.study__section--intro
-      background: $vixen-fitness-plum
+      background: $vfPlum
 
       .study__intro
-        background-color: $vixen-fitness-plum
-        background-image: linear-gradient(to bottom, rgba($vixen-fitness-plum, 0) 0%, $vixen-fitness-plum 75%, $vixen-fitness-plum 100%), url('/img/studies/vixen-fitness/bg.png')
+        background-color: $vfPlum
+        background-image: linear-gradient(to bottom, transparentize($vfPlum, 1) 0%, $vfPlum 75%, $vfPlum 100%), url('/img/studies/vixen-fitness/bg.png')
         background-position: center
         background-size: cover
 
       .study__title
-        color: $vixen-fitness-yellow
+        color: $vfYellow
 
       .study__client
-        color: $vixen-fitness-white
+        color: $vfWhite
 
       .study__content
-        color: $vixen-fitness-white
+        color: $vfWhite
 
       .study__link
-        background: $vixen-fitness-pink
-        border-color: $vixen-fitness-pink
-        color: $vixen-fitness-white
+        background: $vfPink
+        border-color: $vfPink
+        color: $vfWhite
 
       .study__icons
-        .logo--frame,
-        .octicon--plus polygon,
-        .study__icon path
-          fill: $vixen-fitness-yellow
+        +studyIcons
+          fill: $vfYellow
 
       .image--full-width,
       .image--slideshow
-        background: $vixen-fitness-plum
+        background: $vfPlum
 
         @media (min-width: 42em)
           &::before
-            background: linear-gradient(to bottom, rgba($vixen-fitness-plum, 0), $vixen-fitness-plum 66.66%, $vixen-fitness-plum)
+            background: linear-gradient(to bottom, transparentize($vfPlum, 1), $vfPlum 66.66%, $vfPlum)
 
           &::after
-            background: linear-gradient(to top, rgba($vixen-fitness-plum, 0), $vixen-fitness-plum 66.66%, $vixen-fitness-plum)
+            background: linear-gradient(to top, transparentize($vfPlum, 1), $vfPlum 66.66%, $vfPlum)
 
         .slideshow__button
           g
-            stroke: $vixen-fitness-yellow
+            stroke: $vfYellow
 
       .image__caption
         @media (min-width: 64em)
-          background: $vixen-fitness-plum
+          background: $vfPlum
 
           &::before
-            background: linear-gradient(to bottom, rgba($vixen-fitness-plum, 0), $vixen-fitness-plum 66.66%, $vixen-fitness-plum)
+            background: linear-gradient(to bottom, transparentize($vfPlum, 1), $vfPlum 66.66%, $vfPlum)
 
           &::after
-            background: linear-gradient(to top, rgba($vixen-fitness-plum, 0), $vixen-fitness-plum 66.66%, $vixen-fitness-plum)
+            background: linear-gradient(to top, transparentize($vfPlum, 1), $vfPlum 66.66%, $vfPlum)
 
       blockquote
         p
-          color: $vixen-fitness-yellow
+          color: $vfYellow
 
-      .post__social
+      .social
         &__link
-          svg
-            path
-              stroke: $color-white
+          path
+            stroke: $white
 
         &__likes
-          color: $color-white
+          color: $white
 
     &.study__section--website
-      background: $vixen-fitness-yellow
-      color: $vixen-fitness-plum
+      background: $vfYellow
+      color: $vfPlum
 
       .study__title
-        color: $vixen-fitness-plum
+        color: $vfPlum
 
       .study__client
-        color: $vixen-fitness-plum
+        color: $vfPlum
 
       .study__icons
-        .logo--frame,
-        .octicon--plus polygon,
-        .study__icon path
-          fill: $vixen-fitness-plum
+        +studyIcons
+          fill: $vfPlum
 
       .image--full-width,
       .image--slideshow
-        background-image: linear-gradient(to bottom, rgba($vixen-fitness-yellow, 0), $vixen-fitness-yellow 15%, $vixen-fitness-yellow), linear-gradient(to top, rgba($vixen-fitness-yellow, 0), $vixen-fitness-yellow 15%, $vixen-fitness-yellow)
+        background-image: linear-gradient(to bottom, transparentize($vfYellow, 1), $vfYellow 15%, $vfYellow), linear-gradient(to top, transparentize($vfYellow, 1), $vfYellow 15%, $vfYellow)
 
         .slideshow__button
           g
-            stroke: $vixen-fitness-pink
+            stroke: $vfPink
 
       .image__caption
         @media (min-width: 64em)
-          background: $vixen-fitness-yellow
+          background: $vfYellow
 
           &::before
-            background: linear-gradient(to bottom, rgba($vixen-fitness-yellow, 0), $vixen-fitness-yellow 66.66%, $vixen-fitness-yellow)
+            background: linear-gradient(to bottom, transparentize($vfYellow, 1), $vfYellow 66.66%, $vfYellow)
 
           &::after
-            background: linear-gradient(to top, rgba($vixen-fitness-yellow, 0), $vixen-fitness-yellow 66.66%, $vixen-fitness-yellow)
+            background: linear-gradient(to top, transparentize($vfYellow, 1), $vfYellow 66.66%, $vfYellow)
 
-      .post__social
+      .social
         &__link
-          svg
-            path
-              stroke: $vixen-fitness-plum
+          path
+            stroke: $vfPlum
 
         &__likes
-          color: $vixen-fitness-plum
+          color: $vfPlum
 
 .image__pair
   &--cards
-    picture
-      &:first-of-type
-        flex: 0 1 55.55%
+    &:first-of-type
+      flex: 0 1 55.55%
 
-      &:last-of-type
-        flex: 0 1 44.45%
+    &:last-of-type
+      flex: 0 1 44.45%
 
 .study__type-sample
   &--montserrat
     span
-      color: $vixen-fitness-yellow
+      color: $vfYellow
       font-family: 'Montserrat'
       font-size: 5vw
       font-weight: 700
       line-height: 1em
       text-transform: uppercase
 
-    .study__type-sample__font-name
-      color: $vixen-fitness-pink
+    .study__type-sample-name
+      color: $vfPink
 
   &--have-heart-one
     span
-      color: $vixen-fitness-pink
+      color: $vfPink
       font-family: 'Have Heart One'
       font-size: 10vw
       line-height: 1em
 
-    .study__type-sample__font-name
-      color: $vixen-fitness-yellow
+    .study__type-sample-name
+      color: $vfYellow
 
 .studies__item--vixen-fitness
   .studies__image
-    svg
-      path
-        fill: $vixen-fitness-yellow
+    path
+      fill: $vfYellow

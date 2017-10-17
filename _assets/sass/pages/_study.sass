@@ -1,3 +1,9 @@
+=studyIcons
+  .logo--frame,
+  .octicon--plus polygon,
+  .study__icon path
+    @content
+
 .page--study
   padding: 0
 
@@ -21,10 +27,8 @@
     width: 70%
 
   .study__icons
-    .logo--frame,
-    .octicon--plus polygon,
-    .study__icon path
-      fill: $color-almost-black
+    +studyIcons
+      fill: $almostBlack
 
   &__image
     align-items: flex-end
@@ -38,7 +42,7 @@
       width: 100%
 
   &__title
-    +font-secondary
+    +fontSecondary
 
   &__item
     align-items: flex-end
@@ -156,7 +160,7 @@
       width: $baseline
 
       polygon
-        fill: $color-white
+        fill: $white
 
   &__icon
     height: auto
@@ -168,10 +172,10 @@
       transform-origin: center
 
     path
-      fill: $color-white
+      fill: $white
 
   &__title
-    color: $color-white
+    color: $white
     margin: 12em 0 3em
 
     h1
@@ -197,7 +201,7 @@
       flex: initial
 
   &__type-sample
-    background: $color-white
+    background: $white
     left: 50vw
     margin: #{$baseline * 2} 0 #{$baseline * 2} -1.5em
     position: relative
@@ -205,7 +209,7 @@
     width: 100vw
     z-index: 1001
 
-    &__wrapper
+    &-wrapper
       height: 100%
       left: 50vw
       overflow: hidden
@@ -241,11 +245,11 @@
         right: 0
 
       &::before
-        background: linear-gradient(to bottom, rgba($color-white, 0), $color-white 66.66%, $color-white)
+        background: linear-gradient(to bottom, $transparentWhite, $white 66.66%, $white)
         bottom: 100%
 
       &::after
-        background: linear-gradient(to top, rgba($color-white, 0), $color-white 66.66%, $color-white)
+        background: linear-gradient(to top, $transparentWhite, $white 66.66%, $white)
         top: 100%
 
   &__feature-list
@@ -260,7 +264,7 @@
         padding: $baseline 0 $baseline #{$baseline * 3}
 
       &::before
-        +font-script
+        +fontScript
         display: inline-block
         float: left
         font-size: 3em

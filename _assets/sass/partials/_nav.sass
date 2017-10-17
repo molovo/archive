@@ -1,6 +1,6 @@
 .nav-toggle
   align-items: center
-  background: $color-white
+  background: $white
   border-radius: .5em
   display: flex
   height: 2em
@@ -25,40 +25,40 @@
     width: 1.75em
 
   circle
-    fill: $color-almost-black
+    fill: $almostBlack
     transition: fill .25s
 
   &:hover
     circle
-      fill: $color-red
+      fill: $red
 
   .page--home &,
   .page--error &,
   .nav:target + .header &,
   .nav.nav--open + .header &
     circle
-      fill: $color-white
+      fill: $white
 
   .page--home &,
   .page--error &
-    background: $color-black
+    background: $black
 
     &:hover
       circle
-        fill: $color-red
+        fill: $red
 
   .nav:target + .header &,
   .nav.nav--open + .header &
-    background: $color-black
+    background: $black
     z-index: 10000
 
     &:hover
       circle
-        fill: $color-red
+        fill: $red
 
 .nav
   @extend %script-background
-  background: $color-black
+  background: $black
   bottom: 0
   left: 0
   opacity: 0
@@ -120,8 +120,8 @@
         order: 0
 
   &__link
-    +font-secondary
-    color: $color-white
+    +fontSecondary
+    color: $white
     font-size: 2.25em
     font-weight: 700
     line-height: #{(1.35 / 1.5) * $baseline}
@@ -134,5 +134,5 @@
       margin-bottom: #{(.5 / 1.5) * $baseline}
 
     &:hover
-      color: $color-red
+      color: $red
       text-decoration: none

@@ -1,93 +1,87 @@
-$haresfoot-yellow: #ffc930
-$haresfoot-orange: #eba721
-$haresfoot-orange2: #f3813b
-$haresfoot-orange3: #d96332
-$haresfoot-red: #b22e37
-$haresfoot-white: #fff
+$hfYellow: #ffc930
+$hfOrange: #eba721
+$hfOrange2: #f3813b
+$hfOrange3: #d96332
+$hfRed: #b22e37
+$hfWhite: #fff
+$hfTransparentOrange: rgba($hfOrange3, 0)
+$hfTransparentOrange2: rgba($hfOrange3, .3)
 
 .study__section
   &--haresfoot
-    background: $color-white
+    background: $hfWhite
 
     .study__title
-      color: $haresfoot-orange2
+      color: $hfOrange2
 
     .study__icons
-      .logo--frame,
-      .octicon--plus polygon,
-      .study__icon path
-        fill: $haresfoot-orange2
+      +studyIcons
+        fill: $hfOrange2
 
     &.study__section--intro
-      background: $haresfoot-orange3
+      background: $hfOrange3
 
       .study__intro
-        background-color: $haresfoot-orange3
-        background-image: linear-gradient(to bottom, rgba($haresfoot-orange3, 0) 0%, rgba($haresfoot-orange3, 0) 75%, $haresfoot-orange3 100%), url('/img/studies/haresfoot/mobile-bg.png')
+        background-color: $hfOrange3
+        background-image: linear-gradient(to bottom, $hfTransparentOrange 0%, $hfTransparentOrange 75%, $hfOrange3 100%), url('/img/studies/haresfoot/mobile-bg.png')
         background-position: center
         background-size: cover
 
         @media (min-width: 42em)
-          background-image: linear-gradient(to bottom, rgba($haresfoot-orange3, 0) 0%, rgba($haresfoot-orange3, .3) 75%, $haresfoot-orange3 100%), url('/img/studies/haresfoot/bg.png')
+          background-image: linear-gradient(to bottom, $hfTransparentOrange 0%, $hfTransparentOrange2 75%, $hfOrange3 100%), url('/img/studies/haresfoot/bg.png')
 
       .study__title,
       .study__content,
       .study__client
-        color: $color-white
+        color: $white
 
       .study__link
-        background: $haresfoot-red
-        border-color: $haresfoot-red
-        color: $haresfoot-white
+        background: $hfRed
+        border-color: $hfRed
+        color: $hfWhite
 
       .study__icons
-        .logo--frame,
-        .octicon--plus polygon,
-        .study__icon path
-          fill: $color-white
+        +studyIcons
+          fill: $white
 
       .image--full-width
         @media (min-width: 42em)
           &::before
-            background: linear-gradient(to bottom, rgba($haresfoot-orange2, 0), $haresfoot-orange2 66.66%, $haresfoot-orange2)
+            background: linear-gradient(to bottom, $hfTransparentOrange, $hfOrange3 66.66%, $hfOrange3)
 
           &::after
-            background: linear-gradient(to top, rgba($haresfoot-orange2, 0), $haresfoot-orange2 66.66%, $haresfoot-orange2)
+            background: linear-gradient(to top, $hfTransparentOrange, $hfOrange3 66.66%, $hfOrange3)
 
       .image__caption
         @media (min-width: 64em)
-          background: $haresfoot-orange2
+          background: $hfOrange3
 
           &::before
-            background: linear-gradient(to bottom, rgba($haresfoot-orange2, 0), $haresfoot-orange2 66.66%, $haresfoot-orange2)
+            background: linear-gradient(to bottom, $hfTransparentOrange, $hfOrange3 66.66%, $hfOrange3)
 
           &::after
-            background: linear-gradient(to top, rgba($haresfoot-orange2, 0), $haresfoot-orange2 66.66%, $haresfoot-orange2)
+            background: linear-gradient(to top, $hfTransparentOrange, $hfOrange3 66.66%, $hfOrange3)
 
-      .post__social
+      .social
         &__link
-          svg
-            path
-              stroke: $color-white
+          path
+            stroke: $white
 
         &__likes
-          color: $color-white
+          color: $white
 
     &.study__section--website
-      background: $haresfoot-yellow
-      color: $color-almost-black
+      background: $hfYellow
+      color: $almostBlack
 
       .study__title
-        color: $haresfoot-red
+        color: $hfRed
 
       .study__icons
-        .logo--frame,
-        .octicon--plus polygon,
-        .study__icon path
-          fill: $haresfoot-red
+        +studyIcons
+          fill: $hfRed
 
 .studies__item--haresfoot
   .studies__image
-    svg
-      path
-        fill: $haresfoot-orange2
+    path
+      fill: $hfOrange2

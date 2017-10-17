@@ -23,17 +23,17 @@ main > .post
       width: $baseline
 
     path
-      fill: $color-blue
+      fill: $blue
 
   &__header
     flex: 0 0 100%
     margin-right: auto
 
-    &__wrapper
+    &-wrapper
       max-width: 36em
 
   &__link
-    color: $color-red
+    color: $red
 
   &__content
     flex: 0 0 100%
@@ -54,7 +54,7 @@ main > .post
       font-size: .875em
 
   &__date
-    color: $color-red
+    color: $red
 
   &__tags
     display: block
@@ -69,92 +69,6 @@ main > .post
       &::before
         content: '•'
         margin: 0 1ch
-
-  &__social
-    display: inline-flex
-    flex: 0 0 100%
-    font-size: .75em
-    justify-content: flex-start
-    margin-right: auto
-
-    @media (min-width: 64em)
-      flex: 0 0 auto
-      flex-direction: column
-      margin-right: 0
-      position: sticky
-      top: between(7.75em, 12.25em, 42em, 80em)
-      transform: translateX(-.6em)
-
-    @media (min-width: 80em)
-      top: 12.25em
-
-    svg
-      display: block
-      width: 1.5em
-
-      path
-        stroke-width: 2
-
-    &__likes,
-    &__mentions
-      color: $color-almost-black
-      left: 100%
-      position: absolute
-      top: 50%
-      transform: translate(.5em, -62.5%)
-      width: 100%
-
-      @media (min-width: 51em)
-        transform: translate(.75em, -62.5%)
-
-    &__link
-      flex: 0 0 auto
-      margin: 0 $baseline 0 0
-      position: relative
-
-      @media (min-width: 64em)
-        margin: 0 0 $baseline
-
-      &--like,
-      &--mention
-        margin-right: #{$baseline * 1.5}
-
-        @media (min-width: 64em)
-          margin-right: 0
-
-      &--like
-        svg
-          path
-            fill: transparent
-            stroke: $color-red
-            transition: fill .25s
-
-      &--liked
-        svg
-          path
-            fill: $color-red
-
-      &--mention
-        svg
-          path
-            fill: transparent
-            stroke: $color-green
-            transition: fill .25s
-
-      &--has-mentions
-        svg
-          path
-            fill: $color-green
-
-      &--twitter
-        svg
-          path
-            stroke: #1da1f2
-
-      &--facebook
-        svg
-          path
-            stroke: #3b5998
 
 .posts
   &__list
@@ -184,24 +98,22 @@ main > .post
         text-align: center
         white-space: nowrap
 
-    &__next
-      +font-secondary
+    &-link
+      +fontSecondary
 
+      &::before,
       &::after
-        color: $color-red
-        content: '→'
+        color: $red
 
       &:hover
+        &::before,
         &::after
           text-decoration: none
 
-    &__previous
-      +font-secondary
+      &--next
+        &::after
+          content: '→'
 
-      &::before
-        color: $color-red
-        content: '←'
-
-      &:hover
+      &--previous
         &::before
-          text-decoration: none
+          content: '←'

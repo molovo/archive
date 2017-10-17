@@ -8,11 +8,11 @@
     list-style: none
 
   &__not-found
-    +font-secondary
+    +fontSecondary
     font-style: italic
 
   &__item
-    border-bottom: 1px dashed $color-gray
+    border-bottom: 1px dashed $gray
     margin-bottom: $baseline
     padding-bottom: $baseline
 
@@ -43,12 +43,13 @@
       margin-bottom: 0
 
   &__meta
-    +font-secondary
-    color: $color-gray-two
+    +fontSecondary
+    color: $grayTwo
     font-style: italic
     margin-left: auto
 
   &__source
+    background: url('/img/icons/link.svg') left center / contain no-repeat
     display: inline-block
     height: 1em
     line-height: 1em
@@ -64,14 +65,11 @@
       overflow: inherit
       width: 1.5em
 
-  &__source
-    background: url('/img/icons/link.svg') left center / contain no-repeat
-
   &--like,
   &--repost
     .webmention__content
-      +font-secondary
-      color: $color-gray-two
+      +fontSecondary
+      color: $grayTwo
       flex: 1 1 auto
       font-style: italic
       order: 0

@@ -1,16 +1,12 @@
 html,
 body
-  // height: 100vh
-  // overflow-x: hidden
-  // overflow-y: auto
   position: relative
-  // width: 100vw
 
   &.menu-open
-    overflow: hidden !important
+    overflow: hidden
 
 body
-  background: $color-white
+  background: $white
   opacity: 1
   padding: 6em 1.5em 0
   transition: background .5s, opacity .5s ease-out
@@ -36,14 +32,14 @@ main
       transform: translateY(3em)
 
 .turbolinks-progress-bar
+  background-color: $red
   height: 5px
-  background-color: $color-red
 
 %script-background
   &::after
     +script
     bottom: -.25em
-    color: $color-almost-black
+    color: $almostBlack
     content: 'Made in Southsea'
     left: 50%
     pointer-events: none

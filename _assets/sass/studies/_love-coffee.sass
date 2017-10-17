@@ -1,50 +1,45 @@
-$lovecoffee-white: #fff
-$lovecoffee-blue: #057281
-$lovecoffee-orange: #ef8019
-$lovecoffee-brown: #52302c
+$lcWhite: #fff
+$lcBlue: #057281
+$lcOrange: #ef8019
+$lcBrown: #52302c
 
 .study__section
   &--love-coffee
-    background: $color-white
+    background: $white
 
     .study__title
-      color: $lovecoffee-blue
+      color: $lcBlue
 
     .study__icons
-      .logo--frame,
-      .octicon--plus polygon,
-      .study__icon path
-        fill: $lovecoffee-blue
+      +studyIcons
+        fill: $lcBlue
 
     &.study__section--intro
-      background: $lovecoffee-white
+      background: $lcWhite
 
       .study__intro
-        background-color: $lovecoffee-white
-        background-image: linear-gradient(to bottom, rgba($lovecoffee-white, 0) 0%, $lovecoffee-white 75%, $lovecoffee-white 100%), url('/img/studies/love-coffee/bg.jpg')
+        background-color: $lcWhite
+        background-image: linear-gradient(to bottom, transparentize($lcWhite, 1) 0%, $lcWhite 75%, $lcWhite 100%), url('/img/studies/love-coffee/bg.jpg')
         background-position: center
         background-size: cover
 
       .study__title,
       .study__content
-        color: $color-almost-black
+        color: $almostBlack
 
       .study__client
-        color: $lovecoffee-white
+        color: $lcWhite
 
       .study__link
-        background: $lovecoffee-blue
-        border-color: $lovecoffee-blue
-        color: $lovecoffee-white
+        background: $lcBlue
+        border-color: $lcBlue
+        color: $lcWhite
 
       .study__icons
-        .logo--frame,
-        .octicon--plus polygon,
-        .study__icon path
-          fill: $color-white
+        +studyIcons
+          fill: $white
 
 .studies__item--love-coffee
   .studies__image
-    svg
-      path
-        fill: $lovecoffee-blue
+    path
+      fill: $lcBlue

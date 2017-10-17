@@ -14,8 +14,6 @@ import es          from 'event-stream'
 // Dependencies for compiling coffeescript
 import sourcemaps from 'gulp-sourcemaps'
 import browserify from 'browserify'
-import babelify   from 'babelify'
-import uglifyify  from 'uglifyify'
 import watchify   from 'watchify'
 import eslint     from 'gulp-eslint'
 import uglifyEs   from 'uglify-es'

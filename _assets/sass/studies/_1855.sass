@@ -1,49 +1,46 @@
-$eighteenfiftyfive-red: #aa314e
-$eighteenfiftyfive-red2: #fc6473
-$eighteenfiftyfive-blue: #113245
-$eighteenfiftyfive-white: #fff
-$eighteenfiftyfive-black: #000
+$effRed: #aa314e
+$effRed2: #fc6473
+$effBlue: #113245
+$effWhite: #fff
+$effBlack: #000
+$effTransparentRed: rgba($effRed2, 0)
+$effTransparentRed2: rgba($effRed2, .3)
 
 .study__section
   &--1855
-    background: $color-white
+    background: $white
 
     .study__title
-      color: $eighteenfiftyfive-red2
+      color: $effRed2
 
     .study__icons
-      .logo--frame,
-      .octicon--plus polygon,
-      .study__icon path
-        fill: $eighteenfiftyfive-red2
+      +studyIcons
+        fill: $effRed2
 
     &.study__section--intro
-      background: $eighteenfiftyfive-red2
-      
+      background: $effRed2
+
       .study__intro
-        background-color: $eighteenfiftyfive-red2
-        background-image: linear-gradient(to bottom, rgba($eighteenfiftyfive-red2, 0) 0%, rgba($eighteenfiftyfive-red2, .3) 75%, $eighteenfiftyfive-red2 100%), url('/img/studies/1855/bg.jpg')
+        background-color: $effRed2
+        background-image: linear-gradient(to bottom, $effTransparentRed 0%, $effTransparentRed2 75%, $effRed2 100%), url('/img/studies/1855/bg.jpg')
         background-position: center
         background-size: cover
 
       .study__title,
       .study__content,
       .study__client
-        color: $color-white
+        color: $white
 
       .study__link
-        background: $eighteenfiftyfive-blue
-        border-color: $eighteenfiftyfive-blue
-        color: $eighteenfiftyfive-white
+        background: $effBlue
+        border-color: $effBlue
+        color: $effWhite
 
       .study__icons
-        .logo--frame,
-        .octicon--plus polygon,
-        .study__icon path
-          fill: $color-white
+        +studyIcons
+          fill: $white
 
 .studies__item--1855
   .studies__image
-    svg
-      path
-        fill: $eighteenfiftyfive-red
+    path
+      fill: $effRed

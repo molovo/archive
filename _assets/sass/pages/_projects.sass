@@ -12,7 +12,7 @@
       margin-right: $baseline
 
       &.active
-        color: $color-red
+        color: $red
         font-weight: 600
 
   &__list
@@ -30,7 +30,7 @@
         grid-template-columns: 1fr 1fr 1fr
 
   &__project
-    border: 1px solid $color-gray
+    border: 1px solid $gray
     border-radius: .25em
     box-sizing: border-box
     line-height: $baseline
@@ -50,22 +50,22 @@
 
     svg
       path
-        fill: $color-red
+        fill: $red
 
     &:hover
-      background: $color-red
-      border-color: $color-red
+      background: $red
+      border-color: $red
 
       a
-        color: $color-white
+        color: $white
         text-decoration: none
 
       svg
         path
-          fill: $color-white
+          fill: $white
 
-      .projects__meta__icon
-        color: $color-white
+      .projects__icon
+        color: $white
 
     @media (min-width: 48em)
       @for $i from 0 through 1
@@ -92,17 +92,17 @@
       font-feature-settings: 'lnum'
       margin-right: $baseline
 
-    &__icon
-      align-items: center
-      color: $color-red
-      display: flex
-      margin-right: #{($baseline / 4)}
+  &__icon
+    align-items: center
+    color: $red
+    display: flex
+    margin-right: #{($baseline / 4)}
 
-      svg
-        height: #{$baseline / 1.5}
+    svg
+      height: #{$baseline / 1.5}
 
   &__link
-    color: $color-almost-black
+    color: $almostBlack
 
 .project-highlights
   align-items: flex-start
@@ -156,8 +156,8 @@
     margin-right: $baseline
 
     @media (min-width: 56em)
-      margin-right: #{$baseline * 2}
       flex: 0 0 #{$baseline * 4}
+      margin-right: #{$baseline * 2}
 
     img
       border-radius: .25em

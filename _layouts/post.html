@@ -13,7 +13,7 @@ pagination:
       <li>
         {% if page.previous.url %}
           <a href="{{ page.previous.url }}"
-             class="posts__pagination__previous">
+             class="posts__pagination-link posts__pagination-link--previous">
             <span class="screenreader-text">Previous Article: </span>
             {{ page.previous.title }}
           </a>
@@ -26,7 +26,7 @@ pagination:
       <li>
         {% if page.next.url %}
           <a href="{{ page.next.url }}"
-             class="posts__pagination__next">
+             class="posts__pagination-link posts__pagination-link--next">
             <span class="screenreader-text">Next Article: </span>
             {{ page.next.title }}
           </a>

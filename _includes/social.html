@@ -1,31 +1,31 @@
-<aside class="post__social">
+<aside class="social">
   <a href="javascript:void('');"
       title="Like this post"
-      class="post__social__link post__social__link--like"
+      class="social__link social__link--like"
       data-url="{{ site.url }}{{ include.post.url }}">
     {% include icons/heart.svg %}
     <span class="screenreader-text">Like this post</span>
-    <span class="post__social__likes"></span>
+    <span class="social__likes"></span>
   </a>
 
   {% if include.webmentions != 'false' %}
     {% capture count %}{% webmention_count include.post.url %}{% endcapture %}
     <a href="{{ include.post.url }}#webmentions"
         title="Webmentions"
-        class="post__social__link
-              post__social__link--mention
+        class="social__link
+              social__link--mention
               {% if count != '0' and count != '' %}
-                post__social__link--has-mentions
+                social__link--has-mentions
               {% endif %}">
       {% include icons/message-square.svg %}
       <span class="screenreader-text">View Webmentions</span>
-      <span class="post__social__mentions">{% if count != '0' %}{{ count }}{% endif %}</span>
+      <span class="social__mentions">{% if count != '0' %}{{ count }}{% endif %}</span>
     </a>
   {% endif %}
 
   <a href="http://twitter.com/share?text=I just read this article on molovo.co and you should too :: &url={{ site.url }}{{ include.post.url }}"
       title="Share on Twitter"
-      class="post__social__link post__social__link--twitter"
+      class="social__link social__link--twitter"
       target="_blank"
       rel="noopener nofollow"
       onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;">
@@ -36,7 +36,7 @@
   {% capture url %}{{ site.url | url_encode }}{{ include.post.url | url_encode }}{% endcapture %}
   <a href="https://www.facebook.com/dialog/share?app_id=1777155628978473&display=popup&href={{ url }}"
      title="Share on Facebook"
-     class="post__social__link post__social__link--facebook"
+     class="social__link social__link--facebook"
      target="_blank"
      rel="noopener nofollow"
      onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;">

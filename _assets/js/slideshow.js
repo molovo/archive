@@ -290,22 +290,22 @@ export default class Slideshow {
     const key = e.keyCode || e.which
 
     if (this.opts.vertical) {
-      if (key == keys.up) {
+      if (key === keys.up) {
         this.current = this.current - 1
       }
 
-      if (key == keys.down) {
+      if (key === keys.down) {
         this.current = this.current + 1
       }
 
       return
     }
 
-    if (key == keys.left) {
+    if (key === keys.left) {
       this.current = this.current - 1
     }
 
-    if (key == keys.right) {
+    if (key === keys.right) {
       this.current = this.current + 1
     }
   }

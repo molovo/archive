@@ -17,19 +17,20 @@
     margin-bottom: 0
     width: 100%
 
-    &:first-of-type:nth-last-of-type(2n),
-    &:first-of-type:nth-last-of-type(2n) ~ img,
-    &:first-of-type:nth-last-of-type(2n) ~ picture,
-    &:first-of-type:nth-last-of-type(2n) ~ svg
-      @media (min-width: 42em)
-        flex: 0 0 50%
+    &:first-of-type
+      &:nth-last-of-type(2n),
+      &:nth-last-of-type(2n) ~ img,
+      &:nth-last-of-type(2n) ~ picture,
+      &:nth-last-of-type(2n) ~ svg
+        @media (min-width: 42em)
+          flex: 0 0 50%
 
-    &:first-of-type:nth-last-of-type(3n),
-    &:first-of-type:nth-last-of-type(3n) ~ img,
-    &:first-of-type:nth-last-of-type(3n) ~ picture,
-    &:first-of-type:nth-last-of-type(3n) ~ svg
-      @media (min-width: 42em)
-        flex: 0 0 33.3333%
+      &:nth-last-of-type(3n),
+      &:nth-last-of-type(3n) ~ img,
+      &:nth-last-of-type(3n) ~ picture,
+      &:nth-last-of-type(3n) ~ svg
+        @media (min-width: 42em)
+          flex: 0 0 33.3333%
 
   &--pull-left
     margin-left: -1.5em
@@ -53,7 +54,7 @@
   &--full-width,
   &--slideshow
     background-color: transparent
-    background-image: linear-gradient(to bottom, rgba($color-white, 0), $color-white 15%, $color-white), linear-gradient(to top, rgba($color-white, 0), $color-white 15%, $color-white)
+    background-image: linear-gradient(to bottom, $transparentWhite, $white 15%, $white), linear-gradient(to top, $transparentWhite, $white 15%, $white)
     background-position: top center, bottom center
     background-repeat: no-repeat
     background-size: 100% 15em, 100% 15em
@@ -103,13 +104,13 @@
         max-width: 30em
 
   &__caption
-    +font-primary
+    +fontPrimary
     flex: 0 0 calc(100% - #{$baseline * 2})
     font-style: italic
     margin-top: $baseline
 
     @media(min-width: 64em)
-      background: $color-white
+      background: $white
       left: 100%
       margin-left: $baseline
       margin-top: 0
@@ -129,20 +130,20 @@
         width: 100%
 
       &::before
-        background: linear-gradient(to bottom, rgba($color-white, 0), $color-white 66.66%, $color-white)
+        background: linear-gradient(to bottom, $transparentWhite, $white 66.66%, $white)
         bottom: 100%
 
       &::after
-        background: linear-gradient(to top, rgba($color-white, 0), $color-white 66.66%, $color-white)
+        background: linear-gradient(to top, $transparentWhite, $white 66.66%, $white)
         top: 100%
 
     @media (min-width: 80em)
       width: 15em
 
     strong
-      +font-primary
+      +fontPrimary
+      font-feature-settings: 'tnum'
       font-style: normal
-      font-feature-settings: "tnum"
 
   &__pair
     align-items: stretch
@@ -187,7 +188,7 @@
     width: 100%
 
   &__slide
-    box-shadow: 0px 3px 15px rgba($color-almost-black, .1)
+    box-shadow: $shadow
     flex: 0 0 100%
     // For some reason images within the slideshow have
     // a wierd margin around them. Removing the line-height
@@ -224,10 +225,10 @@
       width: 100%
 
       g
-        stroke: $color-blue
+        stroke: $blue
 
     &--next
-      right: 0em
+      right: 0
       transform: rotate(180deg)
 
     &--prev
@@ -242,8 +243,8 @@ picture
 
 img,
 source
-  transition: filter .5s
   transform: translateZ(0)
+  transition: filter .5s
 
   &[data-src],
   &[data-srcset]

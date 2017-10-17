@@ -1,4 +1,6 @@
 {
+  "name": "molovo",
+  "version": "1.0.0",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-eslint": "^8.0.1",

@@ -30,7 +30,7 @@ pagination:
       <ul>
         <li>
           {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path }}" class="posts__pagination__previous">Previous page</a>
+            <a href="{{ paginator.previous_page_path }}" class="posts__pagination-link posts__pagination-link--previous">Previous page</a>
           {% endif %}
         </li>
 
@@ -40,7 +40,7 @@ pagination:
 
         <li>
           {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}" class="posts__pagination__next">Next page</a>
+            <a href="{{ paginator.next_page_path }}" class="posts__pagination-link posts__pagination-link--next">Next page</a>
           {% endif %}
         </li>
       </ul>
