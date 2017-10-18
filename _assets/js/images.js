@@ -1,5 +1,5 @@
 import { bind } from 'decko'
-import Slideshow from './slideshow'
+import MagicRoundabout from 'magic-roundabout'
 
 /**
  * This class deals with lazy loading of images
@@ -96,7 +96,7 @@ export default class Images {
 
   setupSlideshows () {
     document.querySelectorAll('.slideshow').forEach(slideshow => {
-      this.slideshows.push(new Slideshow(slideshow, {
+      this.slideshows.push(new MagicRoundabout(slideshow, {
         onChange: (slideshow) => {
           const figure = slideshow.container.parentNode
           const indicator = figure.querySelector('.slideshow__current')
