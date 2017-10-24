@@ -1,18 +1,18 @@
 .contact
-  background: $black
-  color: $white
+  // background: $black
+  // color: $white
   margin: 0 -1.5em
-  padding: 6em 1.5em 0
+  padding: 0 1.5em
   position: relative
   z-index: 1
 
   @media (min-width: 42em)
     margin: 0 between(-1.5em, -6em, 42em, 80em)
-    padding: 6em between(1.5em, 6em, 42em, 80em) 0
+    padding: 0 between(1.5em, 6em, 42em, 80em)
 
   @media (min-width: 80em)
     margin: 0 -6em
-    padding: 6em 6em 0
+    padding: 0 6em
 
   &__email
     +fontSecondary
@@ -24,8 +24,8 @@
     @media (min-width: 24em)
       font-size: 3em
 
-    @media (min-width: 42em)
-      font-size: 4.5em
+    // @media (min-width: 42em)
+    //   font-size: 4.5em
 
     &:hover
       text-decoration: underline

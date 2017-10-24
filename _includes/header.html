@@ -1,64 +1,21 @@
-<nav class="nav nav--main"
-     id="menu"
-     data-turbolinks-permanent>
-  <a href="#content"
-    title="Skip to content"
-    class="screenreader-text">
-    Skip to content
-  </a>
-
-  <ul class="nav__menu">
-    <li class="nav__item nav__item--home">
-      <a href="/"
-         aria-label="molovo">
-        {% include icons/logo.svg %}
-        <span class="screenreader-text">Home</span>
-      </a>
-    </li>
-
-    {% if site.environment != 'production' %}
-    <li class="nav__item nav__item--case-studies">
-      <a href="/studies/"
-          class="nav__link">
-        Case studies
-      </a>
-    </li>
-    {% endif %}
-
-    <li class="nav__item nav__item--open-source">
-      <a href="/projects/"
-         class="nav__link">
-        Open source
-      </a>
-    </li>
-
-    <li class="nav__item nav__item--writing">
-      <a href="/writing/"
-          class="nav__link">
-        Writing
-      </a>
-    </li>
-
-    <li class="nav__item nav__item--search">
-      <a href="/search/"
-          class="nav__link">
-        Search
-      </a>
-    </li>
-
-    <li class="screenreader-text">
-      <a href="https://twitter.com/molovo">
-        {% include icons/twitter.svg %}
-        <span>Follow me on Twitter</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+<a href="#content"
+   title="Skip to content"
+   class="screenreader-text">
+  Skip to content
+</a>
 
 <header class="header"
         id="top">
   <nav class="top-nav">
-    <a href="#menu"
+    <a href="/"
+        aria-label="molovo">
+      {% include icons/logo.svg %}
+      <span class="screenreader-text">Home</span>
+    </a>
+
+    <span class="header__title">{{ page.title }}</span>
+
+    <a href="javascript:void('')"
        class="nav-toggle"
        id="nav-toggle">
       <span class="screenreader-text">Menu</span>

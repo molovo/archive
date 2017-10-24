@@ -7,6 +7,7 @@
 .page--study
   padding: 0
 
+  .header,
   .footer,
   .contact
     margin: 0
@@ -152,12 +153,12 @@
     text-decoration: none
 
     .logo
-      height: $baseline
+      height: #{$baseline * 1.25}
 
     .octicon--plus
-      height: $baseline
-      margin: 0 $baseline
-      width: $baseline
+      height: 1em
+      margin: 0 #{$baseline / 2}
+      width: 1em
 
       polygon
         fill: $white
@@ -165,7 +166,7 @@
   &__icon
     height: auto
     vertical-align: baseline
-    width: #{1.5 * $baseline}
+    width: #{1 * $baseline}
 
     &--1855
       transform: scale(1.25)

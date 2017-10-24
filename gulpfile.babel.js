@@ -114,7 +114,7 @@ gulp.task('compile:sass', () => {
     .pipe(rename('main.css'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('_site/css/'))
-    .pipe(livereload())
+    .pipe(livereload('*.css'))
 })
 
 // Set up the browserify instance
@@ -149,7 +149,7 @@ function bundle () {
     .pipe(rename('main.min.js'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('_site/js/'))
-    .pipe(livereload())
+    .pipe(livereload('*.js'))
 }
 
 gulp.task('compile:js', bundle)

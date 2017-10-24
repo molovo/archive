@@ -34,7 +34,7 @@ exclude:
   - coffeelint.json
   - Gemfile
   - Gemfile.lock
-  - gulpfile.coffee
+  - gulpfile.babel.js
   - netlify.toml
   - node_modules
   - package.json

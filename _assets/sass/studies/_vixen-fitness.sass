@@ -5,6 +5,23 @@ $vfPlum: #704155
 $vfGreen: #a3c4bc
 $vfWhite: #fff
 
+.page--vixen-fitness
+  .header
+    background: $vfYellow
+
+    &__title
+      border-left-color: transparentize($vfPlum, .9)
+
+    .logo--frame
+      fill: $vfPlum
+
+    .nav-toggle
+      circle
+        fill: $vfPlum
+
+    &:not(.header--sticky)
+      display: none
+
 .study__section
   &--vixen-fitness
     background: $vfWhite
@@ -86,10 +103,10 @@ $vfWhite: #fff
       .social
         &__link
           path
-            stroke: $white
+            stroke: $vfYellow
 
         &__likes
-          color: $white
+          color: $vfYellow
 
     &.study__section--website
       background: $vfYellow
@@ -126,10 +143,10 @@ $vfWhite: #fff
       .social
         &__link
           path
-            stroke: $vfPlum
+            stroke: $vfPink
 
         &__likes
-          color: $vfPlum
+          color: $vfPink
 
 .image__pair
   &--cards

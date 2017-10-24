@@ -3,11 +3,7 @@
     text-decoration: none
 
 .logo
-  width: #{($baseline * 2)}
-
-  .page--home .intro &
-    margin-bottom: #{(2 / 3) * ($baseline)}
-    width: #{(2 / 3) * ($baseline * 2)}
+  width: #{$baseline * 1.5}
 
   &--frame,
   &--lens
@@ -23,12 +19,9 @@
   &--lens
     fill: transparent
 
-  .page--home &,
-  .page--error &,
   .page--study &,
-  .studies &,
-  .nav &,
-  .footer &
+  .header--sticky &,
+  .nav &
     &--frame
       fill: $white
 
@@ -37,7 +30,7 @@
         fill: $white
 
       .logo--lens-left
-        fill: $blue
+        fill: transparentize($blue, .3)
 
       .logo--lens-right
-        fill: $red
+        fill: transparentize($black, .7)

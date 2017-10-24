@@ -29,7 +29,7 @@ body
     font-size: 1.25em
 
 h1, h2, h3, h4, h5, h6
-  font-weight: 500
+  font-weight: 600
   letter-spacing: -.025em
 
 h1, h2
@@ -96,7 +96,7 @@ em
   font-style: italic
 
 strong
-  font-weight: 500
+  font-weight: 600
 
 small
   font-size: .75em
@@ -110,12 +110,13 @@ hr
 
 a
   color: $blue
-  text-decoration: none
+  text-decoration: underline
+  text-decoration-color: transparent
+  text-decoration-skip: ink
+  transition: text-decoration-color .25s
 
   &:hover
-    text-decoration: underline
     text-decoration-color: $red
-    text-decoration-skip: ink
 
 blockquote
   +fontSecondary

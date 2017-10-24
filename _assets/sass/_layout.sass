@@ -5,17 +5,23 @@ body
   &.menu-open
     overflow: hidden
 
+html
+  border-top: .75em solid $red
+
+  // @media (min-width: 42em)
+  //   border-width: .75em
+
 body
   background: $white
   opacity: 1
-  padding: 6em 1.5em 0
-  transition: background .5s, opacity .5s ease-out
+  padding: 15em 1.5em 0
+  transition: opacity .5s ease-out
 
   @media (min-width: 42em)
-    padding: 6em between(1.5em, 6em, 42em, 80em) 0
+    padding: 15em between(1.5em, 6em, 42em, 80em) 0
 
   @media (min-width: 80em)
-    padding: 6em 6em 0
+    padding: 15em 6em 0
 
   .loading &
     opacity: 0
@@ -30,16 +36,17 @@ main
     .loading &
       opacity: 0
       transform: translateY(3em)
+      // transition: opacity .5s ease-in, transform .5s ease-out
 
 .turbolinks-progress-bar
-  background-color: $red
-  height: 5px
+  background-color: $white
+  height: 1px
 
 %script-background
   &::after
     +script
     bottom: -.25em
-    color: $almostBlack
+    color: $red
     content: 'Made in Southsea'
     left: 50%
     pointer-events: none

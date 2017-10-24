@@ -27,14 +27,14 @@ export default class Github {
    */
   loadStarCounts () {
     // Loop through each of the projects
-    this.projects.forEach((project) => {
+    this.projects.forEach(project => {
       // Get the repository slug from the element's dataset
       const repo = project.dataset.repo
 
       // Retrieve the repository data from the API or cache
       this.getRepoData(repo)
         // Handle the response
-        .then((response) => {
+        .then(response => {
           // Fill the template with the repository info
           project.dataset.language = response.language
           project.querySelector('[data-name]').innerText = response.name
@@ -48,7 +48,7 @@ export default class Github {
         })
 
         // Catch errors
-        .catch((err) => { // eslint-disable-line handle-callback-err
+        .catch(err => { // eslint-disable-line handle-callback-err
           // We catch error responses to prevent dirtying the console,
           // but don't do anything with the error since the original
           // data can remain on the page
@@ -86,12 +86,12 @@ export default class Github {
       // Fetch the repo data from Github's API
       fetch(`https://api.github.com/repos/${repo}`)
         // Parse the JSON response
-        .then((response) => {
+        .then(response => {
           response.json()
         })
 
         // Deal with the repository data
-        .then((response) => {
+        .then(response => {
           // If there is no repository name, an error likely occurred
           if (!response.name) {
             return reject(response)

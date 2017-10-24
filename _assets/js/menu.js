@@ -7,6 +7,13 @@ import { bind } from 'decko'
  */
 export default class Menu {
   /**
+   * The site header
+   *
+   * @type {HTMLElement}
+   */
+  header = document.getElementById('top')
+
+  /**
    * The menu
    *
    * @type {HTMLNavElement}
@@ -21,20 +28,59 @@ export default class Menu {
   toggle = document.getElementById('nav-toggle')
 
   /**
+   * The nav close button
+   *
+   * @type {HTMLAnchorElement}
+   */
+  close = document.getElementById('nav-close')
+
+  /**
    * Start your engines!
    *
    * @return {Menu}
    */
   constructor () {
+    this.registerScrollListener()
     this.registerNavToggleListener()
+  }
+
+  /**
+   * Register listeners to fix, hide and show the header on scroll
+   */
+  registerScrollListener () {
+    window.addEventListener('scroll', e => {
+      clearTimeout(this.scrolling)
+
+      this.y = window.pageYOffset
+
+      if (this.y < 200) {
+        this.header.classList.remove('header--hidden')
+        this.header.classList.remove('header--sticky')
+        return
+      }
+
+      if (!this.header.classList.contains('header--sticky')) {
+        this.header.classList.add('header--hidden')
+        setTimeout(() => {
+          this.header.classList.add('header--sticky')
+        }, 250)
+      }
+
+      this.scrolling = setTimeout(() => {
+        this.bufferedY = window.pageYOffset
+      }, 50)
+
+      const fn = this.y <= this.bufferedY - 25 ? 'remove' : 'add'
+      this.header.classList[fn]('header--hidden')
+    })
   }
 
   /**
    * Register a listener to toggle the nav
    */
   registerNavToggleListener () {
-    this.toggle.removeEventListener('click', this.toggleMenu.bind(this))
-    this.toggle.addEventListener('click', this.toggleMenu.bind(this))
+    this.toggle.addEventListener('click', this.toggleMenu)
+    this.close.addEventListener('click', this.toggleMenu)
 
     document.addEventListener('turbolinks:visit', (evt) => {
       this.nav.classList.remove('nav--open')

@@ -1,6 +1,7 @@
 .page--error
-  background: $black
-  color: $white
+  // background: $black
+  // color: $white
+  min-height: 100vh
   padding: 0
 
   main
@@ -17,6 +18,9 @@
     padding: 6em 1.5em 0
 
   .page__wrapper
+    @media (min-width: 650px)
+      height: 100vh
+      overflow-y: auto
 
     @media (min-width: 42em)
       padding: 6em 3em 0 between(1.5em, 6em, 42em, 80em)
@@ -30,13 +34,13 @@
     padding: 1.5em 1.5em 0
 
     @media (min-width: 650px)
-      padding-top: 21em 1.5em 0
+      padding-top: 21em 1.5em 1.75em
 
     @media (min-width: 42em)
       padding: 21em between(1.5em, 6em, 42em, 80em) 0 3em
 
     @media (min-width: 80em)
-      padding: 21em 6em 0 3em
+      padding: 21em 6em 1.75em 3em
 
     li
       list-style: circle outside
@@ -51,6 +55,7 @@
 
     @media (min-width: 650px)
       bottom: 0
+      height: 100vh
       left: 50%
       position: fixed
       right: 0
@@ -78,5 +83,5 @@
     @media (min-width: 42em)
       margin-bottom: 6em
 
-    input
-      border: 0
+    // input
+    //   border: 0

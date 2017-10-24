@@ -1,81 +1,83 @@
-.nav-toggle
-  align-items: center
-  background: $white
-  border-radius: .5em
-  display: flex
-  height: 2em
-  justify-content: center
-  position: fixed
-  right: 1.5em
-  top: 1.5em
-  transition: background .25s
-  width: 2em
-  z-index: 1000
+// .nav-toggle
+//   align-items: center
+//   background: $white
+//   border-radius: .5em
+//   display: flex
+//   height: 2em
+//   justify-content: center
+//   position: fixed
+//   right: 1.5em
+//   top: 1.5em
+//   transition: background .25s
+//   width: 2em
+//   z-index: 1000
 
-  @media (min-width: 42em)
-    right: between(1.5em, 6em, 42em, 80em)
-    top: between(1.5em, 6em, 42em, 80em)
+//   @media (min-width: 42em)
+//     right: between(1.5em, 6em, 42em, 80em)
+//     top: between(1.5em, 6em, 42em, 80em)
 
-  @media (min-width: 80em)
-    right: 6em
-    top: 6em
+//   @media (min-width: 80em)
+//     right: 6em
+//     top: 6em
 
-  svg
-    height: 1.75em
-    width: 1.75em
+//   svg
+//     height: 1.75em
+//     width: 1.75em
 
-  circle
-    fill: $almostBlack
-    transition: fill .25s
+//   circle
+//     fill: $almostBlack
+//     transition: fill .25s
 
-  &:hover
-    circle
-      fill: $red
+//   &:hover
+//     circle
+//       fill: $red
 
-  .page--home &,
-  .page--error &,
-  .nav:target + .header &,
-  .nav.nav--open + .header &
-    circle
-      fill: $white
+//   // .page--home &,
+//   .page--error &,
+//   .nav:target + .header &,
+//   .nav.nav--open + .header &
+//     circle
+//       fill: $white
 
-  .page--home &,
-  .page--error &
-    background: $black
+//   // .page--home &,
+//   .page--error &
+//     background: $black
 
-    &:hover
-      circle
-        fill: $red
+//     &:hover
+//       circle
+//         fill: $red
 
-  .nav:target + .header &,
-  .nav.nav--open + .header &
-    background: $black
-    z-index: 10000
+//   .nav:target + .header &,
+//   .nav.nav--open + .header &
+//     background: $black
+//     z-index: 10000
 
-    &:hover
-      circle
-        fill: $red
+//     &:hover
+//       circle
+//         fill: $red
 
 .nav
-  @extend %script-background
-  background: $black
+  background: $red
   bottom: 0
   left: 0
   opacity: 0
   overflow: hidden
-  padding: 2.25em
+  padding: 3em 2.25em
   pointer-events: none
   position: fixed
   right: 0
   top: 0
   transition: opacity .375s
-  z-index: 9999
+  z-index: 10000
 
   @media (min-width: 42em)
-    padding: between(2.25em, 6em, 42em, 80em)
+    padding: between(3em, 7.5em, 42em, 80em) between(2.25em, 6em, 42em, 80em)
 
   @media (min-width: 80em)
-    padding: 6em
+    padding: 7.5em 6em
+
+  &::after
+    color: lighten($red, 5%)
 
   &:target,
   &.nav--open
@@ -126,7 +128,10 @@
     font-weight: 700
     line-height: #{(1.35 / 1.5) * $baseline}
     margin-bottom: #{(.6666666666666667 / 1.5) * $baseline}
-    transition: color .25s
+    text-decoration: underline
+    text-decoration-color: transparent
+    text-decoration-skip: ink
+    transition: text-decoration-color .25s
 
     @media (min-width: 24em)
       font-size: 3em
@@ -134,5 +139,24 @@
       margin-bottom: #{(.5 / 1.5) * $baseline}
 
     &:hover
-      color: $red
-      text-decoration: none
+      // color: $black
+      text-decoration-color: $white
+
+  &__close
+    display: block
+    position: absolute
+    right: 1.5em
+    top: 3em
+
+    @media (min-width: 42em)
+      right: between(1.5em, 6em, 42em, 80em)
+      top: between(3em, 7.5em, 42em, 80em)
+
+    @media (min-width: 80em)
+      right: 6em
+      top: 7.5em
+
+    svg
+      display: block
+      height: 1.75em
+      width: 1.75em

@@ -31,9 +31,10 @@
   {% include head/scripts.html %}
 </head>
 <body class="page page--{{ page.layout }} {% if page.slug %}page--{{ page.slug }}{% endif %}">
+  {% include nav.html %}
   {% include header.html %}
 
-  <main id="content" role="main">
+  <main class="content" id="content" role="main">
     {{ content }}
   </main>
 
