@@ -62,7 +62,7 @@
   left: 0
   opacity: 0
   overflow: hidden
-  padding: 3em 2.25em
+  padding: 3em 1.5em
   pointer-events: none
   position: fixed
   right: 0
@@ -71,7 +71,7 @@
   z-index: 10000
 
   @media (min-width: 42em)
-    padding: between(3em, 7.5em, 42em, 80em) between(2.25em, 6em, 42em, 80em)
+    padding: between(3em, 7.5em, 42em, 80em) between(1.5em, 6em, 42em, 80em)
 
   @media (min-width: 80em)
     padding: 7.5em 6em
@@ -89,7 +89,15 @@
   &__menu
     display: flex
     flex-wrap: wrap
+    left: 50%
     list-style: none
+    max-height: 75vh
+    overflow-y: auto
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: 100%
+
 
   &__item
     flex: 0 0 100%
@@ -97,16 +105,9 @@
     opacity: 0
     order: 1
     position: relative
+    text-align: center
     transform: translateY(50%)
     transition: opacity .375s .5s, transform .375s .5s
-
-    @media (min-width: 42em)
-      flex: 0 0 50%
-
-    &--home
-      flex: 0 0 100%
-      margin: 0 0 #{$baseline * 4}
-      order: 0
 
     .nav--open &
       opacity: 1
@@ -116,36 +117,51 @@
         &:nth-child(#{$i})
           transition: opacity .25s #{.375s + ($i * .075s)}, transform .25s #{.375s + ($i * .075s)}
 
-    @media (min-width: 42em)
-      &--case-studies,
-      &--writing
-        order: 0
-
   &__link
-    +fontSecondary
+    +fontScript
     color: $white
-    font-size: 2.25em
-    font-weight: 700
-    line-height: #{(1.35 / 1.5) * $baseline}
-    margin-bottom: #{(.6666666666666667 / 1.5) * $baseline}
-    text-decoration: underline
-    text-decoration-color: transparent
-    text-decoration-skip: ink
-    transition: text-decoration-color .25s
+    font-size: 4.5em
+    font-weight: 300
+    line-height: 1em
+    margin-bottom: 1em
+    text-decoration: none
+    text-transform: lowercase
+    transition: color .5s
 
-    @media (min-width: 24em)
-      font-size: 3em
-      line-height: #{(1 / 1.5) * $baseline}
-      margin-bottom: #{(.5 / 1.5) * $baseline}
+    @media (min-width: 42em)
+      font-size: 6em
 
     &:hover
-      // color: $black
-      text-decoration-color: $white
+      color: $black
+      text-decoration: none
 
   &__close
     display: block
-    position: absolute
     right: 1.5em
+
+    @media (min-width: 42em)
+      right: between(1.5em, 6em, 42em, 80em)
+
+    @media (min-width: 80em)
+      right: 6em
+
+    svg
+      display: block
+      height: 1.75em
+      width: 1.75em
+
+  &__home
+    left: 1.5em
+
+    @media (min-width: 42em)
+      left: between(1.5em, 6em, 42em, 80em)
+
+    @media (min-width: 80em)
+      left: 6em
+
+  &__home,
+  &__close
+    position: absolute
     top: 3em
 
     @media (min-width: 42em)
@@ -155,8 +171,3 @@
     @media (min-width: 80em)
       right: 6em
       top: 7.5em
-
-    svg
-      display: block
-      height: 1.75em
-      width: 1.75em

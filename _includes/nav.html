@@ -1,14 +1,13 @@
 <nav class="nav nav--main"
      id="menu">
-  <ul class="nav__menu">
-    <li class="nav__item nav__item--home">
-      <a href="/"
-          aria-label="molovo">
-        {% include icons/logo.svg %}
-        <span class="screenreader-text">Home</span>
-      </a>
-    </li>
+  <a href="/"
+     class="nav__home"
+     aria-label="molovo">
+    {% include icons/logo.svg %}
+    <span class="screenreader-text">Home</span>
+  </a>
 
+  <ul class="nav__menu">
     {% if site.environment != 'production' %}
     <li class="nav__item nav__item--case-studies">
       <a href="/studies/"

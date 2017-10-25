@@ -85,3 +85,22 @@ $hfTransparentOrange2: rgba($hfOrange3, .3)
   .studies__image
     path
       fill: $hfOrange2
+
+  .studies--cta &
+    background: $hfOrange3 url('/img/studies/haresfoot/bg.png') center / cover no-repeat
+
+    .studies__image
+      path
+        fill: $hfWhite
+
+    .study__icons
+      +studyIcons
+        fill: $hfWhite
+
+    .studies__title,
+    .button
+      color: $hfWhite
+
+    .button
+      &::after
+        background-color: $hfRed

@@ -148,6 +148,22 @@ $vfWhite: #fff
         &__likes
           color: $vfPink
 
+.studies__item--vixen-fitness
+  .studies--cta &
+    background: url('/img/studies/vixen-fitness/bg.png') center / cover no-repeat
+
+    .study__icons
+      +studyIcons
+        fill: $vfYellow
+
+    .studies__title,
+    .button
+      color: $white
+
+    .button
+      &::after
+        background-color: $vfYellow
+
 .image__pair
   &--cards
     :first-of-type

@@ -1,65 +1,54 @@
 .footer
-  // @extend %script-background
-  // background: $black
-  margin: 0 -1.5em
-  overflow: hidden
   padding: 6em 1.5em
-  position: relative
-  z-index: 0
+  text-align: center
 
   @media (min-width: 42em)
-    margin: 0 between(-1.5em, -6em, 42em, 80em)
-    padding: 6em between(1.5em, 6em, 42em, 80em) between(6em, 9em, 42em, 80em)
+    padding: 6em between(1.5em, 6em, 42em, 80em)
 
   @media (min-width: 80em)
-    margin: 0 -6em
-    padding: 6em 6em 9em
+    padding: 6em
 
-  &--nav
-    position: relative
-    z-index: 2
+  &__title
+    +script
+    color: $red
+    font-size: 4.5em
+    line-height: 1em
+    margin: 0
+    text-transform: lowercase
 
-    ul
-      align-items: center
-      display: flex
-      flex-wrap: wrap
-      justify-content: flex-start
-      list-style: none
-      width: 100%
+    @media (min-width: 80em)
+      font-size: 6em
 
-    @media (max-width: 42em)
-      flex-wrap: wrap
+  &__social
+    align-items: center
+    display: flex
+    justify-content: center
+    margin-top: $baseline
 
-    li
-      margin-right: $baseline
-
-      &:first-of-type
-        line-height: 1em
-
-    a
-      color: $black
-
-    &-link-twitter
-      @media (max-width: 42em)
-        flex: 0 0 100%
-        margin-top: $baseline
-
-      @media (min-width: 42em)
-        margin-left: auto
+    &-link
+      margin: 0 #{$baseline / 2}
+      width: $baseline
 
       svg
-        vertical-align: middle
+        height: $baseline
         width: $baseline
 
-        path
-          fill: $twitterBlue
-          stroke: none
+      path
+        fill: $black
+        stroke: none
+        transition: fill .5s
 
-  &--copyright
-    color: $white
-    font-size: .875em
+      &--twitter
+        &:hover
+          path
+            fill: $twitterBlue
 
-  &__script
-    +script
-    display: block
-    margin: 2em auto 0
+      &--github
+        &:hover
+          path
+            fill: $githubPurple
+
+      &--dribbble
+        &:hover
+          path
+            fill: $dribbblePink
