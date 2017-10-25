@@ -1,5 +1,5 @@
 $fontStackPrimary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
-$fontPrimary: 'Marat Sans DEMO', $fontStackPrimary
+$fontPrimary: 'depot-new-web', $fontStackPrimary
 
 $fontStackSecondary: 'Georgia', serif
 $fontSecondaryPreload: 'GauthierFY-preload', $fontStackSecondary
@@ -30,7 +30,10 @@ $fontMonospace: 'Operator Mono Book', 'Operator Mono', 'Fira Code', 'Fira Mono',
   transition: opacity .25s
 
   .fonts-stage-2 &
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
     font-family: $fontScript
+    font-smooth: always
     opacity: 1
 
 =script

@@ -1,61 +1,3 @@
-// .nav-toggle
-//   align-items: center
-//   background: $white
-//   border-radius: .5em
-//   display: flex
-//   height: 2em
-//   justify-content: center
-//   position: fixed
-//   right: 1.5em
-//   top: 1.5em
-//   transition: background .25s
-//   width: 2em
-//   z-index: 1000
-
-//   @media (min-width: 42em)
-//     right: between(1.5em, 6em, 42em, 80em)
-//     top: between(1.5em, 6em, 42em, 80em)
-
-//   @media (min-width: 80em)
-//     right: 6em
-//     top: 6em
-
-//   svg
-//     height: 1.75em
-//     width: 1.75em
-
-//   circle
-//     fill: $almostBlack
-//     transition: fill .25s
-
-//   &:hover
-//     circle
-//       fill: $red
-
-//   // .page--home &,
-//   .page--error &,
-//   .nav:target + .header &,
-//   .nav.nav--open + .header &
-//     circle
-//       fill: $white
-
-//   // .page--home &,
-//   .page--error &
-//     background: $black
-
-//     &:hover
-//       circle
-//         fill: $red
-
-//   .nav:target + .header &,
-//   .nav.nav--open + .header &
-//     background: $black
-//     z-index: 10000
-
-//     &:hover
-//       circle
-//         fill: $red
-
 .nav
   background: $red
   bottom: 0
@@ -87,23 +29,23 @@
     z-index: 9999
 
   &__menu
+    align-items: center
     display: flex
-    flex-wrap: wrap
+    flex-direction: column
     left: 50%
     list-style: none
-    max-height: 75vh
+    overflow-x: hidden
     overflow-y: auto
     position: absolute
     top: 50%
     transform: translate(-50%, -50%)
-    width: 100%
-
+    width: 100vw
+    z-index: 0
 
   &__item
-    flex: 0 0 100%
+    display: inline-block
     margin: 0 0 #{$baseline / 2}
     opacity: 0
-    order: 1
     position: relative
     text-align: center
     transform: translateY(50%)
@@ -120,15 +62,16 @@
   &__link
     +fontScript
     color: $white
+    display: inline-block
     font-size: 4.5em
     font-weight: 300
     line-height: 1em
-    margin-bottom: 1em
     text-decoration: none
     text-transform: lowercase
+    transform: rotate(-2deg)
     transition: color .5s
 
-    @media (min-width: 42em)
+    @media (min-height: 64em)
       font-size: 6em
 
     &:hover
@@ -150,8 +93,17 @@
       height: 1.75em
       width: 1.75em
 
+      g
+        transition: stroke .5s
+
+    &:hover
+      g
+        stroke: $black
+
   &__home
+    display: inline-block
     left: 1.5em
+    width: auto
 
     @media (min-width: 42em)
       left: between(1.5em, 6em, 42em, 80em)
@@ -163,6 +115,7 @@
   &__close
     position: absolute
     top: 3em
+    z-index: 1
 
     @media (min-width: 42em)
       right: between(1.5em, 6em, 42em, 80em)

@@ -49,3 +49,13 @@
     height: 1.75em
     vertical-align: middle
     width: 1.75em
+
+    circle
+      transition: fill .5s
+
+  &:hover
+    circle
+      fill: $red
+
+      .header--sticky &
+        fill: $black
