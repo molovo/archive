@@ -4,7 +4,8 @@
          itemscope
          itemtype="http://schema.org/BlogPosting"
          {% if include.listing == 'false' %}id="article"{% endif %}
-         {% if include.listing == 'true' %}id="{{ include.post.title | slugify }}"{% endif %}>
+         {% if include.listing == 'true' %}id="{{ include.post.title | slugify }}"{% endif %}
+         data-title="{{ include.post.title }}">
   <link itemprop="mainEntityOfPage" href="{{ site.url }}{{ include.post.url | replace: 'index.html', '' }}" />
   {% if include.post.image %}
     <link itemprop="image" href="{{ site.url }}{{ post.image.url }}" />
