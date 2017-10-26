@@ -58,6 +58,15 @@ export default class Title {
   }
 
   /**
+   * Set a new page title
+   *
+   * @param {string} title
+   */
+  setPageTitle (title) {
+    document.title = `${title} | ${window.siteTitle}`
+  }
+
+  /**
    * Find the correct title based on the current scroll position
    *
    * @param {ScrollEvent} e
@@ -72,7 +81,7 @@ export default class Title {
       if (this.isInViewport(el)) {
         const title = el.dataset.title
         this.current = title
-        document.title = title
+        this.setPageTitle(title)
         this.headerTitle.innerHTML = title
         set = true
         break
@@ -81,7 +90,7 @@ export default class Title {
 
     if (!set) {
       this.current = this.original
-      document.title = this.original
+      this.setPageTitle(this.original)
       this.headerTitle.innerHTML = ''
     }
   }
@@ -97,13 +106,13 @@ export default class Title {
 
     // If the event type exists in the map, set the right title
     if (evt.type in this.evtMap) {
-      document.title = this[this.evtMap[evt.type]]
+      this.setPageTitle(this[this.evtMap[evt.type]])
     } else {
       // Last ditch attempt
       if (document.hidden) {
-        document.title = this.replacement
+        this.setPageTitle(this.replacement)
       } else {
-        document.title = this.current
+        this.setPageTitle(this.current)
       }
     }
   }
