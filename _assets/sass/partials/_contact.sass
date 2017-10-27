@@ -1,32 +1,55 @@
 .contact
-  // background: $black
-  // color: $white
-  margin: 0 -1.5em
-  padding: 0 1.5em
-  position: relative
-  z-index: 1
+  margin-top: 6em
+  padding: 0 1.5em 6em
+  text-align: center
 
   @media (min-width: 42em)
-    margin: 0 between(-1.5em, -6em, 42em, 80em)
-    padding: 0 between(1.5em, 6em, 42em, 80em)
+    padding: 0 between(1.5em, 6em, 42em, 80em) 6em
 
   @media (min-width: 80em)
-    margin: 0 -6em
-    padding: 0 6em
+    padding: 0 6em 6em
 
-  &__email
-    +fontSecondary
+  &__title
+    +script
     color: $red
-    font-size: 2.25em
-    letter-spacing: -.025em
+    font-size: 4.5em
     line-height: 1em
+    margin: 0
+    text-transform: lowercase
 
-    @media (min-width: 24em)
-      font-size: 3em
+    @media (min-width: 80em)
+      font-size: 6em
 
-    // @media (min-width: 42em)
-    //   font-size: 4.5em
+  &__social
+    align-items: center
+    display: flex
+    justify-content: center
+    margin-top: $baseline
 
-    &:hover
-      text-decoration: underline
-      text-decoration-skip: ink
+    &-link
+      margin: 0 #{$baseline / 2}
+      width: $baseline
+
+      svg
+        height: $baseline
+        width: $baseline
+
+      path
+        fill: $black
+        stroke: none
+        transition: fill .5s
+
+      &--twitter
+        &:hover
+          path
+            fill: $twitterBlue
+
+      &--github
+        &:hover
+          path
+            fill: $githubPurple
+
+      &--dribbble
+        &:hover
+          path
+            fill: $dribbblePink

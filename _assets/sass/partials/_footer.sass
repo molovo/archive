@@ -1,55 +1,25 @@
 .footer
-  margin-top: 6em
-  padding: 0 1.5em 6em
-  text-align: center
+  background: $purple
+  color: $white
+  display: flex
+  justify-content: space-between
+  margin: 0 -1.5em
+  padding: .75em 1.5em
 
   @media (min-width: 42em)
-    padding: 0 between(1.5em, 6em, 42em, 80em) 6em
+    margin: 0 between(-1.5em, -6em, 42em, 80em)
+    padding: .75em between(1.5em, 6em, 42em, 80em)
 
   @media (min-width: 80em)
-    padding: 0 6em 6em
+    margin: 0 -6em
+    padding: .75em 6em
 
-  &__title
-    +script
-    color: $red
-    font-size: 4.5em
-    line-height: 1em
+  .page--study &
     margin: 0
-    text-transform: lowercase
 
-    @media (min-width: 80em)
-      font-size: 6em
+  span, a
+    font-size: .75em
 
-  &__social
-    align-items: center
-    display: flex
-    justify-content: center
-    margin-top: $baseline
-
-    &-link
-      margin: 0 #{$baseline / 2}
-      width: $baseline
-
-      svg
-        height: $baseline
-        width: $baseline
-
-      path
-        fill: $black
-        stroke: none
-        transition: fill .5s
-
-      &--twitter
-        &:hover
-          path
-            fill: $twitterBlue
-
-      &--github
-        &:hover
-          path
-            fill: $githubPurple
-
-      &--dribbble
-        &:hover
-          path
-            fill: $dribbblePink
+  a
+    color: $white
+    text-decoration: underline

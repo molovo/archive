@@ -1,32 +1,10 @@
-<footer class="footer" data-turbolinks-permanent>
-  <h3 class="footer__title">Let's talk</h3>
+<footer class="footer">
+  <span class="footer__copyright">&copy; {{ site.time | date: '%Y' }} James Dinsdale</span>
 
-  <a href="mailto:hi@molovo.co" class="footer__email">hi@molovo.co</a>
-
-  <nav class="footer__social">
-    <a href="//twitter.com/molovo"
-       class="footer__social-link footer__social-link--twitter"
-       title="Follow me on twitter"
-       target="_blank"
-       rel="noopener">
-      <div class="screenreader-text">@molovo</div>
-      {% include icons/twitter.svg %}
-    </a>
-    <a href="//github.com/molovo"
-       class="footer__social-link footer__social-link--github"
-       title="Follow me on github"
-       target="_blank"
-       rel="noopener">
-      <div class="screenreader-text">@molovo</div>
-      {% include icons/github.svg %}
-    </a>
-    <a href="//dribbble.com/molovo"
-       class="footer__social-link footer__social-link--dribbble"
-       title="Follow me on dribbble"
-       target="_blank"
-       rel="noopener">
-      <div class="screenreader-text">@molovo</div>
-      {% include icons/dribbble.svg %}
-    </a>
-  </nav>
+  <a href="https://github.com/molovo/www/blob/master/{{ page.path }}"
+     title="Improve this page"
+     target="_blank"
+     rel="noopener nofollow">
+    Improve this page
+  </a>
 </footer>
