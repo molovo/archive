@@ -1,7 +1,5 @@
 .page--error
-  // background: $black
-  // color: $white
-  min-height: 100vh
+  min-height: calc(100vh - .6em)
   padding: 0
 
   main
@@ -19,7 +17,7 @@
 
   .page__wrapper
     @media (min-width: 650px)
-      height: 100vh
+      height: calc(100vh - .6em)
       overflow-y: auto
 
     @media (min-width: 42em)
@@ -31,16 +29,16 @@
   .page__listing
     align-items: flex-end
     display: flex
-    padding: 1.5em 1.5em 0
+    padding: 0 1.5em
 
     @media (min-width: 650px)
-      padding-top: 21em 1.5em 1.75em
+      padding-top: 0 1.5em
 
     @media (min-width: 42em)
-      padding: 21em between(1.5em, 6em, 42em, 80em) 0 3em
+      padding: 0 between(1.5em, 6em, 42em, 80em) between(2.25em, 6.75em, 42em, 80em) 3em
 
     @media (min-width: 80em)
-      padding: 21em 6em 1.75em 3em
+      padding: 0 6em 6.75em 3em
 
     li
       list-style: circle outside
@@ -55,7 +53,7 @@
 
     @media (min-width: 650px)
       bottom: 0
-      height: 100vh
+      height: calc(100vh - .6em)
       left: 50%
       position: fixed
       right: 0
@@ -67,6 +65,10 @@
       object-fit: cover
       object-position: center
       width: 100%
+
+  .header
+    margin: 0
+    position: absolute
 
 .error
   padding: 6em 0 0
@@ -82,6 +84,3 @@
 
     @media (min-width: 42em)
       margin-bottom: 6em
-
-    // input
-    //   border: 0
