@@ -1,0 +1,79 @@
+{% if page.layout == 'home' %}
+<script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.title }}",
+  "url": "{{ site.url }}",
+  "description": "{{ site.description }}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ site.url }}/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}</script>
+<script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "url": "{{ site.url }}",
+  "sameAs": [
+    "https://twitter.com/{{ site.twitter_username }}",
+    "https://github.com/{{ site.github_username }}",
+    "https://medium.com/@{{ site.medium_username }}",
+    "https://dribbble.com/{{ site.dribbble_username }}"
+  ],
+  "name":"{{ site.author }}"
+}</script>
+{% endif %}
+
+{% if page.layout != 'home' %}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {% if page.layout == 'post' %}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@id": "{{ site.url }}/writing",
+        "name": "Writing"
+      }
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@id": "{{ site.url }}{{ page.url }}",
+        "name": "{{ page.title }}"
+      }
+    }
+    {% elsif page.layout == 'study' %}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@id": "{{ site.url }}/studies",
+        "name": "Case Studies"
+      }
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@id": "{{ site.url }}{{ page.url }}",
+        "name": "{{ page.title }}"
+      }
+    }
+    {% else %}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@id": "{{ site.url }}{{ page.url }}",
+        "name": "{{ page.title }}"
+      }
+    }
+    {% endif %}
+  ]
+}
+</script>
+{% endif %}

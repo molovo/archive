@@ -27,7 +27,6 @@
   {% webmentions_head %}
   {% include head/favicons.html %}
   {% include head/links.html %}
-  {% include head/schema.html %}
   {% include head/scripts.html %}
 </head>
 <body class="page page--{{ page.layout }} {% if page.slug %}page--{{ page.slug }}{% endif %}">
@@ -43,6 +42,7 @@
     {% include footer.html %}
   {% endif %}
 
+  {% include schema.html %}
   {% include page-schema.html %}
 </body>
 </html>
