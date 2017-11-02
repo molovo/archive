@@ -1,5 +1,6 @@
 ---
 title: Social media responses on a Jekyll site using webmentions
+description: Learn how to set up social media responses on your Jekyll website, and increase user engagement. Click here for the step-by-step guide.
 layout: post
 tags:
 - web

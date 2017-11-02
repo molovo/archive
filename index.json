@@ -2,6 +2,17 @@
 ---
 
 [
+  {% for post in site.studies %}
+    {
+      "title": "{{ post.title | escape }}",
+      "description": "{{ post.description | default: post.excerpt | strip_html | strip_newlines | escape }}",
+      "content": "{{ post.content | strip_html | strip_newlines | escape }}",
+      "url": "{{ post.url }}",
+      "date_xml": "{{ post.date | date_to_xmlschema }}",
+      "date": "{{ post.date | date: '%e' }}{{ post.date | date_to_xmlschema | ordinal }} {{ post.date | date: '%B %Y' }}",
+      "tags": ["{{ post.tags | join: '", "' }}"]
+    },
+  {% endfor %}
   {% for post in site.posts %}
     {
       "title": "{{ post.title | escape }}",

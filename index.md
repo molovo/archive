@@ -1,5 +1,7 @@
 ---
 layout: home
+title: Web Design and Development in Southsea, Hampshire
+description: James Dinsdale is a designer and developer from Southsea, Hampshire, building immersive, interactive experiences on the web. Let's build something together.
 ---
 
 Hi, I'm James, a designer and developer, currently working at [Superrb Studio](https://superrb.com).
