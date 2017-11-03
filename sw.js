@@ -91,31 +91,6 @@ self.addEventListener('fetch', event => {
         })
       }
 
-      // All other successful requests
-      if (response.ok || response.redirected || response.type === 'opaqueredirect') {
-        // Return the original response
-        return response
-      }
-
-      // Handle errors for pages on the service worker domain
-      if (requestURL.origin == location.origin) {
-        // If the page was not found, return the 404 page
-        if (response.status == 404) {
-          return fetch('/404.html').then(response => {
-            return new Response(response.body, {
-              status: 404
-            })
-          })
-        }
-
-        // Return a generic error page
-        return fetch('/500.html').then(response => {
-          return new Response(response.body, {
-            status: 500
-          })
-        })
-      }
-
       // Return the original response
       return response
     }).catch(err => {
@@ -126,11 +101,19 @@ self.addEventListener('fetch', event => {
           // or return the cached offline page
           return response || (() => {
             if (requestURL.origin == location.origin) {
-              return cache.match('/offline.html')
+              return new Response(cache.match('/offline.html').body, {
+                status: 200,
+                headers: {
+                  'Content-Type': 'text/html; charset=utf-8'
+                }
+              })
             }
 
             return new Response(cache.match('/500.html').body, {
-              status: 500
+              status: 500,
+              headers: {
+                'Content-Type': 'text/html; charset=utf-8'
+              }
             })
           })()
         })
