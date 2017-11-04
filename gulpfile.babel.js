@@ -1,4 +1,5 @@
 // Base gulp dependencies
+import 'isomorphic-fetch'
 import gulp        from 'gulp'
 import source      from 'vinyl-source-stream'
 import buffer      from 'vinyl-buffer'
@@ -96,6 +97,10 @@ gulp.task('compile', (cb) => {
 
   if (env !== 'dev') {
     tasks.push('compile:critical')
+  }
+
+  if (env === 'production') {
+    tasks.push('sitemap:submit')
   }
 
   return runSequence(...tasks, cb)
@@ -237,6 +242,16 @@ gulp.task('compile:html', () => {
   return spawnSync('bundle', args[env], {
     stdio: 'inherit'
   })
+})
+
+gulp.task('sitemap:submit', () => {
+  const sitemap = 'https://molovo.co/sitemap.xml'
+  const urls = [
+    `http://www.google.com/webmasters/sitemaps/ping?sitemap=${sitemap}`,
+    `http://www.bing.com/webmaster/ping.aspx?siteMap=${sitemap}`
+  ]
+
+  return Promise.all(urls.map(u => fetch(u)))
 })
 
 gulp.task('watch', () => {
