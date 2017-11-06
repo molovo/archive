@@ -38,6 +38,7 @@ exclude:
   - netlify.toml
   - node_modules
   - package.json
+  - validate.rb
   - yarn.lock
 
 collections:

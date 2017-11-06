@@ -36,9 +36,11 @@ pagination:
   </nav>
 {% endif %}
 
-<a id="webmentions"></a>
-<h4>There have been {% webmention_count page.url %} responses</h4>
-{% webmentions page.url %}
+<section class="webmentions__wrapper">
+  <a id="webmentions"></a>
+  <h4>There have been {% webmention_count page.url %} responses</h4>
+  {% webmentions page.url %}
+</section>
 
 {% if site.environment != 'production' %}
   {% assign study = site.studies | sort: 'order' | first %}
