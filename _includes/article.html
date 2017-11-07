@@ -1,4 +1,4 @@
-<article class="post {{ include.classes }}"
+<article class="post post--{{ include.post.slug }} {{ include.classes }}"
          aria-labelledby="{{ include.post.title | slugify }}-title"
          {% if include.listing == 'true' %}itemprop="blogPost"{% endif %}
          itemscope
@@ -8,7 +8,7 @@
          data-title="{{ include.post.title }}">
   <link itemprop="mainEntityOfPage" href="{{ site.url }}{{ include.post.url | replace: 'index.html', '' }}" />
   {% if include.post.image %}
-    <link itemprop="image" href="{{ site.url }}{{ post.image.url }}" />
+    <link itemprop="image" href="{{ site.url }}{{ include.post.image.url }}" />
   {% else %}
     <link itemprop="image" href="{{ site.url }}{{ site.logo }}" />
   {% endif %}
@@ -30,14 +30,14 @@
           <a href="{{ include.post.url }}"
             class="post__link u-url u-uid"
             title="{{ include.post.title }}">
-            {{ include.post.title }}
+            <span>{{ include.post.title }}</span>
           </a>
         </h1>
       {% else %}
         <h1 itemprop="headline"
             class="post__title p-name"
             id="{{ include.post.title | slugify }}-title">
-          {{ include.post.title }}
+          <span>{{ include.post.title }}</span>
         </h1>
       {% endif %}
       <div class="post__meta">
