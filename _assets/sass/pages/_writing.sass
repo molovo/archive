@@ -86,6 +86,7 @@ main > .post
       margin: 0 0 #{$baseline * 4}
 
     ul
+      align-items: center
       display: flex
       justify-content: space-between
       list-style: none
@@ -93,10 +94,12 @@ main > .post
       li
         flex: 0 0 6em
         text-align: center
-        white-space: nowrap
 
     &-link
-      +fontSecondary
+      align-items: center
+      display: flex
+      font-size: .875em
+      white-space: normal
 
       &::before,
       &::after
@@ -108,9 +111,14 @@ main > .post
           text-decoration: none
 
       &--next
+        text-align: right
+
         &::after
           content: '→'
+          margin-left: #{$baseline / 2}
 
       &--previous
+        text-align: left
         &::before
           content: '←'
+          margin-right: #{$baseline / 2}
