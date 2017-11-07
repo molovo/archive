@@ -11,7 +11,7 @@ export default class Likes {
    *
    * @type {HTMLElementList}
    */
-  links = document.querySelectorAll('.post__social__link--like')
+  links = document.querySelectorAll('.social__link--like')
 
   /**
    * Default parameters for XHR requests
@@ -34,7 +34,7 @@ export default class Likes {
     this.links.forEach((link) => {
       // If a like has already been recorded, update the icon
       if (this.isLiked(link)) {
-        link.classList.add('post__social__link--liked')
+        link.classList.add('social__link--liked')
       }
 
       // Get the number of likes for this URL
@@ -94,7 +94,7 @@ export default class Likes {
    * @param {integer}           count
    */
   updateCount (link, count) {
-    const el = link.querySelector('.post__social__likes')
+    const el = link.querySelector('.social__likes')
     if (!el) {
       return
     }
@@ -120,7 +120,7 @@ export default class Likes {
       .then(this.parseJson)
       .then((response) => {
         if (response.success) {
-          link.classList.add('post__social__link--liked')
+          link.classList.add('social__link--liked')
           localStorage.setItem(`posts.liked.${link.dataset.url}`, true)
 
           this.getCount(link)
@@ -145,7 +145,7 @@ export default class Likes {
       .then(this.parseJson)
       .then((response) => {
         if (response.success) {
-          link.classList.remove('post__social__link--liked')
+          link.classList.remove('social__link--liked')
           localStorage.removeItem(`posts.liked.${link.dataset.url}`)
 
           this.getCount(link)
