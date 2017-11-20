@@ -3,7 +3,33 @@ textarea,
 select
   appearance: none
   border: 1px solid $gray
+  box-sizing: border-box
   font: inherit
   line-height: $baseline
   padding: #{$baseline / 2} $baseline
   width: 100%
+
+textarea
+  min-height: #{$baseline * 6}
+
+.form
+  display: grid
+  grid-gap: $baseline
+  grid-template-columns: 1fr 1fr
+
+  &__group
+    display: grid
+    grid-column: 1 / 3
+    grid-gap: $baseline
+    grid-template-columns: 1fr 1fr
+
+  &__description
+    grid-column: 1 / 3
+
+  &__label
+    &--full-width
+      grid-column: 1 / 3
+
+    &-text
+      display: block
+      margin: 0 0 #{$baseline / 4}

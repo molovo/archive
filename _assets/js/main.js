@@ -10,6 +10,7 @@ import Images from './images'
 import Github from './github'
 import Animator from './animator'
 import ScrollSync from './scroll-sync'
+import Contact from './contact'
 // import Turbolinks from 'turbolinks'
 
 // document.addEventListener('turbolinks:click', () => {
@@ -39,6 +40,7 @@ window.likes = new Likes()
 window.images = new Images()
 window.scrollSync = new ScrollSync()
 window.animator = new Animator()
+window.contact = new Contact()
 
 // document.documentElement.classList.remove('loading')
 
