@@ -1,3 +1,23 @@
+@keyframes fadeInForm
+  0%
+    display: none
+    opacity: 0
+    transform: translateY(6rem)
+  100%
+    display: grid
+    opacity: 1
+    transform: translateY(0)
+
+@keyframes fadeOutForm
+  0%
+    display: block
+    opacity: 1
+    transform: translateY(0)
+  100%
+    display: none
+    opacity: 0
+    transform: translateY(-6rem)
+
 .contact
   margin-top: 6em
   padding: 0 1.5em 6em
@@ -10,15 +30,24 @@
     padding: 0 6em 6em
 
   &__cta
-    +script
     color: $red
-    font-size: 4.5em
-    line-height: 1em
-    margin: 0
-    text-transform: lowercase
+    display: inline-block
+    text-decoration: none
+    transition: color .5s
 
-    @media (min-width: 80em)
-      font-size: 6em
+    &:hover
+      color: $black
+
+    h3
+      +script
+      font-size: 4.5em
+      line-height: 1em
+      margin: 0
+      position: relative
+      text-transform: lowercase
+
+      @media (min-width: 80em)
+        font-size: 6em
 
   &__social
     align-items: center
@@ -85,10 +114,19 @@
       pointer-events: all
       z-index: 9999
 
+  &__close
+    g
+      transition: stroke .5s
+
+    &:hover
+      g
+        stroke: $black
+
   &__title,
-  &__content
+  &__content,
+  &__form
     opacity: 0
-    transform: translateY(50%)
+    transform: translateY(6rem)
     transition: opacity .375s .5s, transform .375s .5s
 
     .contact__popup--open &
@@ -110,8 +148,14 @@
       line-height: 1em
       margin: 0 0 1em
 
+    // .contact__popup[data-form] &
+    //   animation: fadeOutForm .375s ease forwards
+
   &__content
     max-width: 36em
+
+    // .contact__popup[data-form] &
+    //   animation: fadeOutForm .375s ease forwards
 
     .button
       color: $white
@@ -121,14 +165,46 @@
         background: $white
 
   &__form
+    // display: none
     max-width: 36em
+    padding: 0 0 1.5em
+
+    @media (min-width: 42em)
+      padding-bottom: between(1.5em, 6em, 42em, 80em)
+
+    @media (min-width: 80em)
+      padding-bottom: 6em
+
+    // .contact__popup[data-form] &
+    //   animation: fadeInForm .375s ease forwards
 
     .form__description
       a
         color: $white
         text-decoration: underline
 
+        &:hover
+          color: $black
+
     .form__input
       background: rgba($black, .1)
       border-width: 0
       color: $white
+      transition: background-color .5s, color .5s
+
+      &:focus
+        background-color: $white
+        color: $black
+
+    .form__group
+      display: none
+
+    .form__buttons
+      span
+        opacity: .7
+
+$forms: project chat
+@each $form in $forms
+  .contact__popup[data-form='#{$form}']
+    .form__group[data-form='#{$form}']
+      display: grid

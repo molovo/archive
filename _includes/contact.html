@@ -1,7 +1,8 @@
 <section class="contact" id="contact" data-turbolinks-permanent>
   <a href="javascript:void('')"
-     id="open-contact-form">
-    <h3 class="contact__cta">Let's talk</h3>
+     id="open-contact-form"
+     class="contact__cta">
+    <h3>Let's talk</h3>
   </a>
 
   <nav class="contact__social">
@@ -62,23 +63,23 @@
     What would you like to talk about?
   </h2>
 
-  <div class="contact__content">
+  <!-- <div class="contact__content">
     <a href="javascript:void('')"
        data-form="project"
-       class="button">
+       class="contact__form-choice button">
       I have a new project
     </a>
     <a href="javascript:void('')"
        data-form="chat"
-       class="button">
+       class="contact__form-choice button">
       I'd just like to chat
     </a>
-  </div>
+  </div> -->
 
   <form class="contact__form form">
     <p class="form__description">
       Just fill out the form below, and I'll get back to you as soon as possible.<br />
-      Alternatively, you can contact me directly via email on <a href="mailto:hi@molovo.co">hi@molovo.co.</a>
+      Alternatively, you can contact me directly via email on <a href="mailto:hi@molovo.co">hi@molovo.co</a>.
     </p>
 
     <label for="name" class="form__label">
@@ -107,5 +108,10 @@
       <span class="form__label-text">Message</span>
       <textarea class="form__input" name="message"></textarea>
     </label>
+
+    <div class="form__buttons">
+      <span>* Please, no recruiters.</span>      
+      <button>Send</button>
+    </div>
   </form>
 </section>
