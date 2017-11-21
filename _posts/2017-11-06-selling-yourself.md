@@ -3,6 +3,7 @@ title: Selling yourself
 date: 2017-11-06 22:25:00
 description: Why there are no examples of my work on this site.
 layout: post
+tags: work process freelancing
 ---
 
 If you've visited [my website](https://molovo.co) in the last year or so, you may have found it strange that there are no case studies of my work anywhere on it. Despite being my main portal for explaining who I am and what I do, you can't find a single example of my work.
