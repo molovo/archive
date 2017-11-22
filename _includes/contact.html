@@ -64,7 +64,7 @@
       What would you like to talk about?
     </h2>
 
-    <form class="contact__form form" name="contact" netlify>
+    <form class="contact__form form" name="contact" netlify netlify-honeypot="its-a-trap">
       <p class="form__description">
         Just fill out the form below, and I'll get back to you as soon as possible.<br />
         Alternatively, you can contact me directly via email on <a href="mailto:hi@molovo.co">hi@molovo.co</a>.
@@ -80,22 +80,14 @@
         <input class="form__input" type="email" name="email" />
       </label>
 
-      <div data-form="project" class="form__group">
-        <label for="current_website" class="form__label">
-          <span class="form__label-text">Current website</span>
-          <input class="form__input" type="text" name="current_website" />
-        </label>
-
-        <label for="budget" class="form__label">
-          <span class="form__label-text">Budget</span>
-          <input class="form__input" type="number" name="budget" min="1500" step="500" />
-        </label>
-      </div>
-
       <label for="message" class="form__label form__label--full-width">
         <span class="form__label-text">Message</span>
         <textarea class="form__input" name="message"></textarea>
       </label>
+
+      <div class="form__group form__group--hidden">
+        <input name="its-a-trap" />
+      </div>
 
       <div class="form__buttons">
         <span>* Please, no recruiters.</span>
