@@ -122,9 +122,7 @@
       g
         stroke: $black
 
-  &__title,
-  &__content,
-  &__form
+  &__content
     opacity: 0
     transform: translateY(6rem)
     transition: opacity .375s .5s, transform .375s .5s
@@ -133,9 +131,9 @@
       opacity: 1
       transform: translateY(0)
 
-      @for $i from 1 through 6
-        &:nth-child(#{$i + 1})
-          transition: opacity .375s #{.375s + ($i * .075s)}, transform .375s #{.375s + ($i * .075s)}
+      &.contact__content--hidden
+        opacity: 0
+        transform: translateY(6rem)
 
   &__header
     display: flex
@@ -147,22 +145,6 @@
       font-size: 3em
       line-height: 1em
       margin: 0 0 1em
-
-    // .contact__popup[data-form] &
-    //   animation: fadeOutForm .375s ease forwards
-
-  &__content
-    max-width: 36em
-
-    // .contact__popup[data-form] &
-    //   animation: fadeOutForm .375s ease forwards
-
-    .button
-      color: $white
-      margin-right: $baseline
-
-      &::after
-        background: $white
 
   &__form
     // display: none
@@ -203,8 +185,11 @@
       span
         opacity: .7
 
-$forms: project chat
-@each $form in $forms
-  .contact__popup[data-form='#{$form}']
-    .form__group[data-form='#{$form}']
-      display: grid
+      button
+        background: $white
+        border-color: $white
+        color: $black
+
+        &:hover
+          background: $red
+          color: $white

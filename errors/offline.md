@@ -1,7 +1,7 @@
 ---
 layout: error
 title: Uh-Oh! It looks like you're offline
-code: No Internet Connection
+code: No internet connection
 permalink: /offline.html
 sitemap: false
 ---

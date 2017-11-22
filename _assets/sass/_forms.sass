@@ -14,13 +14,20 @@ textarea
 
 button
   appearance: none
-  background: $blue
-  border: 0
+  background: $red
+  border: .15em solid $red
   color: $white
+  cursor: pointer
   display: inline-block
   font: inherit
-  padding: .5em .75em
+  font-weight: 500
+  padding: .35em .75em
+  transition: background-color .375s ease, color .375s ease
   width: 6em
+
+  &:hover
+    background-color: $white
+    color: $black
 
 .form
   display: grid
@@ -54,3 +61,6 @@ button
 
     span, button
       margin-left: $baseline
+
+    span
+      font-size: .875em

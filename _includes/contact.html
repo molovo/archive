@@ -1,4 +1,4 @@
-<section class="contact" id="contact" data-turbolinks-permanent>
+<section class="contact" id="contact">
   <a href="javascript:void('')"
      id="open-contact-form"
      class="contact__cta">
@@ -58,60 +58,49 @@
     </a>
   </div>
 
-  <h2 class="contact__title">
-    Hey, good lookin'<br />
-    What would you like to talk about?
-  </h2>
+  <div class="contact__content">
+    <h2 class="contact__title">
+      Hey, good lookin'<br />
+      What would you like to talk about?
+    </h2>
 
-  <!-- <div class="contact__content">
-    <a href="javascript:void('')"
-       data-form="project"
-       class="contact__form-choice button">
-      I have a new project
-    </a>
-    <a href="javascript:void('')"
-       data-form="chat"
-       class="contact__form-choice button">
-      I'd just like to chat
-    </a>
-  </div> -->
+    <form class="contact__form form" name="contact" netlify>
+      <p class="form__description">
+        Just fill out the form below, and I'll get back to you as soon as possible.<br />
+        Alternatively, you can contact me directly via email on <a href="mailto:hi@molovo.co">hi@molovo.co</a>.
+      </p>
 
-  <form class="contact__form form">
-    <p class="form__description">
-      Just fill out the form below, and I'll get back to you as soon as possible.<br />
-      Alternatively, you can contact me directly via email on <a href="mailto:hi@molovo.co">hi@molovo.co</a>.
-    </p>
-
-    <label for="name" class="form__label">
-      <span class="form__label-text">Name</span>
-      <input class="form__input" type="text" name="name" />
-    </label>
-
-    <label for="email" class="form__label">
-      <span class="form__label-text">Email Address</span>
-      <input class="form__input" type="email" name="email" />
-    </label>
-
-    <div data-form="project" class="form__group">
-      <label for="current_website" class="form__label">
-        <span class="form__label-text">Current website</span>
-        <input class="form__input" type="text" name="current_website" />
+      <label for="name" class="form__label">
+        <span class="form__label-text">Name</span>
+        <input class="form__input" type="text" name="name" />
       </label>
 
-      <label for="budget" class="form__label">
-        <span class="form__label-text">Budget</span>
-        <input class="form__input" type="number" name="budget" min="1500" step="500" />
+      <label for="email" class="form__label">
+        <span class="form__label-text">Email Address</span>
+        <input class="form__input" type="email" name="email" />
       </label>
-    </div>
 
-    <label for="message" class="form__label form__label--full-width">
-      <span class="form__label-text">Message</span>
-      <textarea class="form__input" name="message"></textarea>
-    </label>
+      <div data-form="project" class="form__group">
+        <label for="current_website" class="form__label">
+          <span class="form__label-text">Current website</span>
+          <input class="form__input" type="text" name="current_website" />
+        </label>
 
-    <div class="form__buttons">
-      <span>* Please, no recruiters.</span>      
-      <button>Send</button>
-    </div>
-  </form>
+        <label for="budget" class="form__label">
+          <span class="form__label-text">Budget</span>
+          <input class="form__input" type="number" name="budget" min="1500" step="500" />
+        </label>
+      </div>
+
+      <label for="message" class="form__label form__label--full-width">
+        <span class="form__label-text">Message</span>
+        <textarea class="form__input" name="message"></textarea>
+      </label>
+
+      <div class="form__buttons">
+        <span>* Please, no recruiters.</span>
+        <button>Send</button>
+      </div>
+    </form>
+  </div>
 </section>
