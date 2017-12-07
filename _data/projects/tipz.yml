@@ -1,0 +1,6 @@
+repo: molovo/tipz
+description: Gives you helpful hints when you execute a command for which you have an alias defined
+language: Shell
+stars: 4
+forks: 1
+org: false

@@ -1,0 +1,6 @@
+repo: molovo/validator
+description: A port of (most-of) Laravel's Validator functionality to JavaScript, for use on the front end
+language: JavaScript
+stars: 0
+forks: 0
+org: false

@@ -1,0 +1,6 @@
+repo: molovo/herd
+description: A simple module to help with running multi-threaded processes in Crystal
+language: Crystal
+stars: 5
+forks: 0
+org: false

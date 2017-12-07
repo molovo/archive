@@ -1,0 +1,6 @@
+repo: molovo/lumberjack
+description: Lumberjack is a logging interface for shell scripts
+language: Shell
+stars: 9
+forks: 0
+org: false

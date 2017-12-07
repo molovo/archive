@@ -59,7 +59,7 @@ collections:
         widget: markdown
   - name: projects
     label: Projects
-    file: _data/projects.yml
+    folder: _data/projects
     format: yaml
     fields:
       - label: Repo

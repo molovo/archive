@@ -1,0 +1,6 @@
+repo: molovo/crayon
+description: A collection of helpers for building pretty command-line tools in Crystal
+language: Crystal
+stars: 4
+forks: 1
+org: false

@@ -1,0 +1,6 @@
+repo: molovo/accidents
+description: Pretty error handling for command-line PHP apps
+language: PHP
+stars: 2
+forks: 0
+org: false

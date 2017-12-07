@@ -1,0 +1,6 @@
+repo: molovo/roots-image-pipeline
+description: Image pipeline plugin for Roots (http://roots.cx)
+language: CoffeeScript
+stars: 13
+forks: 2
+org: false

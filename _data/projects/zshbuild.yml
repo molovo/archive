@@ -1,0 +1,6 @@
+repo: molovo/zshbuild
+description: A helper tool for building large ZSH projects from source
+language: Shell
+stars: 2
+forks: 0
+org: false

@@ -1,0 +1,6 @@
+repo: zunit-zsh/zunit
+description: A powerful testing framework for ZSH projects
+language: Shell
+stars: 21
+forks: 0
+org: false

@@ -1,0 +1,6 @@
+repo: zulu-zsh/www
+description: The website for the Zulu ZSH environment manager
+language: CoffeeScript
+stars: 1
+forks: 0
+org: true

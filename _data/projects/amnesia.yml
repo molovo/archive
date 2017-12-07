@@ -1,0 +1,6 @@
+repo: molovo/amnesia
+description: A lightweight, standalone caching library for PHP 5.5+
+language: PHP
+stars: 1
+forks: 0
+org: false

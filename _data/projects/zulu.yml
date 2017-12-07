@@ -1,0 +1,6 @@
+repo: zulu-zsh/zulu
+description: Total environment manager for ZSH
+language: Shell
+stars: 41
+forks: 4
+org: true

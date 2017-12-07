@@ -1,0 +1,6 @@
+repo: molovo/crash
+description: Proper error handling, exceptions and try/catch for ZSH
+language: Shell
+stars: 8
+forks: 0
+org: false

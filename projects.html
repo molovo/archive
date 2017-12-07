@@ -132,7 +132,8 @@ layout: page
 
   <nav class="projects__list">
     <ul>
-      {% for project in site.data.projects %}
+      {% for item in site.data.projects %}
+        {% assign project = item[1] %}
         <li class="projects__project animate-on-scroll"
             itemscope
             itemtype="http://schema.org/SoftwareSourceCode"

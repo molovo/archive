@@ -1,0 +1,6 @@
+repo: molovo/revolver
+description: A progress spinner for ZSH scripts
+language: Shell
+stars: 25
+forks: 2
+org: false

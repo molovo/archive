@@ -1,0 +1,6 @@
+repo: molovo/zvm
+description: The ZSH version manager
+language: Shell
+stars: 6
+forks: 0
+org: false
