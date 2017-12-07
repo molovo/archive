@@ -32,11 +32,12 @@ collections:
   - name: projects
     label: Projects
     file: _data/projects.yml
+    extension: yml
     create: true
     fields:
       - {label: "Repo", name: "repo", widget: "string", default: "molovo/"}
       - {label: "Description", name: "description", widget: "string"}
-      - {label: "Language", name: "language", widget: "string", options: ["Shell", "CoffeeScript", "JavaScript", "PHP", "Crystal"]}
+      - {label: "Language", name: "language", widget: "select", options: ["Shell", "CoffeeScript", "JavaScript", "PHP", "Crystal"]}
       - {label: "Stars", name: "stars", widget: "number"}
       - {label: "Forks", name: "forks", widget: "number"}
       - {label: "Owned by organisation?", name: "org", widget: "boolean"}
