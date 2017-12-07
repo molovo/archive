@@ -11,33 +11,78 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: post
+      - label: Title
+        name: title
+        widget: string
+      - label: Tags
+        name: tags
+        widget: list
+      - label: Body
+        name: body
+        widget: markdown
   - name: studies
     label: Studies
     folder: _studies
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "study"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "Client", name: "client", widget: "string"}
-      - {label: "Intro", name: "intro", widget: "text"}
-      - {label: "Url", name: "url", widget: "string"}
-      - {label: "Order", name: "order", widget: "number", valueType: "int", min: 0}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: study
+      - label: Title
+        name: title
+        widget: string
+      - label: Slug
+        name: slug
+        widget: string
+      - label: Client
+        name: client
+        widget: string
+      - label: Intro
+        name: intro
+        widget: text
+      - label: Url
+        name: url
+        widget: string
+      - label: Order
+        name: order
+        widget: number
+        valueType: int
+        min: 0
+      - label: Body
+        name: body
+        widget: markdown
   - name: projects
     label: Projects
     file: _data/projects.yml
-    extension: yml
-    create: true
     fields:
-      - {label: "Repo", name: "repo", widget: "string", default: "molovo/"}
-      - {label: "Description", name: "description", widget: "string"}
-      - {label: "Language", name: "language", widget: "select", options: ["Shell", "CoffeeScript", "JavaScript", "PHP", "Crystal"]}
-      - {label: "Stars", name: "stars", widget: "number"}
-      - {label: "Forks", name: "forks", widget: "number"}
-      - {label: "Owned by organisation?", name: "org", widget: "boolean"}
+      - label: Repo
+        name: repo
+        widget: string
+        default: molovo/
+      - label: Description
+        name: description
+        widget: string
+      - label: Language
+        name: language
+        widget: select
+        options:
+          - Shell
+          - CoffeeScript
+          - JavaScript
+          - PHP
+          - Crystal
+      - label: Stars
+        name: stars
+        widget: number
+      - label: Forks
+        name: forks
+        widget: number
+      - label: Owned by organisation?
+        name: org
+        widget: boolean
