@@ -59,6 +59,7 @@ collections:
         widget: markdown
   - name: projects
     label: Projects
+    create: true
     folder: _data/projects
     format: yaml
     fields:
