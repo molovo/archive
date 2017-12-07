@@ -60,6 +60,7 @@ collections:
   - name: projects
     label: Projects
     file: _data/projects.yml
+    format: yaml
     fields:
       - label: Repo
         name: repo
