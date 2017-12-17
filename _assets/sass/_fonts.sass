@@ -1,5 +1,5 @@
 $fontStackPrimary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
-$fontPrimary: 'depot-new-web', $fontStackPrimary
+$fontPrimary: 'freight-sans-pro', $fontStackPrimary
 
 $fontStackSecondary: 'Georgia', serif
 $fontSecondaryPreload: 'GauthierFY-preload', $fontStackSecondary
@@ -12,7 +12,7 @@ $fontMonospace: 'Operator Mono Book', 'Operator Mono', 'Fira Code', 'Fira Mono',
 =fontPrimary
   font-family: $fontStackPrimary
 
-  .fonts-stage-2 &
+  .font-freight-loaded &
     font-family: $fontPrimary
 
 =fontSecondary
@@ -21,7 +21,7 @@ $fontMonospace: 'Operator Mono Book', 'Operator Mono', 'Fira Code', 'Fira Mono',
   .fonts-stage-1 &
     font-family: $fontSecondaryPreload
 
-  .fonts-stage-2 &
+  .font-gauthier-loaded &
     font-family: $fontSecondary
 
 =fontScript
@@ -29,7 +29,7 @@ $fontMonospace: 'Operator Mono Book', 'Operator Mono', 'Fira Code', 'Fira Mono',
   opacity: 0
   transition: opacity .25s
 
-  .fonts-stage-2 &
+  .font-have-heart-loaded &
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
     font-family: $fontScript

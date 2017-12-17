@@ -1,4 +1,4 @@
-<script src="/js/main.min.js" async></script>
+<script src="/js/main.min.js" async defer></script>
 
 {% if site.environment == 'dev' %}
   <script src="http://localhost:35729/livereload.js" async defer></script>
@@ -9,7 +9,7 @@
   var siteTitle = "{{ site.title }}";
 </script>
 
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async defer></script>
 
 {% if site.environment == 'production' %}
   <script>

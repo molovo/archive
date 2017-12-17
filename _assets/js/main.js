@@ -13,11 +13,7 @@ import ScrollSync from './scroll-sync'
 import Contact from './contact'
 import Turbolinks from 'turbolinks'
 
-document.addEventListener('turbolinks:click', () => {
-  document.documentElement.classList.add('loading')
-})
-
-document.addEventListener('turbolinks:load', () => {
+const start = () => {
   window.github = new Github()
   window.projects = new Projects()
   window.search = new Search()
@@ -30,19 +26,13 @@ document.addEventListener('turbolinks:load', () => {
   window.contact = new Contact()
 
   document.documentElement.classList.remove('loading')
+}
+
+document.addEventListener('turbolinks:load', start)
+
+document.addEventListener('turbolinks:click', () => {
+  document.documentElement.classList.add('loading')
 })
 
-window.github = new Github()
-window.projects = new Projects()
-window.search = new Search()
-window.menu = new Menu()
-window.title = new Title()
-window.likes = new Likes()
-window.images = new Images()
-window.scrollSync = new ScrollSync()
-window.animator = new Animator()
-window.contact = new Contact()
-
-document.documentElement.classList.remove('loading')
-
 Turbolinks.start()
+start()

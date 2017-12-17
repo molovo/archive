@@ -19,24 +19,10 @@
 }
 @font-face {
   font-family: 'GauthierFY';
-  src: url('/fonts/gauthier.woff2') format('woff2'),
-       url('/fonts/gauthier.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'GauthierFY';
   src: url('/fonts/gauthier-bold.woff2') format('woff2'),
        url('/fonts/gauthier-bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
-}
-@font-face {
-  font-family: 'GauthierFY';
-  src: url('/fonts/gauthier-italic.woff2') format('woff2'),
-       url('/fonts/gauthier-italic.woff') format('woff');
-  font-weight: 400;
-  font-style: italic;
 }
 @font-face {
   font-family: 'Have Heart One';
@@ -48,12 +34,31 @@
 </style>
 <script>
 (function() {
+  var count = 0
 
   // Optimization for Repeat Views
-  if( sessionStorage.criticalFoftFontsLoaded ) {
-    document.documentElement.classList.add('fonts-stage-1');
-    document.documentElement.classList.add('fonts-stage-2');
-    return;
+  if (sessionStorage.criticalFoftFontsLoaded) {
+    document.documentElement.classList.add('fonts-stage-1')
+    count++
+  }
+
+  if (sessionStorage.fontFreightLoaded) {
+    document.documentElement.classList.add('font-freight-loaded')
+    count++
+  }
+
+  if (sessionStorage.fontGauthierLoaded) {
+    document.documentElement.classList.add('font-gauthier-loaded')
+    count++
+  }
+
+  if (sessionStorage.fontHaveHeartLoaded) {
+    document.documentElement.classList.add('font-have-heart-loaded')
+    count++
+  }
+
+  if (count === 4) {
+    return
   }
 
   // FontFaceObserver https://github.com/bramstein/fontfaceobserver
@@ -61,35 +66,50 @@
 
   var fontSubset = new FontFaceObserver('GauthierFY-preload', {
     weight: 700
-  });
+  })
 
   Promise.all([fontSubset.load()]).then(function () {
-    document.documentElement.classList.add('fonts-stage-1');
+    document.documentElement.classList.add('fonts-stage-1')
 
-    var fonts = [
-      new FontFaceObserver('depot-new-web'),
-      new FontFaceObserver('depot-new-web', {
+    var gauthier = new FontFaceObserver('GauthierFY', {
+      weight: 700
+    })
+
+    var freight = [
+      new FontFaceObserver('freight-sans-pro'),
+      new FontFaceObserver('freight-sans-pro', {
         style: 'italic'
       }),
-      new FontFaceObserver('depot-new-web', {
+      new FontFaceObserver('freight-sans-pro', {
         weight: 700
-      }),
-      new FontFaceObserver('GauthierFY'),
-      new FontFaceObserver('GauthierFY', {
-        weight: 700
-      }),
-      new FontFaceObserver('GauthierFY', {
-        style: 'italic'
-      }),
-      new FontFaceObserver('Have Heart One')
+      })
     ]
 
-    Promise.all(fonts.map(font => font.load())).then(function () {
-      document.documentElement.classList.add('fonts-stage-2');
+    var haveHeart = new FontFaceObserver('Have Heart One')
+
+    gauthier.load().then(function () {
+      document.documentElement.classList.add('font-gauthier-loaded')
 
       // Optimization for Repeat Views
-      sessionStorage.criticalFoftFontsLoaded = true;
-    });
-  });
-})();
+      sessionStorage.setItem('fontGauthierLoaded', true)
+    })
+
+    Promise.all(freight.map(font => font.load())).then(function () {
+      document.documentElement.classList.add('font-freight-loaded')
+
+      // Optimization for Repeat Views
+      sessionStorage.setItem('fontFreightLoaded', true)
+    })
+
+    // Delay loading of less critical fonts
+    document.addEventListener('DOMContentLoaded', function () {
+      haveHeart.load().then(function () {
+        document.documentElement.classList.add('font-have-heart-loaded')
+
+        // Optimization for Repeat Views
+        sessionStorage.setItem('fontHaveHeartLoaded', true)
+      })
+    })
+  })
+})()
 </script>
