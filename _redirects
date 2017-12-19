@@ -42,6 +42,7 @@ https://molovo.netlify.com/*                            https://molovo.co/:splat
 /zunit/*                                                https://zunit.xyz/:splat                                    301
 /zunit/docs/getting-started/installation                https://zunit.xyz/docs/getting-started/installation         301
 /zunit/docs/getting-started/project-setup               https://zunit.xyz/docs/getting-started/project-setup        301
+/zunit/docs/writing-tests/assertions                    https://zunit.xyz/docs/writing-tests/assertions             301
 /zunit/docs/writing-tests/setup-and-teardown            https://zunit.xyz/docs/writing-tests/setup-and-teardown     301
 /zunit/docs/command-line-usage/reporting                https://zunit.xyz/docs/usage/reporting                      301
 /zunit/docs/command-line-usage/running-tests            https://zunit.xyz/docs/usage/running-tests                  301
