@@ -109,14 +109,15 @@ hr
   margin: calc(#{$baseline * 2} - 1px) auto #{$baseline * 2}
 
 a
-  color: $blue
+  color: inherit
+  font-weight: 700
   text-decoration: underline
-  text-decoration-color: transparent
-  text-decoration-skip: ink
-  transition: text-decoration-color .25s
+  transition: color .5s, text-decoration-color .5s
 
-  &:hover
-    text-decoration-color: $red
+  &:hover,
+  &:focus
+    color: $red
+    text-decoration-color: transparent
 
 blockquote
   +fontSecondary
