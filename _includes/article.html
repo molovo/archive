@@ -14,13 +14,12 @@
   {% endif %}
   <header class="post__header">
     <div class="post__header-wrapper">
-      {% if include.post.tags %}
-        <h6 class="screenreader-text">Tags:</h6>
-        <ul class="post__tags">
-          {% for tag in include.post.tags %}
-            <li class="post__tag"><a href="/tag/{{ tag | slugify }}">{{ tag }}</a></li>
-          {% endfor %}
-        </ul>
+      {% if include.post.image %}
+        {% responsive_image_block %}
+          path: {{ include.post.image }}
+          alt: {{ include.post.imageAltText }}
+          sizes: '(min-width: 42em) 36em, 100vw'
+        {% endresponsive_image_block %}
       {% endif %}
 
       {% if include.listing == 'true' %}
@@ -40,6 +39,7 @@
           <span>{{ include.post.title }}</span>
         </h1>
       {% endif %}
+
       <div class="post__meta">
         <span>Published on</span>&nbsp;
         <date itemprop="datePublished"
@@ -48,6 +48,16 @@
           {{ include.post.date | date: '%e' }}{{ include.post.date | date_to_xmlschema | ordinal }} {{ include.post.date | date: '%B %Y' }}
         </date>
       </div>
+
+      {% if include.post.tags %}
+        <h6 class="screenreader-text">Tags:</h6>
+        <ul class="post__tags">
+          {% for tag in include.post.tags %}
+            <li class="post__tag"><a href="/tag/{{ tag | slugify }}">{{ tag }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
       <meta itemprop="dateModified" content="{{ include.post.date | date_to_xmlschema }}">
       <div itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="{{ site.author }}" />

@@ -3,12 +3,13 @@
   flex: 0 0 100%
   font-size: .75em
   justify-content: flex-start
-  margin-right: auto
+  margin: $baseline auto 0
+  max-width: #{(1/.75) * 36em}
 
   @media (min-width: 64em)
     flex: 0 0 auto
     flex-direction: column
-    margin-right: 0
+    margin: 0 0 0 #{$baseline * -1}
     position: sticky
     top: between(3em, 7.5em, 42em, 80em)
     transform: translate(-.4em, .75em)

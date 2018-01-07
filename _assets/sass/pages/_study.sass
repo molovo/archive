@@ -11,14 +11,14 @@
     margin: 0
 
 .studies
-  margin: 0 -1.5em
+  margin: -25vh -1.5em
   overflow: hidden
 
   @media (min-width: 42em)
-    margin: 0 between(-1.5em, -6em, 42em, 80em)
+    margin: -25vh between(-1.5em, -4.5em, 42em, 80em)
 
   @media (min-width: 80em)
-    margin: 0 -6em
+    margin: -25vh -4.5em
 
   &__content
     flex: 0 0 70%
@@ -26,6 +26,8 @@
     width: 70%
 
   .study__icons
+    text-align: left
+
     +studyIcons
       fill: $black
 
@@ -48,7 +50,15 @@
     display: flex
     justify-content: flex-start
     padding: 0 1.5em 6em
+    pointer-events: none
     position: relative
+
+    &:not(:first-of-type)
+      margin: -25vh 0 0
+
+    .home-icon,
+    .button
+      pointer-events: all
 
     @media (max-width: 54em)
       .studies__content
@@ -67,7 +77,7 @@
           font-size: 1.5em
 
     @media (min-width: 42em)
-      padding: 0 between(1.5em, 6em, 42em, 80em) 6em
+      padding: 0 between(1.5em, 4.5em, 42em, 80em) 4.5em
 
     @media (min-width: 54em)
       .studies__content
@@ -90,11 +100,18 @@
             margin-right: 0
 
     @media (min-width: 80em)
-      padding: 0 6em 6em
+      padding: 0 4.5em 4.5em
 
   &--cta
+    margin: 0 -1.5em
     position: relative
     z-index: 0
+
+    @media (min-width: 42em)
+      margin: 0 between(-1.5em, -4.5em, 42em, 80em)
+
+    @media (min-width: 80em)
+      margin: 0 -4.5em
 
     .page--study &
       margin: 0
@@ -103,24 +120,24 @@
       padding: 3em 1.5em
 
       @media (min-width: 42em)
-        padding: between(3em, 6em, 42em, 80em) between(1.5em, 6em, 42em, 80em)
+        padding: between(3em, 4.5em, 42em, 80em) between(1.5em, 4.5em, 42em, 80em)
 
       @media (min-width: 80em)
-        padding: 6em
+        padding: 4.5em
 
     .studies__image
       margin-top: -100vw
 
 .study
   &__intro
-    padding: 6em 1.5em 0
+    padding: 4.5em 1.5em 0
     position: relative
 
     @media (min-width: 42em)
-      padding: 6em between(1.5em, 6em, 42em, 80em) 0
+      padding: 4.5em between(1.5em, 4.5em, 42em, 80em) 0
 
     @media (min-width: 80em)
-      padding: 6em 6em 0
+      padding: 4.5em 4.5em 0
 
   &__section
     .study__icons,
@@ -148,6 +165,7 @@
 
   &__icons
     margin: 0 0 $baseline
+    text-align: center
     text-decoration: none
 
     .logo
@@ -175,34 +193,34 @@
 
   &__title
     color: $white
-    margin: 12em 0 3em
+    margin: 9em 0 3em
 
     h1
       +script
-      font-size: 23vw
+      font-size: 18vw
       margin: 0
-      text-align: left
+      text-align: center
 
   &__content
     align-items: flex-start
     display: flex
     flex-wrap: wrap
     justify-content: space-between
-    padding: 0 1.5em 6em
+    padding: 0 1.5em 4.5em
 
     @media (min-width: 42em)
-      padding: 0 between(1.5em, 6em, 42em, 80em) 6em
+      padding: 0 between(1.5em, 4.5em, 42em, 80em) 4.5em
 
     @media (min-width: 80em)
-      padding: 0 6em 6em
+      padding: 0 4.5em 4.5em
 
     .post__content
       flex: initial
 
   &__type-sample
     background: $white
-    left: 50vw
-    margin: #{$baseline * 2} 0 #{$baseline * 2} -1.5em
+    left: 50%
+    margin: #{$baseline * 2} 0
     position: relative
     transform: translateX(-50%)
     width: 100vw
@@ -210,11 +228,8 @@
 
     &-wrapper
       height: 100%
-      left: 50vw
       overflow: hidden
-      position: relative
       text-align: center
-      transform: translateX(-50%)
       width: 100%
 
       > span
@@ -223,13 +238,6 @@
         position: relative
         transform: translateX(-50%)
         width: 125vw
-
-
-    @media (min-width: 42em)
-      margin-left: between(-1.5em, -6em, 42em, 80em)
-
-    @media (min-width: 80em)
-      margin-left: -6em
 
     @media (min-width: 42em)
       &::after,

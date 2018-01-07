@@ -12,7 +12,7 @@ $baseline: 1.5em
 
 html
   font: 300 100% / #{$baseline} $fontStackPrimary
-  font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'onum'
+  font-feature-settings: 'kern', 'liga', 'clig', 'dlig', 'calt', 'onum'
 
 body
   +fontPrimary
@@ -23,19 +23,20 @@ body
   position: relative
 
   @media (min-width: 42em)
-    font-size: calc(1em + (1.25 - 1) * (100vw - 42em) / (80 - 42))
+    font-size: calc(1em + (1.3125 - 1) * (100vw - 42em) / (80 - 42))
 
   @media (min-width: 80em)
-    font-size: 1.25em
+    font-size: 1.3125em
 
 h1, h2, h3, h4, h5, h6
-  font-weight: 700
-  letter-spacing: -.025em
+  font-weight: 600
+  letter-spacing: -.0125em
 
 h1, h2
   +fontSecondary
   font-size: 2.25em
   font-weight: 700
+  letter-spacing: -.025em
   line-height: #{(1.35 / 1.5) * $baseline}
   margin-bottom: #{(.6666666666666667 / 1.5) * $baseline}
 
@@ -110,8 +111,9 @@ hr
 
 a
   color: inherit
-  font-weight: 700
+  font-weight: 600
   text-decoration: underline
+  text-decoration-skip: ink
   transition: color .5s, text-decoration-color .5s
 
   &:hover,
@@ -126,62 +128,44 @@ blockquote
     style: italic
     weight: 300
   font-feature-settings: 'kern', 'liga', 'clig', 'dlig', 'calt', 'onum'
-  margin: 0 0 $baseline
+  margin: $baseline 0
 
-  &.pull
-    float: right
-    text-align: center
+  @media (min-width: 42em)
+    margin: $baseline between(-1.5em, -4.5em, 42em, 80em)
 
-    &::before, &::after
-      background: $red
-      content: ''
-      display: inline-block
-      height: .125em
-      vertical-align: middle
-      width: 3em
+  @media (min-width: 80em)
+    margin: $baseline #{$baseline * -3}
 
-    @media (min-width: 42em)
-      margin: 0 #{($baseline * -3)} $baseline #{($baseline * 1)}
-      max-width: #{8 * $baseline}
+  p
+    margin: 0
+    quotes: '“' '”' '‘' '’'
 
-    @media (min-width: 64em)
-      margin: 0 #{($baseline * -5)} $baseline #{$baseline * 1}
-      max-width: #{8 * $baseline}
-
-  &.full-width
-    +fontSecondary
-    font-style: normal
-    font-weight: 300
-    text-align: center
-
-    @media (min-width: 42em)
-      margin: 0 #{$baseline * -3} $baseline
-
-    p
+    &:not(:last-of-type)
+      color: $red
       font-size: 2.25em
       line-height: #{(1.35 / 1.5) * $baseline}
 
-      @media (min-width: 42em)
-        font-size: 3em
-        line-height: #{(1 / 1.5) * $baseline}
+      &:not(:nth-last-of-type(2))
+        margin-bottom: #{(.6666666666666667 / 1.5) * $baseline}
 
-  p
-    color: $blue
-    quotes: '“' '”' '‘' '’'
+      &::before
+        content: open-quote
 
-    &::before
-      content: open-quote
-
-    &::after
-      content: close-quote
+      &::after
+        content: close-quote
 
     &:last-of-type
-      margin: 0
+      margin: 0 0 $baseline
 
   cite
     +fontPrimary
+    color: $grayTwo
     display: block
     font:
       size: .75em
       style: normal
-      weight: 600
+      weight: 300
+
+    &::before
+      content: '\2014'
+      margin-right: 1ch

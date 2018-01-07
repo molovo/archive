@@ -13,10 +13,10 @@
   z-index: 10000
 
   @media (min-width: 42em)
-    padding: between(3em, 7.5em, 42em, 80em) between(1.5em, 6em, 42em, 80em)
+    padding: between(3em, 4.5em, 42em, 80em) between(1.5em, 4.5em, 42em, 80em)
 
   @media (min-width: 80em)
-    padding: 7.5em 6em
+    padding: 4.5em
 
   &::after
     color: lighten($red, 5%)
@@ -74,7 +74,8 @@
     @media (min-height: 64em)
       font-size: 6em
 
-    &:hover
+    &:hover,
+    &:focus
       color: $black
       text-decoration: none
 
@@ -83,10 +84,10 @@
     right: 1.5em
 
     @media (min-width: 42em)
-      right: between(1.5em, 6em, 42em, 80em)
+      right: between(1.5em, 4.5em, 42em, 80em)
 
     @media (min-width: 80em)
-      right: 6em
+      right: 4.5em
 
     svg
       display: block
@@ -106,10 +107,10 @@
     width: auto
 
     @media (min-width: 42em)
-      left: between(1.5em, 6em, 42em, 80em)
+      left: between(1.5em, 4.5em, 42em, 80em)
 
     @media (min-width: 80em)
-      left: 6em
+      left: 4.5em
 
   &__home,
   &__close
@@ -118,9 +119,9 @@
     z-index: 1
 
     @media (min-width: 42em)
-      right: between(1.5em, 6em, 42em, 80em)
-      top: between(3em, 7.5em, 42em, 80em)
+      right: between(1.5em, 4.5em, 42em, 80em)
+      top: between(3em, 6em, 42em, 80em)
 
     @media (min-width: 80em)
-      right: 6em
-      top: 7.5em
+      right: 4.5em
+      top: 6em

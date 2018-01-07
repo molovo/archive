@@ -1,11 +1,11 @@
 .webmentions
   font-size: .875em
   line-height: $baseline
-  margin: 0 0 6em
-  max-width: #{(8/7) * 36em}
+  margin: 0 0 4.5em
 
   &__wrapper
-    margin: 0 0 6em
+    margin: 0 auto 4.5em
+    max-width: 36em
 
   &__list
     list-style: none
@@ -46,8 +46,7 @@
       margin-bottom: 0
 
   &__meta
-    +fontSecondary
-    font-style: italic
+    font-weight: 700
     margin-left: auto
 
   &__source
@@ -70,9 +69,7 @@
   &--like,
   &--repost
     .webmention__content
-      +fontSecondary
       flex: 1 1 auto
-      font-style: italic
       order: 0
       padding-left: 0
 

@@ -70,7 +70,7 @@ export default class Menu {
         this.bufferedY = window.pageYOffset
       }, 50)
 
-      const fn = this.y <= this.bufferedY - 25 ? 'remove' : 'add'
+      const fn = this.y <= this.bufferedY ? 'remove' : 'add'
       this.header.classList[fn]('header--hidden')
     })
   }
