@@ -34,5 +34,7 @@ document.addEventListener('turbolinks:click', () => {
   document.documentElement.classList.add('loading')
 })
 
-Turbolinks.start()
-start()
+document.addEventListener('DOMContentLoaded', () => {
+  Turbolinks.start()
+  start()
+})

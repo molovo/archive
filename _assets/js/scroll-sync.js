@@ -17,7 +17,7 @@ export default class ScrollSync {
    * Register the listeners which will handle scroll syncing
    */
   registerScrollListener () {
-    document.body.addEventListener('scroll', e => {
+    window.addEventListener('scroll', e => {
       this.targets.forEach((target) => {
         const top = target.getBoundingClientRect().top
         const height = target.clientHeight
