@@ -5,29 +5,3 @@ layout: base
 <section class="intro">
   {{ content }}
 </section>
-
-<section class="studies">
-  {% assign studies = site.studies | sort: "order" %}
-  {% for study in studies %}
-    <article class="studies__item studies__item--{{ study.slug }}">
-      <div class="studies__content">
-        {% include study/icons.html slug=study.slug client=study.client showTitle=false %}
-
-        <h1 class="studies__title">{{ study.intro }}</h1>
-
-        <a href="{{ study.url }}"
-            class="button button--bordered">
-          Read the case study
-        </a>
-      </div>
-
-      <div class="studies__image">
-        {% include icons/studies/{{ study.slug }}/icon.svg %}
-        {% comment %}
-          <img src="/img/studies/{{ study.slug }}/bg.png"
-              alt="">
-        {% endcomment %}
-      </div>
-    </article>
-  {% endfor %}
-</section>

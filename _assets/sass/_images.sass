@@ -2,13 +2,13 @@
   align-items: flex-start
   display: flex
   flex-wrap: wrap
-  margin: $baseline 0
+  margin: #{$baseline * 2} 0
 
   @media (min-width: 42em)
-    margin: $baseline between(-1.5em, -4.5em, 42em, 80em)
+    margin: #{$baseline * 2} between(-1.5em, -4.5em, 42em, 80em)
 
   @media (min-width: 80em)
-    margin: $baseline #{$baseline * -3}
+    margin: #{$baseline * 2} #{$baseline * -3}
 
   &:first-child
     margin-top: 0
@@ -47,20 +47,12 @@
     background-position: top center, bottom center
     background-repeat: no-repeat
     background-size: 100% 15em, 100% 15em
-    left: 50%
-    margin: -1.5em 0 0
-    overflow: hidden
-    padding: #{$baseline * 2} 0
     position: relative
-    transform: translateX(-50%)
-    width: 100vw
     z-index: 1001
 
     .image__caption
       display: block
       line-height: $baseline
-      margin-left: 1.5em
-      margin-right: 1.5em
       margin-top: $baseline
       position: static
       width: calc(100vw - #{$baseline * 2})
@@ -69,6 +61,18 @@
       &::after,
       &::before
         content: none
+
+  &--full-width
+    left: 50%
+    margin: -1.5em 0 0
+    overflow: hidden
+    padding: #{$baseline * 2} 0
+    transform: translateX(-50%)
+    width: 100vw
+
+    .image__caption
+      margin-left: 1.5em
+      margin-right: 1.5em
 
   &--slideshow
     .image__caption
@@ -118,17 +122,17 @@
       width: 100%
 
 .slideshow
-  margin-left: 1.5em
-  max-width: 36em
+  // margin-left: 1.5em
+  // max-width: 32em
   overflow: visible
   position: relative
-  width: calc(100% - #{$baseline * 2})
+  width: 100%
 
-  @media (min-width: 42em)
-    margin-left: between(1.5em, 6em, 42em, 80em)
+  // @media (min-width: 42em)
+  //   margin-left: between(1.5em, 6em, 42em, 80em)
 
-  @media (min-width: 80em)
-    margin-left: 6em
+  // @media (min-width: 80em)
+  //   margin-left: 6em
 
   &__slides
     display: flex
@@ -143,7 +147,7 @@
     // fixes it though
     line-height: 0
     margin-right: $baseline
-    max-width: 24em
+    max-width: 28em
 
     > img,
     > picture,
@@ -154,7 +158,7 @@
 
   &__button
     background: transparent
-    bottom: #{$baseline * -2.125}
+    bottom: #{$baseline * -1.625}
     cursor: pointer
     display: inline-block
     height: $baseline

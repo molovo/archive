@@ -1,60 +1,10 @@
 .page--home
-  background: $red
-  color: $white
-
   .intro
     margin: 0 auto 4.5em
     max-width: 32em
 
     h1
       +script
+      color: $red
       font-size: 9vw
       line-height: 1em
-
-    h3
-      +fontScript
-      font-size: 3em
-      font-weight: normal
-      margin-top: 3em
-      text-align: center
-
-  .logo--frame,
-  .nav-toggle circle
-    fill: $white
-
-  .logo:hover .logo--frame
-  .nav-toggle:hover circle
-    fill: $black
-
-  .contact
-    margin-top: 4.5em
-
-    &__cta
-      color: $white
-
-      &:hover
-        color: $black
-
-    &__social-link
-      path
-        fill: $white
-
-      &--twitter
-        &:hover
-          path
-            fill: $twitterBlue
-
-      &--github
-        &:hover
-          path
-            fill: $githubPurple
-
-      &--dribbble
-        &:hover
-          path
-            fill: $dribbblePink
-
-      &--refind
-        &:hover
-          path
-            fill: $refindBlue
