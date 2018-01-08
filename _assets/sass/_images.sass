@@ -40,6 +40,11 @@
         @media (min-width: 42em)
           flex: 0 0 33.3333%
 
+  // Gifs have weird margins
+  > img[src$='.gif']
+    + .image__caption
+      margin-top: 1.125em
+
   &--full-width,
   &--slideshow
     background-color: transparent
