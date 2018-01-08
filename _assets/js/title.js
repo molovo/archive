@@ -55,6 +55,10 @@ export default class Title {
     // Register the visibility change listener
     window.addEventListener('scroll', this.findCorrectTitle)
     document.addEventListener('visibilitychange', this.updatePageTitle)
+
+    document.addEventListener('turbolinks:load', () => {
+      this.original = window.pageTitle
+    })
   }
 
   /**
