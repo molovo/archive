@@ -1,0 +1,49 @@
+---
+layout: base
+title: Web Design and Development in Southsea, Hampshire
+description: James Dinsdale is a designer and developer from Southsea, Hampshire, building immersive, interactive experiences on the web. Let's build something together.
+---
+
+<section class="intro">
+  <h1 class="intro__heading">Hi, I'm James.<br />I make websites.</h1>
+
+  <p>I'm currently leading the talented development team at <a href="https://superrb.com" target="_blank">Superrb Studio</a>.</p>
+
+  <p>I'm the creator of <a href="https://zulu.molovo.co" target="_blank">Zulu</a>, <a href="https://zunit.xyz" target="_blank">ZUnit</a> and <a href="https://philliphq.github.io" target="_blank">Phillip</a>, as well as <a href="/projects/" target="_blank">some other cool projects</a>. When I'm not up in the middle of the night writing code, you can find me <a href="https://twitter.com/molovo" target="_blank">talking rubbish on Twitter</a>.</p>
+
+  <p>If you'd like to hire me, see some of my client work, or talk about the weather, send me an email at <a href="mailto:hi@molovo.co" target="_blank">hi@molovo.co</a>. I might even reply.</p>
+</section>
+
+<section class="featured-posts">
+  <h3 class="featured-posts__heading">I write about design, development, and the web.</h3>
+
+  <p>Here are a few of my favourite articles</p>
+
+  <ul class="featured-posts__list">
+    {% assign posts = site.categories.featured | sort: 'featured_order' %}
+    {% for post in posts %}
+      <li class="featured-posts__item">
+        <h5 class="featured-posts__title">
+          <a class="featured-posts__link"
+            href="{{ post.url }}"
+            title="{{ post.title }}">
+            {{ post.title }}
+          </a>
+        </h5>
+
+        <p class="featured-posts__description">{{ post.description }}</p>
+
+        <!-- <div class="featured-posts__meta">
+          <span class="screenreader-text">Published on</span>
+          <date class="featured-posts__date">
+            {{ post.date | date: '%e' }}{{ post.date | date_to_xmlschema | ordinal }} {{ post.date | date: '%B %Y' }}
+          </date>
+        </div> -->
+      </li>
+    {% endfor %}
+
+    <li class="featured-posts__item">
+      <a href="/writing/" class="button">View all articles &rarr;</a>
+    </li>
+  </ul>
+</section>

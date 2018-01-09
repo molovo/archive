@@ -1,37 +1,53 @@
-.page--home
-  .intro
-    margin: 0 auto 4.5em
-    max-width: 32em
+.intro
+  margin: 0 auto 4.5em
+  max-width: 32em
 
-    h1
-      +script
-      color: $red
-      font-size: 9vw
-      line-height: 1em
+  &__heading
+    +script
+    color: $red
+    font-size: 10.5vw
+    line-height: 1em
+
+  h4
+    +fontSecondary
 
 .featured-posts
   margin: 0 auto
   max-width: 32em
 
+  &__heading
+    +script
+    font-size: 7.5vw
+    margin: 1.5em 0 .5em
+
   &__list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
     list-style: none
 
   &__item
     align-items: baseline
-    display: flex
-    padding: #{$baseline / 2} 0
+    flex: 0 0 100%
+    font-size: .875em
+    line-height: $baseline
+    margin: 0 0 $baseline
 
-    &:not(:last-child)
-      border-bottom: 1px solid $gray
+    @media (min-width: 32em)
+      flex: 0 0 calc(50% - #{$baseline})
+
+    &:last-child
+      align-self: flex-end
 
   &__title
-    font-size: 1.5em
-    line-height: #{(1 / 1.5) * $baseline}
-    margin: 0 auto 0 0
+    margin: 0
+    // font-size: 1.5em
+    // line-height: #{(1 / 1.5) * $baseline}
+    // margin: 0 auto 0 0
 
-    @media (min-width: 42em)
-      font-size: 2.25em
-      line-height: #{(1.35 / 1.5) * $baseline}
+    // @media (min-width: 42em)
+    //   font-size: 2.25em
+    //   line-height: #{(1.35 / 1.5) * $baseline}
 
   &__link
     color: $red
@@ -40,7 +56,14 @@
     &:hover
       text-decoration-color: $red
 
+  &__description
+    margin: 0
+
   &__meta
     flex: 0 0 auto
     font-size: .75em
     margin-left: $baseline
+
+  .button
+    align-self: flex-end
+    margin-right: auto

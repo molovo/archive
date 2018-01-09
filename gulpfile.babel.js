@@ -1,16 +1,16 @@
 // Base gulp dependencies
 import 'isomorphic-fetch'
-import gulp        from 'gulp'
-import source      from 'vinyl-source-stream'
-import buffer      from 'vinyl-buffer'
-import gutil       from 'gulp-util'
-import rename      from 'gulp-rename'
-import livereload  from 'gulp-livereload'
+import gulp          from 'gulp'
+import source        from 'vinyl-source-stream'
+import buffer        from 'vinyl-buffer'
+import gutil         from 'gulp-util'
+import rename        from 'gulp-rename'
+import livereload    from 'gulp-livereload'
 import { spawnSync } from 'child_process'
-import changed     from 'gulp-changed'
-import clone       from 'gulp-clone'
-import runSequence from 'run-sequence'
-import es          from 'event-stream'
+import changed       from 'gulp-changed'
+import clone         from 'gulp-clone'
+import runSequence   from 'run-sequence'
+import es            from 'event-stream'
 
 // Dependencies for compiling coffeescript
 import sourcemaps from 'gulp-sourcemaps'
@@ -22,9 +22,9 @@ import composer   from 'gulp-uglify/composer'
 const uglify = composer(uglifyEs, console)
 
 // Dependencies for compiling sass
-import sassLint     from 'gulp-sass-lint'
-import sass         from 'gulp-sass'
-import autoprefixer from 'gulp-autoprefixer'
+import sassLint               from 'gulp-sass-lint'
+import sass                   from 'gulp-sass'
+import autoprefixer           from 'gulp-autoprefixer'
 import { stream as critical } from 'critical'
 
 // Dependencies for compressing images
@@ -44,6 +44,7 @@ const sources = {
     '_site/img/**/resized/**/*'
   ],
   views: [
+    '*.{html,md,markdown,svg}',
     '_{layouts,includes,posts,studies,archive}/**/*.{html,md,markdown,svg}',
     'errors/**/*.{html,md,markdown}',
     '_data/**/*.yml',
