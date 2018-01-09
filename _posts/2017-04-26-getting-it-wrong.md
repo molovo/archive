@@ -6,6 +6,9 @@ tags:
 - web
 - a11y
 - screenreaders
+categories:
+- featured
+featured_order: 3
 ---
 
 I had hoped that my first blog post in two years would be about something a little sunnier than this, yet here I find myself offering my readers a heartfelt apology, and a promise to do better.

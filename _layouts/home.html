@@ -5,3 +5,29 @@ layout: base
 <section class="intro">
   {{ content }}
 </section>
+
+<section class="featured-posts">
+  <h6>Featured Posts</h6>
+
+  <ul class="featured-posts__list">
+    {% assign posts = site.categories.featured | sort: 'featured_order' %}
+    {% for post in posts %}
+      <li class="featured-posts__item">
+        <h2 class="featured-posts__title">
+          <a class="featured-posts__link"
+            href="{{ post.url }}"
+            title="{{ post.title }}">
+            {{ post.title }}
+          </a>
+        </h2>
+
+        <div class="featured-posts__meta">
+          <span class="screenreader-text">Published on</span>
+          <date class="featured-posts__date">
+            {{ post.date | date: '%e' }}{{ post.date | date_to_xmlschema | ordinal }} {{ post.date | date: '%B %Y' }}
+          </date>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -7,6 +7,9 @@ tags:
 - work
 - process
 - freelancing
+categories:
+- featured
+featured_order: 2
 ---
 
 If you've visited [my website](https://molovo.co) in the last year or so, you may have found it strange that there are no case studies of my work anywhere on it. Despite being my main portal for explaining who I am and what I do, you can't find a single example of my work.

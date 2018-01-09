@@ -6,6 +6,9 @@ description: Pondering a fond childhood memory
 tags:
 - inspiration
 - opinion
+categories:
+- featured
+featured_order: 1
 ---
 
 <figure class="image image--pull-left">
