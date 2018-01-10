@@ -1,60 +1,57 @@
-$vfYellow: #ffc857
-$vfPink: #d398bb
-$vfPurple: #9f87af
-$vfPlum: #704155
-$vfGreen: #a3c4bc
-$vfWhite: #fff
+$oBlack: #050505
+$oRed: #c4102e
+$oWhite: #fff
 
-.page--vixen-fitness
+.page--origin
   .header
-    background: $vfYellow
+    background: $oRed
 
     &__title
-      border-left-color: transparentize($vfPlum, .9)
+      border-left-color: transparentize($oWhite, .9)
 
     .logo--frame
-      fill: $vfPlum
+      fill: $oWhite
 
     .nav-toggle
       circle
-        fill: $vfPlum
+        fill: $oWhite
 
     &:not(.header--sticky)
       display: none
 
 .study__section
-  &--vixen-fitness
-    background: $vfWhite
-    color: $vfPlum
+  &--origin
+    background: $oWhite
+    color: $oBlack
 
     .study__title
-      color: $vfPink
+      color: $oRed
 
     .study__icons
       +studyIcons
-        fill: $vfPink
+        fill: $oRed
 
     .image--slideshow
       .slideshow__button
         g
-          stroke: $vfPink
+          stroke: $oRed
 
     .study__feature-list
       li
         &::before
-          color: $vfPink
+          color: $oRed
 
     &.study__section--intro
-      background: $vfPlum
+      background: $oBlack
 
       .study__intro
-        background-color: $vfPlum
-        background-image: linear-gradient(to bottom, transparentize($vfPlum, 1) 0%, $vfPlum 75%, $vfPlum 100%), url('/img/studies/vixen-fitness/bg.png')
+        background-color: $oBlack
+        background-image: url('/img/studies/origin/bg.jpg')
         background-position: center
         background-size: cover
 
       .study__title
-        color: $vfYellow
+        color: $oRed
 
       .study__client
         color: $vfWhite
@@ -63,50 +60,50 @@ $vfWhite: #fff
         color: $vfWhite
 
       .study__link
-        background: $vfPink
-        border-color: $vfPink
+        background: $oRed
+        border-color: $oRed
         color: $vfWhite
 
       .study__icons
         +studyIcons
-          fill: $vfYellow
+          fill: $oRed
 
       .image--full-width,
       .image--slideshow
-        background: $vfPlum
+        background: $oBlack
 
         @media (min-width: 42em)
           &::before
-            background: linear-gradient(to bottom, transparentize($vfPlum, 1), $vfPlum 66.66%, $vfPlum)
+            background: linear-gradient(to bottom, transparentize($oBlack, 1), $oBlack 66.66%, $oBlack)
 
           &::after
-            background: linear-gradient(to top, transparentize($vfPlum, 1), $vfPlum 66.66%, $vfPlum)
+            background: linear-gradient(to top, transparentize($oBlack, 1), $oBlack 66.66%, $oBlack)
 
         .slideshow__button
           g
-            stroke: $vfYellow
+            stroke: $oRed
 
       .image__caption
         @media (min-width: 64em)
-          background: $vfPlum
+          background: $oBlack
 
           &::before
-            background: linear-gradient(to bottom, transparentize($vfPlum, 1), $vfPlum 66.66%, $vfPlum)
+            background: linear-gradient(to bottom, transparentize($oBlack, 1), $oBlack 66.66%, $oBlack)
 
           &::after
-            background: linear-gradient(to top, transparentize($vfPlum, 1), $vfPlum 66.66%, $vfPlum)
+            background: linear-gradient(to top, transparentize($oBlack, 1), $oBlack 66.66%, $oBlack)
 
       blockquote
         p
-          color: $vfYellow
+          color: $oRed
 
       .social
         &__link
           path
-            stroke: $vfYellow
+            stroke: $oRed
 
         &__likes
-          color: $vfYellow
+          color: $oRed
 
     &.study__section--website
       background: $vfYellow
@@ -151,21 +148,21 @@ $vfWhite: #fff
         &__likes
           color: $vfPink
 
-.studies__item--vixen-fitness
+.studies__item--origin
   .studies--cta &
-    background: url('/img/studies/vixen-fitness/bg.png') center / cover no-repeat
+    background: url('/img/studies/origin/bg.jpg') center / cover no-repeat
 
     .study__icons
       +studyIcons
-        fill: $vfYellow
+        fill: $oRed
 
     .studies__title,
     .button
-      color: $white
+      color: $oWhite
 
     .button
       &::before
-        background-color: $vfYellow
+        background-color: $oRed
 
 .image__pair
   &--cards
@@ -198,7 +195,7 @@ $vfWhite: #fff
     .study__type-sample-name
       color: $vfYellow
 
-.studies__item--vixen-fitness
+.studies__item--origin
   .studies__image
     path
       fill: $vfYellow

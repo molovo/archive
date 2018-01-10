@@ -6,6 +6,7 @@ order: 0
 description: I helped Vixen Fitness explode onto the Southsea fitness scene
 url: https://vixenfitness.co.uk
 layout: study
+featured: true
 ---
 
 <section class="study__section study__section--{{ page.slug }} study__section--intro"

@@ -1,17 +1,39 @@
 ---
 layout: base
+slug: home
 title: Web Design and Development in Southsea, Hampshire
 description: James Dinsdale is a designer and developer from Southsea, Hampshire, building immersive, interactive experiences on the web. Let's build something together.
 ---
 
-<section class="intro">
+<section class="homepage-section intro">
   <h1 class="intro__heading">Hi, I'm James.<br />I make websites.</h1>
 
-  <p>I'm currently leading the talented development team at <a href="https://superrb.com" target="_blank">Superrb Studio</a>, where I build websites and e-commerce stores for companies in a variety of industries.</p>
+  <p>I'm currently leading the talented development team at <a href="https://superrb.com" target="_blank">Superrb Studio</a>, where I build awesome websites and interactive experiences like these</p>
+
+  <ul class="homepage-section__list">
+    {% assign studies = site.studies | where: "featured", "true" | sort: 'order' | limit: 3 %}
+    {% for study in studies %}
+      <li class="homepage-section__item">
+        <h5 class="homepage-section__title">
+          <a class="homepage-section__link"
+            href="{{ study.url }}"
+            title="{{ study.client }}">
+            {{ study.client }}
+          </a>
+        </h5>
+
+        <p class="homepage-section__description">{{ study.description }}</p>
+      </li>
+    {% endfor %}
+
+    <li class="homepage-section__item">
+      <a href="/studies/" class="button">View more case studies</a>
+    </li>
+  </ul>
 </section>
 
 <section class="homepage-section">
-  <h3 class="homepage-section__heading">I build open source software<br />for fun and profit.</h3>
+  <h3 class="homepage-section__heading">I build open source software<br />for fun and for profit.</h3>
 
   <p>Here are a few projects you might find useful</p>
 
@@ -32,7 +54,7 @@ description: James Dinsdale is a designer and developer from Southsea, Hampshire
     {% endfor %}
 
     <li class="homepage-section__item">
-      <a href="/projects/" class="button">View more projects &rarr;</a>
+      <a href="/projects/" class="button">View more projects</a>
     </li>
   </ul>
 </section>
@@ -59,7 +81,7 @@ description: James Dinsdale is a designer and developer from Southsea, Hampshire
     {% endfor %}
 
     <li class="homepage-section__item">
-      <a href="/writing/" class="button">Read more articles &rarr;</a>
+      <a href="/writing/" class="button">Read more articles</a>
     </li>
   </ul>
 </section>

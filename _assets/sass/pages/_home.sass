@@ -61,14 +61,13 @@
 
   &__link
     color: $red
-    text-decoration-color: transparent
-
-    &:hover
-      text-decoration-color: $red
+    text-decoration: none
 
     &[data-visited="true"]
+      color: $black
+
       &::after
-        background: rgba($black, .25)
+        background: $black
         border-radius: .15em
         color: $white
         content: '✓ Read'
@@ -91,4 +90,6 @@
 
   .button
     align-self: flex-end
+    font-size: 1em
     margin-right: auto
+    margin-bottom: -.5em
