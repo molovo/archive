@@ -2,7 +2,7 @@
 title: The view from above
 layout: post
 date: 2014-06-10 12:00:00
-description: Pondering a fond childhood memory
+description: Pondering a fond childhood memory.
 tags:
 - inspiration
 - opinion

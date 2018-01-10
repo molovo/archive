@@ -5,20 +5,30 @@
   &__heading
     +script
     color: $red
-    font-size: 10.5vw
+    font-size: 9vw
     line-height: 1em
 
   h4
     +fontSecondary
 
-.featured-posts
+.homepage-section
   margin: 0 auto
   max-width: 32em
 
   &__heading
     +script
-    font-size: 7.5vw
-    margin: 1.5em 0 .5em
+    font-size: 2.25em
+    line-height: 1em
+    margin: 1em 0 .5em
+
+    @media (min-width: 24em)
+      font-size: 3em
+
+    @media (min-width: 42em)
+      font-size: 3.75em
+
+    @media (min-width: 80em)
+      font-size: 4.5em
 
   &__list
     display: flex
