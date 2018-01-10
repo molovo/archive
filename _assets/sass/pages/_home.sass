@@ -66,6 +66,19 @@
     &:hover
       text-decoration-color: $red
 
+    &[data-visited="true"]
+      &::after
+        background: rgba($black, .25)
+        border-radius: .15em
+        color: $white
+        content: '✓ Read'
+        font-size: .625em
+        margin-left: .25em
+        padding: 0 .25em
+        position: relative
+        vertical-align: top
+        z-index: 2
+
   &__description
     margin: 0
 

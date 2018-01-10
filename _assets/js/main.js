@@ -12,6 +12,7 @@ import Animator from './animator'
 import ScrollSync from './scroll-sync'
 import Contact from './contact'
 import Turbolinks from 'turbolinks'
+import VisitedLinks from './visited-links';
 
 const start = () => {
   window.github = new Github()
@@ -24,6 +25,7 @@ const start = () => {
   window.contact = new Contact()
   window.menu = new Menu()
   window.title = new Title()
+  window.visitedLinks = new VisitedLinks()
 
   document.documentElement.classList.remove('loading')
 }
