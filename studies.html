@@ -12,7 +12,7 @@ robots: noindex,follow
       <div class="studies__content">
         {% include study/icons.html slug=study.slug client=study.client showTitle=false %}
 
-        <h1 class="studies__title">{{ study.intro }}</h1>
+        <h1 class="studies__title">{{ study.description }}</h1>
 
         <a href="{{ study.url }}"
             class="button button--bordered">

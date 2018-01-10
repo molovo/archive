@@ -3,9 +3,9 @@ title: Brewing up a storm - The making of Haresfoot Craft Beer
 slug: haresfoot
 client: Haresfoot Craft Beer
 order: 1
-intro: I helped Haresfoot restart Berkhamsted's centuries-old brewing tradition
 url: https://haresfoot.com
 layout: study
+description: I helped Haresfoot restart Berkhamsted's centuries-old brewing tradition
 ---
 
 <section class="study__section study__section--{{ page.slug }} study__section--intro">
