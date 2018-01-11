@@ -5,8 +5,18 @@
   &__heading
     +script
     color: $red
-    font-size: 9vw
+    font-size: 3em
     line-height: 1em
+    margin: 0 0 .5em
+
+    @media (min-width: 24em)
+      font-size: 3.75em
+
+    @media (min-width: 42em)
+      font-size: 4.5em
+
+    @media (min-width: 80em)
+      font-size: 5.25em
 
   h4
     +fontSecondary
