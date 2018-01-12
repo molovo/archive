@@ -10,7 +10,7 @@ tags:
 - web
 ---
 
-#### Padding
+### Padding
 
 When you enter a margin value such as:
 
@@ -51,7 +51,7 @@ width: auto;
 aspect-ratio: 1 2;
 ```
 
-#### Exes and Whys?
+### Exes and Whys?
 
 ```css
 margin: Y X;
@@ -65,7 +65,7 @@ transform: scale(X, Y);
 
 Why, dear God, Why???
 
-#### Fixed positioned elements
+### Fixed positioned elements
 
 I set some elements at a certain size.
 
@@ -92,7 +92,7 @@ I set some elements at a certain size.
 
 Boom! `.child` has now doubled in width. That makes sense doesn't it? **No.**
 
-#### Borders
+### Borders
 
 I only ever use solid borders, because anything else is harder to see than a true word in the Daily Mail.
 
@@ -110,7 +110,7 @@ border: 5px blue;
 
 gives me a 5px, solid blue border. Easy peasy.
 
-#### Posititioning
+### Posititioning
 
 ```css
 background-position: top center;
