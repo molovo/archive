@@ -40,7 +40,7 @@ One of the best examples of this is Github. What could be an incredibly tedious 
 
 With Siri, Apple managed to remove some of the stigma attached to feeling like a dick when talking to your phone by making it tell you jokes.
 
-Google’s [brilliant](http://www.youtube.com/watch?v=8aCYZ3gXfy8) [video](http://www.youtube.com/watch?v=sr1Qz63AzK8) [advertising](http://www.youtube.com/watch?v=h64_H6TOz4k) focuses on stories and real-life events that their target market can empathise with, and introduces their product’s user interfaces almost as an additional character in the stroy itself. By personifying their products in this way, users immediately feel an affinity towards them.
+Google’s [brilliant](http://www.youtube.com/watch?v=8aCYZ3gXfy8) [video](http://www.youtube.com/watch?v=sr1Qz63AzK8) [advertising](http://www.youtube.com/watch?v=h64_H6TOz4k) focuses on stories and real-life events that their target market can empathise with, and introduces their product’s user interfaces almost as an additional character in the story itself. By personifying their products in this way, users immediately feel an affinity towards them.
 
 There’s a reason that copywriting, content marketing and conversion rate optimisation have become multi-million-dollar industries. The people who do these things are (for the most part) professionals, and have spent years perfecting their craft.
 
