@@ -11,7 +11,6 @@
     .nav-toggle circle
       fill: $red
 
-
     .logo:hover .logo--frame,
     .nav-toggle:hover circle
       fill: $white
@@ -22,8 +21,12 @@
 
     &__title
       +script
+      flex-basis: 60vw
       font-size: 18vw
+      left: 50%
       order: -1
+      position: relative
+      transform: translateX(-50%)
 
   .contact
     background: $white

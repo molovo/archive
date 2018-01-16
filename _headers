@@ -5,5 +5,9 @@
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
+  {% if site.environment != 'production' %}
+  X-Robots-Tag: noindex, nofollow, nosnippet, noarchive
+  {% endif %}
+
 /*.webp
   Content-Type: image/webp
