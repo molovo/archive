@@ -1,3 +1,7 @@
+---
+permalink: /_headers
+---
+
 /*
   Referrer-Policy: no-referrer-when-downgrade
   Referrer-Policy: strict-origin-when-cross-origin
