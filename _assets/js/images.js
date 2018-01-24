@@ -55,6 +55,11 @@ export default class Images {
     this.observer = new IntersectionObserver(this.onIntersection, this.config)
 
     this.images.forEach((image) => {
+      if (image.dataset.loadInstantly) {
+        this.load(image)
+        return
+      }
+
       this.observer.observe(image)
     })
   }

@@ -211,28 +211,33 @@ function trace () {
 }
 
 gulp.task('compile:images', () => {
-  const images = gulp.src(sources.images)
-    .pipe(changed('_site/img/'))
-    .pipe(imagemin([
-      imagemin.gifsicle({
-        interlaced: true,
-        optimizationLevel: 3
-      }),
-      mozJpeg({
-        progressive: true,
-        quality: 72
-      }),
-      imagemin.optipng({
-        optimizationLevel: 5
-      }),
-      imagemin.svgo({
-        plugins: [
-          {
-            removeViewBox: true
-          }
-        ]
-      })
-    ]))
+  let images = gulp.src(sources.images)
+  if (env === 'dev') {
+    images = images.pipe(changed('_site/img/'))
+  } else {
+    images = images.pipe(
+      imagemin([
+        imagemin.gifsicle({
+          interlaced: true,
+          optimizationLevel: 3
+        }),
+        mozJpeg({
+          progressive: true,
+          quality: 72
+        }),
+        imagemin.optipng({
+          optimizationLevel: 5
+        }),
+        imagemin.svgo({
+          plugins: [
+            {
+              removeViewBox: true
+            }
+          ]
+        })
+      ])
+    )
+  }
 
   const webpImages = images.pipe(clone())
     .pipe(webp({
