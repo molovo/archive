@@ -1,44 +1,44 @@
 // Base gulp dependencies
 import 'isomorphic-fetch'
-import gulp          from 'gulp'
-import source        from 'vinyl-source-stream'
-import buffer        from 'vinyl-buffer'
-import gutil         from 'gulp-util'
-import rename        from 'gulp-rename'
-import livereload    from 'gulp-livereload'
+import gulp from 'gulp'
+import source from 'vinyl-source-stream'
+import buffer from 'vinyl-buffer'
+import gutil from 'gulp-util'
+import rename from 'gulp-rename'
+import livereload from 'gulp-livereload'
 import { spawnSync } from 'child_process'
-import changed       from 'gulp-changed'
-import clone         from 'gulp-clone'
-import runSequence   from 'run-sequence'
-import es            from 'event-stream'
-import through       from 'through2'
-import fs            from 'fs'
-import filter        from 'gulp-filter'
+import changed from 'gulp-changed'
+import clone from 'gulp-clone'
+import runSequence from 'run-sequence'
+import es from 'event-stream'
+import through from 'through2'
+import fs from 'fs'
+import filter from 'gulp-filter'
 
 // Dependencies for compiling coffeescript
 import sourcemaps from 'gulp-sourcemaps'
 import browserify from 'browserify'
-import watchify   from 'watchify'
-import eslint     from 'gulp-eslint'
-import uglifyEs   from 'uglify-es'
-import composer   from 'gulp-uglify/composer'
+import watchify from 'watchify'
+import eslint from 'gulp-eslint'
+import uglifyEs from 'uglify-es'
+import composer from 'gulp-uglify/composer'
 const uglify = composer(uglifyEs, console)
 
 // Dependencies for compiling sass
-import sassLint               from 'gulp-sass-lint'
-import sass                   from 'gulp-sass'
-import autoprefixer           from 'gulp-autoprefixer'
+import sassLint from 'gulp-sass-lint'
+import sass from 'gulp-sass'
+import autoprefixer from 'gulp-autoprefixer'
 import { stream as critical } from 'critical'
 
 // Dependencies for compressing images
-import imagemin  from 'gulp-imagemin'
-import mozJpeg   from 'imagemin-mozjpeg'
-import webp      from 'gulp-webp'
-import potrace   from 'potrace'
-import sharp     from 'sharp'
+import imagemin from 'gulp-imagemin'
+import mozJpeg from 'imagemin-mozjpeg'
+import webp from 'gulp-webp'
+import potrace from 'potrace'
+import sharp from 'sharp'
 
 // Dependencies for compressing HTML
-import htmlmin  from 'gulp-htmlmin'
+import htmlmin from 'gulp-htmlmin'
 
 // Sources for compilation
 const sources = {
@@ -169,6 +169,9 @@ gulp.task('compile:critical', () => {
   return gulp.src('_site/**/*.html')
     .pipe(critical({
       base: '_site/',
+      css: '_site/css/main.css',
+      extract: true,
+      ignore: ['@font-face', /url\(/],
       inline: true,
       minify: true
     }))
@@ -196,7 +199,7 @@ function trace () {
       color: 'lightgray',
       optTolerance: 0.4,
       turdSize: 100,
-      turnPolicy: potrace.Potrace.TURNPOLICY_MAJORITY,
+      turnPolicy: potrace.Potrace.TURNPOLICY_MAJORITY
     }, (err, svg) => {
       if (err) {
         throw err
