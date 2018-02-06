@@ -215,44 +215,37 @@ function trace () {
 
 gulp.task('compile:images', () => {
   let images = gulp.src(sources.images)
-  if (env === 'dev') {
-    images = images.pipe(changed('_site/img/'))
-  } else {
-    images = images.pipe(
-      imagemin([
-        imagemin.gifsicle({
-          interlaced: true,
-          optimizationLevel: 3
-        }),
-        mozJpeg({
-          progressive: true,
-          quality: 72
-        }),
-        imagemin.optipng({
-          optimizationLevel: 5
-        }),
-        imagemin.svgo({
-          plugins: [
-            {
-              removeViewBox: true
-            }
-          ]
-        })
-      ])
-    )
-  }
+    .pipe(changed('_site/img/'))
+    .pipe(imagemin([
+      imagemin.gifsicle({
+        interlaced: true,
+        optimizationLevel: 3
+      }),
+      mozJpeg({
+        progressive: true,
+        quality: 72
+      }),
+      imagemin.optipng({
+        optimizationLevel: 5
+      }),
+      imagemin.svgo({
+        plugins: [
+          {
+            removeViewBox: true
+          }
+        ]
+      })
+    ]))
 
   const webpImages = images.pipe(clone())
     .pipe(webp({
       optimizationLevel: 6
     }))
 
-  // const tracedImages = images.pipe(clone())
-  //   // .pipe(filter('*.{jpg,jpeg,png}'))
-  //   // .pipe(sharp().resize(200))
-  //   .pipe(trace())
+  const tracedImages = images.pipe(clone())
+    .pipe(trace())
 
-  return es.merge(images, webpImages)
+  return es.merge(images, webpImages, tracedImages)
     .pipe(gulp.dest('_site/img/'))
     .pipe(livereload())
 })
