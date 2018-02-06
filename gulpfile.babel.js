@@ -247,12 +247,12 @@ gulp.task('compile:images', () => {
       optimizationLevel: 6
     }))
 
-  const tracedImages = images.pipe(clone())
-    // .pipe(filter('*.{jpg,jpeg,png}'))
-    // .pipe(sharp().resize(200))
-    .pipe(trace())
+  // const tracedImages = images.pipe(clone())
+  //   // .pipe(filter('*.{jpg,jpeg,png}'))
+  //   // .pipe(sharp().resize(200))
+  //   .pipe(trace())
 
-  return es.merge(images, webpImages, tracedImages)
+  return es.merge(images, webpImages)
     .pipe(gulp.dest('_site/img/'))
     .pipe(livereload())
 })
