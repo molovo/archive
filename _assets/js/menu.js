@@ -79,8 +79,8 @@ export default class Menu {
    * Register a listener to toggle the nav
    */
   registerNavToggleListener () {
-    this.toggle.addEventListener('click', this.toggleMenu)
-    this.close.addEventListener('click', this.toggleMenu)
+    this.toggle.onclick = this.toggleMenu
+    this.close.onclick = this.toggleMenu
 
     document.addEventListener('turbolinks:visit', (evt) => {
       this.nav.classList.remove('nav--open')

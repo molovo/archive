@@ -12,7 +12,7 @@ import Animator from './animator'
 import ScrollSync from './scroll-sync'
 import Contact from './contact'
 import Turbolinks from 'turbolinks'
-import VisitedLinks from './visited-links';
+import VisitedLinks from './visited-links'
 
 const start = () => {
   window.github = new Github()
@@ -36,7 +36,5 @@ document.addEventListener('turbolinks:click', () => {
   document.documentElement.classList.add('loading')
 })
 
-document.addEventListener('DOMContentLoaded', () => {
-  Turbolinks.start()
-  start()
-})
+Turbolinks.start()
+start()
