@@ -1,5 +1,6 @@
 pre
   background: #212733
+  box-sizing: border-box
   color: $black
   display: block
   margin: $baseline 0
@@ -7,10 +8,10 @@ pre
   padding: 1.25em 1.5em 1.5em
 
   @media (min-width: 42em)
-    margin: $baseline between(-1.5em, -4.5em, 42em, 80em)
+    margin: $baseline between(($paddingMin * -1), ($paddingMax * -1), 42em, 80em)
 
   @media (min-width: 80em)
-    margin: $baseline #{$baseline * -3}
+    margin: $baseline #{$paddingMax * -1}
 
 code
   font:

@@ -15,14 +15,14 @@ html
 body
   background: $white
   opacity: 1
-  padding: 15em 1.5em 0
+  padding: 15em $paddingMin 0
   transition: body .5s ease-out, opacity .5s ease-out
 
   @media (min-width: 42em)
-    padding: 15em between(1.5em, 4.5em, 42em, 80em) 0
+    padding: 15em between($paddingMin, $paddingMax, 42em, 80em) 0
 
   @media (min-width: 80em)
-    padding: 15em 4.5em 0
+    padding: 15em $paddingMax 0
 
   .loading &
     opacity: 0

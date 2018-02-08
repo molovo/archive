@@ -3,16 +3,16 @@
   color: $white
   display: flex
   justify-content: space-between
-  margin: 0 -1.5em
-  padding: .75em 1.5em
+  margin: 0 #{$paddingMin * -1}
+  padding: .75em $paddingMin
 
   @media (min-width: 42em)
-    margin: 0 between(-1.5em, -4.5em, 42em, 80em)
-    padding: .75em between(1.5em, 4.5em, 42em, 80em)
+    margin: 0 between(($paddingMin * -1), ($paddingMax * -1), 42em, 80em)
+    padding: .75em between($paddingMin, $paddingMax, 42em, 80em)
 
   @media (min-width: 80em)
-    margin: 0 -4.5em
-    padding: .75em 4.5em
+    margin: 0 #{$paddingMax * -1}
+    padding: .75em $paddingMax
 
   .page--study &
     margin: 0
