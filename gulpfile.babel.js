@@ -292,7 +292,12 @@ gulp.task('sitemap:submit', () => {
 })
 
 gulp.task('watch', () => {
-  livereload.listen()
+  livereload.listen({
+    host: 'molovo.localhost',
+    port: 35729,
+    key: fs.readFileSync('/Users/molovo/.valet/Certificates/molovo.localhost.key'),
+    cert: fs.readFileSync('/Users/molovo/.valet/Certificates/molovo.localhost.crt')
+  })
   gulp.watch(sources.images, ['compile:images'])
   gulp.watch(sources.js, ['compile:js'])
   gulp.watch(sources.sass, ['compile:sass'])
