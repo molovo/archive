@@ -66,33 +66,43 @@
 
     <form class="contact__form form" name="contact" netlify netlify-honeypot="its-a-trap">
       <p class="form__description">
-        Just fill out the form below, and I'll get back to you as soon as possible.<br />
-        Alternatively, you can contact me directly via email on <a href="mailto:hi@molovo.co">hi@molovo.co</a>.
+        If you'd like to chat, send an email to <a href="mailto:hi@molovo.co">hi@molovo.co</a>, and I'll get back to you. If that doesn't tickle your fancy, you can get in touch with me on the following social networks
       </p>
 
-      <label for="name" class="form__label">
-        <span class="form__label-text">Name</span>
-        <input class="form__input" type="text" name="name" />
-      </label>
-
-      <label for="email" class="form__label">
-        <span class="form__label-text">Email Address</span>
-        <input class="form__input" type="email" name="email" />
-      </label>
-
-      <label for="message" class="form__label form__label--full-width">
-        <span class="form__label-text">Message</span>
-        <textarea class="form__input" name="message"></textarea>
-      </label>
-
-      <div class="form__group form__group--hidden">
-        <input name="its-a-trap" />
-      </div>
-
-      <div class="form__buttons">
-        <span>* Please, no recruiters.</span>
-        <button>Send</button>
-      </div>
+      <nav class="contact__social">
+        <a href="https://twitter.com/molovo"
+          class="contact__social-link contact__social-link--twitter"
+          title="Follow me on Twitter"
+          target="_blank"
+          rel="noopener">
+          <div class="screenreader-text">@molovo</div>
+          {% include icons/twitter.svg %}
+        </a>
+        <a href="https://github.com/molovo"
+          class="contact__social-link contact__social-link--github"
+          title="Follow me on Github"
+          target="_blank"
+          rel="noopener">
+          <div class="screenreader-text">@molovo</div>
+          {% include icons/github.svg %}
+        </a>
+        <a href="https://dribbble.com/molovo"
+          class="contact__social-link contact__social-link--dribbble"
+          title="Follow me on Dribbble"
+          target="_blank"
+          rel="noopener">
+          <div class="screenreader-text">@molovo</div>
+          {% include icons/dribbble.svg %}
+        </a>
+        <a href="https://refind.com/molovo?invite=4f3ff95358"
+          class="contact__social-link contact__social-link--refind"
+          title="Follow me on Refind"
+          target="_blank"
+          rel="noopener">
+          <div class="screenreader-text">@molovo</div>
+          {% include icons/refind.svg %}
+        </a>
+      </nav>
     </form>
   </div>
 </section>

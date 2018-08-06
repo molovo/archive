@@ -55,9 +55,16 @@
     justify-content: center
     margin-top: $baseline
 
+    .contact__popup &
+      justify-content: flex-start
+      margin-top: 0
+
     &-link
       margin: 0 #{$baseline / 2}
       width: $baseline
+
+      .contact__popup &:first-child
+        margin-left: 0
 
       svg
         height: $baseline
@@ -67,6 +74,9 @@
         fill: $black
         stroke: none
         transition: fill .5s
+
+        .contact__popup &
+          fill: $white
 
       &--twitter
         &:hover
