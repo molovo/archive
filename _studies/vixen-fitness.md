@@ -45,16 +45,18 @@ featured: true
         <div class="slideshow">
           <div class="slideshow__slides">
             <div class="slideshow__slide">
-              {% include icons/studies/vixen-fitness/vixen-horizontal-plum-bg.svg %}
               {% include icons/studies/vixen-fitness/vixen-vertical-plum-bg.svg %}
             </div>
             <div class="slideshow__slide">
-              {% include icons/studies/vixen-fitness/vixen-horizontal-white-bg.svg %}
               {% include icons/studies/vixen-fitness/vixen-vertical-white-bg.svg %}
             </div>
             <div class="slideshow__slide">
-              {% include icons/studies/vixen-fitness/vixen-horizontal-yellow-bg.svg %}
               {% include icons/studies/vixen-fitness/vixen-vertical-yellow-bg.svg %}
+            </div>
+            <div class="slideshow__slide">
+              {% include icons/studies/vixen-fitness/vixen-horizontal-plum-bg.svg %}
+              {% include icons/studies/vixen-fitness/vixen-horizontal-white-bg.svg %}
+              {% include icons/studies/vixen-fitness/vixen-horizontal-yellow-bg.svg %}
             </div>
           </div>
           <span class="slideshow__button slideshow__button--prev">
@@ -66,7 +68,7 @@ featured: true
         </div>
 
         <figcaption class="image__caption">
-          <strong><span class="slideshow__current">1</span> of 3</strong> &mdash;
+          <strong><span class="slideshow__current">1</span> of 4</strong> &mdash;
           The different variations of the Vixen Fitness logo
         </figcaption>
       </figure>
