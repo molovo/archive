@@ -6,10 +6,37 @@ $hfRed: #b22e37
 $hfWhite: #fff
 $hfTransparentOrange: rgba($hfOrange3, 0)
 $hfTransparentOrange2: rgba($hfOrange3, .3)
+$hfTransparentWhite: rgba($hfWhite, 0)
+$hfTransparentWhite2: rgba($hfWhite, .3)
+$hfTransparentYellow: rgba($hfYellow, 0)
+$hfTransparentYellow2: rgba($hfYellow, .3)
+
+.page--haresfoot
+  .header
+    background: $hfRed
+
+    &__title
+      border-left-color: transparentize($hfWhite, .7)
+
+    .logo--frame
+      fill: $hfWhite
+
+    .nav-toggle
+      circle
+        fill: $hfWhite
 
 .study__section
   &--haresfoot
-    background: $hfWhite
+    background-color: $hfWhite
+
+    .study__intro
+      background-color: $hfWhite
+      background-image: linear-gradient(to bottom, $hfTransparentWhite 0%, $hfTransparentWhite 75%, $hfWhite 100%), url('/img/studies/haresfoot/mobile-bg.png')
+      background-position: center
+      background-size: cover
+
+      @media (min-width: 42em)
+        background-image: linear-gradient(to bottom, $hfTransparentWhite 0%, $hfTransparentWhite2 75%, $hfWhite 100%), url('/img/studies/haresfoot/bg.png')
 
     .study__title
       color: $hfOrange2
@@ -72,8 +99,17 @@ $hfTransparentOrange2: rgba($hfOrange3, .3)
           color: $white
 
     &.study__section--website
-      background: $hfYellow
-      color: $black
+      background-color: $hfYellow
+
+      .study__intro
+        background-color: $hfYellow
+        background-image: linear-gradient(to bottom, $hfTransparentYellow 0%, $hfTransparentYellow 75%, $hfYellow 100%), url('/img/studies/haresfoot/mobile-bg.png')
+        background-position: center
+        background-size: cover
+        color: $black
+
+        @media (min-width: 42em)
+          background-image: linear-gradient(to bottom, $hfTransparentYellow 0%, $hfTransparentYellow2 75%, $hfYellow 100%), url('/img/studies/haresfoot/bg.png')
 
       .study__title
         color: $hfRed

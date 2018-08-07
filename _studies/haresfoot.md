@@ -9,7 +9,8 @@ description: I helped Haresfoot restart Berkhamsted's centuries-old brewing trad
 featured: true
 ---
 
-<section class="study__section study__section--{{ page.slug }} study__section--intro">
+<section class="study__section study__section--{{ page.slug }} study__section--intro"
+         data-title="The making of Haresfoot Craft Beer - Part 1: Introduction">
   {% include study/intro.html title='Brewing up<br />a storm' slug=page.slug client=page.client %}
 
   <div class="study__content">
@@ -93,7 +94,8 @@ featured: true
   </div>
 </section>
 
-<section class="study__section study__section--{{ page.slug }} study__section--typography animate-on-scroll">
+<section class="study__section study__section--{{ page.slug }} study__section--typography animate-on-scroll"
+         data-title="The making of Haresfoot Craft Beer - Part 2: Branding & Typography">
   {% include study/intro.html title='Big, bold<br />and beautiful' slug=page.slug client=page.client %}
 
   <div class="study__content">
@@ -109,7 +111,8 @@ featured: true
   </div>
 </section>
 
-<section class="study__section study__section--{{ page.slug }} study__section--website animate-on-scroll">
+<section class="study__section study__section--{{ page.slug }} study__section--website animate-on-scroll"
+         data-title="The making of Haresfoot Craft Beer - Part 3: Website">
   {% include study/intro.html title='Taking it<br />to the web' slug=page.slug client=page.client %}
 
   <div class="study__content">
