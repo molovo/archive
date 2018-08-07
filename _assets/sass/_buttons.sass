@@ -29,39 +29,75 @@
 //     &::after
 //       animation: animateButtonUnderline .5s linear forwards
 
+// .button
+//   display: inline-flex
+//   font-size: .875em
+//   font-weight: $fontWeightBold
+//   position: relative
+//   text-decoration: none
+
+//   &::before
+//     background: $red
+//     bottom: 0
+//     content: ''
+//     left: -.375em
+//     position: absolute
+//     right: calc(100% + .375em)
+//     top: -.05em
+//     transition: right .375s
+//     z-index: -1
+
+//   &::after
+//     content: '→'
+//     line-height: 1.625em
+//     margin-left: .75ch
+//     opacity: 1
+//     position: relative
+//     transform: translateX(0)
+//     transition: opacity .375s, transform .375s
+
+//   &:hover
+//     color: $white
+
+//     &::before
+//       right: -.75em
+
+//     &::after
+//       opacity: 1
+//       transform: translateX(.375em)
+
 .button
+  align-items: center
+  appearance: none
+  border: 1px solid rgba($black, .1)
+  color: $black
   display: inline-flex
+  font: inherit
   font-size: .875em
-  font-weight: $fontWeightBold
+  justify-content: center
+  margin: 0
+  overflow: hidden
+  padding: ($baseline / 4) $baseline
   position: relative
   text-decoration: none
+  transition: color .5s ease, border-color .5s ease, text-indent .5s ease
+  white-space: nowrap
 
   &::before
-    background: $red
-    bottom: 0
-    content: ''
-    left: -.375em
-    position: absolute
-    right: calc(100% + .375em)
-    top: -.05em
-    transition: right .375s
-    z-index: -1
-
-  &::after
+    background: transparent
+    color: currentColor
     content: '→'
-    line-height: 1.625em
-    margin-left: .75ch
-    opacity: 1
-    position: relative
-    transform: translateX(0)
-    transition: opacity .375s, transform .375s
+    left: 50%
+    position: absolute
+    text-indent: 0
+    top: 50%
+    transform: translate(-32em, -50%)
+    transition: transform .5s ease
 
   &:hover
-    color: $white
+    border-color: $black
+    color: $red
+    text-indent: 200%
 
     &::before
-      right: -.75em
-
-    &::after
-      opacity: 1
-      transform: translateX(.375em)
+      transform: translate(-50%, -50%)

@@ -170,11 +170,15 @@ $vfWhite: #fff
 
     .studies__title,
     .button
+      border-color: rgba($white, .3)
       color: $white
 
-    .button
+      &:hover
+        border-color: $white
+        color: $white
+
       &::before
-        background-color: $vfYellow
+        color: $vfYellow
 
 .image__pair
   &--cards
