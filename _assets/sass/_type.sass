@@ -32,11 +32,11 @@ body
   @media (min-width: 80em)
     font-size: 1.3125em
 
-h1, h2, h3, h4, h5, h6
+%h1, %h2, %h3, %h4, %h5, %h6
   font-weight: $fontWeightBold
   letter-spacing: -.0125em
 
-h1, h2
+%h1, %h2
   +fontSecondary
   font-size: 2.25em
   font-weight: $fontWeightBold
@@ -44,32 +44,50 @@ h1, h2
   line-height: #{(1.35 / 1.5) * $baseline}
   margin-bottom: #{(.6666666666666667 / 1.5) * $baseline}
 
-h1
+%h1
   line-height: #{(1 / 1.5) * $baseline}
   margin-bottom: #{(.5 / 1.5) * $baseline}
 
   @media (min-width: 24em)
     font-size: 3em
 
-h3
+h1
+  @extend %h1
+
+h2
+  @extend %h2
+
+%h3
   font-size: 1.5em
   line-height: #{(1 / 1.5) * $baseline}
   margin-bottom: #{(1 / 1.5) * $baseline}
 
-h4
+h3
+  @extend %h3
+
+%h4
   font-size: 1.3125em
   line-height: #{(1.142857142857143 / 1.5) * $baseline}
   margin-bottom: #{(1.142857142857143 / 1.5) * $baseline}
 
-h5
+h4
+  @extend %h4
+
+%h5
   font-size: 1.125em
   line-height: #{(1.35 / 1.5) * $baseline}
   margin-bottom: #{(1.333333333333333 / 1.5) * $baseline}
 
-h6
+h5
+  @extend %h5
+
+%h6
   font-size: 1em
   line-height: $baseline
   margin-bottom: $baseline
+
+h6
+  @extend %h6
 
 p
   &.lead

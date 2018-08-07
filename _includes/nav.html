@@ -48,9 +48,7 @@
       {% for study in studies %}
         <li class="nav__study-item nav__study-item--{{ study.slug }}">
           {% include study/icons.html slug=study.slug client=study.client showTitle=false link=false %}
-          <a href="{{ study.url }}" class="nav__study-link">
-            <h3 class="nav__study-title">{{ study.client }}</h3>
-          </a>
+          <a href="{{ study.url }}" class="nav__study-link">{{ study.client }}</a>
         </li>
       {% endfor %}
     </ul>

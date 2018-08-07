@@ -166,12 +166,15 @@
   &__study
     &-item
       .study__icons
-        margin: 0 0 ($baseline / 2)
+        font-size: .875em
+        margin: 0
 
         @media (min-width: 42em)
           text-align: left
 
     &-link
+      @extend %h2
+      display: block
       color: $white
       text-decoration: none
 
