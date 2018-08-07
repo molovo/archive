@@ -1,3 +1,4 @@
+import LiveNodeList from 'live-node-list'
 import { bind } from 'decko'
 
 /**
@@ -11,7 +12,7 @@ export default class Likes {
    *
    * @type {HTMLElementList}
    */
-  links = document.querySelectorAll('.social__link--like')
+  links = new LiveNodeList('.social__link--like')
 
   /**
    * Default parameters for XHR requests
@@ -31,19 +32,21 @@ export default class Likes {
    * @return {Likes}
    */
   constructor () {
-    this.links.forEach((link) => {
-      // If a like has already been recorded, update the icon
-      if (this.isLiked(link)) {
-        link.classList.add('social__link--liked')
-      }
+    this.links.on('update', (newItems, oldItems) => {
+      newItems.forEach((link) => {
+        // If a like has already been recorded, update the icon
+        if (this.isLiked(link)) {
+          link.classList.add('social__link--liked')
+        }
 
-      // Get the number of likes for this URL
-      this.getCount(link)
-        .then(this.updateCount.bind(this, link))
-
-      // Add an event listener to handle likes
-      link.addEventListener('click', this.handleLikeAction)
+        // Get the number of likes for this URL
+        this.getCount(link)
+          .then(this.updateCount.bind(this, link))
+      })
     })
+
+    // Add an event listener to handle likes
+    this.links.addEventListener('click', this.handleLikeAction)
   }
 
   /**

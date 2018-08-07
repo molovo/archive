@@ -1,3 +1,4 @@
+import LiveNodeList from 'live-node-list'
 import { bind } from 'decko'
 
 /**
@@ -6,8 +7,8 @@ import { bind } from 'decko'
  * @type {Projects}
  */
 export default class Projects {
-  filterLinks = document.querySelectorAll('.projects__filter a')
-  filterItems = document.querySelectorAll('.projects__project a')
+  filterLinks = new LiveNodeList('.projects__filter a')
+  filterItems = new LiveNodeList('.projects__project a')
 
   /**
    * Start your engines!
@@ -22,13 +23,7 @@ export default class Projects {
    * Register listeners on filtering links which handle click events
    */
   registerFilteringListeners () {
-    if (this.filterLinks.length === 0) {
-      return
-    }
-
-    this.filterLinks.forEach((link) => {
-      link.addEventListener('click', this.filterResults)
-    })
+    this.filterLinks.addEventListener('click', this.filterResults)
   }
 
   /**

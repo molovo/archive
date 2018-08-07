@@ -1,10 +1,12 @@
+import LiveNodeList from 'live-node-list'
+
 export default class ScrollSync {
   /**
    * A list of scroll sync targets
    *
    * @type {NodeList}
    */
-  targets = document.querySelectorAll('.scroll-sync')
+  targets = new LiveNodeList('.scroll-sync')
 
   /**
    * Start your engines!

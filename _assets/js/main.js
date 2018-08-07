@@ -13,28 +13,52 @@ import ScrollSync from './scroll-sync'
 import Contact from './contact'
 import Turbolinks from 'turbolinks'
 import VisitedLinks from './visited-links'
+import { bind } from 'decko'
 
-const start = () => {
-  window.github = new Github()
-  window.projects = new Projects()
-  window.search = new Search()
-  window.likes = new Likes()
-  window.images = new Images()
-  window.scrollSync = new ScrollSync()
-  window.animator = new Animator()
-  window.contact = new Contact()
-  window.menu = new Menu()
-  window.title = new Title()
-  window.visitedLinks = new VisitedLinks()
+class App {
+  /**
+   * @type {object}
+   */
+  components = {}
 
-  document.documentElement.classList.remove('loading')
+  constructor () {
+    this.registerComponents()
+    this.registerListeners()
+    this.handleLoad()
+  }
+
+  @bind
+  registerComponents () {
+    this.components.images = new Images()
+    this.components.animator = new Animator()
+    this.components.menu = new Menu()
+    this.components.contact = new Contact()
+    this.components.title = new Title()
+    this.components.scrollSync = new ScrollSync()
+    this.components.likes = new Likes()
+    this.components.visitedLinks = new VisitedLinks()
+    this.components.projects = new Projects()
+  }
+
+  @bind
+  registerListeners () {
+    document.addEventListener('turbolinks:visit', this.handleVisit)
+    document.addEventListener('turbolinks:load', this.handleLoad)
+  }
+
+  @bind
+  handleVisit (e) {
+    document.documentElement.classList.add('loading')
+  }
+
+  @bind
+  handleLoad (e) {
+    window.github = new Github()
+    window.search = new Search()
+
+    document.documentElement.classList.remove('loading')
+  }
 }
 
-document.addEventListener('turbolinks:load', start)
-
-document.addEventListener('turbolinks:click', () => {
-  document.documentElement.classList.add('loading')
-})
-
 Turbolinks.start()
-start()
+window.app = new App()

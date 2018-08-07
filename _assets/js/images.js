@@ -1,5 +1,6 @@
 import { bind } from 'decko'
 import MagicRoundabout from 'magic-roundabout'
+import LiveNodeList from 'live-node-list'
 
 /**
  * This class deals with lazy loading of images
@@ -12,7 +13,7 @@ export default class Images {
    *
    * @type {NodeList}
    */
-  images = document.querySelectorAll('img[data-src], picture source[data-srcset]')
+  images = new LiveNodeList('img[data-src], picture source[data-srcset]')
 
   /**
    * The IntersectionObserver config
@@ -62,6 +63,19 @@ export default class Images {
 
       this.observer.observe(image)
     })
+    this.images.on('update', (newItems, oldItems) => {
+      oldItems.forEach(image => this.observer.unobserve(image))
+      newItems.forEach(image => {
+        if (image.dataset.loadInstantly) {
+          this.load(image)
+          return
+        }
+
+        this.observer.observe(image)
+      })
+
+      this.setupSlideshows()
+    })
   }
 
   /**
@@ -93,20 +107,24 @@ export default class Images {
       })
     }
 
-    if (image.dataset.type) {
+    if ('type' in image.dataset) {
       image.type = image.dataset.type
     }
 
-    if (image.dataset.srcset) {
+    if ('srcset' in image && 'srcset' in image.dataset) {
       image.srcset = image.dataset.srcset
-    } else {
+    } else if ('src' in image.dataset) {
       image.src = image.dataset.src
     }
   }
 
   setupSlideshows () {
     document.querySelectorAll('.slideshow').forEach(slideshow => {
-      this.slideshows.push(new MagicRoundabout(slideshow, {
+      if ('magicRoundabout' in slideshow && slideshow.magicRoundabout instanceof MagicRoundabout) {
+        return
+      }
+
+      slideshow.magicRoundabout = new MagicRoundabout(slideshow, {
         onChange: (slideshow) => {
           const figure = slideshow.container.parentNode
           const indicator = figure.querySelector('.slideshow__current')
@@ -115,7 +133,9 @@ export default class Images {
             indicator.innerHTML = slideshow.current
           }
         }
-      }))
+      })
+
+      this.slideshows.push(slideshow.magicRoundabout)
     })
   }
 }

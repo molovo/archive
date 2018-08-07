@@ -1,7 +1,8 @@
+import LiveNodeList from 'live-node-list'
 import { bind } from 'decko'
 
 export default class Animator {
-  elements = document.querySelectorAll('.animate-on-scroll')
+  elements = new LiveNodeList('.animate-on-scroll')
 
   opts = {
     rootMargin: '150px 0px',
@@ -10,8 +11,9 @@ export default class Animator {
 
   constructor () {
     this.observer = new IntersectionObserver(this.onIntersection, this.opts)
-    this.elements.forEach(el => {
-      this.observer.observe(el)
+    this.elements.on('update', (newItems, oldItems) => {
+      oldItems.forEach(item => this.observer.unobserve(item))
+      newItems.forEach(item => this.observer.observe(item))
     })
   }
 

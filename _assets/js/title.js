@@ -1,3 +1,4 @@
+import LiveNodeList from 'live-node-list'
 import { bind } from 'decko'
 
 export default class Title {
@@ -27,7 +28,7 @@ export default class Title {
    *
    * @type {NodeList}
    */
-  titleElements = document.querySelectorAll('[data-title]')
+  titleElements = new LiveNodeList('[data-title]')
 
   /**
    * The current title in the header
@@ -80,17 +81,15 @@ export default class Title {
     let set = false
 
     // Loop through each of the elements with titles
-    for (var i = 0; i < this.titleElements.length; i++) {
-      const el = this.titleElements[i]
+    this.titleElements.forEach(el => {
       if (this.isInViewport(el)) {
         const title = el.dataset.title
         this.current = title
         this.setPageTitle(title)
         this.headerTitle.innerHTML = title
         set = true
-        break
       }
-    }
+    })
 
     if (!set) {
       this.current = this.original

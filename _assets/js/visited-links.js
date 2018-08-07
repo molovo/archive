@@ -1,4 +1,5 @@
-import { bind } from "decko";
+import LiveNodeList from 'live-node-list'
+import { bind } from 'decko'
 
 export default class VisitedLinks {
   /**
@@ -6,24 +7,22 @@ export default class VisitedLinks {
    *
    * @type {NodeList}
    */
-  links = document.querySelectorAll('.homepage-section__link')
+  links = new LiveNodeList('.homepage-section__link')
 
   /**
    *
    */
   constructor () {
-    if (this.links.length === 0) {
-      return
-    }
-
-    this.links.forEach(link => {
-      // Don't include external links
-      if (localStorage.getItem(`visited-${link.href}`)) {
-        link.dataset.visited = true
-      }
-
-      link.addEventListener('click', this.markVisited)
+    this.links.on('update', (newItems, oldItems) => {
+      newItems.forEach(link => {
+        // Don't include external links
+        if (localStorage.getItem(`visited-${link.href}`)) {
+          link.dataset.visited = true
+        }
+      })
     })
+
+    this.links.addEventListener('click', this.markVisited)
   }
 
   /**
