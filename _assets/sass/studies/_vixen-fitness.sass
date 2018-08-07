@@ -36,6 +36,16 @@ $vfWhite: #fff
         g
           stroke: $vfPink
 
+    .image--branding
+      .slideshow__slide
+        box-shadow: none
+
+        svg
+          box-shadow: $shadow
+
+          &:first-of-type
+            margin: 0 0 $baseline
+
     .study__feature-list
       li
         &::before
@@ -131,6 +141,8 @@ $vfWhite: #fff
             stroke: $vfPink
 
       .image__caption
+        color: $vfPlum
+
         @media (min-width: 64em)
           background: $vfYellow
 

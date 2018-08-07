@@ -41,11 +41,34 @@ featured: true
     <div class="post__content">
       <p>For the Vixen Fitness logo, I used a simple icon of a vixen, with a long, flowing curve to symbolise its tail. Used with a bold, all-caps logotype, it really nailed the balance of strength and femininity that we were looking for.</p>
 
-      <figure class="image image--full-width">
-        {% include icons/studies/vixen-fitness/vixen-vertical-plum-bg.svg %}
-        {% include icons/studies/vixen-fitness/vixen-vertical-white-bg.svg %}
-        {% include icons/studies/vixen-fitness/vixen-vertical-yellow-bg.svg %}
-        <figcaption class="image__caption">The different variations of the Vixen Fitness logo</figcaption>
+      <figure class="image image--slideshow image--branding">
+        <div class="slideshow">
+          <div class="slideshow__slides">
+            <div class="slideshow__slide">
+              {% include icons/studies/vixen-fitness/vixen-horizontal-plum-bg.svg %}
+              {% include icons/studies/vixen-fitness/vixen-vertical-plum-bg.svg %}
+            </div>
+            <div class="slideshow__slide">
+              {% include icons/studies/vixen-fitness/vixen-horizontal-white-bg.svg %}
+              {% include icons/studies/vixen-fitness/vixen-vertical-white-bg.svg %}
+            </div>
+            <div class="slideshow__slide">
+              {% include icons/studies/vixen-fitness/vixen-horizontal-yellow-bg.svg %}
+              {% include icons/studies/vixen-fitness/vixen-vertical-yellow-bg.svg %}
+            </div>
+          </div>
+          <span class="slideshow__button slideshow__button--prev">
+            {% include icons/chevrons-left.svg %}
+          </span>
+          <span class="slideshow__button slideshow__button--next">
+            {% include icons/chevrons-right.svg %}
+          </span>
+        </div>
+
+        <figcaption class="image__caption">
+          <strong><span class="slideshow__current">1</span> of 3</strong> &mdash;
+          The different variations of the Vixen Fitness logo
+        </figcaption>
       </figure>
 
       <p>The strong, unapologetic boldness of Montserrat was so effective as a logotype that I decided to use it as the primary font for the website and Gemma's marketing materials. Using multiple weights meant I could strike a nice balance between huge, bold headings and a cleaner, lighter weight for more readable body copy.</p>
