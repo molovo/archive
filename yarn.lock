@@ -5131,6 +5131,12 @@ liftoff@^2.1.0:
     rechoir "^0.6.2"
     resolve "^1.1.7"
 
+live-node-list@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/live-node-list/-/live-node-list-1.0.1.tgz#2209b57c25bfc1d3fa2fbb2898ca8cded0e68254"
+  dependencies:
+    decko "^1.2.0"
+
 livereload-js@^2.2.0:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/livereload-js/-/livereload-js-2.2.2.tgz#6c87257e648ab475bc24ea257457edcc1f8d0bc2"
@@ -5568,9 +5574,9 @@ lru-queue@0.1:
   dependencies:
     es5-ext "~0.10.2"
 
-magic-roundabout@^1.0.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/magic-roundabout/-/magic-roundabout-1.1.1.tgz#5a8de075209fa65ad22bf9f89b8fb685c982b8fc"
+magic-roundabout@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/magic-roundabout/-/magic-roundabout-1.2.0.tgz#fda56584c10346bd505f1a6f4c22dc372a3e51f2"
   dependencies:
     decko "^1.2.0"
 
