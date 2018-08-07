@@ -1,7 +1,11 @@
 <div class="study__icons">
-  <a href="/" class="home-icon" aria-label="Molovo">
+  {% if include.link %}
+    <a href="/" class="home-icon" aria-label="Molovo">
+  {% endif %}
     {% include icons/logo.svg %}
-  </a>
+  {% if include.link %}
+    </a>
+  {% endif %}
 
   {% include icons/plus.svg %}
 
