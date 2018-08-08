@@ -28,9 +28,7 @@ description: James Dinsdale is a designer and developer from Southsea, Hampshire
     {% endfor %}
 
     <li class="homepage-section__item">
-      <a href="/studies/" class="button">
-        <span class="button__text">View more case studies</span>
-      </a>
+      {% include button.html url='/studies/' label='Read more case studies' %}
     </li>
   </ul>
   {% endif %}
@@ -58,9 +56,7 @@ description: James Dinsdale is a designer and developer from Southsea, Hampshire
     {% endfor %}
 
     <li class="homepage-section__item">
-      <a href="/projects/" class="button">
-        <span class="button__text">View more projects</span>
-      </a>
+      {% include button.html url='/projects/' label='View more projects' %}
     </li>
   </ul>
 </section>
@@ -87,9 +83,7 @@ description: James Dinsdale is a designer and developer from Southsea, Hampshire
     {% endfor %}
 
     <li class="homepage-section__item">
-      <a href="/writing/" class="button">
-        <span class="button__text">Read more articles</span>
-      </a>
+      {% include button.html url='/writing/' label='Read more articles' %}
     </li>
   </ul>
 </section>

@@ -1,44 +1,72 @@
+// .button
+//   align-items: center
+//   appearance: none
+//   border: 1px solid rgba($black, .1)
+//   color: $black
+//   display: flex
+//   font: inherit
+//   font-size: .875em
+//   justify-content: center
+//   margin: 0
+//   overflow: hidden
+//   padding: ($baseline / 4) $baseline
+//   position: relative
+//   text-decoration: none
+//   transition: color .5s ease, border-color .5s ease, text-indent .5s ease
+//   white-space: nowrap
+
+//   @media (min-width: 32em)
+//     display: inline-flex
+
+//   &::before
+//     background: transparent
+//     color: currentColor
+//     content: '→'
+//     left: 50%
+//     position: absolute
+//     text-indent: 0
+//     top: 50%
+//     transform: translate(-32em, -50%)
+//     transition: transform .5s ease-out
+
+//   &__text
+//     display: inline-block
+//     transition: transform .5s ease-out
+
+//   &:hover
+//     border-color: $black
+//     color: $red
+
+//     &::before
+//       transform: translate(-50%, -50%)
+
+//     .button__text
+//       transform: translateX(32em)
+
 .button
-  align-items: center
   appearance: none
-  border: 1px solid rgba($black, .1)
-  color: $black
-  display: flex
-  font: inherit
-  font-size: .875em
-  justify-content: center
-  margin: 0
+  display: inline-block
+  margin-bottom: -1.125em
   overflow: hidden
-  padding: ($baseline / 4) $baseline
+  padding-bottom: ($baseline / 2)
   position: relative
   text-decoration: none
-  transition: color .5s ease, border-color .5s ease, text-indent .5s ease
-  white-space: nowrap
 
-  @media (min-width: 32em)
-    display: inline-flex
-
-  &::before
-    background: transparent
-    color: currentColor
-    content: '→'
+  svg
+    bottom: -10px
     left: 50%
     position: absolute
-    text-indent: 0
-    top: 50%
-    transform: translate(-32em, -50%)
-    transition: transform .5s ease-out
+    transform: translateX(-50%)
+    width: 1000px
 
-  &__text
-    display: inline-block
-    transition: transform .5s ease-out
+  path
+    fill: none
+    stroke: $red
+    stroke-dasharray: 200 450
+    stroke-dashoffset: 140
+    stroke-width: 2
+    transition: stroke-dashoffset 1s ease-in-out
 
   &:hover
-    border-color: $black
-    color: $red
-
-    &::before
-      transform: translate(-50%, -50%)
-
-    .button__text
-      transform: translateX(32em)
+    path
+      stroke-dashoffset: 410

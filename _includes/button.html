@@ -1,0 +1,10 @@
+<a href="{{ include.url }}"
+   class="button"
+   title="{{ include.label }}"
+   {% if include.newWindow == true %}
+     target="_blank"
+     rel="noopener"
+   {% endif %}>
+  <span class="button__text">{{ include.label }}</span>
+  {% include icons/underline.svg %}
+</a>

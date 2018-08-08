@@ -14,10 +14,7 @@ robots: noindex,follow
 
         <h1 class="studies__title">{{ study.description }}</h1>
 
-        <a href="{{ study.url }}"
-            class="button button--bordered">
-          <span class="button__text">Read the case study</span>
-        </a>
+        {% include button.html url=study.url label='Read the case study' %}
       </div>
 
       <div class="studies__image">

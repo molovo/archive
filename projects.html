@@ -10,12 +10,7 @@ layout: page
       <h1>Open source</h1>
       <p>A selection of my best open source<br />and public domain work.</p>
       <p>
-        <a href="//github.com/molovo"
-           rel="noopener"
-           target="_blank"
-           class="button">
-          <span class="button__text">View Github profile</span>
-        </a>
+        {% include button.html url='//github.com/molovo' label='View Github profile' newWindow=true %}
       </p>
     </div>
 
@@ -30,9 +25,9 @@ layout: page
           <div class="project-highlights__content">
             <h3>ZUnit</h3>
             <p>A unit testing framework for ZSH.</p>
-            <p><a href="//zunit.xyz" class="button">
-              <span class="button__text">Visit site</span>
-            </a></p>
+            <p>
+              {% include button.html url='//zunit.xyz' label='Visit site' newWindow=true %}
+            </p>
           </div>
         </li>
         <li class="project-highlights__item animate-on-scroll">
@@ -44,9 +39,9 @@ layout: page
           <div class="project-highlights__content">
             <h3>Zulu</h3>
             <p>An environment and package manager for ZSH, with support for  managing themes, plugins, aliases, functions, environment variables and paths, as well as syncing between multiple computers out of the box.</p>
-            <p><a href="//zulu.molovo.co" class="button">
-              <span class="button__text">Visit site</span>
-            </a></p>
+            <p>
+              {% include button.html url='//zulu.molovo.co' label='Visit site' newWindow=true %}
+            </p>
           </div>
         </li>
         <li class="project-highlights__item animate-on-scroll">
@@ -58,9 +53,9 @@ layout: page
           <div class="project-highlights__content">
             <h3>Consumer</h3>
             <p>An ORM-like REST API consumer for JavaScript projects, linking API endpoints to models.</p>
-            <p><a href="//github.com/molovo/consumer" class="button">
-              <span class="button__text">View repository</span>
-            </a></p>
+            <p>
+              {% include button.html url='//github.com/molovo/consumer' label='View repository' newWindow=true %}
+            </p>
           </div>
         </li>
         <li class="project-highlights__item animate-on-scroll">
@@ -72,9 +67,9 @@ layout: page
           <div class="project-highlights__content">
             <h3>Async</h3>
             <p>A simple PHP library for creating synchronous and asynchronous forked processes, and handling inter-process communication via sockets.</p>
-            <p><a href="//github.com/superrbstudio/async" class="button">
-              <span class="button__text">View repository</span>
-            </a></p>
+            <p>
+              {% include button.html url='//github.com/superrbstudio/async' label='View repository' newWindow=true %}
+            </p>
           </div>
         </li>
         <li class="project-highlights__item animate-on-scroll">
@@ -86,9 +81,9 @@ layout: page
           <div class="project-highlights__content">
             <h3>Tipz</h3>
             <p>A handy ZSH plugin which suggests aliases you have defined to help you remember them.</p>
-            <p><a href="//github.com/molovo/consumer" class="button">
-              <span class="button__text">View repository</span>
-            </a></p>
+            <p>
+              {% include button.html url='//github.com/molovo/tipz' label='View repository' newWindow=true %}
+            </p>
           </div>
         </li>
         <li class="project-highlights__item animate-on-scroll">
@@ -100,9 +95,9 @@ layout: page
           <div class="project-highlights__content">
             <h3>zvm</h3>
             <p>A version manager for ZSH.</p>
-            <p><a href="//github.com/molovo/zvm" class="button">
-              <span class="button__text">View repository</span>
-            </a></p>
+            <p>
+              {% include button.html url='//github.com/molovo/zvm' label='View repository' newWindow=true %}
+            </p>
           </div>
         </li>
         <li class="project-highlights__item animate-on-scroll">
@@ -114,9 +109,9 @@ layout: page
           <div class="project-highlights__content">
             <h3>Phillip</h3>
             <p>A simple unit testing framework with an API designed for readability. For smaller PHP projects.</p>
-            <p><a href="//philliphq.github.io" class="button">
-              <span class="button__text">Visit site</span>
-            </a></p>
+            <p>
+              {% include button.html url='//philliphq.github.io' label='Visit site' newWindow=true %}
+            </p>
           </div>
         </li>
       </ul>
