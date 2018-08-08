@@ -71,7 +71,7 @@
   appearance: none
   border: 1px solid rgba($black, .1)
   color: $black
-  display: inline-flex
+  display: flex
   font: inherit
   font-size: .875em
   justify-content: center
@@ -83,6 +83,9 @@
   transition: color .5s ease, border-color .5s ease, text-indent .5s ease
   white-space: nowrap
 
+  @media (min-width: 32em)
+    display: inline-flex
+
   &::before
     background: transparent
     color: currentColor
@@ -92,12 +95,18 @@
     text-indent: 0
     top: 50%
     transform: translate(-32em, -50%)
-    transition: transform .5s ease
+    transition: transform .5s ease-out
+
+  &__text
+    display: inline-block
+    transition: transform .5s ease-out
 
   &:hover
     border-color: $black
     color: $red
-    text-indent: 200%
 
     &::before
       transform: translate(-50%, -50%)
+
+    .button__text
+      transform: translateX(32em)
