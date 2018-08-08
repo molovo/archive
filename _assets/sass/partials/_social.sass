@@ -2,9 +2,12 @@
   display: inline-flex
   flex: 0 0 100%
   font-size: .75em
-  justify-content: flex-start
+  justify-content: center
   margin: $baseline auto 0
   max-width: #{(1/.75) * 32em}
+
+  @media (min-width: 32em)
+    justify-content: flex-start
 
   @media (min-width: 64em)
     flex: 0 0 auto

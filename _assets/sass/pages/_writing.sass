@@ -27,12 +27,16 @@ main > .post
 
   &__header
     flex: 0 0 100%
+    text-align: center
 
     &-wrapper
       display: flex
       flex-wrap: wrap
       margin: 0 auto
       max-width: 32em
+
+    @media (min-width: 32em)
+      text-align: left
 
   &__link
     color: $red
@@ -60,8 +64,15 @@ main > .post
       text-transform: uppercase
 
   &__meta
+    color: $grayTwo
     display: block
     margin: 0 0 $baseline
+    text-align: center
+    width: 100%
+
+    @media (min-width: 32em)
+      text-align: left
+      width: auto
 
     span, date
       font-size: .875em
