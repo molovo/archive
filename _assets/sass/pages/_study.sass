@@ -8,14 +8,17 @@
       display: none
 
 .studies
-  margin: -25vh -1.5em 0
+  margin: 0 -1.5em
   overflow: hidden
 
   @media (min-width: 42em)
-    margin: -25vh between(-1.5em, -4.5em, 42em, 80em) 0
+    margin: 0 between(-1.5em, -4.5em, 42em, 80em)
+
+  @media (min-width: 54em)
+    margin-top: -25vw
 
   @media (min-width: 80em)
-    margin: -25vh -4.5em 0
+    margin: -25vw -4.5em 0
 
   &__content
     flex: 0 0 70%
@@ -30,10 +33,13 @@
 
   &__image
     align-items: flex-end
-    display: flex
+    display: none
     flex: 0 0 50vw
     height: 50vw
     width: 50vw
+
+    @media (min-width: 54em)
+      display: flex
 
     svg
       margin-top: auto
@@ -50,8 +56,15 @@
     pointer-events: none
     position: relative
 
-    &:not(:first-of-type)
-      margin: -25vh 0 0
+    @media (min-width: 42em)
+      margin-bottom: between(4.5em, 0, 42em, 80em)
+
+    @media (min-width: 54em)
+      &:not(:first-of-type)
+        margin-top: -15vw
+
+    @media (min-width: 80em)
+      margin-bottom: 0
 
     .home-icon,
     .button
@@ -63,9 +76,12 @@
         z-index: 1
 
       .studies__image
-        bottom: 3em
+        bottom: 10vw
         position: absolute
         right: -25vw
+
+        @media (min-width: 54em)
+          bottom: 3em
 
       .studies__title
         font-size: 2.25em
