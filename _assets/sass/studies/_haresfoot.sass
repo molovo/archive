@@ -103,6 +103,16 @@ $hfTransparentYellow2: rgba($hfYellow, .3)
         &__likes
           color: $white
 
+    &.study__section--typography
+      .study__icons
+        .home-icon
+          &:hover
+            .logo--frame
+              fill: $hfRed
+
+            .logo--lens
+              fill: none
+
     &.study__section--website
       background-color: $hfYellow
 
@@ -122,6 +132,11 @@ $hfTransparentYellow2: rgba($hfYellow, .3)
       .study__icons
         +studyIcons
           fill: $hfRed
+
+        .home-icon
+          &:hover
+            .logo--frame
+              fill: $white
 
 .studies__item--haresfoot
   .studies__image
