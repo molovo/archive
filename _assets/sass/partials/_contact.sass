@@ -19,110 +19,30 @@
     transform: translateY(-4.5rem)
 
 .contact
-  margin-top: 4.5em
-  padding: 0 $paddingMin $paddingMax
-  text-align: center
+  background: $red
+  bottom: 0
+  color: $white
+  left: 0
+  opacity: 0
+  overflow-y: auto
+  padding: 1.5em $paddingMin
+  pointer-events: none
+  position: fixed
+  right: 0
+  top: 0
+  transition: opacity .375s ease
+  z-index: 0
 
   @media (min-width: 42em)
-    padding: 0 between($paddingMin, $paddingMax, 42em, 80em) 4.5em
+    padding: between(1.5em, $paddingMax, 42em, 80em) between($paddingMin, $paddingMax, 42em, 80em)
 
   @media (min-width: 80em)
-    padding: 0 $paddingMax 4.5em
+    padding: $paddingMax
 
-  &__cta
-    color: $red
-    display: inline-block
-    text-decoration: none
-    transition: color .5s
-
-    &:hover
-      color: $black
-
-    h3
-      +script
-      font-size: 4.5em
-      line-height: 1em
-      margin: 0
-      position: relative
-      text-transform: lowercase
-
-      @media (min-width: 80em)
-        font-size: 6em
-
-  &__social
-    align-items: center
-    display: flex
-    justify-content: center
-    margin-top: $baseline
-
-    .contact__popup &
-      justify-content: flex-start
-      margin-top: 0
-
-    &-link
-      margin: 0 #{$baseline / 2}
-      width: $baseline
-
-      .contact__popup &:first-child
-        margin-left: 0
-
-      svg
-        height: $baseline
-        width: $baseline
-
-      path
-        fill: $black
-        stroke: none
-        transition: fill .5s
-
-        .contact__popup &
-          fill: $white
-
-      &--twitter
-        &:hover
-          path
-            fill: $twitterBlue
-
-      &--github
-        &:hover
-          path
-            fill: $githubPurple
-
-      &--dribbble
-        &:hover
-          path
-            fill: $dribbblePink
-
-      &--refind
-        &:hover
-          path
-            fill: $refindBlue
-
-  &__popup
-    background: $red
-    bottom: 0
-    color: $white
-    left: 0
-    opacity: 0
-    overflow-y: auto
-    padding: 1.5em $paddingMin
-    pointer-events: none
-    position: fixed
-    right: 0
-    top: 0
-    transition: opacity .375s ease
-    z-index: 0
-
-    @media (min-width: 42em)
-      padding: between(1.5em, $paddingMax, 42em, 80em) between($paddingMin, $paddingMax, 42em, 80em)
-
-    @media (min-width: 80em)
-      padding: $paddingMax
-
-    &--open
-      opacity: 1
-      pointer-events: all
-      z-index: 9999
+  &--open
+    opacity: 1
+    pointer-events: all
+    z-index: 9999
 
   &__close
     g
@@ -137,7 +57,7 @@
     transform: translateY(6rem)
     transition: opacity .375s .5s, transform .375s .5s
 
-    .contact__popup--open &
+    .contact--open &
       opacity: 1
       transform: translateY(0)
 

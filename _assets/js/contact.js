@@ -63,7 +63,7 @@ export default class Contact {
    */
   @bind
   toggleContactForm (e) {
-    this.popup.classList.toggle('contact__popup--open')
+    this.popup.classList.toggle('contact--open')
     document.body.classList.toggle('contact-open')
   }
 

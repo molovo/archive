@@ -1,25 +1,92 @@
 .footer
-  background: $purple
+  background: $red
   color: $white
-  display: flex
-  justify-content: space-between
-  margin: 0 #{$paddingMin * -1}
-  padding: .75em $paddingMin
+  margin: 0 ($paddingMin * -1)
+  padding: $paddingMax $paddingMin
+  text-align: center
 
   @media (min-width: 42em)
     margin: 0 between(($paddingMin * -1), ($paddingMax * -1), 42em, 80em)
-    padding: .75em between($paddingMin, $paddingMax, 42em, 80em)
+    padding: 4.5em between($paddingMin, $paddingMax, 42em, 80em)
 
   @media (min-width: 80em)
-    margin: 0 #{$paddingMax * -1}
-    padding: .75em $paddingMax
+    margin: 0 ($paddingMax * -1)
+    padding: 4.5em $paddingMax
 
-  .page--study &
-    margin: 0
-
-  span, a
-    font-size: .75em
-
-  a
+  &__cta
     color: $white
-    text-decoration: underline
+    display: inline-block
+    text-decoration: none
+    transition: color .5s
+
+    &:hover
+      color: $black
+
+    h3
+      +script
+      font-size: 4.5em
+      line-height: 1em
+      margin: 0
+      position: relative
+      text-transform: lowercase
+
+      @media (min-width: 80em)
+        font-size: 6em
+
+  &__improve,
+  &__copyright
+    display: block
+    font-size: .875em
+
+  &__improve
+    margin: 0 0 $baseline
+
+    &:hover
+      color: $black
+
+.footer__social,
+.contact__social
+  align-items: center
+  display: flex
+  justify-content: center
+  margin: $baseline 0
+
+  .contact &
+    justify-content: flex-start
+    margin-top: 0
+
+  &-link
+    margin: 0 #{$baseline / 2}
+    width: $baseline
+
+    .contact &:first-child
+      margin-left: 0
+
+    svg
+      height: $baseline
+      width: $baseline
+
+    path
+      fill: $white
+      stroke: none
+      transition: fill .5s
+
+    &--twitter
+      &:hover
+        path
+          fill: $twitterBlue
+
+    &--github
+      &:hover
+        path
+          fill: $githubPurple
+
+    &--dribbble
+      &:hover
+        path
+          fill: $dribbblePink
+
+    &--refind
+      &:hover
+        path
+          fill: $refindBlue

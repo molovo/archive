@@ -1,10 +1,52 @@
-<footer class="footer">
-  <span class="footer__copyright">&copy; {{ site.time | date: '%Y' }} James Dinsdale</span>
+<footer class="footer" id="footer" data-turbolinks-permanent>
+  <a href="javascript:void('')"
+     id="open-contact-form"
+     class="footer__cta">
+    <h3>Let's talk</h3>
+  </a>
+
+  <nav class="footer__social">
+    <a href="https://twitter.com/molovo"
+       class="footer__social-link footer__social-link--twitter"
+       title="Follow me on Twitter"
+       target="_blank"
+       rel="noopener">
+      <div class="screenreader-text">@molovo</div>
+      {% include icons/twitter.svg %}
+    </a>
+    <a href="https://github.com/molovo"
+       class="footer__social-link footer__social-link--github"
+       title="Follow me on Github"
+       target="_blank"
+       rel="noopener">
+      <div class="screenreader-text">@molovo</div>
+      {% include icons/github.svg %}
+    </a>
+    <a href="https://dribbble.com/molovo"
+       class="footer__social-link footer__social-link--dribbble"
+       title="Follow me on Dribbble"
+       target="_blank"
+       rel="noopener">
+      <div class="screenreader-text">@molovo</div>
+      {% include icons/dribbble.svg %}
+    </a>
+    <a href="https://refind.com/molovo?invite=4f3ff95358"
+       class="footer__social-link footer__social-link--refind"
+       title="Follow me on Refind"
+       target="_blank"
+       rel="noopener">
+      <div class="screenreader-text">@molovo</div>
+      {% include icons/refind.svg %}
+    </a>
+  </nav>
 
   <a href="https://github.com/molovo/www/blob/master/{{ page.path }}"
      title="Improve this page"
      target="_blank"
-     rel="noopener nofollow">
+     rel="noopener nofollow"
+     class="footer__improve">
     Improve this page
   </a>
+
+  <span class="footer__copyright">&copy; {{ site.time | date: '%Y' }} James Dinsdale</span>
 </footer>
