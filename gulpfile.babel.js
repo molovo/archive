@@ -70,10 +70,6 @@ const env = gutil.env.env || 'dev'
 /**
  * Linting tasks
  */
-gulp.task('lint', (cb) => {
-  return runSequence('lint:sass', 'lint:js')
-})
-
 gulp.task('lint:sass', () => {
   return gulp.src(sources.sass)
     .pipe(sassLint())
@@ -87,6 +83,8 @@ gulp.task('lint:js', () => {
     .pipe(eslint.format())
     .pipe(eslint.failOnError())
 })
+
+gulp.task('lint', gulp.series(['lint:sass', 'lint:js']))
 
 gulp.task('validate:html', () => {
   return spawn('bundle exec validate.rb')
