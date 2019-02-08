@@ -6,7 +6,7 @@ import buffer from 'vinyl-buffer'
 import gutil from 'gulp-util'
 import rename from 'gulp-rename'
 import livereload from 'gulp-livereload'
-import { spawnSync } from 'child_process'
+import { spawn } from 'child_process'
 import changed from 'gulp-changed'
 import clone from 'gulp-clone'
 import runSequence from 'run-sequence'
@@ -15,7 +15,7 @@ import through from 'through2'
 import fs from 'fs'
 import filter from 'gulp-filter'
 
-// Dependencies for compiling coffeescript
+// Dependencies for compiling javascript
 import sourcemaps from 'gulp-sourcemaps'
 import browserify from 'browserify'
 import watchify from 'watchify'
@@ -89,29 +89,12 @@ gulp.task('lint:js', () => {
 })
 
 gulp.task('validate:html', () => {
-  return spawnSync('bundle exec validate.rb')
+  return spawn('bundle exec validate.rb')
 })
 
 /**
  * Compilation tasks
  */
-gulp.task('compile', (cb) => {
-  const tasks = [
-    ['compile:html', 'compile:sass', 'compile:js'],
-    'compile:images'
-  ]
-
-  if (env !== 'dev') {
-    tasks.push('compile:critical')
-  }
-
-  if (env === 'production') {
-    tasks.push('sitemap:submit')
-  }
-
-  return runSequence(...tasks, cb)
-})
-
 gulp.task('compile:sass', () => {
   return gulp.src(entries.sass)
     .pipe(sourcemaps.init())
@@ -215,7 +198,7 @@ function trace () {
 
 gulp.task('compile:images', () => {
   let images = gulp.src(sources.images)
-    .pipe(changed('_site/img/'))
+    // .pipe(changed('_site/img'))
     .pipe(imagemin([
       imagemin.gifsicle({
         interlaced: true,
@@ -276,7 +259,7 @@ gulp.task('compile:html', () => {
     ]
   }
 
-  return spawnSync('bundle', args[env], {
+  return spawn('bundle', args[env], {
     stdio: 'inherit'
   })
 })
@@ -291,30 +274,37 @@ gulp.task('sitemap:submit', () => {
   return Promise.all(urls.map(u => fetch(u)))
 })
 
+const tasks = [
+  'compile:html',
+  gulp.parallel(['compile:sass', 'compile:js', 'compile:images']),
+]
+
+if (env !== 'dev') {
+  tasks.push('compile:critical')
+}
+
+if (env === 'production') {
+  tasks.push('sitemap:submit')
+}
+
+gulp.task('compile', gulp.series(tasks))
+
 gulp.task('watch', () => {
   livereload.listen({
     host: 'molovo.localhost',
     port: 35729,
-    key: fs.readFileSync('/Users/molovo/.valet/Certificates/molovo.localhost.key'),
-    cert: fs.readFileSync('/Users/molovo/.valet/Certificates/molovo.localhost.crt')
+    key: fs.readFileSync('/Users/molovo/.config/valet/Certificates/molovo.localhost.key'),
+    cert: fs.readFileSync('/Users/molovo/.config/valet/Certificates/molovo.localhost.crt')
   })
-  gulp.watch(sources.images, ['compile:images'])
-  gulp.watch(sources.js, ['compile:js'])
-  gulp.watch(sources.sass, ['compile:sass'])
-  gulp.watch(sources.views, ['compile:html'])
+  gulp.watch(sources.images, gulp.parallel(['compile:images']))
+  gulp.watch(sources.js, gulp.parallel(['compile:js']))
+  gulp.watch(sources.sass, gulp.parallel(['compile:sass']))
+  gulp.watch(sources.views, gulp.parallel(['compile:html']))
 
   gulp.watch('_site/**/*.html')
     .on('change', file => livereload.changed(file.path))
 })
 
-gulp.task('test', (cb) => {
-  return runSequence('lint', 'validate:html', cb)
-})
+gulp.task('test', gulp.series(['lint', 'validate:html']))
 
-gulp.task('default', (cb) => {
-  return runSequence(
-    'compile',
-    'watch',
-    cb
-  )
-})
+gulp.task('default', gulp.series(['compile', 'watch']))

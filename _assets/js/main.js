@@ -1,4 +1,3 @@
-import 'babel-polyfill'
 import 'isomorphic-fetch'
 import 'intersection-observer'
 import Projects from './projects'

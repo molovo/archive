@@ -1,20 +1,33 @@
 {
   "presets": [
     [
-      "env",
+      "@babel/env",
       {
         "targets": {
-          "browsers": ["last 2 versions", "not ie <= 11", "not android <= 60"]
+          "browsers": ["last 2 versions", "not ie <= 11", "not android <= 67"]
         },
-        "useBuiltins": true,
+        "useBuiltIns": "usage",
         "debug": true
       }
     ],
-    "stage-2"
   ],
   "plugins": [
-    "transform-class-properties",
-    "transform-object-rest-spread",
-    "transform-decorators-legacy"
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    "@babel/plugin-proposal-function-sent",
+    "@babel/plugin-proposal-export-namespace-from",
+    "@babel/plugin-proposal-numeric-separator",
+    "@babel/plugin-proposal-throw-expressions",
+    "@babel/plugin-proposal-object-rest-spread",
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": false
+      }
+    ]
   ]
 }
