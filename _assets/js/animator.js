@@ -6,11 +6,12 @@ export default class Animator {
 
   opts = {
     rootMargin: '150px 0px',
-    threshold: [0, 1]
+    threshold: 0.01
   }
 
   constructor () {
     this.observer = new IntersectionObserver(this.onIntersection, this.opts)
+    this.elements.forEach(this.observer.observe, this.observer)
     this.elements.on('update', (newItems, oldItems) => {
       oldItems.forEach(item => this.observer.unobserve(item))
       newItems.forEach(item => this.observer.observe(item))
