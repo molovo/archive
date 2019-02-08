@@ -6292,10 +6292,10 @@ lru-queue@0.1:
   dependencies:
     es5-ext "~0.10.2"
 
-magic-roundabout@^1.3.0-12:
-  version "1.3.0-12"
-  resolved "https://registry.yarnpkg.com/magic-roundabout/-/magic-roundabout-1.3.0-12.tgz#2d05c4622654b7464075385a754bdab0853d43a7"
-  integrity sha512-GjfQzwD6Sr3Z1lLcrQ/NHyDzKS4NnDJSLvzV4tgbN0XF3/RAJBgHD+JJ6AWxQu+Ue+XHfgF1rqZHeO/B89vGCQ==
+magic-roundabout@^1.3.0-13:
+  version "1.3.0-13"
+  resolved "https://registry.yarnpkg.com/magic-roundabout/-/magic-roundabout-1.3.0-13.tgz#21c43feccb32e354c921736a89d6f482d796a3c8"
+  integrity sha512-Gkany7wDl7fJeXNDHuEXPbvwnrDY3WllQ4d8P8Ulc1rwCDqVrh9Ikxdrbp2zwSuslP14cTzc0h0K+CINRzpj/g==
   dependencies:
     decko "^1.2.0"
 
