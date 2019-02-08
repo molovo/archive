@@ -88,6 +88,10 @@
     transform: translateX(-50%)
     width: 100vw
 
+    // Prevent dragging images from interfering with slideshow interaction
+    img, picture
+      pointer-events: none
+
     @media (min-width: 32em)
       padding: 0 calc(50vw - 50%)
 
