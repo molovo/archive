@@ -30,7 +30,7 @@ export default class Images {
    *
    * @type {Slideshow[]}
    */
-  slideshows = []
+  slideshows = new LiveNodeList('.slideshow')
 
   /**
    * Start your engines!
@@ -119,23 +119,28 @@ export default class Images {
   }
 
   setupSlideshows () {
-    document.querySelectorAll('.slideshow').forEach(slideshow => {
-      if ('magicRoundabout' in slideshow && slideshow.magicRoundabout instanceof MagicRoundabout) {
-        return
-      }
+    this.slideshows.forEach(this.createSlideshow)
+    this.slideshows.on('update', (newItems, oldItems) => {
+      newItems.forEach(this.createSlideshow)
+    })
+  }
 
-      slideshow.magicRoundabout = new MagicRoundabout(slideshow, {
-        onChange: (slideshow) => {
-          const figure = slideshow.container.parentNode
-          const indicator = figure.querySelector('.slideshow__current')
+  @bind
+  createSlideshow (container) {
+    if ('magicRoundabout' in container && container.magicRoundabout instanceof MagicRoundabout) {
+      return
+    }
 
-          if (indicator) {
-            indicator.innerHTML = slideshow.current
-          }
+    container.magicRoundabout = new MagicRoundabout(container, {
+      draggable: true,
+      onChange: (slideshow) => {
+        const figure = slideshow.container.parentNode
+        const indicator = figure.querySelector('.slideshow__current')
+
+        if (indicator) {
+          indicator.innerHTML = slideshow.current
         }
-      })
-
-      this.slideshows.push(slideshow.magicRoundabout)
+      }
     })
   }
 }
