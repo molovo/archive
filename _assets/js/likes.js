@@ -117,7 +117,7 @@ export default class Likes {
    */
   like (link) {
     const params = this.requestParams
-    params.body = JSON.stringify({url: link.dataset.url})
+    params.body = JSON.stringify({ url: link.dataset.url })
 
     fetch('https://like.molovo.co', params)
       .then(this.parseJson)

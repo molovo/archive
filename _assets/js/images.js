@@ -99,13 +99,13 @@ export default class Images {
    * @param {HTMLImageElement} image
    */
   load (image) {
-    image.onload = () => {
+    image.addEventListener('load', () => {
       requestAnimationFrame(() => {
         image.removeAttribute('data-src')
         image.removeAttribute('data-srcset')
         image.removeAttribute('data-type')
       })
-    }
+    })
 
     if ('type' in image.dataset) {
       image.type = image.dataset.type

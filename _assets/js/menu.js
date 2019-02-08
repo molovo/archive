@@ -11,28 +11,28 @@ export default class Menu {
    *
    * @type {HTMLElement}
    */
-  header = document.getElementById('top')
+  header = document.querySelector('#top')
 
   /**
    * The menu
    *
    * @type {HTMLNavElement}
    */
-  nav = document.getElementById('menu')
+  nav = document.querySelector('#menu')
 
   /**
    * The nav toggle
    *
    * @type {HTMLAnchorElement}
    */
-  toggle = document.getElementById('nav-toggle')
+  toggle = document.querySelector('#nav-toggle')
 
   /**
    * The nav close button
    *
    * @type {HTMLAnchorElement}
    */
-  close = document.getElementById('nav-close')
+  close = document.querySelector('#nav-close')
 
   /**
    * Start your engines!
@@ -79,8 +79,8 @@ export default class Menu {
    * Register a listener to toggle the nav
    */
   registerNavToggleListener () {
-    this.toggle.onclick = this.toggleMenu
-    this.close.onclick = this.toggleMenu
+    this.toggle.addEventListener('click', this.toggleMenu)
+    this.close.addEventListener('click', this.toggleMenu)
 
     document.addEventListener('turbolinks:visit', (evt) => {
       this.nav.classList.remove('nav--open')

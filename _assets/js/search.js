@@ -127,9 +127,7 @@ export default class Search {
         })
 
         // Catch parsing errors
-        .catch((err) => {
-          return reject(err)
-        })
+        .catch(reject)
     })
   }
 
@@ -142,7 +140,7 @@ export default class Search {
    */
   @bind
   append (result) {
-    this.results.appendChild(this.template(result))
+    this.results.append(this.template(result))
   }
 
   /**
@@ -155,7 +153,7 @@ export default class Search {
     item.classList.add('search__result')
     item.classList.add('search__result--not-found')
     item.innerHTML = 'No results found'
-    this.results.appendChild(item)
+    this.results.append(item)
   }
 
   /**
@@ -170,7 +168,7 @@ export default class Search {
     item.classList.add('search__result')
     item.classList.add('search__result--count')
     item.innerHTML = `${count} results match ‘${this.input.value}’`
-    this.results.appendChild(item)
+    this.results.append(item)
   }
 
   /**

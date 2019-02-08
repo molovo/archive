@@ -6,14 +6,14 @@ export default class Contact {
    *
    * @type {HTMLAnchorElement}
    */
-  link = document.getElementById('open-contact-form')
+  link = document.querySelector('#open-contact-form')
 
   /**
    * The contact form popup
    *
    * @type {HTMLDivElement}
    */
-  popup = document.getElementById('contact-popup')
+  popup = document.querySelector('#contact-popup')
 
   /**
    * The contact form
@@ -34,7 +34,7 @@ export default class Contact {
    *
    * @type {HTMLAnchorElement}
    */
-  close = document.getElementById('contact-close')
+  close = document.querySelector('#contact-close')
 
   /**
    * Start your engines!

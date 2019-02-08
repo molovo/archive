@@ -130,7 +130,7 @@ export default class Title {
       return false
     }
 
-    const {top, left, bottom, right} = el.getBoundingClientRect()
+    const { top, left, bottom, right } = el.getBoundingClientRect()
 
     return top <= (window.innerHeight / 2) &&
             bottom >= (window.innerHeight / 2) &&
