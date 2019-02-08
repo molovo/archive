@@ -13,12 +13,10 @@
   },
   "plugins": [
     "standard",
-    "unicorn",
-    "xo"
+    "unicorn"
   ],
   "extends": [
     "eslint:recommended",
-    "plugin:xo/recommended",
     "plugin:unicorn/recommended",
     "standard"
   ],
