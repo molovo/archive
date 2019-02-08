@@ -198,7 +198,7 @@ function trace () {
 
 gulp.task('compile:images', () => {
   let images = gulp.src(sources.images)
-    // .pipe(changed('_site/img'))
+    .pipe(changed('_site/img'))
     .pipe(imagemin([
       imagemin.gifsicle({
         interlaced: true,
