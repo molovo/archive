@@ -50,8 +50,7 @@ const sources = {
   sass: '_assets/sass/**/*.s+(a|c)ss',
   js: '_assets/js/**/*.js',
   images: [
-    '_assets/img/**/*.{jpg,jpeg,gif,png,svg}',
-    '_site/img/**/resized/**/*.{jpg,jpeg,gif,png,svg}'
+    '_assets/img/**/*.{jpg,jpeg,gif,png,svg}'
   ],
   views: [
     '*.{html,md,markdown,svg}',
@@ -218,7 +217,7 @@ gulp.task('compile:images', () => {
       }),
       mozJpeg({
         progressive: true,
-        quality: 35
+        quality: 50
       }),
       imagemin.optipng({
         optimizationLevel: 5
@@ -234,7 +233,7 @@ gulp.task('compile:images', () => {
 
   const webpImages = images.pipe(clone())
     .pipe(webp({
-      quality: 35,
+      quality: 50,
       nearLossless: 40
     }))
 
@@ -292,7 +291,7 @@ const compileTasks = [
   'compile:js'
 ]
 
-if (env !== dev) {
+if (env !== 'dev') {
   compileTasks.push(gulp.series(['cache:restore-images', 'compile:images']))
 } else {
   compileTasks.push('compile:images')
