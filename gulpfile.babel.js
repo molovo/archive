@@ -201,7 +201,11 @@ function trace () {
 gulp.task('cache:restore-images', async () => {
   const opts = {
     contents: path.join(__dirname, '_site/img'),
-    handleCacheUpdate: 'gulp compile:images'
+    handleCacheUpdate: 'gulp compile:images',
+    shouldCacheUpdate: async (cacheManifest, utils) => {
+      const source = path.join(__dirname, '_assets/img')
+      return utils.diff(source)
+    }
   }
 
   return cacheMeOutside(cacheDir, opts)
@@ -292,7 +296,7 @@ const compileTasks = [
 ]
 
 if (env !== 'dev') {
-  compileTasks.push(gulp.series(['cache:restore-images', 'compile:images']))
+  compileTasks.push('cache:restore-images')
 } else {
   compileTasks.push('compile:images')
 }
