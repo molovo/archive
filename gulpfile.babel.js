@@ -204,7 +204,26 @@ gulp.task('cache:restore-images', async () => {
     handleCacheUpdate: 'gulp compile:images',
     shouldCacheUpdate: async (cacheManifest, utils) => {
       const source = path.join(__dirname, '_assets/img')
-      return utils.diff(source)
+
+      const getNewer = (source) => {
+        const results = []
+        const files = fs.readdirSync(source)
+
+        for (const file of files) {
+          const stat = fs.statSync(file)
+          if (stat && stat.isDirectory()) {
+            results.concat(getNewer(file))
+          }
+
+          if (stat.mtimeMs > cacheManifest.modifiedOn) {
+            results.push(file)
+          }
+        }
+
+        return results
+      }
+
+      return getNewer(source).length > 0
     }
   }]
 
