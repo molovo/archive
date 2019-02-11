@@ -310,26 +310,25 @@ gulp.task('sitemap:submit', () => {
   return Promise.all(urls.map(u => fetch(u)))
 })
 
-const compileTasks = [
-  'compile:sass',
-  'compile:js',
-  'compile:images'
-]
-
-// if (env !== 'dev') {
-//   compileTasks.push('cache:restore-images')
-// } else {
-//   compileTasks.push('compile:images')
-// }
+let compileTasks
+if (env === 'dev') {
+  compileTasks = [
+    'compile:sass',
+    'compile:js',
+    'compile:images'
+  ]
+} else {
+  compileTasks = [
+    gulp.series(['compile:sass', 'compile:critical']),
+    'compile:js',
+    'cache:restore-images'
+  ]
+}
 
 const tasks = [
   'compile:html',
   gulp.parallel(compileTasks)
 ]
-
-if (env !== 'dev') {
-  tasks.push('compile:critical')
-}
 
 if (env === 'production') {
   tasks.push('sitemap:submit')
