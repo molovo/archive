@@ -6,14 +6,12 @@ import buffer from 'vinyl-buffer'
 import gutil from 'gulp-util'
 import rename from 'gulp-rename'
 import livereload from 'gulp-livereload'
-import { spawn } from 'child_process'
+import { spawn, spawnSync } from 'child_process'
 import changed from 'gulp-changed'
 import clone from 'gulp-clone'
-import runSequence from 'run-sequence'
 import es from 'event-stream'
 import through from 'through2'
 import fs from 'fs'
-import filter from 'gulp-filter'
 
 // Dependencies for compiling javascript
 import sourcemaps from 'gulp-sourcemaps'
@@ -34,16 +32,17 @@ import imagemin from 'gulp-imagemin'
 import mozJpeg from 'imagemin-mozjpeg'
 import webp from 'gulp-webp'
 import potrace from 'potrace'
-import sharp from 'sharp'
+import execPromise from 'cache-me-outside/lib/utils/execPromise'
 
 // Dependencies for caching
 import cacheMeOutside from 'cache-me-outside'
 import path from 'path'
-const cacheDir = path.join('/opt/build/cache', 'molovo')
 
 // Dependencies for compressing HTML
 import htmlmin from 'gulp-htmlmin'
+
 const uglify = composer(uglifyEs, console)
+const cacheDir = path.join('/opt/build/cache', 'molovo')
 
 // Sources for compilation
 const sources = {
@@ -201,7 +200,9 @@ function trace () {
 gulp.task('cache:restore-images', async () => {
   const opts = [{
     contents: path.join(__dirname, '_site/img'),
-    handleCacheUpdate: 'gulp compile:images',
+    handleCacheUpdate: async (cacheData) => {
+      return execPromise('gulp compile:images')
+    },
     shouldCacheUpdate: async (cacheManifest, utils) => {
       const source = path.join(__dirname, '_assets/img')
 
@@ -210,9 +211,9 @@ gulp.task('cache:restore-images', async () => {
         const files = fs.readdirSync(source)
 
         for (const file of files) {
-          const stat = fs.statSync(file)
+          const stat = fs.statSync(`${source}/${file}`)
           if (stat && stat.isDirectory()) {
-            results.concat(getNewer(file))
+            results.concat(getNewer(`${source}/${file}`))
           }
 
           if (stat.mtimeMs > cacheManifest.modifiedOn) {
