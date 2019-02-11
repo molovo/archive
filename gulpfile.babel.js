@@ -218,7 +218,7 @@ gulp.task('compile:images', () => {
       }),
       mozJpeg({
         progressive: true,
-        quality: 72
+        quality: 35
       }),
       imagemin.optipng({
         optimizationLevel: 5
@@ -234,7 +234,8 @@ gulp.task('compile:images', () => {
 
   const webpImages = images.pipe(clone())
     .pipe(webp({
-      optimizationLevel: 6
+      quality: 35,
+      nearLossless: 40
     }))
 
   // const tracedImages = images.pipe(clone())
