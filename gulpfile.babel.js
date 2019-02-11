@@ -36,11 +36,6 @@ import webp from 'gulp-webp'
 import potrace from 'potrace'
 import sharp from 'sharp'
 
-// Dependencies for caching
-import cacheMeOutside from 'cache-me-outside'
-import path from 'path'
-const cacheDir = path.join('/opt/build/cache', 'molovo')
-
 // Dependencies for compressing HTML
 import htmlmin from 'gulp-htmlmin'
 const uglify = composer(uglifyEs, console)
@@ -198,15 +193,6 @@ function trace () {
   })
 }
 
-gulp.task('cache:restore-images', async () => {
-  const opts = {
-    contents: path.join(__dirname, '_site/img'),
-    handleCacheUpdate: 'gulp compile:images'
-  }
-
-  return cacheMeOutside(cacheDir, opts)
-})
-
 gulp.task('compile:images', () => {
   let images = gulp.src(sources.images)
     .pipe(changed('_site/img'))
@@ -286,20 +272,9 @@ gulp.task('sitemap:submit', () => {
   return Promise.all(urls.map(u => fetch(u)))
 })
 
-const compileTasks = [
-  'compile:sass',
-  'compile:js'
-]
-
-if (env !== 'dev') {
-  compileTasks.push(gulp.series(['cache:restore-images', 'compile:images']))
-} else {
-  compileTasks.push('compile:images')
-}
-
 const tasks = [
   'compile:html',
-  gulp.parallel(compileTasks)
+  gulp.parallel(['compile:sass', 'compile:js', 'compile:images'])
 ]
 
 if (env !== 'dev') {
