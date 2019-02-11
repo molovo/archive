@@ -22,7 +22,6 @@ import watchify from 'watchify'
 import eslint from 'gulp-eslint'
 import uglifyEs from 'uglify-es'
 import composer from 'gulp-uglify/composer'
-const uglify = composer(uglifyEs, console)
 
 // Dependencies for compiling sass
 import sassLint from 'gulp-sass-lint'
@@ -44,6 +43,7 @@ const cacheDir = path.join('/opt/build/cache', 'molovo')
 
 // Dependencies for compressing HTML
 import htmlmin from 'gulp-htmlmin'
+const uglify = composer(uglifyEs, console)
 
 // Sources for compilation
 const sources = {
@@ -141,7 +141,7 @@ function bundle () {
     .on('error', gutil.log)
     .pipe(source('main.js'))
     .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(uglify())
     .pipe(rename('main.min.js'))
     .pipe(sourcemaps.write('.'))
