@@ -92,7 +92,7 @@ gems:
 
 responsive_image:
   template: _includes/responsive-image.html
-  default_quality: 72
+  default_quality: 50
   sizes:
     - width: 320
     - width: 480
@@ -103,10 +103,12 @@ responsive_image:
     - width: 1440
     - width: 1680
     - width: 1920
-  base_path: _assets
-  output_path_format: '%{dirname}/resized/%{filename}-%{width}x%{height}.%{extension}'
-  save_to_source: false
+  auto_rotate: true
+  base_path: ''
   cache: true
+  output_path_format: '%{dirname}/resized/%{filename}-%{width}x%{height}.%{extension}'
+  save_to_source: true
+  strip: true
 
 # Webmentions
 webmentions:
