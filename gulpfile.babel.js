@@ -312,14 +312,15 @@ gulp.task('sitemap:submit', () => {
 
 const compileTasks = [
   'compile:sass',
-  'compile:js'
+  'compile:js',
+  'compile:images'
 ]
 
-if (env !== 'dev') {
-  compileTasks.push('cache:restore-images')
-} else {
-  compileTasks.push('compile:images')
-}
+// if (env !== 'dev') {
+//   compileTasks.push('cache:restore-images')
+// } else {
+//   compileTasks.push('compile:images')
+// }
 
 const tasks = [
   'compile:html',
