@@ -199,14 +199,14 @@ function trace () {
 }
 
 gulp.task('cache:restore-images', async () => {
-  const opts = {
+  const opts = [{
     contents: path.join(__dirname, '_site/img'),
     handleCacheUpdate: 'gulp compile:images',
     shouldCacheUpdate: async (cacheManifest, utils) => {
       const source = path.join(__dirname, '_assets/img')
       return utils.diff(source)
     }
-  }
+  }]
 
   return cacheMeOutside(cacheDir, opts)
 })
