@@ -6,7 +6,7 @@ opts = {
   :alt_ignore => [
     /^https:\/\/webmention.io\/avatar\/pbs.twimg.com\//
   ],
-  :check_external_hash => true,
+  :check_external_hash => false,
   :check_favicon => true,
   :check_opengraph => true,
   :check_html => true,
