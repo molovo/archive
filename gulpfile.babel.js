@@ -244,7 +244,7 @@ gulp.task('compile:images', () => {
         quality: 50
       }),
       imagemin.optipng({
-        optimizationLevel: 5
+        optimizationLevel: 3
       }),
       imagemin.svgo({
         plugins: [
@@ -258,7 +258,8 @@ gulp.task('compile:images', () => {
   const webpImages = images.pipe(clone())
     .pipe(webp({
       quality: 50,
-      nearLossless: 40
+      nearLossless: 40,
+      method: 2
     }))
 
   // const tracedImages = images.pipe(clone())
