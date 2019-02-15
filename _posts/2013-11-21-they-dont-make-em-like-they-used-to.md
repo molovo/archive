@@ -14,7 +14,7 @@ Ladies and Gentlemen, allow me to introduce you to Country Ken.
 
 <figure class="image image--pull-left">
   {% responsive_image_block %}
-    path: '_assets/img/articles/they-dont-make-em-like-they-used-to/countryken.jpg'
+    path: 'img/articles/they-dont-make-em-like-they-used-to/countryken.jpg'
     alt: 'Country Ken'
     sizes: '(min-width: 42em) 36em, 100vw'
   {% endresponsive_image_block %}

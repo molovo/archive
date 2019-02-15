@@ -21,7 +21,7 @@ In my haste to do this, I failed to do it properly. Last week, a full two months
 
 <figure class="image">
   {% responsive_image_block %}
-    path: '_assets/img/articles/getting-it-wrong/homepage-before.jpg'
+    path: 'img/articles/getting-it-wrong/homepage-before.jpg'
     alt: 'The homepage of this website as viewed through a text browser, before accessibility optimisations.'
     sizes: '(min-width: 42em) 36em, 100vw'
   {% endresponsive_image_block %}
@@ -33,7 +33,7 @@ There is no obvious navigation, as it is so obscure and unreadable. There are no
 
 <figure class="image">
   {% responsive_image_block %}
-    path: '_assets/img/articles/getting-it-wrong/projects-before.jpg'
+    path: 'img/articles/getting-it-wrong/projects-before.jpg'
     alt: 'The projects page of this website as viewed through a text browser, before accessibility optimisations.'
     sizes: '(min-width: 42em) 36em, 100vw'
   {% endresponsive_image_block %}
@@ -49,7 +49,7 @@ I've just finished rebuilding this site again---from the ground up---in an effor
 
 <figure class="image">
   {% responsive_image_block %}
-    path: '_assets/img/articles/getting-it-wrong/homepage-now.jpg'
+    path: 'img/articles/getting-it-wrong/homepage-now.jpg'
     alt: 'The homepage of this website, as viewed through a text browser at time of writing.'
     sizes: '(min-width: 42em) 36em, 100vw'
   {% endresponsive_image_block %}

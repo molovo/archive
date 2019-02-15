@@ -12,7 +12,7 @@ I've tried a few times to host some form of comment feed on my Jekyll site, but 
 
 <figure class="image">
   {% responsive_image_block %}
-    path: '_assets/img/articles/jekyll-webmentions/chatter.jpg'
+    path: 'img/articles/jekyll-webmentions/chatter.jpg'
     alt: 'A screenshot of the commenting service Chatter, which I launched in 2013, appearing on an older version of this blog.'
     sizes: '(min-width: 42em) 36em, 100vw'
   {% endresponsive_image_block %}

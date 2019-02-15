@@ -6,7 +6,7 @@
 
 {% capture srcset-webp %}
 {% for i in resized %}
-    {{ i.dirname }}/{{ i.filename }}.webp {{ i.width }}w,
+    /{{ i.dirname }}/{{ i.filename }}.webp {{ i.width }}w,
 {% endfor %}
 {% endcapture %}
 

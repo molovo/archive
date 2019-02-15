@@ -24,42 +24,42 @@ featured: true
           <div class="slideshow__slides">
             <div class="slideshow__slide">
               {% responsive_image_block %}
-                path: '_assets/img/studies/haresfoot/beers/lock-keepers.png'
+                path: 'img/studies/haresfoot/beers/lock-keepers.png'
                 alt: "Lock Keeper's Launch Ale"
                 sizes: '(min-width: 42em) 15em, 75vw'
               {% endresponsive_image_block %}
             </div>
             <div class="slideshow__slide">
               {% responsive_image_block %}
-                path: '_assets/img/studies/haresfoot/beers/sundial.png'
+                path: 'img/studies/haresfoot/beers/sundial.png'
                 alt: "Sundial Golden Ale"
                 sizes: '(min-width: 42em) 15em, 75vw'
               {% endresponsive_image_block %}
             </div>
             <div class="slideshow__slide">
               {% responsive_image_block %}
-                path: '_assets/img/studies/haresfoot/beers/all-rounder.png'
+                path: 'img/studies/haresfoot/beers/all-rounder.png'
                 alt: "All Rounder Cricket Writer's Club Ale"
                 sizes: '(min-width: 42em) 15em, 75vw'
               {% endresponsive_image_block %}
             </div>
             <div class="slideshow__slide">
               {% responsive_image_block %}
-                path: '_assets/img/studies/haresfoot/beers/totem.png'
+                path: 'img/studies/haresfoot/beers/totem.png'
                 alt: "Totem American IPA"
                 sizes: '(min-width: 42em) 15em, 75vw'
               {% endresponsive_image_block %}
             </div>
             <div class="slideshow__slide">
               {% responsive_image_block %}
-                path: '_assets/img/studies/haresfoot/beers/conquerors.png'
+                path: 'img/studies/haresfoot/beers/conquerors.png'
                 alt: "Conqueror's Premium Bitter"
                 sizes: '(min-width: 42em) 15em, 75vw'
               {% endresponsive_image_block %}
             </div>
             <div class="slideshow__slide">
               {% responsive_image_block %}
-                path: '_assets/img/studies/haresfoot/beers/old-timey.png'
+                path: 'img/studies/haresfoot/beers/old-timey.png'
                 alt: "Old Timey Plum Porter"
                 sizes: '(min-width: 42em) 15em, 75vw'
               {% endresponsive_image_block %}
@@ -83,7 +83,7 @@ featured: true
 
       <figure class="image">
         {% responsive_image_block %}
-          path: '_assets/img/studies/haresfoot/holding-page.jpg'
+          path: 'img/studies/haresfoot/holding-page.jpg'
           alt: "The holding page which appeared at haresfoot.com prior to launch"
           sizes: '(min-width: 42em) 36em, 100vw'
         {% endresponsive_image_block %}

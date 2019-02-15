@@ -49,7 +49,7 @@ const sources = {
   sass: '_assets/sass/**/*.s+(a|c)ss',
   js: '_assets/js/**/*.js',
   images: [
-    '_assets/img/**/*.{jpg,jpeg,gif,png,svg}'
+    'img/**/*.{jpg,jpeg,gif,png,svg}'
   ],
   views: [
     '*.{html,md,markdown,svg}',
@@ -204,7 +204,7 @@ gulp.task('cache:restore-images', async () => {
       return execPromise('gulp compile:images')
     },
     shouldCacheUpdate: async (cacheManifest, utils) => {
-      const source = path.join(__dirname, '_assets/img')
+      const source = path.join(__dirname, 'img')
 
       const getNewer = (source) => {
         const results = []

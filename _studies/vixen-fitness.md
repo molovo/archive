@@ -96,28 +96,28 @@ featured: true
           <div class="slideshow__slides">
             <div class="slideshow__slide">
               {% responsive_image_block %}
-                path: '_assets/img/studies/vixen-fitness/ante-natal-flyer-front.png'
+                path: 'img/studies/vixen-fitness/ante-natal-flyer-front.png'
                 alt: "The front of a flyer for ante-natal training services"
                 sizes: '(min-width: 42em) 24em, 90vw'
               {% endresponsive_image_block %}
             </div>
             <div class="slideshow__slide">
               {% responsive_image_block %}
-                path: '_assets/img/studies/vixen-fitness/ante-natal-flyer-back.png'
+                path: 'img/studies/vixen-fitness/ante-natal-flyer-back.png'
                 alt: "The back of a flyer for ante-natal training services"
                 sizes: '(min-width: 42em) 24em, 90vw'
               {% endresponsive_image_block %}
             </div>
             <div class="slideshow__slide">
               {% responsive_image_block %}
-                path: '_assets/img/studies/vixen-fitness/post-natal-flyer-front.png'
+                path: 'img/studies/vixen-fitness/post-natal-flyer-front.png'
                 alt: "The front of a flyer for post-natal training services"
                 sizes: '(min-width: 42em) 24em, 90vw'
               {% endresponsive_image_block %}
             </div>
             <div class="slideshow__slide">
               {% responsive_image_block %}
-                path: '_assets/img/studies/vixen-fitness/post-natal-flyer-back.png'
+                path: 'img/studies/vixen-fitness/post-natal-flyer-back.png'
                 alt: "The back of a flyer for post-natal training services"
                 sizes: '(min-width: 42em) 24em, 90vw'
               {% endresponsive_image_block %}
@@ -142,12 +142,12 @@ featured: true
       <figure class="image image--pull-left">
         <div class="image__pair image__pair--cards">
           {% responsive_image_block %}
-            path: '_assets/img/studies/vixen-fitness/place-cards.jpg'
+            path: 'img/studies/vixen-fitness/place-cards.jpg'
             alt: 'A set of exercise place cards for use in circuit classes'
             sizes: '(min-width: 42em) 22em, 60vw'
           {% endresponsive_image_block %}
           {% responsive_image_block %}
-            path: '_assets/img/studies/vixen-fitness/business-cards.jpg'
+            path: 'img/studies/vixen-fitness/business-cards.jpg'
             alt: "Gemma's business cards"
             sizes: '(min-width: 42em) 18em, 40vw'
           {% endresponsive_image_block %}
@@ -172,7 +172,7 @@ featured: true
         {% comment %} <div class="image__scroll-sync scroll-sync">
           <div class="scroll-sync__wrapper">
             {% responsive_image_block %}
-              path: '_assets/img/studies/vixen-fitness/website-homepage.png'
+              path: 'img/studies/vixen-fitness/website-homepage.png'
               alt: "The homepage of the Vixen Fitness website"
               sizes: '(min-width: 42em) 36em, 100vw'
             {% endresponsive_image_block %}
@@ -192,21 +192,21 @@ featured: true
           <div class="slideshow__slides">
             <div class="slideshow__slide">
               {% responsive_image_block %}
-                path: '_assets/img/studies/vixen-fitness/ante-natal-training-page.png'
+                path: 'img/studies/vixen-fitness/ante-natal-training-page.png'
                 alt: "A landing page for ante-natal training services"
                 sizes: '(min-width: 42em) 24em, 90vw'
               {% endresponsive_image_block %}
             </div>
             <div class="slideshow__slide">
               {% responsive_image_block %}
-                path: '_assets/img/studies/vixen-fitness/post-natal-training-page.png'
+                path: 'img/studies/vixen-fitness/post-natal-training-page.png'
                 alt: "A landing page for post-natal training services"
                 sizes: '(min-width: 42em) 24em, 90vw'
               {% endresponsive_image_block %}
             </div>
             <div class="slideshow__slide">
               {% responsive_image_block %}
-                path: '_assets/img/studies/vixen-fitness/mobile-personal-training-page.png'
+                path: 'img/studies/vixen-fitness/mobile-personal-training-page.png'
                 alt: "A landing page for mobile personal training services"
                 sizes: '(min-width: 42em) 24em, 90vw'
               {% endresponsive_image_block %}
