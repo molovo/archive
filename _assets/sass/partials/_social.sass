@@ -5,6 +5,7 @@
   justify-content: center
   margin: $baseline auto 0
   max-width: #{(1/.75) * 32em}
+  transition: top .5s ease
 
   @media (min-width: 32em)
     justify-content: flex-start
@@ -19,6 +20,9 @@
 
   @media (min-width: 80em)
     top: 7.5em
+
+  .header--hidden ~ .content &
+    top: 3em
 
   svg
     display: block
@@ -47,6 +51,15 @@
     @media (min-width: 64em)
       margin: 0 0 $baseline
 
+    path
+      stroke-dasharray: 120 120
+      stroke-dashoffset: 0
+      transition: stroke-dashoffset 1s ease
+
+    &:hover
+      path
+        stroke-dashoffset: 240
+
     &--like,
     &--mention
       margin-right: #{$baseline * 1.5}
@@ -58,7 +71,7 @@
       path
         fill: transparent
         stroke: $red
-        transition: fill .25s
+        transition: fill .25s, stroke-dashoffset 1s ease
 
     &--liked
       path
@@ -68,7 +81,11 @@
       path
         fill: transparent
         stroke: $green
-        transition: fill .25s
+        transition: fill .25s, stroke-dashoffset 1s ease
+
+      &:hover
+        path
+          stroke-dashoffset: -240
 
     &--has-mentions
       path
