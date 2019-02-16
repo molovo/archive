@@ -134,6 +134,7 @@ main > .post
           transform: translate(-50%, -50%)
 
     &-link
+      @extend .button
       align-items: center
       display: flex
       font-size: .875em
@@ -160,9 +161,22 @@ main > .post
 
       &--previous
         text-align: left
+
+        &::after
+          content: none
+
         &::before
           content: '←'
+          font-weight: $fontWeightNormal
           margin-right: #{$baseline / 2}
+          opacity: 1
+          transform: translateX(0)
+          transition: opacity 1s ease, transform 1s ease
+
+        &:hover
+          &::before
+            opacity: 0
+            transform: translateX(-50%)
 
 .page--tag
   .posts > h4
