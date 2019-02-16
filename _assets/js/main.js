@@ -13,6 +13,7 @@ import Contact from './contact'
 import Turbolinks from 'turbolinks'
 import VisitedLinks from './visited-links'
 import { bind } from 'decko'
+import Article from './article'
 
 class App {
   /**
@@ -37,6 +38,7 @@ class App {
     this.components.likes = new Likes()
     this.components.visitedLinks = new VisitedLinks()
     this.components.projects = new Projects()
+    this.components.article = new Article()
   }
 
   @bind
