@@ -6,7 +6,17 @@ body
     position: relative
 
 html
-  border-top: .75em solid $red
+  padding-top: .8em
+
+  &::after
+    background: $red
+    content: ''
+    display: block
+    height: .8em
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 999
 
   // @media (min-width: 42em)
   //   border-width: .75em
