@@ -1,10 +1,15 @@
 import LiveNodeList from 'live-node-list'
 
 export default class Article {
+  slugs = [
+    'the-view-from-above',
+    'lost-at-sea'
+  ]
+
   /**
    * @type {LiveNodeList}
    */
-  parallaxImages = new LiveNodeList('.page--the-view-from-above .post__header-image')
+  parallaxImages = new LiveNodeList(this.slugs.map(slug => `.page--${slug} .post__header-image`).join(', '))
 
   constructor () {
     this.registerListeners()
@@ -14,7 +19,7 @@ export default class Article {
     this.parallaxImages.addDelegatedEventListener(window, 'scroll', e => {
       requestAnimationFrame(t => {
         this.parallaxImages.forEach(image => {
-          image.style.transform = `translate3d(-50%, ${window.pageYOffset / 2}px, 0)`
+          image.style.transform = `translate3d(-50%, ${window.pageYOffset / 4}px, 0)`
         })
       })
     }, { passive: true })
