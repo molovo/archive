@@ -205,15 +205,11 @@ $vfWhite: #fff
       border-color: rgba($white, .3)
       color: $white
 
-      &:hover
-        border-color: $white
-        color: $white
-
-      &::before
+    .button
+      &::after,
+      &__mask
+        border-color: $vfYellow
         color: $vfYellow
-
-      path
-        stroke: $vfYellow
 
 .image__pair
   &--cards
