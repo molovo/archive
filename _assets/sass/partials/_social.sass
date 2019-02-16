@@ -54,7 +54,7 @@
     path
       stroke-dasharray: 120 120
       stroke-dashoffset: 0
-      transition: stroke-dashoffset 1s ease
+      transition: stroke-dashoffset 1s ease, stroke 0s .4s ease
 
     &:hover
       path
@@ -71,7 +71,11 @@
       path
         fill: transparent
         stroke: $red
-        transition: fill .25s, stroke-dashoffset 1s ease
+        transition: fill .25s, stroke-dashoffset 1s ease, stroke 0s .4s ease
+
+      &:hover
+        .page & path
+          stroke: $red
 
     &--liked
       path
@@ -81,10 +85,11 @@
       path
         fill: transparent
         stroke: $green
-        transition: fill .25s, stroke-dashoffset 1s ease
+        transition: fill .25s, stroke-dashoffset 1s ease, stroke 0s .3s ease
 
       &:hover
-        path
+        .page & path
+          stroke: $green
           stroke-dashoffset: -240
 
     &--has-mentions
@@ -95,6 +100,14 @@
       path
         stroke: $twitterBlue
 
+      &:hover
+        .page & path
+          stroke: $twitterBlue
+
     &--facebook
       path
         stroke: $facebookBlue
+
+      &:hover
+        .page & path
+          stroke: $facebookBlue
