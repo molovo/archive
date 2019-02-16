@@ -270,13 +270,15 @@ gulp.task('compile:images', () => {
     .pipe(livereload())
 })
 
+let incremental = false
+
 gulp.task('compile:html', () => {
   const args = {
     dev: [
       'exec',
       'jekyll',
       'build',
-      '--incremental',
+      incremental ? '--incremental' : null,
       '--trace',
       '--drafts',
       '--config',
@@ -338,6 +340,8 @@ if (env === 'production') {
 gulp.task('compile', gulp.series(tasks))
 
 gulp.task('watch', () => {
+  incremental = true
+
   livereload.listen({
     host: 'molovo.localhost',
     port: 35729,
