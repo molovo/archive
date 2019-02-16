@@ -4,7 +4,7 @@ export default class Article {
   /**
    * @type {LiveNodeList}
    */
-  parallaxImages = new LiveNodeList('.post__header-image--parallax')
+  parallaxImages = new LiveNodeList('.page--the-view-from-above .post__header-image')
 
   constructor () {
     this.registerListeners()

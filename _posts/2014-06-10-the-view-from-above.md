@@ -11,7 +11,6 @@ categories:
 featured_order: 1
 image: img/articles/the-view-from-above/tom-sodoge-84368.jpg
 imageAltText: A man's feet, looking down from the top of a building
-parallaxImage: true
 ---
 
 <figure class="image image--pull-left">
