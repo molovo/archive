@@ -1,10 +1,5 @@
-<link rel="preload" href="/fonts/gauthier-preload.woff2" as="font" type="font/woff2" crossorigin>
-
 {% if site.environment == 'production' %}
   <link rel="preload" href="https://use.typekit.net/mmt3fau.css" as="style" onload="this.rel='stylesheet'" />
-  <noscript>
-    <link rel="stylesheet" href="https://use.typekit.net/mmt3fau.css" />
-  </noscript>
 {% else %}
   <link rel="stylesheet" href="https://use.typekit.net/mmt3fau.css" />
 {% endif %}
@@ -114,14 +109,11 @@
     sessionStorage.setItem('fontFreightLoaded', true)
   })
 
-  // Delay loading of less critical fonts
-  document.addEventListener('DOMContentLoaded', function () {
-    haveHeart.load().then(function () {
-      document.documentElement.classList.add('font-have-heart-loaded')
+  haveHeart.load().then(function () {
+    document.documentElement.classList.add('font-have-heart-loaded')
 
-      // Optimization for Repeat Views
-      sessionStorage.setItem('fontHaveHeartLoaded', true)
-    })
+    // Optimization for Repeat Views
+    sessionStorage.setItem('fontHaveHeartLoaded', true)
   })
 })()
 </script>
