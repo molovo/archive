@@ -1,3 +1,8 @@
+{%- unless site.environment == 'dev' -%}
+  <script src="https://browser.sentry-cdn.com/4.6.1/bundle.min.js" crossorigin="anonymous"></script>
+  <script>Sentry.init({ dsn: 'https://1490d24471fc4615936a583bdc7586e1@sentry.io/145313' });</script>
+{%- endunless -%}
+
 <script src="/js/main.min.js" async defer></script>
 
 {% if site.environment == 'dev' %}
