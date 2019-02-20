@@ -49,8 +49,6 @@ export default class Menu {
    */
   registerScrollListener () {
     window.addEventListener('scroll', e => {
-      clearTimeout(this.scrolling)
-
       this.y = window.pageYOffset
 
       if (this.y < 200) {
@@ -66,9 +64,9 @@ export default class Menu {
         }, 250)
       }
 
-      this.scrolling = setTimeout(() => {
+      requestAnimationFrame(() => {
         this.bufferedY = window.pageYOffset
-      }, 50)
+      })
 
       const fn = this.y <= this.bufferedY ? 'remove' : 'add'
       this.header.classList[fn]('header--hidden')
