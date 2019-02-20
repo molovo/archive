@@ -1,19 +1,18 @@
 language: node_js
 node_js:
 - node
-
 before_install:
 - if [[ ! -d $HOME/.rvm/user/installs ]]; then rvm install ruby-2.3.1; fi
 - rvm use 2.3.1
 - bundle install
-
 before_script:
 - export PATH="$(yarn bin):$PATH"
-
 script:
 - gulp lint
 - gulp compile --env production
-- bundle exec htmlproofer ./_site --check-favicon --check-html --check-external-hash --check-html --check-img-http --check-opengraph
-
+- bundle exec htmlproofer ./_site --check-favicon --check-html --check-external-hash
+  --check-html --check-img-http --check-opengraph
 notifications:
   email: false
+  slack:
+    secure: pMN3Xaj58E+tGTdX5laAA3noNY2/efDO3ShLx5N8OTgIK6dF6wId+gO0fIS0nfZk7Z6/8vOfeQZTLh1PmCTLSxX74KqHORFMUU6g+3Yzqecjfues0yK8BQj4i9tSCUYr4h8MIF4DSz2t2F6pfT33f+Mm7iP1XbDBUC85QbSpLVKq1B6QSZs76nMKjvvRfioVGC5SHnuxn3FBJ5NMuIqD3+nsPsEAcFEv4UlJbQybj/lK/U10tX4jqX0mMpgU9doqAXYRWkdktD4LOfE2htdU4H758Ly7MZqV3SD3iRF7edGSYMjhvtwLBy/GxAmEd33eTGzLGg/cLZxAZPgk9LEnRXfQH9IL6EQ4NmNGgkyrFb6w5wFInWmyU2BGeeLtqvQex1VmXNQQlYtqDXXq6O8Gskjmz/M68YNp/VdzM1hr3UHg+zj5MQ7G6MbUR8eYB/CW/YHtV3cMKUa7rq6QUpdXR5jC5eTWzX/PQZs93srA5Gg05aYF0jYi9FcIcerPUl+gkf410BwHX2MSir9TJ14fHQAYuVa9B9WMa9Xsh5rXkbpl9vmC3f8aTIDBQJFpS2mKXHBY58/95ZcoOuauSZGJP56HLBvbUQlK5VAUT/MDCARzgXWnxI09wH1MufRn2PoFkElexMe00N1Dn9tc6u0YsR3NmjlTngNg0wUMK2wfKzs=
