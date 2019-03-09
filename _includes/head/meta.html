@@ -2,7 +2,6 @@
 
 <meta name="description" content="{{ description }}" />
 <meta name="author" content="{{ site.author }}" />
-<link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}" />
 
 {% if site.environment == 'production' %}
   <meta name="robots" content="{% if page.robots %}{{ page.robots }},{% endif %}noodp" />
@@ -16,13 +15,13 @@
 <meta property="og:description" content="{{ description }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
 <meta property="og:site_name" content="{{ site.title }}">
-<meta property="og:image" content="{{ site.url }}/apple-touch-icon.png?v=M4olpG7v6d">
+<meta property="og:image" content="{% if page.image %}{{ site.url }}/{{ page.image }}{% else %}{{ site.url }}/apple-touch-icon.png?v=M4olpG7v6d{% endif %}">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:description" content="{{ description }}">
 <meta name="twitter:title" content="{{ title }}">
 <meta name="twitter:site" content="@{{ site.twitter_username }}">
-<meta name="twitter:image" content="{{ site.url }}/apple-touch-icon.png?v=M4olpG7v6d">
+<meta name="twitter:image" content="{% if page.image %}{{ site.url }}/{{ page.image }}{% else %}{{ site.url }}/apple-touch-icon.png?v=M4olpG7v6d{% endif %}">
 
 <link rel="me" href="https://twitter.com/{{ site.twitter_username }}" />
 <link rel="me" href="https://github.com/{{ site.github_username }}" />
