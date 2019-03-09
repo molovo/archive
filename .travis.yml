@@ -10,8 +10,8 @@ before_script:
 script:
 - gulp lint
 - gulp compile --env production
-- bundle exec htmlproofer ./_site --check-favicon --check-html --check-external-hash
-  --check-html --check-img-http --check-opengraph
+# - bundle exec htmlproofer ./_site --check-favicon --check-html --check-external-hash
+#   --check-html --check-img-http --check-opengraph
 notifications:
   email: false
   slack:
