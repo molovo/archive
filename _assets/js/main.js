@@ -4,7 +4,6 @@ import Projects from './projects'
 import Title from './title'
 import Search from './search'
 import Menu from './menu'
-import Likes from './likes'
 import Images from './images'
 import Github from './github'
 import Animator from './animator'
@@ -21,39 +20,38 @@ class App {
    */
   components = {}
 
-  constructor () {
+  constructor() {
     this.registerComponents()
     this.registerListeners()
     this.handleLoad()
   }
 
   @bind
-  registerComponents () {
+  registerComponents() {
     this.components.images = new Images()
     this.components.animator = new Animator()
     this.components.menu = new Menu()
     this.components.contact = new Contact()
     this.components.title = new Title()
     this.components.scrollSync = new ScrollSync()
-    this.components.likes = new Likes()
     this.components.visitedLinks = new VisitedLinks()
     this.components.projects = new Projects()
     this.components.article = new Article()
   }
 
   @bind
-  registerListeners () {
+  registerListeners() {
     document.addEventListener('turbolinks:visit', this.handleVisit)
     document.addEventListener('turbolinks:load', this.handleLoad)
   }
 
   @bind
-  handleVisit (e) {
+  handleVisit(e) {
     document.documentElement.classList.add('loading')
   }
 
   @bind
-  handleLoad (e) {
+  handleLoad(e) {
     window.github = new Github()
     window.search = new Search()
 

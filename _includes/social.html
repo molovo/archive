@@ -1,13 +1,4 @@
 <aside class="social">
-  <a href="javascript:void('');"
-      title="Like this post"
-      class="social__link social__link--like"
-      data-url="{{ site.url }}{{ include.post.url }}">
-    {% include icons/heart.svg %}
-    <span class="screenreader-text">Like this post</span>
-    <span class="social__likes"></span>
-  </a>
-
   {% if include.webmentions != 'false' %}
     {% capture count %}{% webmention_count include.post.url %}{% endcapture %}
     <a href="{{ include.post.url }}#webmentions"

@@ -60,26 +60,11 @@
       path
         stroke-dashoffset: 240
 
-    &--like,
     &--mention
       margin-right: #{$baseline * 1.5}
 
       @media (min-width: 64em)
         margin-right: 0
-
-    &--like
-      path
-        fill: transparent
-        stroke: $red
-        transition: fill .25s, stroke-dashoffset 1s ease, stroke 0s .4s ease
-
-      &:hover
-        .page & path
-          stroke: $red
-
-    &--liked
-      path
-        fill: $red
 
     &--mention
       path
