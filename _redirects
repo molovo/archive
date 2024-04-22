@@ -56,3 +56,7 @@ https://molovo.netlify.app/*                            https://molovo.co/:splat
 /zunit/docs/writing-tests/setup-and-teardown            https://zunit.xyz/docs/writing-tests/setup-and-teardown     301
 /zunit/docs/command-line-usage/reporting                https://zunit.xyz/docs/usage/reporting                      301
 /zunit/docs/command-line-usage/running-tests            https://zunit.xyz/docs/usage/running-tests                  301
+
+# Connect to the Fediverse
+/.well-known/host-meta*                                 https://fed.brid.gy/.well-known/host-meta:splat             302
+/.well-known/webfinger*                                 https://fed.brid.gy/.well-known/webfinger:splat             302
