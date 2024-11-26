@@ -5,10 +5,10 @@ logo: /img/amp-logo.png
 email: hi@molovo.co
 description: >
   James Dinsdale is a web .
-baseurl: ''
-url: 'https://molovo.co'
+baseurl: ""
+url: "https://2017.molovo.co"
 twitter_username: molovo
-github_username:  molovo
+github_username: molovo
 medium_username: molovo
 dribbble_username: molovo
 instagram_username: jameswdinsdale
@@ -46,18 +46,18 @@ collections:
     output: false
     permalink: /studies/:name/
 defaults:
-- scope:
-    path: /writing/
-    type: posts
-  values:
-    layout: post
-    pagination: true
-- scope:
-    path: /studies/
-    type: studies
-  values:
-    layout: study
-    pagination: false
+  - scope:
+      path: /writing/
+      type: posts
+    values:
+      layout: post
+      pagination: true
+  - scope:
+      path: /studies/
+      type: studies
+    values:
+      layout: study
+      pagination: false
 
 autopages:
   enabled: true
@@ -67,9 +67,9 @@ autopages:
     enabled: false
   tags:
     layouts:
-      - 'tag.html'
-    title: 'Posts tagged with &lsquo;:tag&rsquo;'
-    permalink: '/tag/:tag/'
+      - "tag.html"
+    title: "Posts tagged with &lsquo;:tag&rsquo;"
+    permalink: "/tag/:tag/"
 
 # Markdown Configuration
 markdown: redcarpet
@@ -104,9 +104,9 @@ responsive_image:
     - width: 1680
     - width: 1920
   auto_rotate: true
-  base_path: ''
+  base_path: ""
   cache: true
-  output_path_format: '%{dirname}/resized/%{filename}-%{width}x%{height}.%{extension}'
+  output_path_format: "%{dirname}/resized/%{filename}-%{width}x%{height}.%{extension}"
   save_to_source: true
   strip: true
 

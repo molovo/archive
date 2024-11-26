@@ -1,10 +1,7 @@
 # Global settings applied to the whole site.
 [build]
+  command = "yarn build"
+
+[context.2017]
   publish = "_site"
   command = "gulp compile --env production"
-
-[context.branch-deploy]
-  command = "gulp compile"
-
-[context.staging]
-  command = "gulp compile --env staging"
