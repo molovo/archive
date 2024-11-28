@@ -1,7 +1,12 @@
 # Global settings applied to the whole site.
 [build]
-  command = "yarn build"
+  publish = "_site"
+  command = "gulp compile --env production"
 
 [context.2017]
   publish = "_site"
   command = "gulp compile --env production"
+
+[context.2015]
+  publish = "_site"
+  command = "gulp && bundle exec jekyll build"
